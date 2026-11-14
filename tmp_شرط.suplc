@@ -1,0 +1,27 @@
+# ═══════════════════════════════════════
+# اردو پروگرامنگ لینگویج — Generated Code
+# Developer: Alango Developers
+# Version  : 1.0.1
+# ═══════════════════════════════════════
+from __future__ import annotations
+import asyncio, sys, os
+from urdu.runtime.builtins import *
+
+# supl:1
+print('السلام علیکم')
+# supl:2
+نام = 'احمد'
+# supl:3
+عمر = 25
+# supl:4
+print(نام)
+# supl:5
+print(عمر)
+# supl:6
+if (عمر وڈا ہے):
+    # supl:6
+    18
+# supl:6
+شروع
+# supl:7
+print('بالغ', ختم)

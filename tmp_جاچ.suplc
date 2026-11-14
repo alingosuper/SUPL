@@ -1,0 +1,21 @@
+# ═══════════════════════════════════════
+# اردو پروگرامنگ لینگویج — Generated Code
+# Developer: Alango Developers
+# Version  : 1.0.1
+# ═══════════════════════════════════════
+from __future__ import annotations
+import asyncio, sys, os
+from urdu.runtime.builtins import *
+
+# supl:1
+'supl_test'
+# supl:2
+لکھو
+# supl:2
+'السلام علیکم'
+# supl:3
+x = 10
+# supl:4
+لکھو
+# supl:4
+x

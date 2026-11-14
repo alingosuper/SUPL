@@ -108,7 +108,7 @@ class Transpiler:
     def _stmt(self, node: ASTNode):
         line = getattr(node, "line", 0)
         if line:
-            self._w(f"# urdu:{line}")
+            self._w(f"# supl:{line}")
         method = getattr(self, f"_s_{type(node).__name__}", None)
         if method:
             method(node)

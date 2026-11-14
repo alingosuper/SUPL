@@ -339,9 +339,11 @@ class Parser:
     def _parse_if(self) -> IfStatement:
         line = self._line()
         self._expect(TokenType.IF)
-        self._expect(TokenType.LEFT_PAREN)
+        # SUPL: بریکٹ اختیاری — اردو/پنجابی/سرائیکی natural syntax
+        has_paren = self._match(TokenType.LEFT_PAREN)
         cond = self._parse_expression()
-        self._expect(TokenType.RIGHT_PAREN)
+        if has_paren:
+            self._expect(TokenType.RIGHT_PAREN)
         then = self._parse_block_or_stmt()
         alt = None
         if self._match(TokenType.ELIF):
@@ -581,6 +583,17 @@ class Parser:
 
     def _parse_expression_statement(self) -> ExpressionStatement:
         line = self._line()
+        # SUPL: implicit call — لکھو / پُچھو کے بعد string/number/identifier
+        # (بغیر بریکٹ) → لکھو(...) کی طرح
+        if self._check(TokenType.PRINT, TokenType.INPUT_FN):
+            callee_tok = self._advance()
+            args = []
+            while self._check(TokenType.STRING, TokenType.NUMBER, TokenType.IDENTIFIER):
+                args.append(self._parse_expression())
+            self._eat_semicolon()
+            callee_id = Identifier(name=callee_tok.value, line=callee_tok.line)
+            call = CallExpr(callee=callee_id, args=args, line=line)
+            return ExpressionStatement(expression=call, line=line)
         expr = self._parse_expression()
         self._eat_semicolon()
         return ExpressionStatement(expression=expr, line=line)

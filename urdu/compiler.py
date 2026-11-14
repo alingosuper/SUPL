@@ -26,8 +26,10 @@ class UrduCompilerError(Exception):
 class UrduCompiler:
     """Compile and/or run Urdu source files."""
 
-    EXTENSION = ".urdu"
-    COMPILED_EXTENSION = ".urduc"   # compiled bytecode cache
+    # SUPL: Saraiki + Urdu + Punjabi Language
+    EXTENSION = ".supl"                                  # primary
+    SUPPORTED_EXTENSIONS = (".supl", ".slk", ".urdu")    # compatibility
+    COMPILED_EXTENSION = ".suplc"                        # compiled cache
 
     def __init__(self, *, debug: bool = False, show_python: bool = False):
         self.debug = debug
@@ -66,7 +68,7 @@ class UrduCompiler:
         return py_src
 
     def compile_file(self, path: str | Path) -> str:
-        """Compile a .urdu file, return Python source. Cache .urduc alongside it."""
+        """Compile a .supl file, return Python source. Cache .suplc alongside it."""
         path = Path(path)
         source = path.read_text(encoding="utf-8")
         py_src = self.compile_source(source, filename=str(path))
@@ -83,7 +85,7 @@ class UrduCompiler:
         return self._exec_python(py_src, filename, argv or [], urdu_src=source)
 
     def run_file(self, path: str | Path, argv: list[str] | None = None) -> int:
-        """Compile and run a .urdu file. Returns exit code."""
+        """Compile and run a .supl file. Returns exit code."""
         path = Path(path)
         if not path.exists():
             raise UrduCompilerError(f"فائل نہیں ملی (File not found): {path}")
@@ -137,7 +139,7 @@ class UrduCompiler:
             import traceback, re as _re
             tb_str = traceback.format_exc()
 
-            # Map Python line number back to Urdu source line via # urdu:N markers
+            # Map Python line number back to SUPL source line via # supl:N markers
             py_lines = py_src.splitlines()
             py_line = None
             for _m in _re.finditer(r", line (\d+)", tb_str):
@@ -146,7 +148,7 @@ class UrduCompiler:
             urdu_line = None
             if py_line:
                 for i in range(min(py_line - 1, len(py_lines) - 1), -1, -1):
-                    _m = _re.match(r"\s*# urdu:(\d+)$", py_lines[i])
+                    _m = _re.match(r"\s*# supl:(\d+)$", py_lines[i])
                     if _m:
                         urdu_line = int(_m.group(1))
                         break
