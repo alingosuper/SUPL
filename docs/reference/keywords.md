@@ -431,4 +431,4 @@ These two built-in functions are recognized as keywords by the lexer, though the
 
 ---
 
-*اردو پروگرامنگ لینگویج — Keyword Reference — Mohammed Zahid Wadiwale*
+*اردو پروگرامنگ لینگویج — Keyword Reference — Alango Developers*

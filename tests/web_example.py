@@ -1,6 +1,6 @@
 # ═══════════════════════════════════════
 # اردو پروگرامنگ لینگویج — Generated Code
-# Developer: Mohammed Zahid Wadiwale
+# Developer: Alango Developers
 # Version  : 1.0.0
 # ═══════════════════════════════════════
 from __future__ import annotations
@@ -19,7 +19,7 @@ async def _اردو_main():
     # urdu:23
     async def صفحہ_اول():
         # urdu:25
-        return _UrduObj({'پیغام': 'السلام علیکم! اردو API میں خوش آمدید', 'نسخہ': '1.0.0', 'ڈویلپر': 'Mohammed Zahid Wadiwale'})
+        return _UrduObj({'پیغام': 'السلام علیکم! اردو API میں خوش آمدید', 'نسخہ': '1.0.0', 'ڈویلپر': 'Alango Developers'})
     
     ایپ.حاصل('/')(صفحہ_اول)
     # urdu:34

@@ -676,7 +676,7 @@ class ڈجانگو:
 
         cfg = {
             "DEBUG": self._config.get("ڈیبگ", True),
-            "SECRET_KEY": self._config.get("خفیہ_کلید", "urdu-lang-dev-secret-key-32"),
+            "SECRET_KEY": self._config.get("خفیہ_کلید", "Alango Developers-dev-secret-key-32"),
             "ALLOWED_HOSTS": self._config.get("اجازت_یافتہ", ["*"]),
             "INSTALLED_APPS": installed,
             "DATABASES": {"default": db_cfg},

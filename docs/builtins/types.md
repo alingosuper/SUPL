@@ -517,6 +517,6 @@ Every error instance exposes these attributes:
 
 ---
 
-*اردو پروگرامنگ لینگویج — Type Helpers Reference — Mohammed Zahid Wadiwale*
+*اردو پروگرامنگ لینگویج — Type Helpers Reference — Alango Developers*
 
 

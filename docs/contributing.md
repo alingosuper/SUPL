@@ -421,7 +421,7 @@ The Urdu Programming Language is released under the **Urdu Programming Language 
 Key points of UPL-1.0:
 
 - **Programs you write** in the Urdu Programming Language are entirely yours — no attribution required, any license of your choice.
-- **The language source** (lexer, parser, transpiler, runtime, stdlib, docs) requires attribution to Mohammed Zahid Wadiwale if you fork or distribute it.
+- **The language source** (lexer, parser, transpiler, runtime, stdlib, docs) requires attribution to Alango Developers if you fork or distribute it.
 - You may not claim to have created the original Urdu Programming Language or remove original author credits.
 
 By contributing, you agree that your contributions will be included under the same UPL-1.0 License, with your contributor credit preserved in the project's git history.

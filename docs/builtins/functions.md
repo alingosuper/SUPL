@@ -953,4 +953,4 @@ These constants are pre-defined in every Urdu program's global scope.
 
 ---
 
-*اردو پروگرامنگ لینگویج — Built-in Functions Reference — Mohammed Zahid Wadiwale*
+*اردو پروگرامنگ لینگویج — Built-in Functions Reference — Alango Developers*

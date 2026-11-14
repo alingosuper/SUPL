@@ -549,4 +549,4 @@ Return the greatest common divisor of two integers.
 
 ---
 
-*اردو پروگرامنگ لینگویج — ریاضی Object Reference — Mohammed Zahid Wadiwale*
+*اردو پروگرامنگ لینگویج — ریاضی Object Reference — Alango Developers*

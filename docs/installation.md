@@ -236,7 +236,7 @@ Output:
   (Urdu: اردو پروگرامنگ لینگویج)
 ════════════════════════════════════════════════════════
   Version   : 1.0.0
-  Developer : Mohammed Zahid Wadiwale
+  Developer : Alango Developers
   Released  : 2026-05-16
   Platform  : Windows | Linux | macOS
   Features  : OOP | Async | GUI | ML | DB | Web | Threads

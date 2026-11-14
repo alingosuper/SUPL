@@ -1,6 +1,6 @@
 # ═══════════════════════════════════════
 # اردو پروگرامنگ لینگویج — Generated Code
-# Developer: Mohammed Zahid Wadiwale
+# Developer: Alango Developers
 # Version  : 1.0.1
 # ═══════════════════════════════════════
 from __future__ import annotations

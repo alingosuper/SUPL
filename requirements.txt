@@ -56,10 +56,10 @@
 # llama-cpp-python          # Local LLM inference (llama.cpp)
 
 # ─── Install all optional dependencies ───────
-# pip install urdu-lang[all]
+# pip install Alango Developers[all]
 #
 # or individually:
-# pip install urdu-lang[mysql]
-# pip install urdu-lang[fastapi]
-# pip install urdu-lang[ml]
-# pip install urdu-lang[llm]
+# pip install Alango Developers[mysql]
+# pip install Alango Developers[fastapi]
+# pip install Alango Developers[ml]
+# pip install Alango Developers[llm]

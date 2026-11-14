@@ -33,7 +33,7 @@ The language was created to make programming genuinely accessible to Urdu-speaki
 
 ## Creator — تخلیق کار
 
-**Mohammed Zahid Wadiwale**
+**Alango Developers**
 Developer and designer of the Urdu Programming Language.
 Version 1.0.1 — Released 2026-05-29
 License: Urdu Programming Language License (UPL-1.0)
@@ -226,4 +226,4 @@ All async constructs cause the script to be wrapped in
 
 ---
 
-*اردو پروگرامنگ لینگویج — Urdu Programming Language License (UPL-1.0) — Mohammed Zahid Wadiwale*
+*اردو پروگرامنگ لینگویج — Urdu Programming Language License (UPL-1.0) — Alango Developers*
