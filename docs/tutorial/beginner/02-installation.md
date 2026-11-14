@@ -13,7 +13,7 @@ The easiest way. No Python installation required.
 
 **Steps — اقدامات:**
 
-1. Go to the [GitHub Releases page](https://github.com/ZahidServers/urdu-programming-language/releases)
+1. Go to the [GitHub Releases page](https://github.com/Alango DevelopersServers/urdu-programming-language/releases)
 2. Download the latest `urdu-windows-vX.X.X.zip`
 3. Extract the ZIP — you get a folder called `urdu.dist`
 4. Inside is `urdu.exe`
@@ -56,7 +56,7 @@ For developers who want to contribute to the language or run from source.
 **Steps — اقدامات:**
 
 ```bash
-git clone https://github.com/ZahidServers/urdu-programming-language
+git clone https://github.com/Alango DevelopersServers/urdu-programming-language
 cd urdu-programming-language
 pip install -e .
 ```

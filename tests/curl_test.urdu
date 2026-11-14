@@ -152,12 +152,12 @@
     لکھو("\n─── Basic Auth ───");
     کوشش {
         متغیر c = نیا کرل();
-        c.بنیادی_توثیق("zahid", "pass123");
-        متغیر جواب = انتظار c.حاصل(`${BIN}/basic-auth/zahid/pass123`);
+        c.بنیادی_توثیق("Alango Developers", "pass123");
+        متغیر جواب = انتظار c.حاصل(`${BIN}/basic-auth/Alango Developers/pass123`);
         جانچ("Basic Auth 200", جواب.حالت == 200);
         متغیر ڈیٹا = جواب.جے_سون();
         جانچ("authenticated سچ", ڈیٹا["authenticated"] == سچ);
-        جانچ("user درست", ڈیٹا["user"] == "zahid");
+        جانچ("user درست", ڈیٹا["user"] == "Alango Developers");
     } پکڑو (غ) {
         لکھو(`  ✗ Basic Auth غلطی: ${غ}`);
         ن["ناکام"] = ن["ناکام"] + 1;

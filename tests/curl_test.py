@@ -263,10 +263,10 @@ async def _اردو_main():
             # urdu:154
             c = کرل()
             # urdu:155
-            _r = c.بنیادی_توثیق('zahid', 'pass123')
+            _r = c.بنیادی_توثیق('Alango Developers', 'pass123')
             if asyncio.iscoroutine(_r): await _r
             # urdu:156
-            جواب = (await c.حاصل(f"{BIN}/basic-auth/zahid/pass123"))
+            جواب = (await c.حاصل(f"{BIN}/basic-auth/Alango Developers/pass123"))
             # urdu:157
             _r = جانچ('Basic Auth 200', (جواب.حالت == 200))
             if asyncio.iscoroutine(_r): await _r
@@ -276,7 +276,7 @@ async def _اردو_main():
             _r = جانچ('authenticated سچ', (ڈیٹا['authenticated'] == True))
             if asyncio.iscoroutine(_r): await _r
             # urdu:160
-            _r = جانچ('user درست', (ڈیٹا['user'] == 'zahid'))
+            _r = جانچ('user درست', (ڈیٹا['user'] == 'Alango Developers'))
             if asyncio.iscoroutine(_r): await _r
         except Exception as غ:
             if not hasattr(غ, 'پیغام'): غ.پیغام = str(غ)
