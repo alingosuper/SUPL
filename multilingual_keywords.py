@@ -39,3 +39,18 @@ MULTILINGUAL_KEYWORDS = {
 }
 
 print("===== تمام تینوں زبانوں کے کی ورڈز کامیابی سے لوڈ ہو گئے ہیں! =====")
+
+# --- Multilingual Function & Return Keywords Extension ---
+MULTILINGUAL_KEYWORDS.update({
+    # Saraiki (سرائیکی)
+    "کم": "FUNC_DEF",
+    "واپس": "RETURN",
+    
+    # Urdu (اردو)
+    "کام": "FUNC_DEF",
+    "واپس": "RETURN",
+    
+    # Punjabi (پنجابی)
+    "فعل": "FUNC_DEF",
+    "موڑ": "RETURN",
+})
