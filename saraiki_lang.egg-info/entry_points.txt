@@ -1,0 +1,2 @@
+[console_scripts]
+saraiki = urdu.cli:main

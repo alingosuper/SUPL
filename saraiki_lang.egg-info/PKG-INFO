@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: saraiki-lang
+Version: 1.0.0
+Summary: سرائیکی پروگرامنگ لینگویج — SarakLuk
+Home-page: https://github.com/AlangoDevelopers/SarakLuk
+Author: النگو ڈویلپرز (Alango Developers)
+Author-email: support@alangodevelopers.com
+Keywords: saraiki,programming language,سرائیکی,پروگرامنگ,SarakLuk
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: Saraiki
+Classifier: Topic :: Software Development :: Compilers
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# SarakLuk (سرائیکی پروگرامنگ زبان)
+> **تخلیق کار:** النگو ڈویلپرز (Alango Developers)
+
+SarakLuk ایک جدید پروگرامنگ لینگویج ہے جو سرائیکی زبان میں کوڈنگ کرنے کی سہولت فراہم کرتی ہے۔ اس پراجیکٹ کے تمام حقوق اور مینجمنٹ **النگو ڈویلپرز** کے پاس ہیں۔
+
+## خصوصیات
+- آسان سرائیکی کی ورڈز
+- پائتھون پر مبنی طاقتور ٹرانسپائلر
+- مکمل سائنسی اور ویب ڈویلپمنٹ سپورٹ

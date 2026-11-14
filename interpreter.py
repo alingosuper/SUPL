@@ -1,22 +1,25 @@
-# SarakLuk Interpreter — النگو ڈویلپرز
+# SarakLuk Interpreter & UI Engine — النگو ڈویلپرز
 import sys
 from pathlib import Path
 
 sys.path.append(str(Path(__file__).resolve().parent))
 from lexer.lexer import Lexer
 from parser.parser import Parser
+from urdu.runtime.naksha import NakshaUI
 
 class Interpreter:
     def __init__(self, parser):
         self.parser = parser
         self.variables = {}
+        self.ui = NakshaUI("سرائیکی زبردست ایپ")
 
     def interpret(self):
-        # پندھ شروع چیک کرنا
         if self.parser.current_token.type == "PROGRAM_START":
             self.parser.eat("PROGRAM_START")
             if self.parser.current_token.type == "STRING":
-                print(f"--- پروگرام شروع: {self.parser.current_token.value} (النگو ڈویلپرز) ---")
+                prog_name = self.parser.current_token.value
+                print(f"--- پروگرام شروع: {prog_name} (النگو ڈویلپرز) ---")
+                self.ui.صفحہ_شروع(prog_name)
                 self.parser.eat("STRING")
 
             while self.parser.current_token.type != "PROGRAM_END" and self.parser.current_token.type != "EOF":
@@ -24,12 +27,14 @@ class Interpreter:
 
             if self.parser.current_token.type == "PROGRAM_END":
                 self.parser.eat("PROGRAM_END")
-                print("--- پندھ مک گیا (کامیاب) ---")
+                self.ui.صفحہ_ختم()
+                self.ui.محفوظ_کرو("sarakluk_out.html")
+                print("--- پندھ مک گیا (ویب UI محفوظ ہو گیا ہے) ---")
 
     def execute_statement(self):
         token = self.parser.current_token
 
-        # 1. ویری ایبل ڈیکلریشن (عدد عمر = 20)
+        # 1. ویری ایبل ڈیکلریشن
         if token.type == "VAR":
             self.parser.eat("VAR")
             var_name_str = self.parser.current_token.value
@@ -47,13 +52,31 @@ class Interpreter:
                 val = self.variables[val]
             self.parser.eat(self.parser.current_token.type)
             print(val)
+            self.ui.متن_لکھو(str(val))
 
-        # 3. مشروط بیان (جے ... تاں)
+        # 3. گرافکس / UI کمانڈز کی شناخت (جیسے سرخی، بٹن)
+        elif token.type == "IDENTIFIER" and token.value in ["سرخی", "بٹن", "ڈبہ"]:
+            cmd = token.value
+            self.parser.eat("IDENTIFIER")
+            # ویلیو یا سٹرنگ پڑھنا
+            val = self.parser.current_token.value
+            self.parser.eat(self.parser.current_token.type)
+
+            if cmd == "سرخی":
+                self.ui.سرخی_بناؤ(val)
+                print(f"[UI سرخی]: {val}")
+            elif cmd == "بٹن":
+                self.ui.بٹن_بناؤ(val, "بٹن دبایا گیا!")
+                print(f"[UI بٹن]: {val}")
+            elif cmd == "ڈبہ":
+                self.ui.ڈبہ_بناؤ(val)
+                print(f"[UI ڈبہ]: {val}")
+
+        # 4. مشروط بیان (جے ... تاں)
         elif token.type == "IF":
             self.parser.eat("IF")
             left_var = self.parser.current_token.value
             self.parser.eat("IDENTIFIER")
-            
             left_val = self.variables.get(left_var, 0)
             
             op = self.parser.current_token.type
@@ -66,14 +89,10 @@ class Interpreter:
                 self.parser.eat("IDENTIFIER")
 
             condition_met = False
-            if op == "GREATER_EQUAL":
-                condition_met = left_val >= right_val
-            elif op == "LESS_EQUAL":
-                condition_met = left_val <= right_val
-            elif op == "GREATER":
-                condition_met = left_val > right_val
-            elif op == "LESS":
-                condition_met = left_val < right_val
+            if op == "GREATER_EQUAL": condition_met = left_val >= right_val
+            elif op == "LESS_EQUAL": condition_met = left_val <= right_val
+            elif op == "GREATER": condition_met = left_val > right_val
+            elif op == "LESS": condition_met = left_val < right_val
 
             if condition_met:
                 self.execute_statement()
@@ -86,7 +105,6 @@ class Interpreter:
                 else:
                     self.skip_statement()
 
-        # 4. ورنہ (ELSE) بلاک ہینڈلنگ
         elif token.type == "ELSE":
             self.parser.eat("ELSE")
             self.execute_statement()
@@ -102,19 +120,3 @@ class Interpreter:
         if self.parser.current_token.type == "ELSE":
             self.parser.eat("ELSE")
             self.skip_statement()
-
-if __name__ == "__main__":
-    kod = """
-    پندھ_شروع "سرائیکی_پروگرام"
-        عدد عمر = 20
-        جے عمر >= 18 تاں
-            چھاپ "تساں ووٹ ڈے سگدے او!"
-        نہیں_تاں
-            چھاپ "تساں حݨے نکے او!"
-    پندھ_مک_گیا
-    """
-    
-    lexer = Lexer(kod)
-    parser = Parser(lexer)
-    interpreter = Interpreter(parser)
-    interpreter.interpret()
