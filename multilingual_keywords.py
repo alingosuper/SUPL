@@ -54,3 +54,21 @@ MULTILINGUAL_KEYWORDS.update({
     "فعل": "FUNC_DEF",
     "موڑ": "RETURN",
 })
+
+# --- Multilingual Loop Keywords Extension ---
+MULTILINGUAL_KEYWORDS.update({
+    # --- Saraiki (سرائیکی) ---
+    "جب_تک": "WHILE",
+    "دورانیہ": "FOR",
+    "ختم_لوپ": "END_LOOP",
+
+    # --- Urdu (اردو) ---
+    "جب_تک": "WHILE",
+    "دورانیہ": "FOR",
+    "ختم_لوپ": "END_LOOP",
+
+    # --- Punjabi (پنجابی) ---
+    "جدوں_تک": "WHILE",
+    "مدت": "FOR",
+    "مک_لوپ": "END_LOOP",
+})
