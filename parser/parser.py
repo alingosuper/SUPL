@@ -20,26 +20,39 @@ class Parser:
             self.error(f"متوقع ٹوکن {token_type}, لیکن ملا {self.current_token.type}")
 
     def parse(self):
-        if self.current_token.type == "PROGRAM_START":
-            self.eat("PROGRAM_START")
-            prog_name = ""
-            if self.current_token.type == "STRING":
-                prog_name = self.current_token.value
-                self.eat("STRING")
-
-            statements = []
-            while self.current_token.type not in ("PROGRAM_END", "EOF"):
-                statements.append(self.statement())
-
-            if self.current_token.type == "PROGRAM_END":
-                self.eat("PROGRAM_END")
-            
-            return {"type": "Program", "name": prog_name, "body": statements}
-        else:
+        if self.current_token.type != "PROGRAM_START":
             self.error("پروگرام 'پندھ_شروع' سے شروع ہونا چاہیے")
+
+        self.eat("PROGRAM_START")
+
+        prog_name = ""
+        if self.current_token.type == "STRING":
+            prog_name = self.current_token.value
+            self.eat("STRING")
+
+        statements = []
+
+        while self.current_token.type not in ("PROGRAM_END", "EOF"):
+            statements.append(self.statement())
+
+        if self.current_token.type == "PROGRAM_END":
+            self.eat("PROGRAM_END")
+
+        return {
+            "type": "Program",
+            "name": prog_name,
+            "body": statements
+        }
 
     def statement(self):
         token = self.current_token
+
+        # 0. IMPORT (شامل_کرو)
+        if token.type == "IMPORT":
+            self.eat("IMPORT")
+            module_name = self.current_token.value
+            self.eat("STRING")
+            return {"type": "Import", "module": module_name}
 
         # 1. CONSTRUCTOR (تعمیر)
         if token.type == "CONSTRUCTOR":

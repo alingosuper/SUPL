@@ -92,6 +92,7 @@ def main():
         lexer = Lexer(code)
         p = Parser(lexer)
         interpreter = Interpreter(p)
+        interpreter._current_file = str(file_path)  # Import کے لیے
         interpreter.interpret()
     except Exception as e:
         print(f"پروگرام چلانے میں خرابی: {e}")

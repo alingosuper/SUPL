@@ -52,6 +52,35 @@ class Interpreter:
             for stmt in node["body"]:
                 self.execute_ast(stmt)
 
+        elif ntype == "Import":
+            module_path = node["module"]
+            from pathlib import Path
+
+            candidate = Path(module_path)
+            if not candidate.exists() and hasattr(self, "_current_file") and self._current_file:
+                candidate = Path(self._current_file).parent / module_path
+
+            if not candidate.exists():
+                raise FileNotFoundError(f"ماڈیول نہیں ملا: {module_path}")
+
+            module_code = candidate.read_text(encoding="utf-8")
+            from lexer.lexer import Lexer
+            from parser.parser import Parser
+            module_source = (
+                'پندھ_شروع "imported_module"\n'
+                + module_code
+                + '\nپندھ_مک_گیا\n'
+            )
+            sub_parser = Parser(Lexer(module_source))
+            sub_ast = sub_parser.parse()
+
+            old_file = getattr(self, "_current_file", None)
+            self._current_file = str(candidate)
+            try:
+                self.execute_ast(sub_ast)
+            finally:
+                self._current_file = old_file
+
         elif ntype == "Print":
             vals = [self.eval_expr(a) for a in node["args"]]
             _ALINGO_BUILTINS.لکھو(*vals)
