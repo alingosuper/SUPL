@@ -1,19 +1,26 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-SarakLuk v1.0.0 — مرکزی کمانڈ لائن انٹرفیس اور CLI ڈسپیچر (مع ویب ٹولز)
+AlinGo v1.0.0 — مرکزی کمانڈ لائن انٹرفیس اور CLI ڈسپیچر (مع ویب ٹولز)
 """
 import sys
+from pathlib import Path
+
+# جب اسکرپٹ ڈائریکٹ چلایا جائے (python3 supl/cli.py) تو روٹ کو sys.path میں شامل کریں
+_ROOT = Path(__file__).resolve().parent.parent
+if str(_ROOT) not in sys.path:
+    sys.path.insert(0, str(_ROOT))
+
 import subprocess
 from supl.dictionary import search_word, add_word, delete_word, list_all_words
 
 def print_help():
     print("=" * 65)
-    print(" SarakLuk (SUPL) — دیسی ٹرمینل، لغت اور ویب ٹولز سوٹ v1.0.0")
+    print(" AlinGo — دیسی ٹرمینل، لغت اور ویب ٹولز سوٹ v1.0.0")
     print("=" * 65)
     print(" استعمال کا طریقہ:")
     print("   saraiki -i                  (لائیو انٹرایکٹو شیل شروع کریں)")
-    print("   saraiki <فائل.slk>          (SUPL سورس کوڈ فائل چلائیں)")
+    print("   saraiki <فائل.slk>          (AlinGo سورس کوڈ فائل چلائیں)")
     print("   -----------------------------------------------------------")
     print("    لغت کی کمانڈز:")
     print("     saraiki تلاش <لفظ>         (لغت میں لفظ تلاش کریں)")
@@ -46,7 +53,11 @@ def run_web_server(args):
     port = args[0] if args else "8000"
     print(f"🚀 لوکل ویب سرور http://localhost:{port} پر شروع ہو رہا ہے...")
     print(f"   (بند کرنے کے لیے Ctrl+C دبائیں)")
-    subprocess.run(["python3", "-m", "http.server", port])
+    try:
+        subprocess.run(["python3", "-m", "http.server", str(port)])
+    except KeyboardInterrupt:
+        # صاف بندش — کوئی traceback نہیں
+        print("\n🛑 سرور بند کر دیا گیا۔ اللہ حافظ!")
 
 def main():
     args = sys.argv[1:]

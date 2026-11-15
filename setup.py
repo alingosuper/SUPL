@@ -10,9 +10,9 @@ setup(
     install_requires=[],
     entry_points={
         "console_scripts": [
-            "alingo=cli:main",
-            "saraiki=cli:main",
-            "supl=cli:main",
+            "alingo=supl._root_cli:main",
+            "saraiki=supl._root_cli:main",
+            "supl=supl._root_cli:main",
         ],
     },
     classifiers=[
