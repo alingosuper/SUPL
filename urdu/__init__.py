@@ -3,7 +3,7 @@
 ║         اردو پروگرامنگ لینگویج                        ║
 ║         Urdu Programming Language                      ║
 ╠══════════════════════════════════════════════════════╣
-║  Developer : Alango Developers                   ║
+║  Developer : AlinGo Developers                   ║
 ║  Version   : 1.0.1                                     ║
 ║  Platform  : Windows | Linux | macOS                   ║
 ║  License   : UPL-1.0                                   ║
@@ -12,7 +12,7 @@
 
 VERSION = "1.0.1"
 VERSION_TUPLE = (1, 0, 1)
-DEVELOPER = "Alango Developers"
+DEVELOPER = "AlinGo Developers"
 LANGUAGE_NAME = "اردو پروگرامنگ لینگویج"
 LANGUAGE_NAME_EN = "Urdu Programming Language"
 RELEASE_DATE = "2026-05-28"

@@ -1,4 +1,4 @@
-# SarakLuk Security & Sanitization Engine — النگو ڈویلپرز
+# SUPL Security & Sanitization Engine — النگو ڈویلپرز
 # راسٹ (Rust) سے بھی آگے سخت سیکیورٹی اور ٹائپ سیفٹی فریم ورک
 
 import re

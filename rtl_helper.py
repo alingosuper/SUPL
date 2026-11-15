@@ -8,5 +8,5 @@ def fix_urdu_text(text):
         return text
 
 if __name__ == "__main__":
-    sample = "خوش آمدید! SarakLuk فریم ورک تیار ہے۔"
+    sample = "خوش آمدید! SUPL فریم ورک تیار ہے۔"
     print(fix_urdu_text(sample))

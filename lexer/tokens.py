@@ -1,4 +1,4 @@
-# SarakLuk Tokens & Keywords — النگو ڈویلپرز
+# SUPL Tokens & Keywords — النگو ڈویلپرز
 
 TOKEN_EOF = "EOF"
 TOKEN_IDENTIFIER = "IDENTIFIER"

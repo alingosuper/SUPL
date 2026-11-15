@@ -1,4 +1,4 @@
-# SarakLuk Parser — النگو ڈویلپرز
+# SUPL Parser — النگو ڈویلپرز
 import sys
 from pathlib import Path
 

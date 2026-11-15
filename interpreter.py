@@ -1,4 +1,4 @@
-# SarakLuk Interpreter & UI Engine — النگو ڈویلپرز
+# SUPL Interpreter & UI Engine — النگو ڈویلپرز
 import sys
 from pathlib import Path
 
@@ -28,7 +28,7 @@ class Interpreter:
             if self.parser.current_token.type == "PROGRAM_END":
                 self.parser.eat("PROGRAM_END")
                 self.ui.صفحہ_ختم()
-                self.ui.محفوظ_کرو("sarakluk_out.html")
+                self.ui.محفوظ_کرو("supl_out.html")
                 print("--- پندھ مک گیا (ویب UI محفوظ ہو گیا ہے) ---")
 
     def execute_statement(self):

@@ -351,4 +351,4 @@ Stop the timer identified by `label` and print the elapsed time in milliseconds 
 
 ---
 
-*اردو پروگرامنگ لینگویج — Console Object Reference — Alango Developers*
+*اردو پروگرامنگ لینگویج — Console Object Reference — AlinGo Developers*

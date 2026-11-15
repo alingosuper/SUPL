@@ -2,7 +2,7 @@ import sys
 
 def print_help():
     print("\n" + "="*50)
-    print("       🌟 SarakLuk / SUPL - اردو مددگار مینو 🌟       ")
+    print("       🌟 SUPL - اردو مددگار مینو 🌟       ")
     print("="*50)
     print("SUPL (سرائیکی، اردو، پنجابی پروگرامنگ زبان) کے لیے خوش آمدید!\n")
     
@@ -21,7 +21,7 @@ def print_help():
     print("   • پراجیکٹ فولڈر میں جانے کے لیے:  چلو_SUPL / جاؤ_SUPL / ونڄو_SUPL")
     print("   • فائل رن کرنے کے لیے:          چلاؤ_فائل / چلائو_فائل / رلاؤ_فائل")
     print("="*50)
-    print("   تاریکی سے روشنی کی طرف — النگو ڈویلپرز (Alango Developers)")
+    print("   تاریکی سے روشنی کی طرف — النگو ڈویلپرز (AlinGo Developers)")
     print("="*50 + "\n")
 
 if __name__ == "__main__":

@@ -44,7 +44,7 @@ def display_dictionary():
     words = get_all_words()
     
     print("=" * 65)
-    print(f" 📚 SarakLuk دیسی لغت — کل درج الفاظ: {len(words)}")
+    print(f" 📚 SUPL دیسی لغت — کل درج الفاظ: {len(words)}")
     print("=" * 65)
     
     if not words:

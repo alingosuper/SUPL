@@ -25,14 +25,14 @@ On GitHub, click the **Fork** button on the repository page. This creates your o
 ### 2. Clone your fork — اپنا فورک کلون کریں
 
 ```
-git clone https://github.com/YOUR-USERNAME/urdu-programming-language.git
+git clone https://github.com/alingosuper/SUPL.git
 cd urdu-programming-language
 ```
 
 ### 3. Add the upstream remote — اپ اسٹریم ریموٹ شامل کریں
 
 ```
-git remote add upstream https://github.com/Alango DevelopersServers/urdu-programming-language.git
+git remote add upstream https://github.com/alingosuper/SUPL.git
 ```
 
 ### 4. Set up your development environment — ترقیاتی ماحول ترتیب دیں
@@ -421,7 +421,7 @@ The Urdu Programming Language is released under the **Urdu Programming Language 
 Key points of UPL-1.0:
 
 - **Programs you write** in the Urdu Programming Language are entirely yours — no attribution required, any license of your choice.
-- **The language source** (lexer, parser, transpiler, runtime, stdlib, docs) requires attribution to Alango Developers if you fork or distribute it.
+- **The language source** (lexer, parser, transpiler, runtime, stdlib, docs) requires attribution to AlinGo Developers if you fork or distribute it.
 - You may not claim to have created the original Urdu Programming Language or remove original author credits.
 
 By contributing, you agree that your contributions will be included under the same UPL-1.0 License, with your contributor credit preserved in the project's git history.

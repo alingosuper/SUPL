@@ -1,5 +1,5 @@
 from multilingual_keywords import MULTILINGUAL_KEYWORDS
-# SarakLuk Lexer — النگو ڈویلپرز
+# SUPL Lexer — النگو ڈویلپرز
 try:
     from .tokens import KEYWORDS, TOKEN_IDENTIFIER, TOKEN_NUMBER, TOKEN_STRING, TOKEN_EOF
 except ImportError:

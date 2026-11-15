@@ -1,4 +1,4 @@
-# SarakLuk Security Integration Test — النگو ڈویلپرز
+# SUPL Security Integration Test — النگو ڈویلپرز
 import sys
 from pathlib import Path
 

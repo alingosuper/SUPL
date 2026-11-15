@@ -587,4 +587,4 @@ x => x * 2     // تیر فنکشن
 
 ---
 
-*اردو پروگرامنگ لینگویج — Operators Reference — Alango Developers*
+*اردو پروگرامنگ لینگویج — Operators Reference — AlinGo Developers*

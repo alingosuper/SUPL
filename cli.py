@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-SarakLuk CLI (کمانڈ لائن انٹرفیس)
-تخلیق کار: النگو ڈویلپرز (Alango Developers)
+AlinGo CLI (کمانڈ لائن انٹرفیس)
+تخلیق کار: النگو ڈویلپرز (AlinGo Developers)
 """
 
 import sys
@@ -17,14 +17,14 @@ from parser.parser import Parser
 from interpreter import Interpreter
 
 VERSION = "1.0.0"
-AUTHOR = "النگو ڈویلپرز (Alango Developers)"
+AUTHOR = "النگو ڈویلپرز (AlinGo Developers)"
 
 def run_interactive_repl():
     """
-    SUPL کا لائیو انٹرایکٹو شیل (REPL) جو دیسی کی ورڈز پر لائیو کام کرتا ہے
+    AlinGo کا لائیو انٹرایکٹو شیل (REPL) جو دیسی کی ورڈز پر لائیو کام کرتا ہے
     """
     print("=" * 60)
-    print(f"  SarakLuk — لائیو انٹرایکٹو شیل (REPL) v{VERSION}")
+    print(f"  AlinGo — لائیو انٹرایکٹو شیل (REPL) v{VERSION}")
     print("  باہر نکلنے کے لیے 'باہر'، 'exit' یا 'ختم' لکھیں۔")
     print("=" * 60)
     
@@ -38,7 +38,7 @@ def run_interactive_repl():
                 continue
                 
             if line.strip().lower() in ["باہر", "exit", "quit", "ختم"]:
-                print("اللہ حافظ! SarakLuk شیل بند ہو رہا ہے۔")
+                print("اللہ حافظ! AlinGo شیل بند ہو رہا ہے۔")
                 break
 
             # سطر کو بلاک یا انفرادی کمانڈ کے طور پر رن کرنا
@@ -58,11 +58,11 @@ def run_interactive_repl():
 
 def main():
     parser = argparse.ArgumentParser(
-        description="SarakLuk (سرائیکی پروگرامنگ لینگویج) — ٹرمینل انٹرفیس",
+        description="AlinGo Saraiki (سرائیکی پروگرامنگ لینگویج) — ٹرمینل انٹرفیس",
         prog="saraiki"
     )
     parser.add_argument("file", nargs="?", help="چلانے کے لیے سرائیکی فائل (.slk)")
-    parser.add_argument("-v", "--version", action="version", version=f"SarakLuk v{VERSION} — {AUTHOR}")
+    parser.add_argument("-v", "--version", action="version", version=f"AlinGo v{VERSION} — {AUTHOR}")
     parser.add_argument("-i", "--interactive", action="store_true", help="انٹرایکٹو شیل (REPL) شروع کریں")
 
     args = parser.parse_args()
@@ -70,7 +70,7 @@ def main():
     # اگر فلیگ دیا گیا ہو یا کوئی فائل نہ دی گئی ہو تو لائیو REPL کھولیں
     if args.interactive or not args.file:
         if not args.interactive and not args.file:
-            print(f"SarakLuk v{VERSION} — {AUTHOR}")
+            print(f"AlinGo v{VERSION} — {AUTHOR}")
             print("استعمال کا طریقہ: saraiki <فائل_کا_نام.slk> یا saraiki -i\n")
         run_interactive_repl()
         return
