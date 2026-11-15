@@ -150,6 +150,16 @@ class Interpreter:
             finally:
                 self.variables = old_vars
 
+        elif ntype == "TryCatch":
+            try:
+                for stmt in node["try_body"]:
+                    self.execute_ast(stmt)
+            except Exception as e:
+                # غلطی کو متغیر میں رکھیں
+                self.variables[node["catch_var"]] = str(e)
+                for stmt in node["catch_body"]:
+                    self.execute_ast(stmt)
+
         elif ntype == "Return":
             value = self.eval_expr(node["value"])
             raise _ReturnException(value)
@@ -282,6 +292,53 @@ class Interpreter:
             if prop not in attrs:
                 raise AttributeError(f"پراپرٹی نہیں ملی: {prop}")
             return attrs[prop]
+
+        if ntype == "MethodCall":
+            obj = self.eval_expr(node["object"])
+            method_name = node["method"]
+            args = [self.eval_expr(a) for a in node["args"]]
+
+            if isinstance(obj, str):
+                if method_name == "لمبائی":
+                    return len(obj)
+                elif method_name == "بڑا_کریں":
+                    return obj.upper()
+                elif method_name == "چھوٹا_کریں":
+                    return obj.lower()
+                elif method_name == "بدلو":
+                    if len(args) != 2:
+                        raise TypeError("بدلو دو آرگومنٹس چاہندا ہے")
+                    return obj.replace(str(args[0]), str(args[1]))
+                else:
+                    raise AttributeError(f"String دا طریقہ نہیں لبھیا: {method_name}")
+
+            if isinstance(obj, dict) and "__class__" in obj:
+                cls = obj["__class__"]
+                method = cls.get("methods", {}).get(method_name)
+                if method is None:
+                    raise AttributeError(f"طریقہ نہیں لبھیا: {method_name}")
+
+                params = method.get("params", [])
+                if len(args) != len(params):
+                    raise TypeError("طریقے دے آرگومنٹس دی تعداد غلط ہے")
+
+                old_vars = self.variables.copy()
+                try:
+                    for param, arg in zip(params, args):
+                        self.variables[param] = arg
+                    self.variables["یہ"] = obj
+
+                    for stmt in method["body"]:
+                        self.execute_ast(stmt)
+
+                except _ReturnException as exc:
+                    return exc.value
+                finally:
+                    self.variables = old_vars
+
+                return None
+
+            raise TypeError("ایہہ آبجیکٹ طریقہ کال نہیں کر سکدا")
 
         if ntype == "Self":
             return self.variables.get("یہ")

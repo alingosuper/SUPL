@@ -7,6 +7,10 @@ TOKEN_STRING = "STRING"
 
 # آسان سرائیکی کی ورڈز کی لغت
 KEYWORDS = {
+    "کوشش": "TRY",
+    "پکڑو": "CATCH",
+    "غلطی": "ERROR_VAR",
+
     "تعمیر": "CONSTRUCTOR",
     "نیا": "NEW",
     "یہ": "SELF",
