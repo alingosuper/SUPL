@@ -1,84 +1,73 @@
-<p align="center">
-  <img src="assets/branding/alingo-banner-dark.svg" alt="AlinGo Saraiki" width="100%" />
+<div align="center">
+
+<img src="assets/logo/alingo_logo.svg" alt="AlinGo Saraiki Logo" width="280" />
+
+<h1>AlinGo Saraiki</h1>
+
+<p><strong>دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی</strong></p>
+
+<p><em>Saraiki · Urdu · Punjabi Programming Language & Terminal Suite</em></p>
+
+<p>
+<img src="https://img.shields.io/badge/Version-1.0.1-success?style=for-the-badge" alt="Version" />
+<img src="https://img.shields.io/badge/Python-3.9+-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+<img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="License" />
+<img src="https://img.shields.io/badge/Languages-Saraiki%20%7C%20Urdu%20%7C%20Punjabi-green?style=for-the-badge" alt="Languages" />
 </p>
 
-<h1 align="center">AlinGo Saraiki</h1>
+</div>
 
-<p align="center">
-  <strong>دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی</strong><br/>
-  <em>Saraiki · Urdu · Punjabi Programming Language</em>
-</p>
+## 🚀 AlinGo — دیسی پروگرامنگ زبان اور ٹرمینل سوٹ
 
-<p align="center">
-  <img src="https://img.shields.io/badge/version-1.0.1-green.svg" alt="version" />
-  <img src="https://img.shields.io/badge/python-3.9+-blue.svg" alt="python" />
-  <img src="https://img.shields.io/badge/license-MIT-yellow.svg" alt="license" />
-  <img src="https://img.shields.io/badge/languages-Saraiki%20|%20Urdu%20|%20Punjabi-success.svg" alt="languages" />
-</p>
+**AlinGo Saraiki** ایک منفرد اور کثیر اللسانی (Multilingual) پروگرامنگ زبان اور ٹرمینل ٹول کٹ ہے جسے خاص طور پر اردو، پنجابی اور سرائیکی بولنے والے ڈویلپرز کے لیے ٹرمیکس (Termux) اور لینوکس ماحول میں تیار کیا گیا ہے۔
 
----
+اس کا مقصد معیاری لینوکس اور ڈویلپمنٹ کمانڈز کو اپنی مادری زبان کے آسان الفاظ کے ذریعے چلانا اور جدید ویب اسٹیک (Node.js, Go, HTML/CSS) کو دیسی رنگ دینا ہے۔
 
-# AlinGo — دیسی پروگرامنگ زبان اور ٹرمینل سوٹ 🚀
-
-**AlinGo Saraiki** ایک منفرد اور کثیر اللسانی (Multilingual) پروگرامنگ زبان اور ٹرمینل ٹول کٹ ہے جسے خاص طور پر **اردو، پنجابی اور سرائیکی** بولنے والے ڈویلپرز کے لیے ٹرمیکس (Termux) اور لینوکس ماحول میں تیار کیا گیا ہے۔
-
-اس کا مقصد معیاری لینوکس اور ڈویلپمنٹ کمانڈز کو اپنی مادری زبان کے آسان الفاظ کے ذریعے چلانا اور جدید ویب اسٹیک (`Node.js`, `Go`, `HTML/CSS`) کو دیسی رنگ دینا ہے۔
-
----
-
-## 🌟 اہم خصوصیات (Features)
+### 🌟 اہم خصوصیات (Features)
 
 * **لائیو انٹرایکٹو شیل (REPL):** اردو اور دیسی کی ورڈز کے ساتھ لائیو کوڈنگ کا ماحول۔
 * **دیسی لغت (Dictionary Engine):** JSON اور CSV پر مبنی بلٹ ان آف لائن لغت جس میں الفاظ تلاش کرنا، شامل کرنا اور حذف کرنا انتہائی آسان ہے۔
 * **جدید ویب اور سرور ٹولز:** Node.js، Go، اور لوکل ویب سرور چلانے کے لیے دیسی شارٹ کٹس۔
 * **پیکیج مینجمنٹ:** گلوبل انسٹالیشن (`pip install --editable .`) تاکہ کسی بھی فولڈر سے کمانڈز چلائی جا سکیں۔
 
----
+### 📥 تنصیب (Installation)
 
-## 📥 تنصیب (Installation)
-
-پراجیکٹ کو کلون کرنے کے بعد ٹرمیکس میں گلوبل انسٹال کرنے کے لیے درج ذیل کمانڈز چلائیں:
+پراجیکٹ کو کلون کرنے کے بعد ٹرمیکس یا ٹرمینل میں گلوبل انسٹال کرنے کے لیے درج ذیل کمانڈز چلائیں:
 
 ```bash
-# پراجیکٹ کے فولڈر میں جائیں
-cd ~/SUPL
+# 1. ریپوزٹری کلون کریں
+git clone https://github.com/alingosuper/SUPL.git
+cd SUPL
 
-# پائتھون کے ذریعے گلوبل اور ایڈیٹیبل موڈ میں انسٹال کریں
-pip install --editable .
+# 2. ایڈیٹیبل انسٹال کریں
+pip install -e .
 
+# 3. چیک کریں
+saraiki -v
+# لائیو شیل کھولیں
 saraiki -i
 
-saraiki program.slk
+# کوئی فائل چلائیں
+saraiki hello.slk
 
-saraiki تلاش الگورتھم
+# لغت میں لفظ تلاش کریں
+saraiki تلاش کتاب
 
-saraiki شامل 'متغیر' 'کمپیوٹر میموری میں ڈیٹا محفوظ کرنے کا نام'
+---
 
-saraiki مٹاؤ 'پرانا_لفظ'
+### مرحلہ 3: ایک ہی کمانڈ میں گٹ کمٹ اور پش
 
-saraiki مٹاؤ 'پرانا_لفظ'
+اب جب کہ آپ کی نئی `alingo_logo.svg` اور برانڈڈ `README.md` تیار ہیں، انہیں گٹ ہب پر اپ لوڈ کرنے کے لیے یہ کمانڈ چلائیں:
 
-saraiki فہرست
+```bash
+cd ~/SUPL
 
-saraiki نوڈ server.js
+# پرانی "زمین آسمان" والی فائلیں صاف کریں (اگر موجود ہیں)
+rm -f assets/branding/alingo-logo.svg
+rm -f assets/branding/alingo-banner-dark.svg
+rm -f assets/branding/alingo-icon.svg
 
-saraiki گو main.go
-
-saraiki سرور 8000
-
-~/SUPL/
-├── supl/                  # مرکزی پائتھون پیکیج
-│   ├── __init__.py
-│   ├── cli.py             # CLI ڈسپیچر اور کمانڈز
-│   ├── interpreter.py     # زبان کا انٹرپریٹر انجن
-│   └── dictionary.py      # لغت کا ماڈیول
-├── data/                  # ڈیٹا بیس فائلیں
-│   ├── dictionary.json    # JSON لغت
-│   └── dictionary.csv     # CSV لغت
-├── setup.py               # گلوبل سیٹ اپ اسکرپٹ
-└── README.md              # پراجیکٹ کی دستاویزات
-
-👨‍💻 ڈویلپر
-​النگو ڈویلپرز (AlinGo Developers)
-​ریپوزیٹری: https://github.com/alingosuper/SUPL
-​License: MIT
+# نئی فائلیں شامل کریں اور کمٹ کریں
+git add assets/logo/alingo_logo.svg README.md
+git commit -m "feat(branding): add custom high-fidelity SVG logo in official green/gold theme and update README"
+git push origin main
