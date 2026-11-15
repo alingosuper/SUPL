@@ -867,3 +867,40 @@ __all__ = [
     # internals
     "_urdu_typeof", "_urdu_opt", "_urdu_delete",
 ]
+
+# ─────────────────────────────────────────────
+# AlinGo — List & Dictionary Helpers
+# ─────────────────────────────────────────────
+def فہرست_بناؤ(*items):
+    """نیا list بنائیں: فہرست(1, 2, 3)"""
+    return list(items)
+
+def لمبائی(obj):
+    """لمبائی نکالیں: لمبائی([1,2,3]) → 3"""
+    return len(obj)
+
+def شامل_کریں(lst, item):
+    """فہرست میں شامل: شامل_کریں(فہرست, "نیا")"""
+    lst.append(item)
+    return lst
+
+def نکالیں(lst, index=-1):
+    """فہرست سے نکالیں"""
+    return lst.pop(index)
+
+def لغت_بناؤ(**kwargs):
+    """لغت بنائیں: لغت_بناؤ(نام="علی", عمر=25)"""
+    return dict(kwargs)
+
+def کلید_ہے(d, key):
+    """چیک کریں کلید موجود ہے: کلید_ہے(شخص, "نام")"""
+    return key in d
+
+def کلیدیں(d):
+    """تمام کلیدیں: کلیدیں(شخص) → ["نام", "عمر"]"""
+    return list(d.keys())
+
+def قدریں(d):
+    """تمام قدریں: قدریں(شخص) → ["علی", 25]"""
+    return list(d.values())
+

@@ -7,12 +7,27 @@ TOKEN_STRING = "STRING"
 
 # آسان سرائیکی کی ورڈز کی لغت
 KEYWORDS = {
+    "تعمیر": "CONSTRUCTOR",
+    "نیا": "NEW",
+    "یہ": "SELF",
+
+
+    "کلاس": "CLASS",
+
+
+    "تاں": "THEN",
+    "تو": "THEN",
+    "{": "LBRACE",
+    "}": "RBRACE",
+
     "عدد": "VAR",
     "جے": "IF",
     "اگر": "IF",
     "نہیں_تاں": "ELSE",
     "ورنہ": "ELSE",
     "جئیں_ویلے_تئیں": "WHILE",
+    "جتھاں": "WHILE",
+    "برائے": "FOR",
     "ہر": "FOR",
     "کم": "FUNCTION",
     "فنکشن": "FUNCTION",
