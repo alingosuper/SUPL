@@ -56,10 +56,10 @@
 # llama-cpp-python          # Local LLM inference (llama.cpp)
 
 # ─── Install all optional dependencies ───────
-# pip install Alango Developers[all]
+# pip install "alingo-saraiki[all]"
 #
 # or individually:
-# pip install Alango Developers[mysql]
-# pip install Alango Developers[fastapi]
-# pip install Alango Developers[ml]
-# pip install Alango Developers[llm]
+# pip install "alingo-saraiki[mysql]"
+# pip install "alingo-saraiki[fastapi]"
+# pip install "alingo-saraiki[ml]"
+# pip install "alingo-saraiki[llm]"

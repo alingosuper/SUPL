@@ -10,7 +10,7 @@ dist/
 *.egg
 .eggs/
 
-# SarakLuk compilation cache
+# SUPL compilation cache
 *.slkc
 
 # Testing
@@ -40,3 +40,28 @@ Thumbs.db
 
 # Logs
 *.log
+
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# ── AlinGo build artefacts ──
+*.slkc
+tmp_*
+*.bak
+*.backup-*
+
+# ── Logs / ML ──
+logs/
+runs/
+examples/tb_test_logs/
+*.tfevents.*
+
+# ── IDE / OS ──
+.vscode/
+.idea/
+.DS_Store
