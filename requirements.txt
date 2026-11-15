@@ -1,65 +1,48 @@
 # ══════════════════════════════════════════════
-# اردو پروگرامنگ لینگویج — ضروریات
-# Urdu Programming Language — Requirements
+# AlinGo Saraiki — Requirements (Full Suite)
 # ══════════════════════════════════════════════
 
-# ─── Core (required) ─────────────────────────
-# Python 3.9+ — no extra core dependencies
+# ─── Web Frameworks ───
+flask
+django
+fastapi
+uvicorn[standard]
+aiohttp
+python-socketio
+websockets
 
-# ─── GUI (optional) ──────────────────────────
-# tkinter is built-in with Python
+# ─── Machine Learning ───
+tensorflow
+keras
+scikit-learn
+torch
+numpy
+pandas
+llama-cpp-python
 
-# ─── File I/O ────────────────────────────────
-# openpyxl                  # Excel .xlsx read/write
-# xlrd                      # Excel .xls read (legacy format)
-# watchdog                  # File system watcher (اردو/فائلیں — فائل_نگران)
+# ─── Security / Auth ───
+cryptography
+python-jose[cryptography]
+bcrypt
 
-# ─── Arduino / Embedded ──────────────────────
-# pyserial                  # Serial port communication (اردو/آردوینو — سیریل)
-# pyfirmata2                # Firmata protocol for Arduino pin control (اردو/آردوینو — آردوینو)
+# ─── Databases ───
+mysql-connector-python
+psycopg2-binary
+pymongo
+cassandra-driver
+firebase-admin
 
-# ─── Databases ───────────────────────────────
-# mysql-connector-python    # MySQL
-# pymysql                   # MySQL (pure-Python alternative)
-# psycopg2-binary           # PostgreSQL
-# pymongo                   # MongoDB
-# firebase-admin            # Firebase / Firestore
-# cassandra-driver          # Apache Cassandra
+# ─── File / I/O ───
+openpyxl
+watchdog
 
-# ─── Web Frameworks ──────────────────────────
-# fastapi                   # FastAPI
-# uvicorn[standard]         # ASGI server for FastAPI
-# flask                     # Flask
-# django                    # Django
-# aiohttp                   # Async HTTP client
-# requests                  # HTTP client (sync)
-# websockets                # WebSocket support
-# python-socketio           # Socket.IO server
-# python-engineio           # Engine.IO server (dependency of python-socketio)
+# ─── Hardware / IoT ───
+pyserial
+pyfirmata2
 
-# ─── Security / Auth ─────────────────────────
-# python-jose[cryptography] # JWT tokens
-# cryptography              # Cryptographic primitives
-# pycryptodome              # PyCryptodome (installed as Crypto)
-
-# ─── TensorBoard (metrics / training visualisation) ──────────────────────────
-# tensorboard                # TensorBoard standalone (اردو/ٹینسر_بورڈ — ٹینسر_لاگ, بورڈ_چلائیں)
-
-# ─── Machine Learning ────────────────────────
-# tensorflow                # TensorFlow + Keras
-# scikit-learn              # ML algorithms
-# numpy                     # Numerical computing
-# pandas                    # Data analysis
-# matplotlib                # Plotting
-
-# ─── LLM Support ─────────────────────────────
-# llama-cpp-python          # Local LLM inference (llama.cpp)
-
-# ─── Install all optional dependencies ───────
-# pip install "alingo-saraiki[all]"
-#
-# or individually:
-# pip install "alingo-saraiki[mysql]"
-# pip install "alingo-saraiki[fastapi]"
-# pip install "alingo-saraiki[ml]"
-# pip install "alingo-saraiki[llm]"
+# ─── Optional / Dev ───
+matplotlib
+requests
+beautifulsoup4
+mkdocs>=1.5.0
+mkdocs-material>=9.5.0
