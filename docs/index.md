@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/branding/alingo-logo-full.svg" alt="AlinGo Saraiki" width="600" />
+</p>
+
 # اردو پروگرامنگ لینگویج — Urdu Programming Language
 
 > **The world's first programming language written entirely in Urdu syntax.**

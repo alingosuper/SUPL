@@ -1,0 +1,39 @@
+site_name: AlinGo Saraiki
+site_description: دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی
+site_author: AlinGo Developers
+
+theme:
+  name: material
+  logo: assets/branding/alingo-logo.svg
+  favicon: assets/branding/favicon.svg
+  palette:
+    primary: green
+    accent: amber
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+nav:
+  - ہوم: index.md
+  - انسٹالیشن: installation.md
+  - کوئیک اسٹارٹ: quick-start.md
+  - ٹیوٹوریل:
+      - ابتدائی: tutorial/beginner/index.md
+      - درمیانی: tutorial/intermediate/index.md
+      - اعلیٰ: tutorial/advanced/index.md
+  - حوالہ:
+      - کی ورڈز: reference/keywords.md
+      - آپریٹرز: reference/operators.md
+  - لائبریریاں: libraries/index.md
+  - مثالیں: examples/index.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - admonition

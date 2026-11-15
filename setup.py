@@ -4,6 +4,14 @@ setup(
     name="alingo-saraiki",
     version="1.0.1",                      # urdu/__init__.py کے مطابق
     description="AlinGo Saraiki - Saraiki-first Programming Language for Urdu, Punjabi, and Saraiki",
+    long_description=open("README.md", encoding="utf-8").read() if __import__("os").path.exists("README.md") else "",
+    long_description_content_type="text/markdown",
+    url="https://github.com/alingosuper/SUPL",
+    project_urls={
+        "Bug Tracker": "https://github.com/alingosuper/SUPL/issues",
+        "Documentation": "https://github.com/alingosuper/SUPL/tree/main/docs",
+        "Source": "https://github.com/alingosuper/SUPL",
+    },
     author="AlinGo Developers",
     packages=find_packages(exclude=["tests*", "examples*", "docs*"]),
     include_package_data=True,

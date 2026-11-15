@@ -1,3 +1,23 @@
+<p align="center">
+  <img src="assets/branding/alingo-banner-dark.svg" alt="AlinGo Saraiki" width="100%" />
+</p>
+
+<h1 align="center">AlinGo Saraiki</h1>
+
+<p align="center">
+  <strong>دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی</strong><br/>
+  <em>Saraiki · Urdu · Punjabi Programming Language</em>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/version-1.0.1-green.svg" alt="version" />
+  <img src="https://img.shields.io/badge/python-3.9+-blue.svg" alt="python" />
+  <img src="https://img.shields.io/badge/license-MIT-yellow.svg" alt="license" />
+  <img src="https://img.shields.io/badge/languages-Saraiki%20|%20Urdu%20|%20Punjabi-success.svg" alt="languages" />
+</p>
+
+---
+
 # AlinGo — دیسی پروگرامنگ زبان اور ٹرمینل سوٹ 🚀
 
 **AlinGo Saraiki** ایک منفرد اور کثیر اللسانی (Multilingual) پروگرامنگ زبان اور ٹرمینل ٹول کٹ ہے جسے خاص طور پر **اردو، پنجابی اور سرائیکی** بولنے والے ڈویلپرز کے لیے ٹرمیکس (Termux) اور لینوکس ماحول میں تیار کیا گیا ہے۔

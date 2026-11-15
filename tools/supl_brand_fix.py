@@ -1,111 +1,135 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+AlinGo Brand Fix — خودکار برانڈنگ نصب کنندہ
+تمام README، docs، HTML، Python فائلوں میں لوگو لگاتا ہے۔
+"""
+import sys
 from pathlib import Path
-from datetime import datetime
-import shutil
+import re
 
-ROOT = Path.cwd()
-BACKUP = ROOT.parent / (
-    "SUPL-backup-" + datetime.now().strftime("%Y%m%d-%H%M%S")
-)
+ROOT = Path(__file__).resolve().parent.parent
+BRAND = ROOT / "assets" / "branding"
 
-changes = {
-    "setup.py": [
-        ('name="sarakluk"', 'name="supl-lang"'),
-        ('description="AlinGo -', 'description="SUPL -'),
-        ('author="Alango Developers"', 'author="AlinGo Developers"'),
-    ],
-    "README.md": [
-        ('# AlinGo (SUPL)', '# SUPL'),
-        ('**AlinGo (SUPL)**', '**SUPL**'),
-    ],
-    "LICENSE": [
-        ('سرائیکی پروگرامنگ زبان (AlinGo)', 'SUPL پروگرامنگ زبان'),
-        ('پراجیکٹ: AlinGo (سرائیکی پروگرامنگ زبان)',
-         'پراجیکٹ: SUPL (سرائیکی پروگرامنگ زبان)'),
-        ('Alango Developers', 'AlinGo Developers'),
-    ],
-    "interpreter.py": [
-        ('# AlinGo Interpreter', '# SUPL Interpreter'),
-        ('sarakluk_out.html', 'supl_out.html'),
-    ],
-    "lexer/tokens.py": [
-        ('# AlinGo Tokens', '# SUPL Tokens'),
-    ],
-    "lexer/lexer.py": [
-        ('# AlinGo Lexer', '# SUPL Lexer'),
-    ],
-    "parser/parser.py": [
-        ('# AlinGo Parser', '# SUPL Parser'),
-    ],
-    "urdu/runtime/naksha.py": [
-        ('# AlinGo Graphics', '# SUPL Graphics'),
-        ('AlinGo گرافکس', 'SUPL گرافکس'),
-    ],
-    "cli.py": [
-        ('AlinGo CLI', 'SUPL CLI'),
-        ('AlinGo — لائیو', 'SUPL — لائیو'),
-        ('AlinGo شیل', 'SUPL شیل'),
-        ('AlinGo (سرائیکی', 'SUPL (سرائیکی'),
-        ('AlinGo v{VERSION}', 'SUPL v{VERSION}'),
-        ('Alango Developers', 'AlinGo Developers'),
-    ],
-    "security/suraksha.py": [
-        ('# AlinGo Security', '# SUPL Security'),
-    ],
-    "test_security.py": [
-        ('# AlinGo Security', '# SUPL Security'),
-    ],
-    "help_supl.py": [
-        ('AlinGo / SUPL', 'SUPL'),
-        ('Alango Developers', 'AlinGo Developers'),
-    ],
-    "rtl_helper.py": [
-        ('AlinGo فریم ورک', 'SUPL فریم ورک'),
-    ],
-    "bhooj_dictionary.py": [
-        ('AlinGo ایک کثیر اللسانی', 'SUPL ایک کثیر اللسانی'),
-    ],
-    "show_dictionary.py": [
-        ('AlinGo دیسی لغت', 'SUPL دیسی لغت'),
-    ],
-    "supl/cli.py": [
-        ('AlinGo v1.0.0', 'SUPL v1.0.0'),
-        ('AlinGo (SUPL)', 'SUPL'),
-    ],
-    ".gitignore": [
-        ('AlinGo compilation cache', 'SUPL compilation cache'),
-    ],
-    "ui_مثال.slk": [
-        ('AlinGo سرائیکی زبان', 'SUPL سرائیکی زبان'),
-    ],
-    "مثال_صفحہ.html": [
-        ('AlinGo گرافکس', 'SUPL گرافکس'),
-    ],
-    "urdu/__init__.py": [
-        ('Alango Developers', 'AlinGo Developers'),
-    ],
-}
+BANNER_REL = "assets/branding/alingo-banner-dark.svg"
+LOGO_REL = "assets/branding/alingo-logo.svg"
+ICON_REL = "assets/branding/alingo-icon.svg"
+FAVICON_REL = "assets/branding/favicon.svg"
 
-BACKUP.mkdir(parents=True, exist_ok=True)
+README_HEADER = f'''<p align="center">
+  <img src="{BANNER_REL}" alt="AlinGo Saraiki" width="100%" />
+</p>
 
-for filename, replacements in changes.items():
-    path = ROOT / filename
+<h1 align="center">AlinGo Saraiki</h1>
 
-    if not path.is_file():
-        print("SKIP:", filename)
-        continue
+<p align="center">
+  <strong>دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی</strong><br/>
+  <em>Saraiki · Urdu · Punjabi Programming Language</em>
+</p>
 
-    original = path.read_text(encoding="utf-8")
-    updated = original
+<p align="center">
+  <img src="https://img.shields.io/badge/version-1.0.1-green.svg" />
+  <img src="https://img.shields.io/badge/python-3.9+-blue.svg" />
+  <img src="https://img.shields.io/badge/license-MIT-yellow.svg" />
+</p>
 
-    for old, new in replacements:
-        updated = updated.replace(old, new)
+---
 
-    if updated != original:
-        target = BACKUP / filename
-        target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(path, target)
-        path.write_text(updated, encoding="utf-8")
-        print("UPDATED:", filename)
+'''
 
-print("\nBackup created:", BACKUP)
-print("Brand correction finished.")
+
+def fix_readme():
+    p = ROOT / "README.md"
+    if not p.exists():
+        print("⚠️ README.md نہیں ملا")
+        return
+    src = p.read_text(encoding="utf-8")
+    if BANNER_REL in src:
+        print("ℹ️ README.md پہلے سے برانڈڈ ہے")
+        return
+    p.write_text(README_HEADER + src, encoding="utf-8")
+    print("✅ README.md میں banner شامل")
+
+
+def fix_docs_index():
+    p = ROOT / "docs" / "index.md"
+    if not p.exists():
+        print("⚠️ docs/index.md نہیں ملا")
+        return
+    src = p.read_text(encoding="utf-8")
+    if "alingo-logo-full.svg" in src:
+        print("ℹ️ docs/index.md پہلے سے برانڈڈ ہے")
+        return
+    header = f'<p align="center">\n  <img src="../{LOGO_REL}" alt="AlinGo" width="600" />\n</p>\n\n'
+    p.write_text(header + src, encoding="utf-8")
+    print("✅ docs/index.md میں لوگو شامل")
+
+
+def fix_mkdocs():
+    p = ROOT / "mkdocs.yml"
+    if not p.exists():
+        print("⚠️ mkdocs.yml نہیں ملا — پہلے بنائیں")
+        return
+    src = p.read_text(encoding="utf-8")
+    changed = False
+    if "favicon:" not in src:
+        src = src.rstrip() + f"\nfavicon: {FAVICON_REL}\n"
+        changed = True
+    if "logo:" not in src:
+        src = src.rstrip() + f"\nlogo: {LOGO_REL}\n"
+        changed = True
+    if changed:
+        p.write_text(src, encoding="utf-8")
+        print("✅ mkdocs.yml میں favicon + logo شامل")
+    else:
+        print("ℹ️ mkdocs.yml پہلے سے برانڈڈ ہے")
+
+
+def fix_html_favicon():
+    """تمام .html فائلوں میں favicon شامل کریں"""
+    count = 0
+    for html in ROOT.rglob("*.html"):
+        if "node_modules" in str(html) or "site-packages" in str(html):
+            continue
+        try:
+            src = html.read_text(encoding="utf-8")
+        except Exception:
+            continue
+        if "favicon.svg" in src:
+            continue
+        # <head> کے بعد favicon شامل کریں
+        m = re.search(r"<head[^>]*>", src, re.I)
+        if m:
+            rel_path = "../" * len(html.relative_to(ROOT).parts[:-1]) + FAVICON_REL
+            tag = f'\n  <link rel="icon" type="image/svg+xml" href="{rel_path}">'
+            src = src[:m.end()] + tag + src[m.end():]
+            html.write_text(src, encoding="utf-8")
+            count += 1
+    print(f"✅ {count} HTML فائلوں میں favicon شامل")
+
+
+def verify():
+    print("\n════════ تصدیق ════════")
+    svgs = list(BRAND.glob("*.svg"))
+    print(f"SVG فائلیں: {len(svgs)}")
+    for s in svgs:
+        print(f"  ✓ {s.name} ({s.stat().st_size} بائٹس)")
+
+    readme = ROOT / "README.md"
+    if readme.exists() and BANNER_REL in readme.read_text(encoding="utf-8"):
+        print("✓ README.md برانڈڈ")
+
+    print("\n✅ برانڈنگ مکمل")
+
+
+if __name__ == "__main__":
+    if not BRAND.exists():
+        print(f"❌ برانڈنگ فولڈر نہیں ملا: {BRAND}")
+        print("   پہلے: mkdir -p assets/branding && SVG فائلیں بنائیں")
+        sys.exit(1)
+
+    fix_readme()
+    fix_docs_index()
+    fix_mkdocs()
+    fix_html_favicon()
+    verify()
