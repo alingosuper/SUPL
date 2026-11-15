@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldBright" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF200"/>
+      <stop offset="40%" stop-color="#F2B705"/>
+      <stop offset="100%" stop-color="#8A5A00"/>
+    </linearGradient>
+    <linearGradient id="goldBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCE181"/>
+      <stop offset="50%" stop-color="#D99A00"/>
+      <stop offset="100%" stop-color="#B37400"/>
+    </linearGradient>
+    <linearGradient id="greenDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A5C2A"/>
+      <stop offset="100%" stop-color="#043314"/>
+    </linearGradient>
+    <linearGradient id="greenLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#35C357"/>
+      <stop offset="50%" stop-color="#168F38"/>
+      <stop offset="100%" stop-color="#0A5C2A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- App Icon پس منظر -->
+  <rect width="512" height="512" rx="100" fill="#021c0d" />
+  
+  <!-- لوگو کو سینٹر میں لائیں -->
+  <g transform="translate(-30, -20) scale(0.85)">
+      <!-- Left Green -->
+      <path d="M 250,280 C 100,280 20,220 20,140 C 20,60 100,20 220,20 C 320,20 380,70 380,130 C 380,150 370,165 355,165 C 340,165 325,150 325,130 C 325,90 280,60 220,60 C 140,60 60,90 60,140 C 60,190 120,240 250,240 L 250,190 L 100,190 L 100,140 L 280,140 L 280,280 Z" 
+            fill="url(#greenDark)" stroke="#D9A632" stroke-width="4"/>
+      <path d="M 30,130 C 30,60 100,30 200,30 C 280,30 330,65 330,110 C 330,120 325,125 315,125 C 315,90 270,55 200,55 C 130,55 65,80 65,130 C 65,170 110,205 200,205 L 200,175 L 110,175 L 110,150 L 260,150 L 260,260 C 130,260 45,220 45,140 Z" 
+            fill="url(#greenLight)" opacity="0.4" />
+
+      <!-- Right Green -->
+      <path d="M 430,280 C 530,280 620,240 620,140 C 620,60 540,20 480,20 C 440,20 400,35 370,60 L 400,100 C 425,80 450,60 480,60 C 520,60 575,90 575,140 C 575,200 520,240 440,240 C 420,240 400,235 380,225 L 360,260 C 390,275 410,280 430,280 Z" 
+            fill="url(#greenDark)" stroke="#D9A632" stroke-width="4"/>
+      <path d="M 450,255 C 520,255 585,220 585,140 C 585,90 540,50 480,50 C 450,50 425,65 400,85 L 415,100 C 435,80 460,70 480,70 C 520,70 560,95 560,140 C 560,185 515,225 445,225 C 430,225 410,220 395,210 L 385,225 C 400,240 420,255 450,255 Z" 
+            fill="url(#greenLight)" opacity="0.5" />
+
+      <!-- Gold Figure -->
+      <circle cx="310" cy="60" r="35" fill="url(#goldBright)" stroke="#A86B00" stroke-width="3"/>
+      <circle cx="310" cy="60" r="30" fill="url(#goldBody)" />
+      <ellipse cx="300" cy="45" rx="10" ry="6" fill="#FFF" opacity="0.6" transform="rotate(-30 300 45)"/>
+
+      <path d="M 310,95 C 290,95 260,120 260,160 C 260,220 220,280 160,280 C 130,280 100,260 90,230 L 110,210 C 130,230 150,240 170,240 C 200,240 220,200 230,170 C 240,130 270,110 310,110 L 310,95 Z" 
+            fill="url(#goldBody)" stroke="#A86B00" stroke-width="3"/>
+      <path d="M 310,110 C 340,110 380,80 420,20 C 410,70 390,130 350,170 C 330,190 300,200 280,200 C 260,200 250,190 250,180 C 270,180 290,160 300,130 C 305,120 310,115 310,110 Z" 
+            fill="url(#goldBright)" stroke="#A86B00" stroke-width="3"/>
+      <path d="M 300,120 C 330,120 360,90 390,50 C 380,90 360,140 330,165 C 315,175 300,180 290,180 C 305,165 315,145 315,130 C 315,125 310,120 300,120 Z" 
+            fill="#FFF" opacity="0.5"/>
+  </g>
+</svg>

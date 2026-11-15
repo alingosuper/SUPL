@@ -1,31 +1,105 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
   <defs>
-    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1a9b4a"/>
-      <stop offset="50%" stop-color="#0e7a35"/>
-      <stop offset="100%" stop-color="#064a1f"/>
+    <!-- پس منظر کا رنگ (اصل تصویر جیسا گہرا سبز) -->
+    <rect id="bg" width="800" height="450" rx="20" fill="#021c0d" />
+
+    <!-- گریڈینٹس: 3D اور چمک کے لیے -->
+    <linearGradient id="goldBright" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF200"/>
+      <stop offset="40%" stop-color="#F2B705"/>
+      <stop offset="100%" stop-color="#8A5A00"/>
     </linearGradient>
-    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#fce38a"/>
-      <stop offset="40%" stop-color="#f5c242"/>
-      <stop offset="100%" stop-color="#b8860b"/>
+
+    <linearGradient id="goldBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCE181"/>
+      <stop offset="50%" stop-color="#D99A00"/>
+      <stop offset="100%" stop-color="#B37400"/>
     </linearGradient>
-    <linearGradient id="headGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ffe066"/>
-      <stop offset="100%" stop-color="#e6a700"/>
+
+    <linearGradient id="greenDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A5C2A"/>
+      <stop offset="100%" stop-color="#043314"/>
     </linearGradient>
+
+    <linearGradient id="greenLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#35C357"/>
+      <stop offset="50%" stop-color="#168F38"/>
+      <stop offset="100%" stop-color="#0A5C2A"/>
+    </linearGradient>
+
+    <!-- شیڈو اور گلو -->
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+    
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
   </defs>
 
-  <!-- بائیں سبز "نما" حرف -->
-  <path d="M 30 110 Q 30 60 80 60 L 160 60 Q 200 60 200 100 Q 200 140 160 140 L 110 140 L 110 100 Q 110 90 120 90 L 160 90 Q 170 90 170 100 Q 170 110 160 110 L 120 110" 
-        fill="none" stroke="url(#greenGrad)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- پس منظر -->
+  <use href="#bg" />
 
-  <!-- سنہری انسانی شکل -->
-  <circle cx="250" cy="60" r="22" fill="url(#headGrad)"/>
-  <path d="M 220 95 Q 250 80 280 95 Q 320 130 350 40 Q 300 90 280 150 Q 260 200 220 230" 
-        fill="url(#goldGrad)" stroke="#b8860b" stroke-width="1"/>
+  <!-- گروپ: لوگو کے اجزا -->
+  <g transform="translate(70, 70) scale(1.1)" filter="url(#dropShadow)">
+    
+    <!-- ─── 1. بائیں سبز حصہ (بیک گراؤنڈ + گہرا رنگ) ─── -->
+    <!-- ایک جڑا ہوا حصہ جو اندر سے کٹا ہوا ہے -->
+    <path d="M 250,280 C 100,280 20,220 20,140 C 20,60 100,20 220,20 C 320,20 380,70 380,130 C 380,150 370,165 355,165 C 340,165 325,150 325,130 C 325,90 280,60 220,60 C 140,60 60,90 60,140 C 60,190 120,240 250,240 L 250,190 L 100,190 L 100,140 L 280,140 L 280,280 Z" 
+          fill="url(#greenDark)" stroke="#D9A632" stroke-width="2" stroke-linejoin="round"/>
+    
+    <!-- بائیں سبز حصے کی چمک (Glossy highlight) -->
+    <path d="M 30,130 C 30,60 100,30 200,30 C 280,30 330,65 330,110 C 330,120 325,125 315,125 C 315,90 270,55 200,55 C 130,55 65,80 65,130 C 65,170 110,205 200,205 L 200,175 L 110,175 L 110,150 L 260,150 L 260,260 C 130,260 45,220 45,140 Z" 
+          fill="url(#greenLight)" opacity="0.4" />
 
-  <!-- دائیں سبز حرف -->
-  <path d="M 300 90 Q 350 90 360 140 Q 370 200 320 220 L 260 220 Q 220 220 220 180" 
-        fill="none" stroke="url(#greenGrad)" stroke-width="20" stroke-linecap="round"/>
+    <!-- ─── 2. دائیں سبز حصہ ─── -->
+    <path d="M 430,280 C 530,280 620,240 620,140 C 620,60 540,20 480,20 C 440,20 400,35 370,60 L 400,100 C 425,80 450,60 480,60 C 520,60 575,90 575,140 C 575,200 520,240 440,240 C 420,240 400,235 380,225 L 360,260 C 390,275 410,280 430,280 Z" 
+          fill="url(#greenDark)" stroke="#D9A632" stroke-width="2" stroke-linejoin="round"/>
+          
+    <!-- دائیں سبز حصے کی چمک -->
+    <path d="M 450,255 C 520,255 585,220 585,140 C 585,90 540,50 480,50 C 450,50 425,65 400,85 L 415,100 C 435,80 460,70 480,70 C 520,70 560,95 560,140 C 560,185 515,225 445,225 C 430,225 410,220 395,210 L 385,225 C 400,240 420,255 450,255 Z" 
+          fill="url(#greenLight)" opacity="0.5" />
+
+    <!-- ─── 3. سنہری انسانی شکل (درمیان میں) ─── -->
+    <!-- سر (دائرہ) -->
+    <circle cx="310" cy="60" r="35" fill="url(#goldBright)" stroke="#A86B00" stroke-width="1.5"/>
+    <circle cx="310" cy="60" r="30" fill="url(#goldBody)" />
+    <ellipse cx="300" cy="45" rx="10" ry="6" fill="#FFF" opacity="0.6" transform="rotate(-30 300 45)"/> <!-- چمک -->
+
+    <!-- جسم اور ٹانگیں (ایک مڑی ہوئی شکل جو بائیں سے دائیں جاتی ہے) -->
+    <!-- یہ شکل پرندے/انسان کی طرح ہے اور دائیں جانب اٹھی ہوئی ہے -->
+    <path d="M 310,95 
+             C 290,95 260,120 260,160 
+             C 260,220 220,280 160,280 
+             C 130,280 100,260 90,230 
+             L 110,210 
+             C 130,230 150,240 170,240 
+             C 200,240 220,200 230,170 
+             C 240,130 270,110 310,110 
+             L 310,95 Z" 
+          fill="url(#goldBody)" stroke="#A86B00" stroke-width="1.5"/>
+
+    <!-- سنہری بازو / ٹانگ جو اوپر کی طرف اٹھی ہے -->
+    <path d="M 310,110 
+             C 340,110 380,80 420,20 
+             C 410,70 390,130 350,170 
+             C 330,190 300,200 280,200 
+             C 260,200 250,190 250,180 
+             C 270,180 290,160 300,130 
+             C 305,120 310,115 310,110 Z" 
+          fill="url(#goldBright)" stroke="#A86B00" stroke-width="1.5"/>
+
+    <!-- سنہری شکل کی چمک (Highlights) -->
+    <path d="M 300,120 C 330,120 360,90 390,50 C 380,90 360,140 330,165 C 315,175 300,180 290,180 C 305,165 315,145 315,130 C 315,125 310,120 300,120 Z" 
+          fill="#FFF" opacity="0.5"/>
+
+    <!-- ─── 4. بائیں حصے کے اندر کی کٹائی (Detail) ─── -->
+    <!-- یہ سبز حصے کے اندرونی خلا کو نمایاں کرتا ہے -->
+    <path d="M 115,165 L 245,165 L 245,225 L 115,225 Z" fill="#021c0d" opacity="0.8"/>
+
+  </g>
+
+  <!-- ─── 5. نیچے کی لکیر/گریڈینٹ (اصل لوگو جیسا) ─── -->
+  <path d="M 100,400 L 700,400" stroke="url(#goldBright)" stroke-width="4" opacity="0.3" stroke-linecap="round"/>
 </svg>
