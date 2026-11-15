@@ -50,12 +50,27 @@ class Parser:
             self.eat(self.current_token.type)
             print(f"ویری ایبل डیکلریشن: {var_name} = {val}")
 
-        # پرنٹ کمانڈ (چھاپ ...)
+        # ── PRINT: لکھو(...) / چھاپ ... / دسّو(...)
         elif self.current_token.type == "PRINT":
             self.eat("PRINT")
-            val = self.current_token.value
-            self.eat(self.current_token.type)
-            print(f"پرنٹ کمانڈ: {val}")
+            args = []
+
+            # کیس 1: لکھو(arg1, arg2, ...)
+            if self.current_token.type == "SYMBOL" and self.current_token.value == "(":
+                self.eat("SYMBOL")  # (
+                while not (self.current_token.type == "SYMBOL" and self.current_token.value == ")"):
+                    args.append(self.current_token.value)
+                    self.eat(self.current_token.type)
+                    if self.current_token.type == "SYMBOL" and self.current_token.value == ",":
+                        self.eat("SYMBOL")  # ,
+                self.eat("SYMBOL")  # )
+
+            # کیس 2: چھاپ "متن"  (بغیر بریکٹ)
+            else:
+                args.append(self.current_token.value)
+                self.eat(self.current_token.type)
+
+            print(f"پرنٹ کمانڈ: {args}")
 
         # اگر (IF) کنڈیشن
         elif self.current_token.type == "IF":
@@ -75,6 +90,33 @@ class Parser:
         elif self.current_token.type == "ELSE":
             self.eat("ELSE")
             print("ورنہ (ELSE) بلاک")
+
+        # ── IDENTIFIER: assignment یا function call ──
+        elif self.current_token.type == "IDENTIFIER":
+            name = self.current_token.value
+            self.eat("IDENTIFIER")
+
+            # x = expr  → assignment
+            if self.current_token.type == "ASSIGN":
+                self.eat("ASSIGN")
+                val = self.current_token.value
+                self.eat(self.current_token.type)
+                print(f"ویری ایبل اسائنمنٹ: {name} = {val}")
+
+            # foo(...)  → generic function call
+            elif self.current_token.type == "SYMBOL" and self.current_token.value == "(":
+                self.eat("SYMBOL")  # (
+                args = []
+                while not (self.current_token.type == "SYMBOL" and self.current_token.value == ")"):
+                    args.append(self.current_token.value)
+                    self.eat(self.current_token.type)
+                    if self.current_token.type == "SYMBOL" and self.current_token.value == ",":
+                        self.eat("SYMBOL")
+                self.eat("SYMBOL")  # )
+                print(f"فنکشن کال: {name}({args})")
+
+            else:
+                self.error(f"IDENTIFIER کے بعد نامعلوم ٹوکن: {self.current_token.value}")
 
         else:
             self.error(f"نامعلوم بیان یا کمانڈ: {self.current_token.value}")

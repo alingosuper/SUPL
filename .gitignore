@@ -65,3 +65,4 @@ examples/tb_test_logs/
 .vscode/
 .idea/
 .DS_Store
+tools/supl_brand_fix.py
