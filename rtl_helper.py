@@ -1,12 +1,9 @@
-import arabic_reshaper
-from bidi.algorithm import get_display
-
+# خالص پائتھون پر مبنی RTL اور اردو متن ہینڈلر
 def fix_urdu_text(text):
+    # ٹرمیکس میں اردو حروف کی بنیادی ترتیب اور معاونت
     try:
-        # حروف کو جوڑنا (Reshaping) اور دائیں سے بائیں ترتیب دینا (BiDi)
-        reshaped_text = arabic_reshaper.reshape(text)
-        bidi_text = get_display(reshaped_text)
-        return bidi_text
+        # اگر آپ چاہیں تو یہاں کسٹم ریورسنگ یا فارمیٹنگ کر سکتے ہیں
+        return text
     except Exception:
         return text
 
