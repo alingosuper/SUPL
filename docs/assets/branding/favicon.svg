@@ -1,7 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-  <rect width="32" height="32" rx="6" fill="#04230f"/>
-  <path d="M 6 16 Q 6 9 12 9 L 20 9 Q 25 9 25 15 Q 25 21 20 21 L 14 21 L 14 15 Q 14 14 15 14 L 20 14 Q 21 14 21 15 Q 21 16 20 16 L 15 16" 
-        fill="none" stroke="#1a9b4a" stroke-width="3" stroke-linecap="round"/>
-  <circle cx="22" cy="9" r="2.5" fill="#f5c242"/>
-  <path d="M 20 13 Q 22 12 24 13 Q 28 18 30 7 Q 26 13 24 19 Q 22 24 20 26" fill="#f5c242"/>
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AlinGo Developers">
+<title>AlinGo Developers</title>
+<defs>
+  <linearGradient id="rg" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#1568DB"/><stop offset="100%" stop-color="#0A3A82"/></linearGradient>
+  <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#0A3A82"/><stop offset="100%" stop-color="#062966"/></linearGradient>
+</defs>
+<g transform="translate(256,222) scale(1.2)">
+  <polygon points="0,-105 -120,10 120,10" fill="url(#rg)"/>
+  <polygon points="0,-70 -85,10 85,10" fill="#0A3A82"/>
+  <rect x="-100" y="10" width="200" height="145" rx="4" fill="url(#bg)"/>
+  <rect x="-100" y="78" width="200" height="12" fill="#2D8A22"/>
+  <rect x="-72" y="28" width="44" height="38" rx="3" fill="#1884E8"/>
+  <rect x="28" y="28" width="44" height="38" rx="3" fill="#1884E8"/>
+  <rect x="-28" y="105" width="56" height="50" rx="3" fill="#1568DB" opacity="0.7"/>
+  <circle cx="18" cy="132" r="3" fill="#FFFFFF" opacity="0.65"/>
+</g>
 </svg>

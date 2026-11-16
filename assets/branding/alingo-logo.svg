@@ -1,105 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
-  <defs>
-    <!-- پس منظر کا رنگ (اصل تصویر جیسا گہرا سبز) -->
-    <rect id="bg" width="800" height="450" rx="20" fill="#021c0d" />
-
-    <!-- گریڈینٹس: 3D اور چمک کے لیے -->
-    <linearGradient id="goldBright" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFF200"/>
-      <stop offset="40%" stop-color="#F2B705"/>
-      <stop offset="100%" stop-color="#8A5A00"/>
-    </linearGradient>
-
-    <linearGradient id="goldBody" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FCE181"/>
-      <stop offset="50%" stop-color="#D99A00"/>
-      <stop offset="100%" stop-color="#B37400"/>
-    </linearGradient>
-
-    <linearGradient id="greenDark" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0A5C2A"/>
-      <stop offset="100%" stop-color="#043314"/>
-    </linearGradient>
-
-    <linearGradient id="greenLight" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#35C357"/>
-      <stop offset="50%" stop-color="#168F38"/>
-      <stop offset="100%" stop-color="#0A5C2A"/>
-    </linearGradient>
-
-    <!-- شیڈو اور گلو -->
-    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000" flood-opacity="0.6"/>
-    </filter>
-    
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-    </filter>
-  </defs>
-
-  <!-- پس منظر -->
-  <use href="#bg" />
-
-  <!-- گروپ: لوگو کے اجزا -->
-  <g transform="translate(70, 70) scale(1.1)" filter="url(#dropShadow)">
-    
-    <!-- ─── 1. بائیں سبز حصہ (بیک گراؤنڈ + گہرا رنگ) ─── -->
-    <!-- ایک جڑا ہوا حصہ جو اندر سے کٹا ہوا ہے -->
-    <path d="M 250,280 C 100,280 20,220 20,140 C 20,60 100,20 220,20 C 320,20 380,70 380,130 C 380,150 370,165 355,165 C 340,165 325,150 325,130 C 325,90 280,60 220,60 C 140,60 60,90 60,140 C 60,190 120,240 250,240 L 250,190 L 100,190 L 100,140 L 280,140 L 280,280 Z" 
-          fill="url(#greenDark)" stroke="#D9A632" stroke-width="2" stroke-linejoin="round"/>
-    
-    <!-- بائیں سبز حصے کی چمک (Glossy highlight) -->
-    <path d="M 30,130 C 30,60 100,30 200,30 C 280,30 330,65 330,110 C 330,120 325,125 315,125 C 315,90 270,55 200,55 C 130,55 65,80 65,130 C 65,170 110,205 200,205 L 200,175 L 110,175 L 110,150 L 260,150 L 260,260 C 130,260 45,220 45,140 Z" 
-          fill="url(#greenLight)" opacity="0.4" />
-
-    <!-- ─── 2. دائیں سبز حصہ ─── -->
-    <path d="M 430,280 C 530,280 620,240 620,140 C 620,60 540,20 480,20 C 440,20 400,35 370,60 L 400,100 C 425,80 450,60 480,60 C 520,60 575,90 575,140 C 575,200 520,240 440,240 C 420,240 400,235 380,225 L 360,260 C 390,275 410,280 430,280 Z" 
-          fill="url(#greenDark)" stroke="#D9A632" stroke-width="2" stroke-linejoin="round"/>
-          
-    <!-- دائیں سبز حصے کی چمک -->
-    <path d="M 450,255 C 520,255 585,220 585,140 C 585,90 540,50 480,50 C 450,50 425,65 400,85 L 415,100 C 435,80 460,70 480,70 C 520,70 560,95 560,140 C 560,185 515,225 445,225 C 430,225 410,220 395,210 L 385,225 C 400,240 420,255 450,255 Z" 
-          fill="url(#greenLight)" opacity="0.5" />
-
-    <!-- ─── 3. سنہری انسانی شکل (درمیان میں) ─── -->
-    <!-- سر (دائرہ) -->
-    <circle cx="310" cy="60" r="35" fill="url(#goldBright)" stroke="#A86B00" stroke-width="1.5"/>
-    <circle cx="310" cy="60" r="30" fill="url(#goldBody)" />
-    <ellipse cx="300" cy="45" rx="10" ry="6" fill="#FFF" opacity="0.6" transform="rotate(-30 300 45)"/> <!-- چمک -->
-
-    <!-- جسم اور ٹانگیں (ایک مڑی ہوئی شکل جو بائیں سے دائیں جاتی ہے) -->
-    <!-- یہ شکل پرندے/انسان کی طرح ہے اور دائیں جانب اٹھی ہوئی ہے -->
-    <path d="M 310,95 
-             C 290,95 260,120 260,160 
-             C 260,220 220,280 160,280 
-             C 130,280 100,260 90,230 
-             L 110,210 
-             C 130,230 150,240 170,240 
-             C 200,240 220,200 230,170 
-             C 240,130 270,110 310,110 
-             L 310,95 Z" 
-          fill="url(#goldBody)" stroke="#A86B00" stroke-width="1.5"/>
-
-    <!-- سنہری بازو / ٹانگ جو اوپر کی طرف اٹھی ہے -->
-    <path d="M 310,110 
-             C 340,110 380,80 420,20 
-             C 410,70 390,130 350,170 
-             C 330,190 300,200 280,200 
-             C 260,200 250,190 250,180 
-             C 270,180 290,160 300,130 
-             C 305,120 310,115 310,110 Z" 
-          fill="url(#goldBright)" stroke="#A86B00" stroke-width="1.5"/>
-
-    <!-- سنہری شکل کی چمک (Highlights) -->
-    <path d="M 300,120 C 330,120 360,90 390,50 C 380,90 360,140 330,165 C 315,175 300,180 290,180 C 305,165 315,145 315,130 C 315,125 310,120 300,120 Z" 
-          fill="#FFF" opacity="0.5"/>
-
-    <!-- ─── 4. بائیں حصے کے اندر کی کٹائی (Detail) ─── -->
-    <!-- یہ سبز حصے کے اندرونی خلا کو نمایاں کرتا ہے -->
-    <path d="M 115,165 L 245,165 L 245,225 L 115,225 Z" fill="#021c0d" opacity="0.8"/>
-
-  </g>
-
-  <!-- ─── 5. نیچے کی لکیر/گریڈینٹ (اصل لوگو جیسا) ─── -->
-  <path d="M 100,400 L 700,400" stroke="url(#goldBright)" stroke-width="4" opacity="0.3" stroke-linecap="round"/>
+<svg viewBox="0 0 600 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AlinGo Developers">
+<title>AlinGo Developers</title>
+<defs>
+  <linearGradient id="rg" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#1568DB"/><stop offset="100%" stop-color="#0A3A82"/></linearGradient>
+  <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#0A3A82"/><stop offset="100%" stop-color="#062966"/></linearGradient>
+</defs>
+<g transform="translate(90,78) scale(0.4)">
+  <polygon points="0,-105 -120,10 120,10" fill="url(#rg)"/>
+  <polygon points="0,-70 -85,10 85,10" fill="#0A3A82"/>
+  <rect x="-100" y="10" width="200" height="145" rx="4" fill="url(#bg)"/>
+  <rect x="-100" y="78" width="200" height="12" fill="#2D8A22"/>
+  <rect x="-72" y="28" width="44" height="38" rx="3" fill="#1884E8"/>
+  <rect x="28" y="28" width="44" height="38" rx="3" fill="#1884E8"/>
+  <rect x="-28" y="105" width="56" height="50" rx="3" fill="#1568DB" opacity="0.7"/>
+  <circle cx="18" cy="132" r="3" fill="#FFFFFF" opacity="0.65"/>
+</g>
+<text x="370" y="88" text-anchor="middle" font-family="'Inter','Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif" font-weight="800" font-size="54" letter-spacing="-2.70"><tspan fill="#0A3A82">Alin</tspan><tspan fill="#2D8A22">Go</tspan></text>
+<text x="370" y="128" text-anchor="middle" font-family="'Inter','Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif" font-weight="500" font-size="10" letter-spacing="10" fill="#0A3A82" opacity="0.75">DEVELOPERS</text>
 </svg>

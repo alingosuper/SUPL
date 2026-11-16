@@ -1,96 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" width="100%" height="100%">
-  <defs>
-    <!-- Metallic Gold Rim Gradient (Previously Silver) -->
-    <linearGradient id="goldRim" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFF200" />
-      <stop offset="25%" stop-color="#FCE181" />
-      <stop offset="50%" stop-color="#D9A632" />
-      <stop offset="75%" stop-color="#FFF200" />
-      <stop offset="100%" stop-color="#8A5A00" />
-    </linearGradient>
-
-    <!-- Deep Green Gradient (Left Shape - Previously Purple) -->
-    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#35C357" />
-      <stop offset="40%" stop-color="#1A9B4A" />
-      <stop offset="80%" stop-color="#0A5C2A" />
-      <stop offset="100%" stop-color="#043314" />
-    </linearGradient>
-
-    <!-- Glossy Green Highlight -->
-    <linearGradient id="greenGloss" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.45" />
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.0" />
-    </linearGradient>
-
-    <!-- Vibrant Dark Green Gradient (Human Figure Body - Previously Red) -->
-    <linearGradient id="darkGreenGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#021c0d" />
-      <stop offset="45%" stop-color="#043314" />
-      <stop offset="85%" stop-color="#0A5C2A" />
-      <stop offset="100%" stop-color="#168F38" />
-    </linearGradient>
-
-    <!-- Golden Yellow Head Gradient -->
-    <radialGradient id="headGoldGrad" cx="40%" cy="30%" r="65%">
-      <stop offset="0%" stop-color="#FEF9C3" />
-      <stop offset="40%" stop-color="#FACC15" />
-      <stop offset="80%" stop-color="#EA580C" />
-      <stop offset="100%" stop-color="#9A3412" />
-    </radialGradient>
-
-    <!-- Golden-Yellow Swoosh Gradient (Right Shape - Previously Yellow-Orange) -->
-    <linearGradient id="goldSwooshGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#8A5A00" />
-      <stop offset="35%" stop-color="#D9A632" />
-      <stop offset="70%" stop-color="#F2B705" />
-      <stop offset="100%" stop-color="#FFF200" />
-    </linearGradient>
-
-    <!-- Drop Shadow Filter -->
-    <filter id="dropShadow" x="-10%" y="-10%" width="125%" height="125%">
-      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#000000" flood-opacity="0.45"/>
-    </filter>
-  </defs>
-
-  <!-- Main Group with Shadow -->
-  <g filter="url(#dropShadow)">
-    <!-- LEFT GREEN SHAPE: Top Arch -->
-    <path d="M 35 255 C 35 140, 205 130, 325 165 C 395 185, 420 245, 385 320 C 365 360, 315 400, 250 405 L 190 405 L 190 342 L 242 342 C 295 342, 325 302, 315 262 C 305 222, 238 215, 190 255 Z"
-          fill="url(#greenGrad)" stroke="url(#goldRim)" stroke-width="6" stroke-linejoin="round" />
-          
-    <!-- Glossy Reflection on Green Top Arch -->
-    <path d="M 48 242 C 55 155, 205 145, 318 175 C 365 188, 385 220, 382 250 C 310 215, 150 215, 48 242 Z"
-          fill="url(#greenGloss)" />
-
-    <!-- LEFT GREEN SHAPE: Bottom T-Block -->
-    <path d="M 35 270 L 302 270 L 302 322 L 175 322 L 175 405 C 110 400, 58 385, 35 370 Z"
-          fill="url(#greenGrad)" stroke="url(#goldRim)" stroke-width="6" stroke-linejoin="round" />
-          
-    <!-- Glossy Reflection on Green Bottom Block -->
-    <path d="M 42 276 L 295 276 L 295 315 L 168 315 L 168 355 C 120 340, 75 348, 42 365 Z"
-          fill="url(#greenGloss)" />
-
-    <!-- RIGHT GOLDEN SWOOSH SHAPE -->
-    <path d="M 272 405 L 538 265 L 488 338 L 632 338 C 695 338, 705 262, 618 258 L 565 258 L 622 195 C 775 200, 795 405, 602 405 Z"
-          fill="url(#goldSwooshGrad)" stroke="url(#goldRim)" stroke-width="6" stroke-linejoin="round" />
-          
-    <!-- Glossy Highlight on Gold Swoosh -->
-    <path d="M 628 205 C 745 212, 765 325, 680 355 C 715 310, 705 245, 615 245 Z"
-          fill="#FFFFFF" opacity="0.45" />
-
-    <!-- GOLDEN HEAD -->
-    <ellipse cx="472" cy="135" rx="56" ry="44" fill="url(#headGoldGrad)" stroke="url(#goldRim)" stroke-width="5" />
-    
-    <!-- Specular Shine on Head -->
-    <ellipse cx="462" cy="116" rx="32" ry="14" fill="#FFFFFF" opacity="0.6" />
-
-    <!-- DARK GREEN DYNAMIC HUMAN FIGURE (Arms & Body) -->
-    <path d="M 235 408 C 338 315, 405 238, 395 188 C 390 172, 370 162, 355 158 C 405 165, 445 180, 472 188 C 538 188, 630 142, 705 85 C 650 178, 538 268, 235 408 Z"
-          fill="url(#darkGreenGrad)" stroke="url(#goldRim)" stroke-width="5.5" stroke-linejoin="round" />
-          
-    <!-- Glossy Shine Along Top Edge of Dark Green Arm -->
-    <path d="M 380 168 C 425 178, 455 190, 475 194 C 540 194, 622 152, 692 98 C 635 162, 545 208, 470 205 C 435 202, 405 182, 380 168 Z"
-          fill="#FFFFFF" opacity="0.35" />
-  </g>
+<svg viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AlinGo Developers">
+<title>AlinGo Developers</title>
+<defs>
+  <linearGradient id="rg" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#1568DB"/><stop offset="100%" stop-color="#0A3A82"/></linearGradient>
+  <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#0A3A82"/><stop offset="100%" stop-color="#062966"/></linearGradient>
+</defs>
+<g transform="translate(250,130) scale(1.0)">
+  <polygon points="0,-105 -120,10 120,10" fill="url(#rg)"/>
+  <polygon points="0,-70 -85,10 85,10" fill="#0A3A82"/>
+  <rect x="-100" y="10" width="200" height="145" rx="4" fill="url(#bg)"/>
+  <rect x="-100" y="78" width="200" height="12" fill="#2D8A22"/>
+  <rect x="-72" y="28" width="44" height="38" rx="3" fill="#1884E8"/>
+  <rect x="28" y="28" width="44" height="38" rx="3" fill="#1884E8"/>
+  <rect x="-28" y="105" width="56" height="50" rx="3" fill="#1568DB" opacity="0.7"/>
+  <circle cx="18" cy="132" r="3" fill="#FFFFFF" opacity="0.65"/>
+</g>
+<text x="250" y="420" text-anchor="middle" font-family="'Inter','Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif" font-weight="800" font-size="88" letter-spacing="-4.40"><tspan fill="#0A3A82">Alin</tspan><tspan fill="#2D8A22">Go</tspan></text>
+<text x="250" y="462" text-anchor="middle" font-family="'Inter','Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif" font-weight="500" font-size="15" letter-spacing="14" fill="#0A3A82" opacity="0.75">DEVELOPERS</text>
+<line x1="185" y1="490" x2="315" y2="490" stroke="#2D8A22" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+<text x="250" y="540" text-anchor="middle" font-family="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq','Alvi Nastaleeq','Segoe UI',Tahoma,serif" font-weight="700" font-size="24" fill="#0A3A82">اپنی زبان، اپنا کوڈ، اپنی پہچان</text>
 </svg>

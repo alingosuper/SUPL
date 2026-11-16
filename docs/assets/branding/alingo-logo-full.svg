@@ -1,27 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="700" height="250">
-  <defs>
-    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1a9b4a"/>
-      <stop offset="100%" stop-color="#064a1f"/>
-    </linearGradient>
-    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#fce38a"/>
-      <stop offset="100%" stop-color="#b8860b"/>
-    </linearGradient>
-  </defs>
-
-  <!-- Icon group -->
-  <g transform="translate(0, 0)">
-    <path d="M 30 110 Q 30 60 80 60 L 160 60 Q 200 60 200 100 Q 200 140 160 140 L 110 140 L 110 100 Q 110 90 120 90 L 160 90 Q 170 90 170 100 Q 170 110 160 110 L 120 110" 
-          fill="none" stroke="url(#g1)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="250" cy="60" r="22" fill="url(#g2)"/>
-    <path d="M 220 95 Q 250 80 280 95 Q 320 130 350 40 Q 300 90 280 150 Q 260 200 220 230" fill="url(#g2)"/>
-    <path d="M 300 90 Q 350 90 360 140 Q 370 200 320 220 L 260 220 Q 220 220 220 180" 
-          fill="none" stroke="url(#g1)" stroke-width="20" stroke-linecap="round"/>
-  </g>
-
-  <!-- Wordmark -->
-  <text x="400" y="115" font-family="'Segoe UI', 'Arial', sans-serif" font-size="48" font-weight="800" fill="#0e7a35">AlinGo</text>
-  <text x="400" y="155" font-family="'Segoe UI', 'Arial', sans-serif" font-size="18" font-weight="600" fill="#b8860b" letter-spacing="2">SARAIKI · URDU · PUNJABI</text>
-  <text x="400" y="185" font-family="'Segoe UI', 'Arial', sans-serif" font-size="14" font-weight="400" fill="#666">دیسی پروگرامنگ لینگویج</text>
+<svg viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AlinGo Developers">
+<title>AlinGo Developers</title>
+<defs>
+  <linearGradient id="rg" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#1568DB"/><stop offset="100%" stop-color="#0A3A82"/></linearGradient>
+  <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#0A3A82"/><stop offset="100%" stop-color="#062966"/></linearGradient>
+</defs>
+<g transform="translate(250,130) scale(1.0)">
+  <polygon points="0,-105 -120,10 120,10" fill="url(#rg)"/>
+  <polygon points="0,-70 -85,10 85,10" fill="#0A3A82"/>
+  <rect x="-100" y="10" width="200" height="145" rx="4" fill="url(#bg)"/>
+  <rect x="-100" y="78" width="200" height="12" fill="#2D8A22"/>
+  <rect x="-72" y="28" width="44" height="38" rx="3" fill="#1884E8"/>
+  <rect x="28" y="28" width="44" height="38" rx="3" fill="#1884E8"/>
+  <rect x="-28" y="105" width="56" height="50" rx="3" fill="#1568DB" opacity="0.7"/>
+  <circle cx="18" cy="132" r="3" fill="#FFFFFF" opacity="0.65"/>
+</g>
+<text x="250" y="420" text-anchor="middle" font-family="'Inter','Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif" font-weight="800" font-size="88" letter-spacing="-4.40"><tspan fill="#0A3A82">Alin</tspan><tspan fill="#2D8A22">Go</tspan></text>
+<text x="250" y="462" text-anchor="middle" font-family="'Inter','Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif" font-weight="500" font-size="15" letter-spacing="14" fill="#0A3A82" opacity="0.75">DEVELOPERS</text>
+<line x1="185" y1="490" x2="315" y2="490" stroke="#2D8A22" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+<text x="250" y="540" text-anchor="middle" font-family="'Noto Nastaliq Urdu','Jameel Noori Nastaleeq','Alvi Nastaleeq','Segoe UI',Tahoma,serif" font-weight="700" font-size="24" fill="#0A3A82">اپنی زبان، اپنا کوڈ، اپنی پہچان</text>
 </svg>
