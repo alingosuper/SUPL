@@ -65,6 +65,7 @@ class Lexer:
             result += self.current_char
             self.advance()
         
+
         token_type = KEYWORDS.get(result, TOKEN_IDENTIFIER)
         return token_type, result
 
@@ -88,6 +89,9 @@ class Lexer:
 
             if self.current_char.isalpha() or self.current_char == '_' or ord(self.current_char) > 127:
                 token_type, val = self.identifier()
+                # SUPL: filler words skip
+                if val in ("ہے", "اے", "ہیگا", "is", "the"):
+                    continue  # اگلا token
                 return Token(token_type, val, self.line)
 
             if self.current_char == '=':

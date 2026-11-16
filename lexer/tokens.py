@@ -1,11 +1,11 @@
 # SUPL Tokens & Keywords — النگو ڈویلپرز
+# 6 زبانیں: سرائیکی + اردو + پنجابی + بلوچی + پشتو + سندھی
 
 TOKEN_EOF = "EOF"
 TOKEN_IDENTIFIER = "IDENTIFIER"
 TOKEN_NUMBER = "NUMBER"
 TOKEN_STRING = "STRING"
 
-# آسان سرائیکی کی ورڈز کی لغت
 KEYWORDS = {
     # ═══ IMPORT ═══
     "شامل_کرو": "IMPORT",
@@ -23,6 +23,10 @@ KEYWORDS = {
     "ایہہ": "SELF",
     "کلاس": "CLASS",
     "ٹولی": "CLASS",
+    "ټولګه": "CLASS",
+    "گروپ": "CLASS",
+    "گروہ": "CLASS",
+    "ڪلاس": "CLASS",
 
     # ═══ THEN ═══
     "تاں": "THEN",
@@ -30,20 +34,33 @@ KEYWORDS = {
     "{": "LBRACE",
     "}": "RBRACE",
 
-    # ═══ VAR / CONST (تینوں زبانیں) ═══
+    # ═══ VAR / CONST (تمام زبانیں) ═══
     "عدد": "VAR",
     "شے": "VAR",
     "متغیر": "VAR",
+    "چیز": "VAR",
+    "توکی": "VAR",
+    "شی": "VAR",
+    "شئي": "VAR",
     "پکی": "CONST",
     "مستقل": "CONST",
+    "ثابت": "CONST",
+    "پڪي": "CONST",
 
     # ═══ IF / ELSE ═══
     "جے": "IF",
     "اگر": "IF",
+    "گَر": "IF",
+    "که": "IF",
+    "جيڪڏهن": "IF",
     "نہیں_تاں": "ELSE",
     "نہ_تاں": "ELSE",
-    "نہیں_تے": "ELSE",
     "ورنہ": "ELSE",
+    "نہیں_تے": "ELSE",
+    "نہ_کن": "ELSE",
+    "نو": "ELSE",
+    "بلکه": "ELSE",
+    "نه_ته": "ELSE",
 
     # ═══ WHILE ═══
     "جئیں_ویلے_تئیں": "WHILE",
@@ -51,6 +68,9 @@ KEYWORDS = {
     "جدوں_تک": "WHILE",
     "جدوں_تئیں": "WHILE",
     "جبکہ": "WHILE",
+    "تا_کہ": "WHILE",
+    "تر_چې": "WHILE",
+    "جستائين": "WHILE",
 
     # ═══ FOR ═══
     "برائے": "FOR",
@@ -58,12 +78,19 @@ KEYWORDS = {
     "ہر_ہک_کیتے": "FOR",
     "کے_لیے": "FOR",
     "ہر_اک_لئی": "FOR",
+    "پَر_ہر": "FOR",
+    "ہر_یک": "FOR",
+    "د_هر": "FOR",
+    "هر_یو": "FOR",
+    "هر_هڪ_لاءِ": "FOR",
 
     # ═══ FUNCTION ═══
     "کم": "FUNCTION",
     "کام": "FUNCTION",
     "فعل": "FUNCTION",
     "فنکشن": "FUNCTION",
+    "کار": "FUNCTION",
+    "ڪم": "FUNCTION",
 
     # ═══ RETURN ═══
     "واپس": "RETURN",
@@ -71,26 +98,49 @@ KEYWORDS = {
     "واپس_کرو": "RETURN",
     "واپس_دیو": "RETURN",
     "موڑ": "RETURN",
+    "برگرد": "RETURN",
+    "بیرته": "RETURN",
+    "موٽايو": "RETURN",
 
     # ═══ PRINT ═══
     "چھاپ": "PRINT",
     "چھاپیگا": "PRINT",
     "لکھو": "PRINT",
     "دسّو": "PRINT",
+    "بنڈ": "PRINT",
+    "ولیکه": "PRINT",
+    "لکو": "PRINT",
 
     # ═══ TRUE / FALSE / NULL ═══
     "سچ": "TRUE",
+    "راست": "TRUE",
+    "ریښتین": "TRUE",
     "کوڑ": "FALSE",
     "جھوٹ": "FALSE",
+    "دروغ": "FALSE",
+    "درواغ": "FALSE",
+    "ڪوڙ": "FALSE",
     "خالی": "NULL",
+    "ہیچ": "NULL",
+    "خالي": "NULL",
 
     # ═══ LOGICAL ═══
     "تے": "AND",
     "اور": "AND",
+    "و": "AND",
+    "او": "AND",
+    "۽": "AND",
     "یا": "OR",
+    "برابر": "EQUAL_EQUAL",
+    "نہیں_برابر": "NOT_EQUAL",
+    "وڈا": "GREATER",
+    "نکا": "LESS",
+    "يا": "OR",
     "کائنی": "NOT",
     "نہیں": "NOT",
     "نئیں": "NOT",
+    "نہ": "NOT",
+    "نه": "NOT",
 
     # ═══ PROGRAM START/END ═══
     "پندھ_شروع": "PROGRAM_START",
@@ -107,9 +157,15 @@ KEYWORDS = {
     # ═══ FOR LOOP keywords ═══
     "میں": "IN",
     "وچ": "IN",
+    "تہ": "IN",
+    "په": "IN",
+    "۾": "IN",
     "تک": "TO",
     "تئیں": "TO",
     "توڑ": "TO",
+    "تا": "TO",
+    "تر": "TO",
+    "تائين": "TO",
 }
 
 # ── Merge multilingual keywords ──

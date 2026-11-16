@@ -563,26 +563,37 @@ class Interpreter:
             right = self.eval_expr(node["right"])
             op = node["op"]
 
-            if op in ("+", "PLUS"):
+            # ═══ جمع / تفریق / ضرب / تقسیم ═══
+            if op in ("+", "PLUS", "جمع", "جوڑ", "زیات"):
                 return left + right
-            elif op in ("-", "MINUS"):
+            elif op in ("-", "MINUS", "منفی", "گھٹاؤ", "کم"):
                 return left - right
-            elif op in ("*", "STAR"):
+            elif op in ("*", "STAR", "ضرب"):
                 return left * right
-            elif op in ("/", "SLASH"):
+            elif op in ("/", "SLASH", "تقسیم", "ونڈ"):
                 return left / right
-            elif op in (">", "GREATER"):
+            elif op in ("%", "MODULO", "باقی"):
+                return left % right
+            elif op in ("**", "POWER", "طاقت"):
+                return left ** right
+            # ═══ موازنہ ═══
+            elif op in (">", "GREATER", "وڈا", "بڑا", "لوی"):
                 return left > right
-            elif op in ("<", "LESS"):
+            elif op in ("<", "LESS", "نکا", "چھوٹا", "کوچنی"):
                 return left < right
-            elif op in (">=", "GREATER_EQUAL"):
+            elif op in (">=", "GREATER_EQUAL", "وڈا_یا_برابر", "بڑا_یا_برابر"):
                 return left >= right
-            elif op in ("<=", "LESS_EQUAL"):
+            elif op in ("<=", "LESS_EQUAL", "نکا_یا_برابر", "چھوٹا_یا_برابر"):
                 return left <= right
-            elif op in ("==", "EQUAL_EQUAL"):
+            elif op in ("==", "EQUAL_EQUAL", "برابر"):
                 return left == right
-            elif op in ("!=", "NOT_EQUAL"):
+            elif op in ("!=", "NOT_EQUAL", "نہیں_برابر", "نئیں_برابر"):
                 return left != right
+            # ═══ منطقی ═══
+            elif op in ("&&", "LOGICAL_AND", "AND", "تے", "اور", "و"):
+                return left and right
+            elif op in ("||", "LOGICAL_OR", "OR", "یا"):
+                return left or right
 
             raise ValueError(f"نامعلوم آپریٹر: {op}")
 
