@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="alingo-saraiki",
-    version="1.0.1",                      # urdu/__init__.py کے مطابق
+    name="supl-lang",
+    version="2.0.0",                      # urdu/__init__.py کے مطابق
     description="AlinGo Saraiki - Saraiki-first Programming Language for Urdu, Punjabi, and Saraiki",
     long_description=open("README.md", encoding="utf-8").read() if __import__("os").path.exists("README.md") else "",
     long_description_content_type="text/markdown",
@@ -18,9 +18,13 @@ setup(
     install_requires=[],
     entry_points={
         "console_scripts": [
-            "alingo=supl._root_cli:main",
+            # ─── پروگرام چلانے کے لیے ───
             "saraiki=supl._root_cli:main",
             "supl=supl._root_cli:main",
+            "urdu=supl._root_cli:main",
+
+            # ─── پیکیج مینیجر (pip کا سرائیکی نام) ───
+            "سرائیکی=supl.saraiki_pip:main",
         ],
     },
     classifiers=[
