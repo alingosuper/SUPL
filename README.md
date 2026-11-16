@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/logo/alingo_logo.svg" alt="SUPL Logo" width="280" />
+<img src="assets/logo/alingo_readme_banner.svg" alt="AlinGo Developers" width="700" />
 
 <h1>SUPL — سُپل پروگرامنگ زبان</h1>
 
