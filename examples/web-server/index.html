@@ -1,0 +1,1284 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Web Server Examples — ویب سرور - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#web-server-examples" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Web Server Examples — ویب سرور
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorial/beginner/" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../libraries/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/beginner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intermediate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../libraries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fastapi-todo-rest-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FastAPI — Todo REST API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fastapi-html-web-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FastAPI — HTML Web App
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#websocket-chat-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WebSocket Chat Server
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stopping-the-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stopping the Server — سرور بند کرنا
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="web-server-examples">Web Server Examples — ویب سرور</h1>
+<p>Three complete, runnable web server programs showing REST APIs, HTML web apps, and real-time WebSocket communication.</p>
+<blockquote>
+<p><strong>اردو:</strong> تین مکمل اور چلنے والے ویب سرور پروگرام جو REST APIs، HTML ویب ایپلیکیشنیں، اور حقیقی وقت WebSocket مواصلت ظاہر کرتے ہیں۔</p>
+</blockquote>
+<hr />
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#fastapi--todo-rest-api">FastAPI — Todo REST API</a></li>
+<li><a href="#fastapi--html-web-app">FastAPI — HTML Web App</a></li>
+<li><a href="#websocket-chat-server">WebSocket Chat Server</a></li>
+</ol>
+<hr />
+<h2 id="fastapi-todo-rest-api">FastAPI — Todo REST API</h2>
+<p>A complete CRUD REST API for a todo list. Demonstrates routes, JSON bodies, path parameters, status codes, and middleware.</p>
+<blockquote>
+<p><strong>اردو:</strong> ٹوڈو فہرست کے لیے ایک مکمل CRUD REST API۔ یہ مثال راستے، JSON جسم، راستے کے پیرامیٹر، حالت کوڈ، اور مڈل ویئر ظاہر کرتی ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { فاسٹ_اے_پی_آئی, راؤٹر, جیسن_جواب, جالی_خطا } سے "اردو/ویب"
+درآمد { لاگر } سے "اردو/لاگ"
+
+// ═══════════════════════════════════════════════════
+// Todo REST API — مکمل CRUD
+// بندرگاہ: 8000
+// ═══════════════════════════════════════════════════
+
+متغیر سرور = نیا فاسٹ_اے_پی_آئی({ عنوان: "Todo API", نسخہ: "1.0" })
+متغیر لاگ   = نیا لاگر("todo-api")
+
+سرور.کورس(اصل=["*"])
+
+// ── ان میموری ڈیٹا اسٹور ─────────────────────────
+متغیر todos     = {}
+متغیر اگلی_id = 1
+
+// ── مددگار فنکشن ──────────────────────────────────
+فنکشن todo_ڈھونڈو(id) {
+    اگر (!(id میں_ہے todos)) {
+        پھینکو نیا جالی_خطا(404, `Todo ${id} نہیں ملا`)
+    }
+    واپس todos[id]
+}
+
+// ══════════════════════════════════════════
+// GET /todos — تمام todos
+// ══════════════════════════════════════════
+@سرور.حاصل("/todos")
+فنکشن سب_todos_دیکھیں() {
+    متغیر فہرست = Object.اقدار(todos)
+    لاگ.ڈیبگ(`${فہرست.length} todos واپس کر رہے ہیں`)
+    واپس { تعداد: فہرست.length, todos: فہرست }
+}
+
+// ══════════════════════════════════════════
+// GET /todos/{id} — ایک todo
+// ══════════════════════════════════════════
+@سرور.حاصل("/todos/{id}")
+فنکشن ایک_todo(id) {
+    واپس todo_ڈھونڈو(عدد(id))
+}
+
+// ══════════════════════════════════════════
+// POST /todos — نئی todo
+// ══════════════════════════════════════════
+@سرور.بھیجیں("/todos")
+غیر_متزامن فنکشن نئی_todo(درخواست) {
+    متغیر جسم = انتظار درخواست.json()
+
+    اگر (!جسم["عنوان"] || جسم["عنوان"].trim() == "") {
+        پھینکو نیا جالی_خطا(400, "عنوان ضروری ہے")
+    }
+
+    متغیر id = اگلی_id
+    اگلی_id += 1
+
+    todos[id] = {
+        id,
+        عنوان:   جسم["عنوان"].trim(),
+        تفصیل:   جسم["تفصیل"] یا "",
+        مکمل:    جھوٹ,
+        بنائی:   نیا Date().toISOString()
+    }
+
+    لاگ.معلومات(`نئی todo بنائی ID=${id}: ${todos[id].عنوان}`)
+    واپس نیا جیسن_جواب(todos[id], 201)
+}
+
+// ══════════════════════════════════════════
+// PUT /todos/{id} — todo تازہ کریں
+// ══════════════════════════════════════════
+@سرور.تازہ_کریں("/todos/{id}")
+غیر_متزامن فنکشن todo_تازہ_کریں(id, درخواست) {
+    متغیر todo = todo_ڈھونڈو(عدد(id))
+    متغیر جسم = انتظار درخواست.json()
+
+    todos[عدد(id)] = {
+        ...todo,
+        عنوان:  جسم["عنوان"] یا todo.عنوان,
+        تفصیل: جسم["تفصیل"] یا todo.تفصیل,
+        مکمل:  جسم["مکمل"]  ?? todo.مکمل
+    }
+
+    واپس todos[عدد(id)]
+}
+
+// ══════════════════════════════════════════
+// DELETE /todos/{id} — todo مٹائیں
+// ══════════════════════════════════════════
+@سرور.حذف("/todos/{id}")
+فنکشن todo_مٹائیں(id) {
+    todo_ڈھونڈو(عدد(id))   // نہ ملنے پر 404
+    حذف todos[عدد(id)]
+    لاگ.معلومات(`Todo ${id} مٹا دیا`)
+    واپس { پیغام: `Todo ${id} مٹا دیا گیا` }
+}
+
+// ══════════════════════════════════════════
+// POST /todos/{id}/مکمل — مکمل toggle
+// ══════════════════════════════════════════
+@سرور.بھیجیں("/todos/{id}/مکمل")
+فنکشن todo_toggle(id) {
+    متغیر todo = todo_ڈھونڈو(عدد(id))
+    todo.مکمل = !todo.مکمل
+    واپس { id: عدد(id), مکمل: todo.مکمل }
+}
+
+// ══════════════════════════════════════════
+// GET /stats — اعداد و شمار
+// ══════════════════════════════════════════
+@سرور.حاصل("/stats")
+فنکشن اعداد_و_شمار() {
+    متغیر فہرست = Object.اقدار(todos)
+    واپس {
+        کل:       فہرست.length,
+        مکمل:     فہرست.filter(t =&gt; t.مکمل).length,
+        نامکمل:   فہرست.filter(t =&gt; !t.مکمل).length
+    }
+}
+
+// ─── سرور چلائیں ──────────────────────────────────
+لاگ.معلومات("Todo API شروع ہو رہی ہے...")
+سرور.چلائیں({ میزبان: "0.0.0.0", پورٹ: 8000 })
+</code></pre></div>
+<p><strong>Test the API:</strong></p>
+<blockquote>
+<p><strong>اردو:</strong> API کی جانچ کریں — درج ذیل HTTP درخواستیں سرور سے جواب حاصل کرنے کے لیے بھیجیں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>GET http://localhost:8000/todos
+
+POST http://localhost:8000/todos
+{"عنوان": "اردو سیکھنا", "تفصیل": "روزانہ ایک گھنٹہ"}
+
+POST http://localhost:8000/todos/1/مکمل
+
+DELETE http://localhost:8000/todos/1
+</code></pre></div>
+<hr />
+<h2 id="fastapi-html-web-app">FastAPI — HTML Web App</h2>
+<p>A web app that returns an HTML page for a student grade book.</p>
+<blockquote>
+<p><strong>اردو:</strong> ایک ویب ایپ جو طلباء کے نتیجہ نامے کے لیے HTML صفحات واپس کرتی ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { فاسٹ_اے_پی_آئی, جیسن_جواب, ایچ_ٹی_ایم_ایل_جواب, جالی_خطا } سے "اردو/ویب"
+
+// ═══════════════════════════════════════════════════
+// طلباء کا نتیجہ نامہ — HTML ویب ایپ
+// ═══════════════════════════════════════════════════
+
+متغیر ایپ = نیا فاسٹ_اے_پی_آئی({ عنوان: "نتیجہ نامہ" })
+
+متغیر طلباء = [
+    { id: 1, نام: "احمد علی",   نمبر: 85, گریڈ: "B" },
+    { id: 2, نام: "فاطمہ بی بی", نمبر: 92, گریڈ: "A" },
+    { id: 3, نام: "علی احمد",   نمبر: 78, گریڈ: "C" }
+]
+متغیر اگلی_id = 4
+
+فنکشن گریڈ_حاصل_کرو(نمبر) {
+    اگر (نمبر &gt;= 90) { واپس "A" }
+    ورنہ_اگر (نمبر &gt;= 80) { واپس "B" }
+    ورنہ_اگر (نمبر &gt;= 70) { واپس "C" }
+    ورنہ_اگر (نمبر &gt;= 60) { واپس "D" }
+    ورنہ { واپس "F" }
+}
+
+// ══════════════════════════════════════════
+// GET / — مرکزی صفحہ
+// ══════════════════════════════════════════
+@ایپ.حاصل("/")
+فنکشن مرکزی() {
+    متغیر قطاریں = طلباء.map(ط =&gt;
+        `&lt;tr&gt;&lt;td&gt;${ط.id}&lt;/td&gt;&lt;td&gt;${ط.نام}&lt;/td&gt;&lt;td&gt;${ط.نمبر}&lt;/td&gt;&lt;td&gt;${ط.گریڈ}&lt;/td&gt;&lt;/tr&gt;`
+    ).join("")
+
+    متغیر html = `&lt;!DOCTYPE html&gt;
+&lt;html dir="rtl" lang="ur"&gt;
+&lt;head&gt;&lt;meta charset="UTF-8"&gt;&lt;title&gt;نتیجہ نامہ&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;طلباء نتیجہ نامہ&lt;/h1&gt;
+&lt;table border="1"&gt;
+&lt;tr&gt;&lt;th&gt;ID&lt;/th&gt;&lt;th&gt;نام&lt;/th&gt;&lt;th&gt;نمبر&lt;/th&gt;&lt;th&gt;گریڈ&lt;/th&gt;&lt;/tr&gt;
+${قطاریں}
+&lt;/table&gt;
+&lt;/body&gt;&lt;/html&gt;`
+
+    واپس نیا ایچ_ٹی_ایم_ایل_جواب(html)
+}
+
+// ══════════════════════════════════════════
+// GET /طلباء — JSON فہرست
+// ══════════════════════════════════════════
+@ایپ.حاصل("/طلباء")
+فنکشن طلباء_فہرست() {
+    واپس طلباء
+}
+
+// ══════════════════════════════════════════
+// POST /طالب_علم — نئے طالب علم کا اضافہ
+// ══════════════════════════════════════════
+@ایپ.بھیجیں("/طالب_علم")
+غیر_متزامن فنکشن طالب_شامل(درخواست) {
+    متغیر ڈیٹا = انتظار درخواست.json()
+    متغیر نام  = ڈیٹا["نام"] یا ""
+    متغیر نمبر = عدد(ڈیٹا["نمبر"] یا 0)
+
+    اگر (!نام) {
+        پھینکو نیا جالی_خطا(400, "نام ضروری ہے")
+    }
+
+    متغیر نیا_طالب = {
+        id:    اگلی_id,
+        نام,
+        نمبر,
+        گریڈ:  گریڈ_حاصل_کرو(نمبر)
+    }
+    طلباء.شامل(نیا_طالب)
+    اگلی_id += 1
+
+    واپس نیا جیسن_جواب(نیا_طالب, 201)
+}
+
+// ══════════════════════════════════════════
+// DELETE /طالب_علم/{id} — طالب علم حذف
+// ══════════════════════════════════════════
+@ایپ.حذف("/طالب_علم/{id}")
+فنکشن طالب_حذف(id) {
+    متغیر پہلے = طلباء.length
+    متغیر نئی_فہرست = طلباء.filter(ط =&gt; ط.id != عدد(id))
+    اگر (نئی_فہرست.length == پہلے) {
+        پھینکو نیا جالی_خطا(404, `طالب علم ${id} نہیں ملا`)
+    }
+    طلباء.length = 0
+    کے_لیے (متغیر ط کا نئی_فہرست) {
+        طلباء.شامل(ط)
+    }
+    واپس { پیغام: `طالب علم ${id} حذف کیا گیا` }
+}
+
+// ─── چلائیں ───────────────────────────────────────
+ایپ.چلائیں({ بندرگاہ: 5000 })
+</code></pre></div>
+<p>Visit <code>http://localhost:5000</code> to see the grade book.</p>
+<blockquote>
+<p><strong>اردو:</strong> نتیجہ نامہ دیکھنے کے لیے اپنے براؤزر میں <code>http://localhost:5000</code> پر جائیں۔</p>
+</blockquote>
+<hr />
+<h2 id="websocket-chat-server">WebSocket Chat Server</h2>
+<p>A real-time chat server where multiple browser clients can send and receive messages instantly.</p>
+<blockquote>
+<p><strong>اردو:</strong> ایک حقیقی وقت گپ شپ سرور جہاں متعدد براؤزر کلائنٹ فوری طور پر پیغامات بھیج اور وصول کر سکتے ہیں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { فاسٹ_اے_پی_آئی, ایچ_ٹی_ایم_ایل_جواب } سے "اردو/ویب"
+درآمد { لاگر } سے "اردو/لاگ"
+
+// ═══════════════════════════════════════════════════
+// حقیقی وقت گپ شپ — WebSocket
+// بندرگاہ: 8080
+// ═══════════════════════════════════════════════════
+
+متغیر سرور = نیا فاسٹ_اے_پی_آئی({ عنوان: "گپ شپ سرور" })
+متغیر لاگ   = نیا لاگر("گپ-شپ")
+
+// منسلک کلائنٹس کی فہرست
+متغیر کلائنٹس = []
+
+// ══════════════════════════════════════════
+// GET / — چیٹ UI
+// ══════════════════════════════════════════
+@سرور.حاصل("/")
+فنکشن چیٹ_صفحہ() {
+    متغیر html = `&lt;!DOCTYPE html&gt;
+&lt;html dir="rtl" lang="ur"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;اردو گپ شپ&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h2&gt;اردو گپ شپ&lt;/h2&gt;
+    &lt;div id="پیغامات" style="height:300px;overflow-y:auto;border:1px solid #ccc;padding:8px"&gt;&lt;/div&gt;
+    &lt;input id="نام" placeholder="آپ کا نام" value="گمنام"&gt;
+    &lt;input id="متن" placeholder="پیغام لکھیں..." style="width:300px"&gt;
+    &lt;button onclick="بھیجو()"&gt;بھیجیں&lt;/button&gt;
+    &lt;script&gt;
+        const ws = new WebSocket("ws://localhost:8080/ws/")
+        ws.onmessage = e =&gt; {
+            const d = document.getElementById("پیغامات")
+            d.innerHTML += "&lt;p&gt;" + e.data + "&lt;/p&gt;"
+            d.scrollTop = d.scrollHeight
+        }
+        function بھیجو() {
+            const نام = document.getElementById("نام").value || "گمنام"
+            const متن = document.getElementById("متن").value
+            if (متن) {
+                ws.send(نام + ": " + متن)
+                document.getElementById("متن").value = ""
+            }
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;`
+    واپس نیا ایچ_ٹی_ایم_ایل_جواب(html)
+}
+
+// ══════════════════════════════════════════
+// WebSocket /ws/ — حقیقی وقت چیٹ
+// ══════════════════════════════════════════
+@سرور.ویب_ساکٹ("/ws/")
+غیر_متزامن فنکشن گپ_رابطہ(websocket) {
+    انتظار websocket.accept()
+    کلائنٹس.شامل(websocket)
+    لاگ.معلومات(`نیا کلائنٹ جڑا — کل: ${کلائنٹس.length}`)
+
+    کوشش {
+        جبکہ (سچ) {
+            متغیر پیغام = انتظار websocket.receive_text()
+            لاگ.ڈیبگ(`پیغام: ${پیغام}`)
+
+            // تمام کلائنٹس کو بھیجو
+            کے_لیے (متغیر کلائنٹ کا کلائنٹس) {
+                کوشش {
+                    انتظار کلائنٹ.send_text(پیغام)
+                } پکڑو (غ) {
+                    // منقطع کلائنٹ کو نظرانداز کریں
+                }
+            }
+        }
+    } پکڑو (غ) {
+        لاگ.معلومات("کلائنٹ منقطع ہو گیا")
+    }
+
+    // فہرست سے ہٹائیں
+    متغیر نئی_فہرست = کلائنٹس.filter(ک =&gt; ک != websocket)
+    کلائنٹس.length = 0
+    کے_لیے (متغیر ک کا نئی_فہرست) {
+        کلائنٹس.شامل(ک)
+    }
+}
+
+// ══════════════════════════════════════════
+// GET /حالت — صارفین کی تعداد
+// ══════════════════════════════════════════
+@سرور.حاصل("/حالت")
+فنکشن حالت() {
+    واپس { متصل_کلائنٹس: کلائنٹس.length }
+}
+
+// ─── چلائیں ───────────────────────────────────────
+لاگ.معلومات("گپ شپ سرور شروع ہو رہا ہے...")
+لاگ.معلومات("URL: http://localhost:8080")
+سرور.چلائیں({ میزبان: "0.0.0.0", پورٹ: 8080 })
+</code></pre></div>
+<p><strong>Usage:</strong></p>
+<blockquote>
+<p><strong>اردو:</strong> استعمال کا طریقہ: سرور چلائیں، پھر دو یا زیادہ براؤزر ٹیبوں میں <code>http://localhost:8080</code> کھولیں اور گپ شپ شروع کریں۔</p>
+</blockquote>
+<ol>
+<li>Run: <code>urdu run گپ.urdu</code></li>
+<li>Open <code>http://localhost:8080</code> in two or more browser tabs</li>
+<li>Enter a name and start chatting — messages appear instantly in all tabs</li>
+</ol>
+<hr />
+<h2 id="stopping-the-server">Stopping the Server — سرور بند کرنا</h2>
+<blockquote>
+<p>⚠️ <strong>Ctrl+C does not stop these servers.</strong> uvicorn keeps running after the signal. Kill the process from another terminal:</p>
+<div class="highlight"><pre><span></span><code>taskkill /F /IM urdu.exe        # CMD / PowerShell
+Stop-Process -Name urdu -Force  # PowerShell
+</code></pre></div>
+<p><strong>اردو:</strong> <code>Ctrl+C</code> uvicorn سرور نہیں روکتا — اوپر دی گئی کمانڈ استعمال کریں۔</p>
+</blockquote>
+<hr />
+<p><em>Previous: <a href="../hello-world/">Hello World →</a> | Next: <a href="../data-analysis/">Data Analysis →</a></em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

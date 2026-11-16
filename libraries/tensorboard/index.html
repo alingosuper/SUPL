@@ -1,0 +1,1351 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>TensorBoard — اردو/ٹینسر_بورڈ - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tensorboard-_" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              TensorBoard — اردو/ٹینسر_بورڈ
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorial/beginner/" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/beginner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intermediate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#backend-auto-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend Auto-Selection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_-main-logger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ٹینسر_لاگ — Main Logger
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ٹینسر_لاگ — Main Logger">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scalar-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scalar Logging — میٹرک لاگ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#histogram-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histogram Logging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Image Logging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text Logging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hparams-hyperparameter-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HParams (Hyperparameter Tracking)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weights-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weights Logging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keras-callback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keras Callback
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flush-and-close" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flush and Close
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_-thread-safe-step-counter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ٹینسر_قدم — Thread-Safe Step Counter
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_-launch-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        بورڈ_چلائیں — Launch Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_-one-shot-convenience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        میٹرک_لاگ — One-Shot Convenience
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-training-loop-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full Training Loop Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cli-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CLI Command
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="tensorboard-_">TensorBoard — اردو/ٹینسر_بورڈ</h1>
+<p>The <code>اردو/ٹینسر_بورڈ</code> library provides Urdu-named wrappers for TensorBoard — log training metrics, plot histograms, display images and text, record hyperparameters, and launch the TensorBoard dashboard from your Urdu ML programs.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>اردو/ٹینسر_بورڈ</code> لائبریری TensorBoard کے لیے اردو نامی ریپر فراہم کرتی ہے — تربیتی میٹرک لاگ کریں، ہسٹوگرام اور تصاویر ریکارڈ کریں، ہائپر پیرامیٹر محفوظ کریں، اور TensorBoard ڈیش بورڈ چلائیں۔</p>
+</blockquote>
+<p><strong>Install:</strong></p>
+<div class="highlight"><pre><span></span><code>pip install tensorboard
+</code></pre></div>
+<p>For full feature support (model graphs, PR curves), also install PyTorch or TensorFlow. The library auto-selects the best available backend.</p>
+<p><strong>Import:</strong></p>
+<div class="highlight"><pre><span></span><code>درآمد { ٹینسر_لاگ, ٹینسر_قدم, بورڈ_چلائیں, میٹرک_لاگ } سے "اردو/ٹینسر_بورڈ"
+</code></pre></div>
+<hr />
+<h2 id="backend-auto-selection">Backend Auto-Selection</h2>
+<p>The library tries three backends in order:</p>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Backend</th>
+<th>Requires</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>torch.utils.tensorboard.SummaryWriter</code></td>
+<td>PyTorch</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>tf.summary</code></td>
+<td>TensorFlow</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Pure-tensorboard proto writer</td>
+<td><code>tensorboard</code> package only</td>
+</tr>
+</tbody>
+</table>
+<p>All backends support scalars, histograms, images, text, and HParams. Model graphs and PR curves require PyTorch or TensorFlow.</p>
+<hr />
+<h2 id="_-main-logger">ٹینسر_لاگ — Main Logger</h2>
+<h3 id="constructor">Constructor</h3>
+<div class="highlight"><pre><span></span><code>متغیر لاگ = نیا ٹینسر_لاگ("logs/تجربہ_1")
+متغیر لاگ = نیا ٹینسر_لاگ("runs/آج", تبصرہ="lr=0.01")
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>فولڈر</code> (positional)</td>
+<td>Directory to write event files</td>
+</tr>
+<tr>
+<td><code>تبصرہ</code></td>
+<td>Appended to folder name for easy identification</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="scalar-logging">Scalar Logging — میٹرک لاگ</h3>
+<div class="highlight"><pre><span></span><code>کے_لیے (متغیر قدم کا حد(100)) {
+    لاگ.میٹرک("تربیت/نقصان", نقصان_قدر, قدم)
+    لاگ.میٹرک("تربیت/درستگی", درستگی_قدر, قدم)
+}
+</code></pre></div>
+<p>Log multiple scalars under one prefix:</p>
+<div class="highlight"><pre><span></span><code>لاگ.میٹرکس("epoch", { "نقصان": 0.5, "درستگی": 0.85 }, قدم=10)
+</code></pre></div>
+<p>Convenience shorthands:</p>
+<div class="highlight"><pre><span></span><code>لاگ.نقصان(0.42, قدم=5)
+لاگ.درستگی(0.91, قدم=5)
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.میٹرک(نام, قدر, قدم)</code></td>
+<td>Log one scalar</td>
+</tr>
+<tr>
+<td><code>.میٹرکس(نام, قدریں_ڈکٹ, قدم)</code></td>
+<td>Log multiple scalars under a prefix</td>
+</tr>
+<tr>
+<td><code>.نقصان(قدر, قدم)</code></td>
+<td>Shorthand for <code>loss</code></td>
+</tr>
+<tr>
+<td><code>.درستگی(قدر, قدم)</code></td>
+<td>Shorthand for <code>accuracy</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="histogram-logging">Histogram Logging</h3>
+<div class="highlight"><pre><span></span><code>لاگ.ہسٹوگرام("وزن/پہلی_پرت", ماڈل.fc1.weight.data, قدم=0)
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.ہسٹوگرام(نام, قدریں, قدم)</code></td>
+<td>Log a histogram; <code>قدریں</code> can be a NumPy array or list</td>
+</tr>
+</tbody>
+</table>
+<p>Requires NumPy. Silently skipped if NumPy is not installed.</p>
+<hr />
+<h3 id="image-logging">Image Logging</h3>
+<div class="highlight"><pre><span></span><code>لاگ.تصویر("نمونے/آدان", تصویر_سرنی, قدم=0)
+</code></pre></div>
+<p>Accepts a PIL Image, or a NumPy array of shape <code>(H, W, C)</code> uint8 or <code>(H, W)</code> greyscale.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.تصویر(نام, تصویر, قدم)</code></td>
+<td>Log an image (PIL or NumPy)</td>
+</tr>
+</tbody>
+</table>
+<p>Requires NumPy and Pillow. Silently skipped if not available.</p>
+<hr />
+<h3 id="text-logging">Text Logging</h3>
+<div class="highlight"><pre><span></span><code>لاگ.متن("نمونے/پیشگوئی", "یہ جملہ ہے", قدم=1)
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.متن(نام, مواد, قدم)</code></td>
+<td>Log a text string to the Text tab</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="hparams-hyperparameter-tracking">HParams (Hyperparameter Tracking)</h3>
+<div class="highlight"><pre><span></span><code>لاگ.ہائپر_پیرامیٹر(
+    { "سیکھنے_کی_شرح": 0.001, "بیچ_سائز": 32, "پرتیں": 3 },
+    { "بہترین_درستگی": 0.94 }
+)
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.ہائپر_پیرامیٹر(پیرامیٹرز, میٹرکس)</code></td>
+<td>Log hyperparameters + final metrics to the HParams tab</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="weights-logging">Weights Logging</h3>
+<div class="highlight"><pre><span></span><code>لاگ.وزن("ماڈل/وزن", ماڈل, قدم=epoch)
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.وزن(نام, ماڈل, قدم)</code></td>
+<td>Log all named parameter histograms of a PyTorch model</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="keras-callback">Keras Callback</h3>
+<p>Drop-in callback for <code>model.fit()</code> with TensorFlow/Keras:</p>
+<div class="highlight"><pre><span></span><code>متغیر کال_بیک = لاگ.کیراس_کال_بیک()
+ماڈل.fit(X_train, y_train, callbacks=[کال_بیک], epochs=50)
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.کیراس_کال_بیک()</code></td>
+<td>Returns a <code>tf.keras.callbacks.TensorBoard</code>-compatible callback</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="flush-and-close">Flush and Close</h3>
+<div class="highlight"><pre><span></span><code>لاگ.بند()
+</code></pre></div>
+<p>Always call <code>.بند()</code> after the training loop to flush buffered events to disk.</p>
+<hr />
+<h2 id="_-thread-safe-step-counter">ٹینسر_قدم — Thread-Safe Step Counter</h2>
+<p>Automatically increments a step counter — useful when training across multiple threads or loops.</p>
+<div class="highlight"><pre><span></span><code>متغیر قدم_گن = نیا ٹینسر_قدم()
+
+کے_لیے (متغیر batch کا ڈیٹا_لوڈر) {
+    لاگ.میٹرک("نقصان", نقصان, قدم_گن.اگلا())   // returns 0, 1, 2, ...
+}
+
+لکھو(قدم_گن.موجودہ())    // current step
+قدم_گن.بازنشست(0)        // reset to 0
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.اگلا()</code></td>
+<td>Return current step and increment — thread-safe</td>
+</tr>
+<tr>
+<td><code>.موجودہ()</code></td>
+<td>Read current step without incrementing</td>
+</tr>
+<tr>
+<td><code>.بازنشست(قدر=0)</code></td>
+<td>Reset to given value</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_-launch-dashboard">بورڈ_چلائیں — Launch Dashboard</h2>
+<div class="highlight"><pre><span></span><code>بورڈ_چلائیں("logs")                     // opens http://localhost:6006
+بورڈ_چلائیں("runs", پورٹ=7007)
+بورڈ_چلائیں("logs", پس_منظر=سچ)        // non-blocking
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>فولڈر</code></td>
+<td><code>"logs"</code></td>
+<td>Log directory to read from</td>
+</tr>
+<tr>
+<td><code>پورٹ</code></td>
+<td><code>6006</code></td>
+<td>HTTP port for the dashboard</td>
+</tr>
+<tr>
+<td><code>پس_منظر</code></td>
+<td><code>جھوٹ</code></td>
+<td><code>True</code> → non-blocking (returns a <code>subprocess.Popen</code>)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_-one-shot-convenience">میٹرک_لاگ — One-Shot Convenience</h2>
+<p>Log a single scalar without managing a <code>ٹینسر_لاگ</code> instance:</p>
+<div class="highlight"><pre><span></span><code>میٹرک_لاگ("val/درستگی", 0.93, قدم=100)
+میٹرک_لاگ("val/نقصان", 0.12, قدم=100, فولڈر="runs/exp2")
+</code></pre></div>
+<p>Opens a writer, logs the scalar, then closes — suitable for quick scripts.</p>
+<hr />
+<h2 id="full-training-loop-example">Full Training Loop Example</h2>
+<div class="highlight"><pre><span></span><code>درآمد { ٹینسر_لاگ, ٹینسر_قدم, بورڈ_چلائیں } سے "اردو/ٹینسر_بورڈ";
+
+متغیر لاگ    = نیا ٹینسر_لاگ("logs/تربیت")
+متغیر قدم_گن = نیا ٹینسر_قدم()
+
+لاگ.ہائپر_پیرامیٹر(
+    { "سیکھنے_کی_شرح": 0.001, "epochs": 10 },
+    { "بہترین_درستگی": 0.0 }
+)
+
+کے_لیے (متغیر epoch کا حد(10)) {
+    متغیر نقصان    = تربیت_قدم()
+    متغیر درستگی   = جانچ_قدم()
+
+    لاگ.نقصان(نقصان, قدم_گن.اگلا())
+    لاگ.درستگی(درستگی, قدم_گن.موجودہ())
+    لکھو(`Epoch ${epoch}: loss=${نقصان}, acc=${درستگی}`)
+}
+
+لاگ.بند()
+بورڈ_چلائیں("logs")
+</code></pre></div>
+<hr />
+<h2 id="cli-command">CLI Command</h2>
+<p>Launch TensorBoard from the terminal without writing Urdu code:</p>
+<div class="highlight"><pre><span></span><code>urdu بورڈ چلائیں                   # default: logs/ folder, port 6006
+urdu بورڈ چلائیں --فولڈر=runs
+urdu بورڈ چلائیں --پورٹ=7007
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

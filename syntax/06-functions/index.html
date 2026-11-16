@@ -1,0 +1,1669 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Functions — فنکشن - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#functions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Functions — فنکشن
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorial/beginner/" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../libraries/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/beginner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intermediate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../libraries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-function-declaration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Function Declaration — بنیادی فنکشن اعلان
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters-and-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters and Arguments — پیرامیٹرز اور دلائل
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default Parameters — پہلے سے طے پیرامیٹرز
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rest-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rest Parameters — باقی پیرامیٹرز
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#return-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        واپس — Return Values
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-return-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple Return Values — متعدد واپسی قدریں
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arrow-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arrow Functions — تیر فنکشن
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anonymous-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anonymous Functions — گمنام فنکشن
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-class-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First-Class Functions — اوّل درجہ فنکشن
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#callbacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Callbacks — کال بیک
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#closures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Closures — بندش
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursive-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursive Functions — بازگشت فنکشن
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generator-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generator Functions — جنریٹر فنکشن
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#immediately-invoked-functions-iife" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Immediately Invoked Functions (IIFE) — فوری چلنے والے فنکشن
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-number-of-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variable Number of Arguments — متغیر تعداد دلائل
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical Examples — عملی مثالیں
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Examples — عملی مثالیں">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memoization-cache-function-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memoization — یاداشت (cache function results)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipe-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pipe / compose — پائپ / ترکیب
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debounce" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debounce — تاخیر
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="functions">Functions — فنکشن</h1>
+<p>Functions are reusable blocks of code that accept inputs and return outputs. The Urdu Programming Language supports all modern function forms including arrow functions, generators, closures, and async functions.</p>
+<blockquote>
+<p><strong>اردو:</strong> فنکشن دوبارہ قابلِ استعمال کوڈ کے بلاک ہیں جو ان پٹ قبول کرتے اور آؤٹ پٹ واپس کرتے ہیں۔ اردو پروگرامنگ لینگویج تمام جدید فنکشن اشکال کی حمایت کرتی ہے — تیر فنکشن، جنریٹرز، بندش (closures) اور غیر_متزامن (async) فنکشن سمیت۔</p>
+</blockquote>
+<hr />
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#basic-function-declaration">Basic Function Declaration</a></li>
+<li><a href="#parameters-and-arguments">Parameters and Arguments</a></li>
+<li><a href="#default-parameters">Default Parameters</a></li>
+<li><a href="#rest-parameters">Rest Parameters</a></li>
+<li><a href="#واپس--return-values">واپس — Return Values</a></li>
+<li><a href="#multiple-return-values">Multiple Return Values</a></li>
+<li><a href="#arrow-functions">Arrow Functions</a></li>
+<li><a href="#anonymous-functions">Anonymous Functions</a></li>
+<li><a href="#first-class-functions">First-Class Functions</a></li>
+<li><a href="#callbacks">Callbacks</a></li>
+<li><a href="#closures">Closures</a></li>
+<li><a href="#recursive-functions">Recursive Functions</a></li>
+<li><a href="#generator-functions">Generator Functions</a></li>
+<li><a href="#immediately-invoked-functions-iife">Immediately Invoked Functions (IIFE)</a></li>
+<li><a href="#variable-number-of-arguments">Variable Number of Arguments</a></li>
+<li><a href="#practical-examples">Practical Examples</a></li>
+</ol>
+<hr />
+<h2 id="basic-function-declaration">Basic Function Declaration — بنیادی فنکشن اعلان</h2>
+<p><strong>Syntax:</strong></p>
+<div class="highlight"><pre><span></span><code>فنکشن نام(پیرامیٹر1, پیرامیٹر2) {
+    // فنکشن کا جسم
+    واپس نتیجہ;
+}
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> فنکشن بنانے کے لیے <code>فنکشن</code> کلیدی لفظ، پھر نام، پھر قوسین میں پیرامیٹرز، اور آخر میں گھنگھریالی قوسین میں جسم لکھیں۔ <code>واپس</code> سے قدر واپس کریں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>فنکشن سلام(نام) {
+    واپس `مرحبا، ${نام}!`;
+}
+
+لکھو(سلام("احمد"));    // مرحبا، احمد!
+لکھو(سلام("فاطمہ"));   // مرحبا، فاطمہ!
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Function with no return — returns undefined implicitly
+فنکشن اطلاع_دو(پیغام) {
+    لکھو(`[اطلاع] ${پیغام}`);
+}
+
+اطلاع_دو("سرور شروع ہو گیا");
+// [اطلاع] سرور شروع ہو گیا
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Functions are hoisted — can be called before declaration
+لکھو(مربع(5));    // 25
+
+فنکشن مربع(n) {
+    واپس n * n;
+}
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> فنکشنز "اٹھائے" (hoisted) جاتے ہیں — یعنی فنکشن اعلان سے پہلے بھی کال کیا جا سکتا ہے۔ اگر <code>واپس</code> نہ لکھیں تو فنکشن <code>غیر_معرف</code> واپس کرتا ہے۔</p>
+</blockquote>
+<hr />
+<h2 id="parameters-and-arguments">Parameters and Arguments — پیرامیٹرز اور دلائل</h2>
+<p>Parameters are the names in the function definition. Arguments are the values passed when calling.</p>
+<blockquote>
+<p><strong>اردو:</strong> پیرامیٹرز فنکشن کی تعریف میں نام ہیں — یہ خالی جگہیں ہیں۔ دلائل وہ قدریں ہیں جو کال کرتے وقت بھیجی جاتی ہیں — یہ اصل قدریں ہیں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>فنکشن جمع(الف, ب) {
+    واپس الف + ب;
+}
+
+لکھو(جمع(3, 7));      // 10
+لکھو(جمع(100, 200));  // 300
+</code></pre></div>
+<p><strong>Extra arguments are ignored; missing ones become <code>غیر_معرف</code>:</strong></p>
+<div class="highlight"><pre><span></span><code>فنکشن معلومات(نام, عمر, شہر) {
+    لکھو(`${نام}, ${عمر}, ${شہر}`);
+}
+
+معلومات("علی", 25, "کراچی");     // علی, 25, کراچی
+معلومات("فاطمہ", 30);             // فاطمہ, 30, undefined
+معلومات("زید", 22, "لاہور", "extra");  // زید, 22, لاہور
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> زیادہ دلائل نظرانداز ہو جاتے ہیں؛ جو نہ دیے جائیں وہ <code>غیر_معرف</code> ہو جاتے ہیں۔ یہ سمجھنا ضروری ہے کیونکہ یہ غلطی نہیں دیتا بلکہ خاموشی سے <code>غیر_معرف</code> رکھتا ہے۔</p>
+</blockquote>
+<hr />
+<h2 id="default-parameters">Default Parameters — پہلے سے طے پیرامیٹرز</h2>
+<p>If an argument is not provided or is <code>غیر_معرف</code>, the default value is used.</p>
+<blockquote>
+<p><strong>اردو:</strong> اگر کوئی دلیل نہ دی جائے یا <code>غیر_معرف</code> ہو تو پہلے سے طے قدر استعمال ہوتی ہے۔ یہ اختیاری پیرامیٹرز بنانے کا بہترین طریقہ ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>فنکشن سلام(نام = "دوست", وقت = "صبح") {
+    واپس `${وقت} بخیر، ${نام}!`;
+}
+
+لکھو(سلام());                    // صبح بخیر، دوست!
+لکھو(سلام("مریم"));              // صبح بخیر، مریم!
+لکھو(سلام("طارق", "شام"));       // شام بخیر، طارق!
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Default can reference earlier parameters
+فنکشن آئتہ(چوڑائی, اونچائی = چوڑائی) {
+    واپس چوڑائی * اونچائی;
+}
+
+لکھو(آئتہ(5));       // 25  (5 × 5 square)
+لکھو(آئتہ(4, 6));    // 24
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Default can be an expression or function call
+فنکشن ٹائم_اسٹامپ(وقت = وقت()) {
+    واپس `تخلیق: ${وقت}`;
+}
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> پہلے سے طے قدر ایک اظہار یا فنکشن کال بھی ہو سکتی ہے — یہ ہر بار فنکشن کال پر چلتی ہے۔</p>
+</blockquote>
+<hr />
+<h2 id="rest-parameters">Rest Parameters — باقی پیرامیٹرز</h2>
+<p><code>...</code> before the last parameter collects all remaining arguments into an array.</p>
+<blockquote>
+<p><strong>اردو:</strong> آخری پیرامیٹر سے پہلے <code>...</code> لگانے سے باقی تمام دلائل ایک فہرست میں جمع ہو جاتے ہیں۔ یہ فنکشن کو کسی بھی تعداد میں دلائل قبول کرنے دیتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>فنکشن مجموع_قدر(...اعداد) {
+    واپس اعداد.کم_کرو((جمع, n) =&gt; جمع + n, 0);
+}
+
+لکھو(مجموع_قدر(1, 2, 3));           // 6
+لکھو(مجموع_قدر(10, 20, 30, 40));    // 100
+لکھو(مجموع_قدر());                  // 0
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Rest after regular parameters
+فنکشن لاگ(سطح, ...پیغامات) {
+    کے_لیے (متغیر پیغام کا پیغامات) {
+        لکھو(`[${سطح}] ${پیغام}`);
+    }
+}
+
+لاگ("معلومات", "سرور شروع", "پورٹ 3000");
+// [معلومات] سرور شروع
+// [معلومات] پورٹ 3000
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> باقی پیرامیٹر کو ہمیشہ آخر میں لکھیں۔ اس سے پہلے عام پیرامیٹرز ہو سکتے ہیں — جیسے <code>لاگ(سطح, ...پیغامات)</code> میں <code>سطح</code> پہلا پیرامیٹر ہے اور باقی سب <code>پیغامات</code> میں جاتے ہیں۔</p>
+</blockquote>
+<hr />
+<h2 id="return-values">واپس — Return Values</h2>
+<p><code>واپس</code> immediately exits the function and returns a value. Without <code>واپس</code>, the function returns <code>غیر_معرف</code>.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>واپس</code> فوری طور پر فنکشن سے باہر نکلتا ہے اور ایک قدر واپس کرتا ہے۔ <code>واپس</code> کے بغیر فنکشن <code>غیر_معرف</code> واپس کرتا ہے۔ کسی بھی جگہ پر ابتدائی خروج کے لیے بھی <code>واپس</code> استعمال ہوتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>فنکشن درجہ(سکور) {
+    اگر (سکور &gt;= 90) واپس "A+";
+    اگر (سکور &gt;= 80) واپس "A";
+    اگر (سکور &gt;= 70) واپس "B";
+    اگر (سکور &gt;= 60) واپس "C";
+    واپس "F";
+}
+
+لکھو(درجہ(95));    // A+
+لکھو(درجہ(72));    // B
+لکھو(درجہ(45));    // F
+</code></pre></div>
+<hr />
+<h2 id="multiple-return-values">Multiple Return Values — متعدد واپسی قدریں</h2>
+<p>Return an array or object to send back more than one value.</p>
+<blockquote>
+<p><strong>اردو:</strong> فنکشن سے ایک سے زیادہ قدریں واپس کرنے کے لیے فہرست یا شے استعمال کریں، پھر پانے والی طرف توڑ کر الگ متغیرات میں رکھیں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// Via array destructuring
+فنکشن کم_زیادہ(اعداد) {
+    واپس [کم(...اعداد), زیادہ(...اعداد)];
+}
+
+متغیر [سب_سے_کم, سب_سے_زیادہ] = کم_زیادہ([4, 8, 2, 9, 1]);
+لکھو(سب_سے_کم);      // 1
+لکھو(سب_سے_زیادہ);   // 9
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Via object destructuring
+فنکشن شماریات(اعداد) {
+    مستقل n = اعداد.لمبائی;
+    مستقل مجموع_قدر = مجموع(اعداد);
+    مستقل اوسط_قدر = مجموع_قدر / n;
+    واپس { مجموع_قدر, اوسط_قدر, n, کم: کم(...اعداد), زیادہ: زیادہ(...اعداد) };
+}
+
+متغیر { مجموع_قدر, اوسط_قدر } = شماریات([1, 2, 3, 4, 5]);
+لکھو(مجموع_قدر);    // 15
+لکھو(اوسط_قدر);     // 3
+</code></pre></div>
+<hr />
+<h2 id="arrow-functions">Arrow Functions — تیر فنکشن</h2>
+<p>Arrow functions provide a compact syntax. They are always anonymous expressions.</p>
+<blockquote>
+<p><strong>اردو:</strong> تیر فنکشن مختصر نحو فراہم کرتے ہیں۔ یہ ہمیشہ گمنام اظہار ہوتے ہیں۔ چھوٹے فنکشن اور کال بیک کے لیے بہت مفید ہیں۔</p>
+</blockquote>
+<p><strong>Syntax forms:</strong></p>
+<div class="highlight"><pre><span></span><code>// Single expression — implicit return
+مستقل مربع = n =&gt; n * n;
+
+// Multiple parameters
+مستقل جمع = (الف, ب) =&gt; الف + ب;
+
+// No parameters
+مستقل ہیلو = () =&gt; "مرحبا!";
+
+// Block body — explicit return required
+مستقل مطلق = n =&gt; {
+    اگر (n &lt; 0) واپس -n;
+    واپس n;
+};
+
+لکھو(مربع(6));       // 36
+لکھو(جمع(3, 4));     // 7
+لکھو(ہیلو());        // مرحبا!
+لکھو(مطلق(-5));      // 5
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> اگر تیر فنکشن میں صرف ایک اظہار ہو تو <code>واپس</code> ضمنی ہے — کرلی قوسین بھی نہیں چاہیے۔ ایک پیرامیٹر کے لیے قوسین بھی ضروری نہیں۔ بلاک جسم والے فنکشن میں <code>واپس</code> لکھنا پڑتا ہے۔</p>
+</blockquote>
+<p><strong>Arrow functions with arrays:</strong></p>
+<div class="highlight"><pre><span></span><code>مستقل اعداد = [1, 2, 3, 4, 5, 6, 7, 8];
+
+مستقل مربعات = اعداد.تبدیل(n =&gt; n ** 2);
+مستقل جفت = اعداد.چھانو(n =&gt; n % 2 === 0);
+مستقل مجموع_قدر = اعداد.کم_کرو((acc, n) =&gt; acc + n, 0);
+
+لکھو(مربعات);      // [1, 4, 9, 16, 25, 36, 49, 64]
+لکھو(جفت);         // [2, 4, 6, 8]
+لکھو(مجموع_قدر);   // 36
+</code></pre></div>
+<hr />
+<h2 id="anonymous-functions">Anonymous Functions — گمنام فنکشن</h2>
+<p>Functions without names, assigned to variables or passed directly.</p>
+<blockquote>
+<p><strong>اردو:</strong> گمنام فنکشن وہ ہیں جن کا کوئی نام نہیں — انہیں متغیر میں رکھا جاتا ہے یا سیدھا کسی اور فنکشن کو بھیجا جاتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// Assigned to variable
+مستقل خوش_آمدید = فنکشن(نام) {
+    واپس `خوش آمدید، ${نام}!`;
+};
+
+لکھو(خوش_آمدید("احمد"));    // خوش آمدید، احمد!
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Passed directly
+[1, 2, 3].ہر_ایک(فنکشن(n) {
+    لکھو(n * 10);
+});
+// 10 20 30
+</code></pre></div>
+<hr />
+<h2 id="first-class-functions">First-Class Functions — اوّل درجہ فنکشن</h2>
+<p>Functions are values — they can be stored, passed, and returned.</p>
+<blockquote>
+<p><strong>اردو:</strong> اردو پروگرامنگ لینگویج میں فنکشن "اوّل درجہ" قدریں ہیں — انہیں متغیر میں رکھا، دوسرے فنکشن کو بھیجا اور فنکشن سے واپس کیا جا سکتا ہے۔ یہ فنکشنل پروگرامنگ کی بنیاد ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// Store in object
+مستقل کیلکولیٹر = {
+    جمع: (الف, ب) =&gt; الف + ب,
+    تفریق: (الف, ب) =&gt; الف - ب,
+    ضرب: (الف, ب) =&gt; الف * ب,
+    تقسیم: (الف, ب) =&gt; الف / ب
+};
+
+لکھو(کیلکولیٹر.جمع(10, 5));      // 15
+لکھو(کیلکولیٹر.تقسیم(20, 4));    // 5
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Store in array
+مستقل تبدیلیاں = [
+    n =&gt; n + 1,
+    n =&gt; n * 2,
+    n =&gt; n ** 2
+];
+
+متغیر قدر = 3;
+کے_لیے (مستقل تبدیلی کا تبدیلیاں) {
+    قدر = تبدیلی(قدر);
+}
+لکھو(قدر);    // ((3+1)*2)^2 = 64
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Return a function from a function (factory)
+فنکشن ضرب_ساز(عامل) {
+    واپس n =&gt; n * عامل;
+}
+
+مستقل دو_گنا = ضرب_ساز(2);
+مستقل تین_گنا = ضرب_ساز(3);
+
+لکھو(دو_گنا(7));    // 14
+لکھو(تین_گنا(7));   // 21
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> "فنکشن فیکٹری" — ایک فنکشن جو دوسرے فنکشن بناتا ہے۔ <code>ضرب_ساز(2)</code> ایسا فنکشن واپس کرتا ہے جو کسی بھی عدد کو دو سے ضرب دیتا ہے۔</p>
+</blockquote>
+<hr />
+<h2 id="callbacks">Callbacks — کال بیک</h2>
+<p>A callback is a function passed to another function to be called later.</p>
+<blockquote>
+<p><strong>اردو:</strong> کال بیک وہ فنکشن ہے جو کسی دوسرے فنکشن کو بھیجا جاتا ہے تاکہ بعد میں بلایا جائے۔ فہرست کے طریقے جیسے <code>چھانو</code>، <code>تبدیل</code>، <code>کم_کرو</code> سب کال بیک استعمال کرتے ہیں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>فنکشن پروسیس_کرو(ڈیٹا, کال_بیک) {
+    لکھو("پروسیسنگ...");
+    مستقل نتیجہ = کال_بیک(ڈیٹا);
+    لکھو(`نتیجہ: ${نتیجہ}`);
+}
+
+پروسیس_کرو(5, n =&gt; n * n);
+// پروسیسنگ...
+// نتیجہ: 25
+
+پروسیس_کرو("اردو", s =&gt; s.بڑے_حروف());
+// پروسیسنگ...
+// نتیجہ: اردو
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Array method callbacks
+مستقل طلباء = [
+    { نام: "احمد", سکور: 75 },
+    { نام: "بیا",  سکور: 92 },
+    { نام: "ثمر",  سکور: 55 },
+    { نام: "دانیہ", سکور: 88 }
+];
+
+مستقل پاس = طلباء.چھانو(ط =&gt; ط.سکور &gt;= 60);
+مستقل ترتیب_شدہ = طلباء.ترتیب_دو(ط =&gt; -ط.سکور);
+مستقل نام_جات = طلباء.تبدیل(ط =&gt; ط.نام);
+
+لکھو(پاس.لمبائی);         // 3
+لکھو(ترتیب_شدہ[0].نام);   // بیا   (highest score first)
+لکھو(نام_جات);             // ["احمد", "بیا", "ثمر", "دانیہ"]
+</code></pre></div>
+<hr />
+<h2 id="closures">Closures — بندش</h2>
+<p>A closure is a function that "remembers" variables from the outer scope where it was created.</p>
+<blockquote>
+<p><strong>اردو:</strong> بندش (closure) وہ فنکشن ہے جو اپنے بنائے جانے کی جگہ کے بیرونی دائرے (outer scope) کے متغیرات "یاد" رکھتا ہے — چاہے وہ بیرونی فنکشن ختم ہو گیا ہو۔ یہ نجی حالت (private state) بنانے کا طریقہ ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>فنکشن گنتی_ساز() {
+    متغیر گنتی = 0;
+
+    واپس {
+        اضافہ: () =&gt; ++گنتی,
+        کمی:   () =&gt; --گنتی,
+        دیکھو: () =&gt; گنتی
+    };
+}
+
+مستقل گنتی = گنتی_ساز();
+گنتی.اضافہ();
+گنتی.اضافہ();
+گنتی.اضافہ();
+لکھو(گنتی.دیکھو());    // 3
+گنتی.کمی();
+لکھو(گنتی.دیکھو());    // 2
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Closure for private state
+فنکشن بینک_کھاتہ(ابتدائی_رقم = 0) {
+    متغیر رقم = ابتدائی_رقم;
+
+    واپس {
+        جمع_کرو: (n) =&gt; { رقم += n; لکھو(`جمع: ${n}، بقیہ: ${رقم}`); },
+        نکالو:   (n) =&gt; {
+            اگر (n &gt; رقم) { لکھو("ناکافی رقم"); واپس; }
+            رقم -= n;
+            لکھو(`نکالا: ${n}، بقیہ: ${رقم}`);
+        },
+        بقیہ: () =&gt; رقم
+    };
+}
+
+مستقل کھاتہ = بینک_کھاتہ(1000);
+کھاتہ.جمع_کرو(500);      // جمع: 500، بقیہ: 1500
+کھاتہ.نکالو(200);        // نکالا: 200، بقیہ: 1300
+لکھو(کھاتہ.بقیہ());     // 1300
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> بینک کھاتے کی مثال بندش کا عملی استعمال دکھاتی ہے — <code>رقم</code> متغیر باہر سے براہ راست قابلِ رسائی نہیں، صرف <code>جمع_کرو</code>، <code>نکالو</code> اور <code>بقیہ</code> طریقوں سے۔</p>
+</blockquote>
+<hr />
+<h2 id="recursive-functions">Recursive Functions — بازگشت فنکشن</h2>
+<p>A recursive function calls itself. Every recursion needs a base case to stop.</p>
+<blockquote>
+<p><strong>اردو:</strong> بازگشت (recursive) فنکشن خود کو بلاتا ہے۔ ہر بازگشت کو رکنے کے لیے ایک بنیادی صورت (base case) چاہیے — ورنہ لامتناہی چلتا رہے گا۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// Factorial
+فنکشن فیکٹوریل(n) {
+    اگر (n &lt;= 1) واپس 1;
+    واپس n * فیکٹوریل(n - 1);
+}
+
+لکھو(فیکٹوریل(5));    // 120
+لکھو(فیکٹوریل(10));   // 3628800
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Fibonacci
+فنکشن فبوناچی(n) {
+    اگر (n &lt;= 1) واپس n;
+    واپس فبوناچی(n - 1) + فبوناچی(n - 2);
+}
+
+کے_لیے (متغیر i کا حد(8)) {
+    لکھو(فبوناچی(i));
+}
+// 0 1 1 2 3 5 8 13
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> فیکٹوریل: <code>n! = n × (n-1)!</code> — بنیادی صورت <code>n &lt;= 1</code> پر واپس 1۔ فبوناچی: ہر عدد پچھلے دو کا مجموع — بنیادی صورت <code>n &lt;= 1</code>۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// Flatten nested array recursively
+فنکشن چپٹا_کرو(فہرست) {
+    مستقل نتیجہ = [];
+    کے_لیے (مستقل شے کا فہرست) {
+        اگر (Array.ہے(شے)) {
+            کے_لیے (مستقل عنصر کا چپٹا_کرو(شے)) {
+                نتیجہ.شامل(عنصر);
+            }
+        } ورنہ {
+            نتیجہ.شامل(شے);
+        }
+    }
+    واپس نتیجہ;
+}
+
+لکھو(چپٹا_کرو([1, [2, [3, [4]], 5]]));
+// [1, 2, 3, 4, 5]
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Binary search (recursive)
+فنکشن بائنری_تلاش(فہرست, ہدف, شروع = 0, آخر = فہرست.لمبائی - 1) {
+    اگر (شروع &gt; آخر) واپس -1;
+
+    مستقل درمیان = شروع + ریاضی.فرش((آخر - شروع) / 2);
+
+    اگر (فہرست[درمیان] === ہدف) واپس درمیان;
+    اگر (فہرست[درمیان] &lt; ہدف)   واپس بائنری_تلاش(فہرست, ہدف, درمیان + 1, آخر);
+                                  واپس بائنری_تلاش(فہرست, ہدف, شروع, درمیان - 1);
+}
+
+مستقل اعداد = [1, 3, 5, 7, 9, 11, 13];
+لکھو(بائنری_تلاش(اعداد, 7));    // 3
+لکھو(بائنری_تلاش(اعداد, 6));    // -1
+</code></pre></div>
+<hr />
+<h2 id="generator-functions">Generator Functions — جنریٹر فنکشن</h2>
+<p>Generator functions use <code>فنکشن*</code> syntax and produce values one at a time with <code>پیداوار</code>.</p>
+<blockquote>
+<p><strong>اردو:</strong> جنریٹر فنکشن <code>فنکشن*</code> نحو استعمال کرتے ہیں اور <code>پیداوار</code> سے قدریں ایک ایک کر کے بناتے ہیں۔ یہ بڑے ڈیٹا سیٹس کے لیے موزوں ہیں — سب کچھ یاداشت میں نہیں رکھتے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>فنکشن* گنتی_کار(شروع, آخر) {
+    کے_لیے (متغیر i کا حد(شروع, آخر + 1)) {
+        پیداوار i;
+    }
+}
+
+مستقل جنریٹر = گنتی_کار(1, 5);
+
+لکھو(جنریٹر.اگلا());    // { value: 1, done: false }
+لکھو(جنریٹر.اگلا());    // { value: 2, done: false }
+لکھو(جنریٹر.اگلا());    // { value: 3, done: false }
+
+// Or iterate with for...of
+کے_لیے (متغیر n کا گنتی_کار(1, 5)) {
+    لکھو(n);
+}
+// 1 2 3 4 5
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Infinite generator
+فنکشن* لامتناہی_گنتی(n = 0) {
+    جبکہ (سچ) {
+        پیداوار n++;
+    }
+}
+
+مستقل جنریٹر = لامتناہی_گنتی();
+کے_لیے (متغیر _ کا حد(5)) {
+    لکھو(جنریٹر.اگلا().value);
+}
+// 0 1 2 3 4
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Generator with return value
+فنکشن* پیداوار_دو() {
+    پیداوار "پہلا";
+    پیداوار "دوسرا";
+    واپس "مکمل";
+}
+
+مستقل g = پیداوار_دو();
+لکھو(g.اگلا());    // { value: "پہلا",  done: false }
+لکھو(g.اگلا());    // { value: "دوسرا", done: false }
+لکھو(g.اگلا());    // { value: "مکمل",  done: true  }
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> <code>done: true</code> آنے پر جنریٹر ختم ہو گیا۔ <code>واپس</code> والی آخری قدر <code>done: true</code> کے ساتھ آتی ہے۔</p>
+</blockquote>
+<hr />
+<h2 id="immediately-invoked-functions-iife">Immediately Invoked Functions (IIFE) — فوری چلنے والے فنکشن</h2>
+<p>An IIFE is defined and called in one expression. Useful for creating a private scope.</p>
+<blockquote>
+<p><strong>اردو:</strong> IIFE فنکشن کو بنانے اور فوری چلانے کا طریقہ ہے — ایک ہی اظہار میں۔ یہ نجی دائرہ بنانے کے لیے مفید ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// Arrow IIFE
+مستقل نتیجہ = (() =&gt; {
+    متغیر x = 10;
+    متغیر y = 20;
+    واپس x + y;
+})();
+
+لکھو(نتیجہ);    // 30
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Named IIFE for async initialization
+(غیر_متزامن فنکشن ابتدائیہ() {
+    لکھو("ایپلیکیشن شروع ہو رہی ہے...");
+    انتظار تاخیر(100);
+    لکھو("ابتدائیہ مکمل");
+})();
+</code></pre></div>
+<hr />
+<h2 id="variable-number-of-arguments">Variable Number of Arguments — متغیر تعداد دلائل</h2>
+<p>Three patterns for handling a flexible number of arguments:</p>
+<blockquote>
+<p><strong>اردو:</strong> لچکدار تعداد کے دلائل سنبھالنے کے تین طریقے ہیں — باقی پیرامیٹرز، سپریڈ، یا فہرست پیرامیٹر۔</p>
+</blockquote>
+<p><strong>1. Rest parameters (recommended):</strong></p>
+<div class="highlight"><pre><span></span><code>فنکشن اوسط(...اعداد) {
+    اگر (اعداد.لمبائی === 0) واپس 0;
+    واپس مجموع(اعداد) / اعداد.لمبائی;
+}
+
+لکھو(اوسط(10, 20));           // 15
+لکھو(اوسط(1, 2, 3, 4, 5));    // 3
+</code></pre></div>
+<p><strong>2. Spread to pass array as args:</strong></p>
+<div class="highlight"><pre><span></span><code>مستقل اعداد = [3, 1, 4, 1, 5, 9, 2];
+لکھو(زیادہ(...اعداد));    // 9
+لکھو(کم(...اعداد));      // 1
+</code></pre></div>
+<p><strong>3. Array parameter:</strong></p>
+<div class="highlight"><pre><span></span><code>فنکشن جدول_بنائیں(عنوانات, سطریں) {
+    لکھو(عنوانات.جوڑو(" | "));
+    لکھو("-".دہراؤ(40));
+    کے_لیے (مستقل سطر کا سطریں) {
+        لکھو(سطر.جوڑو(" | "));
+    }
+}
+
+جدول_بنائیں(
+    ["نام", "عمر", "شہر"],
+    [["احمد", "25", "کراچی"], ["فاطمہ", "30", "لاہور"]]
+);
+</code></pre></div>
+<hr />
+<h2 id="practical-examples">Practical Examples — عملی مثالیں</h2>
+<h3 id="memoization-cache-function-results">Memoization — یاداشت (cache function results)</h3>
+<div class="highlight"><pre><span></span><code>فنکشن میمو(فنکشن_شے) {
+    مستقل کیش = {};
+    واپس (...پیرامیٹر) =&gt; {
+        مستقل کلید = JSON_لکھو(پیرامیٹر);
+        اگر (کلید میں_ہے کیش) {
+            لکھو("کیش سے ملا");
+            واپس کیش[کلید];
+        }
+        مستقل نتیجہ = فنکشن_شے(...پیرامیٹر);
+        کیش[کلید] = نتیجہ;
+        واپس نتیجہ;
+    };
+}
+
+مستقل تیز_فبوناچی = میمو(فنکشن f(n) {
+    اگر (n &lt;= 1) واپس n;
+    واپس تیز_فبوناچی(n - 1) + تیز_فبوناچی(n - 2);
+});
+
+لکھو(تیز_فبوناچی(40));    // very fast
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> یاداشت (memoization) نتائج محفوظ کرتی ہے — اگر وہی پیرامیٹر پہلے سے حساب ہو چکے ہوں تو دوبارہ حساب نہیں کرتی، کیش سے واپس کرتی ہے۔ فبوناچی جیسے مہنگے حسابات کے لیے بہت مفید!</p>
+</blockquote>
+<h3 id="pipe-compose">Pipe / compose — پائپ / ترکیب</h3>
+<div class="highlight"><pre><span></span><code>// pipe — left to right
+فنکشن پائپ(...فنکشن_جات) {
+    واپس (قدر) =&gt; فنکشن_جات.کم_کرو((acc, fn) =&gt; fn(acc), قدر);
+}
+
+مستقل پروسیس = پائپ(
+    n =&gt; n * 2,
+    n =&gt; n + 10,
+    n =&gt; n ** 2
+);
+
+لکھو(پروسیس(5));    // ((5*2)+10)^2 = 400
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> پائپ فنکشن قدر کو بائیں سے دائیں تمام فنکشنوں سے گزارتا ہے — پہلے دو سے ضرب، پھر 10 جمع، پھر مربع۔ فنکشنل پروگرامنگ کا طاقتور نمونہ!</p>
+</blockquote>
+<h3 id="debounce">Debounce — تاخیر</h3>
+<div class="highlight"><pre><span></span><code>فنکشن ڈیبونس(فنکشن_شے, تاخیر_قدر = 300) {
+    متغیر ٹائمر;
+    واپس (...پیرامیٹر) =&gt; {
+        clearTimeout(ٹائمر);
+        ٹائمر = setTimeout(() =&gt; فنکشن_شے(...پیرامیٹر), تاخیر_قدر);
+    };
+}
+
+مستقل تلاش = ڈیبونس((سوال) =&gt; لکھو(`تلاش: ${سوال}`), 500);
+// Only fires 500ms after the last call
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> ڈیبونس فنکشن کو صرف آخری کال کے بعد مقررہ وقت (500ms) گزرنے پر چلاتا ہے۔ سرچ باکس میں ٹائپنگ کے دوران ہر حرف پر سرور کال نہ کرنے کے لیے یہ بہت مفید ہے۔</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1555 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Type Helpers — قسم مددگار - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#type-helpers" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Type Helpers — قسم مددگار
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorial/beginner/" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../libraries/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/beginner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intermediate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../libraries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#object-helper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object Helper — شے
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Object Helper — شے">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectobj-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object.مفاتیح(obj) → list
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objectobj-list_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object.اقدار(obj) → list
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objectobj-list_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object.اندراج(obj) → list
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objecttarget-sources-dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object.تفویض(target, *sources) → dict
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objectobj-obj" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object.منجمد(obj) → obj
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objectkwargs-dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object.بنا(**kwargs) → dict
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array-helper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Array Helper — صف
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Array Helper — صف">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arrayiterable-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Array.سے(iterable) → list
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arrayx-bool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Array.ہے(x) → bool
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string-helper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        String Helper — ڈور
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="String Helper — ڈور">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stringx-str" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        String.سے(x) → str
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strings-i0-int" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        String.کوڈ(s, i=0) → int
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stringcode-str" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        String.حرف(code) → str
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Types — غلطی کی اقسام
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Types — غلطی کی اقسام">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        غلطی / Error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_-typeerror" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        قسم_غلطی / TypeError
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_-indexerror-rangeerror" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        حد_غلطی / IndexError / RangeError
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_-nameerror-referenceerror" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        حوالہ_غلطی / NameError / ReferenceError
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_-syntaxerror" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        نحو_غلطی / SyntaxError
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_-valueerror-rangeerror" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        رینج_غلطی / ValueError / RangeError
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_-connectionerror-networkerror" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        نیٹ_غلطی / ConnectionError / NetworkError
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_-filenotfounderror" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        فائل_غلطی / FileNotFoundError
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-class-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Class Hierarchy — غلطی کلاس درجہ بندی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Attributes — غلطی کی صفات
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="type-helpers">Type Helpers — قسم مددگار</h1>
+<p>The Urdu Programming Language provides three static helper objects — <code>Object</code>, <code>Array</code>, and <code>String</code> — plus a set of built-in error classes. All are available globally without any import.</p>
+<blockquote>
+<p><strong>اردو:</strong> اردو پروگرامنگ لینگویج تین جامد مددگار اشیاء — <code>Object</code>، <code>Array</code>، اور <code>String</code> — اور بنا بنایا غلطی کلاسز کا ایک مجموعہ فراہم کرتی ہے۔ یہ سب کسی بھی درآمد کے بغیر عالمی طور پر دستیاب ہیں۔</p>
+</blockquote>
+<hr />
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#object-helper--شے">Object Helper — شے</a></li>
+<li><a href="#array-helper--صف">Array Helper — صف</a></li>
+<li><a href="#string-helper--ڈور">String Helper — ڈور</a></li>
+<li><a href="#error-types">Error Types</a></li>
+</ul>
+<hr />
+<h2 id="object-helper">Object Helper — شے</h2>
+<p><code>شے</code> (also <code>Object</code>) provides utility methods for working with dictionaries and object instances.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>شے</code> (یا <code>Object</code>) لغتوں اور شے نمونوں کے ساتھ کام کرنے کے لیے مددگار طریقے فراہم کرتی ہے۔</p>
+</blockquote>
+<hr />
+<h3 id="objectobj-list"><code>Object.مفاتیح(obj) → list</code></h3>
+<p>Return a list of all keys of a dictionary. For non-dict objects, returns a list of public attribute names (excluding names that begin with <code>_</code>).</p>
+<p>Equivalent to JavaScript's <code>Object.keys()</code> or Python's <code>list(dict.keys())</code>.</p>
+<blockquote>
+<p><strong>اردو:</strong> لغت کی تمام کلیدوں کی فہرست واپس کریں۔ غیر لغت اشیاء کے لیے عوامی صفت ناموں کی فہرست واپس کرتا ہے (<code>_</code> سے شروع ہونے والے ناموں کے بغیر)۔</p>
+</blockquote>
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><span></span><code>متغیر شخص = { نام: "احمد", عمر: 25, شہر: "کراچی" };
+لکھو(Object.مفاتیح(شخص));
+// ['نام', 'عمر', 'شہر']
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>متغیر خالی_لغت = {};
+لکھو(Object.مفاتیح(خالی_لغت));   // []
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// کلیدوں پر لوپ
+کے_لیے (متغیر کلید کا Object.مفاتیح(شخص)) {
+    لکھو(کلید, "=", شخص[کلید]);
+}
+</code></pre></div>
+<hr />
+<h3 id="objectobj-list_1"><code>Object.اقدار(obj) → list</code></h3>
+<p>Return a list of all values of a dictionary.</p>
+<p>Equivalent to JavaScript's <code>Object.values()</code> or Python's <code>list(dict.values())</code>.</p>
+<blockquote>
+<p><strong>اردو:</strong> لغت کی تمام قدروں کی فہرست واپس کریں۔</p>
+</blockquote>
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><span></span><code>متغیر نمبرات = { ریاضی: 90, اردو: 85, سائنس: 95 };
+لکھو(Object.اقدار(نمبرات));
+// [90, 85, 95]
+
+لکھو(مجموع(Object.اقدار(نمبرات)));   // 270
+</code></pre></div>
+<hr />
+<h3 id="objectobj-list_2"><code>Object.اندراج(obj) → list</code></h3>
+<p>Return a list of <code>[key, value]</code> pairs (as tuples) from a dictionary.</p>
+<p>Equivalent to JavaScript's <code>Object.entries()</code> or Python's <code>list(dict.items())</code>.</p>
+<blockquote>
+<p><strong>اردو:</strong> لغت سے <code>[کلید، قدر]</code> جوڑوں (ٹپلز) کی فہرست واپس کریں۔</p>
+</blockquote>
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><span></span><code>متغیر مضامین = { ریاضی: 90, اردو: 85, سائنس: 95 };
+کے_لیے (متغیر [مضمون, نمبر] کا Object.اندراج(مضامین)) {
+    لکھو(مضمون, ":", نمبر);
+}
+// ریاضی : 90
+// اردو : 85
+// سائنس : 95
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// جدول بنانا
+متغیر کل = مجموع(نقشہ(جوڑا =&gt; جوڑا[1], Object.اندراج(مضامین)));
+لکھو("کل نمبر:", کل);   // 270
+</code></pre></div>
+<hr />
+<h3 id="objecttarget-sources-dict"><code>Object.تفویض(target, *sources) → dict</code></h3>
+<p>Merge one or more source dictionaries into <code>target</code>. Properties from later sources overwrite earlier ones. Mutates and returns <code>target</code>.</p>
+<p>Equivalent to JavaScript's <code>Object.assign()</code> or Python's <code>dict.update()</code>.</p>
+<blockquote>
+<p><strong>اردو:</strong> ایک یا زیادہ ذریعہ لغتوں کو <code>target</code> میں ضم کریں۔ بعد کے ذرائع کی خاصیات پہلے والوں کو اوور رائٹ کرتی ہیں۔ <code>target</code> کو تبدیل کر کے واپس کرتا ہے۔</p>
+</blockquote>
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><span></span><code>متغیر بنیاد = { رنگ: "نیلا", سائز: "بڑا" };
+متغیر اضافہ = { وزن: 1.5, رنگ: "سبز" };
+Object.تفویض(بنیاد, اضافہ);
+لکھو(بنیاد);
+// {'رنگ': 'سبز', 'سائز': 'بڑا', 'وزن': 1.5}
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// ڈیفالٹ اقدار
+متغیر ڈیفالٹ = { زبان: "اردو", تاریک_حالت: جھوٹ, فونٹ_سائز: 14 };
+متغیر صارف = { فونٹ_سائز: 18 };
+متغیر ترتیب = Object.تفویض({}, ڈیفالٹ, صارف);
+لکھو(ترتیب.فونٹ_سائز);   // 18
+لکھو(ترتیب.زبان);          // اردو
+</code></pre></div>
+<hr />
+<h3 id="objectobj-obj"><code>Object.منجمد(obj) → obj</code></h3>
+<p>Mark an object as frozen (read-only). Returns the same object.</p>
+<blockquote>
+<p>Note: In the current runtime this is a no-op placeholder that returns the object unchanged (true immutability enforcement is not implemented). It is provided for API compatibility.</p>
+<p><strong>اردو:</strong> شے کو منجمد (صرف پڑھنے کے قابل) نشان زد کریں۔ وہی شے واپس کرتا ہے۔ نوٹ: موجودہ رن ٹائم میں یہ کوئی عمل نہیں کرتا (API ہم آہنگی کے لیے موجود ہے)۔</p>
+</blockquote>
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><span></span><code>متغیر ثابت = Object.منجمد({ پائی: 3.14159 });
+لکھو(ثابت.پائی);   // 3.14159
+</code></pre></div>
+<hr />
+<h3 id="objectkwargs-dict"><code>Object.بنا(**kwargs) → dict</code></h3>
+<p>Create a new <code>_UrduObj</code> dictionary from keyword arguments. The resulting object supports both <code>obj.key</code> and <code>obj["key"]</code> access.</p>
+<blockquote>
+<p><strong>اردو:</strong> کلیدی الفاظ کے دلائل سے نئی <code>_UrduObj</code> لغت بنائیں۔ نتیجہ <code>obj.key</code> اور <code>obj["key"]</code> دونوں طریقوں سے رسائی کی حمایت کرتا ہے۔</p>
+</blockquote>
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><span></span><code>متغیر نقطہ = Object.بنا(x=10, y=20, z=0);
+لکھو(نقطہ.x, نقطہ.y);   // 10 20
+</code></pre></div>
+<hr />
+<h2 id="array-helper">Array Helper — صف</h2>
+<p><code>صف</code> (also <code>Array</code>) provides utility methods for working with sequences.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>صف</code> (یا <code>Array</code>) ترتیبوں کے ساتھ کام کرنے کے لیے مددگار طریقے فراہم کرتی ہے۔</p>
+</blockquote>
+<hr />
+<h3 id="arrayiterable-list"><code>Array.سے(iterable) → list</code></h3>
+<p>Convert any iterable (range, tuple, set, string, generator) to a list.</p>
+<p>Equivalent to JavaScript's <code>Array.from()</code> or Python's <code>list(iterable)</code>.</p>
+<blockquote>
+<p><strong>اردو:</strong> کسی بھی تکرار پذیر (حد، ٹپل، مجموعہ، سٹرنگ، جنریٹر) کو فہرست میں تبدیل کریں۔</p>
+</blockquote>
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><span></span><code>لکھو(Array.سے(حد(5)));
+// [0, 1, 2, 3, 4]
+
+لکھو(Array.سے("اردو"));
+// ['ا', 'ر', 'د', 'و']
+
+لکھو(Array.سے(مجموعہ([1, 2, 2, 3, 3])));
+// [1, 2, 3]  (ترتیب مختلف ہو سکتی ہے)
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// زپ کو فہرست میں بدلنا
+متغیر الف = [1, 2, 3];
+متغیر ب   = [4, 5, 6];
+لکھو(Array.سے(زپ(الف, ب)));
+// [(1, 4), (2, 5), (3, 6)]
+</code></pre></div>
+<hr />
+<h3 id="arrayx-bool"><code>Array.ہے(x) → bool</code></h3>
+<p>Return <code>True</code> if <code>x</code> is a list or tuple, otherwise <code>False</code>.</p>
+<p>Equivalent to JavaScript's <code>Array.isArray()</code>.</p>
+<blockquote>
+<p><strong>اردو:</strong> اگر <code>x</code> فہرست یا ٹپل ہو تو <code>True</code> واپس کریں، ورنہ <code>False</code>۔</p>
+</blockquote>
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><span></span><code>لکھو(Array.ہے([1, 2, 3]));        // True
+لکھو(Array.ہے((1, 2, 3)));        // True
+لکھو(Array.ہے("اردو"));           // False
+لکھو(Array.ہے({ ک: "قدر" }));    // False
+لکھو(Array.ہے(42));               // False
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// دفاعی پروگرامنگ
+فنکشن جمع_کرو(ڈیٹا) {
+    اگر (!Array.ہے(ڈیٹا)) {
+        پھینکو نیا قسم_غلطی("فہرست درکار ہے");
+    }
+    واپس مجموع(ڈیٹا);
+}
+</code></pre></div>
+<hr />
+<h2 id="string-helper">String Helper — ڈور</h2>
+<p><code>ڈور</code> (also <code>String</code>) provides character-level utilities for strings.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>ڈور</code> (یا <code>String</code>) سٹرنگز کے لیے حرف سطح کی مددگار سہولتیں فراہم کرتی ہے۔</p>
+</blockquote>
+<hr />
+<h3 id="stringx-str"><code>String.سے(x) → str</code></h3>
+<p>Convert any value to its string representation. Equivalent to Python's <code>str(x)</code>.</p>
+<blockquote>
+<p><strong>اردو:</strong> کسی بھی قدر کو اس کی سٹرنگ نمائندگی میں تبدیل کریں۔</p>
+</blockquote>
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><span></span><code>لکھو(String.سے(42));       // "42"
+لکھو(String.سے(3.14));     // "3.14"
+لکھو(String.سے([1,2,3]));  // "[1, 2, 3]"
+لکھو(String.سے(سچ));       // "True"
+</code></pre></div>
+<hr />
+<h3 id="strings-i0-int"><code>String.کوڈ(s, i=0) → int</code></h3>
+<p>Return the Unicode code point (integer) of the character at index <code>i</code> in string <code>s</code>. Equivalent to Python's <code>ord(s[i])</code>.</p>
+<blockquote>
+<p><strong>اردو:</strong> سٹرنگ <code>s</code> میں انڈیکس <code>i</code> پر حرف کا یونیکوڈ کوڈ پوائنٹ (عدد صحیح) واپس کریں۔</p>
+</blockquote>
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><span></span><code>لکھو(String.کوڈ("A"));       // 65
+لکھو(String.کوڈ("ا"));       // 1575  (Unicode U+0627)
+لکھو(String.کوڈ("اردو", 1)); // 1585  (ر at index 1)
+لکھو(String.کوڈ("0"));       // 48
+</code></pre></div>
+<hr />
+<h3 id="stringcode-str"><code>String.حرف(code) → str</code></h3>
+<p>Return the single character whose Unicode code point is <code>code</code>. Equivalent to Python's <code>chr(code)</code>.</p>
+<blockquote>
+<p><strong>اردو:</strong> وہ واحد حرف واپس کریں جس کا یونیکوڈ کوڈ پوائنٹ <code>code</code> ہو۔</p>
+</blockquote>
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><span></span><code>لکھو(String.حرف(65));      // A
+لکھو(String.حرف(1575));    // ا
+لکھو(String.حرف(48));      // 0
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// ASCII جدول
+کے_لیے (متغیر i کا حد(65, 91)) {
+    لکھو(i, "=", String.حرف(i));
+}
+// 65 = A  66 = B  ... 90 = Z
+</code></pre></div>
+<hr />
+<h2 id="error-types">Error Types — غلطی کی اقسام</h2>
+<p>All error classes extend the base <code>غلطی</code> class, which in turn extends Python's <code>Exception</code>. Every error instance has a <code>.پیغام</code> (and <code>.message</code>) attribute containing the error description.</p>
+<p>Errors are raised with <code>پھینکو</code> and caught with <code>پکڑو</code>.</p>
+<blockquote>
+<p><strong>اردو:</strong> تمام غلطی کلاسز بنیادی <code>غلطی</code> کلاس سے وراثت لیتی ہیں، جو Python کی <code>Exception</code> کو وراثت میں لیتی ہے۔ ہر غلطی نمونے میں <code>.پیغام</code> (اور <code>.message</code>) صفت ہوتی ہے۔ غلطیاں <code>پھینکو</code> سے اٹھائی جاتی ہیں اور <code>پکڑو</code> سے پکڑی جاتی ہیں۔</p>
+</blockquote>
+<hr />
+<h3 id="error"><code>غلطی</code> / <code>Error</code></h3>
+<p>The base error class. Use for general-purpose errors when no more specific type applies.</p>
+<blockquote>
+<p><strong>اردو:</strong> بنیادی غلطی کلاس۔ عام مقصد کی غلطیوں کے لیے استعمال کریں جب کوئی زیادہ مخصوص قسم موزوں نہ ہو۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>کوشش {
+    پھینکو نیا غلطی("کچھ غلط ہوا");
+} پکڑو (غ) {
+    لکھو("پکڑا:", غ.پیغام);   // پکڑا: کچھ غلط ہوا
+}
+</code></pre></div>
+<hr />
+<h3 id="_-typeerror"><code>قسم_غلطی</code> / <code>TypeError</code></h3>
+<p>Raised when a value is of the wrong type for an operation (e.g., calling a non-function, adding incompatible types).</p>
+<blockquote>
+<p><strong>اردو:</strong> جب کسی آپریشن کے لیے غلط قسم کی قدر ہو تو اٹھائی جاتی ہے (مثلاً غیر فنکشن کو کہنا، غیر موافق اقسام جوڑنا)۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>فنکشن ضرب(ا, ب) {
+    اگر (قسم(ا) != "عدد" || قسم(ب) != "عدد") {
+        پھینکو نیا قسم_غلطی("صرف اعداد قبول ہیں");
+    }
+    واپس ا * ب;
+}
+
+کوشش {
+    ضرب("پانچ", 3);
+} پکڑو (غ) {
+    لکھو("قسم_غلطی:", غ.پیغام);
+}
+</code></pre></div>
+<hr />
+<h3 id="_-indexerror-rangeerror"><code>حد_غلطی</code> / <code>IndexError</code> / <code>RangeError</code></h3>
+<p>Raised when an index is out of bounds for a sequence.</p>
+<blockquote>
+<p><strong>اردو:</strong> جب انڈیکس کسی ترتیب کی حد سے باہر ہو تو اٹھائی جاتی ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>متغیر فہرست = [1, 2, 3];
+کوشش {
+    لکھو(فہرست[10]);
+} پکڑو (غ) {
+    لکھو("حد سے باہر:", غ.پیغام);
+}
+</code></pre></div>
+<hr />
+<h3 id="_-nameerror-referenceerror"><code>حوالہ_غلطی</code> / <code>NameError</code> / <code>ReferenceError</code></h3>
+<p>Raised when a name (variable or function) is used before it is defined, or does not exist in the current scope.</p>
+<blockquote>
+<p><strong>اردو:</strong> جب کسی نام (متغیر یا فنکشن) کو تعریف سے پہلے استعمال کیا جائے، یا وہ موجودہ گنجائش میں موجود نہ ہو۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>کوشش {
+    لکھو(غیر_موجود_متغیر);
+} پکڑو (غ) {
+    لکھو("حوالہ_غلطی:", غ.پیغام);
+}
+</code></pre></div>
+<hr />
+<h3 id="_-syntaxerror"><code>نحو_غلطی</code> / <code>SyntaxError</code></h3>
+<p>Raised when code cannot be parsed due to a syntax error. Usually generated by the transpiler pipeline rather than user code.</p>
+<blockquote>
+<p><strong>اردو:</strong> جب نحو کی غلطی کی وجہ سے کوڈ پارس نہ ہو سکے۔ عام طور پر ٹرانسپائلر پائپ لائن سے پیدا ہوتی ہے نہ کہ صارف کے کوڈ سے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>کوشش {
+    متحرک_چلاؤ("@@@ غلط نحو @@@");
+} پکڑو (غ) {
+    لکھو("نحو_غلطی:", غ.پیغام);
+}
+</code></pre></div>
+<hr />
+<h3 id="_-valueerror-rangeerror"><code>رینج_غلطی</code> / <code>ValueError</code> / <code>RangeError</code></h3>
+<p>Raised when a value is of the correct type but falls outside an acceptable range (e.g., a negative number where only positives are accepted, or a string that cannot be parsed as a number).</p>
+<blockquote>
+<p><strong>اردو:</strong> جب قدر درست قسم کی ہو لیکن قابل قبول حد سے باہر ہو (مثلاً جہاں صرف مثبت قبول ہو وہاں منفی عدد، یا ایسی سٹرنگ جو عدد کے طور پر پارس نہ ہو سکے)۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>فنکشن جذر(x) {
+    اگر (x &lt; 0) {
+        پھینکو نیا رینج_غلطی("منفی عدد کا جذر نہیں نکلتا");
+    }
+    واپس ریاضی.جذر(x);
+}
+
+کوشش {
+    جذر(-4);
+} پکڑو (غ) {
+    لکھو("رینج_غلطی:", غ.پیغام);
+}
+</code></pre></div>
+<hr />
+<h3 id="_-connectionerror-networkerror"><code>نیٹ_غلطی</code> / <code>ConnectionError</code> / <code>NetworkError</code></h3>
+<p>Raised for network and connectivity failures (e.g., HTTP request timeout, connection refused).</p>
+<blockquote>
+<p><strong>اردو:</strong> نیٹ ورک اور رابطے کی ناکامیوں کے لیے اٹھائی جاتی ہے (مثلاً HTTP درخواست ٹائم آؤٹ، رابطہ مسترد)۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>کوشش {
+    // نیٹ ورک درخواست
+    متغیر نتیجہ = http_درخواست("https://example.com");
+} پکڑو (غ) {
+    اگر (نمونہ(نیٹ_غلطی, غ)) {
+        لکھو("نیٹ ورک خطا:", غ.پیغام);
+    } ورنہ {
+        پھینکو غ;
+    }
+}
+</code></pre></div>
+<hr />
+<h3 id="_-filenotfounderror"><code>فائل_غلطی</code> / <code>FileNotFoundError</code></h3>
+<p>Raised when a file or directory operation fails because the path does not exist.</p>
+<blockquote>
+<p><strong>اردو:</strong> جب فائل یا ڈائریکٹری کا آپریشن ناکام ہو کیونکہ راستہ موجود نہ ہو۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>کوشش {
+    // فائل کھولنا
+    متغیر مواد = فائل_پڑھو("غیر_موجود.txt");
+} پکڑو (غ) {
+    اگر (نمونہ(فائل_غلطی, غ)) {
+        لکھو("فائل نہیں ملی:", غ.پیغام);
+    } ورنہ {
+        پھینکو غ;
+    }
+}
+</code></pre></div>
+<hr />
+<h2 id="error-class-hierarchy">Error Class Hierarchy — غلطی کلاس درجہ بندی</h2>
+<blockquote>
+<p><strong>اردو:</strong> غلطی کلاسز کی درجہ بندی:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>Exception (Python)
+└── غلطی  (base Urdu error)
+    ├── قسم_غلطی    (TypeError)
+    ├── حد_غلطی     (IndexError)
+    ├── حوالہ_غلطی  (NameError)
+    ├── نحو_غلطی    (SyntaxError)
+    ├── رینج_غلطی   (ValueError)
+    ├── نیٹ_غلطی    (ConnectionError)
+    └── فائل_غلطی   (FileNotFoundError)
+</code></pre></div>
+<p>All error classes can be used with <code>نمونہ()</code> for type-based catching:</p>
+<blockquote>
+<p><strong>اردو:</strong> تمام غلطی کلاسز قسم پر مبنی پکڑنے کے لیے <code>نمونہ()</code> کے ساتھ استعمال کی جا سکتی ہیں:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>کوشش {
+    // ... کوئی بھی کوڈ ...
+} پکڑو (غ) {
+    اگر (نمونہ(فائل_غلطی, غ)) {
+        لکھو("فائل خطا");
+    } ورنہ_اگر (نمونہ(نیٹ_غلطی, غ)) {
+        لکھو("نیٹ ورک خطا");
+    } ورنہ_اگر (نمونہ(قسم_غلطی, غ)) {
+        لکھو("قسم کی غلطی");
+    } ورنہ {
+        لکھو("نامعلوم غلطی:", غ.پیغام);
+    }
+}
+</code></pre></div>
+<hr />
+<h2 id="error-attributes">Error Attributes — غلطی کی صفات</h2>
+<p>Every error instance exposes these attributes:</p>
+<blockquote>
+<p><strong>اردو:</strong> ہر غلطی نمونہ یہ صفات ظاہر کرتا ہے:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.پیغام</code></td>
+<td>str</td>
+<td>The error message (Urdu alias)</td>
+</tr>
+<tr>
+<td><code>.message</code></td>
+<td>str</td>
+<td>The error message (English alias)</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>متغیر غ = نیا غلطی("کچھ غلط ہوا");
+لکھو(غ.پیغام);    // کچھ غلط ہوا
+لکھو(غ.message);  // کچھ غلط ہوا
+</code></pre></div>
+<hr />
+<p><em>اردو پروگرامنگ لینگویج — Type Helpers Reference — AlinGo Developers</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

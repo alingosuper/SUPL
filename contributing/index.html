@@ -1,0 +1,1564 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Contributing Guide — تعاون کا طریقہ - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#contributing-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Contributing Guide — تعاون کا طریقہ
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../tutorial/beginner/" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../libraries/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/beginner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/intermediate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../libraries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#code-of-conduct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code of Conduct — ضابطہ اخلاق
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-fork-and-clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Fork and Clone — فورک اور کلون کا طریقہ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Fork and Clone — فورک اور کلون کا طریقہ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-fork-the-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Fork the repository — ریپوزیٹری فورک کریں
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-clone-your-fork" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Clone your fork — اپنا فورک کلون کریں
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-add-the-upstream-remote" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Add the upstream remote — اپ اسٹریم ریموٹ شامل کریں
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-set-up-your-development-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Set up your development environment — ترقیاتی ماحول ترتیب دیں
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Structure — منصوبے کی ساخت
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Project Structure — منصوبے کی ساخت">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-a-program-runs-the-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How a program runs — the pipeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-new-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding New Keywords — نئے کلیدی الفاظ شامل کرنا
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding New Keywords — نئے کلیدی الفاظ شامل کرنا">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-add-the-tokentype" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1 — Add the TokenType — ٹوکن قسم شامل کریں
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-register-the-urdu-word" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — Register the Urdu word — اردو لفظ رجسٹر کریں
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-parse-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — Parse it — اسے پارس کریں
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-add-an-ast-node-ast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4 — Add an AST node — AST نوڈ شامل کریں
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-transpile-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5 — Transpile it — اسے ٹرانسپائل کریں
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-test-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6 — Test it — اسے آزمائیں
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-new-built-in-functions-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding New Built-in Functions — نئے بلٹ-ان فنکشن شامل کرنا
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding New Built-in Functions — نئے بلٹ-ان فنکشن شامل کرنا">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-write-the-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1 — Write the function — فنکشن لکھیں
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-export-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — Export it — اسے برآمد کریں
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-test-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — Test it — اسے آزمائیں
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-new-library-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding New Library Modules — نئے لائبریری ماڈیول شامل کرنا
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding New Library Modules — نئے لائبریری ماڈیول شامل کرنا">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-the-runtime-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1 — Create the runtime module — رن ٹائم ماڈیول بنائیں
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-register-the-urdu-import-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — Register the Urdu import path — اردو درآمد راستہ رجسٹر کریں
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-register-optional-pip-dependencies-pip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — Register optional pip dependencies — اختیاری pip انحصار رجسٹر کریں
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-use-it-in-a-urdu-file-urdu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4 — Use it in a .urdu file — .urdu فائل میں استعمال کریں
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-test-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5 — Test it — اسے آزمائیں
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running Tests — ٹیسٹ چلانا
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running Tests — ٹیسٹ چلانا">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checking-generated-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checking generated Python — تیار شدہ پائتھن جانچنا
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code Style — کوڈ کا انداز
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submitting-a-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Submitting a Pull Request — پل ریکوئسٹ جمع کرنا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-releases-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Releases — GitHub ریلیز
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        License — لائسنس
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Help — مدد حاصل کرنا
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="contributing-guide">Contributing Guide — تعاون کا طریقہ</h1>
+<p>Thank you for your interest in contributing to the Urdu Programming Language. This guide explains how the project is structured and how to add new features — from a single keyword to a complete library module.</p>
+<blockquote>
+<p><strong>اردو:</strong> اردو پروگرامنگ زبان میں تعاون کرنے میں آپ کی دلچسپی کا شکریہ۔ یہ رہنما کتابچہ بتاتا ہے کہ منصوبے کی ساخت کیسی ہے اور نئی خصوصیات — ایک کلیدی لفظ سے لے کر مکمل لائبریری ماڈیول تک — کیسے شامل کی جاتی ہیں۔</p>
+</blockquote>
+<hr />
+<h2 id="code-of-conduct">Code of Conduct — ضابطہ اخلاق</h2>
+<p>This project is open and welcoming to contributors of all backgrounds. Please be respectful and constructive in all discussions and pull requests.</p>
+<blockquote>
+<p><strong>اردو:</strong> یہ منصوبہ ہر پس منظر کے تعاون کاروں کے لیے کھلا اور خیرمقدمی ہے۔ براہ کرم تمام بحثوں اور پل ریکوئسٹوں میں احترام اور تعمیری رویہ اپنائیں۔</p>
+</blockquote>
+<hr />
+<h2 id="how-to-fork-and-clone">How to Fork and Clone — فورک اور کلون کا طریقہ</h2>
+<h3 id="1-fork-the-repository">1. Fork the repository — ریپوزیٹری فورک کریں</h3>
+<p>On GitHub, click the <strong>Fork</strong> button on the repository page. This creates your own copy of the project.</p>
+<blockquote>
+<p><strong>اردو:</strong> GitHub پر ریپوزیٹری صفحے پر <strong>Fork</strong> کا بٹن دبائیں۔ اس سے منصوبے کی آپ کی اپنی نقل بن جاتی ہے۔</p>
+</blockquote>
+<h3 id="2-clone-your-fork">2. Clone your fork — اپنا فورک کلون کریں</h3>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/alingosuper/SUPL.git
+cd urdu-programming-language
+</code></pre></div>
+<h3 id="3-add-the-upstream-remote">3. Add the upstream remote — اپ اسٹریم ریموٹ شامل کریں</h3>
+<div class="highlight"><pre><span></span><code>git remote add upstream https://github.com/alingosuper/SUPL.git
+</code></pre></div>
+<h3 id="4-set-up-your-development-environment">4. Set up your development environment — ترقیاتی ماحول ترتیب دیں</h3>
+<div class="highlight"><pre><span></span><code>python -m venv venv
+venv\Scripts\Activate.ps1      # Windows PowerShell
+# or: source venv/bin/activate  # Linux / macOS
+
+pip install -e .
+pip install fastapi flask django uvicorn requests  # optional — for testing web features
+</code></pre></div>
+<hr />
+<h2 id="project-structure">Project Structure — منصوبے کی ساخت</h2>
+<div class="highlight"><pre><span></span><code>urdu-programming-language\
+│
+├── urdu\                      ← main package
+│   ├── __init__.py            ← VERSION, DEVELOPER, version_info()
+│   ├── __main__.py            ← entry point for `python -m urdu`
+│   ├── tokens.py              ← TokenType enum + URDU_KEYWORDS dict
+│   ├── lexer.py               ← Lexer: source text → token list
+│   ├── ast_nodes.py           ← dataclass nodes for every AST construct
+│   ├── parser.py              ← Parser: token list → AST
+│   ├── transpiler.py          ← Transpiler: AST → Python source string
+│   ├── compiler.py            ← UrduCompiler: orchestrates lex→parse→transpile→exec
+│   ├── cli.py                 ← argparse CLI (run / repl / compile / check / نصب / مدد)
+│   ├── installer.py           ← `نصب` command: Urdu package name → pip packages
+│   ├── error_messages.py      ← Urdu-language error messages
+│   │
+│   └── runtime\               ← Python modules imported by generated code
+│       ├── builtins.py        ← all built-in functions injected into every program
+│       ├── web.py             ← FastAPI, Flask, Django, WebSocket, Socket.IO wrappers
+│       ├── database.py        ← SQLAlchemy ORM + MongoDB + Firebase wrappers
+│       ├── ml.py              ← NumPy, Pandas, scikit-learn, TensorFlow, llama.cpp
+│       ├── crypto.py          ← AES, RSA, hashing, JWT wrappers
+│       ├── gui.py             ← Tkinter wrappers
+│       ├── curl.py            ← HTTP client wrappers (requests, httpx, aiohttp)
+│       ├── scraper.py         ← BeautifulSoup4 / lxml web scraping
+│       ├── files.py           ← ZIP, Excel, CSV, text file helpers
+│       ├── threading_lib.py   ← thread / asyncio task wrappers
+│       ├── datetime_lib.py    ← date, time, timedelta helpers
+│       ├── logging_lib.py     ← coloured structured logging
+│       ├── python_bridge.py   ← passthrough to Python stdlib (اردو/پایتھن)
+│       └── help_lib.py        ← content for the `مدد` command
+│
+├── examples\                  ← example .urdu programs and test files
+├── docs\                      ← documentation (you are here)
+├── build.py                   ← Nuitka build script
+├── setup.py                   ← pip install configuration
+└── requirements.txt           ← optional dependency documentation
+</code></pre></div>
+<h3 id="how-a-program-runs-the-pipeline">How a program runs — the pipeline</h3>
+<div class="highlight"><pre><span></span><code>.urdu source
+    → Lexer (tokens.py + lexer.py)
+    → Parser (parser.py)          builds AST using ast_nodes.py
+    → Transpiler (transpiler.py)  emits Python source
+    → compiler.py                 calls exec() on the generated Python
+                                  with runtime/builtins.py injected as globals
+</code></pre></div>
+<p>When debugging a failure, first check which stage failed:
+- A <strong>LexerError</strong> means the Urdu source text could not be tokenised.
+- A <strong>ParseError</strong> means the token sequence does not form a valid AST.
+- A <strong>TranspilerError</strong> means the AST could not be converted to Python.
+- A <strong>Python exception</strong> at runtime means the generated Python failed — inspect the generated <code>.py</code> file (use <code>--show-python</code>).</p>
+<blockquote>
+<p><strong>اردو:</strong> جب کسی ناکامی کو ڈیبگ کریں تو پہلے جانچیں کہ کون سا مرحلہ ناکام ہوا: <strong>LexerError</strong> کا مطلب ہے اردو سورس کو ٹوکن نہیں کیا جا سکا۔ <strong>ParseError</strong> کا مطلب ہے ٹوکن کی ترتیب درست AST نہیں بناتی۔ <strong>TranspilerError</strong> کا مطلب ہے AST کو پائتھن میں تبدیل نہیں کیا جا سکا۔ رن ٹائم پر <strong>Python exception</strong> کا مطلب ہے کہ تیار شدہ پائتھن ناکام رہی۔</p>
+</blockquote>
+<hr />
+<h2 id="adding-new-keywords">Adding New Keywords — نئے کلیدی الفاظ شامل کرنا</h2>
+<p>Keywords live in two files: <code>urdu/tokens.py</code> and <code>urdu/parser.py</code>.</p>
+<blockquote>
+<p><strong>اردو:</strong> کلیدی الفاظ دو فائلوں میں موجود ہوتے ہیں: <code>urdu/tokens.py</code> اور <code>urdu/parser.py</code>۔</p>
+</blockquote>
+<h3 id="step-1-add-the-tokentype">Step 1 — Add the TokenType — ٹوکن قسم شامل کریں</h3>
+<p>Open <code>urdu/tokens.py</code>. Add a new entry to the <code>TokenType</code> enum in the appropriate section:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># In the TokenType enum:</span>
+<span class="n">MY_NEW_KEYWORD</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>      <span class="c1"># میرا_نیا_کلمہ</span>
+</code></pre></div>
+<h3 id="step-2-register-the-urdu-word">Step 2 — Register the Urdu word — اردو لفظ رجسٹر کریں</h3>
+<p>Still in <code>urdu/tokens.py</code>, add the mapping to the <code>URDU_KEYWORDS</code> dict at the bottom of the file:</p>
+<div class="highlight"><pre><span></span><code><span class="n">URDU_KEYWORDS</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">TokenType</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="o">...</span>
+    <span class="s2">"میرا_نیا_کلمہ"</span><span class="p">:</span> <span class="n">TokenType</span><span class="o">.</span><span class="n">MY_NEW_KEYWORD</span><span class="p">,</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="step-3-parse-it">Step 3 — Parse it — اسے پارس کریں</h3>
+<p>Open <code>urdu/parser.py</code>. Find the method that handles the surrounding construct (statement, expression, declaration). Add a branch to consume your new token and build the correct AST node.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>urdu/parser.py</code> کھولیں۔ وہ میتھڈ تلاش کریں جو متعلقہ ساخت (بیان، اظہار، اعلان) کو سنبھالتا ہے۔ نئے ٹوکن کو استعمال کرنے اور درست AST نوڈ بنانے کے لیے ایک شاخ شامل کریں۔</p>
+</blockquote>
+<p>Example — adding a <code>رک_جاؤ</code> (pause / sleep) statement:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># in parser.py — _parse_statement():</span>
+<span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_check</span><span class="p">(</span><span class="n">TokenType</span><span class="o">.</span><span class="n">MY_NEW_KEYWORD</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parse_my_statement</span><span class="p">()</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_parse_my_statement</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_expect</span><span class="p">(</span><span class="n">TokenType</span><span class="o">.</span><span class="n">MY_NEW_KEYWORD</span><span class="p">)</span>
+    <span class="n">expr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parse_expression</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">MyStatementNode</span><span class="p">(</span><span class="n">expr</span><span class="o">=</span><span class="n">expr</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_current_line</span><span class="p">())</span>
+</code></pre></div>
+<h3 id="step-4-add-an-ast-node-ast">Step 4 — Add an AST node — AST نوڈ شامل کریں</h3>
+<p>Open <code>urdu/ast_nodes.py</code>. Add a dataclass for your new node:</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">MyStatementNode</span><span class="p">:</span>
+    <span class="n">expr</span><span class="p">:</span> <span class="n">ExprNode</span>
+    <span class="n">line</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+</code></pre></div>
+<h3 id="step-5-transpile-it">Step 5 — Transpile it — اسے ٹرانسپائل کریں</h3>
+<p>Open <code>urdu/transpiler.py</code>. Add a visitor method for your new node. The method name must follow the pattern <code>_visit_&lt;NodeClassName&gt;</code>:</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>urdu/transpiler.py</code> کھولیں۔ اپنے نئے نوڈ کے لیے ایک وزیٹر میتھڈ شامل کریں۔ میتھڈ کا نام <code>_visit_&lt;NodeClassName&gt;</code> کے نمونے پر ہونا چاہیے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">_visit_MyStatementNode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">:</span> <span class="n">MyStatementNode</span><span class="p">):</span>
+    <span class="n">expr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_expr</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">expr</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_w</span><span class="p">(</span><span class="sa">f</span><span class="s2">"import time; time.sleep(</span><span class="si">{</span><span class="n">expr</span><span class="si">}</span><span class="s2">)"</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="step-6-test-it">Step 6 — Test it — اسے آزمائیں</h3>
+<p>Write a small <code>.urdu</code> test file:</p>
+<div class="highlight"><pre><span></span><code>میرا_نیا_کلمہ 2
+لکھو("2 سیکنڈ بعد")
+</code></pre></div>
+<p>Run it:</p>
+<div class="highlight"><pre><span></span><code>python -m urdu run examples/test_my_keyword.urdu
+</code></pre></div>
+<hr />
+<h2 id="adding-new-built-in-functions-">Adding New Built-in Functions — نئے بلٹ-ان فنکشن شامل کرنا</h2>
+<p>All built-in functions are defined in <code>urdu/runtime/builtins.py</code> and injected into every Urdu program's global namespace by <code>urdu/compiler.py</code>.</p>
+<blockquote>
+<p><strong>اردو:</strong> تمام بلٹ-ان فنکشن <code>urdu/runtime/builtins.py</code> میں تعریف کیے گئے ہیں اور <code>urdu/compiler.py</code> کے ذریعے ہر اردو پروگرام کی عالمی فضا میں داخل کیے جاتے ہیں۔</p>
+</blockquote>
+<h3 id="step-1-write-the-function">Step 1 — Write the function — فنکشن لکھیں</h3>
+<p>Open <code>urdu/runtime/builtins.py</code> and add your function:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">_میری_فنکشن</span><span class="p">(</span><span class="n">قدر</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""My new built-in: does something useful."""</span>
+    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">قدر</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="step-2-export-it">Step 2 — Export it — اسے برآمد کریں</h3>
+<p>Find the <code>_URDU_BUILTINS</code> dict (or the <code>globals()</code> injection at the bottom of the file) and add your function under its Urdu name:</p>
+<div class="highlight"><pre><span></span><code><span class="n">_URDU_BUILTINS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="o">...</span>
+    <span class="s2">"میری_فنکشن"</span><span class="p">:</span> <span class="n">_میری_فنکشن</span><span class="p">,</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="step-3-test-it">Step 3 — Test it — اسے آزمائیں</h3>
+<div class="highlight"><pre><span></span><code>لکھو(میری_فنکشن("hello"))   # expect: HELLO
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>python -m urdu run examples/test_builtin.urdu
+</code></pre></div>
+<hr />
+<h2 id="adding-new-library-modules">Adding New Library Modules — نئے لائبریری ماڈیول شامل کرنا</h2>
+<p>Library modules live in <code>urdu/runtime/</code> and are imported with the <code>درآمد</code> (import) statement using Urdu paths.</p>
+<blockquote>
+<p><strong>اردو:</strong> لائبریری ماڈیول <code>urdu/runtime/</code> میں موجود ہوتے ہیں اور اردو راستوں کے ساتھ <code>درآمد</code> بیان کے ذریعے درآمد کیے جاتے ہیں۔</p>
+</blockquote>
+<h3 id="step-1-create-the-runtime-module">Step 1 — Create the runtime module — رن ٹائم ماڈیول بنائیں</h3>
+<p>Create <code>urdu/runtime/mymod.py</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="sd">"""My new Urdu library module."""</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">میری_کلاس</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">قدر</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">قدر</span> <span class="o">=</span> <span class="n">قدر</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">کریں</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">"نتیجہ: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">قدر</span><span class="si">}</span><span class="s2">"</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">میری_فنکشن</span><span class="p">(</span><span class="n">پیرامیٹر</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">پیرامیٹر</span> <span class="o">*</span> <span class="mi">2</span>
+</code></pre></div>
+<h3 id="step-2-register-the-urdu-import-path">Step 2 — Register the Urdu import path — اردو درآمد راستہ رجسٹر کریں</h3>
+<p>Open <code>urdu/transpiler.py</code>. Find the <code>_MODULE_MAP</code> dict near the top of the file and add your entry:</p>
+<div class="highlight"><pre><span></span><code><span class="n">_MODULE_MAP</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"اردو/گوئی"</span><span class="p">:</span>        <span class="s2">"urdu.runtime.gui"</span><span class="p">,</span>
+    <span class="s2">"اردو/ویب"</span><span class="p">:</span>          <span class="s2">"urdu.runtime.web"</span><span class="p">,</span>
+    <span class="o">...</span>
+    <span class="s2">"اردو/میری_لائبریری"</span><span class="p">:</span> <span class="s2">"urdu.runtime.mymod"</span><span class="p">,</span>   <span class="c1"># ← add this line</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="step-3-register-optional-pip-dependencies-pip">Step 3 — Register optional pip dependencies — اختیاری pip انحصار رجسٹر کریں</h3>
+<p>If your library requires pip packages, open <code>urdu/installer.py</code> and add an entry to <code>URDU_PACKAGE_MAP</code>:</p>
+<blockquote>
+<p><strong>اردو:</strong> اگر آپ کی لائبریری کو pip پیکجوں کی ضرورت ہے تو <code>urdu/installer.py</code> کھولیں اور <code>URDU_PACKAGE_MAP</code> میں اندراج شامل کریں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">URDU_PACKAGE_MAP</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="o">...</span>
+    <span class="s2">"اردو/میری_لائبریری"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"some-pip-package"</span><span class="p">,</span> <span class="s2">"another-package"</span><span class="p">],</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="step-4-use-it-in-a-urdu-file-urdu">Step 4 — Use it in a .urdu file — .urdu فائل میں استعمال کریں</h3>
+<div class="highlight"><pre><span></span><code>درآمد { میری_کلاس، میری_فنکشن } سے "اردو/میری_لائبریری"
+
+متغیر شے = نیا میری_کلاس(42)
+لکھو(شے.کریں())
+لکھو(میری_فنکشن(10))
+</code></pre></div>
+<h3 id="step-5-test-it">Step 5 — Test it — اسے آزمائیں</h3>
+<div class="highlight"><pre><span></span><code>python -m urdu run examples/test_mymod.urdu
+</code></pre></div>
+<hr />
+<h2 id="running-tests">Running Tests — ٹیسٹ چلانا</h2>
+<p>There is no separate test runner. Tests are plain <code>.urdu</code> files in the <code>examples/</code> folder that print <code>PASS</code> / <code>FAIL</code> lines.</p>
+<blockquote>
+<p><strong>اردو:</strong> کوئی الگ ٹیسٹ رنر نہیں ہے۔ ٹیسٹ <code>examples/</code> فولڈر میں سادہ <code>.urdu</code> فائلیں ہیں جو <code>PASS</code> / <code>FAIL</code> سطریں پرنٹ کرتی ہیں۔</p>
+</blockquote>
+<p>Run a test file:</p>
+<div class="highlight"><pre><span></span><code>python -m urdu run examples/fastapi_test.urdu
+python -m urdu run examples/flask_test.urdu
+python -m urdu run examples/crud_test.urdu
+</code></pre></div>
+<p>Run all test files (PowerShell):</p>
+<div class="highlight"><pre><span></span><code><span class="nb">Get-ChildItem</span> <span class="n">examples</span><span class="p">\*</span><span class="n">_test</span><span class="p">.</span><span class="n">urdu</span> <span class="p">|</span> <span class="k">ForEach</span><span class="n">-Object</span> <span class="p">{</span>
+    <span class="nb">Write-Host</span> <span class="s2">"Running: </span><span class="p">$(</span><span class="nv">$_</span><span class="p">.</span><span class="n">Name</span><span class="p">)</span><span class="s2">"</span>
+    <span class="n">python</span> <span class="n">-m</span> <span class="n">urdu</span> <span class="n">run</span> <span class="nv">$_</span><span class="p">.</span><span class="n">FullName</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="checking-generated-python">Checking generated Python — تیار شدہ پائتھن جانچنا</h3>
+<p>Use <code>--show-python</code> to inspect the transpiled output:</p>
+<div class="highlight"><pre><span></span><code>python -m urdu run myfile.urdu --show-python
+</code></pre></div>
+<p>Or use the <code>compile</code> command to write it to disk:</p>
+<div class="highlight"><pre><span></span><code>python -m urdu compile myfile.urdu -o myfile.py
+</code></pre></div>
+<p>Then open <code>myfile.py</code> to see exactly what Python code was generated.</p>
+<blockquote>
+<p><strong>اردو:</strong> پھر <code>myfile.py</code> کھولیں تاکہ دیکھ سکیں کہ بالکل کون سا پائتھن کوڈ تیار ہوا۔</p>
+</blockquote>
+<hr />
+<h2 id="code-style">Code Style — کوڈ کا انداز</h2>
+<ul>
+<li><strong>Python files:</strong> Follow PEP 8. Use 4-space indentation. Keep lines under 100 characters.</li>
+<li><strong>Type hints:</strong> Add type hints to all new public functions and methods.</li>
+<li><strong>Docstrings:</strong> Write a one-line docstring for every new class and non-trivial function.</li>
+<li><strong>Urdu names:</strong> Runtime functions and classes that are exposed to Urdu programs should have Urdu names (Arabic script). Internal helpers can use ASCII names prefixed with <code>_</code>.</li>
+<li><strong>Error messages:</strong> Use <code>urdu/error_messages.py</code> for all user-facing error text. Provide both Urdu and English versions where possible.</li>
+<li><strong>No print statements in library code:</strong> Use the logging library or raise exceptions instead.</li>
+</ul>
+<blockquote>
+<p><strong>اردو:</strong> پائتھن فائلیں PEP 8 پر عمل کریں۔ 4 اسپیس انڈینٹیشن استعمال کریں۔ سطریں 100 حروف سے کم رکھیں۔ تمام نئے عوامی فنکشن اور میتھڈ پر ٹائپ ہنٹس لگائیں۔ ہر نئی کلاس اور غیر معمولی فنکشن کے لیے ایک سطری docstring لکھیں۔ رن ٹائم فنکشن اور کلاسوں کے اردو نام (عربی رسم الخط میں) ہونے چاہئیں۔ غلطی کے پیغامات <code>urdu/error_messages.py</code> سے لیں اور جہاں ممکن ہو اردو اور انگریزی دونوں نسخے فراہم کریں۔</p>
+</blockquote>
+<hr />
+<h2 id="submitting-a-pull-request">Submitting a Pull Request — پل ریکوئسٹ جمع کرنا</h2>
+<ol>
+<li>
+<p>Create a new branch from <code>main</code>:
+   <div class="highlight"><pre><span></span><code>git checkout -b feature/my-new-keyword
+</code></pre></div></p>
+</li>
+<li>
+<p>Make your changes. Write a test <code>.urdu</code> file in <code>examples/</code>.</p>
+</li>
+<li>
+<p>Verify your changes work:
+   <div class="highlight"><pre><span></span><code>python -m urdu run examples/my_test.urdu
+python -m urdu check examples/my_test.urdu
+</code></pre></div></p>
+</li>
+<li>
+<p>Commit with a clear message:
+   <div class="highlight"><pre><span></span><code>git add urdu/tokens.py urdu/parser.py urdu/transpiler.py examples/my_test.urdu
+git commit -m "Add میرا_نیا_کلمہ keyword for X feature"
+</code></pre></div></p>
+</li>
+<li>
+<p>Push to your fork:
+   <div class="highlight"><pre><span></span><code>git push origin feature/my-new-keyword
+</code></pre></div></p>
+</li>
+<li>
+<p>Open a Pull Request on GitHub. In the PR description, explain:</p>
+</li>
+<li><strong>What</strong> was added or changed.</li>
+<li><strong>Why</strong> it is useful.</li>
+<li>Which <code>.urdu</code> test file demonstrates the feature.</li>
+<li>Any known limitations.</li>
+</ol>
+<blockquote>
+<p><strong>اردو:</strong> GitHub پر پل ریکوئسٹ کھولیں۔ PR کی وضاحت میں بتائیں: <strong>کیا</strong> شامل یا تبدیل کیا گیا، <strong>کیوں</strong> یہ مفید ہے، کون سی <code>.urdu</code> ٹیسٹ فائل خصوصیت ظاہر کرتی ہے، اور کوئی معروف حدود۔</p>
+</blockquote>
+<hr />
+<h2 id="github-releases-github">GitHub Releases — GitHub ریلیز</h2>
+<p>Releases are tagged on <code>main</code> with a version number (e.g., <code>v1.0.0</code>). Each release includes:</p>
+<ul>
+<li>Source code ZIP and TAR (automatic from GitHub).</li>
+<li>The compiled <code>urdu.dist.zip</code> — the standalone <code>urdu.exe</code> bundle — attached as a release asset.</li>
+</ul>
+<blockquote>
+<p><strong>اردو:</strong> ریلیزیں <code>main</code> پر ورژن نمبر (مثلاً <code>v1.0.0</code>) کے ساتھ ٹیگ کی جاتی ہیں۔ ہر ریلیز میں سورس کوڈ ZIP اور TAR (GitHub سے خودکار) اور مرتب شدہ <code>urdu.dist.zip</code> — خود مختار <code>urdu.exe</code> بنڈل — بطور ریلیز اثاثہ شامل ہوتا ہے۔</p>
+</blockquote>
+<p>To prepare a release asset:
+1. Build with <code>python build.py</code> (see <a href="../building/">Building</a>).
+2. Zip the <code>dist\urdu.dist\</code> folder.
+3. Attach the zip to the GitHub release.</p>
+<hr />
+<h2 id="license">License — لائسنس</h2>
+<p>The Urdu Programming Language is released under the <strong>Urdu Programming Language License (UPL-1.0)</strong>.</p>
+<blockquote>
+<p><strong>اردو:</strong> اردو پروگرامنگ زبان <strong>UPL-1.0 لائسنس</strong> کے تحت جاری کی گئی ہے۔ تعاون کر کے آپ اتفاق کرتے ہیں کہ آپ کے تعاونات اسی UPL-1.0 لائسنس کے تحت لائسنس ہوں گے۔</p>
+</blockquote>
+<p>Key points of UPL-1.0:</p>
+<ul>
+<li><strong>Programs you write</strong> in the Urdu Programming Language are entirely yours — no attribution required, any license of your choice.</li>
+<li><strong>The language source</strong> (lexer, parser, transpiler, runtime, stdlib, docs) requires attribution to AlinGo Developers if you fork or distribute it.</li>
+<li>You may not claim to have created the original Urdu Programming Language or remove original author credits.</li>
+</ul>
+<p>By contributing, you agree that your contributions will be included under the same UPL-1.0 License, with your contributor credit preserved in the project's git history.</p>
+<hr />
+<h2 id="getting-help">Getting Help — مدد حاصل کرنا</h2>
+<ul>
+<li>Open a GitHub Issue with the <code>question</code> label.</li>
+<li>Include the <code>.urdu</code> source, the full error output, and the generated Python (from <code>--show-python</code>) in your issue.</li>
+</ul>
+<blockquote>
+<p><strong>اردو:</strong> <code>question</code> لیبل کے ساتھ GitHub Issue کھولیں۔ اپنے مسئلے میں <code>.urdu</code> سورس، مکمل غلطی کا آؤٹ پٹ، اور تیار شدہ پائتھن (<code>--show-python</code> سے) شامل کریں۔</p>
+</blockquote>
+<hr />
+<p><em>Previous: <a href="../building/">Building</a> | Back to <a href="../">Index →</a></em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

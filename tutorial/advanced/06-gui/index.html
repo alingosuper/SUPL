@@ -1,0 +1,1761 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>6. GUI — گرافیکل انٹرفیس - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#6-gui" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              6. GUI — گرافیکل انٹرفیس
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../beginner/" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../libraries/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beginner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intermediate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../libraries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#importing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importing — درآمد
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hello-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hello World — پہلی ایپ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        گوئی — Main Window
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layout — ترتیب
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Layout — ترتیب">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grouped-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        فریم — Grouped Section
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ردیف + کالم — Columns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#padded-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کنٹینر — Padded Container
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text-label" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        لیبل — Text Label
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#button" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        بٹن — Button
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_-text-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ان_پٹ — Text Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_-multi-line-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ٹیکسٹ_ایریا — Multi-line Text
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_-select-dropdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ڈراپ_ڈاؤن — Select / Dropdown
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_-checkbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        چیک_بکس — Checkbox
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#radio-buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریڈیو — Radio Buttons
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#range-slider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        سلائڈر — Range Slider
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_-progress-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پروگریس_بار — Progress Bar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        جدول — Data Table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_-navigation-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        نیوی_بار — Navigation Bar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alert-notification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        الرٹ — Alert / Notification
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_-tabs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ٹیب_ویو — Tabs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modal-dialog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        مودل — Modal Dialog
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-dialogs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ڈائیلاگ — System Dialogs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drawing-canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کینوس — Drawing Canvas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bootstrap-colours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bootstrap Colours — رنگ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-example-login-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical Example: Login Form — عملی مثال
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#widget-visibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Widget Visibility — نظر اور چھپاؤ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Reference — فوری حوالہ
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="6-gui">6. GUI — گرافیکل انٹرفیس</h1>
+<p><strong>Difficulty:</strong> Advanced — اعلیٰ<br />
+<strong>Time:</strong> ~40 minutes</p>
+<hr />
+<h2 id="importing">Importing — درآمد</h2>
+<div class="highlight"><pre><span></span><code>درآمد {
+    گوئی, کنٹینر, ردیف, کالم, فریم,
+    لیبل, بٹن, ان_پٹ, ٹیکسٹ_ایریا,
+    ڈراپ_ڈاؤن, چیک_بکس, ریڈیو, سلائڈر,
+    پروگریس_بار, جدول, نیوی_بار, الرٹ,
+    ٹیب_ویو, مودل, ڈائیلاگ, کینوس
+} سے "اردو/گوئی";
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> یہ لائبریری Bootstrap سے متاثر ڈیسک ٹاپ GUI بناتی ہے — tkinter کے اوپر۔ ہر ایپ <code>گوئی</code> سے شروع ہوتی ہے اور <code>.چلائیں()</code> سے۔</p>
+</blockquote>
+<hr />
+<h2 id="hello-world">Hello World — پہلی ایپ</h2>
+<div class="highlight"><pre><span></span><code>درآمد { گوئی, لیبل, بٹن } سے "اردو/گوئی";
+
+متغیر ایپ = نیا گوئی("میری ایپ", 400, 300);
+
+نیا لیبل(ایپ, "سلام دنیا!");
+
+نیا بٹن(ایپ, "دبائیں", پر_کلک=فنکشن() {
+    لکھو("بٹن دبا!");
+});
+
+ایپ.مرکز();    // centre on screen
+ایپ.چلائیں();  // start event loop
+</code></pre></div>
+<hr />
+<h2 id="main-window">گوئی — Main Window</h2>
+<div class="highlight"><pre><span></span><code>// Full signature
+متغیر ایپ = نیا گوئی(
+    "ایپ کا نام",   // title
+    900,             // width
+    600,             // height
+    تاریک=جھوٹ     // dark mode
+);
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.عنوان(title)</code></td>
+<td>Set window title</td>
+</tr>
+<tr>
+<td><code>.سائز(w, h)</code></td>
+<td>Resize window</td>
+</tr>
+<tr>
+<td><code>.کم_سائز(w, h)</code></td>
+<td>Set minimum size</td>
+</tr>
+<tr>
+<td><code>.آئیکن(path)</code></td>
+<td>Set .png icon</td>
+</tr>
+<tr>
+<td><code>.مرکز()</code></td>
+<td>Centre on screen</td>
+</tr>
+<tr>
+<td><code>.بند_پر(fn)</code></td>
+<td>Callback when user closes</td>
+</tr>
+<tr>
+<td><code>.چلائیں()</code></td>
+<td>Start event loop (blocking)</td>
+</tr>
+<tr>
+<td><code>.بند_کریں()</code></td>
+<td>Close window</td>
+</tr>
+<tr>
+<td><code>.تازہ_کریں()</code></td>
+<td>Force redraw</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>متغیر ایپ = نیا گوئی("ایپ", 600, 400);
+ایپ.بند_پر(فنکشن() {
+    لکھو("بند ہو رہا ہے...");
+    ایپ.بند_کریں();
+});
+ایپ.مرکز().چلائیں();
+</code></pre></div>
+<hr />
+<h2 id="layout">Layout — ترتیب</h2>
+<p>Widgets are stacked vertically inside their parent by default. Use <code>ردیف</code> + <code>کالم</code> for side-by-side layouts.</p>
+<h3 id="grouped-section">فریم — Grouped Section</h3>
+<div class="highlight"><pre><span></span><code>متغیر باکس = نیا فریم(ایپ, عنوان="رجسٹریشن");
+نیا لیبل(باکس, "نام:");
+نیا ان_پٹ(باکس);
+</code></pre></div>
+<h3 id="columns">ردیف + کالم — Columns</h3>
+<div class="highlight"><pre><span></span><code>متغیر ق = نیا ردیف(ایپ);
+متغیر بائیں = نیا کالم(ق);
+متغیر دائیں = نیا کالم(ق);
+
+نیا لیبل(بائیں, "بائیں طرف");
+نیا لیبل(دائیں, "دائیں طرف");
+</code></pre></div>
+<h3 id="padded-container">کنٹینر — Padded Container</h3>
+<div class="highlight"><pre><span></span><code>متغیر ڈبہ = نیا کنٹینر(ایپ, پیڈنگ=20);
+نیا لیبل(ڈبہ, "مواد");
+</code></pre></div>
+<hr />
+<h2 id="text-label">لیبل — Text Label</h2>
+<div class="highlight"><pre><span></span><code>متغیر ل = نیا لیبل(ایپ, "سلام");
+لکھو(ل.حاصل_کریں());    // سلام
+
+// Update text
+ل.مقرر_کریں("نیا متن");
+ل.متن("نئی قدر");         // chainable shortcut
+
+// Style with Bootstrap classes
+نیا لیبل(ایپ, "سرخی", کلاس="سرخی-1 موٹا");
+نیا لیبل(ایپ, "خطرہ!",  کلاس="متن-خطرہ");
+نیا لیبل(ایپ, "نیلا",   کلاس="متن-بنیادی");
+</code></pre></div>
+<hr />
+<h2 id="button">بٹن — Button</h2>
+<div class="highlight"><pre><span></span><code>// With callback
+نیا بٹن(ایپ, "محفوظ کریں", پر_کلک=فنکشن() {
+    لکھو("محفوظ!");
+});
+
+// With Bootstrap style
+نیا بٹن(ایپ, "حذف",  کلاس="دکمہ دکمہ-خطرہ");
+نیا بٹن(ایپ, "ٹھیک", کلاس="دکمہ دکمہ-کامیاب");
+
+// Disable and re-enable
+متغیر ب = نیا بٹن(ایپ, "ارسال");
+ب.غیر_فعال();
+ب.فعال();
+
+// Chain callback later
+ب.پر_کلک(فنکشن() { لکھو("کلک!"); });
+</code></pre></div>
+<p><strong>Button class tokens — رنگ:</strong></p>
+<table>
+<thead>
+<tr>
+<th>کلاس</th>
+<th>Color</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>دکمہ-بنیادی</code></td>
+<td>Blue (primary)</td>
+</tr>
+<tr>
+<td><code>دکمہ-کامیاب</code></td>
+<td>Green (success)</td>
+</tr>
+<tr>
+<td><code>دکمہ-خطرہ</code></td>
+<td>Red (danger)</td>
+</tr>
+<tr>
+<td><code>دکمہ-تنبیہ</code></td>
+<td>Yellow (warning)</td>
+</tr>
+<tr>
+<td><code>دکمہ-ثانوی</code></td>
+<td>Gray (secondary)</td>
+</tr>
+<tr>
+<td><code>دکمہ-گہرا</code></td>
+<td>Dark</td>
+</tr>
+<tr>
+<td><code>دکمہ-خاکہ-بنیادی</code></td>
+<td>Outlined primary</td>
+</tr>
+<tr>
+<td><code>دکمہ-چھوٹا</code></td>
+<td>Small</td>
+</tr>
+<tr>
+<td><code>دکمہ-بڑا</code></td>
+<td>Large</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_-text-input">ان_پٹ — Text Input</h2>
+<div class="highlight"><pre><span></span><code>// Basic
+متغیر ان = نیا ان_پٹ(ایپ);
+ان.مقرر_کریں("پہلے سے لکھا");
+لکھو(ان.حاصل_کریں());
+
+// With placeholder
+متغیر نام_ان = نیا ان_پٹ(ایپ, placeholder="آپ کا نام");
+
+// Password field
+متغیر پاس_ان = نیا ان_پٹ(ایپ, قسم="پاس_ورڈ", placeholder="پاس ورڈ");
+
+// Clear
+ان.صاف_کریں();
+</code></pre></div>
+<hr />
+<h2 id="_-multi-line-text">ٹیکسٹ_ایریا — Multi-line Text</h2>
+<div class="highlight"><pre><span></span><code>متغیر ٹ = نیا ٹیکسٹ_ایریا(ایپ, قطاریں=6);
+ٹ.مقرر_کریں("ابتدائی متن");
+ٹ.لگائیں("\nمزید متن");   // append
+لکھو(ٹ.حاصل_کریں());
+</code></pre></div>
+<hr />
+<h2 id="_-select-dropdown">ڈراپ_ڈاؤن — Select / Dropdown</h2>
+<div class="highlight"><pre><span></span><code>متغیر ڈ = نیا ڈراپ_ڈاؤن(ایپ, ["کراچی", "لاہور", "اسلام آباد"]);
+لکھو(ڈ.حاصل_کریں());    // کراچی (first item selected)
+
+// Callback on selection change
+ڈ.پر_تبدیلی(فنکشن(انتخاب) {
+    لکھو(`منتخب: ${انتخاب}`);
+});
+
+ڈ.مقرر_کریں("لاہور");
+</code></pre></div>
+<hr />
+<h2 id="_-checkbox">چیک_بکس — Checkbox</h2>
+<div class="highlight"><pre><span></span><code>متغیر چ = نیا چیک_بکس(ایپ, "شرائط قبول ہیں");
+لکھو(چ.حاصل_کریں());    // False
+
+چ.مقرر_کریں(سچ);
+لکھو(چ.حاصل_کریں());    // True
+</code></pre></div>
+<hr />
+<h2 id="radio-buttons">ریڈیو — Radio Buttons</h2>
+<div class="highlight"><pre><span></span><code>// Vertical (default)
+متغیر ر = نیا ریڈیو(ایپ, ["مرد", "عورت", "دیگر"]);
+لکھو(ر.حاصل_کریں());    // مرد (first selected)
+
+// Horizontal
+متغیر ر2 = نیا ریڈیو(ایپ, ["چھوٹا", "درمیانہ", "بڑا"], افقی=سچ);
+
+ر.مقرر_کریں("عورت");
+</code></pre></div>
+<hr />
+<h2 id="range-slider">سلائڈر — Range Slider</h2>
+<div class="highlight"><pre><span></span><code>متغیر س = نیا سلائڈر(ایپ, کم=0, زیادہ=100, قدر=50,
+    پر_تبدیلی=فنکشن(قدر) {
+        لکھو(`قدر: ${قدر}`);
+    }
+);
+لکھو(س.حاصل_کریں());    // 50.0
+س.مقرر_کریں(75);
+</code></pre></div>
+<hr />
+<h2 id="_-progress-bar">پروگریس_بار — Progress Bar</h2>
+<div class="highlight"><pre><span></span><code>متغیر پ = نیا پروگریس_بار(ایپ);   // 0–100
+پ.مقرر_کریں(60);
+
+// Coloured variants
+متغیر پ2 = نیا پروگریس_بار(ایپ, کلاس="ترقی-کامیاب");
+پ2.مقرر_کریں(100);
+</code></pre></div>
+<hr />
+<h2 id="data-table">جدول — Data Table</h2>
+<div class="highlight"><pre><span></span><code>متغیر ج = نیا جدول(ایپ, ["نام", "عمر", "شہر"]);
+
+ج.شامل_کریں(["احمد",   25, "کراچی"]);
+ج.شامل_کریں(["فاطمہ", 22, "لاہور"]);
+ج.شامل_کریں(["علی",   30, "اسلام آباد"]);
+
+// Get all rows
+متغیر صفوف = ج.حاصل_کریں();
+لکھو(لمبائی(صفوف));    // 3
+
+ج.صاف_کریں();           // remove all rows
+</code></pre></div>
+<hr />
+<h2 id="_-navigation-bar">نیوی_بار — Navigation Bar</h2>
+<div class="highlight"><pre><span></span><code>متغیر نیوی = نیا نیوی_بار(ایپ, عنوان="میری ایپ");
+نیوی.لنک("ہوم",    فنکشن() { لکھو("ہوم"); });
+نیوی.لنک("بارے",   فنکشن() { لکھو("بارے"); });
+نیوی.لنک("رابطہ",  فنکشن() { لکھو("رابطہ"); });
+</code></pre></div>
+<hr />
+<h2 id="alert-notification">الرٹ — Alert / Notification</h2>
+<div class="highlight"><pre><span></span><code>// Success
+نیا الرٹ(ایپ, "فائل محفوظ ہو گئی", کلاس="اطلاع اطلاع-کامیاب");
+
+// Danger
+نیا الرٹ(ایپ, "خطا: فائل نہیں ملی", کلاس="اطلاع اطلاع-خطرہ");
+
+// No close button
+نیا الرٹ(ایپ, "یاد دہانی", کلاس="اطلاع اطلاع-تنبیہ", بند=جھوٹ);
+</code></pre></div>
+<hr />
+<h2 id="_-tabs">ٹیب_ویو — Tabs</h2>
+<div class="highlight"><pre><span></span><code>متغیر ٹیبز = نیا ٹیب_ویو(ایپ);
+
+متغیر ٹ1 = ٹیبز.ٹیب("ذاتی معلومات");
+نیا لیبل(ٹ1, "نام:");
+نیا ان_پٹ(ٹ1);
+
+متغیر ٹ2 = ٹیبز.ٹیب("اکاؤنٹ");
+نیا لیبل(ٹ2, "ای میل:");
+نیا ان_پٹ(ٹ2);
+</code></pre></div>
+<hr />
+<h2 id="modal-dialog">مودل — Modal Dialog</h2>
+<div class="highlight"><pre><span></span><code>متغیر م = نیا مودل(ایپ, "تصدیق کریں", چوڑائی=400, اونچائی=200);
+نیا لیبل(م, "کیا آپ واقعی حذف کرنا چاہتے ہیں؟");
+
+نیا بٹن(م, "ہاں", کلاس="دکمہ دکمہ-خطرہ", پر_کلک=فنکشن() {
+    لکھو("حذف ہوا");
+    م.بند_کریں();
+});
+
+نیا بٹن(م, "نہیں", پر_کلک=فنکشن() {
+    م.بند_کریں();
+});
+
+م.انتظار();    // block until closed
+</code></pre></div>
+<hr />
+<h2 id="system-dialogs">ڈائیلاگ — System Dialogs</h2>
+<p>Static methods — no instance needed:</p>
+<div class="highlight"><pre><span></span><code>// Info / warning / error popups
+ڈائیلاگ.معلومات("فائل کامیابی سے محفوظ ہوئی");
+ڈائیلاگ.تنبیہ("ڈیٹا خالی ہے");
+ڈائیلاگ.غلطی("کنکشن ناکام");
+
+// Yes/No question
+متغیر جواب = ڈائیلاگ.تصدیق("کیا آپ جاری رکھنا چاہتے ہیں؟");
+لکھو(جواب);    // True or False
+
+// File pickers
+متغیر فائل = ڈائیلاگ.فائل_کھولیں([["متنی فائلیں", "*.txt"], ["تمام", "*.*"]]);
+متغیر راستہ = ڈائیلاگ.فائل_محفوظ();
+متغیر فولڈر_م = ڈائیلاگ.فولڈر();
+
+// Colour picker
+متغیر رنگ = ڈائیلاگ.رنگ("#ff0000");    // returns hex string
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.معلومات(msg)</code></td>
+<td>—</td>
+<td>Info popup</td>
+</tr>
+<tr>
+<td><code>.غلطی(msg)</code></td>
+<td>—</td>
+<td>Error popup</td>
+</tr>
+<tr>
+<td><code>.تنبیہ(msg)</code></td>
+<td>—</td>
+<td>Warning popup</td>
+</tr>
+<tr>
+<td><code>.تصدیق(msg)</code></td>
+<td>bool</td>
+<td>Yes/No dialog</td>
+</tr>
+<tr>
+<td><code>.فائل_کھولیں(types)</code></td>
+<td>str</td>
+<td>Open file picker</td>
+</tr>
+<tr>
+<td><code>.فائل_محفوظ(types)</code></td>
+<td>str</td>
+<td>Save file picker</td>
+</tr>
+<tr>
+<td><code>.فولڈر()</code></td>
+<td>str</td>
+<td>Folder picker</td>
+</tr>
+<tr>
+<td><code>.رنگ(init)</code></td>
+<td>str</td>
+<td>Colour picker, returns hex</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="drawing-canvas">کینوس — Drawing Canvas</h2>
+<div class="highlight"><pre><span></span><code>متغیر ک = نیا کینوس(ایپ, چوڑائی=400, اونچائی=300, پس_منظر="white");
+
+// Circle — دائرہ(x, y, radius, colour)
+ک.دائرہ(200, 150, 80, "blue");
+
+// Rectangle — مستطیل(x1, y1, x2, y2, colour)
+ک.مستطیل(10, 10, 100, 80, "green");
+
+// Line — لکیر(x1, y1, x2, y2, colour, thickness)
+ک.لکیر(0, 0, 400, 300, "red", 3);
+
+// Text — متن(x, y, text, colour, size)
+ک.متن(200, 150, "اردو", "black", 18);
+
+ک.صاف_کریں();    // remove all shapes
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> کینوس کے رنگ کے لیے انگریزی رنگ نام (<code>"blue"</code>, <code>"red"</code>, <code>"green"</code>) یا hex (<code>"#ff5500"</code>) استعمال کریں۔</p>
+</blockquote>
+<hr />
+<h2 id="bootstrap-colours">Bootstrap Colours — رنگ</h2>
+<p>Pass these to <code>.رنگ(bg, fg)</code> on any widget, or use in <code>کلاس=</code> strings:</p>
+<table>
+<thead>
+<tr>
+<th>اردو</th>
+<th>English</th>
+<th>Hex</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>بنیادی</code></td>
+<td>primary</td>
+<td><code>#0d6efd</code></td>
+</tr>
+<tr>
+<td><code>کامیاب</code></td>
+<td>success</td>
+<td><code>#198754</code></td>
+</tr>
+<tr>
+<td><code>خطرہ</code></td>
+<td>danger</td>
+<td><code>#dc3545</code></td>
+</tr>
+<tr>
+<td><code>تنبیہ</code></td>
+<td>warning</td>
+<td><code>#ffc107</code></td>
+</tr>
+<tr>
+<td><code>معلومات</code></td>
+<td>info</td>
+<td><code>#0dcaf0</code></td>
+</tr>
+<tr>
+<td><code>ثانوی</code></td>
+<td>secondary</td>
+<td><code>#6c757d</code></td>
+</tr>
+<tr>
+<td><code>گہرا</code></td>
+<td>dark</td>
+<td><code>#212529</code></td>
+</tr>
+<tr>
+<td><code>ہلکا</code></td>
+<td>light</td>
+<td><code>#f8f9fa</code></td>
+</tr>
+<tr>
+<td><code>سفید</code></td>
+<td>white</td>
+<td><code>#ffffff</code></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>// .رنگ() uses Urdu Bootstrap names
+لیبل_م.رنگ(bg="گہرا", fg="سفید");
+</code></pre></div>
+<hr />
+<h2 id="practical-example-login-form">Practical Example: Login Form — عملی مثال</h2>
+<div class="highlight"><pre><span></span><code>درآمد { گوئی, فریم, لیبل, ان_پٹ, بٹن, الرٹ, ڈائیلاگ } سے "اردو/گوئی";
+
+متغیر ایپ = نیا گوئی("لاگ ان", 380, 320);
+متغیر فارم = نیا فریم(ایپ, عنوان="اکاؤنٹ میں داخل ہوں");
+
+نیا لیبل(فارم, "صارف نام:");
+متغیر صارف_ان = نیا ان_پٹ(فارم, placeholder="ای میل یا صارف نام");
+
+نیا لیبل(فارم, "پاس ورڈ:");
+متغیر پاس_ان = نیا ان_پٹ(فارم, قسم="پاس_ورڈ", placeholder="پاس ورڈ");
+
+متغیر پیغام_ل = نیا لیبل(فارم, "");
+
+فنکشن لاگ_ان_کریں() {
+    متغیر صارف = صارف_ان.حاصل_کریں();
+    متغیر پاس = پاس_ان.حاصل_کریں();
+
+    اگر (صارف == "" یا پاس == "") {
+        پیغام_ل.رنگ(fg="خطرہ").مقرر_کریں("سب خانے پُر کریں");
+        واپس;
+    }
+
+    // Simulate auth check
+    اگر (صارف == "احمد" اور پاس == "12345") {
+        ڈائیلاگ.معلومات("خوش آمدید، احمد!");
+        ایپ.بند_کریں();
+    } ورنہ {
+        پیغام_ل.رنگ(fg="خطرہ").مقرر_کریں("غلط صارف نام یا پاس ورڈ");
+        پاس_ان.صاف_کریں();
+    }
+}
+
+نیا بٹن(فارم, "لاگ ان", کلاس="دکمہ دکمہ-بنیادی", پر_کلک=لاگ_ان_کریں);
+
+ایپ.مرکز().چلائیں();
+</code></pre></div>
+<hr />
+<h2 id="widget-visibility">Widget Visibility — نظر اور چھپاؤ</h2>
+<p>Any widget inherits these from the base class:</p>
+<div class="highlight"><pre><span></span><code>لیبل_م.چھپائیں();    // hide
+لیبل_م.دکھائیں();    // show again
+لیبل_م.ہٹائیں();     // destroy permanently
+</code></pre></div>
+<hr />
+<h2 id="quick-reference">Quick Reference — فوری حوالہ</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>گوئی</code></td>
+<td>Main window</td>
+</tr>
+<tr>
+<td><code>فریم</code></td>
+<td>Grouping box / card</td>
+</tr>
+<tr>
+<td><code>ردیف</code> + <code>کالم</code></td>
+<td>Side-by-side layout</td>
+</tr>
+<tr>
+<td><code>کنٹینر</code></td>
+<td>Padded container</td>
+</tr>
+<tr>
+<td><code>لیبل</code></td>
+<td>Text display</td>
+</tr>
+<tr>
+<td><code>بٹن</code></td>
+<td>Clickable button</td>
+</tr>
+<tr>
+<td><code>ان_پٹ</code></td>
+<td>Single-line text entry</td>
+</tr>
+<tr>
+<td><code>ٹیکسٹ_ایریا</code></td>
+<td>Multi-line text</td>
+</tr>
+<tr>
+<td><code>ڈراپ_ڈاؤن</code></td>
+<td>Select / combobox</td>
+</tr>
+<tr>
+<td><code>چیک_بکس</code></td>
+<td>Boolean toggle</td>
+</tr>
+<tr>
+<td><code>ریڈیو</code></td>
+<td>Single-choice group</td>
+</tr>
+<tr>
+<td><code>سلائڈر</code></td>
+<td>Range slider</td>
+</tr>
+<tr>
+<td><code>پروگریس_بار</code></td>
+<td>0–100 progress</td>
+</tr>
+<tr>
+<td><code>جدول</code></td>
+<td>Scrollable data table</td>
+</tr>
+<tr>
+<td><code>نیوی_بار</code></td>
+<td>Top navigation</td>
+</tr>
+<tr>
+<td><code>الرٹ</code></td>
+<td>Inline notification</td>
+</tr>
+<tr>
+<td><code>ٹیب_ویو</code></td>
+<td>Tab container</td>
+</tr>
+<tr>
+<td><code>مودل</code></td>
+<td>Modal popup window</td>
+</tr>
+<tr>
+<td><code>ڈائیلاگ</code></td>
+<td>System file/colour/message dialogs</td>
+</tr>
+<tr>
+<td><code>کینوس</code></td>
+<td>2D drawing surface</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><a href="../05-databases/">← Previous: Databases</a> | <a href="../07-web-framework/">Next: Web Framework →</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

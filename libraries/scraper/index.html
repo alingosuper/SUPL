@@ -1,0 +1,1550 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Web Scraper Library — اردو/کھرچنی - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#web-scraper-library" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Web Scraper Library — اردو/کھرچنی
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorial/beginner/" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/beginner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intermediate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a Document — دستاویز بنانا
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a Document — دستاویز بنانا">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_-parse-html-string-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        صفحہ_بناؤ — Parse HTML string — HTML متن پارس کریں
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fetch-url-and-parse-async-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کھرچو — Fetch URL and parse (async) — URL سے حاصل کریں اور پارس کریں
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#page-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        صفحہ — Page object — صفحہ آبجیکٹ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_-element-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        _عنصر — Element object — عنصر آبجیکٹ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="_عنصر — Element object — عنصر آبجیکٹ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties — خاصیات
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods — طریقے
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples — مثالیں
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples — مثالیں">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-parse-an-html-string-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1 — Parse an HTML string — HTML متن پارس کرنا
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-scrape-page-title-and-all-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2 — Scrape page title and all links — صفحہ عنوان اور تمام روابط
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-extract-table-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 3 — Extract table data — جدول ڈیٹا نکالنا
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-4-css-selector-usage-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 4 — CSS selector usage — CSS سلیکٹر استعمال
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-5-navigate-parent-child-and-siblings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 5 — Navigate parent, child, and siblings — والد، بچے اور ہم پہلو
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-6-scrape-a-real-website-book-listings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 6 — Scrape a real website (book listings) — حقیقی ویب سائٹ کھرچنا
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-7-extract-structured-data-and-save-to-csv-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 7 — Extract structured data and save to CSV — منظم ڈیٹا نکالنا اور CSV محفوظ کرنا
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-8-attributes-deep-dive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 8 — Attributes deep dive — خصوصیات کا گہرا جائزہ
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="web-scraper-library">Web Scraper Library — اردو/کھرچنی</h1>
+<p>The <code>اردو/کھرچنی</code> library wraps BeautifulSoup4 for parsing HTML — either from a string or fetched live from a URL. It provides Urdu-named properties and methods for navigating and extracting page content.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>اردو/کھرچنی</code> لائبریری BeautifulSoup4 کا ریپر ہے جو HTML پارس کرتا ہے — چاہے متن (string) سے ہو یا براہ راست URL سے۔ یہ ویب صفحات سے ڈیٹا نکالنے کے لیے اردو نامی خاصیات اور طریقے فراہم کرتا ہے۔</p>
+</blockquote>
+<p><strong>Import:</strong></p>
+<div class="highlight"><pre><span></span><code>درآمد { صفحہ_بناؤ, کھرچو, صفحہ } سے "اردو/کھرچنی"
+</code></pre></div>
+<hr />
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#creating-a-document">Creating a Document</a></li>
+<li><a href="#صفحہ--page-object">صفحہ — Page object</a></li>
+<li><a href="#_عنصر--element-object">_عنصر — Element object</a></li>
+<li><a href="#examples">Examples</a></li>
+</ol>
+<hr />
+<h2 id="creating-a-document">Creating a Document — دستاویز بنانا</h2>
+<blockquote>
+<p><strong>اردو:</strong> HTML دستاویز بنانے کے دو طریقے ہیں: <code>صفحہ_بناؤ()</code> سے HTML متن پارس کریں، یا <code>کھرچو()</code> سے URL سے براہ راست صفحہ حاصل کریں اور پارس کریں۔</p>
+</blockquote>
+<h3 id="_-parse-html-string-html">صفحہ_بناؤ — Parse HTML string — HTML متن پارس کریں</h3>
+<div class="highlight"><pre><span></span><code>متغیر صفحہ = صفحہ_بناؤ(html_متن, تجزیہ_کار="html.parser")
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Parser string</th>
+<th>Backend</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>"html.parser"</code></td>
+<td>Python stdlib</td>
+<td>No extra dependencies, always available</td>
+</tr>
+<tr>
+<td><code>"lxml"</code></td>
+<td>lxml</td>
+<td>Fastest; <code>pip install lxml</code> required</td>
+</tr>
+<tr>
+<td><code>"html5lib"</code></td>
+<td>html5lib</td>
+<td>Most lenient, handles broken HTML; <code>pip install html5lib</code> required</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fetch-url-and-parse-async-url">کھرچو — Fetch URL and parse (async) — URL سے حاصل کریں اور پارس کریں</h3>
+<div class="highlight"><pre><span></span><code>متغیر صفحہ = انتظار کھرچو(url, سرخط={}, تجزیہ_کار="html.parser")
+</code></pre></div>
+<p>Internally performs an HTTP GET and parses the response body. Returns a <code>صفحہ</code> object.</p>
+<blockquote>
+<p><strong>اردو:</strong> اندرونی طور پر HTTP GET کرتا ہے اور جواب کی باڈی پارس کرتا ہے۔ ایک <code>صفحہ</code> آبجیکٹ واپس کرتا ہے۔ اضافی سرخیاں دے کر بعض ویب سائٹس کو براؤزر کی درخواست جیسا لگائیں۔</p>
+</blockquote>
+<hr />
+<h2 id="page-object">صفحہ — Page object — صفحہ آبجیکٹ</h2>
+<p><code>صفحہ</code> is a specialised element representing the whole document.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>صفحہ</code> پوری دستاویز کو نمائندہ کرنے والا خصوصی عنصر ہے۔ اس کی <code>.عنوان</code> خاصیت صفحے کا <code>&lt;title&gt;</code> ٹیگ متن دیتی ہے اور یہ <code>_عنصر</code> کی تمام خاصیات اور طریقے وراثت میں لیتا ہے۔</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.عنوان</code></td>
+<td>string</td>
+<td>Text content of the <code>&lt;title&gt;</code> tag</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>صفحہ</code> object inherits <strong>all</strong> <code>_عنصر</code> properties and methods listed below.</p>
+<hr />
+<h2 id="_-element-object">_عنصر — Element object — عنصر آبجیکٹ</h2>
+<blockquote>
+<p><strong>اردو:</strong> <code>_عنصر</code> ایک HTML عنصر کو نمائندہ کرتا ہے۔ خاصیات سے ٹیگ، شناخت، متن، HTML اور والدین/بچے تک رسائی ملتی ہے۔ طریقوں سے عناصر تلاش کریں — ٹیگ نام، خصوصیات یا CSS سلیکٹر سے۔</p>
+</blockquote>
+<h3 id="properties">Properties — خاصیات</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.ٹیگ</code></td>
+<td>string</td>
+<td>HTML tag name, e.g. <code>"div"</code>, <code>"a"</code></td>
+</tr>
+<tr>
+<td><code>.شناخت</code></td>
+<td>string | null</td>
+<td>Value of the <code>id</code> attribute</td>
+</tr>
+<tr>
+<td><code>.متن</code></td>
+<td>string</td>
+<td>All text inside the element, including nested tags</td>
+</tr>
+<tr>
+<td><code>.صاف_متن</code></td>
+<td>string</td>
+<td>Text stripped of leading/trailing whitespace</td>
+</tr>
+<tr>
+<td><code>.اندرونی_html</code></td>
+<td>string</td>
+<td>Inner HTML — the element's contents as a string</td>
+</tr>
+<tr>
+<td><code>.بیرونی_html</code></td>
+<td>string</td>
+<td>Outer HTML — the element itself plus its contents</td>
+</tr>
+<tr>
+<td><code>.خوبصورت</code></td>
+<td>string</td>
+<td>Prettified (indented) HTML string</td>
+</tr>
+<tr>
+<td><code>.خصوصیات</code></td>
+<td>object</td>
+<td>Dict of all HTML attributes</td>
+</tr>
+<tr>
+<td><code>.والد</code></td>
+<td>_عنصر | null</td>
+<td>Parent element</td>
+</tr>
+<tr>
+<td><code>.بچے</code></td>
+<td>list</td>
+<td>Direct child elements (tags only, no text nodes)</td>
+</tr>
+<tr>
+<td><code>.اگلا</code></td>
+<td>_عنصر | null</td>
+<td>Next sibling element</td>
+</tr>
+<tr>
+<td><code>.پچھلا</code></td>
+<td>_عنصر | null</td>
+<td>Previous sibling element</td>
+</tr>
+<tr>
+<td><code>elem["href"]</code></td>
+<td>string | null</td>
+<td>Get the value of any attribute by name</td>
+</tr>
+</tbody>
+</table>
+<h3 id="methods">Methods — طریقے</h3>
+<blockquote>
+<p><strong>اردو:</strong> چار تلاش طریقے: <code>.تلاش()</code> پہلا ملنے والا عنصر دیتا ہے، <code>.سب_تلاش()</code> سب ملنے والے دیتا ہے، <code>.چنو()</code> CSS سلیکٹر سے سب دیتا ہے اور <code>.ایک_چنو()</code> CSS سلیکٹر سے پہلا دیتا ہے۔</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.تلاش(ٹیگ, خصوصیات={})</code></td>
+<td>_عنصر | null</td>
+<td>First matching child element</td>
+</tr>
+<tr>
+<td><code>.سب_تلاش(ٹیگ, خصوصیات={}, حد=0)</code></td>
+<td>list</td>
+<td>All matching elements (0 = no limit)</td>
+</tr>
+<tr>
+<td><code>.چنو(css_selector)</code></td>
+<td>list</td>
+<td>All elements matching a CSS selector</td>
+</tr>
+<tr>
+<td><code>.ایک_چنو(css_selector)</code></td>
+<td>_عنصر | null</td>
+<td>First element matching a CSS selector</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Attribute shorthand:</strong></p>
+<div class="highlight"><pre><span></span><code>متغیر ربط = عنصر["href"]    // None if not present
+متغیر src  = عنصر["src"]
+متغیر cls  = عنصر["class"]
+</code></pre></div>
+<hr />
+<h2 id="examples">Examples — مثالیں</h2>
+<h3 id="example-1-parse-an-html-string-html">Example 1 — Parse an HTML string — HTML متن پارس کرنا</h3>
+<blockquote>
+<p><strong>اردو:</strong> <code>صفحہ_بناؤ()</code> سے HTML متن پارس کریں، پھر <code>.تلاش()</code> سے عناصر نکالیں۔ <code>.صاف_متن</code> سے صاف متن اور <code>["href"]</code> سے خصوصیات پڑھیں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { صفحہ_بناؤ } سے "اردو/کھرچنی"
+
+متغیر html = """
+&lt;html&gt;
+  &lt;head&gt;&lt;title&gt;اردو ویب سائٹ&lt;/title&gt;&lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1 id="سرخی"&gt;خوش آمدید!&lt;/h1&gt;
+    &lt;p class="تعارف"&gt;یہ اردو پروگرامنگ زبان ہے۔&lt;/p&gt;
+    &lt;p&gt;مزید معلومات کے لیے &lt;a href="https://example.com"&gt;یہاں&lt;/a&gt; کلک کریں۔&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+"""
+
+متغیر صف = صفحہ_بناؤ(html)
+
+لکھو("عنوان:", صف.عنوان)
+
+متغیر سرخی = صف.تلاش("h1")
+لکھو("سرخی:", سرخی.صاف_متن)
+لکھو("سرخی ID:", سرخی.شناخت)
+
+متغیر پیرا = صف.تلاش("p", { "class": "تعارف" })
+لکھو("تعارف:", پیرا.صاف_متن)
+
+متغیر ربط = صف.تلاش("a")
+لکھو("لنک متن:", ربط.صاف_متن)
+لکھو("لنک URL:", ربط["href"])
+</code></pre></div>
+<p><strong>Output:</strong></p>
+<div class="highlight"><pre><span></span><code>عنوان: اردو ویب سائٹ
+سرخی: خوش آمدید!
+سرخی ID: سرخی
+تعارف: یہ اردو پروگرامنگ زبان ہے۔
+لنک متن: یہاں
+لنک URL: https://example.com
+</code></pre></div>
+<h3 id="example-2-scrape-page-title-and-all-links">Example 2 — Scrape page title and all links — صفحہ عنوان اور تمام روابط</h3>
+<blockquote>
+<p><strong>اردو:</strong> <code>کھرچو()</code> سے لائیو URL کھرچیں، صفحے کا عنوان اور تمام <code>&lt;a&gt;</code> ٹیگز نکالیں۔ <code>.سب_تلاش("a")</code> تمام روابط فہرست دیتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { کھرچو } سے "اردو/کھرچنی"
+
+غیر_متزامن فنکشن روابط_نکالیں(url) {
+    لکھو("صفحہ کھرچ رہے ہیں:", url)
+    متغیر صف = انتظار کھرچو(url)
+
+    لکھو("عنوان:", صف.عنوان)
+    لکھو("-" * 50)
+
+    متغیر تمام_روابط = صف.سب_تلاش("a")
+    لکھو(`کل روابط: ${تمام_روابط.length}`)
+    لکھو()
+
+    کے_لیے (متغیر ربط کا تمام_روابط) {
+        متغیر href = ربط["href"]
+        متغیر متن_ = ربط.صاف_متن
+
+        اگر (href اور متن_) {
+            لکھو(`  ${متن_}`)
+            لکھو(`  → ${href}`)
+            لکھو()
+        }
+    }
+}
+
+انتظار روابط_نکالیں("https://books.toscrape.com")
+</code></pre></div>
+<h3 id="example-3-extract-table-data">Example 3 — Extract table data — جدول ڈیٹا نکالنا</h3>
+<blockquote>
+<p><strong>اردو:</strong> HTML جدول سے ڈیٹا نکالنے کے لیے پہلے <code>&lt;th&gt;</code> ٹیگز سے کالم کے عنوانات، پھر CSS سلیکٹر <code>"tbody tr"</code> سے قطاریں اور <code>&lt;td&gt;</code> سے خانے نکالیں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { صفحہ_بناؤ } سے "اردو/کھرچنی"
+
+متغیر html = """
+&lt;table id="نتائج"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;نام&lt;/th&gt;&lt;th&gt;عمر&lt;/th&gt;&lt;th&gt;شہر&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;احمد&lt;/td&gt;&lt;td&gt;25&lt;/td&gt;&lt;td&gt;کراچی&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;فاطمہ&lt;/td&gt;&lt;td&gt;30&lt;/td&gt;&lt;td&gt;لاہور&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;علی&lt;/td&gt;&lt;td&gt;22&lt;/td&gt;&lt;td&gt;اسلام آباد&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+"""
+
+متغیر صف = صفحہ_بناؤ(html)
+متغیر جدول = صف.تلاش("table", { id: "نتائج" })
+
+// ہیڈرز نکالیں
+متغیر ہیڈرز = جدول.سب_تلاش("th")
+لکھو("کالمز:", ہیڈرز.map(h =&gt; h.صاف_متن))
+
+// ڈیٹا قطاریں
+متغیر قطاریں = جدول.چنو("tbody tr")
+لکھو(`\n${قطاریں.length} قطاریں ملیں:`)
+
+کے_لیے (متغیر قطار کا قطاریں) {
+    متغیر خانے = قطار.سب_تلاش("td")
+    متغیر قدریں = خانے.map(td =&gt; td.صاف_متن)
+    لکھو("  ", قدریں.join(" | "))
+}
+</code></pre></div>
+<p><strong>Output:</strong></p>
+<div class="highlight"><pre><span></span><code>کالمز: ["نام", "عمر", "شہر"]
+
+3 قطاریں ملیں:
+   احمد | 25 | کراچی
+   فاطمہ | 30 | لاہور
+   علی | 22 | اسلام آباد
+</code></pre></div>
+<h3 id="example-4-css-selector-usage-css">Example 4 — CSS selector usage — CSS سلیکٹر استعمال</h3>
+<blockquote>
+<p><strong>اردو:</strong> <code>.چنو(css)</code> سے CSS سلیکٹرز استعمال کریں جیسے <code>.مضمون .عنوان</code> (کلاس کے اندر کلاس) یا <code>a.مزید</code> (مخصوص کلاس کے روابط)۔ <code>.ایک_چنو()</code> صرف پہلا عنصر دیتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { صفحہ_بناؤ } سے "اردو/کھرچنی"
+
+متغیر html = """
+&lt;div class="مضمون"&gt;
+  &lt;h2 class="عنوان"&gt;پہلا مضمون&lt;/h2&gt;
+  &lt;p class="خلاصہ"&gt;یہ پہلے مضمون کا خلاصہ ہے۔&lt;/p&gt;
+  &lt;a href="/مضامین/1" class="مزید"&gt;مزید پڑھیں&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="مضمون"&gt;
+  &lt;h2 class="عنوان"&gt;دوسرا مضمون&lt;/h2&gt;
+  &lt;p class="خلاصہ"&gt;دوسرے مضمون کا خلاصہ یہاں ہے۔&lt;/p&gt;
+  &lt;a href="/مضامین/2" class="مزید"&gt;مزید پڑھیں&lt;/a&gt;
+&lt;/div&gt;
+"""
+
+متغیر صف = صفحہ_بناؤ(html)
+
+// تمام مضامین کے عنوانات
+متغیر عنوانات = صف.چنو(".مضمون .عنوان")
+کے_لیے (متغیر عنوان کا عنوانات) {
+    لکھو("عنوان:", عنوان.صاف_متن)
+}
+
+// تمام "مزید پڑھیں" روابط
+متغیر روابط = صف.چنو("a.مزید")
+کے_لیے (متغیر ربط کا روابط) {
+    لکھو("URL:", ربط["href"])
+}
+
+// پہلا مضمون کا خلاصہ
+متغیر پہلا_خلاصہ = صف.ایک_چنو(".مضمون .خلاصہ")
+لکھو("پہلا خلاصہ:", پہلا_خلاصہ.صاف_متن)
+</code></pre></div>
+<h3 id="example-5-navigate-parent-child-and-siblings">Example 5 — Navigate parent, child, and siblings — والد، بچے اور ہم پہلو</h3>
+<blockquote>
+<p><strong>اردو:</strong> عنصر کے درخت میں چلنے کے لیے: <code>.والد</code> سے اوپر جائیں، <code>.بچے</code> سے نیچے، <code>.اگلا</code> اور <code>.پچھلا</code> سے ہم پہلو (siblings) تک۔ یہ پیچیدہ HTML ڈھانچوں میں نیویگیٹ کرنے کا طریقہ ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { صفحہ_بناؤ } سے "اردو/کھرچنی"
+
+متغیر html = """
+&lt;ul id="فہرست"&gt;
+  &lt;li&gt;پہلا&lt;/li&gt;
+  &lt;li class="منتخب"&gt;دوسرا&lt;/li&gt;
+  &lt;li&gt;تیسرا&lt;/li&gt;
+  &lt;li&gt;چوتھا&lt;/li&gt;
+&lt;/ul&gt;
+"""
+
+متغیر صف = صفحہ_بناؤ(html)
+
+// منتخب عنصر تلاش کریں
+متغیر منتخب = صف.تلاش("li", { "class": "منتخب" })
+لکھو("منتخب:", منتخب.صاف_متن)
+
+// والد
+متغیر والدین = منتخب.والد
+لکھو("والد ٹیگ:", والدین.ٹیگ)
+لکھو("والد ID:", والدین.شناخت)
+
+// بہن بھائی
+متغیر اگلا_عنصر   = منتخب.اگلا
+متغیر پچھلا_عنصر = منتخب.پچھلا
+لکھو("اگلا:", اگلا_عنصر.صاف_متن)
+لکھو("پچھلا:", پچھلا_عنصر.صاف_متن)
+
+// تمام بچے
+متغیر تمام_بچے = والدین.بچے
+لکھو("بچوں کی تعداد:", تمام_بچے.length)
+کے_لیے (متغیر بچہ کا تمام_بچے) {
+    لکھو("  -", بچہ.صاف_متن)
+}
+</code></pre></div>
+<h3 id="example-6-scrape-a-real-website-book-listings">Example 6 — Scrape a real website (book listings) — حقیقی ویب سائٹ کھرچنا</h3>
+<blockquote>
+<p><strong>اردو:</strong> یہ مثال <code>books.toscrape.com</code> سے کتابوں کا ڈیٹا نکالتی ہے۔ CSS سلیکٹر <code>"article.product_pod"</code> سے تمام کتاب کارڈز ملتے ہیں، پھر ہر کارڈ سے عنوان، قیمت اور ستارہ درجہ بندی نکالی جاتی ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { کھرچو } سے "اردو/کھرچنی"
+
+// ═══════════════════════════════════════════════════
+// کتابوں کا ڈیٹا نکالنا — books.toscrape.com
+// ═══════════════════════════════════════════════════
+
+غیر_متزامن فنکشن کتابیں_نکالیں() {
+    متغیر صف = انتظار کھرچو("https://books.toscrape.com")
+
+    لکھو("عنوان:", صف.عنوان)
+    لکھو("=" * 60)
+
+    متغیر کتاب_کارڈز = صف.چنو("article.product_pod")
+    لکھو(`${کتاب_کارڈز.length} کتابیں ملیں:`)
+    لکھو()
+
+    متغیر کتابیں = []
+
+    کے_لیے (متغیر کارڈ کا کتاب_کارڈز) {
+        // عنوان
+        متغیر عنوان_عنصر = کارڈ.ایک_چنو("h3 a")
+        متغیر عنوان = عنوان_عنصر ? عنوان_عنصر["title"] : "نامعلوم"
+
+        // قیمت
+        متغیر قیمت_عنصر = کارڈ.ایک_چنو(".price_color")
+        متغیر قیمت = قیمت_عنصر ? قیمت_عنصر.صاف_متن : "نامعلوم"
+
+        // درجہ بندی (star rating class)
+        متغیر ستارہ_عنصر = کارڈ.ایک_چنو(".star-rating")
+        متغیر ستارے = ستارہ_عنصر ? ستارہ_عنصر["class"] : ""
+
+        کتابیں.شامل({ عنوان, قیمت, ستارے })
+        لکھو(`  📖 ${عنوان}`)
+        لکھو(`     قیمت: ${قیمت}  |  ${ستارے}`)
+        لکھو()
+    }
+
+    واپس کتابیں
+}
+
+متغیر نتائج = انتظار کتابیں_نکالیں()
+لکھو(`مجموعی کتابیں: ${نتائج.length}`)
+</code></pre></div>
+<h3 id="example-7-extract-structured-data-and-save-to-csv-csv">Example 7 — Extract structured data and save to CSV — منظم ڈیٹا نکالنا اور CSV محفوظ کرنا</h3>
+<blockquote>
+<p><strong>اردو:</strong> Hacker News سے خبریں نکالیں اور CSV فائل میں محفوظ کریں۔ <code>.athing</code> CSS سلیکٹر آئٹمز دیتا ہے، پھر ہر آئٹم سے عنوان اور URL نکال کر CSV مواد بنائیں اور <code>فائل_لکھو</code> سے فائل میں لکھیں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { کھرچو } سے "اردو/کھرچنی"
+درآمد { فائل_لکھو } سے "اردو/فائلیں"
+
+غیر_متزامن فنکشن خبریں_csv_میں_محفوظ_کریں() {
+    متغیر صف = انتظار کھرچو("https://news.ycombinator.com")
+
+    متغیر خبریں = []
+
+    متغیر آئٹمز = صف.چنو(".athing")
+    کے_لیے (متغیر آئٹم کا آئٹمز) {
+        متغیر عنوان_عنصر = آئٹم.ایک_چنو(".titleline a")
+        اگر (عنوان_عنصر) {
+            خبریں.شامل({
+                عنوان: عنوان_عنصر.صاف_متن,
+                url:   عنوان_عنصر["href"]
+            })
+        }
+    }
+
+    // CSV میں محفوظ
+    متغیر csv_مواد = "عنوان,url\n"
+    کے_لیے (متغیر خبر کا خبریں) {
+        متغیر صاف_عنوان = خبر.عنوان.replace(/,/g, "")
+        csv_مواد += `${صاف_عنوان},${خبر.url}\n`
+    }
+
+    فائل_لکھو("hacker_news.csv", csv_مواد)
+    لکھو(`${خبریں.length} خبریں hacker_news.csv میں محفوظ ہو گئیں`)
+}
+
+انتظار خبریں_csv_میں_محفوظ_کریں()
+</code></pre></div>
+<h3 id="example-8-attributes-deep-dive">Example 8 — Attributes deep dive — خصوصیات کا گہرا جائزہ</h3>
+<blockquote>
+<p><strong>اردو:</strong> HTML عناصر کی خصوصیات <code>عنصر["خصوصیت_نام"]</code> سے پڑھیں۔ <code>.خصوصیات</code> تمام خصوصیات کی ڈکشنری دیتا ہے۔ <code>.شناخت</code> سے <code>id</code> خصوصیت آسانی سے ملتی ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { صفحہ_بناؤ } سے "اردو/کھرچنی"
+
+متغیر html = """
+&lt;img id="بینر" src="/images/banner.jpg" alt="بینر تصویر" width="800" height="200"&gt;
+&lt;a href="https://example.com" data-category="ٹیکنالوجی" target="_blank"&gt;مزید&lt;/a&gt;
+"""
+
+متغیر صف = صفحہ_بناؤ(html)
+
+// تصویر کی خصوصیات
+متغیر تصویر = صف.تلاش("img")
+لکھو("src:",    تصویر["src"])
+لکھو("alt:",    تصویر["alt"])
+لکھو("چوڑائی:", تصویر["width"])
+لکھو("ID:",     تصویر.شناخت)
+لکھو("تمام خصوصیات:", تصویر.خصوصیات)
+
+// ربط کی خصوصیات
+متغیر ربط = صف.تلاش("a")
+لکھو("\nhref:",    ربط["href"])
+لکھو("target:",   ربط["target"])
+لکھو("category:", ربط["data-category"])
+</code></pre></div>
+<hr />
+<p><em>Previous: <a href="../http/">HTTP →</a> | Next: <a href="../files/">File Utilities →</a></em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

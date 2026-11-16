@@ -1,0 +1,1595 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Error Handling — غلطی سنبھالنا - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#error-handling" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Error Handling — غلطی سنبھالنا
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorial/beginner/" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../libraries/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/beginner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intermediate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../libraries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        کوشش / پکڑو / آخر
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#throw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پھینکو — throw
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-error-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Built-in Error Types — بنا بنایا غلطی کی اقسام
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Properties — غلطی کی خاصیات
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-error-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Error Classes — کسٹم غلطی کلاسز
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#re-throwing-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Re-throwing Errors — غلطیاں دوبارہ پھینکنا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nested-trycatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested try/catch — گھونسلے دار کوشش/پکڑو
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#async-error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Async Error Handling — غیر متزامن غلطی سنبھالنا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global Error Handling — عالمی غلطی سنبھالنا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical Patterns — عملی طریقے
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Patterns — عملی طریقے">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#safe-json-parse-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Safe JSON parse — محفوظ JSON پارس
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-validation-helper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input validation helper — ان پٹ توثیق مددگار
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graceful-degradation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Graceful degradation — بتدریج کمی
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="error-handling">Error Handling — غلطی سنبھالنا</h1>
+<p>Robust programs anticipate and handle failures gracefully. The Urdu Programming Language provides <code>کوشش/پکڑو/آخر</code> blocks, a <code>پھینکو</code> statement, built-in error types, and support for custom error classes.</p>
+<blockquote>
+<p><strong>اردو:</strong> مضبوط پروگرام ناکامیوں کا پہلے سے اندازہ لگا کر انہیں سلیقے سے سنبھالتے ہیں۔ اردو پروگرامنگ لینگویج <code>کوشش/پکڑو/آخر</code> بلاکس، <code>پھینکو</code> بیان، بنا بنایا غلطی کی اقسام، اور کسٹم غلطی کلاسز کی حمایت فراہم کرتی ہے۔</p>
+</blockquote>
+<hr />
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#کوشش--پکڑو--آخر">کوشش / پکڑو / آخر — try / catch / finally</a></li>
+<li><a href="#پھینکو--throw">پھینکو — throw</a></li>
+<li><a href="#built-in-error-types">Built-in Error Types</a></li>
+<li><a href="#error-properties">Error Properties</a></li>
+<li><a href="#custom-error-classes">Custom Error Classes</a></li>
+<li><a href="#re-throwing-errors">Re-throwing Errors</a></li>
+<li><a href="#nested-trycatch">Nested try/catch</a></li>
+<li><a href="#async-error-handling">Async Error Handling</a></li>
+<li><a href="#global-error-handling">Global Error Handling</a></li>
+<li><a href="#practical-patterns">Practical Patterns</a></li>
+</ol>
+<hr />
+<h2 id="_1">کوشش / پکڑو / آخر</h2>
+<p><strong>Syntax:</strong></p>
+<blockquote>
+<p><strong>اردو:</strong> نحو:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>کوشش {
+    // code that might throw
+} پکڑو (غلطی) {
+    // handle the error
+} آخر {
+    // always runs — cleanup
+}
+</code></pre></div>
+<p><strong>Basic example:</strong></p>
+<blockquote>
+<p><strong>اردو:</strong> بنیادی مثال:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>کوشش {
+    مستقل نتیجہ = 10 / 2;    // normal computation
+    لکھو(نتیجہ);              // 5
+    پھینکو نیا Error("کچھ غلط ہوا");
+} پکڑو (غ) {
+    لکھو(`غلطی پکڑی: ${غ.message}`);
+} آخر {
+    لکھو("یہ ہمیشہ چلتا ہے");
+}
+// 5
+// غلطی پکڑی: کچھ غلط ہوا
+// یہ ہمیشہ چلتا ہے
+</code></pre></div>
+<p><strong>Only catch (no finally):</strong></p>
+<blockquote>
+<p><strong>اردو:</strong> صرف پکڑو (بغیر آخر کے):</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>کوشش {
+    مستقل ڈیٹا = JSON_پڑھو("{بد شکل JSON}");
+} پکڑو (غ) {
+    لکھو(`JSON غلطی: ${غ.message}`);
+}
+</code></pre></div>
+<p><strong>Only finally (no catch):</strong></p>
+<blockquote>
+<p><strong>اردو:</strong> صرف آخر (بغیر پکڑو کے):</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>متغیر رابطہ = خالی;
+کوشش {
+    رابطہ = نیا ڈیٹا_بیس();
+    رابطہ.چلاؤ("SELECT * FROM users");
+} آخر {
+    اگر (رابطہ) رابطہ.بند_کرو();    // always close connection
+}
+</code></pre></div>
+<p><strong>The finally block always runs — even after return:</strong></p>
+<blockquote>
+<p><strong>اردو:</strong> آخر بلاک ہمیشہ چلتا ہے — واپسی کے بعد بھی:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>فنکشن محفوظ_تقسیم(الف, ب) {
+    کوشش {
+        اگر (ب === 0) پھینکو نیا Error("صفر سے تقسیم");
+        واپس الف / ب;
+    } پکڑو (غ) {
+        لکھو(`غلطی: ${غ.message}`);
+        واپس خالی;
+    } آخر {
+        لکھو("تقسیم آپریشن مکمل");    // runs even when returning
+    }
+}
+
+لکھو(محفوظ_تقسیم(10, 2));
+// تقسیم آپریشن مکمل
+// 5
+
+لکھو(محفوظ_تقسیم(10, 0));
+// غلطی: صفر سے تقسیم
+// تقسیم آپریشن مکمل
+// null
+</code></pre></div>
+<hr />
+<h2 id="throw">پھینکو — throw</h2>
+<p><code>پھینکو</code> throws any value as an error and immediately exits the current code block.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>پھینکو</code> کسی بھی قدر کو بطور غلطی پھینکتا ہے اور فوری طور پر موجودہ کوڈ بلاک سے نکل جاتا ہے۔</p>
+</blockquote>
+<p><strong>Throw a string:</strong></p>
+<blockquote>
+<p><strong>اردو:</strong> سٹرنگ پھینکنا:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>فنکشن جانچو(عمر) {
+    اگر (عمر &lt; 0) پھینکو "عمر منفی نہیں ہو سکتی";
+    اگر (عمر &gt; 150) پھینکو "عمر حد سے زیادہ ہے";
+    واپس `عمر ${عمر} قابل قبول ہے`;
+}
+
+کوشش {
+    لکھو(جانچو(-5));
+} پکڑو (غ) {
+    لکھو(غ);    // عمر منفی نہیں ہو سکتی
+}
+</code></pre></div>
+<p><strong>Throw an Error object (recommended):</strong></p>
+<blockquote>
+<p><strong>اردو:</strong> غلطی شے پھینکنا (تجویز کردہ):</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>فنکشن فائل_پڑھو(راستہ) {
+    اگر (!راستہ) {
+        پھینکو نیا TypeError("راستہ درکار ہے");
+    }
+    اگر (!راستہ.ختم_ہے(".txt")) {
+        پھینکو نیا Error(`غیر معاون فائل: ${راستہ}`);
+    }
+    // ... read file
+}
+</code></pre></div>
+<p><strong>Throw an object:</strong></p>
+<blockquote>
+<p><strong>اردو:</strong> شے پھینکنا:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>فنکشن API_درخواست(url) {
+    اگر (!url.شروع_ہے("https")) {
+        پھینکو {
+            کوڈ: 400,
+            پیغام: "محفوظ HTTPS درکار ہے",
+            url
+        };
+    }
+}
+
+کوشش {
+    API_درخواست("http://example.com");
+} پکڑو (غ) {
+    لکھو(غ.کوڈ);     // 400
+    لکھو(غ.پیغام);    // محفوظ HTTPS درکار ہے
+}
+</code></pre></div>
+<hr />
+<h2 id="built-in-error-types">Built-in Error Types — بنا بنایا غلطی کی اقسام</h2>
+<table>
+<thead>
+<tr>
+<th>Urdu name</th>
+<th>JS equivalent</th>
+<th>When used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>غلطی</code></td>
+<td><code>Error</code></td>
+<td>Generic errors</td>
+</tr>
+<tr>
+<td><code>قسم_غلطی</code></td>
+<td><code>TypeError</code></td>
+<td>Wrong type passed or used</td>
+</tr>
+<tr>
+<td><code>حد_غلطی</code></td>
+<td><code>RangeError</code></td>
+<td>Value out of valid range</td>
+</tr>
+<tr>
+<td><code>حوالہ_غلطی</code></td>
+<td><code>ReferenceError</code></td>
+<td>Variable not defined</td>
+</tr>
+<tr>
+<td><code>نحو_غلطی</code></td>
+<td><code>SyntaxError</code></td>
+<td>Invalid syntax (parse time)</td>
+</tr>
+<tr>
+<td><code>رینج_غلطی</code></td>
+<td><code>RangeError</code></td>
+<td>Numeric range exceeded</td>
+</tr>
+<tr>
+<td><code>نیٹ_غلطی</code></td>
+<td><code>NetworkError</code></td>
+<td>Network / fetch failure</td>
+</tr>
+<tr>
+<td><code>فائل_غلطی</code></td>
+<td><code>FileError</code></td>
+<td>File I/O failure</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>اردو:</strong> یہ بنا بنایا غلطی کی اقسام ہیں جو زبان میں پہلے سے موجود ہیں اور مختلف قسم کی غلطیوں کے لیے استعمال ہوتی ہیں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// TypeError
+کوشش {
+    مستقل n = خالی;
+    n.toString();
+} پکڑو (غ) {
+    لکھو(غ مثال TypeError);    // true
+    لکھو(غ.message);
+}
+
+// RangeError
+کوشش {
+    نیا Array(-1);
+} پکڑو (غ) {
+    لکھو(غ مثال RangeError);   // true
+}
+
+// ReferenceError
+کوشش {
+    لکھو(ناموجود_متغیر);
+} پکڑو (غ) {
+    لکھو(غ مثال ReferenceError);   // true
+}
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Throwing specific types
+فنکشن رنگ_جانچو(قدر) {
+    اگر (قسم(قدر) !== "عدد") {
+        پھینکو نیا TypeError(`عدد درکار ہے، ملا: ${قسم(قدر)}`);
+    }
+    اگر (قدر &lt; 0 یا قدر &gt; 255) {
+        پھینکو نیا RangeError(`RGB قدر 0-255 کے درمیان ہونی چاہیے، ملی: ${قدر}`);
+    }
+    واپس قدر;
+}
+
+کوشش { رنگ_جانچو("سرخ"); } پکڑو (غ) { لکھو(غ.name + ": " + غ.message); }
+// TypeError: عدد درکار ہے، ملا: متن
+
+کوشش { رنگ_جانچو(300); } پکڑو (غ) { لکھو(غ.name + ": " + غ.message); }
+// RangeError: RGB قدر 0-255 کے درمیان ہونی چاہیے، ملی: 300
+</code></pre></div>
+<hr />
+<h2 id="error-properties">Error Properties — غلطی کی خاصیات</h2>
+<p>All Error objects share these standard properties:</p>
+<blockquote>
+<p><strong>اردو:</strong> تمام غلطی اشیاء میں یہ معیاری خاصیات مشترک ہیں:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>message</code></td>
+<td>string</td>
+<td>Human-readable description</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>Error type name (e.g. <code>"TypeError"</code>)</td>
+</tr>
+<tr>
+<td><code>stack</code></td>
+<td>string</td>
+<td>Stack trace</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>مستقل غ = نیا Error("یہ ایک غلطی ہے");
+لکھو(غ.name);      // Error
+لکھو(غ.message);   // یہ ایک غلطی ہے
+لکھو(غ.stack);     // Error: یہ ایک غلطی ہے\n  at ...
+
+مستقل قغ = نیا TypeError("غلط قسم");
+لکھو(قغ.name);     // TypeError
+</code></pre></div>
+<hr />
+<h2 id="custom-error-classes">Custom Error Classes — کسٹم غلطی کلاسز</h2>
+<p>Extend <code>غلطی</code> (Error) to create domain-specific error types.</p>
+<blockquote>
+<p><strong>اردو:</strong> مخصوص شعبے کی غلطی اقسام بنانے کے لیے <code>غلطی</code> (Error) کو وراثت میں لیں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>کلاس توثیق_غلطی توسیع Error {
+    تعمیر(میدان, پیغام) {
+        سپر(پیغام);
+        یہ.name = "توثیق_غلطی";
+        یہ.میدان = میدان;
+    }
+}
+
+کلاس HTTP_غلطی توسیع Error {
+    تعمیر(کوڈ, پیغام) {
+        سپر(پیغام);
+        یہ.name = "HTTP_غلطی";
+        یہ.کوڈ = کوڈ;
+    }
+
+    حاصل_کرو مل_گیا_نہیں() {
+        واپس یہ.کوڈ === 404;
+    }
+
+    حاصل_کرو سرور_غلطی() {
+        واپس یہ.کوڈ &gt;= 500;
+    }
+}
+
+کلاس ڈیٹا_بیس_غلطی توسیع Error {
+    تعمیر(سوال, اصل_غلطی) {
+        سپر(`سوال ناکام: ${سوال}`);
+        یہ.name = "ڈیٹا_بیس_غلطی";
+        یہ.سوال = سوال;
+        یہ.اصل = اصل_غلطی;
+    }
+}
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Using custom errors
+فنکشن فارم_جانچو(ڈیٹا) {
+    اگر (!ڈیٹا.نام یا ڈیٹا.نام.لمبائی &lt; 2) {
+        پھینکو نیا توثیق_غلطی("نام", "نام کم از کم 2 حروف کا ہونا چاہیے");
+    }
+    اگر (!ڈیٹا.ای_میل یا !ڈیٹا.ای_میل.شامل_ہے("@")) {
+        پھینکو نیا توثیق_غلطی("ای_میل", "ای میل درست نہیں");
+    }
+    اگر (!ڈیٹا.عمر یا ڈیٹا.عمر &lt; 18) {
+        پھینکو نیا توثیق_غلطی("عمر", "کم از کم عمر 18 سال ہے");
+    }
+}
+
+کوشش {
+    فارم_جانچو({ نام: "ا", ای_میل: "بدشکل", عمر: 16 });
+} پکڑو (غ) {
+    اگر (غ مثال توثیق_غلطی) {
+        لکھو(`توثیق ناکام — ${غ.میدان}: ${غ.message}`);
+    } ورنہ {
+        پھینکو غ;    // re-throw unexpected errors
+    }
+}
+// توثیق ناکام — نام: نام کم از کم 2 حروف کا ہونا چاہیے
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Catching by type
+غیر_متزامن فنکشن API_کال(url) {
+    کوشش {
+        مستقل جواب = انتظار کرل(url);
+        اگر (!جواب.ok) {
+            پھینکو نیا HTTP_غلطی(جواب.status, جواب.statusText);
+        }
+        واپس انتظار جواب.json();
+    } پکڑو (غ) {
+        اگر (غ مثال HTTP_غلطی) {
+            اگر (غ.مل_گیا_نہیں) {
+                لکھو("وسیلہ نہیں ملا");
+            } ورنہ_اگر (غ.سرور_غلطی) {
+                لکھو("سرور مسئلہ — بعد میں کوشش کریں");
+            }
+        } ورنہ_اگر (غ مثال TypeError) {
+            لکھو("نیٹ ورک سے رابطہ نہیں");
+        } ورنہ {
+            پھینکو غ;
+        }
+        واپس خالی;
+    }
+}
+</code></pre></div>
+<hr />
+<h2 id="re-throwing-errors">Re-throwing Errors — غلطیاں دوبارہ پھینکنا</h2>
+<p>Catch only the errors you can handle; re-throw the rest.</p>
+<blockquote>
+<p><strong>اردو:</strong> صرف وہ غلطیاں پکڑیں جنہیں آپ سنبھال سکتے ہیں؛ باقی کو دوبارہ پھینک دیں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>فنکشن ڈیٹا_پارس_کرو(متن_شے) {
+    کوشش {
+        واپس JSON_پڑھو(متن_شے);
+    } پکڑو (غ) {
+        // Only handle SyntaxError from JSON parsing
+        اگر (غ مثال SyntaxError) {
+            پھینکو نیا Error(`JSON پارس ناکام: ${غ.message}`);
+        }
+        پھینکو غ;    // re-throw other errors unchanged
+    }
+}
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Enriching and re-throwing
+غیر_متزامن فنکشن صارف_بنائیں(ڈیٹا) {
+    کوشش {
+        فارم_جانچو(ڈیٹا);
+        واپس انتظار ڈیٹا_بیس.داخل_کرو("users", ڈیٹا);
+    } پکڑو (غ) {
+        // Add context and re-throw
+        غ.سیاق = "صارف بنانے کے دوران";
+        پھینکو غ;
+    }
+}
+
+کوشش {
+    انتظار صارف_بنائیں({ نام: "" });
+} پکڑو (غ) {
+    لکھو(`${غ.سیاق}: ${غ.message}`);
+    // صارف بنانے کے دوران: نام کم از کم 2 حروف کا ہونا چاہیے
+}
+</code></pre></div>
+<hr />
+<h2 id="nested-trycatch">Nested try/catch — گھونسلے دار کوشش/پکڑو</h2>
+<p>Inner catches handle specific issues; outer catches are broader safety nets.</p>
+<blockquote>
+<p><strong>اردو:</strong> اندرونی پکڑو مخصوص مسائل سنبھالتا ہے؛ بیرونی پکڑو وسیع تر حفاظتی جال ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>غیر_متزامن فنکشن رپورٹ_بنائیں(صارف_id) {
+    کوشش {
+        // Outer: catch all unexpected errors
+
+        مستقل صارف = کوشش {
+            انتظار صارف_حاصل_کرو(صارف_id);
+        } پکڑو (غ) {
+            // Inner: default user if not found
+            اگر (غ مثال HTTP_غلطی اور غ.مل_گیا_نہیں) {
+                واپس { نام: "مہمان", id: 0 };
+            }
+            پھینکو غ;
+        };
+
+        مستقل ڈیٹا = کوشش {
+            انتظار ڈیٹا_حاصل_کرو(صارف_id);
+        } پکڑو (غ) {
+            // Inner: return empty on data error
+            لکھو(`ڈیٹا لوڈ ناکام: ${غ.message}`);
+            واپس [];
+        };
+
+        واپس { صارف, ڈیٹا };
+
+    } پکڑو (غ) {
+        لکھو(`رپورٹ بنانا ناکام: ${غ.message}`);
+        واپس خالی;
+    }
+}
+</code></pre></div>
+<hr />
+<h2 id="async-error-handling">Async Error Handling — غیر متزامن غلطی سنبھالنا</h2>
+<p>See also <code>08-async.md</code>. Key patterns:</p>
+<blockquote>
+<p><strong>اردو:</strong> مزید معلومات کے لیے <code>08-async.md</code> بھی دیکھیں۔ اہم طریقے:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// Pattern 1: try/catch in async function
+غیر_متزامن فنکشن محفوظ_لوڈ(id) {
+    کوشش {
+        مستقل ڈیٹا = انتظار کرل(`/api/items/${id}`);
+        واپس JSON_پڑھو(ڈیٹا);
+    } پکڑو (غ) {
+        لکھو(`لوڈ ناکام: ${غ.message}`);
+        واپس خالی;
+    }
+}
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Pattern 2: Result tuple [error, data]
+غیر_متزامن فنکشن محفوظ(وعدہ_شے) {
+    کوشش {
+        مستقل ڈیٹا = انتظار وعدہ_شے;
+        واپس [خالی, ڈیٹا];
+    } پکڑو (غ) {
+        واپس [غ, خالی];
+    }
+}
+
+مستقل [غلطی, صارف] = انتظار محفوظ(صارف_حاصل_کرو(42));
+اگر (غلطی) {
+    لکھو(`غلطی: ${غلطی.message}`);
+} ورنہ {
+    لکھو(صارف.نام);
+}
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Pattern 3: Error boundary in parallel calls
+غیر_متزامن فنکشن تمام_لوڈ(ids) {
+    مستقل نتائج = انتظار Promise.allSettled(
+        ids.تبدیل(id =&gt; صارف_حاصل_کرو(id))
+    );
+
+    مستقل کامیاب = نتائج
+        .چھانو(r =&gt; r.status === "fulfilled")
+        .تبدیل(r =&gt; r.value);
+
+    مستقل ناکام_ids = نتائج
+        .تبدیل((r, i) =&gt; [i, r])
+        .چھانو(([_, r]) =&gt; r.status === "rejected")
+        .تبدیل(([i]) =&gt; ids[i]);
+
+    اگر (ناکام_ids.لمبائی &gt; 0) {
+        لکھو(`ناکام IDs: ${ناکام_ids.جوڑو(", ")}`);
+    }
+
+    واپس کامیاب;
+}
+</code></pre></div>
+<hr />
+<h2 id="global-error-handling">Global Error Handling — عالمی غلطی سنبھالنا</h2>
+<p>Catch unhandled errors at the program level.</p>
+<blockquote>
+<p><strong>اردو:</strong> پروگرام کی سطح پر بغیر پکڑی غلطیاں سنبھالیں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// Unhandled promise rejections
+process.on("unhandledRejection", (وجہ, وعدہ_شے) =&gt; {
+    لکھو(`بغیر پکڑی Promise مسترد: ${وجہ}`);
+});
+
+// Uncaught exceptions
+process.on("uncaughtException", (غ) =&gt; {
+    لکھو(`بغیر پکڑی غلطی: ${غ.message}`);
+    process.exit(1);
+});
+</code></pre></div>
+<hr />
+<h2 id="practical-patterns">Practical Patterns — عملی طریقے</h2>
+<h3 id="safe-json-parse-json">Safe JSON parse — محفوظ JSON پارس</h3>
+<div class="highlight"><pre><span></span><code>فنکشن محفوظ_JSON_پڑھو(متن_شے, پہلے_سے_طے = خالی) {
+    کوشش {
+        واپس JSON_پڑھو(متن_شے);
+    } پکڑو {
+        واپس پہلے_سے_طے;
+    }
+}
+
+لکھو(محفوظ_JSON_پڑھو('{"نام":"علی"}'));   // { نام: "علی" }
+لکھو(محفوظ_JSON_پڑھو("بد شکل", {}));     // {}
+</code></pre></div>
+<h3 id="input-validation-helper">Input validation helper — ان پٹ توثیق مددگار</h3>
+<div class="highlight"><pre><span></span><code>کلاس جانچ {
+    جامد درکار(قدر, میدان) {
+        اگر (قدر === خالی یا قدر === غیر_معرف یا قدر === "") {
+            پھینکو نیا توثیق_غلطی(میدان, `${میدان} درکار ہے`);
+        }
+        واپس قدر;
+    }
+
+    جامد کم_از_کم(قدر, حد_قدر, میدان) {
+        اگر (قدر &lt; حد_قدر) {
+            پھینکو نیا توثیق_غلطی(میدان, `${میدان} کم از کم ${حد_قدر} ہونی چاہیے`);
+        }
+        واپس قدر;
+    }
+
+    جامد زیادہ_سے_زیادہ(قدر, حد_قدر, میدان) {
+        اگر (قدر &gt; حد_قدر) {
+            پھینکو نیا توثیق_غلطی(میدان, `${میدان} زیادہ سے زیادہ ${حد_قدر} ہونی چاہیے`);
+        }
+        واپس قدر;
+    }
+
+    جامد ای_میل(قدر, میدان = "ای_میل") {
+        جانچ.درکار(قدر, میدان);
+        اگر (!قدر.شامل_ہے("@")) {
+            پھینکو نیا توثیق_غلطی(میدان, "ای میل فارمیٹ غلط ہے");
+        }
+        واپس قدر;
+    }
+}
+
+کوشش {
+    جانچ.درکار("", "نام");
+} پکڑو (غ) {
+    لکھو(`${غ.میدان}: ${غ.message}`);
+    // نام: نام درکار ہے
+}
+</code></pre></div>
+<h3 id="graceful-degradation">Graceful degradation — بتدریج کمی</h3>
+<blockquote>
+<p><strong>اردو:</strong> اگر ایک ذریعہ ناکام ہو تو دوسرے پر جائیں:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>غیر_متزامن فنکشن ویجٹ_لوڈ() {
+    // Try live data, fall back to cache, then default
+    کوشش {
+        واپس انتظار API.حاصل_کرو("/ویجٹ");
+    } پکڑو {
+        لکھو("لائیو ڈیٹا ناکام، کیش آزما رہے ہیں...");
+    }
+
+    کوشش {
+        واپس انتظار کیش.حاصل_کرو("ویجٹ");
+    } پکڑو {
+        لکھو("کیش بھی ناکام، پہلے سے طے شدہ ڈیٹا استعمال ہو رہا ہے");
+    }
+
+    واپس { عنوان: "ڈیٹا دستیاب نہیں", قدریں: [] };
+}
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

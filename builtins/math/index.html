@@ -1,0 +1,1834 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Math Object — ریاضی - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#math-object" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Math Object — ریاضی
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorial/beginner/" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../libraries/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/beginner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intermediate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../libraries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-the-math-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing the Math Object — ریاضی شے تک رسائی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constants — مستقلات
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rounding-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rounding Functions — گول کرنے کے فنکشنز
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rounding Functions — گول کرنے کے فنکشنز">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x-ceilx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.چھت(x) / ریاضی.ceil(x)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x-floorx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.فرش(x) / ریاضی.floor(x)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x-roundx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.گول(x) / ریاضی.round(x)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x-truncx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.تراش(x) / ریاضی.trunc(x)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-and-root-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power and Root Functions — قوت اور جڑ فنکشنز
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Power and Root Functions — قوت اور جڑ فنکشنز">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x-_x-sqrtx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.جذر(x) / ریاضی.جذر_مربع(x) / ریاضی.sqrt(x)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_x-cbrtx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.جذر_مکعب(x) / ریاضی.cbrt(x)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x-y-powx-y" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.طاقت(x, y) / ریاضی.pow(x, y)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x-expx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.مرتفع(x) / ریاضی.exp(x)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#absolute-value-and-sign" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Absolute Value and Sign — مطلق قدر اور علامت
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Absolute Value and Sign — مطلق قدر اور علامت">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x-absx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.مطلق(x) / ریاضی.abs(x)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x-signx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.علامت(x) / ریاضی.sign(x)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minimum-and-maximum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Minimum and Maximum — کم اور زیادہ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Minimum and Maximum — کم اور زیادہ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#args-minargs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.کم(*args) / ریاضی.min(*args)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#args-maxargs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.زیادہ(*args) / ریاضی.max(*args)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logarithmic-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logarithmic Functions — لوگارتھمی فنکشنز
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logarithmic Functions — لوگارتھمی فنکشنز">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x-logx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.لاگ(x) / ریاضی.log(x)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2x-log2x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.لاگ2(x) / ریاضی.log2(x)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10x-log10x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.لاگ10(x) / ریاضی.log10(x)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trigonometric-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trigonometric Functions — مثلثاتی فنکشنز
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trigonometric Functions — مثلثاتی فنکشنز">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x-sinx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.سائن(x) / ریاضی.sin(x)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x-cosx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.کوسائن(x) / ریاضی.cos(x)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x-tanx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.ٹینجنٹ(x) / ریاضی.tan(x)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_x-asinx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.معکوس_سائن(x) / ریاضی.asin(x)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_x-acosx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.معکوس_کوسائن(x) / ریاضی.acos(x)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_x-atanx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.معکوس_ٹینجنٹ(x) / ریاضی.atan(x)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2y-x-atan2y-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.ٹینجنٹ2(y, x) / ریاضی.atan2(y, x)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#args-hypotargs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.وتر(*args) / ریاضی.hypot(*args)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#angle-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Angle Conversion — زاویہ تبدیلی
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Angle Conversion — زاویہ تبدیلی">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x-degreesx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.درجے(x) / ریاضی.degrees(x)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x-radiansx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.ریڈین(x) / ریاضی.radians(x)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#random-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Random Number — اتفاقی عدد
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Random Number — اتفاقی عدد">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#random" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.اتفاقی() / ریاضی.random()
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#number-theory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Number Theory — عدد نظریہ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Number Theory — عدد نظریہ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#n-factorialn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.ضربی(n) / ریاضی.factorial(n)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_a-b-gcda-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی.مشترک_قسم(a, b) / ریاضی.gcd(a, b)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical Examples — عملی مثالیں
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Examples — عملی مثالیں">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#geometry-circle-and-pythagorean-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geometry — Circle and Pythagorean Theorem — ہندسہ: دائرہ اور فیثاغورس
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statistics-mean-variance-standard-deviation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Statistics — Mean, Variance, Standard Deviation — شماریات: اوسط، تغیر، معیاری انحراف
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trigonometry-sine-wave-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trigonometry — Sine Wave Points — مثلثیات: سائن لہر کے نقطے
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="math-object">Math Object — ریاضی</h1>
+<p>The <code>ریاضی</code> object (also accessible as <code>Math</code>) provides a comprehensive set of mathematical constants and functions. It is available globally in every Urdu program — no import required.</p>
+<p>Every method and constant has both an Urdu alias and an English alias. Use whichever you prefer: <code>ریاضی.جذر(9)</code> and <code>ریاضی.sqrt(9)</code> are identical.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>ریاضی</code> شے (جسے <code>Math</code> کے نام سے بھی استعمال کیا جا سکتا ہے) ریاضیاتی مستقلات اور فنکشنز کا ایک جامع مجموعہ فراہم کرتی ہے۔ یہ ہر اردو پروگرام میں عالمی طور پر دستیاب ہے — کسی درآمد کی ضرورت نہیں۔ ہر طریقے اور مستقل کا اردو اور انگریزی دونوں نام ہیں، آپ جو چاہیں استعمال کریں۔</p>
+</blockquote>
+<hr />
+<h2 id="accessing-the-math-object">Accessing the Math Object — ریاضی شے تک رسائی</h2>
+<blockquote>
+<p><strong>اردو:</strong> دونوں شکلیں درست ہیں:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// Urdu name
+ریاضی.sqrt(16)       // 4.0
+
+// English alias
+Math.sqrt(16)        // 4.0
+</code></pre></div>
+<hr />
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#constants">Constants</a></li>
+<li><a href="#rounding-functions">Rounding Functions</a></li>
+<li><a href="#power-and-root-functions">Power and Root Functions</a></li>
+<li><a href="#absolute-value-and-sign">Absolute Value and Sign</a></li>
+<li><a href="#minimum-and-maximum">Minimum and Maximum</a></li>
+<li><a href="#logarithmic-functions">Logarithmic Functions</a></li>
+<li><a href="#trigonometric-functions">Trigonometric Functions</a></li>
+<li><a href="#angle-conversion">Angle Conversion</a></li>
+<li><a href="#random-number">Random Number</a></li>
+<li><a href="#number-theory">Number Theory</a></li>
+<li><a href="#practical-examples">Practical Examples</a></li>
+</ul>
+<hr />
+<h2 id="constants">Constants — مستقلات</h2>
+<table>
+<thead>
+<tr>
+<th>Urdu Alias</th>
+<th>English Alias</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ریاضی.پائی</code></td>
+<td><code>ریاضی.PI</code></td>
+<td><code>3.141592653589793</code></td>
+<td>Ratio of a circle's circumference to its diameter (π)</td>
+</tr>
+<tr>
+<td><code>ریاضی.قدرتی</code></td>
+<td><code>ریاضی.E</code></td>
+<td><code>2.718281828459045</code></td>
+<td>Euler's number — base of natural logarithm (e)</td>
+</tr>
+<tr>
+<td><code>ریاضی.جذر_دو</code></td>
+<td><code>ریاضی.SQRT2</code></td>
+<td><code>1.4142135623730951</code></td>
+<td>Square root of 2 (√2)</td>
+</tr>
+<tr>
+<td><code>ریاضی.لن_دو</code></td>
+<td><code>ریاضی.LN2</code></td>
+<td><code>0.6931471805599453</code></td>
+<td>Natural logarithm of 2 (ln 2)</td>
+</tr>
+<tr>
+<td><code>ریاضی.لن_دس</code></td>
+<td><code>ریاضی.LN10</code></td>
+<td><code>2.302585092994046</code></td>
+<td>Natural logarithm of 10 (ln 10)</td>
+</tr>
+<tr>
+<td><code>ریاضی.دائرہ</code></td>
+<td><code>ریاضی.TAU</code></td>
+<td><code>6.283185307179586</code></td>
+<td>Full turn in radians — 2π (τ)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>اردو:</strong> یہ ریاضیاتی مستقلات ہیں جو اکثر حسابات میں کام آتے ہیں۔ پائی (π) دائرے کا سب سے اہم مستقل ہے، اور قدرتی عدد (e) لوگارتھمی حسابات میں استعمال ہوتا ہے۔</p>
+</blockquote>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code>لکھو("پائی =", ریاضی.پائی);          // 3.141592653589793
+لکھو("قدرتی عدد =", ریاضی.قدرتی);   // 2.718281828459045
+لکھو("√2 =", ریاضی.جذر_دو);         // 1.4142135623730951
+</code></pre></div>
+<hr />
+<h2 id="rounding-functions">Rounding Functions — گول کرنے کے فنکشنز</h2>
+<h3 id="x-ceilx"><code>ریاضی.چھت(x)</code> / <code>ریاضی.ceil(x)</code></h3>
+<p>Round <code>x</code> up to the nearest integer (ceiling).</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>x</code> کو قریب ترین اوپر والے صحیح عدد تک گول کریں (چھت کی طرف)۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(ریاضی.چھت(4.1));   // 5
+لکھو(ریاضی.چھت(4.9));   // 5
+لکھو(ریاضی.چھت(-4.1));  // -4
+</code></pre></div>
+<hr />
+<h3 id="x-floorx"><code>ریاضی.فرش(x)</code> / <code>ریاضی.floor(x)</code></h3>
+<p>Round <code>x</code> down to the nearest integer (floor).</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>x</code> کو قریب ترین نیچے والے صحیح عدد تک گول کریں (فرش کی طرف)۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(ریاضی.فرش(4.9));   // 4
+لکھو(ریاضی.فرش(4.1));   // 4
+لکھو(ریاضی.فرش(-4.1));  // -5
+</code></pre></div>
+<hr />
+<h3 id="x-roundx"><code>ریاضی.گول(x)</code> / <code>ریاضی.round(x)</code></h3>
+<p>Round <code>x</code> to the nearest integer (half rounds to even — Python banker's rounding).</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>x</code> کو قریب ترین صحیح عدد تک گول کریں (آدھے پر جفت طرف — Python کا بینکر گول کرنا)۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(ریاضی.گول(4.4));   // 4
+لکھو(ریاضی.گول(4.6));   // 5
+لکھو(ریاضی.گول(4.5));   // 4  (banker's rounding)
+</code></pre></div>
+<hr />
+<h3 id="x-truncx"><code>ریاضی.تراش(x)</code> / <code>ریاضی.trunc(x)</code></h3>
+<p>Truncate <code>x</code> toward zero (remove the fractional part without rounding).</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>x</code> کو صفر کی طرف کاٹیں (اعشاری حصہ ہٹائیں، گول کیے بغیر)۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(ریاضی.تراش(4.9));   // 4
+لکھو(ریاضی.تراش(-4.9));  // -4
+لکھو(ریاضی.تراش(3.0));   // 3
+</code></pre></div>
+<hr />
+<h2 id="power-and-root-functions">Power and Root Functions — قوت اور جڑ فنکشنز</h2>
+<h3 id="x-_x-sqrtx"><code>ریاضی.جذر(x)</code> / <code>ریاضی.جذر_مربع(x)</code> / <code>ریاضی.sqrt(x)</code></h3>
+<p>Return the square root of <code>x</code>. <code>x</code> must be ≥ 0.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>x</code> کا مربع جذر واپس کریں۔ <code>x</code> صفر سے کم نہیں ہونا چاہیے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(ریاضی.جذر(9));     // 3.0
+لکھو(ریاضی.جذر(2));     // 1.4142135623730951
+لکھو(ریاضی.جذر(0));     // 0.0
+</code></pre></div>
+<hr />
+<h3 id="_x-cbrtx"><code>ریاضی.جذر_مکعب(x)</code> / <code>ریاضی.cbrt(x)</code></h3>
+<p>Return the cube root of <code>x</code>. Works for negative numbers.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>x</code> کا مکعب جذر واپس کریں۔ منفی اعداد کے لیے بھی کام کرتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(ریاضی.جذر_مکعب(27));    // 3.0
+لکھو(ریاضی.جذر_مکعب(-8));    // -2.0
+لکھو(ریاضی.جذر_مکعب(125));   // 5.0
+</code></pre></div>
+<hr />
+<h3 id="x-y-powx-y"><code>ریاضی.طاقت(x, y)</code> / <code>ریاضی.pow(x, y)</code></h3>
+<p>Return <code>x</code> raised to the power <code>y</code>.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>x</code> کو <code>y</code> کی قوت تک بڑھائیں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(ریاضی.طاقت(2, 8));    // 256
+لکھو(ریاضی.طاقت(10, 3));   // 1000
+لکھو(ریاضی.طاقت(4, 0.5));  // 2.0
+</code></pre></div>
+<hr />
+<h3 id="x-expx"><code>ریاضی.مرتفع(x)</code> / <code>ریاضی.exp(x)</code></h3>
+<p>Return e raised to the power <code>x</code> (eˣ).</p>
+<blockquote>
+<p><strong>اردو:</strong> e کو <code>x</code> کی قوت تک بڑھائیں (eˣ)۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(ریاضی.مرتفع(0));    // 1.0
+لکھو(ریاضی.مرتفع(1));    // 2.718281828459045
+لکھو(ریاضی.مرتفع(2));    // 7.38905609893065
+</code></pre></div>
+<hr />
+<h2 id="absolute-value-and-sign">Absolute Value and Sign — مطلق قدر اور علامت</h2>
+<h3 id="x-absx"><code>ریاضی.مطلق(x)</code> / <code>ریاضی.abs(x)</code></h3>
+<p>Return the absolute (non-negative) value of <code>x</code>.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>x</code> کی مطلق (غیر منفی) قدر واپس کریں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(ریاضی.مطلق(-7));     // 7
+لکھو(ریاضی.مطلق(3.14));   // 3.14
+لکھو(ریاضی.مطلق(0));      // 0
+</code></pre></div>
+<hr />
+<h3 id="x-signx"><code>ریاضی.علامت(x)</code> / <code>ریاضی.sign(x)</code></h3>
+<p>Return the sign of <code>x</code>: <code>1</code> if positive, <code>-1</code> if negative, <code>0</code> if zero.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>x</code> کی علامت واپس کریں: مثبت پر <code>1</code>، منفی پر <code>-1</code>، صفر پر <code>0</code>۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(ریاضی.علامت(100));    // 1
+لکھو(ریاضی.علامت(-50));    // -1
+لکھو(ریاضی.علامت(0));      // 0
+</code></pre></div>
+<hr />
+<h2 id="minimum-and-maximum">Minimum and Maximum — کم اور زیادہ</h2>
+<h3 id="args-minargs"><code>ریاضی.کم(*args)</code> / <code>ریاضی.min(*args)</code></h3>
+<p>Return the smallest of all arguments.</p>
+<blockquote>
+<p><strong>اردو:</strong> تمام دلائل میں سے سب سے چھوٹا واپس کریں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(ریاضی.کم(3, 1, 4, 1, 5, 9));   // 1
+لکھو(ریاضی.کم(-5, 0, 5));            // -5
+</code></pre></div>
+<hr />
+<h3 id="args-maxargs"><code>ریاضی.زیادہ(*args)</code> / <code>ریاضی.max(*args)</code></h3>
+<p>Return the largest of all arguments.</p>
+<blockquote>
+<p><strong>اردو:</strong> تمام دلائل میں سے سب سے بڑا واپس کریں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(ریاضی.زیادہ(3, 1, 4, 1, 5, 9));   // 9
+لکھو(ریاضی.زیادہ(-5, 0, 5));            // 5
+</code></pre></div>
+<hr />
+<h2 id="logarithmic-functions">Logarithmic Functions — لوگارتھمی فنکشنز</h2>
+<h3 id="x-logx"><code>ریاضی.لاگ(x)</code> / <code>ریاضی.log(x)</code></h3>
+<p>Return the natural logarithm (base e) of <code>x</code>. <code>x</code> must be &gt; 0.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>x</code> کا قدرتی لوگارتھم (e بنیاد) واپس کریں۔ <code>x</code> صفر سے بڑا ہونا چاہیے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(ریاضی.لاگ(1));             // 0.0
+لکھو(ریاضی.لاگ(ریاضی.قدرتی));  // 1.0
+لکھو(ریاضی.لاگ(10));            // 2.302585092994046
+</code></pre></div>
+<hr />
+<h3 id="2x-log2x"><code>ریاضی.لاگ2(x)</code> / <code>ریاضی.log2(x)</code></h3>
+<p>Return the base-2 logarithm of <code>x</code>.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>x</code> کا بنیاد 2 لوگارتھم واپس کریں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(ریاضی.لاگ2(1));     // 0.0
+لکھو(ریاضی.لاگ2(8));     // 3.0
+لکھو(ریاضی.لاگ2(1024));  // 10.0
+</code></pre></div>
+<hr />
+<h3 id="10x-log10x"><code>ریاضی.لاگ10(x)</code> / <code>ریاضی.log10(x)</code></h3>
+<p>Return the base-10 logarithm of <code>x</code>.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>x</code> کا بنیاد 10 لوگارتھم واپس کریں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(ریاضی.لاگ10(1));      // 0.0
+لکھو(ریاضی.لاگ10(100));    // 2.0
+لکھو(ریاضی.لاگ10(1000));   // 3.0
+</code></pre></div>
+<hr />
+<h2 id="trigonometric-functions">Trigonometric Functions — مثلثاتی فنکشنز</h2>
+<p>All trigonometric functions accept angles in <strong>radians</strong>. Use <code>ریاضی.ریڈین()</code> to convert degrees to radians.</p>
+<blockquote>
+<p><strong>اردو:</strong> تمام مثلثاتی فنکشنز <strong>ریڈین</strong> میں زاویے قبول کرتے ہیں۔ درجوں کو ریڈین میں تبدیل کرنے کے لیے <code>ریاضی.ریڈین()</code> استعمال کریں۔</p>
+</blockquote>
+<h3 id="x-sinx"><code>ریاضی.سائن(x)</code> / <code>ریاضی.sin(x)</code></h3>
+<p>Return the sine of angle <code>x</code> (in radians).</p>
+<blockquote>
+<p><strong>اردو:</strong> زاویہ <code>x</code> (ریڈین میں) کا سائن واپس کریں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(ریاضی.سائن(0));                    // 0.0
+لکھو(ریاضی.سائن(ریاضی.پائی / 2));      // 1.0
+لکھو(ریاضی.سائن(ریاضی.ریڈین(30)));     // 0.5
+</code></pre></div>
+<hr />
+<h3 id="x-cosx"><code>ریاضی.کوسائن(x)</code> / <code>ریاضی.cos(x)</code></h3>
+<p>Return the cosine of angle <code>x</code> (in radians).</p>
+<blockquote>
+<p><strong>اردو:</strong> زاویہ <code>x</code> (ریڈین میں) کا کوسائن واپس کریں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(ریاضی.کوسائن(0));                  // 1.0
+لکھو(ریاضی.کوسائن(ریاضی.پائی));        // -1.0
+لکھو(ریاضی.کوسائن(ریاضی.ریڈین(60)));  // 0.5
+</code></pre></div>
+<hr />
+<h3 id="x-tanx"><code>ریاضی.ٹینجنٹ(x)</code> / <code>ریاضی.tan(x)</code></h3>
+<p>Return the tangent of angle <code>x</code> (in radians).</p>
+<blockquote>
+<p><strong>اردو:</strong> زاویہ <code>x</code> (ریڈین میں) کا ٹینجنٹ واپس کریں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(ریاضی.ٹینجنٹ(0));                  // 0.0
+لکھو(ریاضی.ٹینجنٹ(ریاضی.ریڈین(45)));  // 1.0
+</code></pre></div>
+<hr />
+<h3 id="_x-asinx"><code>ریاضی.معکوس_سائن(x)</code> / <code>ریاضی.asin(x)</code></h3>
+<p>Return the arcsine of <code>x</code> in radians. <code>x</code> must be in <code>[-1, 1]</code>.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>x</code> کا معکوس سائن (آرک سائن) ریڈین میں واپس کریں۔ <code>x</code> کی قدر <code>[-1, 1]</code> میں ہونی چاہیے۔</p>
+</blockquote>
+<hr />
+<h3 id="_x-acosx"><code>ریاضی.معکوس_کوسائن(x)</code> / <code>ریاضی.acos(x)</code></h3>
+<p>Return the arccosine of <code>x</code> in radians. <code>x</code> must be in <code>[-1, 1]</code>.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>x</code> کا معکوس کوسائن (آرک کوسائن) ریڈین میں واپس کریں۔ <code>x</code> کی قدر <code>[-1, 1]</code> میں ہونی چاہیے۔</p>
+</blockquote>
+<hr />
+<h3 id="_x-atanx"><code>ریاضی.معکوس_ٹینجنٹ(x)</code> / <code>ریاضی.atan(x)</code></h3>
+<p>Return the arctangent of <code>x</code> in radians.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>x</code> کا معکوس ٹینجنٹ (آرک ٹینجنٹ) ریڈین میں واپس کریں۔</p>
+</blockquote>
+<hr />
+<h3 id="2y-x-atan2y-x"><code>ریاضی.ٹینجنٹ2(y, x)</code> / <code>ریاضی.atan2(y, x)</code></h3>
+<p>Return the arctangent of <code>y/x</code> in radians, taking the signs of both arguments to determine the correct quadrant. Result is in <code>(-π, π]</code>.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>y/x</code> کا آرک ٹینجنٹ ریڈین میں واپس کریں، صحیح ربع تعین کرنے کے لیے دونوں دلائل کی علامات کو مدنظر رکھتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(ریاضی.ٹینجنٹ2(1, 1));    // 0.7853... (π/4)
+لکھو(ریاضی.ٹینجنٹ2(1, -1));   // 2.3561... (3π/4)
+</code></pre></div>
+<hr />
+<h3 id="args-hypotargs"><code>ریاضی.وتر(*args)</code> / <code>ریاضی.hypot(*args)</code></h3>
+<p>Return the Euclidean distance (hypotenuse). Accepts two or more arguments.</p>
+<ul>
+<li>Two arguments: √(a² + b²)</li>
+<li>More arguments: √(a² + b² + c² + ...)</li>
+</ul>
+<blockquote>
+<p><strong>اردو:</strong> یوکلیڈی فاصلہ (وتر) واپس کریں۔ دو یا زیادہ دلائل قبول کرتا ہے۔ فیثاغورس کے نظریے کا اطلاق ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(ریاضی.وتر(3, 4));       // 5.0
+لکھو(ریاضی.وتر(5, 12));      // 13.0
+لکھو(ریاضی.وتر(1, 1, 1));    // 1.7320508075688772
+</code></pre></div>
+<hr />
+<h2 id="angle-conversion">Angle Conversion — زاویہ تبدیلی</h2>
+<h3 id="x-degreesx"><code>ریاضی.درجے(x)</code> / <code>ریاضی.degrees(x)</code></h3>
+<p>Convert radians to degrees.</p>
+<blockquote>
+<p><strong>اردو:</strong> ریڈین کو درجوں میں تبدیل کریں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(ریاضی.درجے(ریاضی.پائی));       // 180.0
+لکھو(ریاضی.درجے(ریاضی.پائی / 2));   // 90.0
+لکھو(ریاضی.درجے(ریاضی.دائرہ));      // 360.0
+</code></pre></div>
+<hr />
+<h3 id="x-radiansx"><code>ریاضی.ریڈین(x)</code> / <code>ریاضی.radians(x)</code></h3>
+<p>Convert degrees to radians.</p>
+<blockquote>
+<p><strong>اردو:</strong> درجوں کو ریڈین میں تبدیل کریں۔ مثلثاتی فنکشنز استعمال کرنے سے پہلے ضروری ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(ریاضی.ریڈین(180));   // 3.141592653589793
+لکھو(ریاضی.ریڈین(90));    // 1.5707963267948966
+لکھو(ریاضی.ریڈین(360));   // 6.283185307179586
+</code></pre></div>
+<hr />
+<h2 id="random-number">Random Number — اتفاقی عدد</h2>
+<h3 id="random"><code>ریاضی.اتفاقی()</code> / <code>ریاضی.random()</code></h3>
+<p>Return a random float in the range <code>[0.0, 1.0)</code>.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>[0.0، 1.0)</code> کے درمیان اتفاقی اعشاری عدد واپس کریں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(ریاضی.اتفاقی());   // e.g. 0.4723...
+
+// 1 سے 100 تک کا اتفاقی عدد
+متغیر عدد = ریاضی.فرش(ریاضی.اتفاقی() * 100) + 1;
+لکھو(عدد);
+</code></pre></div>
+<hr />
+<h2 id="number-theory">Number Theory — عدد نظریہ</h2>
+<h3 id="n-factorialn"><code>ریاضی.ضربی(n)</code> / <code>ریاضی.factorial(n)</code></h3>
+<p>Return <code>n!</code> (n factorial). <code>n</code> must be a non-negative integer.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>n!</code> (n ضربی) واپس کریں۔ <code>n</code> غیر منفی صحیح عدد ہونا چاہیے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(ریاضی.ضربی(0));    // 1
+لکھو(ریاضی.ضربی(5));    // 120
+لکھو(ریاضی.ضربی(10));   // 3628800
+</code></pre></div>
+<hr />
+<h3 id="_a-b-gcda-b"><code>ریاضی.مشترک_قسم(a, b)</code> / <code>ریاضی.gcd(a, b)</code></h3>
+<p>Return the greatest common divisor of two integers.</p>
+<blockquote>
+<p><strong>اردو:</strong> دو اعداد صحیح کا سب سے بڑا مشترک قسمہ واپس کریں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(ریاضی.مشترک_قسم(48, 18));   // 6
+لکھو(ریاضی.مشترک_قسم(100, 75));  // 25
+لکھو(ریاضی.مشترک_قسم(7, 13));    // 1
+</code></pre></div>
+<hr />
+<h2 id="practical-examples">Practical Examples — عملی مثالیں</h2>
+<h3 id="geometry-circle-and-pythagorean-theorem">Geometry — Circle and Pythagorean Theorem — ہندسہ: دائرہ اور فیثاغورس</h3>
+<blockquote>
+<p><strong>اردو:</strong> دائرے کا رقبہ، محیط، اور فیثاغورس کا نظریہ:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// دائرے کا رقبہ اور محیط
+فنکشن دائرہ(رداس) {
+    متغیر رقبہ   = ریاضی.پائی * رداس * رداس;
+    متغیر محیط   = ریاضی.دائرہ * رداس;     // 2π × r
+    واپس { رقبہ: گول(رقبہ, 4), محیط: گول(محیط, 4) };
+}
+
+متغیر نتیجہ = دائرہ(5);
+لکھو("رقبہ:", نتیجہ.رقبہ);    // 78.5398
+لکھو("محیط:", نتیجہ.محیط);    // 31.4159
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// فیثاغورس کا نظریہ — وتر معلوم کریں
+فنکشن وتر_معلوم(الف, ب) {
+    واپس ریاضی.وتر(الف, ب);
+}
+
+لکھو(وتر_معلوم(3, 4));     // 5.0
+لکھو(وتر_معلوم(5, 12));    // 13.0
+لکھو(وتر_معلوم(8, 15));    // 17.0
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// مثلث کا رقبہ — ہیرون کا فارمولا
+فنکشن مثلث_رقبہ(ا, ب, ج) {
+    متغیر s = (ا + ب + ج) / 2;
+    واپس ریاضی.جذر(s * (s - ا) * (s - ب) * (s - ج));
+}
+
+لکھو(گول(مثلث_رقبہ(3, 4, 5), 4));    // 6.0
+لکھو(گول(مثلث_رقبہ(5, 6, 7), 4));    // 14.6969
+</code></pre></div>
+<hr />
+<h3 id="statistics-mean-variance-standard-deviation">Statistics — Mean, Variance, Standard Deviation — شماریات: اوسط، تغیر، معیاری انحراف</h3>
+<blockquote>
+<p><strong>اردو:</strong> شماریاتی حسابات:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>فنکشن اوسط(اعداد) {
+    واپس مجموع(اعداد) / لمبائی(اعداد);
+}
+
+فنکشن تغیر(اعداد) {
+    متغیر م = اوسط(اعداد);
+    متغیر فرق = نقشہ(x =&gt; ریاضی.طاقت(x - م, 2), اعداد);
+    واپس مجموع(فرق) / لمبائی(اعداد);
+}
+
+فنکشن معیاری_انحراف(اعداد) {
+    واپس ریاضی.جذر(تغیر(اعداد));
+}
+
+متغیر ڈیٹا = [4, 7, 13, 16, 21];
+لکھو("اوسط:", اوسط(ڈیٹا));                           // 12.2
+لکھو("تغیر:", گول(تغیر(ڈیٹا), 4));                   // 31.36
+لکھو("معیاری انحراف:", گول(معیاری_انحراف(ڈیٹا), 4)); // 5.6
+</code></pre></div>
+<hr />
+<h3 id="trigonometry-sine-wave-points">Trigonometry — Sine Wave Points — مثلثیات: سائن لہر کے نقطے</h3>
+<blockquote>
+<p><strong>اردو:</strong> سائن لہر کے نقطے 0 سے 360 درجے تک:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// سائن لہر کے نقطے (0 سے 360 درجے)
+لکھو("زاویہ | سائن");
+کے_لیے (متغیر ز کا حد(0, 361, 30)) {
+    متغیر س = گول(ریاضی.سائن(ریاضی.ریڈین(ز)), 4);
+    لکھو(ز, "°  |", س);
+}
+// 0°   | 0.0
+// 30°  | 0.5
+// 90°  | 1.0
+// 180° | 0.0
+// 270° | -1.0
+// 360° | 0.0
+</code></pre></div>
+<hr />
+<p><em>اردو پروگرامنگ لینگویج — ریاضی Object Reference — AlinGo Developers</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

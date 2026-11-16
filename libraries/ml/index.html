@@ -1,0 +1,2054 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Machine Learning Library — اردو/ذہین - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#machine-learning-library" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Machine Learning Library — اردو/ذہین
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorial/beginner/" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/beginner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intermediate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents — فہرست مضامین
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pandas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pandas — پانڈاز
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pandas — پانڈاز">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods — طریقے
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataframe-properties-and-aggregations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DataFrame properties and aggregations — ڈیٹا فریم کی خصوصیات
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-1-create-dataframe-and-basic-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1 — Create DataFrame and basic statistics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-csv-read-and-write" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2 — CSV read and write
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-excel-read-and-write-with-multiple-sheets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 3 — Excel read and write with multiple sheets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-4-series-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 4 — Series operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NumPy — نمپائی
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NumPy — نمپائی">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods — طریقے
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-matrix-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example — Matrix operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tensorflow-keras-_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TensorFlow / Keras — ٹینسر_فلو / کیراس
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TensorFlow / Keras — ٹینسر_فلو / کیراس">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#layer-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layer Functions — پرت فنکشن
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_-sequential-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ترتیبی_ماڈل — Sequential Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-1-digit-classification-mnist-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1 — Digit classification (MNIST-style)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-text-sentiment-lstm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2 — Text Sentiment (LSTM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-convolutional-image-classifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 3 — Convolutional Image Classifier
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scikit-learn-_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scikit-learn — درجہ_بندی / ریگریشن
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scikit-learn — درجہ_بندی / ریگریشن">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        درجہ_بندی — Classification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریگریشن — Regression
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-utilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ڈیٹا — Data Utilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-spam-detection-with-random-forest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example — Spam detection with Random Forest
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-house-price-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example — House price regression
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llm-__" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LLM — بڑا_لسانی_ماڈل
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LLM — بڑا_لسانی_ماڈل">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods — طریقے
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-1-simple-qa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1 — Simple Q&amp;A
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-multi-turn-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2 — Multi-turn chat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-semantic-search-with-embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 3 — Semantic search with embeddings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="machine-learning-library">Machine Learning Library — اردو/ذہین</h1>
+<p>The <code>اردو/ذہین</code> library brings the full Python ML ecosystem — Pandas, NumPy, TensorFlow/Keras, Scikit-learn, and local LLMs — into the Urdu Programming Language with Urdu-named constructors and methods.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>اردو/ذہین</code> لائبریری مشینی سیکھنا (machine learning) کا مکمل ماحول — پانڈاز، نمپائی، ٹینسر فلو/کیراس، سکِٹ-لرن، اور مقامی بڑے لسانی ماڈل — اردو ناموں کے ساتھ فراہم کرتی ہے۔</p>
+</blockquote>
+<p><strong>Import:</strong></p>
+<div class="highlight"><pre><span></span><code>درآمد { پانڈاز, نمپائی, ٹینسر_فلو, کیراس, ترتیبی_ماڈل, درجہ_بندی, ریگریشن, بڑا_لسانی_ماڈل, ڈیٹا } سے "اردو/ذہین"
+</code></pre></div>
+<hr />
+<h2 id="table-of-contents">Table of Contents — فہرست مضامین</h2>
+<ol>
+<li><a href="#pandas--پانڈاز">Pandas — پانڈاز</a></li>
+<li><a href="#numpy--نمپائی">NumPy — نمپائی</a></li>
+<li><a href="#tensorflow--keras--ٹینسر_فلو--کیراس">TensorFlow / Keras — ٹینسر_فلو / کیراس</a></li>
+<li><a href="#scikit-learn--درجہ_بندی--ریگریشن">Scikit-learn — درجہ_بندی / ریگریشن</a></li>
+<li><a href="#llm--بڑا_لسانی_ماڈل">LLM — بڑا_لسانی_ماڈل</a></li>
+</ol>
+<hr />
+<h2 id="pandas">Pandas — پانڈاز</h2>
+<p>Pandas provides data manipulation through DataFrames and Series. Construct a Pandas instance first:</p>
+<blockquote>
+<p><strong>اردو:</strong> پانڈاز ڈیٹاسیٹ (dataset) کی ترتیب و تجزیہ کے لیے ڈیٹا فریم اور سیریز فراہم کرتا ہے۔ پہلے ایک پانڈاز نمونہ بنائیں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>متغیر pd = نیا پانڈاز()
+</code></pre></div>
+<h3 id="constructor">Constructor</h3>
+<table>
+<thead>
+<tr>
+<th>Call</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>نیا پانڈاز()</code></td>
+<td>Create a Pandas helper instance</td>
+</tr>
+</tbody>
+</table>
+<h3 id="methods">Methods — طریقے</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pd.جدول(ڈکشنری)</code></td>
+<td>DataFrame</td>
+<td>Create a DataFrame from a dictionary of columns</td>
+</tr>
+<tr>
+<td><code>pd.csv_پڑھو(راستہ)</code></td>
+<td>DataFrame</td>
+<td>Read a CSV file from disk</td>
+</tr>
+<tr>
+<td><code>pd.csv_لکھو(df, راستہ)</code></td>
+<td>path str</td>
+<td>Write a DataFrame to a CSV file</td>
+</tr>
+<tr>
+<td><code>pd.excel_پڑھو(راستہ, sheet_name=null)</code></td>
+<td>DataFrame</td>
+<td>Read an Excel file (.xlsx)</td>
+</tr>
+<tr>
+<td><code>pd.excel_لکھو(df, راستہ)</code></td>
+<td>path str</td>
+<td>Write a DataFrame to an Excel file</td>
+</tr>
+<tr>
+<td><code>pd.ملاؤ(df1, df2, on=کالم, how="inner")</code></td>
+<td>DataFrame</td>
+<td>Merge two DataFrames (inner/left/right/outer)</td>
+</tr>
+<tr>
+<td><code>pd.سیریز(ڈیٹا, نام=null)</code></td>
+<td>Series</td>
+<td>Create a Series from a list or dict</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dataframe-properties-and-aggregations">DataFrame properties and aggregations — ڈیٹا فریم کی خصوصیات</h3>
+<p>Once you have a DataFrame <code>df</code>:</p>
+<blockquote>
+<p><strong>اردو:</strong> جب آپ کے پاس ڈیٹا فریم <code>df</code> ہو تو یہ اظہارات استعمال کر سکتے ہیں۔</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>df["کالم_نام"]</code></td>
+<td>Select a column by name</td>
+</tr>
+<tr>
+<td><code>df.shape</code></td>
+<td><code>[rows, columns]</code> tuple</td>
+</tr>
+<tr>
+<td><code>df.empty</code></td>
+<td><code>سچ</code> if DataFrame has no rows</td>
+</tr>
+<tr>
+<td><code>df.columns</code></td>
+<td>List of column names</td>
+</tr>
+<tr>
+<td><code>df["کالم"].mean()</code></td>
+<td>Arithmetic mean of column</td>
+</tr>
+<tr>
+<td><code>df["کالم"].max()</code></td>
+<td>Maximum value</td>
+</tr>
+<tr>
+<td><code>df["کالم"].min()</code></td>
+<td>Minimum value</td>
+</tr>
+<tr>
+<td><code>df["کالم"].sum()</code></td>
+<td>Sum of all values</td>
+</tr>
+<tr>
+<td><code>df.describe()</code></td>
+<td>Summary statistics for all numeric columns</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-1-create-dataframe-and-basic-statistics">Example 1 — Create DataFrame and basic statistics</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال ۱ — ڈیٹا فریم بنانا اور بنیادی اعداد و شمار</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { پانڈاز } سے "اردو/ذہین"
+
+متغیر pd = نیا پانڈاز()
+
+// طلباء کا ڈیٹا بنائیں
+متغیر ڈیٹا = {
+    "نام":   ["احمد", "فاطمہ", "علی", "زینب", "حسن"],
+    "عمر":   [20, 22, 21, 23, 20],
+    "نمبر":  [85, 92, 78, 88, 95]
+}
+
+متغیر df = pd.جدول(ڈیٹا)
+
+لکھو("ڈیٹا فریم:")
+لکھو(df)
+
+لکھو("\nشکل:", df.shape)
+لکھو("کالمز:", df.columns)
+
+لکھو("\nاوسط نمبر:", df["نمبر"].mean())
+لکھو("زیادہ سے زیادہ:", df["نمبر"].max())
+لکھو("کم سے کم:", df["نمبر"].min())
+لکھو("مجموعہ:", df["نمبر"].sum())
+
+لکھو("\nتفصیلی اعداد و شمار:")
+لکھو(df.describe())
+</code></pre></div>
+<h3 id="example-2-csv-read-and-write">Example 2 — CSV read and write</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال ۲ — CSV فائل پڑھنا اور لکھنا</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { پانڈاز } سے "اردو/ذہین"
+
+متغیر pd = نیا پانڈاز()
+
+// CSV فائل پڑھیں
+متغیر df = pd.csv_پڑھو("فروخت.csv")
+
+لکھو("مجموعی اندراجات:", df.shape[0])
+لکھو("کالم:", df.columns)
+
+// فلٹر کریں — صرف وہ قطاریں جہاں فروخت &gt; 1000
+متغیر زیادہ_فروخت = df[df["فروخت"] &gt; 1000]
+لکھو("1000 سے زیادہ فروخت:", زیادہ_فروخت.shape[0], "اندراجات")
+
+// نتیجہ محفوظ کریں
+pd.csv_لکھو(زیادہ_فروخت, "زیادہ_فروخت.csv")
+لکھو("فائل محفوظ ہو گئی")
+</code></pre></div>
+<h3 id="example-3-excel-read-and-write-with-multiple-sheets">Example 3 — Excel read and write with multiple sheets</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال ۳ — ایکسل (excel) فائل پڑھنا اور متعدد ورق (worksheet) لکھنا</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { پانڈاز } سے "اردو/ذہین"
+
+متغیر pd = نیا پانڈاز()
+
+// پہلی شیٹ پڑھیں
+متغیر df_جنوری = pd.excel_پڑھو("رپورٹ.xlsx", sheet_name="جنوری")
+متغیر df_فروری = pd.excel_پڑھو("رپورٹ.xlsx", sheet_name="فروری")
+
+لکھو("جنوری کل:", df_جنوری["فروخت"].sum())
+لکھو("فروری کل:", df_فروری["فروخت"].sum())
+
+// دو شیٹس ملائیں
+متغیر df_کل = pd.ملاؤ(df_جنوری, df_فروری, on="مصنوع", how="outer")
+لکھو("مجموعی ڈیٹا:")
+لکھو(df_کل)
+
+// Excel میں محفوظ کریں
+pd.excel_لکھو(df_کل, "مجموعی_رپورٹ.xlsx")
+لکھو("رپورٹ محفوظ ہو گئی")
+</code></pre></div>
+<h3 id="example-4-series-operations">Example 4 — Series operations</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال ۴ — سیریز کے عمل</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { پانڈاز } سے "اردو/ذہین"
+
+متغیر pd = نیا پانڈاز()
+
+// Series بنائیں
+متغیر درجہ_حرارت = pd.سیریز([23, 25, 28, 22, 30, 27, 24], نام="درجہ_حرارت")
+
+لکھو("Series:", درجہ_حرارت)
+لکھو("اوسط:", درجہ_حرارت.mean())
+لکھو("زیادہ:", درجہ_حرارت.max())
+لکھو("کم:", درجہ_حرارت.min())
+</code></pre></div>
+<hr />
+<h2 id="numpy">NumPy — نمپائی</h2>
+<p>NumPy provides fast multi-dimensional array operations.</p>
+<blockquote>
+<p><strong>اردو:</strong> نمپائی تیز رفتار کثیر الجہتی سرنی (array) عملیات فراہم کرتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>متغیر np = نیا نمپائی()
+</code></pre></div>
+<h3 id="methods_1">Methods — طریقے</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>np.سرنی(فہرست)</code></td>
+<td>Create array from list</td>
+</tr>
+<tr>
+<td><code>np.صفر([m, n])</code></td>
+<td>m×n array of zeros</td>
+</tr>
+<tr>
+<td><code>np.ایک([m, n])</code></td>
+<td>m×n array of ones</td>
+</tr>
+<tr>
+<td><code>np.ترتیب(شروع, آخر, قدم)</code></td>
+<td>Range array (like Python range)</td>
+</tr>
+<tr>
+<td><code>np.شکل_بدلو(سرنی, [m, n])</code></td>
+<td>Reshape an array</td>
+</tr>
+<tr>
+<td><code>np.مجموع(سرنی)</code></td>
+<td>Sum of all elements</td>
+</tr>
+<tr>
+<td><code>np.اوسط(سرنی)</code></td>
+<td>Mean of all elements</td>
+</tr>
+<tr>
+<td><code>np.زیادہ(سرنی)</code></td>
+<td>Maximum element</td>
+</tr>
+<tr>
+<td><code>np.کم(سرنی)</code></td>
+<td>Minimum element</td>
+</tr>
+<tr>
+<td><code>np.لاگ(سرنی)</code></td>
+<td>Element-wise natural log</td>
+</tr>
+<tr>
+<td><code>np.مطلق(سرنی)</code></td>
+<td>Element-wise absolute value</td>
+</tr>
+<tr>
+<td><code>np.جوڑ(سرنی_1, سرنی_2)</code></td>
+<td>Concatenate two arrays</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-matrix-operations">Example — Matrix operations</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال — میٹرکس عملیات</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { نمپائی } سے "اردو/ذہین"
+
+متغیر np = نیا نمپائی()
+
+// بنیادی سرنی
+متغیر اعداد = np.سرنی([1, 2, 3, 4, 5, 6])
+لکھو("سرنی:", اعداد)
+لکھو("مجموع:", np.مجموع(اعداد))
+لکھو("اوسط:", np.اوسط(اعداد))
+
+// 2D میٹرکس بنائیں
+متغیر میٹرکس = np.شکل_بدلو(اعداد, [2, 3])
+لکھو("\n2×3 میٹرکس:")
+لکھو(میٹرکس)
+
+// صفر اور ایک کی سرنیاں
+متغیر صفر_میٹرکس = np.صفر([3, 3])
+متغیر ایک_میٹرکس  = np.ایک([3, 3])
+لکھو("\nصفر میٹرکس:")
+لکھو(صفر_میٹرکس)
+لکھو("\nایک میٹرکس:")
+لکھو(ایک_میٹرکس)
+
+// حساب
+متغیر رینج = np.ترتیب(0, 10, 2)        # [0, 2, 4, 6, 8]
+لکھو("\nرینج:", رینج)
+
+متغیر x = np.سرنی([-3, -1, 0, 2, 5])
+لکھو("مطلق قدر:", np.مطلق(x))
+لکھو("لاگاریتھم (مثبت اعداد):", np.لاگ(np.سرنی([1, 2, 3, 4])))
+
+// دو سرنیاں جوڑیں
+متغیر الف = np.سرنی([1, 2, 3])
+متغیر ب   = np.سرنی([4, 5, 6])
+لکھو("جوڑ:", np.جوڑ(الف, ب))
+
+// عنصر در عنصر ضرب
+لکھو("ضرب:", الف * ب)
+لکھو("جمع:", الف + ب)
+</code></pre></div>
+<hr />
+<h2 id="tensorflow-keras-_">TensorFlow / Keras — ٹینسر_فلو / کیراس</h2>
+<p>Build and train neural networks using the Keras Sequential API.</p>
+<blockquote>
+<p><strong>اردو:</strong> کیراس کے ترتیبی ماڈل (Sequential Model) سے عصبی جال (neural network) بنائیں اور تربیت (train) دیں۔</p>
+</blockquote>
+<h3 id="layer-functions">Layer Functions — پرت فنکشن</h3>
+<p>Create layers to pass to <code>ترتیبی_ماڈل</code>:</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>ترتیبی_ماڈل</code> میں دینے کے لیے پرتیں (layers) بنائیں۔</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Equivalent</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>کیراس.گھنی(یونٹ, فعالیت="relu")</code></td>
+<td><code>Dense</code></td>
+<td>Fully-connected layer</td>
+</tr>
+<tr>
+<td><code>کیراس.ایل_ایس_ٹی_ایم(یونٹ, واپسی=جھوٹ)</code></td>
+<td><code>LSTM</code></td>
+<td>Long Short-Term Memory layer</td>
+</tr>
+<tr>
+<td><code>کیراس.تحویل_2ڈی(فلٹر, kernel)</code></td>
+<td><code>Conv2D</code></td>
+<td>2D Convolutional layer</td>
+</tr>
+<tr>
+<td><code>کیراس.اخراج(شرح)</code></td>
+<td><code>Dropout</code></td>
+<td>Regularisation dropout layer</td>
+</tr>
+<tr>
+<td><code>کیراس.بیچ_ضابطہ()</code></td>
+<td><code>BatchNormalization</code></td>
+<td>Batch normalisation layer</td>
+</tr>
+<tr>
+<td><code>کیراس.سرایت(ذخیرہ, طول)</code></td>
+<td><code>Embedding</code></td>
+<td>Word/token embedding layer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_-sequential-model">ترتیبی_ماڈل — Sequential Model</h3>
+<div class="highlight"><pre><span></span><code>متغیر ماڈل = نیا ترتیبی_ماڈل()
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ماڈل.شامل_کریں(پرت)</code></td>
+<td>Add a layer to the model</td>
+</tr>
+<tr>
+<td><code>ماڈل.مرتب_کریں(مرتب_کنندہ, نقصان, پیمانے)</code></td>
+<td>Compile: set optimizer, loss, metrics</td>
+</tr>
+<tr>
+<td><code>ماڈل.سیکھیں(X, y, دور, بیچ)</code></td>
+<td>Train the model</td>
+</tr>
+<tr>
+<td><code>ماڈل.پیش_گوئی(X)</code></td>
+<td>Run inference</td>
+</tr>
+<tr>
+<td><code>ماڈل.جانچیں(X, y)</code></td>
+<td>Evaluate on test data → [loss, accuracy]</td>
+</tr>
+<tr>
+<td><code>ماڈل.محفوظ(راستہ)</code></td>
+<td>Save model to disk</td>
+</tr>
+<tr>
+<td><code>ماڈل.لوڈ(راستہ)</code></td>
+<td>Load model from disk</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Common optimizer strings:</strong> <code>"adam"</code>, <code>"sgd"</code>, <code>"rmsprop"</code></p>
+<p><strong>Common loss strings:</strong> <code>"sparse_categorical_crossentropy"</code>, <code>"binary_crossentropy"</code>, <code>"mse"</code></p>
+<p><strong>Common metric strings:</strong> <code>"accuracy"</code>, <code>"mae"</code></p>
+<h3 id="example-1-digit-classification-mnist-style">Example 1 — Digit classification (MNIST-style)</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال ۱ — ہندسوں کی پہچان۔ ماڈل (model) کو تربیت دیں، پھر درستگی (accuracy) جانچیں اور اندازہ لگائیں (predict)۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { ٹینسر_فلو, کیراس, ترتیبی_ماڈل } سے "اردو/ذہین"
+
+// ═══════════════════════════════════════
+// ہندسوں کی پہچان — نیورل نیٹ ورک
+// ═══════════════════════════════════════
+
+// MNIST ڈیٹا لوڈ کریں
+متغیر [X_تربیت, y_تربیت, X_جانچ, y_جانچ] = ٹینسر_فلو.mnist_لوڈ()
+
+// ڈیٹا 0-1 کے درمیان کریں
+X_تربیت = X_تربیت / 255.0
+X_جانچ  = X_جانچ  / 255.0
+
+لکھو("تربیتی نمونے:", X_تربیت.shape[0])
+لکھو("جانچ نمونے:",  X_جانچ.shape[0])
+
+// ماڈل بنائیں
+متغیر ماڈل = نیا ترتیبی_ماڈل()
+
+ماڈل.شامل_کریں(کیراس.گھنی(128, فعالیت="relu"))   # پوشیدہ پرت 1
+ماڈل.شامل_کریں(کیراس.اخراج(0.2))                  # اخراج 20%
+ماڈل.شامل_کریں(کیراس.گھنی(64, فعالیت="relu"))    # پوشیدہ پرت 2
+ماڈل.شامل_کریں(کیراس.گھنی(10, فعالیت="softmax")) # آخری پرت (10 ہندسے)
+
+// مرتب کریں
+ماڈل.مرتب_کریں("adam", "sparse_categorical_crossentropy", ["accuracy"])
+
+// تربیت دیں
+لکھو("\nتربیت شروع ہو رہی ہے...")
+ماڈل.سیکھیں(X_تربیت, y_تربیت, دور=10, بیچ=32)
+
+// جانچیں
+متغیر [نقصان, درستگی] = ماڈل.جانچیں(X_جانچ, y_جانچ)
+لکھو(`\nجانچ درستگی: ${(درستگی * 100).toFixed(2)}%`)
+
+// پیش گوئی
+متغیر نتائج = ماڈل.پیش_گوئی(X_جانچ[0:5])
+لکھو("پہلے 5 نمونوں کی پیش گوئی:", نتائج)
+
+// ماڈل محفوظ کریں
+ماڈل.محفوظ("ہندسہ_ماڈل.h5")
+لکھو("ماڈل محفوظ ہو گیا")
+</code></pre></div>
+<h3 id="example-2-text-sentiment-lstm">Example 2 — Text Sentiment (LSTM)</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال ۲ — LSTM عصبی جال سے متن کے جذبات کا تجزیہ</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { کیراس, ترتیبی_ماڈل } سے "اردو/ذہین"
+
+متغیر ذخیرہ_الفاظ = 10000
+متغیر زیادہ_طول   = 200
+
+// LSTM ماڈل
+متغیر ماڈل = نیا ترتیبی_ماڈل()
+ماڈل.شامل_کریں(کیراس.سرایت(ذخیرہ_الفاظ, 64))
+ماڈل.شامل_کریں(کیراس.ایل_ایس_ٹی_ایم(64, واپسی=جھوٹ))
+ماڈل.شامل_کریں(کیراس.اخراج(0.3))
+ماڈل.شامل_کریں(کیراس.گھنی(1, فعالیت="sigmoid"))
+
+ماڈل.مرتب_کریں("adam", "binary_crossentropy", ["accuracy"])
+لکھو("LSTM جذبات ماڈل تیار ہے")
+</code></pre></div>
+<h3 id="example-3-convolutional-image-classifier">Example 3 — Convolutional Image Classifier</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال ۳ — تصویری درجہ بندی کے لیے کنوولیوشنل عصبی جال</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { کیراس, ترتیبی_ماڈل } سے "اردو/ذہین"
+
+متغیر ماڈل = نیا ترتیبی_ماڈل()
+
+// تصویر کی خصوصیات نکالنا
+ماڈل.شامل_کریں(کیراس.تحویل_2ڈی(32, [3, 3], فعالیت="relu"))
+ماڈل.شامل_کریں(کیراس.بیچ_ضابطہ())
+ماڈل.شامل_کریں(کیراس.تحویل_2ڈی(64, [3, 3], فعالیت="relu"))
+ماڈل.شامل_کریں(کیراس.اخراج(0.25))
+
+// درجہ بندی
+ماڈل.شامل_کریں(کیراس.گھنی(128, فعالیت="relu"))
+ماڈل.شامل_کریں(کیراس.گھنی(10, فعالیت="softmax"))
+
+ماڈل.مرتب_کریں("adam", "sparse_categorical_crossentropy", ["accuracy"])
+لکھو("CNN تصویر ماڈل تیار ہے")
+</code></pre></div>
+<hr />
+<h2 id="scikit-learn-_">Scikit-learn — درجہ_بندی / ریگریشن</h2>
+<blockquote>
+<p><strong>اردو:</strong> سکِٹ-لرن مشینی سیکھنا (machine learning) کے روایتی الگورتھم فراہم کرتا ہے۔ <code>درجہ_بندی</code> سے درجہ بندی (classification) اور <code>ریگریشن</code> سے مسلسل قدر کا اندازہ لگانا (predict) ممکن ہے۔</p>
+</blockquote>
+<h3 id="_-classification">درجہ_بندی — Classification</h3>
+<div class="highlight"><pre><span></span><code>متغیر clf = نیا درجہ_بندی(الگورتھم)
+</code></pre></div>
+<p><strong>Algorithm strings:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Urdu alias</th>
+<th>English alias</th>
+<th>Algorithm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>"جنگل"</code></td>
+<td><code>"random_forest"</code></td>
+<td>Random Forest</td>
+</tr>
+<tr>
+<td><code>"لاجسٹک"</code></td>
+<td><code>"logistic_regression"</code></td>
+<td>Logistic Regression</td>
+</tr>
+<tr>
+<td><code>"ایس_وی_ایم"</code></td>
+<td><code>"svm"</code></td>
+<td>Support Vector Machine</td>
+</tr>
+<tr>
+<td><code>"پڑوسی"</code></td>
+<td><code>"knn"</code></td>
+<td>K-Nearest Neighbours</td>
+</tr>
+<tr>
+<td><code>"درخت"</code></td>
+<td><code>"decision_tree"</code></td>
+<td>Decision Tree</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>clf.سیکھیں(X, y)</code></td>
+<td>Train the classifier</td>
+</tr>
+<tr>
+<td><code>clf.پیش_گوئی(X)</code></td>
+<td>Predict class labels</td>
+</tr>
+<tr>
+<td><code>clf.درستگی(X, y)</code></td>
+<td>Return accuracy score (0.0–1.0)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="regression">ریگریشن — Regression</h3>
+<div class="highlight"><pre><span></span><code>متغیر reg = نیا ریگریشن(الگورتھم)
+</code></pre></div>
+<p><strong>Algorithm strings:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Urdu alias</th>
+<th>English alias</th>
+<th>Algorithm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>"خطی"</code></td>
+<td><code>"linear"</code></td>
+<td>Linear Regression</td>
+</tr>
+<tr>
+<td><code>"ridge"</code></td>
+<td><code>"ridge"</code></td>
+<td>Ridge Regression</td>
+</tr>
+<tr>
+<td><code>"lasso"</code></td>
+<td><code>"lasso"</code></td>
+<td>Lasso Regression</td>
+</tr>
+<tr>
+<td><code>"جنگل"</code></td>
+<td><code>"random_forest"</code></td>
+<td>Random Forest Regression</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>reg.سیکھیں(X, y)</code></td>
+<td>Train the regressor</td>
+</tr>
+<tr>
+<td><code>reg.پیش_گوئی(X)</code></td>
+<td>Predict continuous values</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-utilities">ڈیٹا — Data Utilities</h3>
+<blockquote>
+<p><strong>اردو:</strong> ڈیٹاسیٹ (dataset) کو تقسیم کرنے، معمول بنانے، اور CSV پڑھنے کے لیے مددگار فنکشن۔</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ڈیٹا.تقسیم(X, y, جانچ=0.2)</code></td>
+<td>Train/test split → <code>[X_train, X_test, y_train, y_test]</code></td>
+</tr>
+<tr>
+<td><code>ڈیٹا.معمول(X)</code></td>
+<td>Normalise features to 0–1 range</td>
+</tr>
+<tr>
+<td><code>ڈیٹا.پڑھو_csv(راستہ)</code></td>
+<td>Read CSV → DataFrame</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-spam-detection-with-random-forest">Example — Spam detection with Random Forest</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال — رینڈم فارسٹ سے سپیم پیغام پہچاننا۔ ماڈل کو تربیت دیں، درستگی جانچیں، پھر نئے پیغامات پر اندازہ لگائیں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { درجہ_بندی, ڈیٹا } سے "اردو/ذہین"
+
+// ═══════════════════════════════════════
+// سپیم پیغام پہچاننے والا
+// ═══════════════════════════════════════
+
+// ڈیٹا لوڈ کریں
+متغیر df = ڈیٹا.پڑھو_csv("پیغامات.csv")
+
+// فیچر اور لیبل الگ کریں
+متغیر X = df["خصوصیات"]
+متغیر y = df["سپیم"]
+
+// تربیت اور جانچ میں تقسیم (80/20)
+متغیر [X_تربیت, X_جانچ, y_تربیت, y_جانچ] = ڈیٹا.تقسیم(X, y, جانچ=0.2)
+
+// معمول بنائیں
+X_تربیت = ڈیٹا.معمول(X_تربیت)
+X_جانچ  = ڈیٹا.معمول(X_جانچ)
+
+// رینڈم فارسٹ بنائیں اور تربیت دیں
+متغیر clf = نیا درجہ_بندی("جنگل")
+clf.سیکھیں(X_تربیت, y_تربیت)
+
+// جانچیں
+متغیر درستگی = clf.درستگی(X_جانچ, y_جانچ)
+لکھو(`درستگی: ${(درستگی * 100).toFixed(1)}%`)
+
+// نئے پیغامات کی پیش گوئی
+متغیر نئے_پیغامات = [[0.8, 0.2, 0.9], [0.1, 0.7, 0.1]]
+متغیر نتائج = clf.پیش_گوئی(نئے_پیغامات)
+لکھو("پیش گوئی:", نتائج)  // [1, 0] — سپیم/نہیں
+</code></pre></div>
+<h3 id="example-house-price-regression">Example — House price regression</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال — خطی ریگریشن سے مکان کی قیمت کا اندازہ لگانا</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { ریگریشن, ڈیٹا } سے "اردو/ذہین"
+
+متغیر df = ڈیٹا.پڑھو_csv("مکانات.csv")
+
+متغیر X = df[["رقبہ", "کمرے", "منزل", "عمر"]]
+متغیر y = df["قیمت"]
+
+متغیر [X_تربیت, X_جانچ, y_تربیت, y_جانچ] = ڈیٹا.تقسیم(X, y, جانچ=0.2)
+
+متغیر reg = نیا ریگریشن("خطی")
+reg.سیکھیں(X_تربیت, y_تربیت)
+
+متغیر پیش_گوئیاں = reg.پیش_گوئی(X_جانچ)
+لکھو("پہلے 5 قیمتیں:", پیش_گوئیاں[0:5])
+</code></pre></div>
+<hr />
+<h2 id="llm-__">LLM — بڑا_لسانی_ماڈل</h2>
+<p>Run local large language models (GGUF format via llama.cpp) directly from Urdu code.</p>
+<blockquote>
+<p><strong>اردو:</strong> مقامی بڑے لسانی ماڈل (LLM) کو اردو کوڈ سے چلائیں۔ یہ GGUF فارمیٹ (llama.cpp) کو سپورٹ کرتا ہے۔</p>
+</blockquote>
+<h3 id="constructor_1">Constructor</h3>
+<div class="highlight"><pre><span></span><code>متغیر llm = نیا بڑا_لسانی_ماڈل(ماڈل_راستہ, { تھریڈ: 4, طوالت: 512 })
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>تھریڈ</code></td>
+<td>int</td>
+<td><code>4</code></td>
+<td>CPU threads to use</td>
+</tr>
+<tr>
+<td><code>طوالت</code></td>
+<td>int</td>
+<td><code>512</code></td>
+<td>Max tokens to generate</td>
+</tr>
+</tbody>
+</table>
+<h3 id="methods_2">Methods — طریقے</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>بڑا_لسانی_ماڈل.متاح()</code></td>
+<td>bool</td>
+<td>Static check — is llama.cpp installed?</td>
+</tr>
+<tr>
+<td><code>llm.بات_کرو(سوال)</code></td>
+<td>string</td>
+<td>Single-turn question → answer</td>
+</tr>
+<tr>
+<td><code>llm.چیٹ(پیغامات)</code></td>
+<td>string</td>
+<td>Multi-turn chat; pass list of <code>{کردار, مواد}</code></td>
+</tr>
+<tr>
+<td><code>llm.ایمبیڈنگ(متن)</code></td>
+<td>float[]</td>
+<td>Get embedding vector for text</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-1-simple-qa">Example 1 — Simple Q&amp;A</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال ۱ — سادہ سوال و جواب</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { بڑا_لسانی_ماڈل } سے "اردو/ذہین"
+
+// LLM دستیاب ہے؟
+اگر (نہیں بڑا_لسانی_ماڈل.متاح()) {
+    لکھو("llama.cpp نصب نہیں — pip install llama-cpp-python")
+    عمل_ختم(1)
+}
+
+متغیر llm = نیا بڑا_لسانی_ماڈل("ماڈلز/llama-3.gguf", { تھریڈ: 8, طوالت: 256 })
+
+متغیر جواب = llm.بات_کرو("پاکستان کا دارالحکومت کیا ہے؟")
+لکھو("جواب:", جواب)
+</code></pre></div>
+<h3 id="example-2-multi-turn-chat">Example 2 — Multi-turn chat</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال ۲ — کثیر رخی گفتگو</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { بڑا_لسانی_ماڈل } سے "اردو/ذہین"
+
+متغیر llm = نیا بڑا_لسانی_ماڈل("ماڈلز/llama-3.gguf", { طوالت: 512 })
+
+متغیر گفتگو = [
+    { کردار: "system",    مواد: "آپ ایک مددگار اردو استاد ہیں۔" },
+    { کردار: "user",      مواد: "ضرب کے قواعد سمجھائیں۔" }
+]
+
+متغیر جواب_1 = llm.چیٹ(گفتگو)
+لکھو("استاد:", جواب_1)
+
+// گفتگو جاری رکھیں
+گفتگو.شامل({ کردار: "assistant", مواد: جواب_1 })
+گفتگو.شامل({ کردار: "user",      مواد: "ایک مثال دیں۔" })
+
+متغیر جواب_2 = llm.چیٹ(گفتگو)
+لکھو("استاد:", جواب_2)
+</code></pre></div>
+<h3 id="example-3-semantic-search-with-embeddings">Example 3 — Semantic search with embeddings</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال ۳ — ایمبیڈنگ ویکٹر سے معنائی تلاش</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { بڑا_لسانی_ماڈل } سے "اردو/ذہین"
+
+متغیر llm = نیا بڑا_لسانی_ماڈل("ماڈلز/embedding.gguf")
+
+متغیر جملے = [
+    "آج موسم بہت اچھا ہے",
+    "کراچی پاکستان کا بڑا شہر ہے",
+    "پروگرامنگ ایک اہم ہنر ہے"
+]
+
+// ہر جملے کی ایمبیڈنگ نکالیں
+متغیر ویکٹر = []
+کے_لیے (متغیر جملہ کا جملے) {
+    متغیر v = llm.ایمبیڈنگ(جملہ)
+    ویکٹر.شامل(v)
+    لکھو(`"${جملہ}" — ویکٹر سائز: ${v.length}`)
+}
+</code></pre></div>
+<hr />
+<p><em>Previous: <a href="../database/">Database →</a> | Next: <a href="../http/">HTTP Client →</a></em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

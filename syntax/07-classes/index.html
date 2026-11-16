@@ -1,0 +1,1665 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Classes and OOP — کلاسز اور آبجیکٹ پر مبنی پروگرامنگ - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#classes-and-oop" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Classes and OOP — کلاسز اور آبجیکٹ پر مبنی پروگرامنگ
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorial/beginner/" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../libraries/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/beginner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intermediate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../libraries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-class-declaration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Class Declaration — بنیادی کلاس اعلان
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties-and-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties and Methods — خاصیتیں اور طریقے
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#this-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        یہ — this reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-instances" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        نیا — Creating Instances
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inheritance — توسیع
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#super" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        سپر — super
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-methods-and-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        جامد — Static Methods and Properties
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-modifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access Modifiers — رسائی ترمیم کار
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getters-and-setters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getters and Setters — حاصل کنندہ اور مقرر کنندہ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polymorphism" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Polymorphism — کثیرالشکلی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-bank-account-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete Bank Account Example — مکمل بینک کھاتے کی مثال
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mixins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mixins — ملاوٹ
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="classes-and-oop">Classes and OOP — کلاسز اور آبجیکٹ پر مبنی پروگرامنگ</h1>
+<p>The Urdu Programming Language has full object-oriented programming support. Classes group data and behaviour together. This document covers the complete class system including inheritance, access modifiers, getters/setters, and polymorphism.</p>
+<blockquote>
+<p><strong>اردو:</strong> اردو پروگرامنگ لینگویج آبجیکٹ پر مبنی پروگرامنگ (OOP) کی مکمل حمایت کرتی ہے۔ کلاسیں ڈیٹا اور طرزِعمل کو ایک ساتھ جمع کرتی ہیں۔ یہ دستاویز مکمل کلاس نظام کا احاطہ کرتی ہے — وراثت، رسائی ترمیم کار، گیٹر/سیٹر اور کثیرالشکلی (polymorphism) سمیت۔</p>
+</blockquote>
+<hr />
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#basic-class-declaration">Basic Class Declaration</a></li>
+<li><a href="#properties-and-methods">Properties and Methods</a></li>
+<li><a href="#یہ--this-reference">یہ — this reference</a></li>
+<li><a href="#نیا--creating-instances">نیا — Creating Instances</a></li>
+<li><a href="#inheritance--توسیع">Inheritance — توسیع</a></li>
+<li><a href="#سپر--super">سپر — super</a></li>
+<li><a href="#جامد--static-methods-and-properties">جامد — Static Methods and Properties</a></li>
+<li><a href="#access-modifiers">Access Modifiers</a></li>
+<li><a href="#getters-and-setters">Getters and Setters</a></li>
+<li><a href="#polymorphism">Polymorphism</a></li>
+<li><a href="#complete-bank-account-example">Complete Bank Account Example</a></li>
+<li><a href="#mixins">Mixins</a></li>
+</ol>
+<hr />
+<h2 id="basic-class-declaration">Basic Class Declaration — بنیادی کلاس اعلان</h2>
+<p><strong>Syntax:</strong></p>
+<div class="highlight"><pre><span></span><code>کلاس نام {
+    تعمیر(پیرامیٹر) {
+        // initialization
+    }
+
+    طریقہ() {
+        // method body
+    }
+}
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> کلاس بنانے کے لیے <code>کلاس</code> کلیدی لفظ، پھر نام، پھر <code>تعمیر</code> (constructor) جو نئی مثال بناتے وقت چلتا ہے، اور پھر طریقے (methods)۔ <code>یہ</code> موجودہ مثال کا حوالہ ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>کلاس حیوان {
+    تعمیر(نام, آواز) {
+        یہ.نام = نام;
+        یہ.آواز = آواز;
+    }
+
+    بولو() {
+        لکھو(`${یہ.نام} کہتا ہے: ${یہ.آواز}`);
+    }
+
+    تعارف() {
+        واپس `میں ${یہ.نام} ہوں`;
+    }
+}
+
+مستقل بلی = نیا حیوان("میو", "میاؤں");
+بلی.بولو();            // میو کہتا ہے: میاؤں
+لکھو(بلی.تعارف());    // میں میو ہوں
+</code></pre></div>
+<hr />
+<h2 id="properties-and-methods">Properties and Methods — خاصیتیں اور طریقے</h2>
+<p>Properties are data attached to instances. Methods are functions attached to instances.</p>
+<blockquote>
+<p><strong>اردو:</strong> خاصیتیں (properties) مثال سے جڑا ڈیٹا ہیں۔ طریقے (methods) مثال سے جڑے فنکشن ہیں۔ <code>تعمیر</code> میں <code>یہ.نام = قدر</code> سے خاصیت بنائی جاتی ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>کلاس مستطیل {
+    تعمیر(چوڑائی, اونچائی) {
+        یہ.چوڑائی = چوڑائی;
+        یہ.اونچائی = اونچائی;
+    }
+
+    رقبہ() {
+        واپس یہ.چوڑائی * یہ.اونچائی;
+    }
+
+    محیط() {
+        واپس 2 * (یہ.چوڑائی + یہ.اونچائی);
+    }
+
+    تفصیل() {
+        واپس `مستطیل ${یہ.چوڑائی}×${یہ.اونچائی} — رقبہ: ${یہ.رقبہ()}`;
+    }
+}
+
+مستقل شکل = نیا مستطیل(8, 5);
+لکھو(شکل.رقبہ());      // 40
+لکھو(شکل.محیط());      // 26
+لکھو(شکل.تفصیل());     // مستطیل 8×5 — رقبہ: 40
+</code></pre></div>
+<p><strong>Class fields (direct property declaration):</strong></p>
+<div class="highlight"><pre><span></span><code>کلاس گاڑی {
+    برانڈ = "نامعلوم";
+    رفتار = 0;
+    چل_رہی = جھوٹ;
+
+    تعمیر(برانڈ) {
+        یہ.برانڈ = برانڈ;
+    }
+
+    چلاؤ(تیزی) {
+        یہ.چل_رہی = سچ;
+        یہ.رفتار = تیزی;
+        لکھو(`${یہ.برانڈ} ${تیزی} km/h پر چل رہی ہے`);
+    }
+
+    روکو() {
+        یہ.رفتار = 0;
+        یہ.چل_رہی = جھوٹ;
+        لکھو(`${یہ.برانڈ} رک گئی`);
+    }
+}
+
+مستقل میری_گاڑی = نیا گاڑی("ٹویوٹا");
+میری_گاڑی.چلاؤ(120);    // ٹویوٹا 120 km/h پر چل رہی ہے
+میری_گاڑی.روکو();        // ٹویوٹا رک گئی
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> کلاس فیلڈز <code>تعمیر</code> سے باہر براہ راست ڈکلیئر کیے جا سکتے ہیں — پہلے سے طے قدریں دینے کے لیے مفید۔</p>
+</blockquote>
+<hr />
+<h2 id="this-reference">یہ — this reference</h2>
+<p><code>یہ</code> inside a method refers to the current instance.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>یہ</code> کسی طریقے کے اندر موجودہ مثال کا حوالہ دیتا ہے — جیسے انسان خود کو "میں" کہتا ہے، کلاس کا طریقہ <code>یہ</code> کہتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>کلاس ٹائمر {
+    تعمیر() {
+        یہ.وقت = 0;
+        یہ.چل_رہا = جھوٹ;
+    }
+
+    شروع_کرو() {
+        یہ.چل_رہا = سچ;
+        لکھو("ٹائمر شروع");
+        واپس یہ;    // method chaining
+    }
+
+    آگے_بڑھاؤ(سیکنڈ) {
+        اگر (یہ.چل_رہا) {
+            یہ.وقت += سیکنڈ;
+        }
+        واپس یہ;
+    }
+
+    روکو() {
+        یہ.چل_رہا = جھوٹ;
+        لکھو(`ٹائمر رکا — کل وقت: ${یہ.وقت} سیکنڈ`);
+        واپس یہ;
+    }
+}
+
+// Method chaining
+نیا ٹائمر()
+    .شروع_کرو()
+    .آگے_بڑھاؤ(5)
+    .آگے_بڑھاؤ(10)
+    .روکو();
+// ٹائمر شروع
+// ٹائمر رکا — کل وقت: 15 سیکنڈ
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> طریقے سے <code>یہ</code> واپس کر کے "طریقوں کی زنجیر" بنائی جا سکتی ہے — ایک کے بعد دوسرا طریقہ ایک لائن میں چلانا بہت پڑھنے میں آسان لگتا ہے۔</p>
+</blockquote>
+<hr />
+<h2 id="creating-instances">نیا — Creating Instances</h2>
+<p><code>نیا</code> calls the constructor and returns a new object.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>نیا</code> تعمیر کنندہ کو بلاتا ہے اور ایک نئی شے واپس کرتا ہے۔ ہر <code>نیا کلاس_نام()</code> ایک الگ مثال بناتا ہے اپنی خاصیتوں کے ساتھ۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>کلاس نقطہ {
+    تعمیر(x = 0, y = 0) {
+        یہ.x = x;
+        یہ.y = y;
+    }
+
+    فاصلہ(دوسرا) {
+        واپس ریاضی.جذر((یہ.x - دوسرا.x) ** 2 + (یہ.y - دوسرا.y) ** 2);
+    }
+
+    جمع(دوسرا) {
+        واپس نیا نقطہ(یہ.x + دوسرا.x, یہ.y + دوسرا.y);
+    }
+
+    toString() {
+        واپس `(${یہ.x}, ${یہ.y})`;
+    }
+}
+
+مستقل الف = نیا نقطہ(0, 0);
+مستقل ب   = نیا نقطہ(3, 4);
+مستقل ج   = الف.جمع(ب);
+
+لکھو(الف.فاصلہ(ب));    // 5
+لکھو(`${ج}`);          // (3, 4)
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> نقطے کے درمیان فاصلہ فیثاغورث کے اصول سے نکالا گیا۔ <code>جمع</code> طریقہ ایک نیا نقطہ واپس کرتا ہے — اصل نقطے تبدیل نہیں ہوتے۔</p>
+</blockquote>
+<hr />
+<h2 id="inheritance">Inheritance — توسیع</h2>
+<p><code>توسیع</code> creates a child class that inherits from a parent class.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>توسیع</code> بچہ کلاس بناتا ہے جو والدین کلاس سے وراثت لیتا ہے۔ بچہ کلاس والدین کے تمام طریقے اور خاصیتیں پاتا ہے، اور اپنے بھی شامل کر سکتا ہے یا موجودہ اوور رائیڈ کر سکتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>کلاس شکل {
+    تعمیر(رنگ = "کالا") {
+        یہ.رنگ = رنگ;
+    }
+
+    بیان() {
+        واپس `${یہ.رنگ} شکل`;
+    }
+
+    رقبہ() {
+        واپس 0;
+    }
+}
+
+کلاس دائرہ توسیع شکل {
+    تعمیر(رداس, رنگ) {
+        سپر(رنگ);           // call parent constructor
+        یہ.رداس = رداس;
+    }
+
+    رقبہ() {
+        واپس ریاضی.PI * یہ.رداس ** 2;
+    }
+
+    بیان() {
+        واپس `${سپر.بیان()} — دائرہ (رداس: ${یہ.رداس})`;
+    }
+}
+
+کلاس مثلث توسیع شکل {
+    تعمیر(قاعدہ, اونچائی, رنگ) {
+        سپر(رنگ);
+        یہ.قاعدہ = قاعدہ;
+        یہ.اونچائی = اونچائی;
+    }
+
+    رقبہ() {
+        واپس 0.5 * یہ.قاعدہ * یہ.اونچائی;
+    }
+}
+
+مستقل د = نیا دائرہ(7, "سرخ");
+مستقل م = نیا مثلث(6, 4, "نیلا");
+
+لکھو(د.بیان());              // سرخ شکل — دائرہ (رداس: 7)
+لکھو(گول(د.رقبہ(), 2));      // 153.94
+لکھو(م.رقبہ());              // 12
+لکھو(م مثال شکل);            // true
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> <code>مثال</code> آپریٹر سے جانچ سکتے ہیں کہ کوئی شے کسی کلاس کی مثال ہے یا نہیں — <code>م مثال شکل</code> سچ ہے کیونکہ مثلث شکل سے وراثت لیتا ہے۔</p>
+</blockquote>
+<hr />
+<h2 id="super">سپر — super</h2>
+<p><code>سپر()</code> calls the parent constructor. <code>سپر.طریقہ()</code> calls a parent method.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>سپر()</code> والدین کے تعمیر کنندہ کو بلاتا ہے۔ <code>سپر.طریقہ()</code> والدین کا طریقہ بلاتا ہے۔ بچہ کلاس کے <code>تعمیر</code> میں <code>یہ</code> استعمال کرنے سے <strong>پہلے</strong> <code>سپر()</code> ضرور بلانا پڑتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>کلاس شخص {
+    تعمیر(نام, عمر) {
+        یہ.نام = نام;
+        یہ.عمر = عمر;
+    }
+
+    تعارف() {
+        واپس `میرا نام ${یہ.نام} ہے، عمر ${یہ.عمر}`;
+    }
+}
+
+کلاس طالب_علم توسیع شخص {
+    تعمیر(نام, عمر, جماعت) {
+        سپر(نام, عمر);      // must call super before using یہ
+        یہ.جماعت = جماعت;
+    }
+
+    تعارف() {
+        واپس `${سپر.تعارف()}، جماعت ${یہ.جماعت}`;
+    }
+}
+
+کلاس استاد توسیع شخص {
+    تعمیر(نام, عمر, مضمون) {
+        سپر(نام, عمر);
+        یہ.مضمون = مضمون;
+    }
+
+    تعارف() {
+        واپس `${سپر.تعارف()}، مضمون: ${یہ.مضمون}`;
+    }
+}
+
+مستقل ط = نیا طالب_علم("احمد", 18, "دہم");
+مستقل ا = نیا استاد("فاطمہ", 35, "ریاضی");
+
+لکھو(ط.تعارف());
+// میرا نام احمد ہے، عمر 18، جماعت دہم
+
+لکھو(ا.تعارف());
+// میرا نام فاطمہ ہے، عمر 35، مضمون: ریاضی
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> <code>سپر.تعارف()</code> والدین کا <code>تعارف</code> طریقہ بلاتا ہے اور بچہ کلاس اس میں اپنی معلومات شامل کرتا ہے — والدین کا کوڈ دوبارہ لکھنے کی ضرورت نہیں!</p>
+</blockquote>
+<hr />
+<h2 id="static-methods-and-properties">جامد — Static Methods and Properties</h2>
+<p><code>جامد</code> members belong to the class itself, not to instances.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>جامد</code> ارکان کلاس سے تعلق رکھتے ہیں، مثالوں سے نہیں۔ انہیں <code>کلاس_نام.طریقہ()</code> سے بلاتے ہیں، کسی مثال کی ضرورت نہیں۔ یوٹیلیٹی فنکشن اور فیکٹری طریقوں کے لیے بہترین ہیں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>کلاس درجہ_حرارت {
+    جامد مطلق_صفر = -273.15;
+
+    تعمیر(قدر, اکائی = "C") {
+        یہ.قدر = قدر;
+        یہ.اکائی = اکائی;
+    }
+
+    جامد سیلسیس_سے_فارنہائٹ(c) {
+        واپس c * 9 / 5 + 32;
+    }
+
+    جامد فارنہائٹ_سے_سیلسیس(f) {
+        واپس (f - 32) * 5 / 9;
+    }
+
+    جامد سیلسیس_سے_کیلون(c) {
+        واپس c - درجہ_حرارت.مطلق_صفر;
+    }
+
+    تبدیل_کرو(ہدف) {
+        اگر (یہ.اکائی === "C" اور ہدف === "F") {
+            واپس نیا درجہ_حرارت(درجہ_حرارت.سیلسیس_سے_فارنہائٹ(یہ.قدر), "F");
+        }
+        واپس یہ;
+    }
+
+    toString() {
+        واپس `${یہ.قدر}°${یہ.اکائی}`;
+    }
+}
+
+لکھو(درجہ_حرارت.مطلق_صفر);                            // -273.15
+لکھو(درجہ_حرارت.سیلسیس_سے_فارنہائٹ(100));            // 212
+لکھو(درجہ_حرارت.فارنہائٹ_سے_سیلسیس(32));             // 0
+
+مستقل گرم = نیا درجہ_حرارت(37);
+لکھو(`${گرم.تبدیل_کرو("F")}`);    // 98.6°F
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Static factory methods
+کلاس رنگ {
+    تعمیر(سرخ, سبز, نیلا) {
+        یہ.سرخ = سرخ;
+        یہ.سبز = سبز;
+        یہ.نیلا = نیلا;
+    }
+
+    جامد سے_ہیکس(ہیکس) {
+        مستقل n = عدد("0x" + ہیکس.بدلو("#", ""));
+        واپس نیا رنگ((n &gt;&gt; 16) &amp; 255, (n &gt;&gt; 8) &amp; 255, n &amp; 255);
+    }
+
+    ہیکس_میں() {
+        واپس "#" + [یہ.سرخ, یہ.سبز, یہ.نیلا]
+            .تبدیل(v =&gt; متن(v).padStart(2, "0"))
+            .جوڑو("");
+    }
+}
+
+مستقل نیلا = رنگ.سے_ہیکس("#0000FF");
+لکھو(نیلا.سرخ, نیلا.سبز, نیلا.نیلا);    // 0 0 255
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> جامد فیکٹری طریقے کلاس کی مثال بنانے کے مختلف طریقے فراہم کرتے ہیں — <code>رنگ.سے_ہیکس("#0000FF")</code> ہیکس کوڈ سے رنگ بناتا ہے۔</p>
+</blockquote>
+<hr />
+<h2 id="access-modifiers">Access Modifiers — رسائی ترمیم کار</h2>
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Meaning</th>
+<th>Access</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>عوامی</code></td>
+<td>public</td>
+<td>Accessible everywhere (default)</td>
+</tr>
+<tr>
+<td><code>نجی</code></td>
+<td>private</td>
+<td>Only within the class</td>
+</tr>
+<tr>
+<td><code>محفوظ</code></td>
+<td>protected</td>
+<td>Class and subclasses</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>اردو:</strong> رسائی ترمیم کار یہ طے کرتے ہیں کہ کلاس کے ارکان کہاں سے قابلِ رسائی ہیں: <code>عوامی</code> ہر جگہ، <code>نجی</code> صرف اس کلاس کے اندر، <code>محفوظ</code> اس کلاس اور اس کے بچوں میں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>کلاس صارف {
+    عوامی نام;
+    محفوظ ای_میل;
+    نجی #پاس_ورڈ;     // private fields use # prefix
+
+    تعمیر(نام, ای_میل, پاس_ورڈ) {
+        یہ.نام = نام;
+        یہ.ای_میل = ای_میل;
+        یہ.#پاس_ورڈ = پاس_ورڈ;
+    }
+
+    عوامی پاس_ورڈ_چیک(آزمائش) {
+        واپس یہ.#پاس_ورڈ === آزمائش;
+    }
+
+    نجی #ہیش_کرو(قدر) {
+        // internal utility
+        واپس `hashed_${قدر}`;
+    }
+}
+
+مستقل u = نیا صارف("احمد", "a@b.com", "راز123");
+لکھو(u.نام);                       // احمد
+لکھو(u.پاس_ورڈ_چیک("راز123"));    // true
+// لکھو(u.#پاس_ورڈ);               // غلطی — private
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> نجی فیلڈز <code>#</code> سے شروع ہوتی ہیں — <code>#پاس_ورڈ</code> باہر سے قابلِ رسائی نہیں۔ صرف <code>پاس_ورڈ_چیک</code> طریقے سے جانچ سکتے ہیں۔ یہ ڈیٹا چھپانے (encapsulation) کا بنیادی طریقہ ہے۔</p>
+</blockquote>
+<hr />
+<h2 id="getters-and-setters">Getters and Setters — حاصل کنندہ اور مقرر کنندہ</h2>
+<p><code>حاصل_کرو</code> defines a computed read property. <code>مقرر_کرو</code> defines a property setter with validation.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>حاصل_کرو</code> ایک محسوب خاصیت بناتا ہے جو فنکشن کی طرح کام کرتی ہے لیکن خاصیت کی طرح پڑھی جاتی ہے۔ <code>مقرر_کرو</code> سیٹر بناتا ہے جہاں قدر سیٹ کرتے وقت تصدیق کی جا سکتی ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>کلاس دائرہ {
+    تعمیر(رداس) {
+        یہ._رداس = رداس;
+    }
+
+    حاصل_کرو رداس() {
+        واپس یہ._رداس;
+    }
+
+    مقرر_کرو رداس(قدر) {
+        اگر (قدر &lt; 0) پھینکو نیا RangeError("رداس منفی نہیں ہو سکتا");
+        یہ._رداس = قدر;
+    }
+
+    حاصل_کرو قطر() {
+        واپس یہ._رداس * 2;
+    }
+
+    حاصل_کرو رقبہ() {
+        واپس ریاضی.PI * یہ._رداس ** 2;
+    }
+
+    حاصل_کرو محیط() {
+        واپس 2 * ریاضی.PI * یہ._رداس;
+    }
+}
+
+مستقل د = نیا دائرہ(5);
+لکھو(د.رداس);              // 5
+لکھو(د.قطر);               // 10
+لکھو(گول(د.رقبہ, 2));      // 78.54
+لکھو(گول(د.محیط, 2));      // 31.42
+
+د.رداس = 10;
+لکھو(د.قطر);               // 20
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> <code>حاصل_کرو</code> خاصیتیں فنکشن کال بغیر <code>()</code> کے استعمال ہوتی ہیں — <code>د.رقبہ</code> پڑھنے سے حساب خودبخود ہوتا ہے۔ <code>مقرر_کرو</code> میں تصدیق سے منفی رداس کی غلطی روکی گئی۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>کلاس درجہ_حرارت_گیج {
+    تعمیر() {
+        یہ._سیلسیس = 0;
+    }
+
+    حاصل_کرو سیلسیس() { واپس یہ._سیلسیس; }
+    مقرر_کرو سیلسیس(قدر) { یہ._سیلسیس = قدر; }
+
+    حاصل_کرو فارنہائٹ() { واپس یہ._سیلسیس * 9 / 5 + 32; }
+    مقرر_کرو فارنہائٹ(قدر) { یہ._سیلسیس = (قدر - 32) * 5 / 9; }
+
+    حاصل_کرو کیلون() { واپس یہ._سیلسیس + 273.15; }
+}
+
+مستقل گیج = نیا درجہ_حرارت_گیج();
+گیج.سیلسیس = 100;
+لکھو(گیج.فارنہائٹ);    // 212
+لکھو(گیج.کیلون);       // 373.15
+
+گیج.فارنہائٹ = 32;
+لکھو(گیج.سیلسیس);      // 0
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> درجہ حرارت کی مثال بہت خوبصورت ہے — ایک کسی بھی اکائی میں سیٹ کریں، باقی سب خودبخود تبدیل ہو جاتے ہیں!</p>
+</blockquote>
+<hr />
+<h2 id="polymorphism">Polymorphism — کثیرالشکلی</h2>
+<p>Subclasses override methods. Code that calls the method gets the right behaviour at runtime.</p>
+<blockquote>
+<p><strong>اردو:</strong> کثیرالشکلی (polymorphism) کا مطلب ہے کہ مختلف کلاسیں ایک ہی نام کا طریقہ مختلف طریقے سے چلاتی ہیں۔ کوڈ طریقہ بلاتا ہے، چلتے وقت صحیح برتاؤ ملتا ہے — یہ OOP کی طاقت ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>کلاس شکل {
+    رقبہ() { واپس 0; }
+    محیط() { واپس 0; }
+    toString() { واپس `شکل (رقبہ: ${گول(یہ.رقبہ(), 2)})`; }
+}
+
+کلاس دائرہ توسیع شکل {
+    تعمیر(r) { سپر(); یہ.r = r; }
+    رقبہ() { واپس ریاضی.PI * یہ.r ** 2; }
+    محیط() { واپس 2 * ریاضی.PI * یہ.r; }
+    toString() { واپس `دائرہ r=${یہ.r} — ${سپر.toString()}`; }
+}
+
+کلاس مربع توسیع شکل {
+    تعمیر(a) { سپر(); یہ.a = a; }
+    رقبہ() { واپس یہ.a ** 2; }
+    محیط() { واپس 4 * یہ.a; }
+    toString() { واپس `مربع a=${یہ.a} — ${سپر.toString()}`; }
+}
+
+کلاس مستطیل توسیع شکل {
+    تعمیر(w, h) { سپر(); یہ.w = w; یہ.h = h; }
+    رقبہ() { واپس یہ.w * یہ.h; }
+    محیط() { واپس 2 * (یہ.w + یہ.h); }
+}
+
+// Polymorphic usage — same call, different result
+مستقل شکلیں = [
+    نیا دائرہ(5),
+    نیا مربع(4),
+    نیا مستطیل(3, 6)
+];
+
+مستقل کل_رقبہ = شکلیں.کم_کرو((جمع, ش) =&gt; جمع + ش.رقبہ(), 0);
+
+کے_لیے (مستقل ش کا شکلیں) {
+    لکھو(`${ش} | محیط: ${گول(ش.محیط(), 2)}`);
+}
+
+لکھو(`کل رقبہ: ${گول(کل_رقبہ, 2)}`);
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> <code>شکلیں</code> فہرست میں مختلف شکلیں ہیں — دائرہ، مربع، مستطیل۔ <code>ش.رقبہ()</code> سب کے لیے ایک ہی کوڈ لیکن ہر شکل اپنا حساب کرتی ہے۔ یہی کثیرالشکلی کی خوبصورتی ہے!</p>
+</blockquote>
+<hr />
+<h2 id="complete-bank-account-example">Complete Bank Account Example — مکمل بینک کھاتے کی مثال</h2>
+<p>A full example combining constructor, private fields, getters, methods, and inheritance.</p>
+<blockquote>
+<p><strong>اردو:</strong> یہ مکمل مثال تعمیر کنندہ، نجی فیلڈز، گیٹرز، طریقوں اور وراثت سب کو ملا کر دکھاتی ہے۔ ایک حقیقی بینک نظام کا سادہ ورژن!</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>کلاس بینک_کھاتہ {
+    #بقیہ;
+    #لین_دین = [];
+
+    تعمیر(مالک, ابتدائی_رقم = 0) {
+        یہ.مالک = مالک;
+        یہ.#بقیہ = ابتدائی_رقم;
+        یہ.کھاتہ_نمبر = "PKT-" + ریاضی.فرش(اتفاقی() * 1e9);
+    }
+
+    حاصل_کرو بقیہ() {
+        واپس یہ.#بقیہ;
+    }
+
+    جمع_کرو(رقم, وضاحت = "جمع") {
+        اگر (رقم &lt;= 0) پھینکو نیا Error("رقم صفر سے زیادہ ہونی چاہیے");
+        یہ.#بقیہ += رقم;
+        یہ.#لین_دین.شامل({ نوع: "جمع", رقم, وضاحت, وقت: نیا Date() });
+        واپس یہ;
+    }
+
+    نکالو(رقم, وضاحت = "نکلوائی") {
+        اگر (رقم &lt;= 0) پھینکو نیا Error("رقم صفر سے زیادہ ہونی چاہیے");
+        اگر (رقم &gt; یہ.#بقیہ) پھینکو نیا Error("ناکافی بقیہ");
+        یہ.#بقیہ -= رقم;
+        یہ.#لین_دین.شامل({ نوع: "نکلوائی", رقم, وضاحت, وقت: نیا Date() });
+        واپس یہ;
+    }
+
+    منتقل_کرو(ہدف_کھاتہ, رقم) {
+        یہ.نکالو(رقم, `منتقلی → ${ہدف_کھاتہ.کھاتہ_نمبر}`);
+        ہدف_کھاتہ.جمع_کرو(رقم, `منتقلی ← ${یہ.کھاتہ_نمبر}`);
+        واپس یہ;
+    }
+
+    تاریخچہ() {
+        لکھو(`\n=== ${یہ.مالک} — ${یہ.کھاتہ_نمبر} ===`);
+        کے_لیے (مستقل [i, ل] کا گنو(یہ.#لین_دین, 1)) {
+            مستقل علامت = ل.نوع === "جمع" ? "+" : "-";
+            لکھو(`${i}. ${علامت}${ل.رقم} — ${ل.وضاحت}`);
+        }
+        لکھو(`موجودہ بقیہ: ${یہ.#بقیہ}`);
+    }
+}
+
+کلاس بچت_کھاتہ توسیع بینک_کھاتہ {
+    تعمیر(مالک, ابتدائی_رقم, سود_شرح = 0.05) {
+        سپر(مالک, ابتدائی_رقم);
+        یہ.سود_شرح = سود_شرح;
+    }
+
+    سود_لگاؤ() {
+        مستقل سود = ریاضی.فرش(یہ.بقیہ * یہ.سود_شرح);
+        یہ.جمع_کرو(سود, "سالانہ سود");
+        واپس سود;
+    }
+}
+
+// Usage
+مستقل احمد_کا = نیا بینک_کھاتہ("احمد", 5000);
+مستقل فاطمہ_کا = نیا بچت_کھاتہ("فاطمہ", 10000, 0.08);
+
+احمد_کا
+    .جمع_کرو(3000, "تنخواہ")
+    .جمع_کرو(500, "فری لانس")
+    .نکالو(1000, "کرایہ");
+
+احمد_کا.منتقل_کرو(فاطمہ_کا, 2000);
+
+لکھو(`فاطمہ کا بقیہ: ${فاطمہ_کا.بقیہ}`);    // 12000
+
+مستقل سود = فاطمہ_کا.سود_لگاؤ();
+لکھو(`سود: ${سود}`);                         // 960
+
+احمد_کا.تاریخچہ();
+فاطمہ_کا.تاریخچہ();
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> اس مکمل مثال میں: نجی فیلڈز <code>#بقیہ</code> اور <code>#لین_دین</code> باہر سے قابلِ رسائی نہیں، <code>بقیہ</code> گیٹر سے پڑھا جاتا ہے، طریقے <code>یہ</code> واپس کر کے زنجیر بنانے دیتے ہیں، اور <code>بچت_کھاتہ</code> وراثت سے <code>سود_لگاؤ</code> کا اضافہ کرتا ہے۔</p>
+</blockquote>
+<hr />
+<h2 id="mixins">Mixins — ملاوٹ</h2>
+<p>Mixins add reusable behaviour to classes without deep inheritance hierarchies.</p>
+<blockquote>
+<p><strong>اردو:</strong> ملاوٹ (mixins) گہری وراثتی درجہ بندی کے بغیر کلاسوں میں دوبارہ قابلِ استعمال طرزِعمل شامل کرتے ہیں۔ جب ایک کلاس کو کئی مختلف صلاحیتیں چاہیے ہوں تو ملاوٹ بہترین ہیں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// Mixin functions
+مستقل سیریل_مکسن = (بنیاد) =&gt; کلاس توسیع بنیاد {
+    JSON_میں() {
+        واپس JSON_لکھو(یہ);
+    }
+
+    جامد JSON_سے(متن_شے) {
+        واپس Object.assign(نیا یہ(), JSON_پڑھو(متن_شے));
+    }
+};
+
+مستقل قابل_مقایسہ_مکسن = (بنیاد) =&gt; کلاس توسیع بنیاد {
+    برابر_ہے(دوسرا) {
+        واپس یہ.toString() === دوسرا.toString();
+    }
+};
+
+// Apply mixins
+کلاس بنیادی_شخص {
+    تعمیر(نام, عمر) {
+        یہ.نام = نام;
+        یہ.عمر = عمر;
+    }
+    toString() { واپس `${یہ.نام}(${یہ.عمر})`; }
+}
+
+کلاس شخص توسیع قابل_مقایسہ_مکسن(سیریل_مکسن(بنیادی_شخص)) {}
+
+مستقل ا = نیا شخص("احمد", 25);
+مستقل ب = نیا شخص("احمد", 25);
+
+لکھو(ا.JSON_میں());           // {"نام":"احمد","عمر":25}
+لکھو(ا.برابر_ہے(ب));          // true
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> ملاوٹ فنکشن ایک کلاس لیتا ہے اور اس میں اضافی طریقے شامل کر کے نئی کلاس واپس کرتا ہے۔ <code>شخص</code> کلاس نے دو ملاوٹیں لگائیں: <code>سیریل_مکسن</code> (JSON میں تبدیلی) اور <code>قابل_مقایسہ_مکسن</code> (برابری جانچ)۔ یہ لچکدار اور صاف کوڈ کا طریقہ ہے!</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

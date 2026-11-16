@@ -1,0 +1,2022 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Data Types — ڈیٹا کی اقسام - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#data-types" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Data Types — ڈیٹا کی اقسام
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorial/beginner/" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../libraries/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/beginner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intermediate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../libraries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Numbers — اعداد
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Numbers — اعداد">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#two-numeral-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two numeral systems — دو عددی نظام
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-literals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integer literals — پوری تعداد
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#float-literals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Float literals — اعشاری اعداد
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convert-to-integer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        عدد() — Convert to integer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convert-to-float" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        اعشاریہ() — Convert to float
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#math-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ریاضی — Math object
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#special-numeric-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Special numeric values — خاص عددی قدریں
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strings — متن
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#booleans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Booleans — بولین
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Booleans — بولین">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#truthy-and-falsy-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Truthy and falsy values — سچ اور جھوٹ جیسی قدریں
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convert-to-boolean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        بولین() — Convert to boolean
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#null-and-undefined-_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Null and Undefined — خالی اور غیر_معرف
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Null and Undefined — خالی اور غیر_معرف">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#null" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        خالی — Null
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_-undefined" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        غیر_معرف — Undefined
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nullish-coalescing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nullish coalescing ?? — خالی پن کا آپریٹر
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arrays-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arrays / Lists — فہرستیں
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arrays / Lists — فہرستیں">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating arrays — فہرست بنانا
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-from-iterable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        فہرست() — Create from iterable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing elements — عناصر تک رسائی
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Array methods — فہرست کے طریقے
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objects-dictionaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objects / Dictionaries — اشیاء / لغتیں
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Objects / Dictionaries — اشیاء / لغتیں">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating objects — شے بنانا
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing properties — خاصیتوں تک رسائی
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifying-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modifying objects — شے تبدیل کرنا
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#object-shorthand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object shorthand — مختصر اظہار
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computed-property-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Computed property names — متحرک خاصیت کے نام
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-dictionary-from-entries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        لغت() — Create dictionary from entries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#object-utility-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object utility methods — شے کے مددگار طریقے
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-chaining" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional chaining ?. — اختیاری زنجیر
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sets — مجموعہ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tuples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tuples — ٹپل
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type-checking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Type Checking — قسم جانچنا
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Type Checking — قسم جانچنا">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typeof" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        قسم() — typeof
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instanceof" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        مثال — instanceof
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Array.ہے() — فہرست ہے؟
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-for-null-vs-undefined-_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checking for null vs undefined — خالی اور غیر_معرف کی جانچ
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Type Conversion — قسم تبدیلی
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="data-types">Data Types — ڈیٹا کی اقسام</h1>
+<p>The Urdu Programming Language supports a rich set of data types. This document covers every built-in type, how to create and manipulate values, and how to convert between types.</p>
+<blockquote>
+<p><strong>اردو:</strong> اردو پروگرامنگ لینگویج ڈیٹا کی بھرپور اقسام کی حمایت کرتی ہے۔ یہ دستاویز ہر بلٹ-ان قسم، قدریں بنانے اور سنبھالنے کا طریقہ، اور اقسام کے درمیان تبدیلی کا احاطہ کرتی ہے۔</p>
+</blockquote>
+<hr />
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#numbers">Numbers</a></li>
+<li><a href="#strings">Strings</a></li>
+<li><a href="#booleans">Booleans</a></li>
+<li><a href="#null-and-undefined">Null and Undefined</a></li>
+<li><a href="#arrays--lists">Arrays / Lists</a></li>
+<li><a href="#objects--dictionaries">Objects / Dictionaries</a></li>
+<li><a href="#sets--مجموعہ">Sets — مجموعہ</a></li>
+<li><a href="#tuples--ٹپل">Tuples — ٹپل</a></li>
+<li><a href="#type-checking">Type Checking</a></li>
+<li><a href="#type-conversion">Type Conversion</a></li>
+</ol>
+<hr />
+<h2 id="numbers">Numbers — اعداد</h2>
+<p>Numbers can be integers or floating-point values. Both are the same <code>number</code> type internally.</p>
+<blockquote>
+<p><strong>اردو:</strong> اعداد یا تو پوری تعداد (integer) ہو سکتے ہیں یا اعشاری (floating-point)۔ دونوں اندرونی طور پر ایک ہی <code>number</code> قسم ہیں۔</p>
+</blockquote>
+<h3 id="two-numeral-systems">Two numeral systems — دو عددی نظام</h3>
+<p>The Urdu Programming Language accepts <strong>both</strong> Western (Roman) digits and <strong>native Urdu/Arabic-Indic digits</strong> anywhere a number appears. The lexer automatically normalises them to the same value before execution — they are completely interchangeable.</p>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Digits</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Western (Roman)</td>
+<td><code>0 1 2 3 4 5 6 7 8 9</code></td>
+<td><code>42</code>, <code>3.14</code>, <code>1_000</code></td>
+</tr>
+<tr>
+<td>Urdu native (Extended Arabic-Indic)</td>
+<td><code>۰ ۱ ۲ ۳ ۴ ۵ ۶ ۷ ۸ ۹</code></td>
+<td><code>۴۲</code>, <code>۳.۱۴</code>, <code>۱_۰۰۰</code></td>
+</tr>
+<tr>
+<td>Arabic-Indic</td>
+<td><code>٠ ١ ٢ ٣ ٤ ٥ ٦ ٧ ٨ ٩</code></td>
+<td><code>٤٢</code>, <code>٣.١٤</code></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>// These are identical — all produce the same integer 42
+متغیر الف = 42;
+متغیر ب   = ۴۲;
+متغیر ج   = ٤٢;
+
+لکھو(الف == ب);   // true
+لکھو(ب == ج);     // true
+
+// Mix freely within the same expression
+متغیر نتیجہ = ۱۰ + 5 + ٥;
+لکھو(نتیجہ);      // 20
+
+// Floats work the same way
+متغیر پائی = ۳.۱۴۱۵۹;
+لکھو(پائی);       // 3.14159
+
+// Urdu digits in a loop
+کے_لیے (متغیر i = ۰; i &lt; ۵; i++) {
+    لکھو(i);      // 0 1 2 3 4
+}
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> اردو پروگرامنگ لینگویج دو عددی نظام قبول کرتی ہے: مغربی (رومن) اعداد <code>0-9</code> اور مقامی اردو اعداد <code>۰-۹</code>۔ لیکسر دونوں کو خودبخود ایک جیسا سمجھتا ہے — آپ دونوں کو آزادانہ ملا سکتے ہیں۔</p>
+</blockquote>
+<h3 id="integer-literals">Integer literals — پوری تعداد</h3>
+<div class="highlight"><pre><span></span><code>متغیر گنتی = 42;
+متغیر منفی = -7;
+متغیر صفر = 0;
+متغیر بڑا = 1_000_000;   // underscores for readability
+
+لکھو(گنتی + منفی);   // 35
+لکھو(بڑا);           // 1000000
+</code></pre></div>
+<h3 id="float-literals">Float literals — اعشاری اعداد</h3>
+<div class="highlight"><pre><span></span><code>متغیر قیمت = 19.99;
+متغیر تناسب = 0.75;
+متغیر سائنسی = 1.5e3;    // 1500.0
+متغیر چھوٹا = 2.5e-4;    // 0.00025
+
+لکھو(قیمت * تناسب);     // 14.9925
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> بڑے اعداد میں <code>_</code> لگا کر پڑھنا آسان بنا سکتے ہیں (جیسے <code>1_000_000</code>)۔ سائنسی اندازِ اظہار میں <code>e</code> کا مطلب "10 کی قوت" ہے۔</p>
+</blockquote>
+<h3 id="convert-to-integer">عدد() — Convert to integer</h3>
+<p><code>عدد()</code> truncates a float or parses a string as an integer.</p>
+<div class="highlight"><pre><span></span><code>لکھو(عدد("42"));       // 42
+لکھو(عدد(3.99));       // 3
+لکھو(عدد("0xFF", 16)); // 255  (hex string)
+لکھو(عدد(سچ));         // 1
+لکھو(عدد(جھوٹ));       // 0
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> <code>عدد()</code> کسی متن یا اعشاری عدد کو پوری تعداد میں بدلتا ہے۔ اعشاری حصہ کاٹ دیا جاتا ہے (گول نہیں کیا جاتا)۔</p>
+</blockquote>
+<h3 id="convert-to-float">اعشاریہ() — Convert to float</h3>
+<div class="highlight"><pre><span></span><code>لکھو(اعشاریہ("3.14"));   // 3.14
+لکھو(اعشاریہ("1e2"));    // 100.0
+لکھو(اعشاریہ(7));        // 7.0
+</code></pre></div>
+<h3 id="math-object">ریاضی — Math object</h3>
+<div class="highlight"><pre><span></span><code>لکھو(ریاضی.PI);              // 3.141592653589793
+لکھو(ریاضی.جذر(16));         // 4.0
+لکھو(ریاضی.طاقت(2, 10));     // 1024
+لکھو(ریاضی.چھت(4.1));        // 5
+لکھو(ریاضی.فرش(4.9));        // 4
+لکھو(گول(4.567, 2));          // 4.57   (global گول supports precision)
+لکھو(ریاضی.مطلق(-99));       // 99
+لکھو(ریاضی.کم(3, 7, 1));     // 1
+لکھو(ریاضی.زیادہ(3, 7, 1));  // 7
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> <code>ریاضی</code> شے میں تمام ریاضیاتی فنکشن موجود ہیں: PI (پائی)، جذر (مربع جذر)، قوت، چھت (ceiling)، فرش (floor)، گول کرنا، مطلق قدر، کم ترین اور زیادہ ترین۔</p>
+</blockquote>
+<h3 id="special-numeric-values">Special numeric values — خاص عددی قدریں</h3>
+<div class="highlight"><pre><span></span><code>// نوٹ: صفر سے تقسیم اردو پروگرامنگ لینگویج میں غلطی دیتی ہے
+// Note: Division by zero throws a runtime error in Urdu PL
+لکھو(ریاضی.عددہے(42)); // true
+لکھو(ریاضی.عددہے(NaN));// false
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> صفر سے تقسیم <code>Infinity</code> یا <code>-Infinity</code> دیتی ہے۔ <code>NaN</code> (عدد نہیں) اس وقت آتا ہے جب حساب ناممکن ہو، جیسے <code>0/0</code>۔</p>
+</blockquote>
+<hr />
+<h2 id="strings">Strings — متن</h2>
+<p>Strings hold text. They can use single quotes, double quotes, or backtick template literals.</p>
+<blockquote>
+<p><strong>اردو:</strong> متن (string) حروف کا مجموعہ ہے۔ اسے اکہری قوسین، دہری قوسین یا بیک ٹک سے لکھ سکتے ہیں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>متغیر الف = 'ایک قوسین';
+متغیر ب = "دوہری قوسین";
+متغیر ج = `بیک ٹک — ٹیمپلیٹ`;
+
+لکھو(الف);
+لکھو(ب);
+لکھو(ج);
+</code></pre></div>
+<p>Template literals with <code>${}</code> allow embedded expressions:</p>
+<div class="highlight"><pre><span></span><code>متغیر نام = "علی";
+متغیر عمر = 30;
+
+لکھو(`میرا نام ${نام} ہے اور میں ${عمر} سال کا ہوں۔`);
+// میرا نام علی ہے اور میں 30 سال کا ہوں۔
+
+لکھو(`2 + 2 = ${2 + 2}`);
+// 2 + 2 = 4
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> بیک ٹک والی سٹرنگ میں <code>${...}</code> کے اندر کوئی بھی اظہار لکھ سکتے ہیں — متغیر، حساب، فنکشن کال سب۔ یہ متن میں خودبخود ضم ہو جاتا ہے۔</p>
+<p>See the dedicated <strong>Strings</strong> document (<code>04-strings.md</code>) for all string methods.</p>
+</blockquote>
+<hr />
+<h2 id="booleans">Booleans — بولین</h2>
+<p>A boolean holds one of two values: <code>سچ</code> (true) or <code>جھوٹ</code> (false).</p>
+<blockquote>
+<p><strong>اردو:</strong> بولین صرف دو قدریں رکھتا ہے: <code>سچ</code> (true) یا <code>جھوٹ</code> (false)۔ یہ شرطوں اور منطقی فیصلوں میں استعمال ہوتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>متغیر درست = سچ;
+متغیر غلط = جھوٹ;
+
+لکھو(5 &gt; 3);    // true
+لکھو(5 &lt; 3);    // false
+لکھو(نہیں درست);   // false
+</code></pre></div>
+<h3 id="truthy-and-falsy-values">Truthy and falsy values — سچ اور جھوٹ جیسی قدریں</h3>
+<table>
+<thead>
+<tr>
+<th>Falsy values</th>
+<th>Truthy values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>جھوٹ</code></td>
+<td><code>سچ</code></td>
+</tr>
+<tr>
+<td><code>0</code>, <code>-0</code></td>
+<td>Any non-zero number</td>
+</tr>
+<tr>
+<td><code>""</code> (empty string)</td>
+<td>Any non-empty string</td>
+</tr>
+<tr>
+<td><code>خالی</code></td>
+<td>Any object or array</td>
+</tr>
+<tr>
+<td><code>غیر_معرف</code></td>
+<td>Functions</td>
+</tr>
+<tr>
+<td><code>NaN</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>اگر (0) { لکھو("کبھی نہیں"); } ورنہ { لکھو("صفر جھوٹ ہے"); }
+اگر ("اردو") { لکھو("خالی نہیں تار سچ ہے"); }
+اگر ([]) { لکھو("خالی فہرست بھی سچ ہے"); }
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> کچھ قدریں شرط میں خودبخود <code>جھوٹ</code> کی طرح برتاؤ کرتی ہیں: <code>جھوٹ</code>، <code>0</code>، خالی متن، <code>خالی</code>، <code>غیر_معرف</code>، <code>NaN</code>۔ باقی سب <code>سچ</code> کی طرح ہیں — خالی فہرست اور خالی شے بھی <code>سچ</code> ہے!</p>
+</blockquote>
+<h3 id="convert-to-boolean">بولین() — Convert to boolean</h3>
+<div class="highlight"><pre><span></span><code>لکھو(بولین(1));         // true
+لکھو(بولین(0));         // false
+لکھو(بولین(""));        // false
+لکھو(بولین("کچھ"));     // true
+لکھو(بولین(خالی));      // false
+لکھو(بولین({}));        // true
+</code></pre></div>
+<hr />
+<h2 id="null-and-undefined-_">Null and Undefined — خالی اور غیر_معرف</h2>
+<h3 id="null">خالی — Null</h3>
+<p><code>خالی</code> represents an intentional absence of any value. Use it when a variable deliberately has no value.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>خالی</code> جان بوجھ کر کوئی قدر نہ ہونے کی نمائندگی کرتا ہے۔ جب آپ چاہتے ہیں کہ متغیر خالی ہو تو <code>خالی</code> استعمال کریں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>متغیر نتیجہ = خالی;
+لکھو(نتیجہ);              // null
+لکھو(نتیجہ === خالی);     // true
+
+// Checking for null
+اگر (نتیجہ === خالی) {
+    لکھو("کوئی نتیجہ نہیں ہے");
+}
+</code></pre></div>
+<h3 id="_-undefined">غیر_معرف — Undefined</h3>
+<p><code>غیر_معرف</code> is the value of a variable that has been declared but not yet assigned, or a missing object property.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>غیر_معرف</code> اس متغیر کی قدر ہے جو ڈکلیئر تو کیا گیا ہو لیکن ابھی تک کوئی قدر نہ دی گئی ہو، یا کسی شے کی غیر موجود خاصیت ہو۔ یہ خالی سے مختلف ہے — یہ "ابھی طے نہیں" کا مطلب رکھتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>متغیر ڈیٹا;
+لکھو(ڈیٹا);                // undefined
+لکھو(ڈیٹا === غیر_معرف);   // true
+
+مستقل شخص = { نام: "زید" };
+لکھو(شخص.عمر);             // undefined
+</code></pre></div>
+<h3 id="nullish-coalescing">Nullish coalescing <code>??</code> — خالی پن کا آپریٹر</h3>
+<p>Returns the right-hand side if the left side is <code>خالی</code> or <code>غیر_معرف</code>.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>??</code> آپریٹر: اگر بائیں طرف <code>خالی</code> یا <code>غیر_معرف</code> ہو تو دائیں طرف کی قدر واپس کرتا ہے۔ یہ <code>||</code> سے مختلف ہے کیونکہ <code>0</code> اور <code>""</code> کو نہیں بدلتا۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>متغیر ان_پٹ = خالی;
+متغیر قدر = ان_پٹ ?? "پہلے سے طے";
+لکھو(قدر);    // پہلے سے طے
+
+متغیر تعداد = 0;
+لکھو(تعداد ?? 99);    // 0  (0 is NOT null/undefined)
+</code></pre></div>
+<hr />
+<h2 id="arrays-lists">Arrays / Lists — فہرستیں</h2>
+<p>Arrays store ordered sequences of values. They use square brackets <code>[]</code>. Elements can be of any type.</p>
+<blockquote>
+<p><strong>اردو:</strong> فہرستیں ترتیب شدہ قدروں کا مجموعہ ہیں۔ مربع بریکٹ <code>[]</code> استعمال ہوتی ہیں۔ عناصر کسی بھی قسم کے ہو سکتے ہیں۔</p>
+</blockquote>
+<h3 id="creating-arrays">Creating arrays — فہرست بنانا</h3>
+<div class="highlight"><pre><span></span><code>متغیر خالی_فہرست = [];
+متغیر اعداد = [1, 2, 3, 4, 5];
+متغیر نام_جات = ["احمد", "فاطمہ", "علی"];
+متغیر ملایا = [1, "دو", سچ, خالی, [3, 4]];
+</code></pre></div>
+<h3 id="create-from-iterable">فہرست() — Create from iterable</h3>
+<div class="highlight"><pre><span></span><code>متغیر ف = فہرست(حد(5));
+لکھو(ف);    // [0, 1, 2, 3, 4]
+</code></pre></div>
+<h3 id="accessing-elements">Accessing elements — عناصر تک رسائی</h3>
+<div class="highlight"><pre><span></span><code>مستقل پھل = ["سیب", "آم", "کیلا", "انار"];
+
+لکھو(پھل[0]);     // سیب
+لکھو(پھل[2]);     // کیلا
+لکھو(پھل[-1]);    // انار  (negative index — last element)
+لکھو(پھل.لمبائی); // 4
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> اشاریہ (index) صفر سے شروع ہوتا ہے۔ <code>-1</code> سے آخری عنصر، <code>-2</code> سے آخر سے دوسرا عنصر ملتا ہے۔</p>
+</blockquote>
+<h3 id="array-methods">Array methods — فہرست کے طریقے</h3>
+<table>
+<thead>
+<tr>
+<th>Urdu name</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>شامل(قدر)</code></td>
+<td>Push value to end</td>
+</tr>
+<tr>
+<td><code>نکالو()</code></td>
+<td>Pop value from end</td>
+</tr>
+<tr>
+<td><code>پہلے_شامل(قدر)</code></td>
+<td>Unshift — add to front</td>
+</tr>
+<tr>
+<td><code>پہلا_نکالو()</code></td>
+<td>Shift — remove from front</td>
+</tr>
+<tr>
+<td><code>ترتیب_دو()</code></td>
+<td>Sort in place</td>
+</tr>
+<tr>
+<td><code>پلٹاؤ()</code></td>
+<td>Reverse in place</td>
+</tr>
+<tr>
+<td><code>چھانو(فنکشن)</code></td>
+<td>Filter — return new array</td>
+</tr>
+<tr>
+<td><code>تبدیل(فنکشن)</code></td>
+<td>Map — transform each element</td>
+</tr>
+<tr>
+<td><code>اکٹھا(فنکشن, شروع)</code></td>
+<td>Reduce to single value</td>
+</tr>
+<tr>
+<td><code>تلاش(فنکشن)</code></td>
+<td>Find first match</td>
+</tr>
+<tr>
+<td><code>تلاش_مقام(فنکشن)</code></td>
+<td>Find index of first match</td>
+</tr>
+<tr>
+<td><code>شامل_ہے(قدر)</code></td>
+<td>Includes — boolean check</td>
+</tr>
+<tr>
+<td><code>جوڑو(جداکار)</code></td>
+<td>Join elements into string</td>
+</tr>
+<tr>
+<td><code>حصہ(شروع, آخر)</code></td>
+<td>Slice — return sub-array</td>
+</tr>
+<tr>
+<td><code>جوڑ_دو(...فہرست)</code></td>
+<td>Concat — merge arrays</td>
+</tr>
+<tr>
+<td><code>ہر_ایک(فنکشن)</code></td>
+<td>forEach — loop each element</td>
+</tr>
+<tr>
+<td><code>سب(فنکشن)</code></td>
+<td>Every — all match?</td>
+</tr>
+<tr>
+<td><code>کوئی(فنکشن)</code></td>
+<td>Some — any match?</td>
+</tr>
+<tr>
+<td><code>پھیلاؤ()</code></td>
+<td>Flat — flatten nested arrays</td>
+</tr>
+<tr>
+<td><code>مقام(قدر)</code></td>
+<td>indexOf</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>اردو:</strong> اردو پروگرامنگ لینگویج میں تمام فہرست طریقے اردو ناموں میں دستیاب ہیں۔ <code>شامل</code> سے آخر میں ڈالیں، <code>نکالو</code> سے آخر سے نکالیں، <code>چھانو</code> سے فلٹر کریں، <code>تبدیل</code> سے نقشہ بنائیں اور <code>کم_کرو</code> سے ایک قدر میں تبدیل کریں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>متغیر اعداد = [3, 1, 4, 1, 5, 9, 2, 6];
+
+// push and pop
+اعداد.شامل(7);
+لکھو(اعداد);             // [3, 1, 4, 1, 5, 9, 2, 6, 7]
+لکھو(اعداد.نکالو());     // 7
+
+// ترتیب_دو اور پلٹاؤ نئی فہرست واپس کرتے ہیں (اصل نہیں بدلتی)
+// Sort and reverse return a new array — the original is unchanged
+متغیر مرتب = اعداد.ترتیب_دو();   // sort naturally
+لکھو(مرتب);             // [1, 1, 2, 3, 4, 5, 6, 9]
+لکھو(اعداد);             // [3, 1, 4, 1, 5, 9, 2, 6]  (unchanged)
+
+متغیر پلٹا = اعداد.پلٹاؤ();
+لکھو(پلٹا);             // [6, 2, 9, 5, 1, 4, 1, 3]
+لکھو(اعداد);             // [3, 1, 4, 1, 5, 9, 2, 6]  (unchanged)
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>مستقل اعداد = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// filter
+مستقل جفت = اعداد.چھانو(n =&gt; n % 2 === 0);
+لکھو(جفت);    // [2, 4, 6, 8]
+
+// map
+مستقل مربع = اعداد.تبدیل(n =&gt; n ** 2);
+لکھو(مربع);   // [1, 4, 9, 16, 25, 36, 49, 64]
+
+// reduce
+مستقل مجموع_قدر = اعداد.کم_کرو((جمع, n) =&gt; جمع + n, 0);
+لکھو(مجموع_قدر);   // 36
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>مستقل الفاظ = ["اردو", "پروگرامنگ", "زبان"];
+
+لکھو(الفاظ.جوڑو(" "));        // اردو پروگرامنگ زبان
+لکھو(الفاظ.شامل_ہے("اردو"));  // true
+لکھو(الفاظ.اشاریہ("زبان"));   // 2
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Spread to clone or merge
+مستقل الف = [1, 2, 3];
+مستقل ب = [4, 5, 6];
+مستقل ج = [...الف, ...ب];
+لکھو(ج);    // [1, 2, 3, 4, 5, 6]
+
+// Flat
+مستقل ملا = [[1, 2], [3, [4, 5]]];
+لکھو(ملا.چپٹا_کرو());       // [1, 2, 3, [4, 5]]
+لکھو(ملا.چپٹا_کرو(2));      // [1, 2, 3, 4, 5]
+</code></pre></div>
+<hr />
+<h2 id="objects-dictionaries">Objects / Dictionaries — اشیاء / لغتیں</h2>
+<p>Objects store key-value pairs. Keys are strings (or Symbols); values can be any type.</p>
+<blockquote>
+<p><strong>اردو:</strong> اشیاء (objects) کلید-قدر جوڑے رکھتی ہیں۔ کلیدیں متن (یا Symbols) ہوتی ہیں؛ قدریں کسی بھی قسم کی ہو سکتی ہیں۔ یہ لغت کی طرح کام کرتی ہیں — ہر لفظ (کلید) کا ایک مطلب (قدر) ہوتا ہے۔</p>
+</blockquote>
+<h3 id="creating-objects">Creating objects — شے بنانا</h3>
+<div class="highlight"><pre><span></span><code>مستقل شخص = {
+    نام: "مریم",
+    عمر: 25,
+    شہر: "لاہور"
+};
+</code></pre></div>
+<h3 id="accessing-properties">Accessing properties — خاصیتوں تک رسائی</h3>
+<div class="highlight"><pre><span></span><code>// Dot notation
+لکھو(شخص.نام);     // مریم
+
+// Bracket notation (required for dynamic or Urdu-script keys with special chars)
+لکھو(شخص["عمر"]);  // 25
+
+// Dynamic key
+متغیر کلید = "شہر";
+لکھو(شخص[کلید]);   // لاہور
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> نقطے کے ذریعے (<code>شخص.نام</code>) یا بریکٹ کے ذریعے (<code>شخص["نام"]</code>) خاصیت تک پہنچ سکتے ہیں۔ متحرک کلید (جو متغیر میں ہو) کے لیے بریکٹ ضروری ہے۔</p>
+</blockquote>
+<h3 id="modifying-objects">Modifying objects — شے تبدیل کرنا</h3>
+<div class="highlight"><pre><span></span><code>متغیر ملازم = { نام: "طارق", تنخواہ: 50000 };
+
+ملازم.عہدہ = "سینیر انجینیر";    // add new property
+ملازم.تنخواہ = 65000;             // update existing
+حذف ملازم.نام;                    // delete property
+
+لکھو(ملازم);
+// { تنخواہ: 65000, عہدہ: "سینیر انجینیر" }
+</code></pre></div>
+<h3 id="object-shorthand">Object shorthand — مختصر اظہار</h3>
+<div class="highlight"><pre><span></span><code>متغیر نام = "عائشہ";
+متغیر عمر = 29;
+
+مستقل شخص = { نام, عمر };   // same as { نام: نام, عمر: عمر }
+لکھو(شخص);
+</code></pre></div>
+<h3 id="computed-property-names">Computed property names — متحرک خاصیت کے نام</h3>
+<div class="highlight"><pre><span></span><code>متغیر کلید = "رنگ";
+مستقل شے = { [کلید]: "نیلا", [`${کلید}2`]: "سرخ" };
+لکھو(شے);    // { رنگ: "نیلا", رنگ2: "سرخ" }
+</code></pre></div>
+<h3 id="create-dictionary-from-entries">لغت() — Create dictionary from entries</h3>
+<div class="highlight"><pre><span></span><code>مستقل جوڑے = [["الف", 1], ["ب", 2], ["ج", 3]];
+مستقل لغت_شے = لغت(جوڑے);
+لکھو(لغت_شے);    // { الف: 1, ب: 2, ج: 3 }
+</code></pre></div>
+<h3 id="object-utility-methods">Object utility methods — شے کے مددگار طریقے</h3>
+<div class="highlight"><pre><span></span><code>مستقل شخص = { نام: "علی", عمر: 30, شہر: "کراچی" };
+
+لکھو(Object.مفاتیح(شخص));    // ["نام", "عمر", "شہر"]
+لکھو(Object.اقدار(شخص));    // ["علی", 30, "کراچی"]
+لکھو(Object.اندراج(شخص));   // [("نام","علی"), ("عمر",30), ("شہر","کراچی")]
+
+// Spread to merge/clone
+مستقل تازہ = { ...شخص, ملک: "پاکستان" };
+لکھو(تازہ);
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> <code>Object.keys()</code> کلیدوں کی فہرست، <code>Object.values()</code> قدروں کی فہرست اور <code>Object.entries()</code> کلید-قدر جوڑوں کی فہرست دیتا ہے۔ <code>...</code> سپریڈ سے شے کو کاپی یا ملانا بہت آسان ہے۔</p>
+</blockquote>
+<h3 id="optional-chaining">Optional chaining <code>?.</code> — اختیاری زنجیر</h3>
+<div class="highlight"><pre><span></span><code>مستقل صارف = { پروفائل: { ای_میل: "a@b.com" } };
+
+لکھو(صارف.پروفائل?.ای_میل);        // a@b.com
+لکھو(صارف.پتہ?.شہر);              // undefined  (no error)
+لکھو(صارف.پتہ?.شہر ?? "نامعلوم"); // نامعلوم
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> <code>?.</code> اختیاری زنجیر سے اگر کوئی خاصیت موجود نہ ہو تو غلطی نہیں آتی بلکہ <code>غیر_معرف</code> ملتا ہے۔ <code>??</code> کے ساتھ ملا کر نامعلوم کی صورت میں پہلے سے طے قدر دے سکتے ہیں۔</p>
+</blockquote>
+<hr />
+<h2 id="sets">Sets — مجموعہ</h2>
+<p>A <code>Set</code> stores unique values of any type. Duplicates are automatically removed.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>مجموعہ</code> (Set) منفرد قدروں کا ذخیرہ ہے — دہری قدریں خودبخود ہٹا دی جاتی ہیں۔ جب آپ کو یقینی بنانا ہو کہ ہر قدر صرف ایک بار آئے تو <code>مجموعہ</code> استعمال کریں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>متغیر اعداد = مجموعہ([1, 2, 3, 2, 1, 4]);
+لکھو(اعداد);            // Set {1, 2, 3, 4}
+لکھو(لمبائی(اعداد));      // 4
+
+// Add and delete
+اعداد.add(5);
+اعداد.discard(1);
+لکھو(اعداد.شامل_ہے(2));  // true
+لکھو(اعداد.شامل_ہے(1));  // false
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Remove duplicates from array
+مستقل ملایا = [1, 2, 2, 3, 3, 3, 4];
+مستقل منفرد = [...مجموعہ(ملایا)];
+لکھو(منفرد);    // [1, 2, 3, 4]
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> فہرست سے دہری قدریں ہٹانے کا آسان طریقہ: <code>مجموعہ</code> میں ڈالو اور واپس فہرست میں لاؤ!</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// Set operations
+مستقل الف = مجموعہ([1, 2, 3, 4]);
+مستقل ب = مجموعہ([3, 4, 5, 6]);
+
+// Union
+مستقل اتحاد = مجموعہ([...الف, ...ب]);
+لکھو(اتحاد);    // Set {1, 2, 3, 4, 5, 6}
+
+// Intersection
+مستقل مشترک = مجموعہ([...الف].چھانو(x =&gt; ب.شامل_ہے(x)));
+لکھو(مشترک);    // Set {3, 4}
+
+// Difference
+مستقل فرق = مجموعہ([...الف].چھانو(x =&gt; !ب.شامل_ہے(x)));
+لکھو(فرق);      // Set {1, 2}
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> مجموعوں پر ریاضیاتی عمل: اتحاد (union) دونوں کا ملاپ، مشترک (intersection) دونوں میں مشترک قدریں، فرق (difference) صرف پہلے میں موجود قدریں۔</p>
+</blockquote>
+<hr />
+<h2 id="tuples">Tuples — ٹپل</h2>
+<p>Tuples are immutable ordered sequences, similar to arrays but fixed in size and content after creation.</p>
+<blockquote>
+<p><strong>اردو:</strong> ٹپل غیر قابلِ تبدیل ترتیب شدہ سلسلہ ہے — فہرست جیسا لیکن بنانے کے بعد اس کا سائز اور مواد نہیں بدلا جا سکتا۔ جب آپ چاہیں کہ ڈیٹا محفوظ رہے تو ٹپل بہتر ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>مستقل نکتہ = ٹپل([3, 4]);
+لکھو(نکتہ);         // (3, 4)
+لکھو(نکتہ[0]);      // 3
+لکھو(نکتہ.لمبائی);  // 2
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Tuples as dictionary keys
+مستقل نقشہ_نکات = لغت();
+مستقل نکتہ_الف = ٹپل([0, 0]);
+مستقل نکتہ_ب = ٹپل([1, 1]);
+
+نقشہ_نکات[نکتہ_الف] = "اصل";
+نقشہ_نکات[نکتہ_ب] = "بعد";
+
+لکھو(نقشہ_نکات);
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Unpacking a tuple
+مستقل رنگ = ٹپل(["سرخ", 255, 0, 0]);
+متغیر [نام_رنگ, سرخ, سبز, نیلا] = رنگ;
+لکھو(`${نام_رنگ}: rgb(${سرخ}, ${سبز}, ${نیلا})`);
+// سرخ: rgb(255, 0, 0)
+</code></pre></div>
+<hr />
+<h2 id="type-checking">Type Checking — قسم جانچنا</h2>
+<h3 id="typeof">قسم() — typeof</h3>
+<p><code>قسم()</code> returns the type name of a value as a string.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>قسم()</code> کسی قدر کی قسم کا نام بطور متن واپس کرتا ہے۔ کسی متغیر کی قسم جاننے کے لیے یہ استعمال کریں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(قسم(42));           // "عدد"
+لکھو(قسم(3.14));         // "عدد"
+لکھو(قسم("اردو"));       // "متن"
+لکھو(قسم(سچ));           // "بولین"
+لکھو(قسم(غیر_معرف));     // "خالی"
+لکھو(قسم(خالی));         // "خالی"
+لکھو(قسم([]));            // "فہرست"
+لکھو(قسم({}));            // "شے"
+لکھو(قسم(فنکشن() {}));   // "فنکشن"
+</code></pre></div>
+<h3 id="instanceof">مثال — instanceof</h3>
+<p><code>مثال</code> checks whether an object is an instance of a class.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>مثال</code> جانچتا ہے کہ آیا کوئی شے کسی کلاس کی مثال (instance) ہے یا نہیں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>مستقل فہرست_شے = [1, 2, 3];
+مستقل تاریخ_شے = نیا Date();
+
+لکھو(فہرست_شے مثال Array);    // true
+لکھو(فہرست_شے مثال Object);   // true
+لکھو(تاریخ_شے مثال Date);     // true
+لکھو(تاریخ_شے مثال Array);    // false
+</code></pre></div>
+<h3 id="array">Array.ہے() — فہرست ہے؟</h3>
+<p>Because <code>قسم([])</code> returns <code>"object"</code>, use <code>Array.ہے()</code> to distinguish arrays.</p>
+<blockquote>
+<p><strong>اردو:</strong> چونکہ <code>قسم([])</code> کا نتیجہ <code>"object"</code> ہے، اس لیے فہرست الگ پہچاننے کے لیے <code>Array.ہے()</code> استعمال کریں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(Array.ہے([1, 2, 3]));    // true
+لکھو(Array.ہے({ a: 1 }));     // false
+لکھو(Array.ہے("مرحبا"));      // false
+</code></pre></div>
+<h3 id="checking-for-null-vs-undefined-_">Checking for null vs undefined — خالی اور غیر_معرف کی جانچ</h3>
+<div class="highlight"><pre><span></span><code>فنکشن قسم_چیک(قدر) {
+    اگر (قدر === خالی) {
+        واپس "null";
+    } ورنہ_اگر (قدر === غیر_معرف) {
+        واپس "undefined";
+    } ورنہ_اگر (Array.ہے(قدر)) {
+        واپس "array";
+    } ورنہ {
+        واپس قسم(قدر);
+    }
+}
+
+لکھو(قسم_چیک(خالی));       // null
+لکھو(قسم_چیک(غیر_معرف));   // undefined
+لکھو(قسم_چیک([1,2]));      // array
+لکھو(قسم_چیک(99));          // number
+لکھو(قسم_چیک("ہیلو"));      // string
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> یہ فنکشن مکمل قسم جانچ کی عملی مثال ہے — پہلے <code>خالی</code>، پھر <code>غیر_معرف</code>، پھر فہرست، پھر عام قسم جانچتا ہے۔</p>
+</blockquote>
+<hr />
+<h2 id="type-conversion">Type Conversion — قسم تبدیلی</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Converts to</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>عدد(x)</code></td>
+<td>Integer</td>
+<td><code>عدد("5")</code> → <code>5</code></td>
+</tr>
+<tr>
+<td><code>اعشاریہ(x)</code></td>
+<td>Float</td>
+<td><code>اعشاریہ("3.14")</code> → <code>3.14</code></td>
+</tr>
+<tr>
+<td><code>متن(x)</code></td>
+<td>String</td>
+<td><code>متن(42)</code> → <code>"42"</code></td>
+</tr>
+<tr>
+<td><code>بولین(x)</code></td>
+<td>Boolean</td>
+<td><code>بولین(0)</code> → <code>false</code></td>
+</tr>
+<tr>
+<td><code>فہرست(x)</code></td>
+<td>Array/List</td>
+<td><code>فہرست("abc")</code> → <code>["a","b","c"]</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>اردو:</strong> قسم تبدیلی کے فنکشن: <code>عدد()</code> پوری تعداد بناتا ہے، <code>اعشاریہ()</code> اعشاری عدد، <code>متن()</code> سٹرنگ، <code>بولین()</code> بولین، اور <code>فہرست()</code> فہرست میں تبدیل کرتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// Number conversions
+لکھو(عدد("100"));       // 100
+لکھو(عدد("0b1010"));    // 10   (binary)
+لکھو(عدد("0o17"));      // 15   (octal)
+لکھو(عدد("0xFF"));      // 255  (hex)
+لکھو(عدد(جھوٹ));        // 0
+لکھو(عدد(سچ));           // 1
+لکھو(عدد("ناقص"));      // NaN
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// String conversion
+لکھو(متن(3.14));        // "3.14"
+لکھو(متن(سچ));          // "True"
+لکھو(متن(خالی));        // "None"
+لکھو(متن([1,2,3]));     // "[1, 2, 3]"
+لکھو(متن({ a: 1 }));    // "[object Object]"
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Template literal — implicit conversion
+متغیر عدد_شے = 42;
+لکھو(`قدر: ${عدد_شے}`);    // "قدر: 42"
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Practical example — user input is always a string
+متغیر ان_پٹ = پڑھو("اپنی عمر درج کریں: ");
+متغیر عمر = عدد(ان_پٹ);
+
+اگر (ریاضی.عددہے(عمر) اور عمر &gt; 0) {
+    لکھو(`آپ ${عمر} سال کے ہیں`);
+} ورنہ {
+    لکھو("غلط ان پٹ");
+}
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> آخری مثال بہت اہم ہے — صارف کا ان پٹ ہمیشہ متن (string) ہوتا ہے، اس لیے <code>عدد()</code> سے تبدیل کرنا نہ بھولیں۔ پھر <code>ریاضی.عددہے()</code> سے جانچیں کہ یہ واقعی عدد ہے یا نہیں۔</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1546 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Async/Await and Promises — غیر متزامن پروگرامنگ - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#asyncawait-and-promises" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Async/Await and Promises — غیر متزامن پروگرامنگ
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorial/beginner/" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../libraries/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/beginner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intermediate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../libraries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-async" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Async? — غیر متزامن پروگرامنگ کیوں؟
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_-async-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        غیر_متزامن فنکشن — async function
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#await" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        انتظار — await
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تاخیر() — Delay
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        وعدہ — Promise
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chaining-promises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chaining Promises — وعدوں کا سلسلہ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_-promiseall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        انتظار_سبھی() — Promise.all
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promiseallsettled-race-any" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Promise.allSettled / race / any
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Promise.allSettled / race / any">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#promiseallsettled-_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Promise.allSettled — تمام_نتائج()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#promiserace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Promise.race — دوڑ()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#promiseany-_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Promise.any — کوئی_ایک()
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#async-error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Async Error Handling — غیر متزامن غلطی سنبھالنا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generator-functions-with" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generator Functions with پیداوار — جنریٹر فنکشنز
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#async-generators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Async Generators — غیر متزامن جنریٹرز
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concurrent-operations-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concurrent Operations Example — بیک وقت آپریشنز کی مثال
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="asyncawait-and-promises">Async/Await and Promises — غیر متزامن پروگرامنگ</h1>
+<p>The Urdu Programming Language runs on Python's <code>asyncio</code> and supports full asynchronous programming. This document covers async functions, await, promises, concurrent operations, and generator-based async patterns.</p>
+<blockquote>
+<p><strong>اردو:</strong> اردو پروگرامنگ لینگویج Python کے <code>asyncio</code> پر چلتی ہے اور مکمل غیر متزامن پروگرامنگ کی حمایت کرتی ہے۔ یہ دستاویز غیر_متزامن فنکشنز، انتظار، وعدے، بیک وقت آپریشنز، اور جنریٹر پر مبنی غیر متزامن طریقوں کا احاطہ کرتی ہے۔</p>
+</blockquote>
+<hr />
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#why-async">Why Async?</a></li>
+<li><a href="#غیر_متزامن-فنکشن--async-function">غیر_متزامن فنکشن — async function</a></li>
+<li><a href="#انتظار--await">انتظار — await</a></li>
+<li><a href="#تاخیر--delay">تاخیر() — Delay</a></li>
+<li><a href="#وعدہ--promise">وعدہ — Promise</a></li>
+<li><a href="#chaining-promises">Chaining Promises</a></li>
+<li><a href="#انتظار_سبھی--promiseall">انتظار_سبھی() — Promise.all</a></li>
+<li><a href="#promiseallsettled--race--any">Promise.allSettled / race / any</a></li>
+<li><a href="#async-error-handling">Async Error Handling</a></li>
+<li><a href="#generator-functions-with-پیداوار">Generator Functions with پیداوار</a></li>
+<li><a href="#async-generators">Async Generators</a></li>
+<li><a href="#concurrent-operations-example">Concurrent Operations Example</a></li>
+</ol>
+<hr />
+<h2 id="why-async">Why Async? — غیر متزامن پروگرامنگ کیوں؟</h2>
+<p>Asynchronous code lets your program continue working while waiting for slow operations (network, disk, timers) instead of blocking the entire thread.</p>
+<blockquote>
+<p><strong>اردو:</strong> غیر متزامن کوڈ آپ کے پروگرام کو سست آپریشنز (نیٹ ورک، ڈسک، ٹائمر) کا انتظار کرتے وقت کام جاری رکھنے دیتا ہے، بجائے اس کے کہ پورا دھاگہ رک جائے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// Synchronous — blocks everything
+فنکشن ہم_وقت() {
+    لکھو("شروع");
+    // imagine 2 seconds of blocking work here
+    لکھو("مکمل");
+}
+
+// Asynchronous — non-blocking
+غیر_متزامن فنکشن غیر_ہم_وقت() {
+    لکھو("شروع");
+    انتظار تاخیر(2000);    // suspends only this function
+    لکھو("2 سیکنڈ بعد مکمل");
+}
+</code></pre></div>
+<hr />
+<h2 id="_-async-function">غیر_متزامن فنکشن — async function</h2>
+<p>Prefix any function with <code>غیر_متزامن</code> to make it async. An async function always returns a Promise.</p>
+<blockquote>
+<p><strong>اردو:</strong> کسی بھی فنکشن کے آگے <code>غیر_متزامن</code> لگانے سے وہ غیر متزامن بن جاتا ہے۔ غیر متزامن فنکشن ہمیشہ ایک وعدہ واپس کرتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>غیر_متزامن فنکشن ڈیٹا_حاصل_کرو() {
+    واپس "ڈیٹا ملا";
+}
+
+// Calling it returns a Promise
+مستقل وعدہ_شے = ڈیٹا_حاصل_کرو();
+لکھو(وعدہ_شے);    // Promise { "ڈیٹا ملا" }
+
+// Await it
+مستقل نتیجہ = انتظار ڈیٹا_حاصل_کرو();
+لکھو(نتیجہ);       // ڈیٹا ملا
+</code></pre></div>
+<p><strong>Async arrow function:</strong></p>
+<blockquote>
+<p><strong>اردو:</strong> غیر متزامن تیر فنکشن:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>مستقل سلام = غیر_متزامن (نام) =&gt; {
+    انتظار تاخیر(100);
+    واپس `مرحبا، ${نام}!`;
+};
+
+لکھو(انتظار سلام("احمد"));    // مرحبا، احمد!
+</code></pre></div>
+<p><strong>Async method in class:</strong></p>
+<blockquote>
+<p><strong>اردو:</strong> کلاس میں غیر متزامن طریقہ:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>کلاس API_کلائنٹ {
+    تعمیر(بنیادی_url) {
+        یہ.بنیادی_url = بنیادی_url;
+    }
+
+    غیر_متزامن حاصل_کرو(راستہ) {
+        مستقل جواب = انتظار کرل(`${یہ.بنیادی_url}${راستہ}`);
+        واپس JSON_پڑھو(جواب);
+    }
+
+    غیر_متزامن بھیجو(راستہ, ڈیٹا) {
+        مستقل جواب = انتظار کرل(`${یہ.بنیادی_url}${راستہ}`, {
+            طریقہ: "POST",
+            جسم: JSON_لکھو(ڈیٹا)
+        });
+        واپس JSON_پڑھو(جواب);
+    }
+}
+</code></pre></div>
+<hr />
+<h2 id="await">انتظار — await</h2>
+<p><code>انتظار</code> pauses the async function until the Promise resolves, then returns the resolved value.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>انتظار</code> غیر متزامن فنکشن کو اس وقت تک روکتا ہے جب تک وعدہ پورا نہ ہو جائے، پھر حل شدہ قدر واپس کرتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>غیر_متزامن فنکشن مثال() {
+    لکھو("مرحلہ 1");
+    انتظار تاخیر(500);
+    لکھو("مرحلہ 2 — 500ms بعد");
+    انتظار تاخیر(500);
+    لکھو("مرحلہ 3 — 1000ms بعد");
+}
+
+انتظار مثال();
+</code></pre></div>
+<p><strong>Await any Promise:</strong></p>
+<blockquote>
+<p><strong>اردو:</strong> کسی بھی وعدے کا انتظار:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>غیر_متزامن فنکشن ڈیٹا_لوڈ() {
+    // Simulated async fetch
+    مستقل ڈیٹا = انتظار نیا وعدہ(حل =&gt; {
+        setTimeout(() =&gt; حل({ نام: "احمد", سکور: 95 }), 100);
+    });
+
+    لکھو(ڈیٹا.نام);    // احمد
+    واپس ڈیٹا;
+}
+
+مستقل نتیجہ = انتظار ڈیٹا_لوڈ();
+</code></pre></div>
+<hr />
+<h2 id="delay">تاخیر() — Delay</h2>
+<p><code>تاخیر(ms)</code> is a built-in that returns a Promise resolving after <code>ms</code> milliseconds.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>تاخیر(ms)</code> ایک بنا بنایا فنکشن ہے جو <code>ms</code> ملی سیکنڈ کے بعد حل ہونے والا وعدہ واپس کرتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>غیر_متزامن فنکشن الٹی_گنتی(سے) {
+    کے_لیے (متغیر i کا حد(سے, 0, -1)) {
+        لکھو(i);
+        انتظار تاخیر(1000);
+    }
+    لکھو("🚀 لانچ!");
+}
+
+انتظار الٹی_گنتی(5);
+// 5  (انتظار 1s)
+// 4  (انتظار 1s)
+// ...
+// 🚀 لانچ!
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Retry pattern using تاخیر
+غیر_متزامن فنکشن دوبارہ_کوشش(فنکشن_شے, کوشش = 3, وقفہ = 1000) {
+    کے_لیے (متغیر i کا حد(کوشش)) {
+        کوشش {
+            واپس انتظار فنکشن_شے();
+        } پکڑو (غ) {
+            اگر (i === کوشش - 1) پھینکو غ;
+            لکھو(`کوشش ${i + 1} ناکام، ${وقفہ}ms بعد دوبارہ...`);
+            انتظار تاخیر(وقفہ);
+        }
+    }
+}
+</code></pre></div>
+<hr />
+<h2 id="promise">وعدہ — Promise</h2>
+<p>A <code>وعدہ</code> (Promise) represents a future value. It is created with a callback that receives <code>حل</code> (resolve) and <code>رد</code> (reject) functions.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>وعدہ</code> ایک مستقبل کی قدر کو ظاہر کرتا ہے۔ اسے ایک کال بیک کے ساتھ بنایا جاتا ہے جو <code>حل</code> (resolve) اور <code>رد</code> (reject) فنکشن وصول کرتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>مستقل سکہ_اچھالو = نیا وعدہ((حل, رد) =&gt; {
+    مستقل نتیجہ = اتفاقی() &gt; 0.5 ? "چت" : "پٹ";
+    setTimeout(() =&gt; حل(نتیجہ), 100);
+});
+
+مستقل نتیجہ = انتظار سکہ_اچھالو;
+لکھو(نتیجہ);    // چت  یا  پٹ
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Promise that can reject
+غیر_متزامن فنکشن تقسیم(الف, ب) {
+    واپس نیا وعدہ((حل, رد) =&gt; {
+        اگر (ب === 0) {
+            رد(نیا Error("صفر سے تقسیم ناممکن"));
+        } ورنہ {
+            حل(الف / ب);
+        }
+    });
+}
+
+لکھو(انتظار تقسیم(10, 2));    // 5
+</code></pre></div>
+<p><strong>Promise states:</strong></p>
+<blockquote>
+<p><strong>اردو:</strong> وعدے کی حالتیں:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>State</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pending</td>
+<td>Not yet settled</td>
+</tr>
+<tr>
+<td>Fulfilled</td>
+<td>Resolved with a value</td>
+</tr>
+<tr>
+<td>Rejected</td>
+<td>Rejected with a reason</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="chaining-promises">Chaining Promises — وعدوں کا سلسلہ</h2>
+<p>Use <code>.پھر()</code> (then), <code>.پکڑو()</code> (catch), and <code>.آخر()</code> (finally) for promise chains.</p>
+<blockquote>
+<p><strong>اردو:</strong> وعدوں کی زنجیر بنانے کے لیے <code>.پھر()</code> (then)، <code>.پکڑو()</code> (catch)، اور <code>.آخر()</code> (finally) استعمال کریں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>تقسیم(100, 5)
+    .پھر(نتیجہ =&gt; {
+        لکھو(`پہلا نتیجہ: ${نتیجہ}`);
+        واپس تقسیم(نتیجہ, 2);
+    })
+    .پھر(نتیجہ =&gt; {
+        لکھو(`دوسرا نتیجہ: ${نتیجہ}`);
+    })
+    .پکڑو(غلطی =&gt; {
+        لکھو(`غلطی: ${غلطی.message}`);
+    })
+    .آخر(() =&gt; {
+        لکھو("سلسلہ مکمل");
+    });
+</code></pre></div>
+<hr />
+<h2 id="_-promiseall">انتظار_سبھی() — Promise.all</h2>
+<p><code>انتظار_سبھی(وعدے)</code> runs all promises <strong>concurrently</strong> and waits until all resolve. If any rejects, the whole call rejects.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>انتظار_سبھی(وعدے)</code> تمام وعدے <strong>بیک وقت</strong> چلاتا ہے اور سب کے پورا ہونے کا انتظار کرتا ہے۔ اگر کوئی ایک رد ہو جائے تو پوری کال رد ہو جاتی ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>غیر_متزامن فنکشن آہستہ_کام(نام, ملی_سیکنڈ) {
+    انتظار تاخیر(ملی_سیکنڈ);
+    واپس `${نام} مکمل (${ملی_سیکنڈ}ms)`;
+}
+
+غیر_متزامن فنکشن تمام_کام() {
+    مستقل شروع = وقت();
+
+    مستقل نتائج = انتظار انتظار_سبھی([
+        آہستہ_کام("کام الف", 300),
+        آہستہ_کام("کام ب",   200),
+        آہستہ_کام("کام ج",   400)
+    ]);
+
+    مستقل وقت_لگا = وقت() - شروع;
+    لکھو(نتائج);
+    لکھو(`کل وقت: ~${وقت_لگا}ms`);    // ~400ms, not 900ms
+}
+
+انتظار تمام_کام();
+// ["کام الف مکمل (300ms)", "کام ب مکمل (200ms)", "کام ج مکمل (400ms)"]
+// کل وقت: ~400ms
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Parallel data loading
+غیر_متزامن فنکشن ڈیش_بورڈ_لوڈ() {
+    مستقل [صارفین, آرڈر, مصنوعات] = انتظار انتظار_سبھی([
+        API.حاصل_کرو("/صارفین"),
+        API.حاصل_کرو("/آرڈر"),
+        API.حاصل_کرو("/مصنوعات")
+    ]);
+
+    واپس { صارفین, آرڈر, مصنوعات };
+}
+</code></pre></div>
+<hr />
+<h2 id="promiseallsettled-race-any">Promise.allSettled / race / any</h2>
+<h3 id="promiseallsettled-_">Promise.allSettled — تمام_نتائج()</h3>
+<p>Waits for all promises regardless of outcome. Returns an array of <code>{ status, value/reason }</code> objects.</p>
+<blockquote>
+<p><strong>اردو:</strong> تمام وعدوں کا انتظار کرتا ہے چاہے نتیجہ کچھ بھی ہو۔ <code>{ status, value/reason }</code> اشیاء کی فہرست واپس کرتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>غیر_متزامن فنکشن مثال_نتائج() {
+    مستقل نتائج = انتظار Promise.allSettled([
+        وعدہ.resolve("کامیاب"),
+        وعدہ.reject("ناکام"),
+        وعدہ.resolve("بھی کامیاب")
+    ]);
+
+    کے_لیے (مستقل نتیجہ کا نتائج) {
+        اگر (نتیجہ.status === "fulfilled") {
+            لکھو(`کامیاب: ${نتیجہ.value}`);
+        } ورنہ {
+            لکھو(`ناکام: ${نتیجہ.reason}`);
+        }
+    }
+}
+</code></pre></div>
+<h3 id="promiserace">Promise.race — دوڑ()</h3>
+<p>Resolves or rejects as soon as the <strong>first</strong> promise settles.</p>
+<blockquote>
+<p><strong>اردو:</strong> جیسے ہی <strong>پہلا</strong> وعدہ طے ہو جائے، حل یا رد ہو جاتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// Timeout pattern
+غیر_متزامن فنکشن ٹائم_آؤٹ_کے_ساتھ(وعدہ_شے, ملی_سیکنڈ) {
+    مستقل ٹائم_آؤٹ_وعدہ = نیا وعدہ((_, رد) =&gt;
+        setTimeout(() =&gt; رد(نیا Error("وقت ختم")), ملی_سیکنڈ)
+    );
+    واپس Promise.race([وعدہ_شے, ٹائم_آؤٹ_وعدہ]);
+}
+
+کوشش {
+    مستقل نتیجہ = انتظار ٹائم_آؤٹ_کے_ساتھ(
+        آہستہ_کام("ڈیٹا", 5000),
+        2000    // 2 second timeout
+    );
+    لکھو(نتیجہ);
+} پکڑو (غ) {
+    لکھو(`${غ.message}`);    // وقت ختم
+}
+</code></pre></div>
+<h3 id="promiseany-_">Promise.any — کوئی_ایک()</h3>
+<p>Resolves with the <strong>first successful</strong> promise.</p>
+<blockquote>
+<p><strong>اردو:</strong> <strong>پہلے کامیاب</strong> وعدے کے ساتھ حل ہوتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>مستقل نتیجہ = انتظار Promise.any([
+    وعدہ.reject("سرور 1 ناکام"),
+    آہستہ_کام("سرور 2", 200),
+    آہستہ_کام("سرور 3", 100)
+]);
+لکھو(نتیجہ);    // سرور 3 مکمل (100ms)
+</code></pre></div>
+<hr />
+<h2 id="async-error-handling">Async Error Handling — غیر متزامن غلطی سنبھالنا</h2>
+<p>Always wrap <code>انتظار</code> calls in <code>کوشش/پکڑو</code> to handle rejections gracefully.</p>
+<blockquote>
+<p><strong>اردو:</strong> ردّ کو سلیقے سے سنبھالنے کے لیے <code>انتظار</code> کالز کو ہمیشہ <code>کوشش/پکڑو</code> میں لپیٹیں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>غیر_متزامن فنکشن محفوظ_طریقے_سے() {
+    کوشش {
+        مستقل ڈیٹا = انتظار کرل("https://api.example.com/users");
+        مستقل صارفین = JSON_پڑھو(ڈیٹا);
+        لکھو(`${صارفین.لمبائی} صارفین ملے`);
+    } پکڑو (غ) {
+        لکھو(`نیٹ ورک غلطی: ${غ.message}`);
+    } آخر {
+        لکھو("درخواست مکمل");
+    }
+}
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Handle different error types
+غیر_متزامن فنکشن ڈیٹا_پروسیس() {
+    کوشش {
+        مستقل جواب = انتظار کرل("https://api.example.com/data");
+        اگر (!جواب.ok) پھینکو نیا Error(`HTTP ${جواب.status}`);
+        واپس انتظار جواب.json();
+    } پکڑو (غ) {
+        اگر (غ مثال TypeError) {
+            لکھو("نیٹ ورک سے رابطہ نہیں");
+        } ورنہ_اگر (غ.message.شروع_ہے("HTTP")) {
+            لکھو(`سرور غلطی: ${غ.message}`);
+        } ورنہ {
+            لکھو(`نامعلوم غلطی: ${غ.message}`);
+        }
+        واپس خالی;
+    }
+}
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Parallel with individual error handling
+غیر_متزامن فنکشن محفوظ_سب(وعدے) {
+    واپس انتظار_سبھی(
+        وعدے.تبدیل(p =&gt;
+            p.پکڑو(غ =&gt; ({ غلطی: غ.message }))
+        )
+    );
+}
+
+مستقل نتائج = انتظار محفوظ_سب([
+    وعدہ.resolve(42),
+    وعدہ.reject(نیا Error("ناکام")),
+    وعدہ.resolve("مکمل")
+]);
+
+لکھو(نتائج);
+// [42, { غلطی: "ناکام" }, "مکمل"]
+</code></pre></div>
+<hr />
+<h2 id="generator-functions-with">Generator Functions with پیداوار — جنریٹر فنکشنز</h2>
+<p>Generator functions produce values lazily with <code>پیداوار</code>. They are useful for memory-efficient iteration.</p>
+<blockquote>
+<p><strong>اردو:</strong> جنریٹر فنکشنز <code>پیداوار</code> کے ساتھ قدریں سست روی سے پیدا کرتے ہیں۔ یہ میموری کے اعتبار سے موثر تکرار کے لیے مفید ہیں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>فنکشن* فبوناچی() {
+    متغیر [الف, ب] = [0, 1];
+    جبکہ (سچ) {
+        پیداوار الف;
+        [الف, ب] = [ب, الف + ب];
+    }
+}
+
+// Take first 10
+مستقل g = فبوناچی();
+مستقل پہلے_10 = [];
+کے_لیے (متغیر _ کا حد(10)) {
+    پہلے_10.شامل(g.اگلا().value);
+}
+لکھو(پہلے_10);
+// [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Generator pipeline
+فنکشن* نقشہ(اشیاء, fn) {
+    کے_لیے (مستقل شے کا اشیاء) {
+        پیداوار fn(شے);
+    }
+}
+
+فنکشن* چھانو(اشیاء, شرط) {
+    کے_لیے (مستقل شے کا اشیاء) {
+        اگر (شرط(شے)) پیداوار شے;
+    }
+}
+
+فنکشن* حد_لگاؤ(اشیاء, n) {
+    متغیر گنتی = 0;
+    کے_لیے (مستقل شے کا اشیاء) {
+        اگر (گنتی++ &gt;= n) ٹوٹنا;
+        پیداوار شے;
+    }
+}
+
+// Compose: first 5 even squares from natural numbers
+مستقل قدرتی = فنکشن*() { متغیر i = 0; جبکہ(سچ) پیداوار i++; };
+مستقل نتیجہ = [...حد_لگاؤ(چھانو(نقشہ(قدرتی(), n =&gt; n*n), n =&gt; n%2===0), 5)];
+لکھو(نتیجہ);    // [0, 4, 16, 36, 64]
+</code></pre></div>
+<hr />
+<h2 id="async-generators">Async Generators — غیر متزامن جنریٹرز</h2>
+<p>Async generators combine <code>غیر_متزامن فنکشن*</code> with <code>پیداوار</code> for streaming async data.</p>
+<blockquote>
+<p><strong>اردو:</strong> غیر متزامن جنریٹرز <code>غیر_متزامن فنکشن*</code> اور <code>پیداوار</code> کو ملاتے ہیں تاکہ غیر متزامن ڈیٹا کو بہاؤ کی صورت میں حاصل کیا جا سکے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>غیر_متزامن فنکشن* ڈیٹا_سٹریم(صفحات) {
+    کے_لیے (متغیر صفحہ کا حد(1, صفحات + 1)) {
+        انتظار تاخیر(200);    // simulate API call
+        پیداوار { صفحہ, ڈیٹا: `صفحہ ${صفحہ} کا ڈیٹا` };
+    }
+}
+
+غیر_متزامن فنکشن سب_صفحات() {
+    کے_لیے انتظار (مستقل ٹکڑا کا ڈیٹا_سٹریم(3)) {
+        لکھو(ٹکڑا);
+    }
+}
+
+انتظار سب_صفحات();
+// { صفحہ: 1, ڈیٹا: "صفحہ 1 کا ڈیٹا" }
+// { صفحہ: 2, ڈیٹا: "صفحہ 2 کا ڈیٹا" }
+// { صفحہ: 3, ڈیٹا: "صفحہ 3 کا ڈیٹا" }
+</code></pre></div>
+<hr />
+<h2 id="concurrent-operations-example">Concurrent Operations Example — بیک وقت آپریشنز کی مثال</h2>
+<p>A realistic example showing sequential vs concurrent loading and result handling.</p>
+<blockquote>
+<p><strong>اردو:</strong> ایک حقیقی مثال جو بالترتیب بمقابلہ بیک وقت لوڈنگ اور نتائج کا موازنہ دکھاتی ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// Simulate API calls
+غیر_متزامن فنکشن صارف_حاصل_کرو(id) {
+    انتظار تاخیر(300);
+    واپس { id, نام: `صارف ${id}`, ای_میل: `user${id}@example.com` };
+}
+
+غیر_متزامن فنکشن آرڈر_حاصل_کرو(صارف_id) {
+    انتظار تاخیر(200);
+    واپس [
+        { id: صارف_id * 100, شے: "کتاب", قیمت: 500 },
+        { id: صارف_id * 100 + 1, شے: "قلم", قیمت: 50 }
+    ];
+}
+
+// ❌ Sequential — slow (500ms total)
+غیر_متزامن فنکشن بالترتیب_لوڈ(ids) {
+    مستقل نتائج = [];
+    کے_لیے (مستقل id کا ids) {
+        مستقل صارف = انتظار صارف_حاصل_کرو(id);
+        مستقل آرڈر = انتظار آرڈر_حاصل_کرو(id);
+        نتائج.شامل({ صارف, آرڈر });
+    }
+    واپس نتائج;
+}
+
+// ✅ Concurrent — fast (300ms total)
+غیر_متزامن فنکشن بیک_وقت_لوڈ(ids) {
+    واپس انتظار انتظار_سبھی(
+        ids.تبدیل(غیر_متزامن id =&gt; {
+            مستقل [صارف, آرڈر] = انتظار انتظار_سبھی([
+                صارف_حاصل_کرو(id),
+                آرڈر_حاصل_کرو(id)
+            ]);
+            واپس { صارف, آرڈر };
+        })
+    );
+}
+
+مستقل نتائج = انتظار بیک_وقت_لوڈ([1, 2, 3]);
+
+کے_لیے (مستقل { صارف, آرڈر } کا نتائج) {
+    مستقل کل = آرڈر.کم_کرو((s, o) =&gt; s + o.قیمت, 0);
+    لکھو(`${صارف.نام}: ${آرڈر.لمبائی} آرڈر، کل ${کل} روپے`);
+}
+// صارف 1: 2 آرڈر، کل 550 روپے
+// صارف 2: 2 آرڈر، کل 550 روپے
+// صارف 3: 2 آرڈر، کل 550 روپے
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Queue — process N items at a time
+غیر_متزامن فنکشن متوازی_قطار(اشیاء, fn, ہم_وقت = 3) {
+    مستقل نتائج = [];
+    کے_لیے (متغیر i = 0; i &lt; اشیاء.لمبائی; i += ہم_وقت) {
+        مستقل ٹکڑا = اشیاء.حصہ(i, i + ہم_وقت);
+        مستقل ٹکڑا_نتائج = انتظار انتظار_سبھی(ٹکڑا.تبدیل(fn));
+        نتائج.جوڑ_دو(...ٹکڑا_نتائج);
+    }
+    واپس نتائج;
+}
+
+مستقل ids = [1, 2, 3, 4, 5, 6, 7, 8];
+مستقل صارفین = انتظار متوازی_قطار(ids, صارف_حاصل_کرو, 3);
+لکھو(`${صارفین.لمبائی} صارفین لوڈ ہوئے`);    // 8 صارفین لوڈ ہوئے
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

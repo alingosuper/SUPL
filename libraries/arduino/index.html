@@ -1,0 +1,1422 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Arduino / Embedded — اردو/آردوینو - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#arduino-embedded" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Arduino / Embedded — اردو/آردوینو
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorial/beginner/" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/beginner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intermediate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#firmata-board" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        آردوینو — Firmata Board
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="آردوینو — Firmata Board">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-board-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supported Board Classes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#direct-board-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Direct Board Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-class-pin-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        پن — First-Class Pin Object
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#callbacks-interrupt-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Callbacks — Interrupt-Style
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sampling-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sampling Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i2c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I2C
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_-text-command-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        سیریل_آردوینو — Text-Command Protocol
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#raw-serial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        سیریل — Raw Serial
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mode-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mode Constants — موڈ مستقل
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-recipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Recipes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="arduino-embedded">Arduino / Embedded — اردو/آردوینو</h1>
+<p>The <code>اردو/آردوینو</code> library provides three layers of hardware communication:</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Class</th>
+<th>Protocol</th>
+<th>Use when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>آردوینو</code></td>
+<td>Native pyfirmata2</td>
+<td>Firmata</td>
+<td>Full I/O, PWM, servo, I2C, callbacks</td>
+</tr>
+<tr>
+<td><code>سیریل_آردوینو</code></td>
+<td>Text-command</td>
+<td>Custom UART</td>
+<td>No Firmata needed — simple command/response</td>
+</tr>
+<tr>
+<td><code>سیریل</code></td>
+<td>Raw pyserial</td>
+<td>Raw bytes</td>
+<td>Any serial device (GPS, Bluetooth, sensors)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>اردو:</strong> <code>اردو/آردوینو</code> لائبریری تین پرتوں میں Arduino اور سیریل آلات سے جوڑتی ہے — مکمل Firmata سپورٹ سے لے کر خام بائٹ اسٹریم تک۔</p>
+</blockquote>
+<p><strong>Install:</strong></p>
+<div class="highlight"><pre><span></span><code>pip install pyfirmata2 pyserial
+</code></pre></div>
+<p>For <code>آردوینو</code> (Firmata) you also need to upload <strong>StandardFirmata</strong> to your board:
+<code>Arduino IDE → File → Examples → Firmata → StandardFirmata</code></p>
+<p><strong>Import:</strong></p>
+<div class="highlight"><pre><span></span><code>درآمد { آردوینو, پن, اونچا, نیچا, آؤٹ_پٹ, ان_پٹ, ان_پٹ_پل_اپ, PWM_موڈ, سرو_موڈ_نام } سے "اردو/آردوینو"
+درآمد { سیریل, سیریل_آردوینو } سے "اردو/آردوینو"
+</code></pre></div>
+<hr />
+<h2 id="firmata-board">آردوینو — Firmata Board</h2>
+<h3 id="supported-board-classes">Supported Board Classes</h3>
+<table>
+<thead>
+<tr>
+<th>Urdu class</th>
+<th>pyfirmata2 class</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>آردوینو</code></td>
+<td><code>Arduino</code></td>
+<td>Uno / standard</td>
+</tr>
+<tr>
+<td><code>آردوینو_میگا</code></td>
+<td><code>ArduinoMega</code></td>
+<td>Mega 2560</td>
+</tr>
+<tr>
+<td><code>آردوینو_نانو</code></td>
+<td><code>ArduinoNano</code></td>
+<td>Nano</td>
+</tr>
+<tr>
+<td><code>آردوینو_ڈیو</code></td>
+<td><code>ArduinoDue</code></td>
+<td>Due</td>
+</tr>
+</tbody>
+</table>
+<h3 id="constructor">Constructor</h3>
+<div class="highlight"><pre><span></span><code>متغیر بورڈ = نیا آردوینو("COM3")         // Windows
+متغیر بورڈ = نیا آردوینو("/dev/ttyUSB0") // Linux
+متغیر بورڈ = نیا آردوینو("COM4", باڈ=57600)
+</code></pre></div>
+<p>The board starts the background iterator and analog sampling automatically.</p>
+<hr />
+<h3 id="direct-board-methods">Direct Board Methods</h3>
+<p><strong>Digital output — LED blink:</strong></p>
+<div class="highlight"><pre><span></span><code>بورڈ.پن_موڈ(13, آؤٹ_پٹ)
+بورڈ.بلند_کریں(13)       // HIGH
+بورڈ.تاخیر(1)             // 1 second
+بورڈ.نیچے_کریں(13)       // LOW
+بورڈ.تاخیر(1)
+</code></pre></div>
+<p><strong>Digital read with pull-up:</strong></p>
+<div class="highlight"><pre><span></span><code>بورڈ.پن_موڈ(2, ان_پٹ_پل_اپ)
+متغیر حالت = بورڈ.ڈیجیٹل_پڑھو(2)  // True / False
+</code></pre></div>
+<p><strong>Analog read:</strong></p>
+<div class="highlight"><pre><span></span><code>متغیر قدر = بورڈ.اینالاگ_پڑھو(0)    // 0.0 – 1.0 (normalised)
+متغیر خام = بورڈ.اینالاگ_خام(0)     // 0 – 1023 (raw ADC)
+</code></pre></div>
+<p><strong>PWM (LED dimming):</strong></p>
+<div class="highlight"><pre><span></span><code>بورڈ.پن_موڈ(9, PWM_موڈ)
+بورڈ.اینالاگ_لکھو(9, 0.5)    // 50% duty cycle
+</code></pre></div>
+<p><strong>Servo:</strong></p>
+<div class="highlight"><pre><span></span><code>بورڈ.سرو_لکھو(10, 90)    // 90° (0–180)
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.پن_موڈ(پن, موڈ)</code></td>
+<td>Set pin mode (<code>ان_پٹ</code>, <code>آؤٹ_پٹ</code>, <code>PWM_موڈ</code>, <code>سرو_موڈ_نام</code>, <code>ان_پٹ_پل_اپ</code>)</td>
+</tr>
+<tr>
+<td><code>.بلند_کریں(پن)</code></td>
+<td>Set digital pin HIGH</td>
+</tr>
+<tr>
+<td><code>.نیچے_کریں(پن)</code></td>
+<td>Set digital pin LOW</td>
+</tr>
+<tr>
+<td><code>.ٹاگل(پن)</code></td>
+<td>Toggle digital pin</td>
+</tr>
+<tr>
+<td><code>.ڈیجیٹل_لکھو(پن, قدر)</code></td>
+<td>Write <code>اونچا</code>/<code>نیچا</code></td>
+</tr>
+<tr>
+<td><code>.ڈیجیٹل_پڑھو(پن)</code></td>
+<td>Read digital state (<code>True</code>/<code>False</code>)</td>
+</tr>
+<tr>
+<td><code>.اینالاگ_لکھو(پن, قدر)</code></td>
+<td>PWM output — <code>0.0</code> to <code>1.0</code></td>
+</tr>
+<tr>
+<td><code>.اینالاگ_پڑھو(پن)</code></td>
+<td>Normalised analog read — <code>0.0</code> to <code>1.0</code></td>
+</tr>
+<tr>
+<td><code>.اینالاگ_خام(پن)</code></td>
+<td>Raw ADC value — <code>0</code> to <code>1023</code></td>
+</tr>
+<tr>
+<td><code>.سرو_لکھو(پن, درجہ)</code></td>
+<td>Set servo angle — <code>0</code> to <code>180</code></td>
+</tr>
+<tr>
+<td><code>.تاخیر(ثانیے)</code></td>
+<td><code>time.sleep(ثانیے)</code></td>
+</tr>
+<tr>
+<td><code>.بند()</code></td>
+<td>Disconnect from board</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="first-class-pin-object">پن — First-Class Pin Object</h3>
+<p>Get a pin object for repeated use:</p>
+<div class="highlight"><pre><span></span><code>متغیر ایل_ای_ڈی = بورڈ.ڈیجیٹل(13)
+ایل_ای_ڈی.آؤٹ_پٹ_بنائیں()
+ایل_ای_ڈی.لکھو(اونچا)
+
+متغیر بٹن = بورڈ.ڈیجیٹل(2)
+بٹن.ان_پٹ_بنائیں(پل_اپ=سچ)
+لکھو(بٹن.پڑھو())           // True / False
+
+متغیر روشنی = بورڈ.اینالاگ(0)
+لکھو(روشنی.پڑھو())          // 0.0 – 1.0
+
+متغیر موٹر = بورڈ.ڈیجیٹل(9)
+موٹر.PWM_بنائیں()
+موٹر.لکھو(0.75)              // 75% PWM
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.آؤٹ_پٹ_بنائیں()</code></td>
+<td>Set as OUTPUT</td>
+</tr>
+<tr>
+<td><code>.ان_پٹ_بنائیں(پل_اپ=جھوٹ)</code></td>
+<td>Set as INPUT or INPUT_PULLUP</td>
+</tr>
+<tr>
+<td><code>.PWM_بنائیں()</code></td>
+<td>Set as PWM output</td>
+</tr>
+<tr>
+<td><code>.سرو_بنائیں()</code></td>
+<td>Set as Servo</td>
+</tr>
+<tr>
+<td><code>.لکھو(قدر)</code></td>
+<td>Write: digital (<code>اونچا</code>/<code>نیچا</code>) or analog (<code>0.0</code>–<code>1.0</code>) or servo (<code>0</code>–<code>180</code>)</td>
+</tr>
+<tr>
+<td><code>.پڑھو()</code></td>
+<td>Read current value</td>
+</tr>
+<tr>
+<td><code>.خام_پڑھو()</code></td>
+<td>Raw ADC integer read</td>
+</tr>
+<tr>
+<td><code>.کال_بیک_مقرر(fn)</code></td>
+<td>Register callback <code>fn(value)</code> called on every change</td>
+</tr>
+<tr>
+<td><code>.رپورٹنگ_چالو()</code></td>
+<td>Enable change reporting to callback</td>
+</tr>
+<tr>
+<td><code>.رپورٹنگ_بند()</code></td>
+<td>Disable change reporting</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="callbacks-interrupt-style">Callbacks — Interrupt-Style</h3>
+<p>Register a function to be called whenever a pin's value changes — no polling required:</p>
+<div class="highlight"><pre><span></span><code>متغیر حرکت = بورڈ.ڈیجیٹل(3)
+حرکت.ان_پٹ_بنائیں()
+حرکت.رپورٹنگ_چالو()
+حرکت.کال_بیک_مقرر(فنکشن(قدر) {
+    اگر (قدر) {
+        لکھو("حرکت محسوس کی!")
+    }
+})
+</code></pre></div>
+<p>Board-level callbacks by pin number:</p>
+<div class="highlight"><pre><span></span><code>بورڈ.ڈیجیٹل_تبدیلی(3, فنکشن(قدر) { لکھو("D3:", قدر) })
+بورڈ.اینالاگ_تبدیلی(0, فنکشن(قدر) { لکھو("A0:", قدر) })
+</code></pre></div>
+<hr />
+<h3 id="sampling-control">Sampling Control</h3>
+<div class="highlight"><pre><span></span><code>بورڈ.نمونہ_چالو(50)     // sample every 50 ms
+بورڈ.نمونہ_وقفہ(100)    // change to 100 ms
+بورڈ.نمونہ_بند()         // stop analog sampling
+</code></pre></div>
+<hr />
+<h3 id="i2c">I2C</h3>
+<div class="highlight"><pre><span></span><code>بورڈ.I2C_آغاز()
+بورڈ.I2C_لکھو(0x68, 0x6B, 0x00)    // (address, register, value)
+بورڈ.I2C_پڑھو(0x68, 6, فنکشن(ڈیٹا) {
+    لکھو("I2C data:", ڈیٹا)
+})
+</code></pre></div>
+<hr />
+<h2 id="_-text-command-protocol">سیریل_آردوینو — Text-Command Protocol</h2>
+<p>No Firmata needed — communicate with any sketch that reads/writes text over Serial.</p>
+<div class="highlight"><pre><span></span><code>درآمد { سیریل_آردوینو } سے "اردو/آردوینو";
+
+متغیر ارد = نیا سیریل_آردوینو("COM3")
+
+// بھیجیں
+ارد.بھیجیں("LED:ON")
+ارد.بھیجیں("MOTOR:128")
+
+// پڑھیں
+متغیر جواب = ارد.پڑھیں()       // reads one line (strips \r\n)
+متغیر جواب = ارد.پڑھیں(0.5)    // with 0.5s timeout
+
+// حلقہ
+ارد.حلقہ(فنکشن(سطر) {
+    لکھو("Arduino said:", سطر)
+})
+
+ارد.بند()
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.بھیجیں(متن)</code></td>
+<td>Send a line (appends <code>\n</code>)</td>
+</tr>
+<tr>
+<td><code>.پڑھیں(ختمی=1.0)</code></td>
+<td>Read one line — returns string or <code>None</code> on timeout</td>
+</tr>
+<tr>
+<td><code>.حلقہ(fn)</code></td>
+<td>Blocking loop — calls <code>fn(line)</code> for every received line</td>
+</tr>
+<tr>
+<td><code>.بند()</code></td>
+<td>Close serial port</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="raw-serial">سیریل — Raw Serial</h2>
+<p>Direct pyserial wrapper for any serial device:</p>
+<div class="highlight"><pre><span></span><code>درآمد { سیریل } سے "اردو/آردوینو";
+
+متغیر پورٹ = نیا سیریل("COM3", باڈ=9600, ختمی=2.0)
+
+پورٹ.لکھو(b"hello\n")         // write bytes
+پورٹ.متن_لکھو("hello\n")      // write string as UTF-8
+
+متغیر بائٹس = پورٹ.پڑھو(10)   // read exactly 10 bytes
+متغیر سطر   = پورٹ.سطر_پڑھو() // read until \n
+
+پورٹ.صاف_کریں()               // flush buffers
+پورٹ.بند()
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.لکھو(بائٹس)</code></td>
+<td>Write raw bytes</td>
+</tr>
+<tr>
+<td><code>.متن_لکھو(متن)</code></td>
+<td>Write UTF-8 encoded string</td>
+</tr>
+<tr>
+<td><code>.پڑھو(تعداد)</code></td>
+<td>Read n bytes</td>
+</tr>
+<tr>
+<td><code>.سطر_پڑھو()</code></td>
+<td>Read until <code>\n</code></td>
+</tr>
+<tr>
+<td><code>.دستیاب()</code></td>
+<td>Number of bytes waiting to be read</td>
+</tr>
+<tr>
+<td><code>.صاف_کریں()</code></td>
+<td>Flush input/output buffers</td>
+</tr>
+<tr>
+<td><code>.بند()</code></td>
+<td>Close port</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="mode-constants">Mode Constants — موڈ مستقل</h2>
+<table>
+<thead>
+<tr>
+<th>Urdu constant</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>اونچا</code> / <code>HIGH</code></td>
+<td><code>1</code></td>
+<td>Digital HIGH</td>
+</tr>
+<tr>
+<td><code>نیچا</code> / <code>LOW</code></td>
+<td><code>0</code></td>
+<td>Digital LOW</td>
+</tr>
+<tr>
+<td><code>ان_پٹ</code> / <code>INPUT</code></td>
+<td><code>0</code></td>
+<td>Digital input</td>
+</tr>
+<tr>
+<td><code>ان_پٹ_پل_اپ</code> / <code>INPUT_PULLUP</code></td>
+<td><code>11</code></td>
+<td>Input with pull-up resistor</td>
+</tr>
+<tr>
+<td><code>آؤٹ_پٹ</code> / <code>OUTPUT</code></td>
+<td><code>1</code></td>
+<td>Digital output</td>
+</tr>
+<tr>
+<td><code>اینالاگ_موڈ</code> / <code>ANALOG</code></td>
+<td><code>2</code></td>
+<td>Analog input</td>
+</tr>
+<tr>
+<td><code>PWM_موڈ</code> / <code>PWM</code></td>
+<td><code>3</code></td>
+<td>PWM output</td>
+</tr>
+<tr>
+<td><code>سرو_موڈ_نام</code> / <code>SERVO</code></td>
+<td><code>4</code></td>
+<td>Servo output</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="common-recipes">Common Recipes</h2>
+<p><strong>Blink an LED:</strong></p>
+<div class="highlight"><pre><span></span><code>متغیر بورڈ = نیا آردوینو("COM3")
+بورڈ.پن_موڈ(13, آؤٹ_پٹ)
+جبکہ (سچ) {
+    بورڈ.ٹاگل(13)
+    بورڈ.تاخیر(0.5)
+}
+</code></pre></div>
+<p><strong>Read a potentiometer:</strong></p>
+<div class="highlight"><pre><span></span><code>متغیر بورڈ = نیا آردوینو("COM3")
+متغیر پوٹ = بورڈ.اینالاگ(0)
+جبکہ (سچ) {
+    لکھو(`A0: ${پوٹ.پڑھو():.2f}`)
+    بورڈ.تاخیر(0.1)
+}
+</code></pre></div>
+<p><strong>Servo sweep:</strong></p>
+<div class="highlight"><pre><span></span><code>متغیر بورڈ = نیا آردوینو("COM3")
+متغیر سرو = بورڈ.ڈیجیٹل(9)
+سرو.سرو_بنائیں()
+کے_لیے (متغیر زاویہ کا حد(0, 181, 5)) {
+    سرvo.لکھو(زاویہ)
+    بورڈ.تاخیر(0.05)
+}
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

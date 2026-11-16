@@ -1,0 +1,1442 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>15. Threading — دھاگے - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#15-threading" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              15. Threading — دھاگے
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../beginner/" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../libraries/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beginner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../libraries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#importing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importing — درآمد
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-thread" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Thread — بنیادی دھاگہ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-threads" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple Threads — کئی دھاگے
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lock-mutual-exclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lock — تالہ (Mutual Exclusion)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#queue-thread-safe-messaging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Queue — قطار (Thread-Safe Messaging)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priority-queue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Priority Queue — ترجیحی قطار
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#event-thread-signaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Event — واقعہ (Thread Signaling)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#semaphore-limit-concurrency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Semaphore — سیمافور (Limit Concurrency)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thread-pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thread Pool — دھاگہ تالاب
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Thread Pool — دھاگہ تالاب">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Map — نقشہ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future — مستقبل
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timer-one-shot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timer — ٹائمر (One-Shot)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repeating-timer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Repeating Timer — وقفہ ٹائمر
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thread-local-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thread-Local Storage — مقامی ذخیرہ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-example-parallel-downloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical Example: Parallel Downloads — موازی ڈاؤن لوڈ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#threading-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Threading Tips — اہم نکات
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Reference — فوری حوالہ
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="15-threading">15. Threading — دھاگے</h1>
+<p><strong>Difficulty:</strong> Intermediate — متوسط<br />
+<strong>Time:</strong> ~30 minutes</p>
+<hr />
+<h2 id="importing">Importing — درآمد</h2>
+<div class="highlight"><pre><span></span><code>درآمد {
+    دھاگہ, دھاگہ_تالاب, تالہ, واقعہ,
+    سیمافور, قطار, ترجیحی_قطار,
+    ٹائمر, وقفہ_ٹائمر, مقامی_ذخیرہ
+} سے "اردو/دھاگہ";
+درآمد { نیند } سے "اردو/تاریخ";
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> <code>"اردو/دھاگہ"</code> میں تمام کثیر-دھاگہ اوزار ہیں۔ <code>نیند</code> کے لیے <code>"اردو/تاریخ"</code> سے درآمد کریں۔</p>
+</blockquote>
+<hr />
+<h2 id="basic-thread">Basic Thread — بنیادی دھاگہ</h2>
+<p><code>نیا دھاگہ(کام)</code> creates a thread. <code>.شروع()</code> starts it. <code>.انتظار()</code> waits for it to finish.</p>
+<div class="highlight"><pre><span></span><code>فنکشن سلام() {
+    لکھو("دھاگہ: سلام!");
+}
+
+متغیر د = نیا دھاگہ(سلام);
+د.شروع();
+د.انتظار();    // wait until thread finishes
+لکھو("مکمل");
+</code></pre></div>
+<p><strong>With arguments — دلائل کے ساتھ:</strong></p>
+<div class="highlight"><pre><span></span><code>فنکشن عنوان(نام) {
+    لکھو(`دھاگہ: ${نام}`);
+}
+
+متغیر د = نیا دھاگہ(عنوان, "احمد");
+د.شروع();
+د.انتظار();
+// Output: دھاگہ: احمد
+</code></pre></div>
+<p><strong>Thread info — دھاگہ معلومات:</strong></p>
+<div class="highlight"><pre><span></span><code>لکھو(دھاگہ.گنتی());      // active thread count
+لکھو(د.چل_رہا());         // False (finished)
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> <code>نیا دھاگہ(فنکشن, دلیل1, دلیل2)</code> — فنکشن اور دلائل پاس کریں۔ <code>.شروع()</code> دھاگہ چالو کرتا ہے، <code>.انتظار()</code> اس کے ختم ہونے کا انتظار کرتا ہے۔</p>
+</blockquote>
+<hr />
+<h2 id="multiple-threads">Multiple Threads — کئی دھاگے</h2>
+<div class="highlight"><pre><span></span><code>فنکشن کام(شناخت) {
+    لکھو(`دھاگہ ${شناخت} چل رہا ہے`);
+}
+
+متغیر دھاگے = [];
+متغیر ا = 0;
+جبکہ (ا &lt; 3) {
+    متغیر د = نیا دھاگہ(کام, ا + 1);
+    دھاگے.شامل(د);
+    د.شروع();
+    ا = ا + 1;
+}
+
+// Wait for all
+کے_لیے (متغیر د میں دھاگے) {
+    د.انتظار();
+}
+لکھو("سب مکمل");
+</code></pre></div>
+<hr />
+<h2 id="lock-mutual-exclusion">Lock — تالہ (Mutual Exclusion)</h2>
+<p>Use <code>تالہ</code> when multiple threads share mutable data. Without a lock, updates can interleave and produce wrong results.</p>
+<div class="highlight"><pre><span></span><code>متغیر شمار = [0];    // use list for mutable shared state
+متغیر ل = نیا تالہ();
+
+فنکشن بڑھاؤ() {
+    متغیر ا = 0;
+    جبکہ (ا &lt; 100) {
+        ل.قبضہ();         // acquire lock
+        شمار[0] = شمار[0] + 1;
+        ل.چھوڑو();         // release lock
+        ا = ا + 1;
+    }
+}
+
+متغیر د1 = نیا دھاگہ(بڑھاؤ);
+متغیر د2 = نیا دھاگہ(بڑھاؤ);
+د1.شروع(); د2.شروع();
+د1.انتظار(); د2.انتظار();
+
+لکھو(شمار[0]);    // 200 (always correct with lock)
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> <code>.قبضہ()</code> تالہ لیتا ہے، <code>.چھوڑو()</code> چھوڑتا ہے۔ مشترکہ ڈیٹا کو ہمیشہ تالے سے محفوظ کریں۔</p>
+<p><strong>Note:</strong> Shared mutable variables must be wrapped in a list (<code>[0]</code>) due to how Urdu closures work — you cannot reassign an outer variable directly from inside an inner function.</p>
+</blockquote>
+<hr />
+<h2 id="queue-thread-safe-messaging">Queue — قطار (Thread-Safe Messaging)</h2>
+<p><code>قطار</code> is the standard way to pass data between threads safely:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.ڈالو(آئٹم)</code></td>
+<td>Add item (blocks if full)</td>
+</tr>
+<tr>
+<td><code>.نکالو()</code></td>
+<td>Remove item (blocks until available)</td>
+</tr>
+<tr>
+<td><code>.نکالو_نہ_رکو()</code></td>
+<td>Remove item without blocking (returns <code>خالی</code> if empty)</td>
+</tr>
+<tr>
+<td><code>.خالی()</code></td>
+<td>Returns <code>سچ</code> if queue is empty</td>
+</tr>
+<tr>
+<td><code>.لمبائی()</code></td>
+<td>Current item count</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Producer-consumer pattern — پیدا_کار/صارف:</strong></p>
+<div class="highlight"><pre><span></span><code>متغیر ق = نیا قطار();
+متغیر نتائج = [];
+
+فنکشن پیدا_کار() {
+    متغیر ا = 0;
+    جبکہ (ا &lt; 3) {
+        ق.ڈالو(ا + 1);
+        ا = ا + 1;
+    }
+    ق.ڈالو(خالی);    // signal: no more items
+}
+
+فنکشن صارف() {
+    جبکہ (سچ) {
+        متغیر آئٹم = ق.نکالو();
+        اگر (آئٹم == خالی) { ٹوٹنا; }
+        نتائج.شامل(آئٹم * 10);
+    }
+}
+
+متغیر د_پ = نیا دھاگہ(پیدا_کار);
+متغیر د_ص = نیا دھاگہ(صارف);
+د_پ.شروع(); د_ص.شروع();
+د_پ.انتظار(); د_ص.انتظار();
+
+لکھو(نتائج);    // [10, 20, 30]
+</code></pre></div>
+<hr />
+<h2 id="priority-queue">Priority Queue — ترجیحی قطار</h2>
+<p>Items are dequeued in priority order (lowest number = highest priority):</p>
+<div class="highlight"><pre><span></span><code>متغیر ترق = نیا ترجیحی_قطار();
+ترق.ڈالو(3, "کم اہم");
+ترق.ڈالو(1, "اہم");
+ترق.ڈالو(2, "درمیانی");
+
+لکھو(ترق.نکالو());    // (1, 'اہم')
+لکھو(ترق.نکالو());    // (2, 'درمیانی')
+لکھو(ترق.نکالو());    // (3, 'کم اہم')
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> <code>ترجیحی_قطار</code> میں <code>.ڈالو(عدد, آئٹم)</code> — پہلا عدد ترجیح ہے (چھوٹا نمبر پہلے نکلے گا)۔</p>
+</blockquote>
+<hr />
+<h2 id="event-thread-signaling">Event — واقعہ (Thread Signaling)</h2>
+<p><code>واقعہ</code> lets one thread signal another. The waiting thread blocks until the event is set.</p>
+<div class="highlight"><pre><span></span><code>متغیر واق = نیا واقعہ();
+متغیر پیغام = [""];
+
+فنکشن منتظر_کام() {
+    واق.انتظار(5.0);    // wait up to 5 seconds
+    لکھو(`پیغام ملا: ${پیغام[0]}`);
+}
+
+فنکشن بھیجنے_والا() {
+    نیند(0.5);
+    پیغام[0] = "آمادہ";
+    واق.مقرر();    // signal the event
+}
+
+متغیر د_م = نیا دھاگہ(منتظر_کام);
+متغیر د_ب = نیا دھاگہ(بھیجنے_والا);
+د_م.شروع(); د_ب.شروع();
+د_م.انتظار(); د_ب.انتظار();
+// Output: پیغام ملا: آمادہ
+</code></pre></div>
+<p><strong>Event methods — واقعہ کے طریقے:</strong></p>
+<div class="highlight"><pre><span></span><code>واق.مقرر();           // set the event (unblocks all waiters)
+واق.صاف();            // reset to un-set
+واق.لگا_ہوا();        // True if set
+واق.انتظار(5.0);      // block until set or timeout
+</code></pre></div>
+<hr />
+<h2 id="semaphore-limit-concurrency">Semaphore — سیمافور (Limit Concurrency)</h2>
+<p><code>سیمافور</code> limits how many threads can run a section simultaneously:</p>
+<div class="highlight"><pre><span></span><code>متغیر س = نیا سیمافور(2);    // allow 2 at a time
+
+فنکشن محدود_کام(شناخت) {
+    س.حاصل();                  // acquire one slot
+    لکھو(`دھاگہ ${شناخت} فعال`);
+    نیند(0.1);
+    لکھو(`دھاگہ ${شناخت} مکمل`);
+    س.چھوڑو();                  // release slot
+}
+
+متغیر دھاگے = [];
+متغیر ب = 0;
+جبکہ (ب &lt; 4) {
+    متغیر د = نیا دھاگہ(محدود_کام, ب + 1);
+    دھاگے.شامل(د);
+    د.شروع();
+    ب = ب + 1;
+}
+کے_لیے (متغیر د میں دھاگے) { د.انتظار(); }
+</code></pre></div>
+<p>Only 2 threads run at once, even though 4 were started.</p>
+<hr />
+<h2 id="thread-pool">Thread Pool — دھاگہ تالاب</h2>
+<p><code>دھاگہ_تالاب</code> runs many tasks efficiently using a worker pool:</p>
+<h3 id="map">Map — نقشہ</h3>
+<div class="highlight"><pre><span></span><code>فنکشن مربع(ن) { واپس ن * ن; }
+
+متغیر تالاب = نیا دھاگہ_تالاب(4);    // 4 worker threads
+متغیر نتائج = تالاب.نقشہ(مربع, [1, 2, 3, 4, 5]);
+لکھو(نتائج);    // [1, 4, 9, 16, 25]
+تالاب.بند();
+</code></pre></div>
+<h3 id="future">Future — مستقبل</h3>
+<p>Submit a single task and retrieve its result later:</p>
+<div class="highlight"><pre><span></span><code>متغیر تالاب = نیا دھاگہ_تالاب(2);
+
+متغیر م = تالاب.جمع_کرو_مستقبل(مربع, 7);
+لکھو(م.مکمل());       // False (may still be running)
+لکھو(م.نتیجہ());      // 49   (blocks until done)
+لکھو(م.مکمل());       // True
+
+تالاب.بند();
+</code></pre></div>
+<p><strong>Future methods — مستقبل کے طریقے:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.نتیجہ(وقفہ=خالی)</code></td>
+<td>Block and return result</td>
+</tr>
+<tr>
+<td><code>.مکمل()</code></td>
+<td><code>سچ</code> if finished or cancelled</td>
+</tr>
+<tr>
+<td><code>.چل_رہا()</code></td>
+<td><code>سچ</code> if currently executing</td>
+</tr>
+<tr>
+<td><code>.منسوخ()</code></td>
+<td>Cancel if not yet started</td>
+</tr>
+<tr>
+<td><code>.غلطی()</code></td>
+<td>Exception raised, or <code>خالی</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="timer-one-shot">Timer — ٹائمر (One-Shot)</h2>
+<p>Run a function once after a delay:</p>
+<div class="highlight"><pre><span></span><code>متغیر ہوا = [جھوٹ];
+
+فنکشن کال_بیک() {
+    ہوا[0] = سچ;
+    لکھو("ٹائمر چلا!");
+}
+
+متغیر ٹ = نیا ٹائمر(1.0, کال_بیک);    // fire after 1 second
+ٹ.شروع();
+
+نیند(1.5);
+لکھو(ہوا[0]);    // True
+</code></pre></div>
+<p>Cancel before it fires: <code>ٹ.منسوخ()</code></p>
+<hr />
+<h2 id="repeating-timer">Repeating Timer — وقفہ ٹائمر</h2>
+<p>Fire a function repeatedly at a fixed interval:</p>
+<div class="highlight"><pre><span></span><code>متغیر گنتی = [0];
+
+فنکشن دہرائیں() {
+    گنتی[0] = گنتی[0] + 1;
+    لکھو(`دھڑکن ${گنتی[0]}`);
+}
+
+متغیر وٹ = نیا وقفہ_ٹائمر(0.5, دہرائیں);
+وٹ.شروع();
+نیند(1.8);
+وٹ.روکو();    // stop the repeating timer
+لکھو(`کل: ${گنتی[0]}`);    // 3
+</code></pre></div>
+<hr />
+<h2 id="thread-local-storage">Thread-Local Storage — مقامی ذخیرہ</h2>
+<p>Each thread gets its own independent value:</p>
+<div class="highlight"><pre><span></span><code>متغیر ذخیرہ = نیا مقامی_ذخیرہ();
+
+فنکشن کام(نام) {
+    ذخیرہ.مقرر("صارف", نام);
+    نیند(0.05);
+    لکھو(`${نام}: ${ذخیرہ.حاصل("صارف")}`);
+}
+
+متغیر د1 = نیا دھاگہ(کام, "احمد");
+متغیر د2 = نیا دھاگہ(کام, "فاطمہ");
+د1.شروع(); د2.شروع();
+د1.انتظار(); د2.انتظار();
+// Each thread sees only its own value
+</code></pre></div>
+<hr />
+<h2 id="practical-example-parallel-downloads">Practical Example: Parallel Downloads — موازی ڈاؤن لوڈ</h2>
+<div class="highlight"><pre><span></span><code>درآمد { دھاگہ_تالاب } سے "اردو/دھاگہ";
+
+فنکشن فائل_ڈاؤن_لوڈ(فائل_نام) {
+    // simulate work
+    درآمد { نیند } سے "اردو/تاریخ";
+    نیند(0.1);
+    واپس `${فائل_نام} مکمل`;
+}
+
+متغیر فائلیں = ["دستاویز.pdf", "تصویر.png", "ڈیٹا.json", "رپورٹ.xlsx"];
+
+متغیر تالاب = نیا دھاگہ_تالاب(4);
+متغیر نتائج = تالاب.نقشہ(فائل_ڈاؤن_لوڈ, فائلیں);
+تالاب.بند();
+
+کے_لیے (متغیر ن میں نتائج) {
+    لکھو(ن);
+}
+</code></pre></div>
+<hr />
+<h2 id="threading-tips">Threading Tips — اہم نکات</h2>
+<p><strong>Shared state — مشترکہ حالت:</strong>
+- Wrap mutable shared values in a list: <code>[0]</code> not <code>0</code>
+- Always protect with <code>تالہ</code> when multiple threads write</p>
+<p><strong>Use the right tool:</strong>
+- <code>دھاگہ</code> — for a single background task
+- <code>دھاگہ_تالاب + نقشہ</code> — for applying one function to many inputs
+- <code>دھاگہ_تالاب + جمع_کرو_مستقبل</code> — when you need the result later
+- <code>قطار</code> — for passing work items between threads
+- <code>واقعہ</code> — for signaling "something happened"
+- <code>سیمافور</code> — to cap how many threads do something at once</p>
+<hr />
+<h2 id="quick-reference">Quick Reference — فوری حوالہ</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>دھاگہ(کام, *دلائل)</code></td>
+<td>Single thread</td>
+</tr>
+<tr>
+<td><code>دھاگہ_تالاب(n)</code></td>
+<td>Worker pool</td>
+</tr>
+<tr>
+<td><code>تالہ()</code></td>
+<td>Mutual exclusion</td>
+</tr>
+<tr>
+<td><code>واقعہ()</code></td>
+<td>Thread signaling</td>
+</tr>
+<tr>
+<td><code>سیمافور(n)</code></td>
+<td>Limit concurrency</td>
+</tr>
+<tr>
+<td><code>قطار()</code></td>
+<td>Thread-safe FIFO queue</td>
+</tr>
+<tr>
+<td><code>ترجیحی_قطار()</code></td>
+<td>Priority-ordered queue</td>
+</tr>
+<tr>
+<td><code>ٹائمر(t, fn)</code></td>
+<td>One-shot delayed call</td>
+</tr>
+<tr>
+<td><code>وقفہ_ٹائمر(t, fn)</code></td>
+<td>Repeating interval call</td>
+</tr>
+<tr>
+<td><code>مقامی_ذخیرہ()</code></td>
+<td>Per-thread storage</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><a href="../14-type-conversion/">← Previous: Type Conversion</a> | <a href="../">Next: Intermediate Index →</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

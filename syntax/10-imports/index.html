@@ -1,0 +1,1764 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Modules and Imports — ماڈیولز اور درآمد - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modules-and-imports" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Modules and Imports — ماڈیولز اور درآمد
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorial/beginner/" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../libraries/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/beginner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intermediate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../libraries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Modules? — ماڈیولز کیوں؟
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        درآمد — Import Syntax
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#named-imports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Named Imports — نامزد درآمد
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-imports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default Imports — پہلے سے طے شدہ درآمد
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aliased-imports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aliased Imports — بطور
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namespace-imports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Namespace Imports — نام فضا درآمد
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        برآمد — Exports
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="برآمد — Exports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#named-exports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Named exports — نامزد برآمد
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default export — پہلے سے طے شدہ برآمد
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#re-export-barrel-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Re-export (barrel files) — دوبارہ برآمد
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Built-in Modules — بنا بنایا ماڈیولز
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Built-in Modules — بنا بنایا ماڈیولز">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#web-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        اردو/ویب — Web framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-ml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        اردو/ذہین — AI / ML
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        اردو/ڈیٹا_بیس — Database
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cryptography" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        اردو/رمز — Cryptography
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        اردو/کرل — HTTP Client
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-scraper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        اردو/کھرچنی — Web Scraper
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        اردو/فائلیں — File System
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        اردو/لاگ — Logging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#threading-workers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        اردو/دھاگہ — Threading / Workers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date-and-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        اردو/تاریخ — Date and Time
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#websockets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        اردو/سوکٹ — WebSockets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-availability-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module availability summary — ماڈیولز کا خلاصہ
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-library-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing Library Dependencies — لائبریری انحصارات نصب کرنا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-imports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamic Imports — متحرک درآمد
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module Examples — ماڈیول کی مثالیں
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module Examples — ماڈیول کی مثالیں">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-complete-multi-file-application-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A complete multi-file application structure — مکمل کثیر فائل ایپلیکیشن ڈھانچہ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utility-module-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Utility module pattern — یوٹیلٹی ماڈیول طریقہ
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="modules-and-imports">Modules and Imports — ماڈیولز اور درآمد</h1>
+<p>The Urdu Programming Language has a module system that lets you split code across files, use built-in library modules, and share code with <code>برآمد</code> (export). This document covers all import and export forms.</p>
+<blockquote>
+<p><strong>اردو:</strong> اردو پروگرامنگ لینگویج میں ایک ماڈیول نظام موجود ہے جو کوڈ کو فائلوں میں تقسیم کرنے، بنا بنایا لائبریری ماڈیولز استعمال کرنے، اور <code>برآمد</code> کے ذریعے کوڈ شیئر کرنے کی سہولت دیتا ہے۔ یہ دستاویز درآمد اور برآمد کی تمام شکلوں کا احاطہ کرتی ہے۔</p>
+</blockquote>
+<hr />
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#why-modules">Why Modules?</a></li>
+<li><a href="#درآمد--import-syntax">درآمد — Import Syntax</a></li>
+<li><a href="#named-imports">Named Imports</a></li>
+<li><a href="#default-imports">Default Imports</a></li>
+<li><a href="#aliased-imports--بطور">Aliased Imports — بطور</a></li>
+<li><a href="#namespace-imports">Namespace Imports</a></li>
+<li><a href="#برآمد--exports">برآمد — Exports</a></li>
+<li><a href="#built-in-modules">Built-in Modules</a></li>
+<li><a href="#installing-library-dependencies">Installing Library Dependencies</a></li>
+<li><a href="#dynamic-imports">Dynamic Imports</a></li>
+<li><a href="#module-examples">Module Examples</a></li>
+</ol>
+<hr />
+<h2 id="why-modules">Why Modules? — ماڈیولز کیوں؟</h2>
+<p>Modules let you:
+- Split a large program into small, focused files
+- Reuse code across projects
+- Control what is publicly visible (<code>برآمد</code>) vs internal
+- Use built-in and third-party libraries</p>
+<blockquote>
+<p><strong>اردو:</strong> ماڈیولز آپ کو یہ سہولتیں دیتے ہیں:
+- بڑے پروگرام کو چھوٹی، مرکوز فائلوں میں تقسیم کریں
+- مختلف منصوبوں میں کوڈ دوبارہ استعمال کریں
+- کنٹرول کریں کہ کیا عوامی (<code>برآمد</code>) ہو اور کیا اندرونی
+- بنا بنایا اور تھرڈ پارٹی لائبریریاں استعمال کریں</p>
+</blockquote>
+<hr />
+<h2 id="import-syntax">درآمد — Import Syntax</h2>
+<p>All import statements begin with the keyword <code>درآمد</code>. The source path follows the keyword <code>سے</code>.</p>
+<blockquote>
+<p><strong>اردو:</strong> تمام درآمد بیانات کلیدی لفظ <code>درآمد</code> سے شروع ہوتے ہیں۔ ذریعہ راستہ کلیدی لفظ <code>سے</code> کے بعد آتا ہے۔</p>
+</blockquote>
+<p><strong>General form:</strong></p>
+<div class="highlight"><pre><span></span><code>درآمد ... سے "ماڈیول_راستہ";
+</code></pre></div>
+<hr />
+<h2 id="named-imports">Named Imports — نامزد درآمد</h2>
+<p>Import specific names that the module exports.</p>
+<blockquote>
+<p><strong>اردو:</strong> ماڈیول کی برآمد کردہ مخصوص ناموں کو درآمد کریں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// Single name
+درآمد { ریاضی_مددگار } سے "./حساب";
+
+// Multiple names
+درآمد { جمع, تفریق, ضرب, تقسیم } سے "./آپریشن";
+
+// Usage
+لکھو(جمع(3, 4));       // 7
+لکھو(ضرب(5, 6));       // 30
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Import from built-in module
+درآمد { روٹر, درخواست, جواب } سے "اردو/ویب";
+درآمد { ذہین_ماڈل, پیغام } سے "اردو/ذہین";
+درآمد { فائل_پڑھو, فائل_لکھو } سے "اردو/فائلیں";
+</code></pre></div>
+<hr />
+<h2 id="default-imports">Default Imports — پہلے سے طے شدہ درآمد</h2>
+<p>A module can export one default value. Import it without braces.</p>
+<blockquote>
+<p><strong>اردو:</strong> ایک ماڈیول ایک پہلے سے طے شدہ قدر برآمد کر سکتا ہے۔ اسے بغیر قوسین کے درآمد کریں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// Default import — any name you choose
+درآمد ایپ سے "./ایپلیکیشن";
+درآمد ڈیٹا_بیس سے "./ڈیٹا_بیس";
+درآمد لاگر سے "./لاگر";
+
+// Usage
+ایپ.شروع_کرو();
+ڈیٹا_بیس.جوڑو("mongodb://localhost");
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Mix default and named imports
+درآمد روٹر, { GET, POST, PUT } سے "اردو/ویب";
+درآمد ماڈل, { میدان, توثیق } سے "اردو/ڈیٹا_بیس";
+</code></pre></div>
+<hr />
+<h2 id="aliased-imports">Aliased Imports — بطور</h2>
+<p>Use <code>بطور</code> to rename an import to avoid conflicts or improve readability.</p>
+<blockquote>
+<p><strong>اردو:</strong> تنازعات سے بچنے یا پڑھنے میں آسانی کے لیے درآمد کا نام بدلنے کے لیے <code>بطور</code> استعمال کریں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// Rename a single import
+درآمد { لکھو بطور لاگ } سے "اردو/لاگ";
+درآمد { ترتیب_دو بطور ترتیب } سے "./مددگار";
+
+لاگ("سرور شروع ہو گیا");
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Rename multiple imports
+درآمد {
+    صارف_بنائیں بطور نیا_صارف,
+    صارف_حاصل_کرو بطور صارف_تلاش_کرو,
+    صارف_مٹائیں بطور صارف_ہٹائیں
+} سے "./صارف_سروس";
+
+مستقل صارف = انتظار نیا_صارف({ نام: "احمد" });
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Avoid name collision from two modules
+درآمد { جوڑو بطور فہرست_جوڑو } سے "./فہرست_مددگار";
+درآمد { جوڑو بطور متن_جوڑو } سے "./متن_مددگار";
+
+لکھو(فہرست_جوڑو([1, 2], [3, 4]));
+لکھو(متن_جوڑو("اردو", " پروگرامنگ"));
+</code></pre></div>
+<hr />
+<h2 id="namespace-imports">Namespace Imports — نام فضا درآمد</h2>
+<p>Import everything a module exports as a single object.</p>
+<blockquote>
+<p><strong>اردو:</strong> کسی ماڈیول کی تمام برآمدات کو ایک واحد شے کے طور پر درآمد کریں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد * بطور ریاضی_ماڈیول سے "./ریاضی";
+
+لکھو(ریاضی_ماڈیول.جذر(25));      // 5
+لکھو(ریاضی_ماڈیول.قوت(2, 8));    // 256
+لکھو(ریاضی_ماڈیول.PI);            // 3.14159...
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>درآمد * بطور فائل سے "اردو/فائلیں";
+
+مستقل متن_شے = انتظار فائل.پڑھو("data.txt");
+انتظار فائل.لکھو("output.txt", متن_شے);
+</code></pre></div>
+<hr />
+<h2 id="exports">برآمد — Exports</h2>
+<h3 id="named-exports">Named exports — نامزد برآمد</h3>
+<blockquote>
+<p><strong>اردو:</strong> نامزد برآمد:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// exports.urdu
+برآمد مستقل PI = 3.14159265358979;
+
+برآمد فنکشن دائرے_کا_رقبہ(r) {
+    واپس PI * r * r;
+}
+
+برآمد کلاس ہندسہ {
+    تعمیر(نام) {
+        یہ.نام = نام;
+    }
+}
+
+// Or export a list at the end
+مستقل الف = 1;
+مستقل ب = 2;
+فنکشن ج() {}
+برآمد { الف, ب, ج };
+</code></pre></div>
+<h3 id="default-export">Default export — پہلے سے طے شدہ برآمد</h3>
+<blockquote>
+<p><strong>اردو:</strong> پہلے سے طے شدہ برآمد:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// سروس.urdu
+کلاس ای_میل_سروس {
+    تعمیر(ترتیبات) {
+        یہ.ترتیبات = ترتیبات;
+    }
+
+    غیر_متزامن بھیجو(بھیجنے_والا, موصول_کنندہ, موضوع, جسم) {
+        // send email
+    }
+}
+
+برآمد پہلے_سے_طے ای_میل_سروس;
+</code></pre></div>
+<h3 id="re-export-barrel-files">Re-export (barrel files) — دوبارہ برآمد</h3>
+<blockquote>
+<p><strong>اردو:</strong> ذیلی ماڈیولز سے دوبارہ برآمد (بیرل فائلیں):</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// index.urdu — re-export everything from submodules
+برآمد { صارف_بنائیں, صارف_حاصل_کرو } سے "./صارف";
+برآمد { آرڈر_بنائیں, آرڈر_حاصل_کرو } سے "./آرڈر";
+برآمد پہلے_سے_طے سے "./ڈیٹا_بیس";
+</code></pre></div>
+<hr />
+<h2 id="built-in-modules">Built-in Modules — بنا بنایا ماڈیولز</h2>
+<p>The following modules ship with the Urdu Programming Language runtime.</p>
+<blockquote>
+<p><strong>اردو:</strong> درج ذیل ماڈیولز اردو پروگرامنگ لینگویج رن ٹائم کے ساتھ آتے ہیں۔</p>
+</blockquote>
+<h3 id="web-framework">اردو/ویب — Web framework</h3>
+<blockquote>
+<p><strong>اردو:</strong> ویب فریم ورک — HTTP سرور اور روٹنگ کے لیے:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { ایپ_بنائیں, روٹر, JSON_جواب, HTML_جواب } سے "اردو/ویب";
+
+مستقل ایپ = ایپ_بنائیں();
+مستقل روٹ = روٹر();
+
+روٹ.حاصل_کرو("/", (درخواست, جواب) =&gt; {
+    جواب.بھیجو("مرحبا، اردو ویب!");
+});
+
+روٹ.حاصل_کرو("/api/صارفین", غیر_متزامن (درخواست, جواب) =&gt; {
+    مستقل صارفین = انتظار ڈیٹا_بیس.تمام_حاصل_کرو("users");
+    JSON_جواب(جواب, صارفین);
+});
+
+ایپ.استعمال(روٹ);
+ایپ.سنو(3000, () =&gt; لکھو("سرور 3000 پر چل رہا ہے"));
+</code></pre></div>
+<h3 id="ai-ml">اردو/ذہین — AI / ML</h3>
+<blockquote>
+<p><strong>اردو:</strong> مصنوعی ذہانت اور مشین لرننگ:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { ذہین_ماڈل, پیغام, نظام_پیغام } سے "اردو/ذہین";
+
+مستقل ماڈل = نیا ذہین_ماڈل({ ماڈل: "gpt-4" });
+
+مستقل جواب = انتظار ماڈل.چیٹ([
+    نظام_پیغام("آپ اردو میں مدد کرتے ہیں"),
+    پیغام("صارف", "اردو پروگرامنگ کے بارے میں بتائیں")
+]);
+
+لکھو(جواب.متن);
+</code></pre></div>
+<h3 id="_-database">اردو/ڈیٹا_بیس — Database</h3>
+<blockquote>
+<p><strong>اردو:</strong> ڈیٹا بیس — ORM اور SQL/NoSQL:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { ڈیٹا_بیس, ماڈل, میدان } سے "اردو/ڈیٹا_بیس";
+
+مستقل ڈی_بی = نیا ڈیٹا_بیس("sqlite:///app.db");
+
+مستقل صارف_ماڈل = ڈی_بی.ماڈل("صارف", {
+    نام:   میدان.متن({ لازمی: سچ }),
+    ای_میل: میدان.متن({ منفرد: سچ }),
+    عمر:  میدان.عدد({ پہلے_سے_طے: 0 })
+});
+
+// CRUD
+مستقل صارف = انتظار صارف_ماڈل.بنائیں({ نام: "احمد", ای_میل: "a@b.com", عمر: 25 });
+مستقل تمام = انتظار صارف_ماڈل.تمام_حاصل_کرو();
+مستقل ملا = انتظار صارف_ماڈل.تلاش_کرو({ نام: "احمد" });
+</code></pre></div>
+<h3 id="cryptography">اردو/رمز — Cryptography</h3>
+<blockquote>
+<p><strong>اردو:</strong> خفیہ نگاری — ہیشنگ اور انکرپشن:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { ہیش, خفیہ_کرو, ظاہر_کرو, بے_ترتیب_بائٹس } سے "اردو/رمز";
+
+مستقل خفیہ = انتظار ہیش("sha256", "میرا_پاس_ورڈ");
+لکھو(خفیہ);
+
+مستقل کلید = بے_ترتیب_بائٹس(32);
+مستقل خفیہ_متن = انتظار خفیہ_کرو("AES-256", کلید, "خفیہ پیغام");
+مستقل اصل_متن = انتظار ظاہر_کرو("AES-256", کلید, خفیہ_متن);
+</code></pre></div>
+<h3 id="http-client">اردو/کرل — HTTP Client</h3>
+<blockquote>
+<p><strong>اردو:</strong> HTTP کلائنٹ — درخواستیں بھیجنے کے لیے:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { کرل, GET, POST, بہاؤ_کرل } سے "اردو/کرل";
+
+// GET
+مستقل ڈیٹا = انتظار GET("https://api.example.com/صارفین");
+لکھو(JSON_پڑھو(ڈیٹا));
+
+// POST with JSON
+مستقل جواب = انتظار POST("https://api.example.com/صارفین", {
+    جسم: { نام: "احمد", ای_میل: "a@b.com" },
+    سرخیاں: { "Content-Type": "application/json" }
+});
+
+// Custom request
+مستقل نتیجہ = انتظار کرل("https://api.example.com/ڈیٹا", {
+    طریقہ: "PUT",
+    ٹائم_آؤٹ: 5000,
+    سرخیاں: { Authorization: "Bearer token123" },
+    جسم: JSON_لکھو({ حیثیت: "فعال" })
+});
+</code></pre></div>
+<h3 id="web-scraper">اردو/کھرچنی — Web Scraper</h3>
+<blockquote>
+<p><strong>اردو:</strong> ویب سکریپر — ویب صفحات سے ڈیٹا نکالنے کے لیے:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { صفحہ_کھولو, منتخب_کرو, لنک_جات } سے "اردو/کھرچنی";
+
+مستقل صفحہ = انتظار صفحہ_کھولو("https://example.com");
+
+مستقل عنوان = منتخب_کرو(صفحہ, "h1").پہلا?.متن;
+مستقل تمام_لنک = لنک_جات(صفحہ);
+
+لکھو(عنوان);
+لکھو(`${تمام_لنک.لمبائی} لنک ملے`);
+</code></pre></div>
+<h3 id="file-system">اردو/فائلیں — File System</h3>
+<blockquote>
+<p><strong>اردو:</strong> فائل سسٹم — فائلوں کو پڑھنے اور لکھنے کے لیے:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { پڑھو, لکھو, موجود_ہے, مٹائیں, فہرست } سے "اردو/فائلیں";
+
+// Read
+مستقل متن_شے = انتظار پڑھو("data.txt", "utf8");
+
+// Write
+انتظار لکھو("output.txt", "اردو مواد", "utf8");
+
+// Check existence
+اگر (انتظار موجود_ہے("config.json")) {
+    مستقل ترتیبات = JSON_پڑھو(انتظار پڑھو("config.json"));
+}
+
+// List directory
+مستقل فائلیں = انتظار فہرست("./ڈیٹا");
+کے_لیے (مستقل فائل کا فائلیں) {
+    لکھو(فائل.نام);
+}
+</code></pre></div>
+<h3 id="logging">اردو/لاگ — Logging</h3>
+<blockquote>
+<p><strong>اردو:</strong> لاگنگ — منظم لاگ پیغامات کے لیے:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { لاگر, سطح } سے "اردو/لاگ";
+
+مستقل لاگ = نیا لاگر({
+    سطح: سطح.معلومات,
+    فارمیٹ: "json",
+    فائل: "app.log"
+});
+
+لاگ.معلومات("سرور شروع ہوا", { بندرگاہ: 3000 });
+لاگ.انتباہ("پرانا API استعمال ہو رہا ہے", { راستہ: "/old-api" });
+لاگ.غلطی("ڈیٹا بیس سے رابطہ نہیں", { غلطی: "connection refused" });
+</code></pre></div>
+<h3 id="threading-workers">اردو/دھاگہ — Threading / Workers</h3>
+<blockquote>
+<p><strong>اردو:</strong> دھاگے — بھاری حسابات کو الگ دھاگے میں چلانے کے لیے:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { دھاگہ, پول } سے "اردو/دھاگہ";
+
+// Run heavy computation off main thread
+مستقل نتیجہ = انتظار دھاگہ.چلاؤ(غیر_متزامن () =&gt; {
+    // Runs in worker thread
+    واپس ہاوی_حساب();
+});
+
+// Thread pool
+مستقل ورکر_پول = نیا پول({ سائز: 4 });
+مستقل نتائج = انتظار Promise.all(
+    ڈیٹا.تبدیل(شے =&gt; ورکر_پول.چلاؤ(() =&gt; پروسیس_کرو(شے)))
+);
+</code></pre></div>
+<h3 id="date-and-time">اردو/تاریخ — Date and Time</h3>
+<blockquote>
+<p><strong>اردو:</strong> تاریخ اور وقت کے آپریشنز:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { تاریخ, وقت_منطقہ, فارمیٹ } سے "اردو/تاریخ";
+
+مستقل اب = نیا تاریخ();
+لکھو(فارمیٹ(اب, "YYYY-MM-DD"));            // 2024-01-15
+لکھو(فارمیٹ(اب, "DD/MM/YYYY hh:mm"));      // 15/01/2024 14:30
+
+مستقل کل = تاریخ.اب() + 86400000;
+مستقل پاکستان = وقت_منطقہ("Asia/Karachi");
+لکھو(پاکستان.فارمیٹ(اب));
+</code></pre></div>
+<h3 id="websockets">اردو/سوکٹ — WebSockets</h3>
+<blockquote>
+<p><strong>اردو:</strong> ویب ساکٹس — حقیقی وقت دو طرفہ مواصلت کے لیے:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { سوکٹ_سرور, سوکٹ_کلائنٹ } سے "اردو/سوکٹ";
+
+// Server
+مستقل سرور = نیا سوکٹ_سرور({ بندرگاہ: 8080 });
+
+سرور.رابطہ_پر(غیر_متزامن (سوکٹ) =&gt; {
+    لکھو("نیا کلائنٹ آیا");
+
+    سوکٹ.پیغام_پر(غیر_متزامن (ڈیٹا) =&gt; {
+        لکھو(`ملا: ${ڈیٹا}`);
+        سوکٹ.بھیجو(`آپ نے کہا: ${ڈیٹا}`);
+    });
+
+    سوکٹ.بند_پر(() =&gt; لکھو("کلائنٹ چلا گیا"));
+});
+
+// Client
+مستقل کلائنٹ = نیا سوکٹ_کلائنٹ("ws://localhost:8080");
+انتظار کلائنٹ.جوڑو();
+کلائنٹ.بھیجو("مرحبا سرور!");
+</code></pre></div>
+<h3 id="module-availability-summary">Module availability summary — ماڈیولز کا خلاصہ</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Purpose</th>
+<th>Install required?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>اردو/ویب</code></td>
+<td>HTTP server, routing</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>اردو/ذہین</code></td>
+<td>AI / LLM integration</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>اردو/ڈیٹا_بیس</code></td>
+<td>ORM, SQL/NoSQL</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>اردو/رمز</code></td>
+<td>Hashing, encryption</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>اردو/کرل</code></td>
+<td>HTTP client</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>اردو/کھرچنی</code></td>
+<td>Web scraping</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>اردو/فائلیں</code></td>
+<td>File I/O</td>
+<td>Built-in</td>
+</tr>
+<tr>
+<td><code>اردو/لاگ</code></td>
+<td>Structured logging</td>
+<td>Built-in</td>
+</tr>
+<tr>
+<td><code>اردو/دھاگہ</code></td>
+<td>Worker threads</td>
+<td>Built-in</td>
+</tr>
+<tr>
+<td><code>اردو/تاریخ</code></td>
+<td>Date / time</td>
+<td>Built-in</td>
+</tr>
+<tr>
+<td><code>اردو/سوکٹ</code></td>
+<td>WebSocket</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="installing-library-dependencies">Installing Library Dependencies — لائبریری انحصارات نصب کرنا</h2>
+<p>Use the <code>urdu نصب</code> command to install modules that require dependencies.</p>
+<blockquote>
+<p><strong>اردو:</strong> انحصارات کی ضرورت والے ماڈیولز نصب کرنے کے لیے <code>urdu نصب</code> کمانڈ استعمال کریں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>python -m urdu نصب "اردو/ویب"
+python -m urdu نصب "اردو/ذہین"
+python -m urdu نصب "اردو/ڈیٹا_بیس"
+python -m urdu نصب "اردو/رمز"
+python -m urdu نصب "اردو/کرل"
+python -m urdu نصب "اردو/کھرچنی"
+python -m urdu نصب "اردو/سوکٹ"
+</code></pre></div>
+<p>Install multiple at once:</p>
+<blockquote>
+<p><strong>اردو:</strong> ایک ساتھ کئی نصب کریں:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>python -m urdu نصب "اردو/ویب" "اردو/ذہین" "اردو/ڈیٹا_بیس"
+</code></pre></div>
+<hr />
+<h2 id="dynamic-imports">Dynamic Imports — متحرک درآمد</h2>
+<p>Import a module at runtime based on a condition or variable. Returns a Promise.</p>
+<blockquote>
+<p><strong>اردو:</strong> کسی شرط یا متغیر کی بنیاد پر رن ٹائم میں ماڈیول درآمد کریں۔ یہ ایک وعدہ واپس کرتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// Load module only when needed
+غیر_متزامن فنکشن پی_ڈی_ایف_بنائیں(ڈیٹا) {
+    مستقل { پی_ڈی_ایف_رائٹر } = انتظار متحرک_چلاؤ("اردو/پی_ڈی_ایف");
+    واپس پی_ڈی_ایف_رائٹر.بنائیں(ڈیٹا);
+}
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Load locale-specific module
+غیر_متزامن فنکشن ترجمہ_لوڈ(زبان) {
+    کوشش {
+        مستقل ماڈیول = انتظار متحرک_چلاؤ(`./ترجمہ/${زبان}`);
+        واپس ماڈیول.پہلے_سے_طے;
+    } پکڑو {
+        مستقل پہلے_سے_طے = انتظار متحرک_چلاؤ("./ترجمہ/اردو");
+        واپس پہلے_سے_طے.پہلے_سے_طے;
+    }
+}
+
+مستقل لغت = انتظار ترجمہ_لوڈ("اردو");
+لکھو(لغت.خوش_آمدید);    // مرحبا
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Conditional feature loading
+متغیر رپورٹ_ماڈیول;
+
+اگر (process.env.ENABLE_REPORTS === "true") {
+    رپورٹ_ماڈیول = انتظار متحرک_چلاؤ("./رپورٹیں");
+}
+
+اگر (رپورٹ_ماڈیول) {
+    انتظار رپورٹ_ماڈیول.ماہانہ_رپورٹ();
+}
+</code></pre></div>
+<hr />
+<h2 id="module-examples">Module Examples — ماڈیول کی مثالیں</h2>
+<h3 id="a-complete-multi-file-application-structure">A complete multi-file application structure — مکمل کثیر فائل ایپلیکیشن ڈھانچہ</h3>
+<blockquote>
+<p><strong>اردو:</strong> ایک مکمل کثیر فائل ایپلیکیشن کی ساخت:</p>
+</blockquote>
+<p><strong>ماڈل/صارف.urdu</strong> — User model</p>
+<div class="highlight"><pre><span></span><code>درآمد { ڈیٹا_بیس, میدان } سے "اردو/ڈیٹا_بیس";
+درآمد { ہیش } سے "اردو/رمز";
+
+برآمد کلاس صارف_ماڈل {
+    جامد غیر_متزامن بنائیں(ڈیٹا) {
+        ڈیٹا.پاس_ورڈ = انتظار ہیش("bcrypt", ڈیٹا.پاس_ورڈ);
+        واپس ڈیٹا_بیس.داخل_کرو("صارفین", ڈیٹا);
+    }
+
+    جامد غیر_متزامن تلاش_کرو(ای_میل) {
+        واپس ڈیٹا_بیس.ایک_حاصل_کرو("صارفین", { ای_میل });
+    }
+}
+</code></pre></div>
+<p><strong>راستے/تصدیق.urdu</strong> — Auth routes</p>
+<div class="highlight"><pre><span></span><code>درآمد { روٹر, JSON_جواب } سے "اردو/ویب";
+درآمد { صارف_ماڈل } سے "../ماڈل/صارف";
+
+مستقل راستہ = روٹر();
+
+راستہ.پوسٹ("/رجسٹر", غیر_متزامن (درخواست, جواب) =&gt; {
+    کوشش {
+        مستقل صارف = انتظار صارف_ماڈل.بنائیں(درخواست.جسم);
+        JSON_جواب(جواب, { پیغام: "رجسٹریشن کامیاب", id: صارف.id }, 201);
+    } پکڑو (غ) {
+        JSON_جواب(جواب, { غلطی: غ.message }, 400);
+    }
+});
+
+برآمد پہلے_سے_طے راستہ;
+</code></pre></div>
+<p><strong>مرکز.urdu</strong> — Main entry point</p>
+<div class="highlight"><pre><span></span><code>درآمد { ایپ_بنائیں } سے "اردو/ویب";
+درآمد { لاگر } سے "اردو/لاگ";
+درآمد تصدیق_راستہ سے "./راستے/تصدیق";
+
+مستقل ایپ = ایپ_بنائیں();
+مستقل لاگ = نیا لاگر();
+
+ایپ.استعمال("/تصدیق", تصدیق_راستہ);
+
+ایپ.سنو(3000, () =&gt; {
+    لاگ.معلومات("سرور شروع ہوا", { بندرگاہ: 3000 });
+});
+</code></pre></div>
+<h3 id="utility-module-pattern">Utility module pattern — یوٹیلٹی ماڈیول طریقہ</h3>
+<blockquote>
+<p><strong>اردو:</strong> مددگار فنکشنز کو ایک علیحدہ ماڈیول میں منظم کریں:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// utils/validation.urdu
+برآمد فنکشن ای_میل_درست(ای_میل) {
+    واپس /^[^\s@]+@[^\s@]+\.[^\s@]+$/.تجربہ(ای_میل);
+}
+
+برآمد فنکشن فون_درست(نمبر) {
+    واپس /^((\+92)|(0))(3\d{9})$/.تجربہ(نمبر);
+}
+
+برآمد فنکشن پاس_ورڈ_درست(پاس_ورڈ) {
+    واپس پاس_ورڈ.لمبائی &gt;= 8 اور
+           /[A-Z]/.تجربہ(پاس_ورڈ) اور
+           /[0-9]/.تجربہ(پاس_ورڈ);
+}
+
+// Usage in another file
+درآمد { ای_میل_درست, فون_درست, پاس_ورڈ_درست } سے "./utils/validation";
+
+لکھو(ای_میل_درست("test@example.com"));   // true
+لکھو(فون_درست("03001234567"));            // true
+لکھو(پاس_ورڈ_درست("Secure123"));         // true
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

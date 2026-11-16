@@ -1,0 +1,1080 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>10. If / Else — اگر / ورنہ - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#10-if-else" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              10. If / Else — اگر / ورنہ
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../libraries/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intermediate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../libraries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-if" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic If — سادہ اگر
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        If / Else — اگر / ورنہ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#else-if" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Else If — ورنہ اگر
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nested-if" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested If — اندرونی اگر
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combining Conditions — شرطیں ملانا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#truthy-and-falsy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Truthy and Falsy — سچ اور جھوٹ قدریں
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-example-grade-checker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical Example: Grade Checker — عملی مثال: نمبر جانچ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Points — اہم نکات
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="10-if-else">10. If / Else — اگر / ورنہ</h1>
+<p><strong>Difficulty:</strong> Beginner — مبتدی<br />
+<strong>Time:</strong> ~20 minutes</p>
+<hr />
+<h2 id="basic-if">Basic If — سادہ اگر</h2>
+<p>Run a block of code only when a condition is true:</p>
+<div class="highlight"><pre><span></span><code>متغیر ن = 15;
+
+اگر (ن &gt; 10) {
+    لکھو("دس سے بڑا");
+}
+</code></pre></div>
+<p>Output: <code>دس سے بڑا</code></p>
+<p><strong>Pattern:</strong>
+<div class="highlight"><pre><span></span><code>اگر (شرط) {
+    // code to run when condition is true
+}
+</code></pre></div></p>
+<blockquote>
+<p><strong>اردو:</strong> <code>اگر</code> کے بعد گول قوسین میں شرط لکھیں، پھر گھنگریالے قوسین <code>{}</code> میں کوڈ۔ شرط سچ ہو تبھی وہ کوڈ چلے گا۔</p>
+</blockquote>
+<hr />
+<h2 id="if-else">If / Else — اگر / ورنہ</h2>
+<div class="highlight"><pre><span></span><code>متغیر ن = 15;
+
+اگر (ن &gt; 10) {
+    لکھو("بڑا");
+} ورنہ {
+    لکھو("چھوٹا");
+}
+</code></pre></div>
+<p>Output: <code>بڑا</code></p>
+<blockquote>
+<p><strong>اردو:</strong> <code>ورنہ</code> کا کوڈ تب چلتا ہے جب <code>اگر</code> کی شرط جھوٹ ہو۔</p>
+</blockquote>
+<hr />
+<h2 id="else-if">Else If — ورنہ اگر</h2>
+<p>Check multiple conditions in sequence:</p>
+<div class="highlight"><pre><span></span><code>متغیر ن = 15;
+
+اگر (ن &lt; 5) {
+    لکھو("پانچ سے کم");
+} ورنہ_اگر (ن &lt; 10) {
+    لکھو("پانچ سے دس کے درمیان");
+} ورنہ_اگر (ن &lt; 20) {
+    لکھو("دس سے بیس کے درمیان");
+} ورنہ {
+    لکھو("بیس یا زیادہ");
+}
+</code></pre></div>
+<p>Output: <code>دس سے بیس کے درمیان</code></p>
+<p>The conditions are checked <strong>top to bottom</strong>. The first true one executes; the rest are skipped.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>ورنہ_اگر</code> سے ایک کے بعد ایک شرطیں جانچیں۔ پہلی سچ شرط چلے گی — باقی چھوڑ دیں گے۔ آخر میں <code>ورنہ</code> اختیاری ہے۔</p>
+</blockquote>
+<hr />
+<h2 id="nested-if">Nested If — اندرونی اگر</h2>
+<div class="highlight"><pre><span></span><code>متغیر عمر = 25;
+متغیر شہری = سچ;
+
+اگر (عمر &gt;= 18) {
+    اگر (شہری) {
+        لکھو("ووٹ دے سکتے ہیں");
+    } ورنہ {
+        لکھو("عمر ٹھیک لیکن شہری نہیں");
+    }
+} ورنہ {
+    لکھو("عمر کم ہے");
+}
+</code></pre></div>
+<p>Output: <code>ووٹ دے سکتے ہیں</code></p>
+<blockquote>
+<p><strong>اردو:</strong> <code>اگر</code> کے اندر مزید <code>اگر</code> لکھا جا سکتا ہے۔ ہر سطح انڈینٹ کریں تاکہ پڑھنا آسان ہو۔</p>
+</blockquote>
+<hr />
+<h2 id="combining-conditions">Combining Conditions — شرطیں ملانا</h2>
+<p>Use <code>اور</code> and <code>یا</code> to write complex conditions in one <code>اگر</code>:</p>
+<div class="highlight"><pre><span></span><code>متغیر عمر = 25;
+متغیر شہری = سچ;
+
+// Better: combine with اور
+اگر (عمر &gt;= 18 اور شہری) {
+    لکھو("ووٹ دے سکتے ہیں");
+}
+
+متغیر درجہ_حرارت = 38.5;
+اگر (درجہ_حرارت &gt; 37.5 یا درجہ_حرارت &lt; 36) {
+    لکھو("بخار یا ہائپوتھرمیا کا خطرہ");
+}
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> پیچیدہ شرطیں <code>اور</code>/<code>یا</code> سے ملائیں۔ گھونسلے دار <code>اگر</code> کی بجائے <code>اور</code>/<code>یا</code> استعمال کرنا اکثر بہتر ہوتا ہے۔</p>
+</blockquote>
+<hr />
+<h2 id="truthy-and-falsy">Truthy and Falsy — سچ اور جھوٹ قدریں</h2>
+<p>In Urdu PL, these values are treated as <code>جھوٹ</code> in a condition:</p>
+<ul>
+<li><code>0</code> and <code>0.0</code></li>
+<li><code>""</code> (empty string)</li>
+<li><code>[]</code> (empty list)</li>
+<li><code>{}</code> (empty object)</li>
+<li><code>خالی</code> (null)</li>
+</ul>
+<p>Everything else is <code>سچ</code>.</p>
+<div class="highlight"><pre><span></span><code>متغیر نام = "";
+اگر (نام) {
+    لکھو(`نام: ${نام}`);
+} ورنہ {
+    لکھو("نام خالی ہے");    // this prints
+}
+
+متغیر فہرست = [1, 2, 3];
+اگر (فہرست) {
+    لکھو("فہرست میں کچھ ہے");    // this prints
+}
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> خالی متن، صفر، خالی فہرست — یہ سب <code>جھوٹ</code> سمجھے جاتے ہیں۔ <code>اگر (نام)</code> سے آسانی سے جانچیں کہ متن خالی تو نہیں۔</p>
+</blockquote>
+<hr />
+<h2 id="practical-example-grade-checker">Practical Example: Grade Checker — عملی مثال: نمبر جانچ</h2>
+<div class="highlight"><pre><span></span><code>فنکشن درجہ(نمبر) {
+    اگر (نمبر &gt;= 90) {
+        واپس "A — ممتاز";
+    } ورنہ_اگر (نمبر &gt;= 75) {
+        واپس "B — بہت اچھا";
+    } ورنہ_اگر (نمبر &gt;= 60) {
+        واپس "C — اچھا";
+    } ورنہ_اگر (نمبر &gt;= 50) {
+        واپس "D — قابل قبول";
+    } ورنہ {
+        واپس "F — ناکام";
+    }
+}
+
+لکھو(درجہ(95));    // A — ممتاز
+لکھو(درجہ(72));    // C — اچھا
+لکھو(درجہ(45));    // F — ناکام
+</code></pre></div>
+<hr />
+<h2 id="key-points">Key Points — اہم نکات</h2>
+<ul>
+<li><code>اگر (شرط) { ... }</code> — run code if condition is true</li>
+<li><code>ورنہ { ... }</code> — run code if condition is false</li>
+<li><code>ورنہ_اگر (شرط) { ... }</code> — check another condition; any number allowed</li>
+<li>Conditions are checked top to bottom; first true one wins</li>
+<li>Use <code>اور</code>, <code>یا</code>, <code>نہیں</code> to combine conditions</li>
+<li>Falsy: <code>0</code>, <code>""</code>, <code>[]</code>, <code>{}</code>, <code>خالی</code> — everything else is truthy</li>
+</ul>
+<blockquote>
+<p><strong>اردو:</strong> <code>اگر</code> شرط سچ ہو تو چلتا ہے۔ <code>ورنہ_اگر</code> سے مزید شرطیں۔ <code>ورنہ</code> سب سے آخر میں۔ <code>اور</code>/<code>یا</code> سے شرطیں ملائیں۔</p>
+</blockquote>
+<hr />
+<p><a href="../09-operators-comparison/">← Previous: Comparison Operators</a> | <a href="../11-switch-case/">Next: Switch / Case →</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

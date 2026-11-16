@@ -1,0 +1,1493 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Cryptography Library — اردو/رمز - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cryptography-library" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cryptography Library — اردو/رمز
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorial/beginner/" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/beginner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intermediate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents — فہرست مضامین
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hashing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hashing — ہیش
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hashing — ہیش">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hashing-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hashing examples — ہیش کی مثالیں
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#symmetric-encryption-fernet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Symmetric Encryption — متناسق (Fernet)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Symmetric Encryption — متناسق (Fernet)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-fernet-encryption" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example — Fernet encryption
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aes-256-gcm-aes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AES-256-GCM — AES
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rsa-_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RSA — غیر_متناسق
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples — مثالیں
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples — مثالیں">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-password-storage-with-pbkdf2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1 — Password storage with PBKDF2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-file-integrity-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2 — File integrity check
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-encrypted-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 3 — Encrypted configuration file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-4-jwt-like-signed-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 4 — JWT-like signed token
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-5-rsa-key-exchange-for-secure-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 5 — RSA key exchange for secure channel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="cryptography-library">Cryptography Library — اردو/رمز</h1>
+<p>The <code>اردو/رمز</code> library provides hashing, symmetric encryption (Fernet and AES-256-GCM), and asymmetric encryption (RSA) — all with Urdu-named methods.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>اردو/رمز</code> لائبریری ہیش (hash)، یکطرفہ خفیہ کاری (Fernet / AES-256-GCM)، اور دو کلیدی خفیہ کاری (RSA) اردو ناموں کے ساتھ فراہم کرتی ہے۔</p>
+</blockquote>
+<p><strong>Import:</strong></p>
+<div class="highlight"><pre><span></span><code>درآمد { ہیش, متناسق, AES, غیر_متناسق } سے "اردو/رمز"
+</code></pre></div>
+<p><strong>Backend:</strong> Python <code>hashlib</code>, <code>hmac</code>, <code>cryptography</code> package.</p>
+<hr />
+<h2 id="table-of-contents">Table of Contents — فہرست مضامین</h2>
+<ol>
+<li><a href="#hashing--ہیش">Hashing — ہیش</a></li>
+<li><a href="#symmetric-encryption--متناسق-fernet">Symmetric Encryption — متناسق (Fernet)</a></li>
+<li><a href="#aes-256-gcm--AES">AES-256-GCM — AES</a></li>
+<li><a href="#rsa--غیر_متناسق">RSA — غیر_متناسق</a></li>
+<li><a href="#examples">Examples</a></li>
+</ol>
+<hr />
+<h2 id="hashing">Hashing — ہیش</h2>
+<p>All methods are <strong>static</strong> — call directly on the class without <code>نیا</code>.</p>
+<blockquote>
+<p><strong>اردو:</strong> ہیش (hash) ڈیٹا کا ایک یک طرفہ خلاصہ ہے۔ تمام طریقے جامد (static) ہیں — <code>نیا</code> کے بغیر کلاس پر براہ راست کال کریں۔</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Urdu alias</th>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ہیش.sha256(ڈیٹا)</code></td>
+<td><code>ہیش.ہیش_256(ڈیٹا)</code></td>
+<td>hex string</td>
+<td>SHA-256 hash</td>
+</tr>
+<tr>
+<td><code>ہیش.sha512(ڈیٹا)</code></td>
+<td><code>ہیش.ہیش_512(ڈیٹا)</code></td>
+<td>hex string</td>
+<td>SHA-512 hash</td>
+</tr>
+<tr>
+<td><code>ہیش.md5(ڈیٹا)</code></td>
+<td><code>ہیش.ایم_ڈی_5(ڈیٹا)</code></td>
+<td>hex string</td>
+<td>MD5 hash (not for security)</td>
+</tr>
+<tr>
+<td><code>ہیش.blake2b(ڈیٹا, digest_size=32)</code></td>
+<td><code>ہیش.بلیک_2بی(ڈیٹا)</code></td>
+<td>hex string</td>
+<td>BLAKE2b hash</td>
+</tr>
+<tr>
+<td><code>ہیش.hmac(ڈیٹا, کلید, الگورتھم="sha256")</code></td>
+<td><code>ہیش.ہمیک(ڈیٹا, کلید)</code></td>
+<td>hex string</td>
+<td>HMAC authentication code</td>
+</tr>
+<tr>
+<td><code>ہیش.pbkdf2(پاسورڈ, نمک, دور=100000, طول=32)</code></td>
+<td><code>ہیش.کلید_استخراج(پاسورڈ, نمک)</code></td>
+<td>hex string</td>
+<td>PBKDF2 key derivation</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Input:</strong> <code>ڈیٹا</code> can be a string or bytes. Strings are encoded as UTF-8 automatically.</p>
+<h3 id="hashing-examples">Hashing examples — ہیش کی مثالیں</h3>
+<div class="highlight"><pre><span></span><code>درآمد { ہیش } سے "اردو/رمز"
+
+// SHA-256
+متغیر h = ہیش.sha256("السلام علیکم")
+لکھو("SHA-256:", h)
+
+// SHA-512 (Urdu alias)
+متغیر h512 = ہیش.ہیش_512("اردو پروگرامنگ")
+لکھو("SHA-512:", h512)
+
+// MD5 — صرف checksums کے لیے، پاسورڈ کے لیے نہیں
+متغیر md5 = ہیش.md5("test")
+لکھو("MD5:", md5)
+
+// BLAKE2b — تیز اور محفوظ
+متغیر b2 = ہیش.بلیک_2بی("میرا ڈیٹا")
+لکھو("BLAKE2b:", b2)
+
+// HMAC — پیغام کی صداقت جانچنا
+متغیر سر = ہیش.ہمیک("پیغام متن", "خفیہ_کلید")
+لکھو("HMAC:", سر)
+
+// PBKDF2 — پاسورڈ سے کلید بنانا
+متغیر نمک = "تصادفی_نمک_123"
+متغیر کلید = ہیش.کلید_استخراج("میرا_پاسورڈ", نمک)
+لکھو("PBKDF2:", کلید)
+</code></pre></div>
+<hr />
+<h2 id="symmetric-encryption-fernet">Symmetric Encryption — متناسق (Fernet)</h2>
+<p>Fernet guarantees that a message encrypted with a given key cannot be manipulated or read without that key. Uses AES-128-CBC + HMAC-SHA256.</p>
+<blockquote>
+<p><strong>اردو:</strong> متناسق (symmetric) خفیہ کاری میں ایک ہی کلید سے ڈیٹا خفیہ کرنا (encrypt) اور ظاہر کرنا (decrypt) ممکن ہے۔ Fernet، AES-128-CBC اور HMAC-SHA256 استعمال کرتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>متغیر enc = نیا متناسق(کلید_یا_خالی)
+</code></pre></div>
+<ul>
+<li>Pass <code>خالی</code> to auto-generate a new key.</li>
+<li>Pass an existing key string to reuse it.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Method / Property</th>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>متناسق.نئی_کلید()</code></td>
+<td>string</td>
+<td><strong>Static.</strong> Generate a new Fernet key</td>
+</tr>
+<tr>
+<td><code>enc.کلید</code></td>
+<td>string</td>
+<td>The current encryption key</td>
+</tr>
+<tr>
+<td><code>enc.خفیہ_کریں(پیغام)</code></td>
+<td>string</td>
+<td>Encrypt a plaintext string → ciphertext</td>
+</tr>
+<tr>
+<td><code>enc.ظاہر_کریں(خفیہ)</code></td>
+<td>string</td>
+<td>Decrypt ciphertext → plaintext</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-fernet-encryption">Example — Fernet encryption</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال — Fernet سے پیغام خفیہ کرنا اور ظاہر کرنا</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { متناسق } سے "اردو/رمز"
+
+// نئی کلید بنائیں
+متغیر کلید = متناسق.نئی_کلید()
+لکھو("کلید:", کلید)
+
+متغیر enc = نیا متناسق(کلید)
+
+متغیر اصل_پیغام = "یہ خفیہ پیغام ہے — صرف آپ کے لیے"
+متغیر خفیہ    = enc.خفیہ_کریں(اصل_پیغام)
+لکھو("خفیہ:", خفیہ)
+
+متغیر واضح = enc.ظاہر_کریں(خفیہ)
+لکھو("واضح:", واضح)
+
+// تصدیق
+لکھو("مماثل:", واضح == اصل_پیغام)
+</code></pre></div>
+<hr />
+<h2 id="aes-256-gcm-aes">AES-256-GCM — AES</h2>
+<p>AES-256 in GCM (Galois/Counter Mode) provides authenticated encryption with optional additional data (AAD).</p>
+<blockquote>
+<p><strong>اردو:</strong> AES-256-GCM توثیق شدہ خفیہ کاری فراہم کرتا ہے۔ یہ ڈیٹا خفیہ کرنے کے ساتھ سالمیت بھی جانچتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>متغیر aes = نیا AES(کلید_یا_خالی)
+</code></pre></div>
+<p>Pass <code>خالی</code> to auto-generate a 256-bit key.</p>
+<table>
+<thead>
+<tr>
+<th>Method / Property</th>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>aes.کلید</code></td>
+<td>string</td>
+<td>The AES key (hex or base64)</td>
+</tr>
+<tr>
+<td><code>aes.خفیہ_کریں(پیغام, اضافی=null)</code></td>
+<td>string</td>
+<td>Encrypt; optionally bind additional data</td>
+</tr>
+<tr>
+<td><code>aes.ظاہر_کریں(خفیہ)</code></td>
+<td>string</td>
+<td>Decrypt and authenticate</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>درآمد { AES } سے "اردو/رمز"
+
+متغیر aes = نیا AES(خالی)     // نئی کلید خودکار بنائیں
+لکھو("AES کلید:", aes.کلید)
+
+متغیر خفیہ = aes.خفیہ_کریں("حساس ڈیٹا: اکاؤنٹ نمبر 12345")
+لکھو("خفیہ:", خفیہ)
+
+متغیر واضح = aes.ظاہر_کریں(خفیہ)
+لکھو("واضح:", واضح)
+
+// کلید دوبارہ استعمال
+متغیر aes2 = نیا AES(aes.کلید)
+لکھو("دوبارہ خفیہ:", aes2.ظاہر_کریں(خفیہ))
+</code></pre></div>
+<hr />
+<h2 id="rsa-_">RSA — غیر_متناسق</h2>
+<p>Asymmetric (public-key) encryption and digital signatures using RSA.</p>
+<blockquote>
+<p><strong>اردو:</strong> غیر متناسق (asymmetric) خفیہ کاری میں دو کلیدیں ہوتی ہیں — عوامی کلید سے خفیہ کریں (encrypt) اور نجی کلید سے ظاہر کریں (decrypt)۔ RSA دستخط (digital signature) کے لیے بھی استعمال ہوتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>متغیر rsa = نیا غیر_متناسق(بٹ=2048)
+</code></pre></div>
+<p>Default key size is 2048 bits. Use 4096 for extra security.</p>
+<table>
+<thead>
+<tr>
+<th>Property / Method</th>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rsa.عوامی_کلید</code></td>
+<td>string</td>
+<td>PEM-encoded public key</td>
+</tr>
+<tr>
+<td><code>rsa.نجی_کلید</code></td>
+<td>string</td>
+<td>PEM-encoded private key</td>
+</tr>
+<tr>
+<td><code>rsa.خفیہ_کریں(پیغام)</code></td>
+<td>string</td>
+<td>Encrypt with <strong>public key</strong></td>
+</tr>
+<tr>
+<td><code>rsa.ظاہر_کریں(خفیہ)</code></td>
+<td>string</td>
+<td>Decrypt with <strong>private key</strong></td>
+</tr>
+<tr>
+<td><code>rsa.دستخط(ڈیٹا)</code></td>
+<td>string</td>
+<td>Sign data with <strong>private key</strong></td>
+</tr>
+<tr>
+<td><code>rsa.تصدیق(ڈیٹا, دستخط)</code></td>
+<td>bool</td>
+<td>Verify signature with <strong>public key</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>درآمد { غیر_متناسق } سے "اردو/رمز"
+
+// نئی RSA کلیدیں بنائیں
+متغیر rsa = نیا غیر_متناسق(2048)
+لکھو("عوامی کلید:\n", rsa.عوامی_کلید)
+
+// خفیہ کاری
+متغیر خفیہ = rsa.خفیہ_کریں("یہ خفیہ پیغام ہے")
+لکھو("\nخفیہ:", خفیہ.substring(0, 60) + "...")
+
+متغیر واضح = rsa.ظاہر_کریں(خفیہ)
+لکھو("واضح:", واضح)
+
+// دستخط اور تصدیق
+متغیر ڈیٹا = "یہ اہم دستاویز ہے"
+متغیر دستخط = rsa.دستخط(ڈیٹا)
+لکھو("\nدستخط:", دستخط.substring(0, 60) + "...")
+
+متغیر درست = rsa.تصدیق(ڈیٹا, دستخط)
+لکھو("تصدیق:", درست)   // سچ
+</code></pre></div>
+<hr />
+<h2 id="examples">Examples — مثالیں</h2>
+<h3 id="example-1-password-storage-with-pbkdf2">Example 1 — Password storage with PBKDF2</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال ۱ — PBKDF2 سے پاسورڈ محفوظ طریقے سے ذخیرہ کرنا</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { ہیش } سے "اردو/رمز"
+
+// ═══════════════════════════════════════
+// محفوظ پاسورڈ ذخیرہ کاری
+// ═══════════════════════════════════════
+
+فنکشن پاسورڈ_محفوظ_کریں(پاسورڈ) {
+    متغیر نمک = "rand_" + Date.now().toString();
+    متغیر ہیش_قدر = ہیش.کلید_استخراج(پاسورڈ, نمک, دور=200000);
+    واپس { نمک, ہیش: ہیش_قدر };
+}
+
+فنکشن پاسورڈ_جانچیں(درج_شدہ_پاسورڈ, محفوظ) {
+    متغیر جانچ_ہیش = ہیش.کلید_استخراج(
+        درج_شدہ_پاسورڈ,
+        محفوظ.نمک,
+        دور=200000
+    );
+    واپس جانچ_ہیش == محفوظ.ہیش;
+}
+
+// استعمال
+متغیر محفوظ_پاسورڈ = پاسورڈ_محفوظ_کریں("MyP@ssw0rd!")
+لکھو("محفوظ ہیش:", محفوظ_پاسورڈ.ہیش)
+
+لکھو("درست پاسورڈ:", پاسورڈ_جانچیں("MyP@ssw0rd!", محفوظ_پاسورڈ))   // سچ
+لکھو("غلط پاسورڈ:",  پاسورڈ_جانچیں("wrongpassword", محفوظ_پاسورڈ))  // جھوٹ
+</code></pre></div>
+<h3 id="example-2-file-integrity-check">Example 2 — File integrity check</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال ۲ — SHA-256 ہیش سے فائل (file) کی سالمیت جانچنا</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { ہیش } سے "اردو/رمز"
+درآمد { فائل_پڑھو } سے "اردو/نظام_فائل"
+
+فنکشن فائل_ہیش(راستہ) {
+    متغیر مواد = فائل_پڑھو(راستہ, "bytes");
+    واپس ہیش.sha256(مواد);
+}
+
+فنکشن سالمیت_جانچیں(راستہ, متوقع_ہیش) {
+    متغیر اصل_ہیش = فائل_ہیش(راستہ);
+    اگر (اصل_ہیش == متوقع_ہیش) {
+        لکھو("✓ فائل سالم ہے:", راستہ);
+        واپس سچ;
+    } ورنہ {
+        لکھو("✗ فائل تبدیل ہو گئی ہے!", راستہ);
+        واپس جھوٹ;
+    }
+}
+
+// ڈاؤن لوڈ کے بعد تصدیق
+متغیر متوقع = "a3f5b9c2d8e1f4a7b0c3d6e9f2a5b8c1d4e7f0a3b6c9d2e5f8a1b4c7d0e3f6a9"
+سالمیت_جانچیں("ڈاؤن لوڈ.zip", متوقع)
+</code></pre></div>
+<h3 id="example-3-encrypted-configuration-file">Example 3 — Encrypted configuration file</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال ۳ — Fernet سے ترتیب فائل (config file) خفیہ کرنا اور ظاہر کرنا</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { متناسق } سے "اردو/رمز"
+درآمد { فائل_پڑھو, فائل_لکھو } سے "اردو/نظام_فائل"
+
+// ═══════════════════════════════════════
+// خفیہ config فائل — لکھنا اور پڑھنا
+// ═══════════════════════════════════════
+
+مستقل کلید_فائل = "encryption.key"
+مستقل config_فائل = "config.enc"
+
+فنکشن config_محفوظ_کریں(config_ڈکشنری) {
+    متغیر کلید;
+    کوشش {
+        کلید = فائل_پڑھو(کلید_فائل);
+    } پکڑو (غ) {
+        کلید = متناسق.نئی_کلید();
+        فائل_لکھو(کلید_فائل, کلید);
+        لکھو("نئی کلید بنائی:", کلید_فائل);
+    }
+
+    متغیر enc = نیا متناسق(کلید);
+    متغیر json_متن = JSON.stringify(config_ڈکشنری, خالی, 2);
+    متغیر خفیہ = enc.خفیہ_کریں(json_متن);
+    فائل_لکھو(config_فائل, خفیہ);
+    لکھو("config محفوظ:", config_فائل);
+}
+
+فنکشن config_لوڈ_کریں() {
+    متغیر کلید = فائل_پڑھو(کلید_فائل);
+    متغیر enc = نیا متناسق(کلید);
+    متغیر خفیہ = فائل_پڑھو(config_فائل);
+    متغیر json_متن = enc.ظاہر_کریں(خفیہ);
+    واپس JSON.parse(json_متن);
+}
+
+// استعمال
+config_محفوظ_کریں({
+    db_host:     "localhost",
+    db_password: "S3cr3tP@ss!",
+    api_key:     "sk-abc123xyz",
+    admin_pin:   "9876"
+})
+
+متغیر config = config_لوڈ_کریں()
+لکھو("DB:", config.db_host)
+لکھو("API کلید:", config.api_key)
+</code></pre></div>
+<h3 id="example-4-jwt-like-signed-token">Example 4 — JWT-like signed token</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال ۴ — HMAC-SHA256 دستخط شدہ ٹوکن بنانا اور جانچنا</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { ہیش } سے "اردو/رمز"
+
+// ═══════════════════════════════════════
+// HMAC-SHA256 دستخط شدہ ٹوکن
+// ═══════════════════════════════════════
+
+مستقل خفیہ_کلید = "super-secret-key-do-not-share"
+
+فنکشن ٹوکن_بنائیں(صارف_ڈیٹا) {
+    متغیر payload = JSON.stringify({
+        ڈیٹا: صارف_ڈیٹا,
+        وقت: Date.now(),
+        میعاد: Date.now() + (60 * 60 * 1000)  // 1 گھنٹہ
+    });
+    متغیر payload_b64 = btoa(payload);
+    متغیر دستخط = ہیش.ہمیک(payload_b64, خفیہ_کلید);
+    واپس `${payload_b64}.${دستخط}`;
+}
+
+فنکشن ٹوکن_جانچیں(ٹوکن) {
+    کوشش {
+        متغیر [payload_b64, ملا_دستخط] = ٹوکن.split(".");
+        متغیر متوقع_دستخط = ہیش.ہمیک(payload_b64, خفیہ_کلید);
+
+        اگر (ملا_دستخط != متوقع_دستخط) {
+            واپس { درست: جھوٹ, غلطی: "دستخط غلط" };
+        }
+
+        متغیر payload = JSON.parse(atob(payload_b64));
+
+        اگر (Date.now() &gt; payload.میعاد) {
+            واپس { درست: جھوٹ, غلطی: "ٹوکن میعاد ختم" };
+        }
+
+        واپس { درست: سچ, ڈیٹا: payload.ڈیٹا };
+
+    } پکڑو (ے) {
+        واپس { درست: جھوٹ, غلطی: ے.message };
+    }
+}
+
+// استعمال
+متغیر ٹوکن = ٹوکن_بنائیں({ id: 42, نام: "احمد", کردار: "admin" })
+لکھو("ٹوکن:", ٹوکن.substring(0, 60) + "...")
+
+متغیر نتیجہ = ٹوکن_جانچیں(ٹوکن)
+لکھو("درست:", نتیجہ.درست)
+لکھو("صارف:", نتیجہ.ڈیٹا.نام)
+
+// تبدیل شدہ ٹوکن جانچیں
+متغیر نتیجہ2 = ٹوکن_جانچیں(ٹوکن + "tampered")
+لکھو("تبدیل شدہ ٹوکن:", نتیجہ2.غلطی)
+</code></pre></div>
+<h3 id="example-5-rsa-key-exchange-for-secure-channel">Example 5 — RSA key exchange for secure channel</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال ۵ — RSA اور Fernet ملا کر محفوظ مواصلاتی چینل بنانا۔ RSA سے Fernet کلید خفیہ کریں (encrypt) اور Fernet سے ڈیٹا خفیہ کریں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { غیر_متناسق, متناسق } سے "اردو/رمز"
+
+// ═══════════════════════════════════════
+// RSA + Fernet ملا کر محفوظ چینل
+// ═══════════════════════════════════════
+
+// - RSA سے Fernet کلید بھیجیں
+// - Fernet سے ڈیٹا خفیہ کریں
+
+// الف: RSA کلیدیں بنائیں
+متغیر rsa = نیا غیر_متناسق(2048)
+لکھو("RSA کلیدیں بنائی گئیں")
+
+// ب: Fernet کلید بنائیں (sessions کی کلید)
+متغیر fernet_کلید = متناسق.نئی_کلید()
+
+// ج: Fernet کلید کو RSA عوامی کلید سے خفیہ کریں
+متغیر خفیہ_fernet_کلید = rsa.خفیہ_کریں(fernet_کلید)
+لکھو("Fernet کلید RSA سے خفیہ ہوئی")
+
+// د: وصول کنندہ RSA نجی کلید سے Fernet کلید حاصل کرے
+متغیر بحال_fernet_کلید = rsa.ظاہر_کریں(خفیہ_fernet_کلید)
+
+// ہـ: اب Fernet سے ڈیٹا خفیہ کریں
+متغیر enc = نیا متناسق(بحال_fernet_کلید)
+متغیر خفیہ_ڈیٹا = enc.خفیہ_کریں("بینک اکاؤنٹ: 1234-5678-9012")
+لکھو("ڈیٹا خفیہ ہوا")
+
+// و: ڈیکرپٹ کریں
+متغیر واضح_ڈیٹا = enc.ظاہر_کریں(خفیہ_ڈیٹا)
+لکھو("واضح ڈیٹا:", واضح_ڈیٹا)
+</code></pre></div>
+<hr />
+<p><em>Previous: <a href="../files/">File Utilities →</a> | Next: <a href="../datetime/">Date &amp; Time →</a></em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

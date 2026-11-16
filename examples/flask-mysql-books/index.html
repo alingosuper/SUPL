@@ -1,0 +1,1300 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Flask MySQL Books App — اردو کتب خانہ - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#flask-mysql-books-app" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Flask MySQL Books App — اردو کتب خانہ
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorial/beginner/" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../libraries/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/beginner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intermediate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../libraries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        چلانے کا طریقہ / How to Run
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-walkthrough" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code Walkthrough
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code Walkthrough">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-imports-and-mysql-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Imports and MySQL Connection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-auto-seeding-sample-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Auto-Seeding Sample Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-home-page-search-pagination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Home Page — Search + Pagination
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-book-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Book Detail
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-urdu-jinja2-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Urdu Jinja2 Templates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-add-book-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Add Book Form
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sqlite-vs-mysql-key-differences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQLite vs MySQL: Key Differences
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stopping-the-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stopping the Server — سرور بند کرنا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#known-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Known Limitations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Known Limitations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compiled-exe-note-urduexe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compiled-exe note — urdu.exe میں نوٹ
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="flask-mysql-books-app">Flask MySQL Books App — اردو کتب خانہ</h1>
+<p>A library catalogue application built with Flask, MySQL, and Urdu Jinja2 templates. Demonstrates MySQL integration, search with LIKE queries, server-side pagination, Urdu template files, and seeded sample data from classical Urdu literature.</p>
+<blockquote>
+<p><strong>اردو:</strong> Flask اور MySQL سے بنا ایک اردو کتب خانہ جس میں 20 کلاسیکی اردو کتابوں کا نمونہ ڈیٹا شامل ہے۔ یہ مثال MySQL انضمام، تلاش، صفحہ بندی، اردو Jinja2 سانچے اور فارم ہینڈلنگ ظاہر کرتی ہے۔</p>
+</blockquote>
+<hr />
+<h2 id="how-to-run">چلانے کا طریقہ / How to Run</h2>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>flask<span class="w"> </span>mysql-connector-python
+<span class="c1"># MySQL server must be running at localhost:3306 with user root (empty password)</span>
+<span class="nb">cd</span><span class="w"> </span>examples/FLASK_MYSQL_BOOKS_APP
+urdu<span class="w"> </span>run<span class="w"> </span>app.urdu
+</code></pre></div>
+<p>Then open: <strong>http://localhost:5000</strong></p>
+<p>The app creates the <code>urdu_kutub</code> database and seeds 20 books automatically on first run.</p>
+<hr />
+<h2 id="features">Features</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MySQL integration</td>
+<td>Creates database, table, and seeds sample data on startup</td>
+</tr>
+<tr>
+<td>Search</td>
+<td>Full-text <code>LIKE</code> search across title and author</td>
+</tr>
+<tr>
+<td>Pagination</td>
+<td>6 books per page with page links; clamps invalid page numbers</td>
+</tr>
+<tr>
+<td>Book detail</td>
+<td>Individual page at <code>/کتاب/&lt;id&gt;</code></td>
+</tr>
+<tr>
+<td>Add book</td>
+<td>Form at <code>/شامل</code> to add a new entry</td>
+</tr>
+<tr>
+<td>Urdu templates</td>
+<td>All <code>.html</code> files use Urdu file names and Urdu Jinja2 tag keywords</td>
+</tr>
+<tr>
+<td>Sample data</td>
+<td>20 classic Urdu books pre-loaded (Manto, Ghalib, Iqbal, Hyder, Faiz…)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="file-structure">File Structure</h2>
+<div class="highlight"><pre><span></span><code>examples/FLASK_MYSQL_BOOKS_APP/
+  app.urdu           ← main application
+  templates/
+    فہرست.html       ← book list with search bar and pagination
+    کتاب.html        ← single book detail page
+    شامل_کریں.html   ← add-new-book form
+</code></pre></div>
+<hr />
+<h2 id="code-walkthrough">Code Walkthrough</h2>
+<h3 id="1-imports-and-mysql-connection">1. Imports and MySQL Connection</h3>
+<div class="highlight"><pre><span></span><code>درآمد { فلاسک, فلاسک_سانچہ, فلاسک_رجوع, فلاسک_درخواست, فلاسک_جواب } سے "اردو/ویب";
+درآمد { MySQL } سے "اردو/ڈیٹا_بیس";
+
+// Bootstrap: create database first (no database= arg)
+متغیر بنیاد_ڈی_بی = نیا MySQL({ "میزبان": "localhost", "صارف": "root", "پاس_ورڈ": "", "پورٹ": 3306 });
+انتظار بنیاد_ڈی_بی.چلائیں("CREATE DATABASE IF NOT EXISTS urdu_kutub CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
+
+// App connection: connect to the created database
+متغیر ڈی_بی = نیا MySQL({ "میزبان": "localhost", "صارف": "root", "پاس_ورڈ": "", "پورٹ": 3306, "ڈیٹا_بیس": "urdu_kutub" });
+</code></pre></div>
+<p>Two connections are needed: <code>بنیاد_ڈی_بی</code> (no database selected) creates the database, then <code>ڈی_بی</code> (with <code>"ڈیٹا_بیس": "urdu_kutub"</code>) connects to it for all subsequent queries.</p>
+<p><strong>MySQL charset:</strong> <code>utf8mb4</code> is required for Urdu text (standard <code>utf8</code> is limited to BMP characters and truncates Nastaliq glyphs).</p>
+<hr />
+<h3 id="2-auto-seeding-sample-data">2. Auto-Seeding Sample Data</h3>
+<div class="highlight"><pre><span></span><code>متغیر گنتی_نتائج = انتظار ڈی_بی.سوال("SELECT COUNT(*) AS n FROM books");
+اگر (گنتی_نتائج[0]["n"] == 0) {
+    متغیر نمونہ = [
+        ["آگ کا دریا",  "قرۃ العین حیدر", 1959, "ناول",   "اردو ادب کا شاہکار ناول..."],
+        ["دیوان غالب",  "مرزا غالب",       1841, "شاعری",  "اردو شاعری کا سب سے مشہور دیوان۔"],
+        // ... 18 more rows
+    ];
+    کے_لیے (متغیر ک کا نمونہ) {
+        انتظار ڈی_بی.چلائیں("INSERT INTO books (...) VALUES (%s, %s, %s, %s, %s)", ک);
+    }
+}
+</code></pre></div>
+<p>The seed block runs only once: <code>COUNT(*) == 0</code> means the table is empty. Each iteration inserts one row from the <code>نمونہ</code> list. MySQL uses <code>%s</code> placeholders (not <code>?</code> like SQLite).</p>
+<hr />
+<h3 id="3-home-page-search-pagination">3. Home Page — Search + Pagination</h3>
+<div class="highlight"><pre><span></span><code>@ایپ.حاصل("/")
+غیر_متزامن فنکشن گھر() {
+    متغیر req   = فلاسک_درخواست();
+    متغیر تلاش = req.args.get("تلاش", "").strip();
+    متغیر صفحہ = int(req.args.get("صفحہ", "1"));
+    اگر (صفحہ &lt; 1) { صفحہ = 1; }
+    متغیر ازاچہ = (صفحہ - 1) * فی_صفحہ;
+
+    اگر (len(تلاش) &gt; 0) {
+        متغیر مثل = `%${تلاش}%`;
+        متغیر کتابیں   = انتظار ڈی_بی.سوال(
+            "SELECT * FROM books WHERE title LIKE %s OR author LIKE %s ORDER BY title LIMIT %s OFFSET %s",
+            [مثل, مثل, فی_صفحہ, ازاچہ]);
+        متغیر کل_نتائج = انتظار ڈی_بی.سوال(
+            "SELECT COUNT(*) AS n FROM books WHERE title LIKE %s OR author LIKE %s",
+            [مثل, مثل]);
+    } ورنہ {
+        متغیر کتابیں   = انتظار ڈی_بی.سوال(
+            "SELECT * FROM books ORDER BY title LIMIT %s OFFSET %s",
+            [فی_صفحہ, ازاچہ]);
+        متغیر کل_نتائج = انتظار ڈی_بی.سوال("SELECT COUNT(*) AS n FROM books");
+    }
+
+    متغیر کل        = کل_نتائج[0]["n"];
+    متغیر کل_صفحات = کل &gt; 0 ? int(ریاضی.چھت(کل / فی_صفحہ)) : 1;
+    اگر (صفحہ &gt; کل_صفحات) { صفحہ = کل_صفحات; }
+
+    واپس فلاسک_سانچہ("فہرست.html",
+        کتابیں=کتابیں, تلاش=تلاش,
+        صفحہ=صفحہ, کل_صفحات=کل_صفحات,
+        کل=کل, فی_صفحہ=فی_صفحہ);
+}
+</code></pre></div>
+<p><strong>Pagination formula:</strong>
+- <code>ازاچہ = (صفحہ - 1) × فی_صفحہ</code> — SQL <code>OFFSET</code>
+- <code>کل_صفحات = ⌈کل ÷ فی_صفحہ⌉</code> — ceiling division via <code>ریاضی.چھت()</code>
+- Page is clamped: <code>اگر (صفحہ &gt; کل_صفحات) { صفحہ = کل_صفحات; }</code></p>
+<p><strong>Template literal for LIKE pattern:</strong>
+<code>متغیر مثل = `%${تلاش}%`;</code> produces <code>%search_term%</code> for the SQL <code>LIKE</code> operator.</p>
+<hr />
+<h3 id="4-book-detail">4. Book Detail</h3>
+<div class="highlight"><pre><span></span><code>@ایپ.حاصل("/کتاب/&lt;int:bid&gt;")
+غیر_متزامن فنکشن کتاب_دیکھیں(bid) {
+    متغیر نتائج = انتظار ڈی_بی.سوال("SELECT * FROM books WHERE id = %s", [bid]);
+    اگر (len(نتائج) == 0) {
+        واپس فلاسک_جواب("کتاب نہیں ملی", 404, "text/plain; charset=utf-8");
+    }
+    واپس فلاسک_سانچہ("کتاب.html", کتاب=نتائج[0]);
+}
+</code></pre></div>
+<p><code>&lt;int:bid&gt;</code> is a Flask typed path parameter — it converts the URL segment to an integer before passing it to the function, so no manual <code>int()</code> conversion is needed. The route URL <code>/کتاب/&lt;int:bid&gt;</code> uses a mixed Urdu/ASCII path, which works correctly.</p>
+<hr />
+<h3 id="5-urdu-jinja2-templates">5. Urdu Jinja2 Templates</h3>
+<p>The template filenames are fully Urdu (<code>فہرست.html</code>, <code>کتاب.html</code>, <code>شامل_کریں.html</code>). Template tags use Urdu keywords:</p>
+<div class="highlight"><pre><span></span><code>{% کے_لیے کتاب کا کتابیں %}
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"کارڈ"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"/کتاب/{{ کتاب.id }}"</span><span class="p">&gt;</span>{{ کتاب.title }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"مصنف"</span><span class="p">&gt;</span>{{ کتاب.author }}
+    {% اگر کتاب.year %} — {{ کتاب.year }}{% اگر_ختم %}
+  <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ کتاب.summary }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+{% کے_لیے_ختم %}
+
+{# Pagination links #}
+{% کے_لیے ن کا صفحات %}
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"/?صفحہ={{ ن }}{% اگر تلاش %}&amp;تلاش={{ تلاش }}{% اگر_ختم %}"</span>
+   <span class="err">{%</span> <span class="na">اگر</span> <span class="na">ن </span><span class="o">=</span><span class="s">=</span> <span class="na">صفحہ</span> <span class="err">%}</span><span class="na">class</span><span class="o">=</span><span class="s">"فعال"</span><span class="err">{%</span> <span class="na">اگر_ختم</span> <span class="err">%}</span><span class="p">&gt;</span>{{ ن }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+{% کے_لیے_ختم %}
+</code></pre></div>
+<p>Urdu variable names passed from Flask (<code>کتابیں</code>, <code>صفحات</code>, <code>تلاش</code>, <code>صفحہ</code>) are used directly in template expressions.</p>
+<hr />
+<h3 id="6-add-book-form">6. Add Book Form</h3>
+<div class="highlight"><pre><span></span><code>@ایپ.حاصل("/شامل")
+فنکشن شامل_فارم() {
+    واپس فلاسک_سانچہ("شامل_کریں.html");
+}
+
+@ایپ.بھیجیں("/شامل")
+غیر_متزامن فنکشن شامل_محفوظ() {
+    متغیر req    = فلاسک_درخواست();
+    متغیر عنوان = req.form.get("title", "").strip();
+    متغیر مصنف  = req.form.get("author", "").strip();
+    متغیر سنہ   = req.form.get("year", "").strip();
+
+    اگر (len(عنوان) &gt; 0 اور len(مصنف) &gt; 0) {
+        متغیر سنہ_عدد = خالی;
+        اگر (len(سنہ) &gt; 0) { سنہ_عدد = int(سنہ); }
+        انتظار ڈی_بی.چلائیں(
+            "INSERT INTO books (title, author, year, category, summary) VALUES (%s, %s, %s, %s, %s)",
+            [عنوان, مصنف, سنہ_عدد, زمرہ, خلاصہ]);
+    }
+    واپس فلاسک_رجوع("/");
+}
+</code></pre></div>
+<p>The year field is optional — <code>سنہ_عدد = خالی</code> (None) is inserted as SQL <code>NULL</code> when left blank. Validation requires at minimum a title and author.</p>
+<hr />
+<h2 id="sqlite-vs-mysql-key-differences">SQLite vs MySQL: Key Differences</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>SQLite (<code>اردو/ڈیٹا_بیس</code> ایس_کیو_لائٹ)</th>
+<th>MySQL (<code>اردو/ڈیٹا_بیس</code> MySQL)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Placeholders</td>
+<td><code>?</code></td>
+<td><code>%s</code></td>
+</tr>
+<tr>
+<td>Last insert ID</td>
+<td><code>SELECT last_insert_rowid()</code></td>
+<td><code>cursor.lastrowid</code></td>
+</tr>
+<tr>
+<td>Connection</td>
+<td>File path</td>
+<td>Host/port/user/password</td>
+</tr>
+<tr>
+<td>Charset</td>
+<td>UTF-8 by default</td>
+<td>Must specify <code>utf8mb4</code> explicitly</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="stopping-the-server">Stopping the Server — سرور بند کرنا</h2>
+<blockquote>
+<p>⚠️ <strong>Ctrl+C does not stop this server.</strong> Flask/werkzeug's threaded mode keeps worker threads alive after the signal. Kill the process from another terminal:</p>
+<div class="highlight"><pre><span></span><code>taskkill /F /IM urdu.exe        # CMD / PowerShell
+Stop-Process -Name urdu -Force  # PowerShell
+</code></pre></div>
+<p><strong>اردو:</strong> <code>Ctrl+C</code> Flask/werkzeug تھریڈڈ موڈ میں سرور نہیں روکتا — اوپر دی گئی کمانڈ استعمال کریں۔</p>
+</blockquote>
+<hr />
+<h2 id="known-limitations">Known Limitations</h2>
+<table>
+<thead>
+<tr>
+<th>Limitation</th>
+<th>Reason</th>
+<th>Workaround</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Root with no password</td>
+<td>Local dev default</td>
+<td>Pass credentials via environment variables for production</td>
+</tr>
+<tr>
+<td>No edit / delete</td>
+<td>CRUD is create + read only</td>
+<td>Add PUT <code>/کتاب/&lt;id&gt;/ترمیم</code> and DELETE routes</td>
+</tr>
+<tr>
+<td>URL param <code>&lt;int:bid&gt;</code> is ASCII</td>
+<td>Flask path typing syntax</td>
+<td>Use <code>&lt;int:bid&gt;</code> — the Urdu prefix in the path still works</td>
+</tr>
+<tr>
+<td>No category filter</td>
+<td>Search only</td>
+<td>Add <code>?زمرہ=ناول</code> query param and WHERE clause</td>
+</tr>
+</tbody>
+</table>
+<h3 id="compiled-exe-note-urduexe">Compiled-exe note — <code>urdu.exe</code> میں نوٹ</h3>
+<p><code>mysql-connector-python</code> pulls in <code>opentelemetry-api</code>, which calls <code>importlib_metadata.entry_points()</code> at startup. In the compiled standalone exe this requires the dist-info metadata for several packages to be bundled. <code>build.py</code> now explicitly includes:</p>
+<div class="highlight"><pre><span></span><code>--include-distribution-metadata=opentelemetry-api
+--include-distribution-metadata=opentelemetry-sdk
+--include-distribution-metadata=opentelemetry-semantic-conventions
+--include-distribution-metadata=anyio
+--include-distribution-metadata=uvicorn
+--include-distribution-metadata=flask
+</code></pre></div>
+<p>Without these, the compiled exe raises <code>RuntimeError: cannot locate package '' associated with metadata</code> when the Flask app starts. Source mode (<code>urdu run app.urdu</code>) is unaffected.</p>
+<hr />
+<h2 id="next-steps">Next Steps</h2>
+<ul>
+<li>Add category filter: <code>WHERE category = %s</code> with a dropdown in the search bar</li>
+<li>Add edit form at <code>/کتاب/&lt;int:bid&gt;/ترمیم</code></li>
+<li>Add delete at <code>/کتاب/&lt;int:bid&gt;/حذف</code> (POST with confirmation)</li>
+<li>Paginate without page links: use infinite scroll with <code>fetch()</code> and JSON endpoint</li>
+<li>Export book list to CSV using <code>اردو/فائلیں</code></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

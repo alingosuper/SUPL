@@ -1,0 +1,1469 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>HTTP Client Library — اردو/کرل - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#http-client-library" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HTTP Client Library — اردو/کرل
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorial/beginner/" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/beginner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intermediate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constructor-and-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor and Configuration — تعمیر کنندہ اور ترتیب
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request Methods — درخواست طریقے
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response-object-__" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response Object — _کرل_جواب — جواب آبجیکٹ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples — مثالیں
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples — مثالیں">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-simple-get-request-and-json-parsing-get" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1 — Simple GET request and JSON parsing — سادہ GET درخواست
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-get-with-query-parameters-get" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2 — GET with query parameters — سوال پیرامیٹرز کے ساتھ GET
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-post-with-json-body-json-post" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 3 — POST with JSON body — JSON باڈی کے ساتھ POST
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-4-authenticated-api-calls-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 4 — Authenticated API calls — تصدیق شدہ API کالز
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-5-file-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 5 — File upload — فائل اپلوڈ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-6-full-rest-api-crud-rest-api-crud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 6 — Full REST API CRUD — مکمل REST API CRUD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-7-parallel-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 7 — Parallel requests — متوازی درخواستیں
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-8-error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 8 — Error handling — غلطی ہینڈلنگ
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="http-client-library">HTTP Client Library — اردو/کرل</h1>
+<p>The <code>اردو/کرل</code> library provides an async HTTP client for making web requests — GET, POST, file uploads, REST APIs, and more — using Urdu-named methods.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>اردو/کرل</code> لائبریری اردو نام والے طریقوں سے ویب درخواستیں (GET، POST، فائل اپلوڈ، REST APIs) بھیجنے کے لیے ایک غیر متزامن HTTP کلائنٹ فراہم کرتی ہے۔</p>
+</blockquote>
+<p><strong>Import:</strong></p>
+<div class="highlight"><pre><span></span><code>درآمد { کرل } سے "اردو/کرل"
+</code></pre></div>
+<hr />
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#constructor-and-configuration">Constructor and Configuration</a></li>
+<li><a href="#request-methods">Request Methods</a></li>
+<li><a href="#response-object--_کرل_جواب">Response Object — _کرل_جواب</a></li>
+<li><a href="#examples">Examples</a></li>
+</ol>
+<hr />
+<h2 id="constructor-and-configuration">Constructor and Configuration — تعمیر کنندہ اور ترتیب</h2>
+<div class="highlight"><pre><span></span><code>متغیر http = نیا کرل(ترتیب)
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> تعمیر کنندہ ایک اختیاری ترتیب آبجیکٹ قبول کرتا ہے۔ آپ پہلے سے طے شدہ سرخیاں، ختمی مدت (seconds میں)، بنیادی URL، SSL بندی، پراکسی اور خودکار ری ڈائریکٹ ترتیب دے سکتے ہیں۔</p>
+</blockquote>
+<p>All configuration keys are optional:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>سرخط</code></td>
+<td>dict</td>
+<td><code>{}</code></td>
+<td>Default headers sent with every request</td>
+</tr>
+<tr>
+<td><code>ختمی</code></td>
+<td>int</td>
+<td><code>30</code></td>
+<td>Timeout in seconds</td>
+</tr>
+<tr>
+<td><code>بنیادی_url</code></td>
+<td>string</td>
+<td><code>""</code></td>
+<td>Base URL prepended to all paths</td>
+</tr>
+<tr>
+<td><code>تصدیق_نہ_کرو</code></td>
+<td>bool</td>
+<td><code>جھوٹ</code></td>
+<td>Disable SSL certificate verification</td>
+</tr>
+<tr>
+<td><code>پراکسی</code></td>
+<td>string</td>
+<td><code>null</code></td>
+<td>Proxy URL, e.g. <code>"http://proxy:8080"</code></td>
+</tr>
+<tr>
+<td><code>ری_ڈائریکٹ</code></td>
+<td>bool</td>
+<td><code>سچ</code></td>
+<td>Follow HTTP redirects automatically</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Basic client:</strong></p>
+<div class="highlight"><pre><span></span><code>متغیر http = نیا کرل()
+</code></pre></div>
+<p><strong>Client with base URL and default headers:</strong></p>
+<div class="highlight"><pre><span></span><code>متغیر http = نیا کرل({
+    بنیادی_url: "https://api.example.com",
+    سرخط: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+    },
+    ختمی: 15
+})
+</code></pre></div>
+<hr />
+<h2 id="request-methods">Request Methods — درخواست طریقے</h2>
+<p>All methods are <strong>async</strong> — use <code>انتظار</code> inside an <code>غیر_متزامن</code> function, or at the top level of an async script.</p>
+<blockquote>
+<p><strong>اردو:</strong> تمام طریقے غیر متزامن ہیں — <code>غیر_متزامن</code> فنکشن کے اندر <code>انتظار</code> استعمال کریں۔ GET سے ڈیٹا حاصل کریں، POST سے بھیجیں، PUT سے تبدیل کریں، DELETE سے مٹائیں اور <code>فائل_بھیجو</code> سے ملٹی پارٹ فائل اپلوڈ کریں۔</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP verb</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>http.حاصل(url, پیرامیٹر={}, سرخط={})</code></td>
+<td>GET</td>
+<td>Fetch a resource</td>
+</tr>
+<tr>
+<td><code>http.بھیجو(url, ڈیٹا={}, سرخط={})</code></td>
+<td>POST</td>
+<td>Send JSON body</td>
+</tr>
+<tr>
+<td><code>http.فارم_بھیجو(url, ڈیٹا={})</code></td>
+<td>POST</td>
+<td>Send form-encoded body</td>
+</tr>
+<tr>
+<td><code>http.تازہ(url, ڈیٹا={})</code></td>
+<td>PUT</td>
+<td>Replace a resource</td>
+</tr>
+<tr>
+<td><code>http.جزوی_تازہ(url, ڈیٹا={})</code></td>
+<td>PATCH</td>
+<td>Partially update a resource</td>
+</tr>
+<tr>
+<td><code>http.مٹاؤ(url)</code></td>
+<td>DELETE</td>
+<td>Delete a resource</td>
+</tr>
+<tr>
+<td><code>http.سر(url)</code></td>
+<td>HEAD</td>
+<td>Fetch headers only</td>
+</tr>
+<tr>
+<td><code>http.اختیارات(url)</code></td>
+<td>OPTIONS</td>
+<td>Fetch allowed methods</td>
+</tr>
+<tr>
+<td><code>http.فائل_بھیجو(url, فائل_راستہ, خانہ="file", اضافی_ڈیٹا={})</code></td>
+<td>POST multipart</td>
+<td>Upload a file</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="response-object-__">Response Object — _کرل_جواب — جواب آبجیکٹ</h2>
+<p>Every request method returns a <code>_کرل_جواب</code> object.</p>
+<blockquote>
+<p><strong>اردو:</strong> ہر درخواست طریقہ ایک <code>_کرل_جواب</code> آبجیکٹ واپس کرتا ہے۔ <code>.حالت</code> سے HTTP حالت رمز، <code>.متن</code> سے جواب متن، <code>.جے_سون()</code> سے JSON پارس کریں اور <code>.ٹھیک</code> سے جانچیں کہ درخواست کامیاب تھی یا نہیں۔</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Property / Method</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.حالت</code></td>
+<td>int</td>
+<td>HTTP status code (e.g. <code>200</code>, <code>404</code>)</td>
+</tr>
+<tr>
+<td><code>.متن</code></td>
+<td>string</td>
+<td>Response body as text</td>
+</tr>
+<tr>
+<td><code>.مواد</code></td>
+<td>bytes</td>
+<td>Response body as raw bytes</td>
+</tr>
+<tr>
+<td><code>.سرخط</code></td>
+<td>dict</td>
+<td>Response headers</td>
+</tr>
+<tr>
+<td><code>.ٹھیک</code></td>
+<td>bool</td>
+<td><code>سچ</code> when status code &lt; 400</td>
+</tr>
+<tr>
+<td><code>.ربط</code></td>
+<td>string</td>
+<td>Final URL after redirects</td>
+</tr>
+<tr>
+<td><code>.جے_سون()</code></td>
+<td>any</td>
+<td>Parse body as JSON → object/list</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="examples">Examples — مثالیں</h2>
+<h3 id="example-1-simple-get-request-and-json-parsing-get">Example 1 — Simple GET request and JSON parsing — سادہ GET درخواست</h3>
+<blockquote>
+<p><strong>اردو:</strong> یہ مثال سادہ GET درخواست اور JSON پارسنگ دکھاتی ہے۔ <code>http.حاصل()</code> سے URL پر GET درخواست بھیجیں، پھر <code>.جے_سون()</code> سے جواب کو JSON میں بدلیں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { کرل } سے "اردو/کرل"
+
+متغیر http = نیا کرل()
+
+غیر_متزامن فنکشن مرکزی() {
+    متغیر جواب = انتظار http.حاصل("https://jsonplaceholder.typicode.com/posts/1");
+
+    اگر (جواب.ٹھیک) {
+        متغیر ڈیٹا = جواب.جے_سون();
+        لکھو("عنوان:", ڈیٹا.title);
+        لکھو("متن:",   ڈیٹا.body);
+        لکھو("شناخت:", ڈیٹا.id);
+    } ورنہ {
+        لکھو("غلطی:", جواب.حالت);
+    }
+}
+
+انتظار مرکزی();
+</code></pre></div>
+<h3 id="example-2-get-with-query-parameters-get">Example 2 — GET with query parameters — سوال پیرامیٹرز کے ساتھ GET</h3>
+<blockquote>
+<p><strong>اردو:</strong> GET درخواست میں <code>پیرامیٹر: {...}</code> دیں تاکہ سوال پیرامیٹرز URL میں شامل ہوں۔ مثلاً GitHub API پر ذخیرے تلاش کرنا۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { کرل } سے "اردو/کرل"
+
+متغیر http = نیا کرل()
+
+غیر_متزامن فنکشن تلاش_کریں(عبارت) {
+    متغیر جواب = انتظار http.حاصل(
+        "https://api.github.com/search/repositories",
+        پیرامیٹر: { q: عبارت, sort: "stars", per_page: 5 }
+    );
+
+    متغیر نتیجہ = جواب.جے_سون();
+    لکھو(`"${عبارت}" کے لیے ${نتیجہ.total_count} ذخیرے ملے:`);
+
+    کے_لیے (متغیر ریپو کا نتیجہ.items) {
+        لکھو(`  ★ ${ریپو.stargazers_count}  ${ریپو.full_name}`);
+    }
+}
+
+انتظار تلاش_کریں("اردو پروگرامنگ");
+</code></pre></div>
+<h3 id="example-3-post-with-json-body-json-post">Example 3 — POST with JSON body — JSON باڈی کے ساتھ POST</h3>
+<blockquote>
+<p><strong>اردو:</strong> JSON باڈی کے ساتھ POST درخواست بھیجنے کے لیے <code>http.بھیجو(url, ڈیٹا: {...})</code> استعمال کریں۔ سرور سے <code>201 Created</code> جواب ملنے پر نیا ریکارڈ کامیابی سے بنا۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { کرل } سے "اردو/کرل"
+
+متغیر http = نیا کرل({
+    سرخط: { "Content-Type": "application/json" }
+})
+
+غیر_متزامن فنکشن نئی_پوسٹ_بنائیں() {
+    متغیر پیغام = {
+        title:  "اردو پروگرامنگ کا تعارف",
+        body:   "یہ زبان اردو میں کوڈ لکھنے کی سہولت دیتی ہے۔",
+        userId: 1
+    };
+
+    متغیر جواب = انتظار http.بھیجو(
+        "https://jsonplaceholder.typicode.com/posts",
+        ڈیٹا: پیغام
+    );
+
+    اگر (جواب.حالت == 201) {
+        متغیر بنائی_گئی = جواب.جے_سون();
+        لکھو("نئی پوسٹ ID:", بنائی_گئی.id);
+    } ورنہ {
+        لکھو("بنانے میں ناکامی، کوڈ:", جواب.حالت);
+    }
+}
+
+انتظار نئی_پوسٹ_بنائیں();
+</code></pre></div>
+<h3 id="example-4-authenticated-api-calls-api">Example 4 — Authenticated API calls — تصدیق شدہ API کالز</h3>
+<blockquote>
+<p><strong>اردو:</strong> تصدیق شدہ API کالز کے لیے ٹوکن کو پہلے سے طے شدہ سرخیوں میں <code>Authorization</code> کے طور پر رکھیں۔ پھر تمام درخواستیں خودبخود یہ سرخی لے جائیں گی۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { کرل } سے "اردو/کرل"
+
+مستقل ٹوکن = "Bearer ghp_xxxxxxxxxxxxxxxxxxxx"
+
+متغیر http = نیا کرل({
+    بنیادی_url: "https://api.github.com",
+    سرخط: {
+        "Authorization": ٹوکن,
+        "Accept": "application/vnd.github+json"
+    }
+})
+
+غیر_متزامن فنکشن صارف_معلومات() {
+    متغیر جواب = انتظار http.حاصل("/user");
+    متغیر صارف = جواب.جے_سون();
+    لکھو("صارف نام:", صارف.login);
+    لکھو("نام:",      صارف.name);
+    لکھو("ای میل:",  صارف.email);
+}
+
+غیر_متزامن فنکشن ذخیرے_دیکھیں() {
+    متغیر جواب = انتظار http.حاصل("/user/repos", پیرامیٹر: { per_page: 10 });
+    کے_لیے (متغیر ذخیرہ کا جواب.جے_سون()) {
+        لکھو(`  📁 ${ذخیرہ.full_name} (${ذخیرہ.stargazers_count} ستارے)`);
+    }
+}
+
+انتظار صارف_معلومات();
+انتظار ذخیرے_دیکھیں();
+</code></pre></div>
+<h3 id="example-5-file-upload">Example 5 — File upload — فائل اپلوڈ</h3>
+<blockquote>
+<p><strong>اردو:</strong> فائل اپلوڈ کرنے کے لیے <code>http.فائل_بھیجو()</code> استعمال کریں۔ فائل کا راستہ، خانے کا نام اور اضافی ڈیٹا دیں۔ ختمی مدت <code>60</code> سیکنڈ رکھیں کیونکہ بڑی فائلیں زیادہ وقت لیتی ہیں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { کرل } سے "اردو/کرل"
+
+متغیر http = نیا کرل({ ختمی: 60 })
+
+غیر_متزامن فنکشن تصویر_اپلوڈ(فائل_راستہ) {
+    لکھو("فائل اپلوڈ ہو رہی ہے:", فائل_راستہ);
+
+    متغیر جواب = انتظار http.فائل_بھیجو(
+        "https://api.example.com/upload",
+        فائل_راستہ,
+        خانہ: "image",
+        اضافی_ڈیٹا: { عنوان: "میری تصویر", الگورتھم: "اردو" }
+    );
+
+    اگر (جواب.ٹھیک) {
+        متغیر نتیجہ = جواب.جے_سون();
+        لکھو("اپلوڈ کامیاب!");
+        لکھو("URL:", نتیجہ.url);
+    } ورنہ {
+        لکھو("اپلوڈ ناکام:", جواب.حالت, جواب.متن);
+    }
+}
+
+انتظار تصویر_اپلوڈ("تصاویر/پروفائل.jpg");
+</code></pre></div>
+<h3 id="example-6-full-rest-api-crud-rest-api-crud">Example 6 — Full REST API CRUD — مکمل REST API CRUD</h3>
+<blockquote>
+<p><strong>اردو:</strong> یہ مثال مکمل CRUD عمل دکھاتی ہے: <code>بھیجو</code> سے بنانا، <code>حاصل</code> سے پڑھنا، <code>جزوی_تازہ</code> سے جزوی تازہ کاری اور <code>مٹاؤ</code> سے حذف کرنا — سب <code>بنیادی_url</code> کے ساتھ مختصر راستوں پر۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { کرل } سے "اردو/کرل"
+
+// ═══════════════════════════════════════════════
+// REST API — Todo فہرست کا مکمل انتظام
+// ═══════════════════════════════════════════════
+
+مستقل API = "https://jsonplaceholder.typicode.com"
+
+متغیر http = نیا کرل({
+    بنیادی_url: API,
+    سرخط: { "Content-Type": "application/json" }
+})
+
+// CREATE — نئی todo شامل کریں
+غیر_متزامن فنکشن todo_بنائیں(عنوان) {
+    متغیر جواب = انتظار http.بھیجو("/todos", ڈیٹا: {
+        title:     عنوان,
+        completed: جھوٹ,
+        userId:    1
+    });
+    متغیر todo = جواب.جے_سون();
+    لکھو("بنائی گئی todo ID:", todo.id);
+    واپس todo;
+}
+
+// READ — تمام todos پڑھیں
+غیر_متزامن فنکشن todos_پڑھیں() {
+    متغیر جواب = انتظار http.حاصل("/todos", پیرامیٹر: { _limit: 5 });
+    کے_لیے (متغیر todo کا جواب.جے_سون()) {
+        متغیر علامت = todo.completed ? "✓" : "○";
+        لکھو(`  ${علامت} [${todo.id}] ${todo.title}`);
+    }
+}
+
+// UPDATE — todo مکمل کریں
+غیر_متزامن فنکشن todo_مکمل_کریں(id) {
+    متغیر جواب = انتظار http.جزوی_تازہ(`/todos/${id}`, ڈیٹا: {
+        completed: سچ
+    });
+    متغیر todo = جواب.جے_سون();
+    لکھو(`Todo ${id} مکمل:`, todo.completed);
+}
+
+// DELETE — todo مٹائیں
+غیر_متزامن فنکشن todo_مٹائیں(id) {
+    متغیر جواب = انتظار http.مٹاؤ(`/todos/${id}`);
+    اگر (جواب.ٹھیک) {
+        لکھو(`Todo ${id} مٹا دیا گیا`);
+    } ورنہ {
+        لکھو("مٹانے میں ناکامی");
+    }
+}
+
+// ── چلائیں ──────────────────────────────────
+
+غیر_متزامن فنکشن مرکزی() {
+    لکھو("=== Todo مینیجر ===\n");
+
+    لکھو("موجودہ todos:");
+    انتظار todos_پڑھیں();
+
+    لکھو("\nنئی todo بنا رہے ہیں...");
+    متغیر نئی = انتظار todo_بنائیں("اردو پروگرامنگ سیکھنا");
+
+    لکھو("\nTodo مکمل کر رہے ہیں...");
+    انتظار todo_مکمل_کریں(1);
+
+    لکھو("\nTodo مٹا رہے ہیں...");
+    انتظار todo_مٹائیں(2);
+}
+
+انتظار مرکزی();
+</code></pre></div>
+<h3 id="example-7-parallel-requests">Example 7 — Parallel requests — متوازی درخواستیں</h3>
+<blockquote>
+<p><strong>اردو:</strong> <code>Promise.all([...])</code> سے متعدد درخواستیں بیک وقت بھیجیں۔ یہ ترتیب وار بھیجنے سے بہت تیز ہے — تمام درخواستیں ایک ساتھ چلتی ہیں اور سب کا انتظار ایک بار ہوتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { کرل } سے "اردو/کرل"
+
+متغیر http = نیا کرل()
+
+غیر_متزامن فنکشن ڈیٹا_اکٹھا_کریں() {
+    // تمام درخواستیں بیک وقت بھیجیں
+    متغیر [صارفین_ج, پوسٹس_ج, تبصرے_ج] = انتظار Promise.all([
+        http.حاصل("https://jsonplaceholder.typicode.com/users"),
+        http.حاصل("https://jsonplaceholder.typicode.com/posts?_limit=5"),
+        http.حاصل("https://jsonplaceholder.typicode.com/comments?_limit=3")
+    ]);
+
+    لکھو("صارفین:",  صارفین_ج.جے_سون().length);
+    لکھو("پوسٹیں:", پوسٹس_ج.جے_سون().length);
+    لکھو("تبصرے:",  تبصرے_ج.جے_سون().length);
+}
+
+انتظار ڈیٹا_اکٹھا_کریں();
+</code></pre></div>
+<h3 id="example-8-error-handling">Example 8 — Error handling — غلطی ہینڈلنگ</h3>
+<blockquote>
+<p><strong>اردو:</strong> درخواست میں غلطیاں <code>کوشش/پکڑو</code> سے سنبھالیں۔ <code>.حالت == 404</code> سے نہ ملنے کی جانچ کریں، <code>.ٹھیک</code> سے کامیابی جانچیں اور <code>timeout</code> غلطی کو علیحدہ پکڑیں۔ یہ نمونہ محفوظ اور مضبوط HTTP کالز کا بہترین طریقہ ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { کرل } سے "اردو/کرل"
+
+متغیر http = نیا کرل({ ختمی: 5 })
+
+غیر_متزامن فنکشن محفوظ_درخواست(url) {
+    کوشش {
+        متغیر جواب = انتظار http.حاصل(url);
+
+        اگر (جواب.حالت == 404) {
+            لکھو("صفحہ نہیں ملا:", url);
+            واپس خالی;
+        }
+
+        اگر (نہیں (جواب.ٹھیک)) {
+            لکھو(`HTTP غلطی ${جواب.حالت}:`, جواب.متن);
+            واپس خالی;
+        }
+
+        واپس جواب.جے_سون();
+
+    } پکڑو (غلطی) {
+        اگر (غلطی.message.includes("timeout")) {
+            لکھو("مدت ختم — سرور جواب نہیں دے رہا");
+        } ورنہ {
+            لکھو("نیٹ ورک غلطی:", غلطی.message);
+        }
+        واپس خالی;
+    }
+}
+
+متغیر نتیجہ = انتظار محفوظ_درخواست("https://httpstat.us/404");
+لکھو("نتیجہ:", نتیجہ);
+</code></pre></div>
+<hr />
+<p><em>Previous: <a href="../ml/">ML →</a> | Next: <a href="../scraper/">Web Scraper →</a></em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

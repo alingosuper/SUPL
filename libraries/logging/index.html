@@ -1,0 +1,1369 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Logging Library — اردو/لاگ - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#logging-library" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Logging Library — اردو/لاگ
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorial/beginner/" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/beginner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intermediate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents — فہرست مضامین
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor — تعمیر
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Options — ترتیب کے اختیارات
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log-level-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log Level Constants — سطح
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging Methods — لاگنگ کے طریقے
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples — مثالیں
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples — مثالیں">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-basic-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1 — Basic logging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-log-to-file-with-rotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2 — Log to file with rotation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-json-logging-for-log-aggregators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 3 — JSON logging for log aggregators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-4-exception-logging-with-stack-trace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 4 — Exception logging with stack trace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-5-multiple-loggers-one-per-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 5 — Multiple loggers (one per module)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-6-production-ready-logger-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 6 — Production-ready logger setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="logging-library">Logging Library — اردو/لاگ</h1>
+<p>The <code>اردو/لاگ</code> library provides structured application logging with optional coloured console output, file output, JSON formatting, and rotating file handlers.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>اردو/لاگ</code> لائبریری منظم لاگنگ (logging) فراہم کرتی ہے — رنگدار کنسول آؤٹ پٹ، فائل آؤٹ پٹ، JSON فارمیٹنگ، اور گھماؤ فائل ہینڈلر کے ساتھ۔</p>
+</blockquote>
+<p><strong>Import:</strong></p>
+<div class="highlight"><pre><span></span><code>درآمد { لاگر } سے "اردو/لاگ"
+</code></pre></div>
+<hr />
+<h2 id="table-of-contents">Table of Contents — فہرست مضامین</h2>
+<ol>
+<li><a href="#constructor">Constructor</a></li>
+<li><a href="#configuration-options">Configuration Options</a></li>
+<li><a href="#log-level-constants--سطح">Log Level Constants — سطح</a></li>
+<li><a href="#logging-methods">Logging Methods</a></li>
+<li><a href="#examples">Examples</a></li>
+</ol>
+<hr />
+<h2 id="constructor">Constructor — تعمیر</h2>
+<div class="highlight"><pre><span></span><code>متغیر لاگ = نیا لاگر(نام, ترتیب)
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> لاگر (logger) بنانے کے لیے نام اور اختیاری ترتیب دیں۔ نام ہر پیغام میں ظاہر ہوگا۔</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>نام</code></td>
+<td>string</td>
+<td>Logger name shown in every message</td>
+</tr>
+<tr>
+<td><code>ترتیب</code></td>
+<td>object</td>
+<td>Optional configuration (all keys optional)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Minimal setup:</strong></p>
+<div class="highlight"><pre><span></span><code>متغیر لاگ = نیا لاگر("ایپ")
+</code></pre></div>
+<p><strong>Full setup:</strong></p>
+<div class="highlight"><pre><span></span><code>متغیر لاگ = نیا لاگر("ایپ", {
+    سطح_:   20,
+    فائل:   "لاگز/app.log",
+    رنگ:    سچ,
+    جیسن:   جھوٹ,
+    گھماؤ:  سچ,
+    زیادہ_سائز: 10 * 1024 * 1024,
+    نسخے:   5
+})
+</code></pre></div>
+<hr />
+<h2 id="configuration-options">Configuration Options — ترتیب کے اختیارات</h2>
+<blockquote>
+<p><strong>اردو:</strong> یہ اختیارات لاگر کی فائل (file)، سطح (level)، اور فارمیٹ کو کنٹرول کرتے ہیں۔</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>سطح_</code></td>
+<td>int</td>
+<td><code>20</code></td>
+<td>Minimum level to emit (see table below)</td>
+</tr>
+<tr>
+<td><code>فائل</code></td>
+<td>string</td>
+<td><code>null</code></td>
+<td>File path for log output (null = console only)</td>
+</tr>
+<tr>
+<td><code>رنگ</code></td>
+<td>bool</td>
+<td><code>سچ</code></td>
+<td>Coloured terminal output (ANSI)</td>
+</tr>
+<tr>
+<td><code>جیسن</code></td>
+<td>bool</td>
+<td><code>جھوٹ</code></td>
+<td>Emit each line as a JSON object</td>
+</tr>
+<tr>
+<td><code>گھماؤ</code></td>
+<td>bool</td>
+<td><code>جھوٹ</code></td>
+<td>Use a rotating file handler</td>
+</tr>
+<tr>
+<td><code>زیادہ_سائز</code></td>
+<td>int</td>
+<td><code>10485760</code></td>
+<td>Max file size in bytes before rotation (10 MB)</td>
+</tr>
+<tr>
+<td><code>نسخے</code></td>
+<td>int</td>
+<td><code>5</code></td>
+<td>Number of rotated backup files to keep</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="log-level-constants">Log Level Constants — سطح</h2>
+<p>Import the <code>سطح</code> namespace if you want symbolic names:</p>
+<blockquote>
+<p><strong>اردو:</strong> سطح (level) سے پیغام کی اہمیت ظاہر ہوتی ہے — ڈیبگ (debug) سب سے کم، بحران (critical) سب سے زیادہ۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { لاگر, سطح } سے "اردو/لاگ"
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Constant</th>
+<th>Int</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>سطح.ڈیبگ</code></td>
+<td><code>10</code></td>
+<td>DEBUG</td>
+</tr>
+<tr>
+<td><code>سطح.معلومات</code></td>
+<td><code>20</code></td>
+<td>INFO</td>
+</tr>
+<tr>
+<td><code>سطح.تنبیہ</code></td>
+<td><code>30</code></td>
+<td>WARNING</td>
+</tr>
+<tr>
+<td><code>سطح.غلطی</code></td>
+<td><code>40</code></td>
+<td>ERROR</td>
+</tr>
+<tr>
+<td><code>سطح.بحران</code></td>
+<td><code>50</code></td>
+<td>CRITICAL</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="logging-methods">Logging Methods — لاگنگ کے طریقے</h2>
+<p>Each method has both an Urdu name and an English alias.</p>
+<blockquote>
+<p><strong>اردو:</strong> ہر طریقے کا اردو نام اور انگریزی عرف (alias) دونوں استعمال کیے جا سکتے ہیں۔</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Urdu method</th>
+<th>English alias</th>
+<th>Level</th>
+<th>Colour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>لاگ.ڈیبگ(پیغام)</code></td>
+<td><code>لاگ.debug(پیغام)</code></td>
+<td>10</td>
+<td>grey</td>
+</tr>
+<tr>
+<td><code>لاگ.معلومات(پیغام)</code></td>
+<td><code>لاگ.info(پیغام)</code></td>
+<td>20</td>
+<td>cyan</td>
+</tr>
+<tr>
+<td><code>لاگ.تنبیہ(پیغام)</code></td>
+<td><code>لاگ.warn(پیغام)</code></td>
+<td>30</td>
+<td>yellow</td>
+</tr>
+<tr>
+<td><code>لاگ.غلطی(پیغام, استثناء=جھوٹ)</code></td>
+<td><code>لاگ.error(پیغام)</code></td>
+<td>40</td>
+<td>red</td>
+</tr>
+<tr>
+<td><code>لاگ.بحران(پیغام)</code></td>
+<td><code>لاگ.critical(پیغام)</code></td>
+<td>50</td>
+<td>bold red</td>
+</tr>
+</tbody>
+</table>
+<p>Pass <code>استثناء=سچ</code> (or an exception object) to <code>غلطی()</code> to include a stack trace in the log output.</p>
+<p><strong>Output format (text mode):</strong></p>
+<div class="highlight"><pre><span></span><code>2026-05-19 14:30:45 [INFO] ایپ: سرور شروع ہو گیا پورٹ 8000 پر
+2026-05-19 14:30:46 [WARNING] ایپ: میموری 80% سے زیادہ استعمال
+2026-05-19 14:30:47 [ERROR] ایپ: ڈیٹابیس سے رابطہ ناکام
+</code></pre></div>
+<p><strong>Output format (JSON mode, <code>جیسن=سچ</code>):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"وقت"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-05-19T14:30:45"</span><span class="p">,</span><span class="w"> </span><span class="nt">"سطح"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INFO"</span><span class="p">,</span><span class="w"> </span><span class="nt">"نام"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ایپ"</span><span class="p">,</span><span class="w"> </span><span class="nt">"پیغام"</span><span class="p">:</span><span class="w"> </span><span class="s2">"سرور شروع ہو گیا"</span><span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="examples">Examples — مثالیں</h2>
+<h3 id="example-1-basic-logging">Example 1 — Basic logging</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال ۱ — بنیادی لاگ (log) پیغامات</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { لاگر } سے "اردو/لاگ"
+
+متغیر لاگ = نیا لاگر("میرا_پروگرام")
+
+لاگ.ڈیبگ("ڈیبگ پیغام — تفصیلی معلومات")
+لاگ.معلومات("پروگرام شروع ہو گیا")
+لاگ.تنبیہ("یہ آگاہی ہے، کچھ غلط نہیں")
+لاگ.غلطی("کچھ غلط ہوا")
+لاگ.بحران("سنگین خرابی!")
+</code></pre></div>
+<p><strong>Output:</strong></p>
+<div class="highlight"><pre><span></span><code>2026-05-19 12:00:00 [DEBUG]    میرا_پروگرام: ڈیبگ پیغام — تفصیلی معلومات
+2026-05-19 12:00:00 [INFO]     میرا_پروگرام: پروگرام شروع ہو گیا
+2026-05-19 12:00:00 [WARNING]  میرا_پروگرام: یہ آگاہی ہے، کچھ غلط نہیں
+2026-05-19 12:00:00 [ERROR]    میرا_پروگرام: کچھ غلط ہوا
+2026-05-19 12:00:00 [CRITICAL] میرا_پروگرام: سنگین خرابی!
+</code></pre></div>
+<h3 id="example-2-log-to-file-with-rotation">Example 2 — Log to file with rotation</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال ۲ — فائل میں لاگ لکھنا اور گھماؤ (rotation) کے ساتھ سطح (level) کا انتخاب</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { لاگر, سطح } سے "اردو/لاگ"
+
+متغیر لاگ = نیا لاگر("ویب_سرور", {
+    سطح_:   سطح.معلومات,    // DEBUG پیغامات نہ لکھو
+    فائل:   "لاگز/server.log",
+    رنگ:    سچ,
+    گھماؤ:  سچ,
+    زیادہ_سائز: 5 * 1024 * 1024,   // 5MB
+    نسخے:   10
+})
+
+فنکشن درخواست_لاگ_کرو(طریقہ, راستہ, حالت) {
+    متغیر پیغام = `${طریقہ} ${راستہ} → ${حالت}`;
+    اگر (حالت &gt;= 500) {
+        لاگ.غلطی(پیغام);
+    } ورنہ_اگر (حالت &gt;= 400) {
+        لاگ.تنبیہ(پیغام);
+    } ورنہ {
+        لاگ.معلومات(پیغام);
+    }
+}
+
+درخواست_لاگ_کرو("GET",    "/",           200)
+درخواست_لاگ_کرو("POST",   "/login",       200)
+درخواست_لاگ_کرو("GET",    "/admin",       403)
+درخواست_لاگ_کرو("DELETE", "/users/99",    404)
+درخواست_لاگ_کرو("POST",   "/api/data",    500)
+</code></pre></div>
+<h3 id="example-3-json-logging-for-log-aggregators">Example 3 — JSON logging for log aggregators</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال ۳ — ELK / Splunk / CloudWatch کے لیے JSON فارمیٹ میں لاگ لکھنا</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { لاگر, سطح } سے "اردو/لاگ"
+
+// JSON فارمیٹ — ELK / Splunk / CloudWatch کے لیے
+متغیر لاگ = نیا لاگر("api_سروس", {
+    سطح_:  سطح.ڈیبگ,
+    فائل:  "لاگز/api.jsonl",
+    جیسن:  سچ,
+    رنگ:   جھوٹ
+})
+
+لاگ.معلومات("API سرور شروع ہوا")
+لاگ.ڈیبگ("ترتیبات لوڈ ہوئیں")
+لاگ.تنبیہ("ریٹ لمٹ سے قریب")
+</code></pre></div>
+<p><strong>Output (لاگز/api.jsonl):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-05-19T12:00:00.123"</span><span class="p">,</span><span class="w"> </span><span class="nt">"level"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INFO"</span><span class="p">,</span><span class="w"> </span><span class="nt">"logger"</span><span class="p">:</span><span class="w"> </span><span class="s2">"api_سروس"</span><span class="p">,</span><span class="w"> </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"API سرور شروع ہوا"</span><span class="p">}</span>
+<span class="p">{</span><span class="nt">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-05-19T12:00:00.124"</span><span class="p">,</span><span class="w"> </span><span class="nt">"level"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEBUG"</span><span class="p">,</span><span class="w"> </span><span class="nt">"logger"</span><span class="p">:</span><span class="w"> </span><span class="s2">"api_سروس"</span><span class="p">,</span><span class="w"> </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ترتیبات لوڈ ہوئیں"</span><span class="p">}</span>
+<span class="p">{</span><span class="nt">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-05-19T12:00:00.125"</span><span class="p">,</span><span class="w"> </span><span class="nt">"level"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WARNING"</span><span class="p">,</span><span class="w"> </span><span class="nt">"logger"</span><span class="p">:</span><span class="w"> </span><span class="s2">"api_سروس"</span><span class="p">,</span><span class="w"> </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ریٹ لمٹ سے قریب"</span><span class="p">}</span>
+</code></pre></div>
+<h3 id="example-4-exception-logging-with-stack-trace">Example 4 — Exception logging with stack trace</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال ۴ — استثناء (exception) کا سٹیک ٹریس لاگ کرنا</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { لاگر } سے "اردو/لاگ"
+
+متغیر لاگ = نیا لاگر("ڈیٹابیس", {
+    فائل: "لاگز/errors.log",
+    سطح_: 10
+})
+
+فنکشن ڈیٹابیس_سے_پڑھو(سوال) {
+    لاگ.ڈیبگ(`سوال: ${سوال}`);
+    کوشش {
+        // ... ڈیٹابیس کوڈ ...
+        پھینکو نیا Error("Connection refused");
+    } پکڑو (ے) {
+        لاگ.غلطی(`ڈیٹابیس سوال ناکام: ${ے.message}`, استثناء=ے);
+        واپس خالی;
+    }
+}
+
+ڈیٹابیس_سے_پڑھو("SELECT * FROM users");
+</code></pre></div>
+<h3 id="example-5-multiple-loggers-one-per-module">Example 5 — Multiple loggers (one per module)</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال ۵ — ہر ماڈیول (module) کا اپنا لاگر</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { لاگر, سطح } سے "اردو/لاگ"
+
+// ہر ماڈیول کا اپنا لاگر
+متغیر auth_لاگ = نیا لاگر("auth",     { فائل: "لاگز/app.log" })
+متغیر db_لاگ   = نیا لاگر("database", { فائل: "لاگز/app.log" })
+متغیر api_لاگ  = نیا لاگر("api",      { فائل: "لاگز/app.log" })
+
+فنکشن لاگ_ان_کرو(نام, پاسورڈ) {
+    auth_لاگ.ڈیبگ(`لاگ ان کوشش: ${نام}`);
+    اگر (نام == "admin" اور پاسورڈ == "secret") {
+        auth_لاگ.معلومات(`لاگ ان کامیاب: ${نام}`);
+        واپس سچ;
+    } ورنہ {
+        auth_لاگ.تنبیہ(`ناکام لاگ ان: ${نام}`);
+        واپس جھوٹ;
+    }
+}
+
+فنکشن سوال_چلاؤ(sql) {
+    db_لاگ.ڈیبگ(`SQL: ${sql}`);
+    db_لاگ.معلومات("سوال مکمل");
+}
+
+فنکشن API_درخواست(endpoint) {
+    api_لاگ.معلومات(`GET ${endpoint}`);
+}
+
+لاگ_ان_کرو("admin", "secret")
+لاگ_ان_کرو("hacker", "wrong")
+سوال_چلاؤ("SELECT * FROM users WHERE active=1")
+API_درخواست("/api/users")
+</code></pre></div>
+<h3 id="example-6-production-ready-logger-setup">Example 6 — Production-ready logger setup</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال ۶ — پروڈکشن اور ڈیولپمنٹ ماحول کے لیے لاگر ترتیب دینا</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { لاگر, سطح } سے "اردو/لاگ"
+
+// ─── پروڈکشن ترتیب ───────────────────────────
+فنکشن لاگر_بنائیں(نام, پروڈکشن=جھوٹ) {
+    اگر (پروڈکشن) {
+        واپس نیا لاگر(نام, {
+            سطح_:   سطح.معلومات,    // DEBUG لاگ نہ کرو
+            فائل:   `لاگز/${نام}.log`,
+            رنگ:    جھوٹ,
+            جیسن:   سچ,
+            گھماؤ:  سچ,
+            زیادہ_سائز: 50 * 1024 * 1024,  // 50MB
+            نسخے:   30
+        });
+    } ورنہ {
+        واپس نیا لاگر(نام, {
+            سطح_:  سطح.ڈیبگ,
+            رنگ:   سچ,
+            جیسن:  جھوٹ
+        });
+    }
+}
+
+// ─── استعمال ─────────────────────────────────
+متغیر ماحول = "development"  // یا "production"
+متغیر لاگ = لاگر_بنائیں("پروگرام", ماحول == "production")
+
+لاگ.معلومات("پروگرام شروع")
+لاگ.ڈیبگ("ڈیبگ موڈ فعال")
+</code></pre></div>
+<hr />
+<p><em>Previous: <a href="../datetime/">Date &amp; Time →</a> | Next: <a href="../threading/">Threading →</a></em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

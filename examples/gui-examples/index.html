@@ -1,0 +1,1294 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>GUI Examples — گرافیکی مثالیں - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gui-examples" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              GUI Examples — گرافیکی مثالیں
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorial/beginner/" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../libraries/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/beginner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intermediate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../libraries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#01-hello-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01 — Hello World
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#02-simple-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02 — Simple Calculator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#03-full-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03 — Full Calculator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#04-tic-tac-toe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04 — Tic-Tac-Toe
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#05-rock-paper-scissors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        05 — Rock Paper Scissors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#06-billing-system-sqlite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        06 — Billing System (SQLite)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#07-billing-system-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        07 — Billing System (MySQL)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#08-billing-system-cassandra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        08 — Billing System (Cassandra)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#09-billing-system-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        09 — Billing System (PostgreSQL)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-billing-system-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 — Billing System (MongoDB)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-website-downloader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11 — Website Downloader
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-text-browser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12 — Text Browser
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-crypto-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13 — Crypto Tool
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection-failure-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection Failure Handling — کنکشن ناکام ہونے پر
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="gui-examples">GUI Examples — گرافیکی مثالیں</h1>
+<p>Thirteen complete desktop GUI applications built with the <code>اردو/گوئی</code> library (a Tkinter-based framework). All examples are in the <code>examples/GUI/</code> folder.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>اردو/گوئی</code> لائبریری (Tkinter پر مبنی فریم ورک) سے بنی تیرہ مکمل ڈیسک ٹاپ گرافیکی ایپلیکیشنیں۔ تمام مثالیں <code>examples/GUI/</code> فولڈر میں ہیں۔</p>
+</blockquote>
+<p><strong>Install dependency:</strong></p>
+<div class="highlight"><pre><span></span><code>pip install ttkbootstrap
+</code></pre></div>
+<p><strong>Run any example:</strong></p>
+<div class="highlight"><pre><span></span><code>urdu run examples/GUI/01_HELLO_WORLD/app.urdu
+</code></pre></div>
+<hr />
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#01--hello-world">01 — Hello World</a></li>
+<li><a href="#02--simple-calculator">02 — Simple Calculator</a></li>
+<li><a href="#03--full-calculator">03 — Full Calculator</a></li>
+<li><a href="#04--tic-tac-toe">04 — Tic-Tac-Toe</a></li>
+<li><a href="#05--rock-paper-scissors">05 — Rock Paper Scissors</a></li>
+<li><a href="#06--billing-system-sqlite">06 — Billing System (SQLite)</a></li>
+<li><a href="#07--billing-system-mysql">07 — Billing System (MySQL)</a></li>
+<li><a href="#08--billing-system-cassandra">08 — Billing System (Cassandra)</a></li>
+<li><a href="#09--billing-system-postgresql">09 — Billing System (PostgreSQL)</a></li>
+<li><a href="#10--billing-system-mongodb">10 — Billing System (MongoDB)</a></li>
+<li><a href="#11--website-downloader">11 — Website Downloader</a></li>
+<li><a href="#12--text-browser">12 — Text Browser</a></li>
+<li><a href="#13--crypto-tool">13 — Crypto Tool</a></li>
+</ol>
+<hr />
+<h2 id="01-hello-world">01 — Hello World</h2>
+<p><strong>Source:</strong> <code>examples/GUI/01_HELLO_WORLD/app.urdu</code></p>
+<p>A welcoming introduction to Urdu GUI programming. Shows the current date and time, an Islamic quote, and two buttons.</p>
+<blockquote>
+<p><strong>اردو:</strong> اردو GUI پروگرامنگ کا ابتدائی تعارف۔ موجودہ تاریخ و وقت، ایک اسلامی اقتباس، اور دو بٹن دکھاتا ہے۔</p>
+</blockquote>
+<p><strong>What it demonstrates:</strong>
+- Creating a window with <code>گوئی</code>
+- Labels with heading styles (<code>h1</code>, <code>h2</code>)
+- Buttons with click handlers (<code>پر_کلک</code>)
+- Reading live date/time with <code>اردو/وقت</code></p>
+<p><strong>Key snippet:</strong></p>
+<div class="highlight"><pre><span></span><code>درآمد { گوئی, کنٹینر, لیبل, بٹن } سے "اردو/گوئی";
+
+متغیر ونڈو = نیا گوئی("ہیلو ورلڈ — اردو", 500, 400);
+ونڈو.مرکز();
+متغیر مرکزی = نیا کنٹینر(ونڈو, پیڈنگ=20);
+
+نیا لیبل(مرکزی, "!ہیلو ورلڈ", کلاس="h1 text-primary fw-bold");
+نیا بٹن(مرکزی, "سلام کریں %", کلاس="btn btn-primary p-2", پر_کلک=سلام_فنکشن);
+
+ونڈو.چلائیں();
+</code></pre></div>
+<p><strong>Run:</strong>
+<div class="highlight"><pre><span></span><code>urdu run examples/GUI/01_HELLO_WORLD/app.urdu
+</code></pre></div></p>
+<hr />
+<h2 id="02-simple-calculator">02 — Simple Calculator</h2>
+<p><strong>Source:</strong> <code>examples/GUI/02_SIMPLE_CALCULATOR/app.urdu</code></p>
+<p>A basic arithmetic calculator with a number pad and +, −, ×, ÷ operations.</p>
+<blockquote>
+<p><strong>اردو:</strong> بنیادی حسابی کیلکولیٹر جس میں نمبر پیڈ اور جمع، تفریق، ضرب، تقسیم آپریشن ہیں۔</p>
+</blockquote>
+<p><strong>What it demonstrates:</strong>
+- Grid-style button layout with <code>ردیف</code> / <code>کالم</code>
+- Managing application state in a dictionary
+- String-to-number conversion with <code>اعشاریہ()</code> / <code>عدد()</code></p>
+<p><strong>Run:</strong>
+<div class="highlight"><pre><span></span><code>urdu run examples/GUI/02_SIMPLE_CALCULATOR/app.urdu
+</code></pre></div></p>
+<hr />
+<h2 id="03-full-calculator">03 — Full Calculator</h2>
+<p><strong>Source:</strong> <code>examples/GUI/03_FULL_CALCULATOR/app.urdu</code></p>
+<p>An expression-based calculator that evaluates full arithmetic expressions including operator precedence.</p>
+<blockquote>
+<p><strong>اردو:</strong> اظہار پر مبنی کیلکولیٹر جو آپریٹر ترجیح سمیت مکمل حسابی اظہارات کا حساب کرتا ہے۔</p>
+</blockquote>
+<p><strong>What it demonstrates:</strong>
+- Storing and displaying a running expression string
+- Using <code>.replace()</code> chain to parse multi-operator expressions
+- <code>eval()</code> via Python interop for expression evaluation
+- Backspace / clear operations on strings</p>
+<p><strong>Run:</strong>
+<div class="highlight"><pre><span></span><code>urdu run examples/GUI/03_FULL_CALCULATOR/app.urdu
+</code></pre></div></p>
+<hr />
+<h2 id="04-tic-tac-toe">04 — Tic-Tac-Toe</h2>
+<p><strong>Source:</strong> <code>examples/GUI/04_TICTACTOE/app.urdu</code></p>
+<p>A two-player Tic-Tac-Toe game with win detection and board reset.</p>
+<blockquote>
+<p><strong>اردو:</strong> دو کھلاڑیوں کا ٹک ٹاک ٹو کھیل جس میں جیت کا پتہ لگانا اور بورڈ دوبارہ ترتیب دینا شامل ہے۔</p>
+</blockquote>
+<p><strong>What it demonstrates:</strong>
+- 3×3 grid of buttons that update dynamically
+- Win condition checking with nested loops
+- Toggling state between two values with <code>اگر/ورنہ</code>
+- Disabling buttons after a win</p>
+<p><strong>Run:</strong>
+<div class="highlight"><pre><span></span><code>urdu run examples/GUI/04_TICTACTOE/app.urdu
+</code></pre></div></p>
+<hr />
+<h2 id="05-rock-paper-scissors">05 — Rock Paper Scissors</h2>
+<p><strong>Source:</strong> <code>examples/GUI/05_ROCK_PAPER_SCISSORS/app.urdu</code></p>
+<p>Rock-Paper-Scissors against the computer with a score counter and match history.</p>
+<blockquote>
+<p><strong>اردو:</strong> کمپیوٹر کے خلاف پتھر-کاغذ-قینچی کھیل جس میں اسکور کاؤنٹر اور میچ تاریخ شامل ہے۔</p>
+</blockquote>
+<p><strong>What it demonstrates:</strong>
+- Random choices with <code>اردو/بے_ترتیب</code>
+- Conditional win logic across three outcomes
+- Live label updates on button click</p>
+<p><strong>Run:</strong>
+<div class="highlight"><pre><span></span><code>urdu run examples/GUI/05_ROCK_PAPER_SCISSORS/app.urdu
+</code></pre></div></p>
+<hr />
+<h2 id="06-billing-system-sqlite">06 — Billing System (SQLite)</h2>
+<p><strong>Source:</strong> <code>examples/GUI/06_BILLING_SQLITE/app.urdu</code></p>
+<p>A full billing and inventory management system backed by a local SQLite database.</p>
+<blockquote>
+<p><strong>اردو:</strong> مقامی SQLite ڈیٹا بیس پر مبنی مکمل بلنگ اور انوینٹری مینجمنٹ سسٹم۔</p>
+</blockquote>
+<p><strong>What it demonstrates:</strong>
+- Multi-tab UI with <code>ٹیب_ویو</code>
+- SQLite CRUD via <code>اردو/ڈیٹا</code>
+- Sortable table widget (<code>جدول</code>)
+- Dialog boxes for confirmation (<code>ڈائیلاگ</code>)</p>
+<p><strong>No external dependencies</strong> — SQLite is built into Python.</p>
+<p><strong>Run:</strong>
+<div class="highlight"><pre><span></span><code>urdu run examples/GUI/06_BILLING_SQLITE/app.urdu
+</code></pre></div></p>
+<hr />
+<h2 id="07-billing-system-mysql">07 — Billing System (MySQL)</h2>
+<p><strong>Source:</strong> <code>examples/GUI/07_BILLING_MYSQL/app.urdu</code></p>
+<p>The same billing and inventory system as 06, but backed by a MySQL database (WAMP/XAMPP compatible).</p>
+<blockquote>
+<p><strong>اردو:</strong> بلنگ سسٹم 06 جیسا ہی لیکن MySQL ڈیٹا بیس پر مبنی ہے۔ WAMP یا XAMPP کے ساتھ کام کرتا ہے۔</p>
+</blockquote>
+<p><strong>Prerequisites:</strong>
+<div class="highlight"><pre><span></span><code>pip install mysql-connector-python
+</code></pre></div>
+- MySQL running on <code>localhost:3306</code>
+- Default credentials: <code>user=root</code>, <code>password=</code> (blank) — matches WAMP default</p>
+<p><strong>What it demonstrates:</strong>
+- Connecting to MySQL with <code>mysql-connector-python</code> using <code>use_pure=True</code> (avoids C-extension crashes in the standalone binary)
+- Auto-creating the <code>urdu_billing</code> database and tables on first run
+- UTF-8 / <code>utf8mb4</code> charset support for Urdu text in column data</p>
+<blockquote>
+<p><strong>نوٹ:</strong> <code>use_pure=سچ</code> — MySQL connector کا خالص Python نفاذ استعمال کریں۔ یہ Nuitka تعمیر شدہ <code>urdu.exe</code> میں C ایکسٹینشن (<code>_cmysql</code>) کے حادثے سے بچاتا ہے۔</p>
+</blockquote>
+<p><strong>Run:</strong>
+<div class="highlight"><pre><span></span><code>urdu run examples/GUI/07_BILLING_MYSQL/app.urdu
+</code></pre></div></p>
+<p>If MySQL is not running, the app shows a "کنکشن ناکام" screen and exits cleanly when closed.</p>
+<hr />
+<h2 id="08-billing-system-cassandra">08 — Billing System (Cassandra)</h2>
+<p><strong>Source:</strong> <code>examples/GUI/08_BILLING_CASSANDRA/app.urdu</code></p>
+<p>Billing and inventory system backed by Apache Cassandra, using UUIDs as primary keys.</p>
+<blockquote>
+<p><strong>اردو:</strong> Apache Cassandra ڈیٹا بیس پر مبنی بلنگ سسٹم جو UUID کو بنیادی کلید کے طور پر استعمال کرتا ہے۔</p>
+</blockquote>
+<p><strong>Prerequisites:</strong>
+<div class="highlight"><pre><span></span><code>pip install cassandra-driver
+</code></pre></div>
+- Cassandra running on <code>localhost:9042</code>
+- Recommended: Docker — <code>docker run -d -p 9042:9042 --name cassandra cassandra:5.0.8</code></p>
+<blockquote>
+<p><strong>اہم:</strong> Docker container کو <code>-p 9042:9042</code> کے ساتھ شروع کریں۔ پورٹ میپنگ کے بغیر <code>localhost:9042</code> کام نہیں کرے گا۔</p>
+</blockquote>
+<p><strong>What it demonstrates:</strong>
+- Cassandra keyspace and table creation on startup
+- UUID generation with <code>uuid.uuid4()</code>
+- CQL SELECT / INSERT queries
+- <strong>Note:</strong> CQL table and column names must be ASCII — Cassandra does not support Unicode identifiers</p>
+<p><strong>Run:</strong>
+<div class="highlight"><pre><span></span><code>urdu run examples/GUI/08_BILLING_CASSANDRA/app.urdu
+</code></pre></div></p>
+<hr />
+<h2 id="09-billing-system-postgresql">09 — Billing System (PostgreSQL)</h2>
+<p><strong>Source:</strong> <code>examples/GUI/09_BILLING_POSTGRESQL/app.urdu</code></p>
+<p>Billing and inventory system backed by PostgreSQL with full CRUD operations.</p>
+<blockquote>
+<p><strong>اردو:</strong> PostgreSQL ڈیٹا بیس پر مبنی مکمل CRUD بلنگ سسٹم۔</p>
+</blockquote>
+<p><strong>Prerequisites:</strong>
+<div class="highlight"><pre><span></span><code>pip install psycopg2-binary
+</code></pre></div>
+- PostgreSQL running on <code>localhost:5432</code>
+- Credentials: <code>user=postgres</code>, <code>password=root</code> (pgAdmin default)</p>
+<p><strong>What it demonstrates:</strong>
+- <code>psycopg2</code> connection with <code>autocommit=True</code>
+- <code>RealDictCursor</code> for dictionary-style row access
+- Auto-creating the <code>urdu_billing</code> database if it doesn't exist
+- Parameterized queries to prevent SQL injection</p>
+<p><strong>Run:</strong>
+<div class="highlight"><pre><span></span><code>urdu run examples/GUI/09_BILLING_POSTGRESQL/app.urdu
+</code></pre></div></p>
+<hr />
+<h2 id="10-billing-system-mongodb">10 — Billing System (MongoDB)</h2>
+<p><strong>Source:</strong> <code>examples/GUI/10_BILLING_MONGODB/app.urdu</code></p>
+<p>Billing and inventory system backed by MongoDB. Uses ObjectId for document identifiers.</p>
+<blockquote>
+<p><strong>اردو:</strong> MongoDB ڈیٹا بیس پر مبنی بلنگ سسٹم جو ObjectId کو دستاویز شناخت کے لیے استعمال کرتا ہے۔</p>
+</blockquote>
+<p><strong>Prerequisites:</strong>
+<div class="highlight"><pre><span></span><code>pip install pymongo
+</code></pre></div>
+- MongoDB running on <code>localhost:27017</code>
+- Requires MongoDB 4.2+ (wire protocol version 8)</p>
+<p><strong>What it demonstrates:</strong>
+- <code>pymongo.MongoClient</code> with <code>serverSelectionTimeoutMS=3000</code>
+- Collection-based document storage (no schema)
+- ObjectId truncation for display (last 6 characters)
+- Graceful connection failure handling</p>
+<p><strong>Run:</strong>
+<div class="highlight"><pre><span></span><code>urdu run examples/GUI/10_BILLING_MONGODB/app.urdu
+</code></pre></div></p>
+<hr />
+<h2 id="11-website-downloader">11 — Website Downloader</h2>
+<p><strong>Source:</strong> <code>examples/GUI/11_WEBSITE_DOWNLOADER/app.urdu</code></p>
+<p>A GUI tool for downloading files and websites. Supports URL input, progress tracking, and save-to-folder selection.</p>
+<blockquote>
+<p><strong>اردو:</strong> فائلیں اور ویب سائٹیں ڈاؤنلوڈ کرنے کا گرافیکی ٹول۔ URL ان پٹ، پیش رفت ٹریکنگ، اور فولڈر انتخاب کی سہولت دیتا ہے۔</p>
+</blockquote>
+<p><strong>Prerequisites:</strong>
+<div class="highlight"><pre><span></span><code>pip install requests
+</code></pre></div></p>
+<p><strong>What it demonstrates:</strong>
+- Running downloads in a background thread (non-blocking UI)
+- Progress bar widget integration
+- File dialog for save-path selection
+- <code>requests</code> streaming download with chunk writing</p>
+<p><strong>Run:</strong>
+<div class="highlight"><pre><span></span><code>urdu run examples/GUI/11_WEBSITE_DOWNLOADER/app.urdu
+</code></pre></div></p>
+<hr />
+<h2 id="12-text-browser">12 — Text Browser</h2>
+<p><strong>Source:</strong> <code>examples/GUI/12_TEXT_BROWSER/app.urdu</code></p>
+<p>A minimal text-mode web browser. Fetches a URL, strips HTML tags, and displays the readable text content.</p>
+<blockquote>
+<p><strong>اردو:</strong> سادہ متنی ویب براؤزر۔ URL حاصل کرتا ہے، HTML ٹیگ ہٹاتا ہے، اور پڑھنے کے قابل متن دکھاتا ہے۔</p>
+</blockquote>
+<p><strong>Prerequisites:</strong>
+<div class="highlight"><pre><span></span><code>pip install requests
+</code></pre></div></p>
+<p><strong>What it demonstrates:</strong>
+- Fetching web pages with <code>requests.get()</code>
+- A custom <code>html_سے_متن()</code> tag-stripping function (character-by-character parser — no external HTML library needed)
+- Browser-style navigation history (back / forward)
+- Scrollable text widget</p>
+<blockquote>
+<p><strong>نوٹ:</strong> HTML پارسنگ Urdu میں لکھی ہوئی کردار بہ کردار ریاستی مشین سے کی جاتی ہے کیونکہ <code>HTMLParser</code> کلاس سے وراثت اردو پارسر میں تعاون یافتہ نہیں ہے۔</p>
+</blockquote>
+<p><strong>Run:</strong>
+<div class="highlight"><pre><span></span><code>urdu run examples/GUI/12_TEXT_BROWSER/app.urdu
+</code></pre></div></p>
+<hr />
+<h2 id="13-crypto-tool">13 — Crypto Tool</h2>
+<p><strong>Source:</strong> <code>examples/GUI/13_CRYPTO_TOOL/app.urdu</code></p>
+<p>A cryptography workbench supporting AES encryption/decryption, RSA key generation and signing, and hashing (MD5, SHA-256, SHA-512).</p>
+<blockquote>
+<p><strong>اردو:</strong> خفیہ نگاری ورک بنچ جو AES خفیہ کاری/ڈی خفیہ کاری، RSA کلید بنانا اور دستخط، اور ہیشنگ (MD5، SHA-256، SHA-512) کی سہولت دیتا ہے۔</p>
+</blockquote>
+<p><strong>Prerequisites:</strong>
+<div class="highlight"><pre><span></span><code>pip install pycryptodome
+</code></pre></div></p>
+<p><strong>What it demonstrates:</strong>
+- AES-256 CBC mode encryption with key derivation
+- RSA 2048-bit key pair generation
+- RSA digital signatures and verification
+- Multiple hash algorithms side-by-side
+- Tab-based UI separating three cryptographic operations</p>
+<p><strong>Tabs:</strong>
+| Tab | Function |
+|-----|----------|
+| AES | Encrypt/decrypt text with a passphrase |
+| RSA | Generate key pair, sign a message, verify signature |
+| ہیش | Hash any input with MD5, SHA-256, or SHA-512 |</p>
+<p><strong>Run:</strong>
+<div class="highlight"><pre><span></span><code>urdu run examples/GUI/13_CRYPTO_TOOL/app.urdu
+</code></pre></div></p>
+<hr />
+<h2 id="connection-failure-handling">Connection Failure Handling — کنکشن ناکام ہونے پر</h2>
+<p>All database-backed GUI apps (07–10) handle missing database connections gracefully:</p>
+<ol>
+<li>Connection is attempted at startup inside a <code>کوشش/پکڑو</code> block.</li>
+<li>If it fails, a red "کنکشن ناکام" message is shown in the window.</li>
+<li>Closing the error window exits the application cleanly.</li>
+<li>If the database IS available, the full multi-tab interface loads automatically.</li>
+</ol>
+<blockquote>
+<p><strong>اردو:</strong> تمام ڈیٹا بیس ایپلیکیشنیں (07–10) اسٹارٹ اپ پر کنکشن آزماتی ہیں۔ ناکامی کی صورت میں ایک سرخ پیغام دکھایا جاتا ہے اور ونڈو بند کرنے پر ایپ صاف طور پر بند ہو جاتی ہے۔</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

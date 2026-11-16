@@ -1,0 +1,1140 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>4. Variables — متغیرات - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#4-variables" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4. Variables — متغیرات
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../libraries/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intermediate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../libraries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Is a Variable? — متغیر کیا ہے؟
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#declaring-a-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Declaring a Variable — متغیر بنانا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reassigning-a-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reassigning a Variable — قدر تبدیل کرنا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constants — مستقل
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#naming-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Naming Rules — نام رکھنے کے قواعد
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-variables-at-once" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple Variables at Once — ایک ساتھ کئی متغیر
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shorthand-assignment-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shorthand Assignment Operators — مختصر اسائنمنٹ آپریٹرز
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#declaring-without-a-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Declaring Without a Value — بغیر قدر کے اعلان
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical Example — عملی مثال
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Points — اہم نکات
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="4-variables">4. Variables — متغیرات</h1>
+<p><strong>Difficulty:</strong> Beginner — مبتدی<br />
+<strong>Time:</strong> ~15 minutes</p>
+<hr />
+<h2 id="what-is-a-variable">What Is a Variable? — متغیر کیا ہے؟</h2>
+<p>A variable is a named container that holds a value. Think of it as a labelled box where you store data to use later.</p>
+<blockquote>
+<p><strong>اردو:</strong> متغیر ایک نامدار ڈبہ ہے جس میں قدر رکھی جاتی ہے۔ اسے ایک لیبل لگے ڈبے کے طور پر سوچیں جس میں ڈیٹا رکھتے ہیں تاکہ بعد میں استعمال کر سکیں۔</p>
+</blockquote>
+<hr />
+<h2 id="declaring-a-variable">Declaring a Variable — متغیر بنانا</h2>
+<p>Use the <code>متغیر</code> keyword:</p>
+<div class="highlight"><pre><span></span><code>متغیر نام = "احمد";
+متغیر عمر = 25;
+متغیر قیمت = 99.5;
+متغیر فعال = سچ;
+
+لکھو(نام);     // احمد
+لکھو(عمر);    // 25
+لکھو(قیمت);   // 99.5
+لکھو(فعال);   // True
+</code></pre></div>
+<p><strong>Pattern:</strong> <code>متغیر</code> + name + <code>=</code> + value</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>متغیر</code> کلیدی لفظ لکھیں، پھر نام، پھر <code>=</code>، پھر قدر۔ بس اتنا کافی ہے۔</p>
+</blockquote>
+<hr />
+<h2 id="reassigning-a-variable">Reassigning a Variable — قدر تبدیل کرنا</h2>
+<p>A variable declared with <code>متغیر</code> can be given a new value at any time:</p>
+<div class="highlight"><pre><span></span><code>متغیر گنتی = 0;
+لکھو(گنتی);    // 0
+
+گنتی = 10;
+لکھو(گنتی);    // 10
+
+گنتی = گنتی + 5;
+لکھو(گنتی);    // 15
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> <code>متغیر</code> سے بنائے گئے متغیر کو جب چاہیں نئی قدر دے سکتے ہیں۔ <code>گنتی = گنتی + 5</code> کا مطلب: گنتی کی موجودہ قدر میں 5 جوڑو اور نتیجہ واپس گنتی میں رکھو۔</p>
+</blockquote>
+<hr />
+<h2 id="constants">Constants — مستقل</h2>
+<p>Use <code>مستقل</code> for values that should never change. Attempting to reassign a constant causes an error.</p>
+<div class="highlight"><pre><span></span><code>مستقل پائی = 3.14159;
+مستقل زبان = "اردو";
+مستقل سال_قیام = 1947;
+
+لکھو(پائی);          // 3.14159
+لکھو(زبان);          // اردو
+لکھو(سال_قیام);      // 1947
+
+// پائی = 3.0;  // ← ERROR: cannot reassign a constant
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> <code>مستقل</code> ایسی قدروں کے لیے جو کبھی نہیں بدلتیں: ریاضی کے ثوابت، ترتیبات، وغیرہ۔ دوبارہ اسائن کرنے پر غلطی آئے گی۔</p>
+</blockquote>
+<hr />
+<h2 id="naming-rules">Naming Rules — نام رکھنے کے قواعد</h2>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Can use Urdu script</td>
+<td><code>متغیر طالب_علم = "علی"</code></td>
+</tr>
+<tr>
+<td>Can use English letters</td>
+<td><code>متغیر studentName = "Ali"</code></td>
+</tr>
+<tr>
+<td>Can mix both</td>
+<td><code>متغیر myنام = "Ahmed"</code></td>
+</tr>
+<tr>
+<td>Must start with a letter or <code>_</code></td>
+<td><code>متغیر _وقت = 0</code> ✓</td>
+</tr>
+<tr>
+<td>Cannot start with a digit</td>
+<td><code>متغیر 3رنگ = "سرخ"</code> ✗</td>
+</tr>
+<tr>
+<td>Cannot use reserved keywords</td>
+<td><code>متغیر اگر = 5</code> ✗</td>
+</tr>
+<tr>
+<td>Case-sensitive</td>
+<td><code>نام</code> and <code>نام2</code> are different</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>اردو:</strong> نام اردو، انگریزی، یا ملے جلے ہو سکتے ہیں۔ حرف یا <code>_</code> سے شروع ہونا لازم ہے۔ عدد سے شروع نہیں ہو سکتا۔ کلیدی الفاظ (جیسے <code>اگر</code>) بطور نام نہیں ہو سکتے۔</p>
+</blockquote>
+<p><strong>Good naming examples — اچھے نام:</strong></p>
+<div class="highlight"><pre><span></span><code>متغیر طالب_علم_نام = "زینب";
+متغیر کل_قیمت = 1500;
+متغیر محفوظ_ہے = سچ;
+متغیر _خفیہ_کوڈ = "abc123";
+متغیر totalCount = 0;
+</code></pre></div>
+<hr />
+<h2 id="multiple-variables-at-once">Multiple Variables at Once — ایک ساتھ کئی متغیر</h2>
+<div class="highlight"><pre><span></span><code>// Declare multiple on one line
+متغیر الف = 1, ب = 2, ج = 3;
+لکھو(الف, ب, ج);    // 1 2 3
+
+// Assign the same value to multiple variables
+متغیر x, y, z;
+x = y = z = 10;
+لکھو(x, y, z);      // 10 10 10
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> ایک ہی سطر میں کئی متغیرات بنا سکتے ہیں — کاما سے جدا کریں۔ زنجیری اسائنمنٹ <code>x = y = z = 10</code> سے تینوں ایک ساتھ 10 ہو جاتے ہیں۔</p>
+</blockquote>
+<hr />
+<h2 id="shorthand-assignment-operators">Shorthand Assignment Operators — مختصر اسائنمنٹ آپریٹرز</h2>
+<div class="highlight"><pre><span></span><code>متغیر ن = 10;
+
+ن += 5;    // ن = ن + 5  → 15
+ن -= 3;    // ن = ن - 3  → 12
+ن *= 2;    // ن = ن * 2  → 24
+ن /= 4;    // ن = ن / 4  → 6
+ن **= 2;   // ن = ن ** 2 → 36
+ن %= 5;    // ن = ن % 5  → 1
+
+لکھو(ن);    // 1
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> <code>+=</code>، <code>-=</code>، <code>*=</code> وغیرہ مختصر لکھنے کا طریقہ ہے: <code>ن += 5</code> کا مطلب ہے <code>ن = ن + 5</code>۔</p>
+</blockquote>
+<hr />
+<h2 id="declaring-without-a-value">Declaring Without a Value — بغیر قدر کے اعلان</h2>
+<p>A variable declared without a value is <code>غیر_معرف</code> (undefined) until assigned:</p>
+<div class="highlight"><pre><span></span><code>متغیر رنگ;
+لکھو(رنگ);     // None
+
+رنگ = "نیلا";
+لکھو(رنگ);     // نیلا
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> اگر متغیر بناتے وقت قدر نہ دیں تو وہ <code>غیر_معرف</code> (None) ہوتا ہے۔ بعد میں جب چاہیں قدر دے سکتے ہیں۔</p>
+</blockquote>
+<hr />
+<h2 id="practical-example">Practical Example — عملی مثال</h2>
+<div class="highlight"><pre><span></span><code>// Simple shopping cart — آسان شاپنگ کارٹ
+متغیر سیب_قیمت = 50;
+متغیر کیلا_قیمت = 30;
+متغیر آم_قیمت = 80;
+
+متغیر سیب_تعداد = 3;
+متغیر کیلا_تعداد = 6;
+متغیر آم_تعداد = 2;
+
+متغیر کل = (سیب_قیمت * سیب_تعداد) +
+            (کیلا_قیمت * کیلا_تعداد) +
+            (آم_قیمت * آم_تعداد);
+
+لکھو("سیب:", سیب_قیمت * سیب_تعداد, "روپے");
+لکھو("کیلا:", کیلا_قیمت * کیلا_تعداد, "روپے");
+لکھو("آم:", آم_قیمت * آم_تعداد, "روپے");
+لکھو("کل:", کل, "روپے");
+</code></pre></div>
+<p>Output:
+<div class="highlight"><pre><span></span><code>سیب: 150 روپے
+کیلا: 180 روپے
+آم: 160 روپے
+کل: 490 روپے
+</code></pre></div></p>
+<blockquote>
+<p><strong>اردو:</strong> یہ مثال دکھاتی ہے کہ متغیرات کیسے حقیقی مسئلے (شاپنگ بل) حل کرتے ہیں۔ قیمت اور تعداد الگ الگ رکھنے سے کوڈ سمجھنا آسان ہو جاتا ہے۔</p>
+</blockquote>
+<hr />
+<h2 id="key-points">Key Points — اہم نکات</h2>
+<ul>
+<li><code>متغیر</code> declares a variable (can be reassigned)</li>
+<li><code>مستقل</code> declares a constant (cannot be reassigned)</li>
+<li>Names can be in Urdu, English, or mixed</li>
+<li>Names cannot start with a digit or be a reserved keyword</li>
+<li><code>+=</code>, <code>-=</code>, <code>*=</code> are shorthand for common operations</li>
+</ul>
+<blockquote>
+<p><strong>اردو:</strong> <code>متغیر</code> قابل تبدیل ہے، <code>مستقل</code> نہیں۔ نام اردو میں لکھیں، عدد سے شروع نہ کریں۔</p>
+</blockquote>
+<hr />
+<p><a href="../03-hello-world/">← Previous: Hello World</a> | <a href="../05-data-types/">Next: Data Types →</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

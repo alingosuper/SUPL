@@ -1,0 +1,2384 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Database Library — اردو/ڈیٹا_بیس - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#database-library-_" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Database Library — اردو/ڈیٹا_بیس
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorial/beginner/" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/beginner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intermediate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Interface — مشترکہ انٹرفیس
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mysql-___-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MySQL (مائی_ایس_کیو_ایل) — مائی SQL ڈیٹا بیس
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MySQL (مائی_ایس_کیو_ایل) — مائی SQL ڈیٹا بیس">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mysql-example-full-crud-with-transactions-crud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MySQL Example: Full CRUD with Transactions — مکمل CRUD مثال
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#postgresql-_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PostgreSQL (پوسٹ_گریس) — پوسٹ گریس ڈیٹا بیس
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PostgreSQL (پوسٹ_گریس) — پوسٹ گریس ڈیٹا بیس">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#postgresql-example-full-crud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PostgreSQL Example: Full CRUD
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mongodb-__" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MongoDB (مونگو_ڈی_بی) — مونگو ڈی بی
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MongoDB (مونگو_ڈی_بی) — مونگو ڈی بی">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mongodb-example-full-crud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MongoDB Example: Full CRUD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mongodb-connection-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MongoDB: Connection String
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cassandra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cassandra (کسینڈرا) — کسینڈرا ڈیٹا بیس
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cassandra (کسینڈرا) — کسینڈرا ڈیٹا بیس">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cassandra-example-full-crud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cassandra Example: Full CRUD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cassandra-authentication-and-multiple-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cassandra: Authentication and Multiple Nodes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firebase-firestore-_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firebase / Firestore (فائر_بیس) — فائر بیس
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Firebase / Firestore (فائر_بیس) — فائر بیس">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#admin-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Admin Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-mode-api-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Web Mode (API Key)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transactions-and-savepoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transactions and Savepoints — لین دین اور محفوظ نقطے
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transactions and Savepoints — لین دین اور محفوظ نقطے">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-transaction-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Transaction Pattern — بنیادی لین دین نمونہ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#savepoints-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Savepoints Example — محفوظ نقطے مثال
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sqlite-__" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQLite (ایس_کیو_لائٹ) — ایس کیو لائٹ ڈیٹا بیس
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SQLite (ایس_کیو_لائٹ) — ایس کیو لائٹ ڈیٹا بیس">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sqlite-example-quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQLite Example: Quick Start
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sqlite-example-savepoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQLite Example: Savepoints
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#factory-function-__" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Factory Function (ڈیٹا_بیس_جوڑو) — فیکٹری فنکشن
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-multi-database-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete Multi-Database Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="database-library-_">Database Library — اردو/ڈیٹا_بیس</h1>
+<p>This library provides Urdu-keyword database clients for MySQL, PostgreSQL, MongoDB, Cassandra, Firebase/Firestore, and SQLite. All classes share a common base interface.</p>
+<blockquote>
+<p><strong>اردو:</strong> یہ لائبریری MySQL، PostgreSQL، MongoDB، Cassandra، Firebase/Firestore اور SQLite کے لیے اردو کلید الفاظ والے ڈیٹا بیس کلائنٹ فراہم کرتی ہے۔ تمام کلاسز ایک مشترکہ بنیادی انٹرفیس استعمال کرتی ہیں۔</p>
+</blockquote>
+<p><strong>Import:</strong></p>
+<div class="highlight"><pre><span></span><code>درآمد { مائی_ایس_کیو_ایل, پوسٹ_گریس, مونگو_ڈی_بی, کسینڈرا, فائر_بیس } سے "اردو/ڈیٹا_بیس";
+</code></pre></div>
+<p><strong>Install dependencies (as needed):</strong></p>
+<div class="highlight"><pre><span></span><code>pip install mysql-connector-python     # مائی_ایس_کیو_ایل
+pip install psycopg2-binary            # پوسٹ_گریس
+pip install pymongo                    # مونگو_ڈی_بی
+pip install cassandra-driver           # کسینڈرا
+pip install firebase-admin             # فائر_بیس (admin mode)
+</code></pre></div>
+<hr />
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#common-interface">Common Interface</a></li>
+<li><a href="#mysql-مائی_ایس_کیو_ایل">MySQL (مائی_ایس_کیو_ایل)</a></li>
+<li><a href="#postgresql-پوسٹ_گریس">PostgreSQL (پوسٹ_گریس)</a></li>
+<li><a href="#mongodb-مونگو_ڈی_بی">MongoDB (مونگو_ڈی_بی)</a></li>
+<li><a href="#cassandra-کسینڈرا">Cassandra (کسینڈرا)</a></li>
+<li><a href="#firebase--firestore-فائر_بیس">Firebase / Firestore (فائر_بیس)</a></li>
+<li><a href="#transactions-and-savepoints">Transactions and Savepoints</a></li>
+<li><a href="#sqlite-ایس_کیو_لائٹ">SQLite (ایس_کیو_لائٹ)</a></li>
+<li><a href="#factory-function-ڈیٹا_بیس_جوڑو">Factory Function</a></li>
+</ol>
+<hr />
+<h2 id="common-interface">Common Interface — مشترکہ انٹرفیس</h2>
+<p>All database classes (<code>مائی_ایس_کیو_ایل</code>, <code>پوسٹ_گریس</code>, <code>ایس_کیو_لائٹ</code>, <code>مونگو_ڈی_بی</code>, <code>کسینڈرا</code>) share the following methods:</p>
+<blockquote>
+<p><strong>اردو:</strong> تمام ڈیٹا بیس کلاسز یہ مشترکہ طریقے رکھتی ہیں: <code>جوڑیں()</code> سے جڑنا، <code>منقطع()</code> سے قطع تعلق، <code>سوال()</code> سے SELECT چلانا، <code>چلائیں()</code> سے INSERT/UPDATE/DELETE اور <code>لین_دین()</code> سے محفوظ لین دین۔ سوال کے نتائج <code>row["کالم"]</code> یا <code>row.کالم</code> دونوں طریقوں سے دیکھے جا سکتے ہیں۔</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>طریقہ</th>
+<th>واپسی</th>
+<th>تفصیل</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>await db.جوڑیں()</code></td>
+<td>self</td>
+<td>Open the connection</td>
+</tr>
+<tr>
+<td><code>await db.منقطع()</code></td>
+<td>—</td>
+<td>Close the connection</td>
+</tr>
+<tr>
+<td><code>await db.سوال(query, params)</code></td>
+<td><code>list[dict]</code></td>
+<td>Execute SELECT; returns list of rows as dicts</td>
+</tr>
+<tr>
+<td><code>await db.چلائیں(query, params)</code></td>
+<td><code>int</code></td>
+<td>Execute INSERT/UPDATE/DELETE; returns rowcount</td>
+</tr>
+<tr>
+<td><code>await db.داخل(table, data_dict)</code></td>
+<td><code>int</code></td>
+<td>Insert helper: builds INSERT from a dict</td>
+</tr>
+<tr>
+<td><code>await db.لین_دین_شروع()</code></td>
+<td>—</td>
+<td>BEGIN a transaction</td>
+</tr>
+<tr>
+<td><code>await db.کمٹ()</code></td>
+<td>—</td>
+<td>COMMIT</td>
+</tr>
+<tr>
+<td><code>await db.واپسی()</code></td>
+<td>—</td>
+<td>ROLLBACK</td>
+</tr>
+<tr>
+<td><code>await db.نقطہ_محفوظ(نام)</code></td>
+<td>—</td>
+<td>SAVEPOINT name</td>
+</tr>
+<tr>
+<td><code>await db.نقطہ_واپسی(نام)</code></td>
+<td>—</td>
+<td>ROLLBACK TO SAVEPOINT name</td>
+</tr>
+<tr>
+<td><code>await db.نقطہ_چھوڑیں(نام)</code></td>
+<td>—</td>
+<td>RELEASE SAVEPOINT name</td>
+</tr>
+<tr>
+<td><code>await db.لین_دین(callback)</code></td>
+<td>—</td>
+<td>Run async callback in a transaction; auto-commit or auto-rollback</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Row access:</strong> All query results return rows as <code>_UrduObj</code> instances, which support both dict-style (<code>row["کالم"]</code>) and dot-style (<code>row.کالم</code>) access.</p>
+<p><strong>Placeholders:</strong> Use <code>?</code> in queries (automatically converted to <code>%s</code> for MySQL/PostgreSQL).</p>
+<hr />
+<h2 id="mysql-___-sql">MySQL (مائی_ایس_کیو_ایل) — مائی SQL ڈیٹا بیس</h2>
+<p>Wraps <code>mysql-connector-python</code> with UTF-8 support and InnoDB transactions.</p>
+<blockquote>
+<p><strong>اردو:</strong> یہ <code>mysql-connector-python</code> کا ریپر ہے جس میں UTF-8 سپورٹ اور InnoDB لین دین شامل ہیں۔ ترتیب میں میزبان، صارف، پاس ورڈ، پورٹ اور ڈیٹا بیس کا نام دیا جاتا ہے۔</p>
+</blockquote>
+<p><strong>Config keys:</strong></p>
+<table>
+<thead>
+<tr>
+<th>کلید</th>
+<th>پہلے سے</th>
+<th>تفصیل</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>میزبان</code></td>
+<td><code>"localhost"</code></td>
+<td>MySQL host</td>
+</tr>
+<tr>
+<td><code>صارف</code></td>
+<td><code>"root"</code></td>
+<td>Username</td>
+</tr>
+<tr>
+<td><code>پاس_ورڈ</code></td>
+<td><code>""</code></td>
+<td>Password</td>
+</tr>
+<tr>
+<td><code>پورٹ</code></td>
+<td><code>3306</code></td>
+<td>Port</td>
+</tr>
+<tr>
+<td><code>ڈیٹا_بیس</code></td>
+<td>(none)</td>
+<td>Database name</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="mysql-example-full-crud-with-transactions-crud">MySQL Example: Full CRUD with Transactions — مکمل CRUD مثال</h3>
+<blockquote>
+<p><strong>اردو:</strong> یہ مثال MySQL میں مکمل CRUD عمل دکھاتی ہے: جدول بنانا، ڈیٹا داخل کرنا (<code>INSERT</code>)، ڈیٹا پڑھنا (<code>SELECT</code>)، ڈیٹا تازہ کرنا (<code>UPDATE</code>)، ڈیٹا حذف کرنا (<code>DELETE</code>) اور محفوظ لین دین۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { مائی_ایس_کیو_ایل } سے "اردو/ڈیٹا_بیس";
+
+غیر_متزامن فنکشن مرکز() {
+    متغیر db = نیا مائی_ایس_کیو_ایل({
+        "میزبان":   "localhost",
+        "صارف":     "root",
+        "پاس_ورڈ": "پاس_ورڈ",
+        "پورٹ":    3306
+    });
+
+    // ─── جڑنا ─────────────────────────────────────────
+    انتظار db.جوڑیں();
+    لکھو("MySQL سے جڑ گئے");
+
+    // ─── ڈیٹا بیس اور جدول ──────────────────────────
+    انتظار db.چلائیں("CREATE DATABASE IF NOT EXISTS urdu_test CHARACTER SET utf8mb4");
+    انتظار db.چلائیں("USE urdu_test");
+    انتظار db.چلائیں("DROP TABLE IF EXISTS طلباء");
+    انتظار db.چلائیں(`
+        CREATE TABLE طلباء (
+            شناخت  INT AUTO_INCREMENT PRIMARY KEY,
+            نام    VARCHAR(100) NOT NULL,
+            عمر    INT,
+            شہر    VARCHAR(50)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+    `);
+    لکھو("جدول بنایا گیا");
+
+    // ─── INSERT ───────────────────────────────────────
+    انتظار db.چلائیں(
+        "INSERT INTO طلباء (نام, عمر, شہر) VALUES (?, ?, ?)",
+        ["احمد", 20, "کراچی"]
+    );
+    انتظار db.چلائیں(
+        "INSERT INTO طلباء (نام, عمر, شہر) VALUES (?, ?, ?)",
+        ["فاطمہ", 22, "لاہور"]
+    );
+    // داخل() مددگار
+    انتظار db.داخل("طلباء", { "نام": "علی", "عمر": 19, "شہر": "اسلام آباد" });
+    لکھو("3 طلباء داخل کیے");
+
+    // ─── SELECT ───────────────────────────────────────
+    متغیر سب = انتظار db.سوال("SELECT * FROM طلباء ORDER BY شناخت");
+    لکھو(`\nکل طلباء: ${لمبائی(سب)}`);
+    کے_لیے (متغیر ط کا سب) {
+        لکھو(`  ${ط["نام"]} — ${ط["شہر"]} (${ط["عمر"]})`);
+    }
+
+    // ─── WHERE فلٹر ───────────────────────────────────
+    متغیر کراچی = انتظار db.سوال(
+        "SELECT نام, عمر FROM طلباء WHERE شہر = ?", ["کراچی"]
+    );
+    لکھو(`\nکراچی کے طلباء: ${لمبائی(کراچی)}`);
+
+    // ─── UPDATE ───────────────────────────────────────
+    انتظار db.چلائیں(
+        "UPDATE طلباء SET عمر = ? WHERE نام = ?", [21, "احمد"]
+    );
+    متغیر تازہ = انتظار db.سوال(
+        "SELECT عمر FROM طلباء WHERE نام = ?", ["احمد"]
+    );
+    لکھو(`\nahmad کی نئی عمر: ${تازہ[0]["عمر"]}`);
+
+    // ─── DELETE ───────────────────────────────────────
+    انتظار db.چلائیں("DELETE FROM طلباء WHERE نام = ?", ["علی"]);
+    متغیر بعد = انتظار db.سوال("SELECT COUNT(*) AS تعداد FROM طلباء");
+    لکھو(`\nحذف کے بعد: ${بعد[0]["تعداد"]} طلباء`);
+
+    // ─── Aggregate ────────────────────────────────────
+    متغیر اعداد = انتظار db.سوال(
+        "SELECT AVG(عمر) AS اوسط, MAX(عمر) AS زیادہ, MIN(عمر) AS کم FROM طلباء"
+    );
+    لکھو(`\nاوسط عمر: ${اعداد[0]["اوسط"]}`);
+
+    // ─── Transaction ──────────────────────────────────
+    انتظار db.لین_دین_شروع();
+    کوشش {
+        انتظار db.چلائیں(
+            "INSERT INTO طلباء (نام, عمر, شہر) VALUES (?, ?, ?)",
+            ["زینب", 24, "ملتان"]
+        );
+        انتظار db.کمٹ();
+        لکھو("\nTransaction COMMIT کامیاب");
+    } پکڑو (غ) {
+        انتظار db.واپسی();
+        لکھو(`Transaction ROLLBACK: ${غ}`);
+    }
+
+    // ─── لین_دین() wrapper ────────────────────────────
+    انتظار db.لین_دین(غیر_متزامن فنکشن() {
+        انتظار db.چلائیں(
+            "INSERT INTO طلباء (نام, عمر, شہر) VALUES (?, ?, ?)",
+            ["عمر", 26, "پشاور"]
+        );
+    });
+    لکھو("لین_دین() COMMIT");
+
+    // ─── صفائی ────────────────────────────────────────
+    انتظار db.چلائیں("DROP TABLE IF EXISTS طلباء");
+    انتظار db.چلائیں("DROP DATABASE IF EXISTS urdu_test");
+    انتظار db.منقطع();
+    لکھو("\nMySQL منقطع");
+}
+
+انتظار مرکز();
+</code></pre></div>
+<hr />
+<h2 id="postgresql-_">PostgreSQL (پوسٹ_گریس) — پوسٹ گریس ڈیٹا بیس</h2>
+<p>Wraps <code>psycopg2</code> with <code>RealDictCursor</code> for named-column access.</p>
+<blockquote>
+<p><strong>اردو:</strong> یہ <code>psycopg2</code> کا ریپر ہے جس میں <code>RealDictCursor</code> سے نامی کالم تک رسائی ملتی ہے۔ نتائج <code>row.کالم</code> (نقطہ طرز) سے پڑھے جا سکتے ہیں۔ اس میں <code>آخری_شناخت()</code> طریقہ بھی ہے جو آخری داخل کردہ قطار کی شناخت واپس کرتا ہے۔</p>
+</blockquote>
+<p><strong>Config keys:</strong></p>
+<table>
+<thead>
+<tr>
+<th>کلید</th>
+<th>پہلے سے</th>
+<th>تفصیل</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>میزبان</code></td>
+<td><code>"localhost"</code></td>
+<td>PostgreSQL host</td>
+</tr>
+<tr>
+<td><code>صارف</code></td>
+<td><code>"postgres"</code></td>
+<td>Username</td>
+</tr>
+<tr>
+<td><code>پاس_ورڈ</code></td>
+<td><code>""</code></td>
+<td>Password</td>
+</tr>
+<tr>
+<td><code>پورٹ</code></td>
+<td><code>5432</code></td>
+<td>Port</td>
+</tr>
+<tr>
+<td><code>ڈیٹا_بیس</code></td>
+<td><code>"postgres"</code></td>
+<td>Database name</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Additional method:</strong> <code>await db.آخری_شناخت(table, column)</code> returns the last inserted serial ID via <code>currval</code>.</p>
+<hr />
+<h3 id="postgresql-example-full-crud">PostgreSQL Example: Full CRUD</h3>
+<div class="highlight"><pre><span></span><code>درآمد { پوسٹ_گریس } سے "اردو/ڈیٹا_بیس";
+
+غیر_متزامن فنکشن مرکز() {
+    متغیر db = نیا پوسٹ_گریس({
+        "میزبان":    "localhost",
+        "صارف":      "postgres",
+        "پاس_ورڈ":  "پاس_ورڈ",
+        "ڈیٹا_بیس": "postgres",
+        "پورٹ":      5432
+    });
+
+    انتظار db.جوڑیں();
+    لکھو("PostgreSQL سے جڑ گئے");
+
+    // ─── جدول بنائیں ─────────────────────────────────
+    انتظار db.چلائیں("DROP TABLE IF EXISTS ملازمین");
+    انتظار db.چلائیں(`
+        CREATE TABLE ملازمین (
+            شناخت  SERIAL PRIMARY KEY,
+            نام    VARCHAR(100) NOT NULL,
+            تنخواہ NUMERIC(10,2),
+            شعبہ   VARCHAR(50)
+        )
+    `);
+
+    // ─── INSERT ───────────────────────────────────────
+    انتظار db.داخل("ملازمین", {
+        "نام": "احمد خان", "تنخواہ": 75000, "شعبہ": "انجینئرنگ"
+    });
+    انتظار db.داخل("ملازمین", {
+        "نام": "فاطمہ رضا", "تنخواہ": 85000, "شعبہ": "مارکیٹنگ"
+    });
+    انتظار db.داخل("ملازمین", {
+        "نام": "علی حسن", "تنخواہ": 65000, "شعبہ": "انجینئرنگ"
+    });
+    لکھو("3 ملازم داخل کیے");
+
+    // ─── SELECT ───────────────────────────────────────
+    متغیر سب = انتظار db.سوال("SELECT * FROM ملازمین ORDER BY شناخت");
+    لکھو(`\nکل ملازمین: ${لمبائی(سب)}`);
+    کے_لیے (متغیر م کا سب) {
+        لکھو(`  ${م.نام} | ${م.شعبہ} | Rs ${م.تنخواہ}`);
+    }
+
+    // ─── فلٹر + ترتیب ─────────────────────────────────
+    متغیر انجینئر = انتظار db.سوال(
+        "SELECT * FROM ملازمین WHERE شعبہ = ? ORDER BY تنخواہ DESC",
+        ["انجینئرنگ"]
+    );
+    لکھو(`\nانجینئرنگ شعبہ: ${لمبائی(انجینئر)} ملازم`);
+
+    // ─── Aggregate ────────────────────────────────────
+    متغیر اعداد = انتظار db.سوال(
+        "SELECT AVG(تنخواہ) AS اوسط, MAX(تنخواہ) AS زیادہ FROM ملازمین"
+    );
+    لکھو(`\nاوسط تنخواہ: ${اعداد[0]["اوسط"]}`);
+    لکھو(`زیادہ تنخواہ: ${اعداد[0]["زیادہ"]}`);
+
+    // ─── UPDATE ───────────────────────────────────────
+    انتظار db.چلائیں(
+        "UPDATE ملازمین SET تنخواہ = تنخواہ * 1.10 WHERE شعبہ = ?",
+        ["انجینئرنگ"]
+    );
+    لکھو("\nانجینئرنگ کو 10% اضافہ ملا");
+
+    // ─── DELETE ───────────────────────────────────────
+    متغیر حذف_شدہ = انتظار db.چلائیں(
+        "DELETE FROM ملازمین WHERE تنخواہ &lt; ?", [70000]
+    );
+    لکھو(`\n${حذف_شدہ} ملازم حذف کیے (کم تنخواہ)`);
+
+    // ─── Transaction ──────────────────────────────────
+    انتظار db.لین_دین(غیر_متزامن فنکشن() {
+        انتظار db.چلائیں(
+            "INSERT INTO ملازمین (نام, تنخواہ, شعبہ) VALUES (?, ?, ?)",
+            ["نیا_ملازم", 90000, "IT"]
+        );
+        انتظار db.چلائیں(
+            "UPDATE ملازمین SET تنخواہ = تنخواہ + 5000 WHERE شعبہ = ?",
+            ["IT"]
+        );
+    });
+    لکھو("Transaction COMMIT");
+
+    // ─── صفائی ────────────────────────────────────────
+    انتظار db.چلائیں("DROP TABLE IF EXISTS ملازمین");
+    انتظار db.منقطع();
+    لکھو("\nPostgreSQL منقطع");
+}
+
+انتظار مرکز();
+</code></pre></div>
+<hr />
+<h2 id="mongodb-__">MongoDB (مونگو_ڈی_بی) — مونگو ڈی بی</h2>
+<p>Wraps <code>pymongo</code> with collection-based access.</p>
+<blockquote>
+<p><strong>اردو:</strong> یہ <code>pymongo</code> کا ریپر ہے جس میں مجموعہ (collection) پر مبنی رسائی ملتی ہے۔ MongoDB ایک NoSQL ڈیٹا بیس ہے جو JSON جیسی دستاویزات (documents) محفوظ کرتا ہے۔ جدول کی بجائے مجموعہ اور قطار کی بجائے دستاویز استعمال ہوتی ہے۔</p>
+</blockquote>
+<p><strong>Config keys:</strong></p>
+<table>
+<thead>
+<tr>
+<th>کلید</th>
+<th>پہلے سے</th>
+<th>تفصیل</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>میزبان</code></td>
+<td><code>"localhost"</code></td>
+<td>MongoDB host</td>
+</tr>
+<tr>
+<td><code>پورٹ</code></td>
+<td><code>27017</code></td>
+<td>Port</td>
+</tr>
+<tr>
+<td><code>ڈیٹا_بیس</code></td>
+<td><code>"test"</code></td>
+<td>Database name</td>
+</tr>
+<tr>
+<td><code>uri</code></td>
+<td>(none)</td>
+<td>Full connection string (overrides host/port)</td>
+</tr>
+</tbody>
+</table>
+<p>After connecting, get a collection handle with <code>db.مجموعہ("نام")</code>.</p>
+<blockquote>
+<p><strong>اردو:</strong> جڑنے کے بعد <code>db.مجموعہ("نام")</code> سے مجموعہ کا ہینڈل حاصل کریں۔ مجموعہ طریقے تلاش، ایک تلاش، داخل، بہت داخل، تازہ کاری، حذف اور گنتی کی سہولت دیتے ہیں۔</p>
+</blockquote>
+<p><strong>Collection methods:</strong></p>
+<table>
+<thead>
+<tr>
+<th>طریقہ</th>
+<th>واپسی</th>
+<th>تفصیل</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>await col.تلاش(filter, opts, حد=n)</code></td>
+<td><code>list[dict]</code></td>
+<td>Find documents</td>
+</tr>
+<tr>
+<td><code>await col.ایک_تلاش(filter)</code></td>
+<td><code>dict</code> or <code>None</code></td>
+<td>Find one document</td>
+</tr>
+<tr>
+<td><code>await col.داخل(document)</code></td>
+<td><code>str</code></td>
+<td>Insert one; returns inserted <code>_id</code></td>
+</tr>
+<tr>
+<td><code>await col.بہت_داخل(documents)</code></td>
+<td><code>list[str]</code></td>
+<td>Insert many; returns list of <code>_id</code>s</td>
+</tr>
+<tr>
+<td><code>await col.تازہ_کاری(filter, update)</code></td>
+<td><code>int</code></td>
+<td>Update many with <code>$set</code>; returns modified count</td>
+</tr>
+<tr>
+<td><code>await col.حذف(filter)</code></td>
+<td><code>int</code></td>
+<td>Delete many; returns deleted count</td>
+</tr>
+<tr>
+<td><code>await col.گنتی(filter)</code></td>
+<td><code>int</code></td>
+<td>Count matching documents</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="mongodb-example-full-crud">MongoDB Example: Full CRUD</h3>
+<div class="highlight"><pre><span></span><code>درآمد { مونگو_ڈی_بی } سے "اردو/ڈیٹا_بیس";
+
+غیر_متزامن فنکشن مرکز() {
+    متغیر mongo = نیا مونگو_ڈی_بی({
+        "میزبان":    "localhost",
+        "پورٹ":      27017,
+        "ڈیٹا_بیس": "urdu_test"
+    });
+
+    انتظار mongo.جوڑیں();
+    لکھو("MongoDB سے جڑ گئے");
+
+    متغیر کتابیں = mongo.مجموعہ("کتابیں");
+
+    // ─── پرانا ڈیٹا صاف کریں ──────────────────────────
+    انتظار کتابیں.حذف({});
+
+    // ─── ایک دستاویز داخل ────────────────────────────
+    متغیر نئی_id = انتظار کتابیں.داخل({
+        "عنوان": "آگ کا دریا",
+        "مصنف":  "قرة العین حیدر",
+        "صنف":   "ناول",
+        "سال":   1959,
+        "قیمت":  1200
+    });
+    لکھو(`نئی کتاب ID: ${نئی_id}`);
+
+    // ─── بہت دستاویز داخل ────────────────────────────
+    متغیر ids = انتظار کتابیں.بہت_داخل([
+        { "عنوان": "گلستان سعدی", "مصنف": "سعدی شیرازی", "صنف": "شاعری", "سال": 1258, "قیمت": 850  },
+        { "عنوان": "اداس نسلیں",  "مصنف": "عبداللہ حسین", "صنف": "ناول",  "سال": 1963, "قیمت": 980  },
+        { "عنوان": "فیض کا کلام", "مصنف": "فیض احمد فیض", "صنف": "شاعری", "سال": 1941, "قیمت": 650  }
+    ]);
+    لکھو(`${لمبائی(ids)} کتابیں داخل`);
+
+    // ─── تمام تلاش ────────────────────────────────────
+    متغیر سب = انتظار کتابیں.تلاش({});
+    لکھو(`\nکل کتابیں: ${لمبائی(سب)}`);
+    کے_لیے (متغیر ک کا سب) {
+        لکھو(`  ${ک["عنوان"]} — ${ک["مصنف"]}`);
+    }
+
+    // ─── فلٹر ─────────────────────────────────────────
+    متغیر شاعری = انتظار کتابیں.تلاش({ "صنف": "شاعری" });
+    لکھو(`\nشاعری کتابیں: ${لمبائی(شاعری)}`);
+
+    // ─── ایک تلاش ─────────────────────────────────────
+    متغیر ایک = انتظار کتابیں.ایک_تلاش({ "عنوان": "آگ کا دریا" });
+    اگر (ایک) {
+        لکھو(`\nملی: ${ایک["عنوان"]} (${ایک["سال"]})`);
+    }
+
+    // ─── MongoDB Query Operators ───────────────────────
+    // قیمت 900 سے زیادہ
+    متغیر مہنگی = انتظار کتابیں.تلاش({ "قیمت": { "$gt": 900 } });
+    لکھو(`\n900 سے مہنگی: ${لمبائی(مہنگی)}`);
+
+    // حد کے ساتھ
+    متغیر پہلی_2 = انتظار کتابیں.تلاش({}, {}, حد=2);
+    لکھو(`\nپہلی 2 کتابیں:`);
+    کے_لیے (متغیر ک کا پہلی_2) {
+        لکھو(`  ${ک["عنوان"]}`);
+    }
+
+    // ─── تازہ کاری ────────────────────────────────────
+    متغیر تازہ = انتظار کتابیں.تازہ_کاری(
+        { "صنف": "شاعری" },
+        { "دستیاب": سچ }
+    );
+    لکھو(`\n${تازہ} شاعری کتابیں تازہ کی گئیں`);
+
+    // ─── گنتی ─────────────────────────────────────────
+    متغیر کل     = انتظار کتابیں.گنتی({});
+    متغیر ناول   = انتظار کتابیں.گنتی({ "صنف": "ناول" });
+    لکھو(`\nکل: ${کل} | ناول: ${ناول}`);
+
+    // ─── حذف ──────────────────────────────────────────
+    متغیر حذف = انتظار کتابیں.حذف({ "قیمت": { "$lt": 700 } });
+    لکھو(`\n${حذف} سستی کتابیں حذف`);
+
+    // ─── منقطع ────────────────────────────────────────
+    انتظار mongo.منقطع();
+    لکھو("MongoDB منقطع");
+}
+
+انتظار مرکز();
+</code></pre></div>
+<hr />
+<h3 id="mongodb-connection-string">MongoDB: Connection String</h3>
+<div class="highlight"><pre><span></span><code>درآمد { مونگو_ڈی_بی } سے "اردو/ڈیٹا_بیس";
+
+// Atlas یا تصدیق والا کنکشن
+متغیر mongo = نیا مونگو_ڈی_بی({
+    "uri":       "mongodb+srv://صارف:پاس@cluster0.abc.mongodb.net",
+    "ڈیٹا_بیس": "میری_ایپ"
+});
+
+غیر_متزامن فنکشن مرکز() {
+    انتظار mongo.جوڑیں();
+    متغیر صارفین = mongo.مجموعہ("صارفین");
+    متغیر گنتی = انتظار صارفین.گنتی({});
+    لکھو(`صارفین: ${گنتی}`);
+    انتظار mongo.منقطع();
+}
+
+انتظار مرکز();
+</code></pre></div>
+<hr />
+<h2 id="cassandra">Cassandra (کسینڈرا) — کسینڈرا ڈیٹا بیس</h2>
+<p>Wraps <code>cassandra-driver</code> for Apache Cassandra and DataStax Astra.</p>
+<blockquote>
+<p><strong>اردو:</strong> یہ Apache Cassandra اور DataStax Astra کے لیے <code>cassandra-driver</code> کا ریپر ہے۔ Cassandra ایک تقسیم شدہ NoSQL ڈیٹا بیس ہے جو بڑے پیمانے پر ڈیٹا کے لیے موزوں ہے اور کثیر نوڈ کلسٹروں میں چلتا ہے۔</p>
+</blockquote>
+<p><strong>Important:</strong> Cassandra CQL requires ASCII identifiers for table and column names. Use ASCII names in <code>CREATE TABLE</code> and queries. Urdu names can be used as variable names in your code.</p>
+<p><strong>Config keys:</strong></p>
+<table>
+<thead>
+<tr>
+<th>کلید</th>
+<th>پہلے سے</th>
+<th>تفصیل</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>میزبان</code></td>
+<td><code>["localhost"]</code></td>
+<td>List of host addresses (or single string)</td>
+</tr>
+<tr>
+<td><code>پورٹ</code></td>
+<td><code>9042</code></td>
+<td>Port</td>
+</tr>
+<tr>
+<td><code>صارف</code></td>
+<td>(none)</td>
+<td>Username (optional)</td>
+</tr>
+<tr>
+<td><code>پاس_ورڈ</code></td>
+<td>(none)</td>
+<td>Password (optional)</td>
+</tr>
+<tr>
+<td><code>کی_اسپیس</code></td>
+<td><code>""</code></td>
+<td>Initial keyspace (optional)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>DDL Methods:</strong></p>
+<table>
+<thead>
+<tr>
+<th>طریقہ</th>
+<th>تفصیل</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>await db.کی_اسپیس_بنائیں(نام, حکمت, نقلیں)</code></td>
+<td>Create keyspace if not exists</td>
+</tr>
+<tr>
+<td><code>await db.کی_اسپیس_چنو(نام)</code></td>
+<td>Switch to keyspace</td>
+</tr>
+<tr>
+<td><code>await db.جدول_بنائیں(نام, {col: type})</code></td>
+<td>CREATE TABLE IF NOT EXISTS</td>
+</tr>
+<tr>
+<td><code>await db.جدول_مٹائیں(نام)</code></td>
+<td>DROP TABLE IF EXISTS</td>
+</tr>
+<tr>
+<td><code>await db.کی_اسپیس_مٹائیں(نام)</code></td>
+<td>DROP KEYSPACE IF EXISTS</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Prepared Statements:</strong></p>
+<table>
+<thead>
+<tr>
+<th>طریقہ</th>
+<th>تفصیل</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>db.تیار(query)</code></td>
+<td>Prepare a CQL statement (synchronous)</td>
+</tr>
+<tr>
+<td><code>await db.تیار_چلائیں(stmt, params)</code></td>
+<td>Execute prepared statement</td>
+</tr>
+<tr>
+<td><code>await db.تیار_سوال(stmt, params)</code></td>
+<td>Execute prepared SELECT, returns rows</td>
+</tr>
+<tr>
+<td><code>await db.بیچ(list)</code></td>
+<td>Execute a LOGGED BATCH of <code>(query, params)</code> pairs</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="cassandra-example-full-crud">Cassandra Example: Full CRUD</h3>
+<div class="highlight"><pre><span></span><code>درآمد { کسینڈرا } سے "اردو/ڈیٹا_بیس";
+
+غیر_متزامن فنکشن مرکز() {
+    متغیر db = نیا کسینڈرا({
+        "میزبان": ["localhost"],
+        "پورٹ":   9042
+    });
+
+    // ─── جڑنا ────────────────────────────────────────
+    انتظار db.جوڑیں();
+    لکھو("Cassandra سے جڑ گئے");
+
+    // ─── کی_اسپیس بنائیں ─────────────────────────────
+    انتظار db.کی_اسپیس_بنائیں("urdu_ks", "SimpleStrategy", 1);
+    انتظار db.کی_اسپیس_چنو("urdu_ks");
+    لکھو("کی_اسپیس تیار");
+
+    // ─── جدول بنائیں (ASCII نام ضروری) ──────────────
+    انتظار db.چلائیں("DROP TABLE IF EXISTS students");
+    انتظار db.جدول_بنائیں("students", {
+        "id":     "UUID PRIMARY KEY",
+        "naam":   "TEXT",
+        "umar":   "INT",
+        "shehar": "TEXT",
+        "number": "FLOAT"
+    });
+    لکھو("جدول students بنا");
+
+    // ─── INSERT ───────────────────────────────────────
+    انتظار db.چلائیں(
+        "INSERT INTO students (id, naam, umar, shehar, number) VALUES (uuid(), 'Ahmad', 20, 'Karachi', 88.5)"
+    );
+    انتظار db.چلائیں(
+        "INSERT INTO students (id, naam, umar, shehar, number) VALUES (uuid(), 'Fatima', 22, 'Lahore', 91.0)"
+    );
+    لکھو("طلباء داخل کیے");
+
+    // ─── SELECT ───────────────────────────────────────
+    متغیر سب = انتظار db.سوال("SELECT naam, umar, shehar, number FROM students");
+    لکھو(`\nکل طلباء: ${لمبائی(سب)}`);
+    کے_لیے (متغیر ط کا سب) {
+        لکھو(`  ${ط["naam"]} — ${ط["shehar"]} — ${ط["number"]}`);
+    }
+
+    // ─── COUNT ────────────────────────────────────────
+    متغیر گنتی = انتظار db.سوال("SELECT COUNT(*) FROM students");
+    لکھو(`\nتعداد: ${گنتی[0]["count"]}`);
+
+    // ─── تیار بیان ────────────────────────────────────
+    متغیر داخل_تیار = db.تیار(
+        "INSERT INTO students (id, naam, umar, shehar, number) VALUES (uuid(), ?, ?, ?, ?)"
+    );
+    انتظار db.تیار_چلائیں(داخل_تیار, ["Zainab", 21, "Multan", 83.0]);
+    انتظار db.تیار_چلائیں(داخل_تیار, ["Umar", 23, "Peshawar", 79.5]);
+    لکھو("\nتیار بیان سے 2 مزید داخل");
+
+    // ─── SELECT تیار بیان ─────────────────────────────
+    متغیر منتخب_تیار = db.تیار("SELECT naam, number FROM students WHERE naam = ? ALLOW FILTERING");
+    متغیر نتیجہ = انتظار db.تیار_سوال(منتخب_تیار, ["Ahmad"]);
+    اگر (لمبائی(نتیجہ) &gt; 0) {
+        لکھو(`\nاحمد کا نمبر: ${نتیجہ[0]["number"]}`);
+    }
+
+    // ─── BATCH ────────────────────────────────────────
+    انتظار db.چلائیں("DROP TABLE IF EXISTS masnoaat");
+    انتظار db.جدول_بنائیں("masnoaat", {
+        "id":     "UUID PRIMARY KEY",
+        "naam":   "TEXT",
+        "qeemat": "DECIMAL"
+    });
+    متغیر م_تیار = db.تیار(
+        "INSERT INTO masnoaat (id, naam, qeemat) VALUES (uuid(), ?, ?)"
+    );
+    انتظار db.بیچ([
+        [م_تیار, ["Kitab", 250]],
+        [م_تیار, ["Qalam", 50]],
+        [م_تیار, ["Bag",   800]]
+    ]);
+    متغیر مصنوعات = انتظار db.سوال("SELECT COUNT(*) FROM masnoaat");
+    لکھو(`\nBATCH: ${مصنوعات[0]["count"]} مصنوعات`);
+
+    // ─── TTL ──────────────────────────────────────────
+    انتظار db.چلائیں("DROP TABLE IF EXISTS aarzi");
+    انتظار db.جدول_بنائیں("aarzi", {
+        "id":      "UUID PRIMARY KEY",
+        "paigham": "TEXT"
+    });
+    // 1 گھنٹے بعد خودبخود ختم
+    انتظار db.چلائیں(
+        "INSERT INTO aarzi (id, paigham) VALUES (uuid(), 'عارضی پیغام') USING TTL 3600"
+    );
+    لکھو("\nTTL اندراج کامیاب");
+
+    // ─── UPDATE ───────────────────────────────────────
+    // Cassandra میں UPDATE کے لیے PRIMARY KEY ضروری ہے
+    متغیر قطاریں = انتظار db.سوال("SELECT id, naam FROM students");
+    کے_لیے (متغیر ق کا قطاریں) {
+        اگر (ق["naam"] == "Ahmad") {
+            انتظار db.چلائیں(`UPDATE students SET number = 95.0 WHERE id = ${ق["id"]}`);
+            لکھو(`\nahmad کا نمبر 95.0 کیا گیا`);
+        }
+    }
+
+    // ─── صفائی ────────────────────────────────────────
+    انتظار db.جدول_مٹائیں("students");
+    انتظار db.جدول_مٹائیں("masnoaat");
+    انتظار db.جدول_مٹائیں("aarzi");
+    انتظار db.کی_اسپیس_مٹائیں("urdu_ks");
+
+    انتظار db.منقطع();
+    لکھو("\nCassandra منقطع");
+}
+
+انتظار مرکز();
+</code></pre></div>
+<hr />
+<h3 id="cassandra-authentication-and-multiple-nodes">Cassandra: Authentication and Multiple Nodes</h3>
+<div class="highlight"><pre><span></span><code>درآمد { کسینڈرا } سے "اردو/ڈیٹا_بیس";
+
+// کثیر نوڈ کلسٹر + تصدیق
+متغیر db = نیا کسینڈرا({
+    "میزبان":    ["node1.example.com", "node2.example.com", "node3.example.com"],
+    "پورٹ":      9042,
+    "صارف":      "cassandra",
+    "پاس_ورڈ":  "cassandra",
+    "کی_اسپیس": "production_ks"
+});
+
+غیر_متزامن فنکشن مرکز() {
+    انتظار db.جوڑیں();
+    لکھو("کلسٹر سے جڑ گئے");
+    متغیر نتیجہ = انتظار db.سوال("SELECT cluster_name FROM system.local");
+    لکھو(`کلسٹر: ${نتیجہ[0]["cluster_name"]}`);
+    انتظار db.منقطع();
+}
+
+انتظار مرکز();
+</code></pre></div>
+<hr />
+<h2 id="firebase-firestore-_">Firebase / Firestore (فائر_بیس) — فائر بیس</h2>
+<p>Supports two modes: <strong>admin</strong> (server-side with service account) and <strong>web</strong> (client-side with API key).</p>
+<blockquote>
+<p><strong>اردو:</strong> Firebase دو طریقوں میں کام کرتا ہے: <strong>admin</strong> (سرور کی طرف، سروس اکاؤنٹ JSON فائل سے) اور <strong>web</strong> (کلائنٹ کی طرف، API کلید سے)۔ یہ Firestore دستاویز ڈیٹا بیس اور Realtime Database دونوں کی سہولت دیتا ہے۔</p>
+</blockquote>
+<h3 id="admin-mode">Admin Mode</h3>
+<div class="highlight"><pre><span></span><code>درآمد { فائر_بیس } سے "اردو/ڈیٹا_بیس";
+
+// service account JSON فائل سے
+متغیر fb = نیا فائر_بیس({
+    "اسناد":    "serviceAccountKey.json",
+    "منصوبہ":   "میرا-پروجیکٹ",
+    "databaseURL": "https://میرا-پروجیکٹ-default-rtdb.firebaseio.com"
+});
+
+غیر_متزامن فنکشن مرکز() {
+    انتظار fb.جوڑیں();
+
+    // Firestore
+    متغیر صارفین = fb.مجموعہ("صارفین");
+    متغیر id = انتظار صارفین.اضافہ({ "نام": "احمد", "ای_میل": "ahmed@test.com" });
+    لکھو(`دستاویز ID: ${id}`);
+
+    متغیر دستاویز = انتظار صارفین.حاصل(id);
+    لکھو(`نام: ${دستاویز["نام"]}`);
+
+    // Realtime Database
+    انتظار fb.ریئل_لکھو("/حالت", { "آن_لائن": سچ });
+    متغیر حالت = انتظار fb.ریئل_پڑھو("/حالت");
+    لکھو(`آن_لائن: ${حالت["آن_لائن"]}`);
+
+    انتظار fb.منقطع();
+}
+
+انتظار مرکز();
+</code></pre></div>
+<h3 id="web-mode-api-key">Web Mode (API Key)</h3>
+<div class="highlight"><pre><span></span><code>درآمد { فائر_بیس } سے "اردو/ڈیٹا_بیس";
+
+متغیر fb = نیا فائر_بیس({
+    "apiKey":    "AIzaSy...",
+    "projectId": "میرا-پروجیکٹ"
+});
+
+غیر_متزامن فنکشن مرکز() {
+    // ای میل سے سائن ان
+    انتظار fb.ای_میل_داخل("صارف@مثال.com", "پاس_ورڈ");
+
+    // Firestore
+    متغیر نوٹس = fb.مجموعہ("نوٹس");
+    متغیر id = انتظار نوٹس.اضافہ({ "عنوان": "پہلا نوٹ", "مواد": "..." });
+
+    متغیر تمام = انتظار نوٹس.سبھی();
+    کے_لیے (متغیر ن کا تمام) {
+        لکھو(`${ن["id"]}: ${ن["عنوان"]}`);
+    }
+
+    انتظار نوٹس.حذف(id);
+    انتظار fb.منقطع();
+}
+
+انتظار مرکز();
+</code></pre></div>
+<p><strong>Firestore Collection Methods:</strong></p>
+<table>
+<thead>
+<tr>
+<th>طریقہ</th>
+<th>تفصیل</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>await col.اضافہ(data)</code></td>
+<td>Add document with auto-ID; returns ID string</td>
+</tr>
+<tr>
+<td><code>await col.مقرر(id, data)</code></td>
+<td>Set/overwrite document by ID</td>
+</tr>
+<tr>
+<td><code>await col.حاصل(id)</code></td>
+<td>Get document by ID; returns dict or None</td>
+</tr>
+<tr>
+<td><code>await col.سبھی()</code></td>
+<td>Get all documents in collection</td>
+</tr>
+<tr>
+<td><code>await col.حذف(id)</code></td>
+<td>Delete document by ID</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="transactions-and-savepoints">Transactions and Savepoints — لین دین اور محفوظ نقطے</h2>
+<h3 id="basic-transaction-pattern">Basic Transaction Pattern — بنیادی لین دین نمونہ</h3>
+<blockquote>
+<p><strong>اردو:</strong> لین دین (transaction) ایک یا زیادہ ڈیٹا بیس عمل کو اکٹھے محفوظ (COMMIT) یا رد (ROLLBACK) کرنے کا طریقہ ہے۔ اگر کوئی ایک عمل ناکام ہو تو پورا لین دین واپس ہو جاتا ہے — اس سے ڈیٹا ہمیشہ درست رہتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { مائی_ایس_کیو_ایل } سے "اردو/ڈیٹا_بیس";
+
+غیر_متزامن فنکشن منتقلی_کرو(db, از_کھاتہ, بہ_کھاتہ, رقم) {
+    // طریقہ 1: دستی BEGIN/COMMIT/ROLLBACK
+    انتظار db.لین_دین_شروع();
+    کوشش {
+        انتظار db.چلائیں(
+            "UPDATE کھاتے SET بقیہ = بقیہ - ? WHERE نام = ?",
+            [رقم, از_کھاتہ]
+        );
+        انتظار db.چلائیں(
+            "UPDATE کھاتے SET بقیہ = بقیہ + ? WHERE نام = ?",
+            [رقم, بہ_کھاتہ]
+        );
+        انتظار db.کمٹ();
+        لکھو("منتقلی کامیاب");
+    } پکڑو (غ) {
+        انتظار db.واپسی();
+        لکھو(`منتقلی ناکام: ${غ}`);
+        پھینکو غ;
+    }
+}
+
+غیر_متزامن فنکشن مرکز() {
+    متغیر db = نیا مائی_ایس_کیو_ایل({
+        "میزبان": "localhost", "صارف": "root", "پاس_ورڈ": ""
+    });
+    انتظار db.جوڑیں();
+    انتظار db.چلائیں("CREATE DATABASE IF NOT EXISTS بینک");
+    انتظار db.چلائیں("USE بینک");
+    انتظار db.چلائیں(`CREATE TABLE IF NOT EXISTS کھاتے (
+        نام VARCHAR(50) PRIMARY KEY, بقیہ DECIMAL(10,2)
+    )`);
+    انتظار db.چلائیں("INSERT IGNORE INTO کھاتے VALUES ('احمد', 10000), ('فاطمہ', 5000)");
+
+    // طریقہ 1: دستی
+    انتظار منتقلی_کرو(db, "احمد", "فاطمہ", 2000);
+
+    // طریقہ 2: لین_دین() wrapper (خودکار)
+    انتظار db.لین_دین(غیر_متزامن فنکشن() {
+        انتظار db.چلائیں(
+            "UPDATE کھاتے SET بقیہ = بقیہ + ? WHERE نام = ?", [500, "احمد"]
+        );
+        انتظار db.چلائیں(
+            "UPDATE کھاتے SET بقیہ = بقیہ - ? WHERE نام = ?", [500, "فاطمہ"]
+        );
+    });
+    لکھو("لین_دین() COMMIT کامیاب");
+
+    // طریقہ 3: غلطی پر خودکار ROLLBACK
+    کوشش {
+        انتظار db.لین_دین(غیر_متزامن فنکشن() {
+            انتظار db.چلائیں(
+                "UPDATE کھاتے SET بقیہ = بقیہ - ? WHERE نام = ?", [999999, "احمد"]
+            );
+            پھینکو نیا غلطی("بقیہ ناکافی!");
+        });
+    } پکڑو (غ) {
+        لکھو(`خودکار ROLLBACK: ${غ}`);
+    }
+
+    انتظار db.چلائیں("DROP TABLE کھاتے");
+    انتظار db.چلائیں("DROP DATABASE بینک");
+    انتظار db.منقطع();
+}
+
+انتظار مرکز();
+</code></pre></div>
+<hr />
+<h3 id="savepoints-example">Savepoints Example — محفوظ نقطے مثال</h3>
+<p>Savepoints allow partial rollback within a transaction.</p>
+<blockquote>
+<p><strong>اردو:</strong> محفوظ نقطے (savepoints) لین دین کے اندر جزوی واپسی کی اجازت دیتے ہیں۔ آپ ایک خاص مقام محفوظ کریں، پھر اگر آگے کا کام ناکام ہو تو اسی مقام تک واپس جائیں — پچھلا کام محفوظ رہتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { پوسٹ_گریس } سے "اردو/ڈیٹا_بیس";
+
+غیر_متزامن فنکشن مرکز() {
+    متغیر db = نیا پوسٹ_گریس({
+        "میزبان": "localhost", "صارف": "postgres",
+        "پاس_ورڈ": "پاس_ورڈ", "ڈیٹا_بیس": "postgres"
+    });
+    انتظار db.جوڑیں();
+
+    انتظار db.چلائیں("DROP TABLE IF EXISTS سپ_جانچ");
+    انتظار db.چلائیں(`CREATE TABLE سپ_جانچ (
+        شناخت SERIAL PRIMARY KEY, قدر INT
+    )`);
+
+    // ─── SAVEPOINT استعمال ────────────────────────────
+    انتظار db.لین_دین_شروع();
+
+    انتظار db.چلائیں("INSERT INTO سپ_جانچ (قدر) VALUES (?)", [100]);
+    انتظار db.نقطہ_محفوظ("نقطہ_الف");       // ← یہاں محفوظ
+
+    انتظار db.چلائیں("INSERT INTO سپ_جانچ (قدر) VALUES (?)", [200]);
+    انتظار db.نقطہ_محفوظ("نقطہ_ب");         // ← دوسرا نقطہ
+
+    انتظار db.چلائیں("INSERT INTO سپ_جانچ (قدر) VALUES (?)", [999]);  // غلطی
+    متغیر بعد_غلطی = انتظار db.سوال("SELECT COUNT(*) AS n FROM سپ_جانچ");
+    لکھو(`غلطی سے پہلے: ${بعد_غلطی[0]["n"]} قطاریں`);
+
+    // نقطہ_ب پر واپس — 999 والی قطار ختم
+    انتظار db.نقطہ_واپسی("نقطہ_ب");
+    متغیر بعد_واپسی = انتظار db.سوال("SELECT COUNT(*) AS n FROM سپ_جانچ");
+    لکھو(`نقطہ_ب واپسی: ${بعد_واپسی[0]["n"]} قطاریں`);
+
+    انتظار db.نقطہ_چھوڑیں("نقطہ_ب");  // نقطہ_ب ریلیز
+    انتظار db.کمٹ();                    // نقطہ_الف تک محفوظ
+
+    متغیر آخری = انتظار db.سوال("SELECT * FROM سپ_جانچ ORDER BY شناخت");
+    لکھو(`\nآخری نتیجہ (${لمبائی(آخری)} قطاریں):`);
+    کے_لیے (متغیر ق کا آخری) {
+        لکھو(`  قدر: ${ق["قدر"]}`);
+    }
+    // صرف 100 اور 200 ہونے چاہئیں
+
+    انتظار db.چلائیں("DROP TABLE سپ_جانچ");
+    انتظار db.منقطع();
+    لکھو("\nSavepoint مثال مکمل");
+}
+
+انتظار مرکز();
+</code></pre></div>
+<p><strong>Savepoint workflow — محفوظ نقطہ کا طریقہ کار:</strong></p>
+<blockquote>
+<p><strong>اردو:</strong> محفوظ نقطہ کا طریقہ کار: لین دین شروع کریں ← کام کریں ← نقطہ محفوظ کریں ← مزید کام کریں ← اگر ناکام ہو تو نقطے پر واپس جائیں ← نقطہ چھوڑیں ← کمٹ کریں۔</p>
+</blockquote>
+<ol>
+<li><code>await db.لین_دین_شروع()</code> — begin transaction</li>
+<li>Do some work</li>
+<li><code>await db.نقطہ_محفوظ("نام")</code> — save a checkpoint</li>
+<li>Do more work (that might fail)</li>
+<li><code>await db.نقطہ_واپسی("نام")</code> — undo back to the checkpoint</li>
+<li><code>await db.نقطہ_چھوڑیں("نام")</code> — release the savepoint</li>
+<li><code>await db.کمٹ()</code> — commit everything up to the savepoints that were kept</li>
+</ol>
+<hr />
+<h2 id="sqlite-__">SQLite (ایس_کیو_لائٹ) — ایس کیو لائٹ ڈیٹا بیس</h2>
+<p>SQLite is built into Python and requires no additional installation.</p>
+<blockquote>
+<p><strong>اردو:</strong> SQLite Python میں بنا ہوا ہے اور اضافی نصب کاری کی ضرورت نہیں۔ یہ ایک فائل پر مبنی ڈیٹا بیس ہے جو چھوٹی ایپلیکیشنز، جانچ اور سیکھنے کے لیے بہترین ہے۔ <code>:memory:</code> سے میموری میں عارضی ڈیٹا بیس بھی بنایا جا سکتا ہے۔</p>
+</blockquote>
+<p><strong>Import:</strong></p>
+<div class="highlight"><pre><span></span><code>درآمد { ایس_کیو_لائٹ } سے "اردو/ڈیٹا_بیس";
+</code></pre></div>
+<p><strong>Constructor:</strong></p>
+<div class="highlight"><pre><span></span><code>// فائل میں
+متغیر db = نیا ایس_کیو_لائٹ("میرا_ڈیٹا.db");
+
+// یا ترتیب dict سے
+متغیر db = نیا ایس_کیو_لائٹ({ "فائل": "میرا_ڈیٹا.db" });
+
+// میموری میں (جانچ کے لیے)
+متغیر db = نیا ایس_کیو_لائٹ(":memory:");
+</code></pre></div>
+<p>SQLite supports all common interface methods plus <code>await db.جدول_بنائیں(نام, {col: type})</code>.</p>
+<hr />
+<h3 id="sqlite-example-quick-start">SQLite Example: Quick Start</h3>
+<div class="highlight"><pre><span></span><code>درآمد { ایس_کیو_لائٹ } سے "اردو/ڈیٹا_بیس";
+
+غیر_متزامن فنکشن مرکز() {
+    متغیر db = نیا ایس_کیو_لائٹ(":memory:");
+    انتظار db.جوڑیں();
+
+    // جدول بنائیں
+    انتظار db.جدول_بنائیں("اشیاء", {
+        "شناخت": "INTEGER PRIMARY KEY AUTOINCREMENT",
+        "نام":   "TEXT NOT NULL",
+        "قیمت":  "REAL DEFAULT 0"
+    });
+
+    // داخل
+    انتظار db.داخل("اشیاء", { "نام": "کتاب", "قیمت": 500.0 });
+    انتظار db.داخل("اشیاء", { "نام": "قلم",  "قیمت": 50.0  });
+    انتظار db.داخل("اشیاء", { "نام": "کاغذ", "قیمت": 20.0  });
+
+    // تلاش
+    متغیر سب = انتظار db.سوال("SELECT * FROM اشیاء ORDER BY قیمت DESC");
+    کے_لیے (متغیر ش کا سب) {
+        لکھو(`${ش["نام"]}: Rs ${ش["قیمت"]}`);
+    }
+
+    // Transaction
+    انتظار db.لین_دین(غیر_متزامن فنکشن() {
+        انتظار db.چلائیں("UPDATE اشیاء SET قیمت = قیمت * 1.1");
+    });
+    لکھو("\n10% قیمت اضافہ کامیاب");
+
+    انتظار db.منقطع();
+}
+
+انتظار مرکز();
+</code></pre></div>
+<hr />
+<h3 id="sqlite-example-savepoints">SQLite Example: Savepoints</h3>
+<div class="highlight"><pre><span></span><code>درآمد { ایس_کیو_لائٹ } سے "اردو/ڈیٹا_بیس";
+
+غیر_متزامن فنکشن مرکز() {
+    متغیر db = نیا ایس_کیو_لائٹ(":memory:");
+    انتظار db.جوڑیں();
+
+    انتظار db.چلائیں(`CREATE TABLE کھاتے (
+        شناخت INTEGER PRIMARY KEY AUTOINCREMENT,
+        نام    TEXT NOT NULL,
+        بقیہ   REAL DEFAULT 0
+    )`);
+    انتظار db.چلائیں("INSERT INTO کھاتے (نام, بقیہ) VALUES (?, ?)", ["احمد", 10000]);
+    انتظار db.چلائیں("INSERT INTO کھاتے (نام, بقیہ) VALUES (?, ?)", ["فاطمہ", 5000]);
+
+    // SAVEPOINT مثال
+    انتظار db.لین_دین_شروع();
+
+    // پہلا آپریشن
+    انتظار db.چلائیں(
+        "UPDATE کھاتے SET بقیہ = بقیہ - ? WHERE نام = ?", [2000, "احمد"]
+    );
+    انتظار db.چلائیں(
+        "UPDATE کھاتے SET بقیہ = بقیہ + ? WHERE نام = ?", [2000, "فاطمہ"]
+    );
+    انتظار db.نقطہ_محفوظ("منتقلی_1");  // یہاں تک محفوظ
+
+    // دوسرا آپریشن (جو ناکام ہو گا)
+    انتظار db.چلائیں(
+        "UPDATE کھاتے SET بقیہ = بقیہ - ? WHERE نام = ?", [9999, "احمد"]
+    );
+
+    // نقطہ پر واپس
+    انتظار db.نقطہ_واپسی("منتقلی_1");
+    انتظار db.نقطہ_چھوڑیں("منتقلی_1");
+    انتظار db.کمٹ();
+
+    // نتیجہ جانچیں
+    متغیر نتیجہ = انتظار db.سوال(
+        "SELECT نام, بقیہ FROM کھاتے ORDER BY شناخت"
+    );
+    کے_لیے (متغیر ک کا نتیجہ) {
+        لکھو(`${ک["نام"]}: ${ک["بقیہ"]}`);
+    }
+    // احمد: 8000, فاطمہ: 7000 (صرف پہلی منتقلی)
+
+    انتظار db.منقطع();
+}
+
+انتظار مرکز();
+</code></pre></div>
+<hr />
+<h2 id="factory-function-__">Factory Function (ڈیٹا_بیس_جوڑو) — فیکٹری فنکشن</h2>
+<p>Create any database connection by name using the factory function:</p>
+<blockquote>
+<p><strong>اردو:</strong> فیکٹری فنکشن <code>ڈیٹا_بیس_جوڑو</code> سے نام کے ذریعے کوئی بھی ڈیٹا بیس کنکشن بنائیں۔ پہلے دلیل میں ڈیٹا بیس کی قسم بتائیں (<code>"mysql"</code>، <code>"postgresql"</code>، <code>"sqlite"</code> وغیرہ) اور دوسرے میں ترتیب دیں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { ڈیٹا_بیس_جوڑو } سے "اردو/ڈیٹا_بیس";
+
+// ترتیب سے قسم کا تعین
+متغیر db = ڈیٹا_بیس_جوڑو("mysql", {
+    "میزبان": "localhost",
+    "صارف":   "root",
+    "پاس_ورڈ": "",
+    "ڈیٹا_بیس": "میری_ایپ"
+});
+
+انتظار db.جوڑیں();
+// ...سب معمول کے طریقے کام کریں گے
+انتظار db.منقطع();
+</code></pre></div>
+<p>Supported type strings: <code>"mysql"</code>, <code>"postgresql"</code> / <code>"postgres"</code> / <code>"pg"</code>, <code>"sqlite"</code>, <code>"mongodb"</code>, <code>"firebase"</code> / <code>"firestore"</code>, <code>"cassandra"</code>.</p>
+<hr />
+<h2 id="complete-multi-database-example">Complete Multi-Database Example</h2>
+<div class="highlight"><pre><span></span><code>درآمد { مائی_ایس_کیو_ایل, مونگو_ڈی_بی, ایس_کیو_لائٹ } سے "اردو/ڈیٹا_بیس";
+
+// ─── SQLite — میموری میں جانچ ───────────────────────────
+غیر_متزامن فنکشن sqlite_جانچ() {
+    لکھو("=== SQLite ===");
+    متغیر db = نیا ایس_کیو_لائٹ(":memory:");
+    انتظار db.جوڑیں();
+    انتظار db.جدول_بنائیں("جانچ", {
+        "id":  "INTEGER PRIMARY KEY AUTOINCREMENT",
+        "val": "TEXT"
+    });
+    انتظار db.داخل("جانچ", { "val": "اردو" });
+    متغیر r = انتظار db.سوال("SELECT * FROM جانچ");
+    لکھو(`SQLite: ${r[0]["val"]}`);
+    انتظار db.منقطع();
+}
+
+// ─── MongoDB — مجموعہ CRUD ───────────────────────────────
+غیر_متزامن فنکشن mongo_جانچ() {
+    لکھو("\n=== MongoDB ===");
+    کوشش {
+        متغیر mongo = نیا مونگو_ڈی_بی({ "ڈیٹا_بیس": "urdu_test" });
+        انتظار mongo.جوڑیں();
+        متغیر کول = mongo.مجموعہ("جانچ_کول");
+        انتظار کول.حذف({});
+        انتظار کول.داخل({ "زبان": "اردو", "نسخہ": 1 });
+        متغیر ایک = انتظار کول.ایک_تلاش({ "زبان": "اردو" });
+        لکھو(`MongoDB: ${ایک["زبان"]} v${ایک["نسخہ"]}`);
+        انتظار کول.حذف({});
+        انتظار mongo.منقطع();
+    } پکڑو (غ) {
+        لکھو(`MongoDB چھوڑا: ${غ}`);
+    }
+}
+
+غیر_متزامن فنکشن مرکز() {
+    انتظار sqlite_جانچ();
+    انتظار mongo_جانچ();
+    لکھو("\nتمام جانچ مکمل");
+}
+
+انتظار مرکز();
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

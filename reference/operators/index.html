@@ -1,0 +1,2231 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+        <link rel="prev" href="../keywords/">
+      
+      
+        <link rel="next" href="../../libraries/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>آپریٹرز - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#operators-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              آپریٹرز
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorial/beginner/" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../libraries/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/beginner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intermediate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents — فہرست مضامین
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arithmetic-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arithmetic Operators — ریاضی آپریٹر
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assignment-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assignment Operators — تفویض آپریٹر
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison Operators — موازنہ آپریٹر
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logical-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logical Operators — منطقی آپریٹر
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bitwise-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bitwise Operators — بٹ آپریٹر
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Special Operators — خاص آپریٹر
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Special Operators — خاص آپریٹر">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optional-chaining" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional Chaining ?.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nullish-coalescing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nullish Coalescing ??
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spread-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spread Operator ...
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arrow-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arrow Function =&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#increment-decrement-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Increment / Decrement ++ / --
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ternary-conditional-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ternary (Conditional) Operator ? :
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typeof" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typeof — قسم
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instanceof" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        instanceof — مثال
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        in / میں_ہے
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        delete — حذف
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operator-precedence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operator Precedence — آپریٹر ترجیح
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Cheat Sheet — فوری حوالہ
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../libraries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents — فہرست مضامین
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arithmetic-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arithmetic Operators — ریاضی آپریٹر
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assignment-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assignment Operators — تفویض آپریٹر
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison Operators — موازنہ آپریٹر
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logical-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logical Operators — منطقی آپریٹر
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bitwise-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bitwise Operators — بٹ آپریٹر
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Special Operators — خاص آپریٹر
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Special Operators — خاص آپریٹر">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optional-chaining" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional Chaining ?.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nullish-coalescing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nullish Coalescing ??
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spread-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spread Operator ...
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arrow-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arrow Function =&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#increment-decrement-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Increment / Decrement ++ / --
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ternary-conditional-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ternary (Conditional) Operator ? :
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typeof" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        typeof — قسم
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instanceof" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        instanceof — مثال
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        in / میں_ہے
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        delete — حذف
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operator-precedence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operator Precedence — آپریٹر ترجیح
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Cheat Sheet — فوری حوالہ
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="operators-reference">Operators Reference — آپریٹر حوالہ</h1>
+<p>A complete reference for all operators available in the Urdu Programming Language. Operators follow JavaScript/Python semantics. Urdu keyword forms and symbol forms are interchangeable wherever both are listed.</p>
+<blockquote>
+<p><strong>اردو:</strong> اردو پروگرامنگ زبان کے تمام آپریٹرز کا مکمل حوالہ۔ جہاں دونوں موجود ہوں، اردو کلیدی لفظ اور علامتی شکل آپس میں بدلی جا سکتی ہیں۔</p>
+</blockquote>
+<hr />
+<h2 id="table-of-contents">Table of Contents — فہرست مضامین</h2>
+<ul>
+<li><a href="#arithmetic-operators">Arithmetic Operators</a></li>
+<li><a href="#assignment-operators">Assignment Operators</a></li>
+<li><a href="#comparison-operators">Comparison Operators</a></li>
+<li><a href="#logical-operators">Logical Operators</a></li>
+<li><a href="#bitwise-operators">Bitwise Operators</a></li>
+<li><a href="#special-operators">Special Operators</a></li>
+<li><a href="#operator-precedence">Operator Precedence</a></li>
+</ul>
+<hr />
+<h2 id="arithmetic-operators">Arithmetic Operators — ریاضی آپریٹر</h2>
+<p>Used to perform mathematical calculations.</p>
+<blockquote>
+<p><strong>اردو:</strong> ریاضی آپریٹر عددی حسابات کے لیے استعمال ہوتے ہیں۔ <code>+</code> جمع، <code>-</code> تفریق، <code>*</code> ضرب، <code>/</code> تقسیم، <code>%</code> باقی، <code>**</code> طاقت۔ منزل تقسیم (floor division) کے لیے <code>عدد(a / b)</code> استعمال کریں۔</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Name</th>
+<th>Example</th>
+<th>Result</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td>جمع (Addition)</td>
+<td><code>5 + 3</code></td>
+<td><code>8</code></td>
+<td>Also concatenates strings: <code>"الف" + "ب"</code> → <code>"الفب"</code></td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>تفریق (Subtraction)</td>
+<td><code>10 - 4</code></td>
+<td><code>6</code></td>
+<td>Unary minus: <code>-x</code> negates</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>ضرب (Multiplication)</td>
+<td><code>6 * 7</code></td>
+<td><code>42</code></td>
+<td>Also repeats strings: <code>"ا" * 3</code> → <code>"ااا"</code></td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>تقسیم (Division)</td>
+<td><code>10 / 4</code></td>
+<td><code>2.5</code></td>
+<td>Always returns float</td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td>باقی (Modulo)</td>
+<td><code>10 % 3</code></td>
+<td><code>1</code></td>
+<td>Remainder after integer division</td>
+</tr>
+<tr>
+<td><code>**</code></td>
+<td>طاقت (Exponentiation)</td>
+<td><code>2 ** 8</code></td>
+<td><code>256</code></td>
+<td>Right-associative: <code>2 ** 3 ** 2</code> → <code>512</code></td>
+</tr>
+<tr>
+<td><code>++</code></td>
+<td>اضافہ (Increment)</td>
+<td><code>i++</code></td>
+<td><code>i = i + 1</code></td>
+<td>Postfix only in most contexts</td>
+</tr>
+<tr>
+<td><code>--</code></td>
+<td>کمی (Decrement)</td>
+<td><code>i--</code></td>
+<td><code>i = i - 1</code></td>
+<td>Postfix only in most contexts</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note:</strong> <code>//</code> is the line <strong>comment</strong> operator, not floor division. Use <code>عدد(a / b)</code> or <code>ریاضی.فرش(a / b)</code> for floor (integer) division.</p>
+</blockquote>
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><span></span><code>متغیر ا = 17;
+لکھو(ا % 5);          // 2
+لکھو(عدد(ا / 5));     // 3  (floor division)
+لکھو(ا / 5);          // 3.4
+
+// مربع
+لکھو(2 ** 10);  // 1024
+
+// متن ضرب
+لکھو("-" * 20);  // --------------------
+
+// اضافہ اور کمی
+متغیر گنتی = 0;
+گنتی++;
+گنتی++;
+لکھو(گنتی);   // 2
+گنتی--;
+لکھو(گنتی);   // 1
+</code></pre></div>
+<hr />
+<h2 id="assignment-operators">Assignment Operators — تفویض آپریٹر</h2>
+<p>Used to assign or update variable values.</p>
+<blockquote>
+<p><strong>اردو:</strong> تفویض آپریٹر متغیر کو قدر دینے یا اپ ڈیٹ کرنے کے لیے ہیں۔ <code>=</code> بنیادی تفویض، <code>+=</code> جمع کر کے تفویض، وغیرہ۔</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Name</th>
+<th>Equivalent To</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>=</code></td>
+<td>تفویض (Assignment)</td>
+<td>—</td>
+<td><code>x = 5</code></td>
+</tr>
+<tr>
+<td><code>+=</code></td>
+<td>جمع تفویض (Add-assign)</td>
+<td><code>x = x + y</code></td>
+<td><code>x += 3</code></td>
+</tr>
+<tr>
+<td><code>-=</code></td>
+<td>تفریق تفویض (Sub-assign)</td>
+<td><code>x = x - y</code></td>
+<td><code>x -= 2</code></td>
+</tr>
+<tr>
+<td><code>*=</code></td>
+<td>ضرب تفویض (Mul-assign)</td>
+<td><code>x = x * y</code></td>
+<td><code>x *= 4</code></td>
+</tr>
+<tr>
+<td><code>/=</code></td>
+<td>تقسیم تفویض (Div-assign)</td>
+<td><code>x = x / y</code></td>
+<td><code>x /= 2</code></td>
+</tr>
+<tr>
+<td><code>%=</code></td>
+<td>باقی تفویض (Mod-assign)</td>
+<td><code>x = x % y</code></td>
+<td><code>x %= 3</code></td>
+</tr>
+<tr>
+<td><code>**=</code></td>
+<td>طاقت تفویض (Pow-assign)</td>
+<td><code>x = x ** y</code></td>
+<td><code>x **= 2</code></td>
+</tr>
+<tr>
+<td><code>&amp;&amp;=</code></td>
+<td>اور تفویض (And-assign)</td>
+<td><code>x = x &amp;&amp; y</code></td>
+<td><code>x &amp;&amp;= y</code></td>
+</tr>
+<tr>
+<td><code>\|\|=</code></td>
+<td>یا تفویض (Or-assign)</td>
+<td><code>x = x \|\| y</code></td>
+<td><code>x \|\|= y</code></td>
+</tr>
+<tr>
+<td><code>??=</code></td>
+<td>خالی تفویض (Nullish-assign)</td>
+<td><code>x = x ?? y</code></td>
+<td><code>x ??= y</code></td>
+</tr>
+<tr>
+<td><code>&amp;=</code></td>
+<td>بٹ اور تفویض (Bitand-assign)</td>
+<td><code>x = x &amp; y</code></td>
+<td><code>x &amp;= 0xFF</code></td>
+</tr>
+<tr>
+<td><code>\|=</code></td>
+<td>بٹ یا تفویض (Bitor-assign)</td>
+<td><code>x = x \| y</code></td>
+<td><code>x \|= 0x01</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><span></span><code>متغیر رقم = 1000;
+رقم += 200;    // 1200
+رقم -= 50;     // 1150
+رقم *= 2;      // 2300
+رقم /= 4;      // 575.0
+رقم **= 2;     // 330625.0
+رقم %= 1000;   // 625.0
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// nullish assign — صرف اس وقت تفویض کریں جب قدر خالی ہو
+متغیر نام = خالی;
+نام ??= "مہمان";
+لکھو(نام);    // مہمان
+
+متغیر نام2 = "احمد";
+نام2 ??= "مہمان";
+لکھو(نام2);   // احمد  (نہیں بدلا)
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// یا تفویض — فالبیک قدر
+متغیر ترتیب = {};
+ترتیب.رنگ ||= "نیلا";
+لکھو(ترتیب.رنگ);   // نیلا
+</code></pre></div>
+<hr />
+<h2 id="comparison-operators">Comparison Operators — موازنہ آپریٹر</h2>
+<p>Compare two values and return a boolean (<code>سچ</code> or <code>جھوٹ</code>).</p>
+<blockquote>
+<p><strong>اردو:</strong> موازنہ آپریٹر دو قدروں کا موازنہ کرتے ہیں اور بولین (<code>سچ</code> یا <code>جھوٹ</code>) واپس کرتے ہیں۔ <code>===</code> سخت مساوات (قسم اور قدر دونوں) جانچتا ہے۔</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Name</th>
+<th>Description</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>==</code></td>
+<td>برابر (Equal)</td>
+<td>Loose equality — coerces types</td>
+<td><code>"5" == 5</code></td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>نہ برابر (Not equal)</td>
+<td>Loose inequality</td>
+<td><code>"5" != 6</code></td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>===</code></td>
+<td>سخت برابر (Strict equal)</td>
+<td>Exact equality — no type coercion</td>
+<td><code>"5" === 5</code></td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>!==</code></td>
+<td>سخت نہ برابر (Strict not equal)</td>
+<td>Exact inequality</td>
+<td><code>5 !== 5</code></td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>کم (Less than)</td>
+<td>Strictly less</td>
+<td><code>3 &lt; 5</code></td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>زیادہ (Greater than)</td>
+<td>Strictly greater</td>
+<td><code>5 &gt; 3</code></td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>کم یا برابر (Less or equal)</td>
+<td>Less than or equal</td>
+<td><code>5 &lt;= 5</code></td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>زیادہ یا برابر (Greater or equal)</td>
+<td>Greater than or equal</td>
+<td><code>6 &gt;= 5</code></td>
+<td><code>True</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong><code>==</code> vs <code>===</code>:</strong> The strict equality operator <code>===</code> checks both value and type and is generally preferred. Use <code>==</code> only when intentional type coercion is desired.</p>
+<p><strong>اردو:</strong> <code>===</code> سخت مساوات قدر اور قسم (type) دونوں جانچتا ہے اور عموماً ترجیح دی جاتی ہے۔ <code>==</code> صرف اس وقت استعمال کریں جب جان بوجھ کر قسم کی تبدیلی مطلوب ہو۔</p>
+</blockquote>
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><span></span><code>لکھو(10 == "10");     // True   (قسم تبدیل ہوتی ہے)
+لکھو(10 === "10");    // False  (قسم مختلف)
+لکھو(10 !== 10);      // False
+لکھو(خالی == غیر_معرف);   // True  (دونوں None ہیں)
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// درجہ بندی
+متغیر نمبر = 75;
+اگر (نمبر &gt;= 90) {
+    لکھو("ممتاز");
+} ورنہ_اگر (نمبر &gt;= 75) {
+    لکھو("اچھا");
+} ورنہ_اگر (نمبر &gt;= 50) {
+    لکھو("اوسط");
+} ورنہ {
+    لکھو("ناکام");
+}
+// اچھا
+</code></pre></div>
+<hr />
+<h2 id="logical-operators">Logical Operators — منطقی آپریٹر</h2>
+<p>Combine or invert boolean expressions. Both symbol and Urdu keyword forms are supported.</p>
+<blockquote>
+<p><strong>اردو:</strong> منطقی آپریٹر بولین اظہارات کو جوڑتے یا الٹاتے ہیں۔ <code>&amp;&amp;</code>/<code>اور</code>، <code>||</code>/<code>یا</code>، <code>!</code>/<code>نہیں</code> — دونوں شکلیں قابل استعمال ہیں۔</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Urdu Keyword</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;&amp;</code></td>
+<td><code>اور</code></td>
+<td>اور (AND)</td>
+<td><code>سچ</code> if <strong>both</strong> operands are truthy. Short-circuits: returns first falsy value, or last value.</td>
+</tr>
+<tr>
+<td><code>\|\|</code></td>
+<td><code>یا</code></td>
+<td>یا (OR)</td>
+<td><code>سچ</code> if <strong>at least one</strong> operand is truthy. Short-circuits: returns first truthy value, or last value.</td>
+</tr>
+<tr>
+<td><code>!</code></td>
+<td><code>نہیں</code></td>
+<td>نہیں (NOT)</td>
+<td>Inverts truthiness. <code>!سچ</code> → <code>جھوٹ</code>.</td>
+</tr>
+<tr>
+<td><code>??</code></td>
+<td>—</td>
+<td>خالی_فالبیک (Nullish coalescing)</td>
+<td>Returns right operand only when left is <code>خالی</code> or <code>غیر_معرف</code>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Short-circuit evaluation:</strong> <code>&amp;&amp;</code> stops at the first falsy value; <code>||</code> stops at the first truthy value. This is useful for default values and conditional execution.</p>
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><span></span><code>// اور — AND
+لکھو(سچ &amp;&amp; سچ);          // True
+لکھو(سچ &amp;&amp; جھوٹ);        // False
+لکھو(5 &gt; 3 &amp;&amp; 10 &lt; 20);  // True
+
+// یا — OR
+لکھو(جھوٹ || سچ);        // True
+لکھو(جھوٹ || جھوٹ);      // False
+
+// نہیں — NOT
+لکھو(!سچ);               // False
+لکھو(!0);                // True
+لکھو(!"");               // True
+لکھو(!"اردو");           // False
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// شارٹ سرکٹ — فالبیک قدر
+متغیر نام = "" || "مہمان";
+لکھو(نام);    // مہمان
+
+متغیر قدر = خالی ?? "پہلے سے موجود";
+لکھو(قدر);    // پہلے سے موجود
+
+// محفوظ رسائی
+متغیر صارف = خالی;
+متغیر نتیجہ = صارف &amp;&amp; صارف.نام;
+لکھو(نتیجہ);  // None (null) — کوئی خطا نہیں
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// Urdu keyword form
+اگر (عمر &gt;= 18 اور ملک == "پاکستان") {
+    لکھو("اہل");
+}
+اگر (نہیں لاگ_ان یا وقت_ختم) {
+    لکھو("براہ کرم دوبارہ لاگ ان کریں");
+}
+</code></pre></div>
+<hr />
+<h2 id="bitwise-operators">Bitwise Operators — بٹ آپریٹر</h2>
+<p>Operate on the individual binary bits of integers.</p>
+<blockquote>
+<p><strong>اردو:</strong> بٹ آپریٹر عدد کے انفرادی بائنری بٹوں پر عمل کرتے ہیں۔</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Name</th>
+<th>Description</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;</code></td>
+<td>بٹ اور (Bitwise AND)</td>
+<td>1 only where both bits are 1</td>
+<td><code>0b1100 &amp; 0b1010</code></td>
+<td><code>8</code> (<code>0b1000</code>)</td>
+</tr>
+<tr>
+<td><code>\|</code></td>
+<td>بٹ یا (Bitwise OR)</td>
+<td>1 where either bit is 1</td>
+<td><code>0b1100 \| 0b1010</code></td>
+<td><code>14</code> (<code>0b1110</code>)</td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td>بٹ ایکس اور (Bitwise XOR)</td>
+<td>1 where bits differ</td>
+<td><code>0b1100 ^ 0b1010</code></td>
+<td><code>6</code> (<code>0b0110</code>)</td>
+</tr>
+<tr>
+<td><code>~</code></td>
+<td>بٹ نہیں (Bitwise NOT)</td>
+<td>Flips all bits (two's complement)</td>
+<td><code>~5</code></td>
+<td><code>-6</code></td>
+</tr>
+<tr>
+<td><code>&lt;&lt;</code></td>
+<td>بائیں شفٹ (Left shift)</td>
+<td>Shift bits left, fill with 0</td>
+<td><code>1 &lt;&lt; 4</code></td>
+<td><code>16</code></td>
+</tr>
+<tr>
+<td><code>&gt;&gt;</code></td>
+<td>دائیں شفٹ (Right shift)</td>
+<td>Shift bits right, sign-fill</td>
+<td><code>16 &gt;&gt; 2</code></td>
+<td><code>4</code></td>
+</tr>
+<tr>
+<td><code>&gt;&gt;&gt;</code></td>
+<td>بغیر علامت دائیں شفٹ (Unsigned right shift)</td>
+<td>Shift right, fill with 0</td>
+<td><code>−1 &gt;&gt;&gt; 0</code></td>
+<td><code>4294967295</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Examples</strong></p>
+<div class="highlight"><pre><span></span><code>// پرچم بٹ (permission flags)
+مستقل پڑھنا  = 0b001;   // 1
+مستقل لکھنا  = 0b010;   // 2
+مستقل چلانا = 0b100;   // 4
+
+متغیر اجازت = پڑھنا | لکھنا;   // 3
+لکھو(اجازت &amp; پڑھنا != 0);      // True — پڑھنے کی اجازت ہے
+لکھو(اجازت &amp; چلانا != 0);      // False — چلانے کی نہیں
+
+// بٹ شفٹ بطور ضرب/تقسیم (2 کی طاقت)
+لکھو(1 &lt;&lt; 8);    // 256
+لکھو(256 &gt;&gt; 4);  // 16
+
+// XOR سے قدریں بدلنا
+متغیر الف = 5;
+متغیر ب   = 9;
+الف = الف ^ ب;
+ب   = الف ^ ب;
+الف = الف ^ ب;
+لکھو(الف, ب);   // 9 5
+</code></pre></div>
+<hr />
+<h2 id="special-operators">Special Operators — خاص آپریٹر</h2>
+<h3 id="optional-chaining">Optional Chaining <code>?.</code></h3>
+<p>Safely access a property or call a method on a value that might be <code>خالی</code> or <code>غیر_معرف</code>. Returns <code>خالی</code> instead of throwing an error when the left side is nullish.</p>
+<blockquote>
+<p><strong>اردو:</strong> اختیاری زنجیر بندی <code>?.</code> اس وقت <code>خالی</code> واپس کرتا ہے جب بائیں جانب کی قدر <code>خالی</code> یا <code>غیر_معرف</code> ہو — خطا نہیں آتی۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>متغیر صارف = {
+    نام: "احمد",
+    پتہ: { شہر: "کراچی" }
+};
+
+لکھو(صارف?.نام);            // احمد
+لکھو(صارف?.فون?.نمبر);      // None  (کوئی خطا نہیں)
+لکھو(صارف?.پتہ?.شہر);       // کراچی
+
+// خالی شے
+متغیر غیر_موجود = خالی;
+لکھو(غیر_موجود?.نام);       // None  (خطا نہیں آتی)
+</code></pre></div>
+<hr />
+<h3 id="nullish-coalescing">Nullish Coalescing <code>??</code></h3>
+<p>Return the right operand only when the left operand is <code>خالی</code> (<code>null</code>) or <code>غیر_معرف</code> (<code>undefined</code>). Unlike <code>||</code>, it does <strong>not</strong> treat <code>0</code>, <code>""</code>, or <code>جھوٹ</code> as nullish.</p>
+<blockquote>
+<p><strong>اردو:</strong> خالی فالبیک <code>??</code> صرف اس وقت دائیں قدر واپس کرتا ہے جب بائیں قدر <code>خالی</code> یا <code>غیر_معرف</code> ہو۔ <code>||</code> کے برعکس، <code>0</code>، <code>""</code> اور <code>جھوٹ</code> کو خالی نہیں مانتا۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>متغیر عمر = 0;
+لکھو(عمر || 18);    // 18   (غلط! 0 کو falsy مانتا ہے)
+لکھو(عمر ?? 18);    // 0    (صحیح — صرف null/undefined پر فالبیک)
+
+متغیر رنگ = خالی;
+لکھو(رنگ ?? "نیلا");   // نیلا
+</code></pre></div>
+<hr />
+<h3 id="spread-operator">Spread Operator <code>...</code></h3>
+<p>Expand an iterable (list, string) into individual elements, or collect multiple arguments into a list.</p>
+<blockquote>
+<p><strong>اردو:</strong> پھیلاؤ آپریٹر <code>...</code> سے فہرست کو پھیلائیں یا متعدد دلائل کو فہرست میں اکٹھا کریں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// فہرست پھیلانا
+متغیر ا = [1, 2, 3];
+متغیر ب = [4, 5, 6];
+متغیر ج = [...ا, ...ب];
+لکھو(ج);   // [1, 2, 3, 4, 5, 6]
+
+// فنکشن میں پھیلانا
+فنکشن جمع(x, y, z) { واپس x + y + z; }
+متغیر اعداد = [1, 2, 3];
+لکھو(جمع(...اعداد));   // 6
+
+// باقی پیرامیٹر
+فنکشن سب_کچھ(پہلا, ...باقی) {
+    لکھو("پہلا:", پہلا);
+    لکھو("باقی:", باقی);
+}
+سب_کچھ(1, 2, 3, 4);
+// پہلا: 1
+// باقی: [2, 3, 4]
+</code></pre></div>
+<hr />
+<h3 id="arrow-function">Arrow Function <code>=&gt;</code></h3>
+<p>Shorthand for defining anonymous functions. The <code>=&gt;</code> operator (also written as <code>-&gt;</code>) separates parameters from the function body.</p>
+<blockquote>
+<p><strong>اردو:</strong> تیر فنکشن <code>=&gt;</code> گمنام فنکشن کی مختصر شکل ہے۔ ایک لائن میں <code>واپس</code> ضمنی ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// ایک لائن — واپس ضمنی ہے
+مستقل مربع = x =&gt; x * x;
+لکھو(مربع(5));    // 25
+
+// متعدد پیرامیٹر
+مستقل جمع = (ا, ب) =&gt; ا + ب;
+لکھو(جمع(3, 4));  // 7
+
+// بلاک باڈی — واپس صریح ہے
+مستقل مطلق = x =&gt; {
+    اگر (x &lt; 0) واپس -x;
+    واپس x;
+};
+
+// نقشہ / فلٹر میں استعمال
+متغیر دگنا = نقشہ(x =&gt; x * 2, [1, 2, 3, 4, 5]);
+لکھو(دگنا);   // [2, 4, 6, 8, 10]
+</code></pre></div>
+<hr />
+<h3 id="increment-decrement-">Increment / Decrement <code>++</code> / <code>--</code></h3>
+<blockquote>
+<p><strong>اردو:</strong> <code>i++</code> پہلے پرانی قدر استعمال کرے پھر بڑھائے، <code>++i</code> پہلے بڑھائے پھر استعمال کرے۔</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Form</th>
+<th>Name</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>i++</code></td>
+<td>postfix increment</td>
+<td>Use current value of <code>i</code>, then add 1</td>
+</tr>
+<tr>
+<td><code>++i</code></td>
+<td>prefix increment</td>
+<td>Add 1 to <code>i</code>, then use new value</td>
+</tr>
+<tr>
+<td><code>i--</code></td>
+<td>postfix decrement</td>
+<td>Use current value of <code>i</code>, then subtract 1</td>
+</tr>
+<tr>
+<td><code>--i</code></td>
+<td>prefix decrement</td>
+<td>Subtract 1 from <code>i</code>, then use new value</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>متغیر ن = 5;
+لکھو(ن++);   // 5  (پرانی قدر)
+لکھو(ن);     // 6
+لکھو(++ن);   // 7  (نئی قدر)
+لکھو(ن--);   // 7
+لکھو(ن);     // 6
+</code></pre></div>
+<hr />
+<h3 id="ternary-conditional-operator">Ternary (Conditional) Operator <code>? :</code></h3>
+<p>A shorthand if-else expression: <code>condition ? value_if_true : value_if_false</code></p>
+<blockquote>
+<p><strong>اردو:</strong> ٹرنری آپریٹر مختصر if-else ہے: <code>شرط ? سچ_قدر : جھوٹ_قدر</code></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>متغیر عمر = 20;
+متغیر حالت = (عمر &gt;= 18) ? "بالغ" : "نابالغ";
+لکھو(حالت);   // بالغ
+
+// زنجیر
+متغیر گریڈ = 82;
+متغیر نتیجہ = گریڈ &gt;= 90 ? "A"
+            : گریڈ &gt;= 80 ? "B"
+            : گریڈ &gt;= 70 ? "C"
+            : "F";
+لکھو(نتیجہ);   // B
+</code></pre></div>
+<hr />
+<h3 id="typeof"><code>typeof</code> — <code>قسم</code></h3>
+<p>Return the type of a value as a string. See the <a href="../keywords/#type-and-meta-operators--قسم-آپریٹر">keywords reference</a> for details.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>قسم</code> آپریٹر قدر کی نوعیت بطور متن واپس کرتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>لکھو(قسم(42));         // "عدد"
+لکھو(قسم("اردو"));     // "متن"
+لکھو(قسم(سچ));         // "بولین"
+لکھو(قسم(خالی));       // "خالی"
+لکھو(قسم([]));          // "فہرست"
+لکھو(قسم({}));          // "شے"
+</code></pre></div>
+<hr />
+<h3 id="instanceof"><code>instanceof</code> — <code>مثال</code></h3>
+<p>Test whether an object is an instance of a class.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>مثال</code> آپریٹر جانچتا ہے کہ آیا کوئی شے کسی کلاس (class) کا نمونہ ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// صرف صارف کی بنائی کلاسوں کے ساتھ کام کرتا ہے
+کلاس جانور {}
+کلاس کتا بڑھاؤ جانور {}
+
+متغیر ک = نیا کتا();
+لکھو(ک مثال کتا);      // True
+لکھو(ک مثال جانور);    // True
+
+متغیر ج = نیا جانور();
+لکھو(ج مثال کتا);      // False
+</code></pre></div>
+<blockquote>
+<p><strong>نوٹ:</strong> <code>مثال</code> صرف صارف کی تعریف کردہ کلاسوں کے ساتھ کام کرتا ہے۔ بلٹ ان اقسام (<code>list</code>, <code>str</code>, <code>int</code>) کے ساتھ استعمال نہ کریں۔</p>
+</blockquote>
+<hr />
+<h3 id="in-_"><code>in</code> / <code>میں_ہے</code></h3>
+<p>Test whether a key or value exists in a collection.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>میں_ہے</code> آپریٹر جانچتا ہے کہ آیا کوئی کلید یا قدر مجموعے میں موجود ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>متغیر ڈکشنری = { ا: 1, ب: 2, ج: 3 };
+لکھو("ا" میں_ہے ڈکشنری);    // True
+لکھو("د" میں_ہے ڈکشنری);    // False
+
+متغیر فہرست = [10, 20, 30];
+لکھو(20 میں فہرست);          // True
+</code></pre></div>
+<hr />
+<h3 id="delete"><code>delete</code> — <code>حذف</code></h3>
+<p>Remove a property from an object.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>حذف</code> آپریٹر کسی شے سے خاصیت (property) ہٹاتا ہے۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>متغیر شے = { ا: 1, ب: 2, ج: 3 };
+حذف شے.ب;
+لکھو(شے.مفاتیح(شے));   // ['ا', 'ج']
+</code></pre></div>
+<hr />
+<h2 id="operator-precedence">Operator Precedence — آپریٹر ترجیح</h2>
+<p>Operators are evaluated in the order shown below — highest precedence first (evaluated first). When operators have the same precedence, associativity determines the order (left-to-right unless noted).</p>
+<blockquote>
+<p><strong>اردو:</strong> آپریٹر ترجیح کا مطلب ہے کون پہلے چلتا ہے۔ اوپر والے پہلے چلتے ہیں۔ جب شک ہو تو قوسین <code>()</code> استعمال کریں کیونکہ گروپنگ سب سے زیادہ ترجیح رکھتی ہے۔</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Operators</th>
+<th>Name</th>
+<th>Associativity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>18</td>
+<td><code>()</code></td>
+<td>Grouping</td>
+<td>—</td>
+</tr>
+<tr>
+<td>17</td>
+<td><code>?.</code> <code>[]</code> <code>.</code> <code>()</code></td>
+<td>Member access, call, optional chain</td>
+<td>Left</td>
+</tr>
+<tr>
+<td>16</td>
+<td><code>new</code> (with args)</td>
+<td>Object creation</td>
+<td>Right</td>
+</tr>
+<tr>
+<td>15</td>
+<td><code>i++</code> <code>i--</code></td>
+<td>Postfix increment/decrement</td>
+<td>Left</td>
+</tr>
+<tr>
+<td>14</td>
+<td><code>!</code> <code>~</code> <code>+x</code> <code>-x</code> <code>++i</code> <code>--i</code> <code>قسم</code> <code>خلاء</code> <code>حذف</code></td>
+<td>Unary operators</td>
+<td>Right</td>
+</tr>
+<tr>
+<td>13</td>
+<td><code>**</code></td>
+<td>Exponentiation</td>
+<td><strong>Right</strong></td>
+</tr>
+<tr>
+<td>12</td>
+<td><code>*</code> <code>/</code> <code>%</code> <code>//</code></td>
+<td>Multiplicative</td>
+<td>Left</td>
+</tr>
+<tr>
+<td>11</td>
+<td><code>+</code> <code>-</code></td>
+<td>Additive</td>
+<td>Left</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>&lt;&lt;</code> <code>&gt;&gt;</code> <code>&gt;&gt;&gt;</code></td>
+<td>Bitwise shift</td>
+<td>Left</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>&lt;</code> <code>&lt;=</code> <code>&gt;</code> <code>&gt;=</code> <code>میں</code> <code>میں_ہے</code> <code>مثال</code></td>
+<td>Relational</td>
+<td>Left</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>==</code> <code>!=</code> <code>===</code> <code>!==</code></td>
+<td>Equality</td>
+<td>Left</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>&amp;</code></td>
+<td>Bitwise AND</td>
+<td>Left</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>^</code></td>
+<td>Bitwise XOR</td>
+<td>Left</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>\|</code></td>
+<td>Bitwise OR</td>
+<td>Left</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>&amp;&amp;</code> / <code>اور</code></td>
+<td>Logical AND</td>
+<td>Left</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>\|\|</code> / <code>یا</code></td>
+<td>Logical OR</td>
+<td>Left</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>??</code></td>
+<td>Nullish coalescing</td>
+<td>Left</td>
+</tr>
+<tr>
+<td>1.5</td>
+<td><code>? :</code></td>
+<td>Ternary conditional</td>
+<td><strong>Right</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>=</code> <code>+=</code> <code>-=</code> <code>*=</code> <code>/=</code> <code>%=</code> <code>**=</code> <code>&amp;&amp;=</code> <code>\|\|=</code> <code>??=</code> <code>&amp;=</code> <code>\|=</code></td>
+<td>Assignment</td>
+<td><strong>Right</strong></td>
+</tr>
+<tr>
+<td>0</td>
+<td><code>,</code></td>
+<td>Comma (sequence)</td>
+<td>Left</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Rule of thumb:</strong> When in doubt, use parentheses <code>()</code> to make the intended evaluation order explicit. Grouping is always at the highest precedence.</p>
+</blockquote>
+<p><strong>Precedence Examples</strong></p>
+<div class="highlight"><pre><span></span><code>// بغیر قوسین — طاقت پہلے، پھر ضرب
+لکھو(2 + 3 * 4);       // 14  (نہیں 20)
+لکھو((2 + 3) * 4);     // 20
+
+// یاد رکھیں: ** دائیں سے بائیں ہے
+لکھو(2 ** 3 ** 2);     // 512  (= 2 ** (3 ** 2) = 2 ** 9)
+لکھو((2 ** 3) ** 2);   // 64
+
+// منطقی آپریٹر کی ترتیب
+لکھو(سچ || جھوٹ &amp;&amp; جھوٹ);   // True  (&amp;&amp; پہلے چلتا ہے)
+لکھو((سچ || جھوٹ) &amp;&amp; جھوٹ); // False
+
+// مقایسہ پہلے، پھر منطق
+لکھو(5 &gt; 3 &amp;&amp; 10 &lt; 20);    // True
+لکھو(!(5 &gt; 3) || 1 == 1);  // True
+
+// nullish coalescing
+متغیر الف = خالی ?? "فالبیک";
+لکھو(الف);   // فالبیک
+
+// تفویض دائیں سے بائیں
+متغیر x, y, z;
+x = y = z = 0;   // سب صفر
+</code></pre></div>
+<hr />
+<h2 id="quick-cheat-sheet">Quick Cheat Sheet — فوری حوالہ</h2>
+<blockquote>
+<p><strong>اردو:</strong> عام آپریٹرز کی فوری یاد دہانی۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>// ریاضی
+5 + 3      // 8
+10 - 4     // 6
+3 * 7      // 21
+10 / 4     // 2.5
+10 % 3     // 1
+2 ** 10    // 1024
+عدد(10 / 3)    // 3  (floor division)
+
+// مقایسہ
+5 == 5     // True
+5 === "5"  // False
+5 != 6     // True
+5 &lt; 10     // True
+5 &gt;= 5     // True
+
+// منطق
+سچ &amp;&amp; جھوٹ     // False
+سچ || جھوٹ     // True
+!سچ             // False
+خالی ?? "اے"   // "اے"
+
+// تفویض
+x = 5
+x += 3          // 8
+x -= 2          // 6
+x *= 3          // 18
+x /= 6          // 3.0
+x **= 2         // 9.0
+x ??= "قدر"    // 9.0 (نہیں بدلا — خالی نہیں)
+
+// خاص
+شے?.خاصیت       // محفوظ رسائی
+ا ?? ب          // خالی فالبیک
+...فہرست        // پھیلانا
+x =&gt; x * 2     // تیر فنکشن
+شرط ? ا : ب    // ٹرنری
+</code></pre></div>
+<hr />
+<p><em>اردو پروگرامنگ لینگویج — Operators Reference — AlinGo Developers</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

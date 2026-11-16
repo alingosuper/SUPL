@@ -1,0 +1,1144 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>5. String Methods — متن کے طریقے - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#5-string-methods" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              5. String Methods — متن کے طریقے
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../beginner/" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../libraries/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beginner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../libraries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#trimming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trimming — کاٹنا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case Conversion — حروف کی تبدیلی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#searching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Searching — تلاش
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replace — تبدیل کرنا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repeat-and-pad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Repeat and Pad — دہرانا اور پیڈنگ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slice — کاٹنا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#split" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Split — تقسیم
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#join" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Join — جوڑنا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Template Strings — سانچہ متن
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-functions-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Built-in Functions — بلٹ-ان فنکشنز
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Reference — فوری حوالہ
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="5-string-methods">5. String Methods — متن کے طریقے</h1>
+<p><strong>Difficulty:</strong> Intermediate — متوسط<br />
+<strong>Time:</strong> ~20 minutes</p>
+<hr />
+<h2 id="trimming">Trimming — کاٹنا</h2>
+<p>Strings are immutable — every method returns a <strong>new</strong> string:</p>
+<div class="highlight"><pre><span></span><code>متغیر م = "  السلام علیکم اردو  ";
+
+لکھو(م.چھاٹو());           // السلام علیکم اردو     (trim both sides)
+لکھو(م.شروع_چھاٹو());      // السلام علیکم اردو     (left only — trimStart)
+لکھو(م.آخر_چھاٹو());       //   السلام علیکم اردو   (right only — trimEnd)
+</code></pre></div>
+<hr />
+<h2 id="case-conversion">Case Conversion — حروف کی تبدیلی</h2>
+<p>Works for ASCII letters:</p>
+<div class="highlight"><pre><span></span><code>لکھو("hello world".بڑے_حروف());    // HELLO WORLD
+لکھو("HELLO WORLD".چھوٹے_حروف()); // hello world
+</code></pre></div>
+<hr />
+<h2 id="searching">Searching — تلاش</h2>
+<div class="highlight"><pre><span></span><code>متغیر جملہ = "اردو پروگرامنگ زبان ہے";
+
+لکھو(جملہ.شامل_ہے("پروگرامنگ"));      // True   (includes)
+لکھو(جملہ.شروع_ہے("اردو"));            // True   (startsWith)
+لکھو(جملہ.ختم_ہے("ہے"));              // True   (endsWith)
+لکھو(جملہ.مقام("زبان"));              // 15     (indexOf — اشاریہ)
+لکھو(جملہ.مقام("جاوا"));              // -1     (not found)
+لکھو("اردو اردو".آخری_مقام("اردو"));  // 5      (lastIndexOf)
+</code></pre></div>
+<hr />
+<h2 id="replace">Replace — تبدیل کرنا</h2>
+<p><code>.بدلو()</code> replaces <strong>all</strong> occurrences (maps to <code>replaceAll</code>):</p>
+<div class="highlight"><pre><span></span><code>متغیر م = "ایک ایک ایک";
+لکھو(م.بدلو("ایک", "دو"));   // دو دو دو
+
+متغیر م2 = "السلام علیکم دنیا";
+لکھو(م2.بدلو("دنیا", "اردو"));   // السلام علیکم اردو
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> <code>.بدلو(پرانا, نیا)</code> تمام مطابقتیں بدلتا ہے۔</p>
+</blockquote>
+<hr />
+<h2 id="repeat-and-pad">Repeat and Pad — دہرانا اور پیڈنگ</h2>
+<div class="highlight"><pre><span></span><code>لکھو("ہا".دہراؤ(4));            // ہاہاہاہا
+لکھو("-".دہراؤ(20));             // --------------------
+
+لکھو("7".padStart(4, "0"));     // 0007   (pad from left)
+لکھو("7".padEnd(4, "-"));       // 7---   (pad from right)
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> <code>.دہراؤ(تعداد)</code> متن کو تعداد بار دہراتا ہے۔ <code>padStart</code>/<code>padEnd</code> ابھی اردو نام نہیں رکھتے۔</p>
+</blockquote>
+<hr />
+<h2 id="slice">Slice — کاٹنا</h2>
+<div class="highlight"><pre><span></span><code>متغیر م = "اردو پروگرامنگ";
+
+لکھو(م.حصہ(0, 4));     // اردو
+لکھو(م.حصہ(5));        // پروگرامنگ   (from index 5 to end)
+لکھو(م.حصہ(-9));       // پروگرامنگ   (last 9 chars)
+</code></pre></div>
+<hr />
+<h2 id="split">Split — تقسیم</h2>
+<div class="highlight"><pre><span></span><code>// Built-in تقسیم() function
+لکھو(تقسیم("احمد فاطمہ علی"));
+// ['احمد', 'فاطمہ', 'علی']
+
+لکھو(تقسیم("ایک,دو,تین", ","));
+// ['ایک', 'دو', 'تین']
+
+لکھو(تقسیم("a|b|c", "|"));
+// ['a', 'b', 'c']
+</code></pre></div>
+<hr />
+<h2 id="join">Join — جوڑنا</h2>
+<div class="highlight"><pre><span></span><code>// For string lists — .جوڑو() method
+متغیر ف = ["احمد", "فاطمہ", "علی"];
+لکھو(ف.جوڑو(", "));    // احمد, فاطمہ, علی
+لکھو(ف.جوڑو(" | "));   // احمد | فاطمہ | علی
+
+// For any list — ربط() built-in
+لکھو(ربط(" — ", ["ایک", "دو", "تین"]));    // ایک — دو — تین
+لکھو(ربط(", ", [1, 2, 3]));                 // 1, 2, 3
+</code></pre></div>
+<hr />
+<h2 id="template-strings">Template Strings — سانچہ متن</h2>
+<p>Embed variables and expressions with backticks and <code>${}</code>:</p>
+<div class="highlight"><pre><span></span><code>متغیر نام = "احمد";
+متغیر عمر = 25;
+
+لکھو(`نام: ${نام}، عمر: ${عمر}`);
+لکھو(`پیدائش: ${2026 - عمر}`);
+لکھو(`${عمر &gt;= 18 ? "بالغ" : "نابالغ"}`);
+</code></pre></div>
+<hr />
+<h2 id="built-in-functions-">Built-in Functions — بلٹ-ان فنکشنز</h2>
+<div class="highlight"><pre><span></span><code>// شامل — check substring (built-in)
+لکھو(شامل("اردو پروگرامنگ", "اردو"));     // True
+لکھو(شامل("اردو پروگرامنگ", "جاوا"));     // False
+
+// لمبائی — length (built-in)
+لکھو(لمبائی("السلام علیکم"));              // 13
+</code></pre></div>
+<hr />
+<h2 id="quick-reference">Quick Reference — فوری حوالہ</h2>
+<table>
+<thead>
+<tr>
+<th>Urdu Method</th>
+<th>English</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.چھاٹو()</code></td>
+<td><code>.trim()</code></td>
+<td>remove surrounding spaces</td>
+</tr>
+<tr>
+<td><code>.شروع_چھاٹو()</code></td>
+<td><code>.trimStart()</code></td>
+<td>remove left spaces</td>
+</tr>
+<tr>
+<td><code>.آخر_چھاٹو()</code></td>
+<td><code>.trimEnd()</code></td>
+<td>remove right spaces</td>
+</tr>
+<tr>
+<td><code>.بڑے_حروف()</code></td>
+<td><code>.toUpperCase()</code></td>
+<td>uppercase</td>
+</tr>
+<tr>
+<td><code>.چھوٹے_حروف()</code></td>
+<td><code>.toLowerCase()</code></td>
+<td>lowercase</td>
+</tr>
+<tr>
+<td><code>.شامل_ہے(س)</code></td>
+<td><code>.includes(s)</code></td>
+<td>contains substring</td>
+</tr>
+<tr>
+<td><code>.شروع_ہے(س)</code></td>
+<td><code>.startsWith(s)</code></td>
+<td>starts with</td>
+</tr>
+<tr>
+<td><code>.ختم_ہے(س)</code></td>
+<td><code>.endsWith(s)</code></td>
+<td>ends with</td>
+</tr>
+<tr>
+<td><code>.مقام(س)</code></td>
+<td><code>.indexOf(s)</code></td>
+<td>first occurrence index</td>
+</tr>
+<tr>
+<td><code>.آخری_مقام(س)</code></td>
+<td><code>.lastIndexOf(s)</code></td>
+<td>last occurrence index</td>
+</tr>
+<tr>
+<td><code>.بدلو(پ, ن)</code></td>
+<td><code>.replaceAll(o, n)</code></td>
+<td>replace all occurrences</td>
+</tr>
+<tr>
+<td><code>.دہراؤ(ن)</code></td>
+<td><code>.repeat(n)</code></td>
+<td>repeat n times</td>
+</tr>
+<tr>
+<td><code>.حصہ(ا, آ)</code></td>
+<td><code>.slice(a, b)</code></td>
+<td>substring</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>اردو:</strong> تمام متن کے طریقے نئی کاپی دیتے ہیں — اصل نہیں بدلتی۔</p>
+</blockquote>
+<hr />
+<p><a href="../04-array-methods/">← Previous: Array Methods</a> | <a href="../06-classes/">Next: Classes →</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

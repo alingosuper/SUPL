@@ -1,0 +1,1737 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Date & Time Library — اردو/تاریخ - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#date-time-library" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Date &amp; Time Library — اردو/تاریخ
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tutorial/beginner/" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/beginner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/intermediate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents — فہرست مضامین
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#duration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        مدت — Duration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="مدت — Duration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties — خصوصیات
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arithmetic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arithmetic — حسابات
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gregorian-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        تاریخ — Gregorian Date
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="تاریخ — Gregorian Date">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties — خصوصیات
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods — طریقے
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#month-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Month constants — مہینوں کے مستقل
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weekday-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weekday constants — ہفتے کے ایام
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#islamic-calendar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ہجری — Islamic Calendar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ہجری — Islamic Calendar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties — خصوصیات
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hijri-month-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hijri month names — ہجری مہینوں کے نام
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Built-in Shortcuts — اندرونی شارٹ کٹ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples — مثالیں
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples — مثالیں">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-age-and-birthday-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1 — Age and birthday calculator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-ramadan-countdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2 — Ramadan countdown
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-project-deadline-tracker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 3 — Project deadline tracker
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-4-duration-formatting-utility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 4 — Duration formatting utility
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="date-time-library">Date &amp; Time Library — اردو/تاریخ</h1>
+<p>The <code>اردو/تاریخ</code> library provides classes for Gregorian dates, Islamic (Hijri) calendar dates, and durations, along with convenient built-in shortcuts.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>اردو/تاریخ</code> لائبریری عیسوی تاریخ (Gregorian)، ہجری تقویم (Islamic calendar)، اور مدت (duration) کے لیے کلاس فراہم کرتی ہے۔</p>
+</blockquote>
+<p><strong>Import:</strong></p>
+<div class="highlight"><pre><span></span><code>درآمد { تاریخ, وقت, مدت, ہجری } سے "اردو/تاریخ"
+</code></pre></div>
+<hr />
+<h2 id="table-of-contents">Table of Contents — فہرست مضامین</h2>
+<ol>
+<li><a href="#مدت--duration">مدت — Duration</a></li>
+<li><a href="#تاریخ--gregorian-date">تاریخ — Gregorian Date</a></li>
+<li><a href="#ہجری--islamic-calendar">ہجری — Islamic Calendar</a></li>
+<li><a href="#built-in-shortcuts">Built-in Shortcuts</a></li>
+<li><a href="#examples">Examples</a></li>
+</ol>
+<hr />
+<h2 id="duration">مدت — Duration</h2>
+<p>A <code>مدت</code> represents a span of time. It wraps Python's <code>timedelta</code>.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>مدت</code> وقت کے ایک وقفے کو ظاہر کرتی ہے۔ یہ Python کے <code>timedelta</code> کو لپیٹتی ہے۔</p>
+</blockquote>
+<h3 id="constructor">Constructor</h3>
+<div class="highlight"><pre><span></span><code>متغیر م = نیا مدت(دن=0, گھنٹے=0, منٹ=0, سیکنڈ=0, ہفتے=0)
+</code></pre></div>
+<p>All parameters are optional and can be combined:</p>
+<div class="highlight"><pre><span></span><code>متغیر دو_ہفتے   = نیا مدت(ہفتے=2)
+متغیر ڈیڑھ_دن  = نیا مدت(دن=1, گھنٹے=12)
+متغیر ایک_گھنٹہ = نیا مدت(گھنٹے=1)
+</code></pre></div>
+<h3 id="properties">Properties — خصوصیات</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.دن</code></td>
+<td>int</td>
+<td>Days component (may be negative)</td>
+</tr>
+<tr>
+<td><code>.سیکنڈ</code></td>
+<td>int</td>
+<td>Seconds component within the day (0–86399)</td>
+</tr>
+<tr>
+<td><code>.کل_سیکنڈ</code></td>
+<td>float</td>
+<td>Total duration in seconds</td>
+</tr>
+<tr>
+<td><code>.کل_منٹ</code></td>
+<td>float</td>
+<td>Total duration in minutes</td>
+</tr>
+<tr>
+<td><code>.کل_گھنٹے</code></td>
+<td>float</td>
+<td>Total duration in hours</td>
+</tr>
+<tr>
+<td><code>.کل_دن</code></td>
+<td>float</td>
+<td>Total duration in days</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arithmetic">Arithmetic — حسابات</h3>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>م1 + م2</code></td>
+<td>Add two durations</td>
+</tr>
+<tr>
+<td><code>م1 - م2</code></td>
+<td>Subtract durations</td>
+</tr>
+<tr>
+<td><code>م * n</code></td>
+<td>Multiply duration by a number</td>
+</tr>
+<tr>
+<td><code>-م</code></td>
+<td>Negate (reverse direction)</td>
+</tr>
+<tr>
+<td><code>abs(م)</code></td>
+<td>Absolute value</td>
+</tr>
+<tr>
+<td><code>م1 &lt; م2</code>, <code>م1 == م2</code>, etc.</td>
+<td>Compare durations</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>درآمد { مدت } سے "اردو/تاریخ"
+
+متغیر ہفتہ = نیا مدت(ہفتے=1)
+متغیر تین_دن = نیا مدت(دن=3)
+
+لکھو("ہفتہ:", ہفتہ.کل_دن, "دن")
+لکھو("تین دن:", تین_دن.کل_گھنٹے, "گھنٹے")
+لکھو("فرق:", (ہفتہ - تین_دن).کل_دن, "دن")
+لکھو("دوگنا:", (ہفتہ * 2).کل_دن, "دن")
+</code></pre></div>
+<hr />
+<h2 id="gregorian-date">تاریخ — Gregorian Date</h2>
+<blockquote>
+<p><strong>اردو:</strong> <code>تاریخ</code> عیسوی کیلنڈر کی تاریخ ہے۔ آج کی تاریخ <code>تاریخ.آج()</code> سے حاصل کریں۔</p>
+</blockquote>
+<h3 id="constructor_1">Constructor</h3>
+<div class="highlight"><pre><span></span><code>متغیر ت = نیا تاریخ(سال, مہینہ, دن)
+</code></pre></div>
+<p>Create today's date with the static method:</p>
+<div class="highlight"><pre><span></span><code>متغیر آج = تاریخ.آج()
+</code></pre></div>
+<h3 id="properties_1">Properties — خصوصیات</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.سال</code></td>
+<td>int</td>
+<td>Four-digit year</td>
+</tr>
+<tr>
+<td><code>.مہینہ</code></td>
+<td>int</td>
+<td>Month (1–12)</td>
+</tr>
+<tr>
+<td><code>.دن</code></td>
+<td>int</td>
+<td>Day of month (1–31)</td>
+</tr>
+<tr>
+<td><code>.ہفتے_کا_دن</code></td>
+<td>int</td>
+<td>Weekday: 0=پیر … 6=اتوار</td>
+</tr>
+</tbody>
+</table>
+<h3 id="methods">Methods — طریقے</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.شامل(مدت)</code></td>
+<td>تاریخ</td>
+<td>Add a duration → new date</td>
+</tr>
+<tr>
+<td><code>.فرق(دوسری_تاریخ)</code></td>
+<td>مدت</td>
+<td>Subtract two dates → duration</td>
+</tr>
+<tr>
+<td><code>.فارمیٹ(فارمیٹ_متن)</code></td>
+<td>string</td>
+<td>Format using strftime codes</td>
+</tr>
+<tr>
+<td><code>.متن()</code></td>
+<td>string</td>
+<td>ISO format: <code>YYYY-MM-DD</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="month-constants">Month constants — مہینوں کے مستقل</h3>
+<table>
+<thead>
+<tr>
+<th>Urdu</th>
+<th>Int</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>جنوری</code></td>
+<td>1</td>
+<td>January</td>
+</tr>
+<tr>
+<td><code>فروری</code></td>
+<td>2</td>
+<td>February</td>
+</tr>
+<tr>
+<td><code>مارچ</code></td>
+<td>3</td>
+<td>March</td>
+</tr>
+<tr>
+<td><code>اپریل</code></td>
+<td>4</td>
+<td>April</td>
+</tr>
+<tr>
+<td><code>مئی</code></td>
+<td>5</td>
+<td>May</td>
+</tr>
+<tr>
+<td><code>جون</code></td>
+<td>6</td>
+<td>June</td>
+</tr>
+<tr>
+<td><code>جولائی</code></td>
+<td>7</td>
+<td>July</td>
+</tr>
+<tr>
+<td><code>اگست</code></td>
+<td>8</td>
+<td>August</td>
+</tr>
+<tr>
+<td><code>ستمبر</code></td>
+<td>9</td>
+<td>September</td>
+</tr>
+<tr>
+<td><code>اکتوبر</code></td>
+<td>10</td>
+<td>October</td>
+</tr>
+<tr>
+<td><code>نومبر</code></td>
+<td>11</td>
+<td>November</td>
+</tr>
+<tr>
+<td><code>دسمبر</code></td>
+<td>12</td>
+<td>December</td>
+</tr>
+</tbody>
+</table>
+<h3 id="weekday-constants">Weekday constants — ہفتے کے ایام</h3>
+<table>
+<thead>
+<tr>
+<th>Urdu</th>
+<th>Int</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>پیر</code></td>
+<td>0</td>
+<td>Monday</td>
+</tr>
+<tr>
+<td><code>منگل</code></td>
+<td>1</td>
+<td>Tuesday</td>
+</tr>
+<tr>
+<td><code>بدھ</code></td>
+<td>2</td>
+<td>Wednesday</td>
+</tr>
+<tr>
+<td><code>جمعرات</code></td>
+<td>3</td>
+<td>Thursday</td>
+</tr>
+<tr>
+<td><code>جمعہ</code></td>
+<td>4</td>
+<td>Friday</td>
+</tr>
+<tr>
+<td><code>ہفتہ</code></td>
+<td>5</td>
+<td>Saturday</td>
+</tr>
+<tr>
+<td><code>اتوار</code></td>
+<td>6</td>
+<td>Sunday</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>درآمد { تاریخ, مدت } سے "اردو/تاریخ"
+
+// آج کی تاریخ
+متغیر آج = تاریخ.آج()
+لکھو("آج:", آج.متن())
+
+// مخصوص تاریخ
+متغیر یوم_آزادی = نیا تاریخ(1947, 8, 14)
+لکھو("یوم آزادی:", یوم_آزادی.متن())
+
+// حسابات
+متغیر عمر = آج.فرق(نیا تاریخ(2000, 1, 1))
+لکھو("صدی سے دن:", عمر.کل_دن.toFixed(0))
+
+// اگلے ہفتے کی تاریخ
+متغیر اگلا_ہفتہ = آج.شامل(نیا مدت(ہفتے=1))
+لکھو("اگلا ہفتہ:", اگلا_ہفتہ.متن())
+
+// ہفتے کا دن
+متغیر دن_نام = ["پیر","منگل","بدھ","جمعرات","جمعہ","ہفتہ","اتوار"]
+لکھو("آج:", دن_نام[آج.ہفتے_کا_دن])
+
+// فارمیٹنگ
+لکھو("فارمیٹ:", آج.فارمیٹ("%d %B %Y"))
+</code></pre></div>
+<hr />
+<h2 id="islamic-calendar">ہجری — Islamic Calendar</h2>
+<p><code>ہجری</code> provides Islamic (Hijri) calendar dates and conversion to/from Gregorian.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>ہجری</code> اسلامی تقویم کی تاریخ اور عیسوی تاریخ کے درمیان تبدیلی فراہم کرتا ہے۔</p>
+</blockquote>
+<h3 id="constructor_2">Constructor</h3>
+<div class="highlight"><pre><span></span><code>متغیر ہ = نیا ہجری(سال, مہینہ, دن)
+</code></pre></div>
+<p>Static methods:</p>
+<div class="highlight"><pre><span></span><code>متغیر آج_ہجری  = ہجری.آج()                        // آج کی ہجری تاریخ
+متغیر تبدیل   = ہجری.میلادی_سے(سال, مہینہ, دن)    // Gregorian → Hijri
+متغیر میلادی  = ہجری_تاریخ.میلادی_کو()             // Hijri → Gregorian
+</code></pre></div>
+<h3 id="properties_2">Properties — خصوصیات</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.سال</code></td>
+<td>int</td>
+<td>Hijri year</td>
+</tr>
+<tr>
+<td><code>.مہینہ</code></td>
+<td>int</td>
+<td>Hijri month (1–12)</td>
+</tr>
+<tr>
+<td><code>.دن</code></td>
+<td>int</td>
+<td>Day of month</td>
+</tr>
+<tr>
+<td><code>.مہینہ_نام</code></td>
+<td>string</td>
+<td>Urdu month name</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hijri-month-names">Hijri month names — ہجری مہینوں کے نام</h3>
+<table>
+<thead>
+<tr>
+<th>Num</th>
+<th>Urdu</th>
+<th>Arabic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>محرم</code></td>
+<td>Muḥarram</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>صفر</code></td>
+<td>Ṣafar</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>ربیع_الاول</code></td>
+<td>Rabīʿ al-Awwal</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>ربیع_الثانی</code></td>
+<td>Rabīʿ al-Thānī</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>جمادی_الاول</code></td>
+<td>Jumādá al-Ūlá</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>جمادی_الثانی</code></td>
+<td>Jumādá al-Ākhira</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>رجب</code></td>
+<td>Rajab</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>شعبان</code></td>
+<td>Shaʿbān</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>رمضان</code></td>
+<td>Ramaḍān</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>شوال</code></td>
+<td>Shawwāl</td>
+</tr>
+<tr>
+<td>11</td>
+<td><code>ذوالقعدہ</code></td>
+<td>Dhū al-Qaʿda</td>
+</tr>
+<tr>
+<td>12</td>
+<td><code>ذوالحجہ</code></td>
+<td>Dhū al-Ḥijja</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>درآمد { ہجری } سے "اردو/تاریخ"
+
+// آج ہجری میں
+متغیر آج = ہجری.آج()
+لکھو("آج ہجری:", `${آج.سال} ${آج.مہینہ_نام} ${آج.دن}`)
+
+// Gregorian سے Hijri
+متغیر ہجری_تاریخ = ہجری.میلادی_سے(1947, 8, 14)
+لکھو("یوم آزادی ہجری:", `${ہجری_تاریخ.سال} ${ہجری_تاریخ.مہینہ_نام} ${ہجری_تاریخ.دن}`)
+
+// Hijri سے Gregorian
+متغیر میلادی = ہجری_تاریخ.میلادی_کو()
+لکھو("واپس میلادی:", میلادی.متن())
+</code></pre></div>
+<hr />
+<h2 id="built-in-shortcuts">Built-in Shortcuts — اندرونی شارٹ کٹ</h2>
+<p>These functions are available globally without importing:</p>
+<blockquote>
+<p><strong>اردو:</strong> یہ فنکشن درآمد کیے بغیر ہر جگہ دستیاب ہیں۔ <code>وقت()</code> موجودہ ٹائم اسٹیمپ، <code>تاریخ()</code> موجودہ تاریخ و وقت، اور <code>تاخیر(ms)</code> مدت (duration) کے لیے انتظار کرتے ہیں۔</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>وقت()</code></td>
+<td>Returns current timestamp in milliseconds (like <code>Date.now()</code>)</td>
+</tr>
+<tr>
+<td><code>تاریخ()</code></td>
+<td>Returns current datetime as a formatted string</td>
+</tr>
+<tr>
+<td><code>تاخیر(ms)</code></td>
+<td>Async sleep for <code>ms</code> milliseconds</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>// timestamp
+متغیر شروع = وقت()
+// ... کچھ کام ...
+متغیر وقفہ = وقت() - شروع
+لکھو(`کام میں ${وقفہ}ms لگے`)
+
+// موجودہ تاریخ و وقت
+لکھو("ابھی:", تاریخ())
+
+// انتظار
+غیر_متزامن فنکشن تاخیر_مثال() {
+    لکھو("انتظار شروع")
+    انتظار تاخیر(2000)   // 2 سیکنڈ
+    لکھو("2 سیکنڈ گزرے")
+}
+
+انتظار تاخیر_مثال()
+</code></pre></div>
+<hr />
+<h2 id="examples">Examples — مثالیں</h2>
+<h3 id="example-1-age-and-birthday-calculator">Example 1 — Age and birthday calculator</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال ۱ — عمر اور سالگرہ کا حساب</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { تاریخ, مدت } سے "اردو/تاریخ"
+
+فنکشن عمر_حساب_کرو(پیدائش_سال, پیدائش_مہینہ, پیدائش_دن) {
+    متغیر آج = تاریخ.آج()
+    متغیر پیدائش = نیا تاریخ(پیدائش_سال, پیدائش_مہینہ, پیدائش_دن)
+
+    متغیر فرق = آج.فرق(پیدائش)
+    متغیر سال = Math.floor(فرق.کل_دن / 365.25)
+    متغیر دن  = Math.floor(فرق.کل_دن % 365.25)
+
+    لکھو(`عمر: ${سال} سال اور ${دن} دن`)
+
+    // اگلی سالگرہ
+    متغیر اس_سال_سالگرہ = نیا تاریخ(آج.سال, پیدائش_مہینہ, پیدائش_دن)
+    اگر (اس_سال_سالگرہ.فرق(آج).کل_دن &lt; 0) {
+        اس_سال_سالگرہ = نیا تاریخ(آج.سال + 1, پیدائش_مہینہ, پیدائش_دن)
+    }
+
+    متغیر بقیہ = اس_سال_سالگرہ.فرق(آج).کل_دن
+    لکھو(`اگلی سالگرہ: ${بقیہ.toFixed(0)} دن بعد — ${اس_سال_سالگرہ.فارمیٹ("%d %B %Y")}`)
+}
+
+عمر_حساب_کرو(1995, 3, 22)
+</code></pre></div>
+<h3 id="example-2-ramadan-countdown">Example 2 — Ramadan countdown</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال ۲ — رمضان المبارک کی گنتی۔ ہجری تقویم سے ماہ رمضان تک باقی دن معلوم کریں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { تاریخ, ہجری, مدت } سے "اردو/تاریخ"
+
+فنکشن رمضان_گنتی() {
+    متغیر آج_ہجری = ہجری.آج()
+    لکھو("آج:", `${آج_ہجری.سال} ${آج_ہجری.مہینہ_نام} ${آج_ہجری.دن}`)
+
+    اگر (آج_ہجری.مہینہ == 9) {
+        لکھو("ماہ رمضان المبارک جاری ہے!")
+        لکھو(`دن نمبر: ${آج_ہجری.دن}`)
+        لکھو(`باقی دن: ${30 - آج_ہجری.دن}`)
+    } ورنہ {
+        // اگلا رمضان
+        متغیر اگلا_رمضان_ہجری = نیا ہجری(
+            آج_ہجری.مہینہ &gt;= 9 ? آج_ہجری.سال + 1 : آج_ہجری.سال,
+            9, 1
+        )
+        متغیر اگلا_رمضان_میلادی = اگلا_رمضان_ہجری.میلادی_کو()
+        متغیر آج_میلادی = تاریخ.آج()
+        متغیر بقیہ_دن = اگلا_رمضان_میلادی.فرق(آج_میلادی).کل_دن
+
+        لکھو(`اگلا رمضان: ${اگلا_رمضان_ہجری.سال}ھ`)
+        لکھو(`میلادی تاریخ: ${اگلا_رمضان_میلادی.فارمیٹ("%d %B %Y")}`)
+        لکھو(`باقی: ${بقیہ_دن.toFixed(0)} دن`)
+    }
+}
+
+رمضان_گنتی()
+</code></pre></div>
+<h3 id="example-3-project-deadline-tracker">Example 3 — Project deadline tracker</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال ۳ — منصوبوں کی آخری تاریخ (deadline) کا ٹریکر</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { تاریخ, مدت } سے "اردو/تاریخ"
+
+متغیر آج = تاریخ.آج()
+
+متغیر منصوبے = [
+    { نام: "ویب سائٹ ڈیزائن",   آخری_تاریخ: نیا تاریخ(2026, 6, 1) },
+    { نام: "موبائل ایپ",         آخری_تاریخ: نیا تاریخ(2026, 7, 15) },
+    { نام: "سالانہ رپورٹ",       آخری_تاریخ: نیا تاریخ(2026, 5, 31) },
+    { نام: "ڈیٹابیس منتقلی",    آخری_تاریخ: نیا تاریخ(2026, 8, 1) }
+]
+
+لکھو("=" * 55)
+لکھو("   منصوبوں کی آخری تاریخیں")
+لکھو("=" * 55)
+
+کے_لیے (متغیر منصوبہ کا منصوبے) {
+    متغیر بقیہ = منصوبہ.آخری_تاریخ.فرق(آج).کل_دن
+    متغیر علامت
+
+    اگر (بقیہ &lt; 0) {
+        علامت = "✗ میعاد ختم"
+    } ورنہ_اگر (بقیہ &lt;= 7) {
+        علامت = "⚠ فوری"
+    } ورنہ_اگر (بقیہ &lt;= 30) {
+        علامت = "! قریب"
+    } ورنہ {
+        علامت = "✓ وقت ہے"
+    }
+
+    لکھو(`${علامت.padEnd(12)} ${منصوبہ.نام.padEnd(20)} ${بقیہ.toFixed(0).padStart(5)} دن`)
+}
+
+لکھو("=" * 55)
+</code></pre></div>
+<h3 id="example-4-duration-formatting-utility">Example 4 — Duration formatting utility</h3>
+<blockquote>
+<p><strong>اردو:</strong> مثال ۴ — مدت (duration) کو اردو متن میں ظاہر کرنے کا فنکشن</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>درآمد { مدت } سے "اردو/تاریخ"
+
+فنکشن مدت_متن(کل_سیکنڈ) {
+    متغیر م = نیا مدت(سیکنڈ=کل_سیکنڈ)
+
+    متغیر دن    = Math.floor(م.کل_دن)
+    متغیر گھنٹے = Math.floor(م.کل_گھنٹے % 24)
+    متغیر منٹ   = Math.floor(م.کل_منٹ % 60)
+    متغیر سیکنڈ = Math.floor(م.کل_سیکنڈ % 60)
+
+    متغیر حصے = []
+    اگر (دن    &gt; 0) { حصے.شامل(`${دن} دن`) }
+    اگر (گھنٹے &gt; 0) { حصے.شامل(`${گھنٹے} گھنٹے`) }
+    اگر (منٹ   &gt; 0) { حصے.شامل(`${منٹ} منٹ`) }
+    اگر (سیکنڈ &gt; 0) { حصے.شامل(`${سیکنڈ} سیکنڈ`) }
+
+    واپس حصے.join(", ")
+}
+
+لکھو(مدت_متن(90061))      // 1 دن، 1 گھنٹہ، 1 منٹ، 1 سیکنڈ
+لکھو(مدت_متن(3600))       // 1 گھنٹہ
+لکھو(مدت_متن(86400 * 5))  // 5 دن
+</code></pre></div>
+<hr />
+<p><em>Previous: <a href="../crypto/">Cryptography →</a> | Next: <a href="../logging/">Logging →</a></em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

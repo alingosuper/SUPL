@@ -1,0 +1,1202 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>2. Lists / Arrays — فہرست - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2-lists-arrays" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2. Lists / Arrays — فہرست
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../beginner/" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../libraries/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../../../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beginner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../libraries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Lists — فہرست بنانا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-and-removing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding and Removing — شامل اور ہٹانا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#searching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Searching — تلاش
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slicing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slicing — کاٹنا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#splice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Splice — کاٹ کر جوڑنا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#joining-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Joining Lists — فہرستیں جوڑنا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sorting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sorting — ترتیب
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reversing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reversing — الٹانا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flattening" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flattening — چپٹا کرنا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fill — بھرنا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#joining-to-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Joining to String — متن میں بدلنا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copying" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Copying — نقل بنانا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Points — اہم نکات
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="2-lists-arrays">2. Lists / Arrays — فہرست</h1>
+<p><strong>Difficulty:</strong> Intermediate — متوسط<br />
+<strong>Time:</strong> ~25 minutes</p>
+<hr />
+<h2 id="creating-lists">Creating Lists — فہرست بنانا</h2>
+<div class="highlight"><pre><span></span><code>متغیر اعداد = [1, 2, 3, 4, 5];
+متغیر نام = ["احمد", "فاطمہ", "علی"];
+متغیر خالی_ف = [];
+متغیر ملی = [1, "سلام", سچ, خالی];    // mixed types
+</code></pre></div>
+<p>Access elements by index (starts at 0):</p>
+<div class="highlight"><pre><span></span><code>لکھو(نام[0]);          // احمد
+لکھو(نام[-1]);         // علی   (last element)
+لکھو(نام.لمبائی);      // 3   (length property)
+لکھو(لمبائی(نام));     // 3   (built-in function also works)
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> فہرست <code>[]</code> میں، اشاریہ صفر سے شروع۔ <code>.لمبائی</code> سے یا <code>لمبائی()</code> فنکشن سے تعداد جانیں۔</p>
+</blockquote>
+<hr />
+<h2 id="adding-and-removing">Adding and Removing — شامل اور ہٹانا</h2>
+<div class="highlight"><pre><span></span><code>متغیر ف = [1, 2, 3];
+
+ف.شامل(4);                   // push — add to end
+لکھو(ف);                      // [1, 2, 3, 4]
+
+متغیر آخری = ف.نکالو();       // pop — remove from end
+لکھو(آخری);                   // 4
+لکھو(ف);                      // [1, 2, 3]
+
+ف.پہلے_شامل(0);               // unshift — add to beginning
+لکھو(ف);                      // [0, 1, 2, 3]
+
+متغیر پہلا = ف.پہلا_نکالو();  // shift — remove from beginning
+لکھو(پہلا);                   // 0
+لکھو(ف);                      // [1, 2, 3]
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> <code>.شامل()</code> آخر میں، <code>.نکالو()</code> آخر سے، <code>.پہلے_شامل()</code> شروع میں، <code>.پہلا_نکالو()</code> شروع سے ہٹاتا ہے۔</p>
+</blockquote>
+<hr />
+<h2 id="searching">Searching — تلاش</h2>
+<div class="highlight"><pre><span></span><code>متغیر ف = [10, 20, 30, 40, 50];
+
+لکھو(ف.مقام(30));          // 2   (index of 30 — indexOf)
+لکھو(ف.مقام(99));          // -1  (not found)
+لکھو(ف.شامل_ہے(40));       // True  (includes)
+لکھو(ف.شامل_ہے(99));       // False
+</code></pre></div>
+<hr />
+<h2 id="slicing">Slicing — کاٹنا</h2>
+<div class="highlight"><pre><span></span><code>متغیر ف = [10, 20, 30, 40, 50];
+
+لکھو(ف.حصہ(1, 3));    // [20, 30]  (index 1 and 2 — slice)
+لکھو(ف.حصہ(2));       // [30, 40, 50]  (from index 2 to end)
+لکھو(ف.حصہ(-2));      // [40, 50]  (last 2)
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> <code>.حصہ(شروع, آخر)</code> نئی فہرست دیتا ہے — اصل فہرست نہیں بدلتی۔</p>
+</blockquote>
+<hr />
+<h2 id="splice">Splice — کاٹ کر جوڑنا</h2>
+<p><code>.کاٹو()</code> modifies the list in place — it can remove and/or insert:</p>
+<div class="highlight"><pre><span></span><code>// Remove 2 elements starting at index 1
+متغیر ف = [1, 2, 3, 4, 5];
+ف.کاٹو(1, 2);
+لکھو(ف);    // [1, 4, 5]
+
+// Insert at index 2 (remove 0, insert 10 and 20)
+متغیر ف2 = [1, 2, 3, 4, 5];
+ف2.کاٹو(2, 0, 10, 20);
+لکھو(ف2);   // [1, 2, 10, 20, 3, 4, 5]
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> <code>.کاٹو(اشاریہ, گنتی, ...نئی_قدریں)</code> — <code>اشاریہ</code> سے <code>گنتی</code> عناصر ہٹائیں اور نئی قدریں ڈالیں۔</p>
+</blockquote>
+<hr />
+<h2 id="joining-lists">Joining Lists — فہرستیں جوڑنا</h2>
+<div class="highlight"><pre><span></span><code>// concat — ملاؤ()
+متغیر الف = [1, 2];
+متغیر ب = [3, 4];
+لکھو(الف.ملاؤ(ب));     // [1, 2, 3, 4]
+
+// spread — same result
+لکھو([...الف, ...ب]);   // [1, 2, 3, 4]
+</code></pre></div>
+<hr />
+<h2 id="sorting">Sorting — ترتیب</h2>
+<div class="highlight"><pre><span></span><code>متغیر ف = [3, 1, 4, 1, 5, 9, 2, 6];
+
+// ترتیب() built-in returns a sorted copy
+لکھو(ترتیب(ف));                    // [1, 1, 2, 3, 4, 5, 6, 9]
+لکھو(ترتیب(ف, الٹا=سچ));           // [9, 6, 5, 4, 3, 2, 1, 1]
+
+// Sort strings by length
+متغیر الفاظ = ["کیلا", "سیب", "آم", "انار"];
+لکھو(ترتیب(الفاظ, کلید=لمبائی));   // by length
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> <code>ترتیب()</code> بلٹ-ان فنکشن ترتیب شدہ نئی فہرست دیتا ہے — اصل نہیں بدلتی۔</p>
+</blockquote>
+<hr />
+<h2 id="reversing">Reversing — الٹانا</h2>
+<div class="highlight"><pre><span></span><code>متغیر ف = [1, 2, 3, 4, 5];
+لکھو(ریورس(ف));    // [5, 4, 3, 2, 1]
+لکھو(ف);           // [1, 2, 3, 4, 5]  — original unchanged
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> <code>ریورس()</code> بلٹ-ان فنکشن نئی الٹی فہرست دیتا ہے۔</p>
+</blockquote>
+<hr />
+<h2 id="flattening">Flattening — چپٹا کرنا</h2>
+<div class="highlight"><pre><span></span><code>متغیر ف = [[1, 2], [3, 4], [5, 6]];
+لکھو(ف.پھیلاؤ());    // [1, 2, 3, 4, 5, 6]
+</code></pre></div>
+<hr />
+<h2 id="fill">Fill — بھرنا</h2>
+<div class="highlight"><pre><span></span><code>متغیر ف = [0, 0, 0, 0, 0];
+ف.بھرو(7);
+لکھو(ف);    // [7, 7, 7, 7, 7]
+
+// Fill a range
+متغیر ف2 = [1, 2, 3, 4, 5];
+ف2.بھرو(0, 1, 3);    // fill 0 from index 1 to 2
+لکھو(ف2);             // [1, 0, 0, 4, 5]
+</code></pre></div>
+<hr />
+<h2 id="joining-to-string">Joining to String — متن میں بدلنا</h2>
+<div class="highlight"><pre><span></span><code>// For string lists — .جوڑو() method
+متغیر نام = ["احمد", "فاطمہ", "علی"];
+لکھو(نام.جوڑو(", "));    // احمد, فاطمہ, علی
+لکھو(نام.جوڑو(" — "));   // احمد — فاطمہ — علی
+
+// For any list — ربط() built-in function
+لکھو(ربط(", ", [1, 2, 3]));    // 1, 2, 3
+</code></pre></div>
+<blockquote>
+<p><strong>اردو:</strong> <code>.جوڑو()</code> صرف متن فہرست کے لیے۔ ملی جلی فہرست کے لیے <code>ربط(جوڑنے_والا, فہرست)</code> بلٹ-ان فنکشن استعمال کریں۔</p>
+</blockquote>
+<hr />
+<h2 id="copying">Copying — نقل بنانا</h2>
+<div class="highlight"><pre><span></span><code>متغیر اصل = [1, 2, 3];
+متغیر نقل = [...اصل];    // spread creates a shallow copy
+
+نقل.شامل(4);
+لکھو(اصل);    // [1, 2, 3]    — unchanged
+لکھو(نقل);    // [1, 2, 3, 4]
+</code></pre></div>
+<hr />
+<h2 id="key-points">Key Points — اہم نکات</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.شامل(q)</code></td>
+<td>push — add to end</td>
+</tr>
+<tr>
+<td><code>.نکالو()</code></td>
+<td>pop — remove from end</td>
+</tr>
+<tr>
+<td><code>.پہلے_شامل(q)</code></td>
+<td>unshift — add to beginning</td>
+</tr>
+<tr>
+<td><code>.پہلا_نکالو()</code></td>
+<td>shift — remove from beginning</td>
+</tr>
+<tr>
+<td><code>.مقام(q)</code></td>
+<td>indexOf — find index</td>
+</tr>
+<tr>
+<td><code>.شامل_ہے(q)</code></td>
+<td>includes — presence check</td>
+</tr>
+<tr>
+<td><code>.حصہ(a, b)</code></td>
+<td>slice — copy portion</td>
+</tr>
+<tr>
+<td><code>.کاٹو(a, b, ...)</code></td>
+<td>splice — remove/insert in place</td>
+</tr>
+<tr>
+<td><code>.ملاؤ(list)</code></td>
+<td>concat — combine lists</td>
+</tr>
+<tr>
+<td><code>.پھیلاؤ()</code></td>
+<td>flat — flatten nested</td>
+</tr>
+<tr>
+<td><code>.بھرو(v)</code></td>
+<td>fill — set all elements</td>
+</tr>
+<tr>
+<td><code>.لمبائی</code></td>
+<td>length property</td>
+</tr>
+<tr>
+<td><code>ترتیب(ف)</code></td>
+<td>sorted copy</td>
+</tr>
+<tr>
+<td><code>ریورس(ف)</code></td>
+<td>reversed copy</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>اردو:</strong> تمام فہرست طریقے اردو نام سے — <code>.شامل()</code> جوڑیں، <code>.نکالو()</code> ہٹائیں، <code>.تلاش()</code> ڈھونڈیں۔</p>
+</blockquote>
+<hr />
+<p><a href="../01-functions-advanced/">← Previous: Advanced Functions</a> | <a href="../03-objects/">Next: Objects →</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

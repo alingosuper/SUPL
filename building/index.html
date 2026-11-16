@@ -1,0 +1,1479 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+      
+      
+        <meta name="author" content="AlinGo Developers">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/branding/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Building a Standalone Executable — urdu.exe بنانا - AlinGo Saraiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#building-a-standalone-executable-urduexe" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AlinGo Saraiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Building a Standalone Executable — urdu.exe بنانا
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  ہوم
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../installation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  انسٹالیشن
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../quick-start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  کوئیک اسٹارٹ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../tutorial/beginner/" class="md-tabs__link">
+          
+  
+  
+  ٹیوٹوریل
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../reference/keywords/" class="md-tabs__link">
+          
+  
+  
+  حوالہ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../libraries/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  لائبریریاں
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  مثالیں
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+      
+  <img src="../assets/branding/alingo-logo.svg" alt="logo">
+
+    </a>
+    AlinGo Saraiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہوم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    انسٹالیشن
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کوئیک اسٹارٹ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ٹیوٹوریل
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ٹیوٹوریل
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/beginner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ابتدائی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/intermediate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    درمیانی
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اعلیٰ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    حوالہ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    حوالہ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کی ورڈز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    آپریٹرز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../libraries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لائبریریاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مثالیں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview — جائزہ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements — ضروریات
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Requirements — ضروریات">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System — نظام
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-environment-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python environment — Python ماحول
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-build-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-by-Step Build Instructions — قدم بہ قدم تعمیری ہدایات
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step Build Instructions — قدم بہ قدم تعمیری ہدایات">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-a-clean-virtual-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1 — Create a clean virtual environment — مرحلہ ۱ — صاف ورچوئل ماحول بنائیں
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-activate-the-virtual-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — Activate the virtual environment — مرحلہ ۲ — ورچوئل ماحول فعال کریں
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-install-required-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — Install required packages — مرحلہ ۳ — درکار پیکیج نصب کریں
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-run-the-build-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4 — Run the build script — مرحلہ ۴ — تعمیری اسکرپٹ چلائیں
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Modes — تعمیری طریقے
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Build Modes — تعمیری طریقے">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-full-standalone-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default — Full standalone build — ڈیفالٹ — مکمل خودکفیل تعمیر
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-fast-core-web-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --fast — Core + Web only — تیز — صرف مرکز + ویب
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-onefile-single-executable-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --onefile — Single executable file — یک فائل قابل عمل
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-with-tf-include-tensorflow-tensorflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --with-tf — Include TensorFlow — TensorFlow شامل کریں
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-check-dry-run-print-nuitka-command-only-nuitka" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --check — Dry run (print Nuitka command only) — جانچ — صرف Nuitka حکم پرنٹ کریں
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combining-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combining flags — جھنڈے ملائیں
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output Structure — آؤٹ پٹ کی ساخت
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-built-executable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the Built Executable — تیار شدہ قابل عمل استعمال کرنا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Distribution — تقسیم
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buildpy-options-reference-buildpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        build.py Options Reference — build.py اختیارات کا حوالہ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="build.py Options Reference — build.py اختیارات کا حوالہ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nuitka-flags-used-internally-nuitka" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nuitka flags used internally — اندرونی طور پر استعمال شدہ Nuitka جھنڈے
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting — مسائل کا حل
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Reference — فوری حوالہ
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="building-a-standalone-executable-urduexe">Building a Standalone Executable — urdu.exe بنانا</h1>
+<p>This guide explains how to compile the Urdu Programming Language into a standalone <code>urdu.exe</code> executable using <strong>Nuitka</strong>. The resulting executable runs on any Windows machine without requiring Python to be installed.</p>
+<blockquote>
+<p><strong>اردو:</strong> یہ رہنما بتاتا ہے کہ <strong>Nuitka</strong> سے اردو پروگرامنگ زبان کو ایک خودکفیل <code>urdu.exe</code> قابل عمل میں کیسے مرتب کریں۔ نتیجتاً قابل عمل Python نصب کیے بغیر کسی بھی Windows مشین پر چلتی ہے۔</p>
+</blockquote>
+<hr />
+<h2 id="overview">Overview — جائزہ</h2>
+<p>The build system uses <a href="https://nuitka.net/">Nuitka</a> to compile the Python interpreter and all bundled runtime libraries into a self-contained Windows executable. The process:</p>
+<ol>
+<li>Nuitka analyses the <code>urdu</code> package and all included pip packages.</li>
+<li>It compiles everything to C, then links a native Windows binary.</li>
+<li>The output is a <code>dist/urdu.dist/</code> folder containing <code>urdu.exe</code> and all required DLLs.</li>
+</ol>
+<blockquote>
+<p><strong>اردو:</strong> تعمیراتی نظام <a href="https://nuitka.net/">Nuitka</a> استعمال کرتا ہے جو Python تفسیر کار اور تمام بنڈل رن ٹائم لائبریریاں ایک خودکفیل Windows قابل عمل میں مرتب کرتا ہے۔</p>
+</blockquote>
+<p><strong>Output size:</strong> approximately 600 MB for the full standalone build (including web frameworks, databases, ML libraries, and cryptography). A fast build (core + web only) is roughly 250–350 MB.</p>
+<p><strong>Build time:</strong>
+- Full build: 20–60 minutes on a modern machine.
+- Fast build (core + web): 10–20 minutes.
+- Adding TensorFlow (<code>--with-tf</code>): adds ~30 minutes and ~1.1 GB to the output.</p>
+<blockquote>
+<p><strong>اردو:</strong> آؤٹ پٹ کا سائز: مکمل خودکفیل تعمیر کے لیے تقریباً 600 MB۔ تیز تعمیر (صرف مرکز + ویب) تقریباً 250-350 MB ہے۔</p>
+</blockquote>
+<hr />
+<h2 id="requirements">Requirements — ضروریات</h2>
+<h3 id="system">System — نظام</h3>
+<blockquote>
+<p><strong>اردو:</strong> نظامی ضروریات: Windows 10/11 (64 بٹ)، کم از کم 4 GB RAM، 5 GB خالی ڈسک جگہ، اور Visual Studio Build Tools۔</p>
+</blockquote>
+<ul>
+<li>Windows 10 or Windows 11 (64-bit)</li>
+<li>At least 4 GB RAM (8 GB recommended)</li>
+<li>At least 5 GB free disk space</li>
+<li>A C compiler: install <strong>Visual Studio Build Tools</strong> (free) or full Visual Studio.</li>
+<li>Download: <a href="https://visualstudio.microsoft.com/visual-cpp-build-tools/">https://visualstudio.microsoft.com/visual-cpp-build-tools/</a></li>
+<li>Select workload: <strong>"Desktop development with C++"</strong></li>
+</ul>
+<h3 id="python-environment-python">Python environment — Python ماحول</h3>
+<blockquote>
+<p><strong>Important:</strong> Use a clean virtual environment — <strong>not</strong> Anaconda base. Anaconda includes hundreds of extra packages (scipy, matplotlib, IPython, Jupyter, etc.) that Nuitka will include even if you do not use them, inflating build time from ~1 hour to 6+ hours and doubling the output size.</p>
+<p><strong>اردو:</strong> <strong>اہم:</strong> صاف ورچوئل ماحول استعمال کریں — Anaconda بیس نہیں۔ Anaconda میں سینکڑوں اضافی پیکیج ہوتے ہیں جو Nuitka شامل کر لیتا ہے اور تعمیراتی وقت 1 گھنٹے سے 6+ گھنٹے تک بڑھ جاتا ہے۔</p>
+</blockquote>
+<p>The project ships a pre-configured <code>build_env/</code> virtual environment in the repository for convenience. If it does not exist or you prefer to create your own, follow the steps below.</p>
+<hr />
+<h2 id="step-by-step-build-instructions">Step-by-Step Build Instructions — قدم بہ قدم تعمیری ہدایات</h2>
+<h3 id="step-1-create-a-clean-virtual-environment">Step 1 — Create a clean virtual environment — مرحلہ ۱ — صاف ورچوئل ماحول بنائیں</h3>
+<p>Open a terminal in the project root folder:</p>
+<div class="highlight"><pre><span></span><code>python -m venv build_env
+</code></pre></div>
+<h3 id="step-2-activate-the-virtual-environment">Step 2 — Activate the virtual environment — مرحلہ ۲ — ورچوئل ماحول فعال کریں</h3>
+<p><strong>Windows (PowerShell):</strong>
+<div class="highlight"><pre><span></span><code><span class="n">build_env</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">Activate</span><span class="p">.</span><span class="n">ps1</span>
+</code></pre></div></p>
+<p><strong>Windows (Command Prompt):</strong>
+<div class="highlight"><pre><span></span><code>build_env\Scripts\activate.bat
+</code></pre></div></p>
+<p>Your prompt should now show <code>(build_env)</code> at the beginning.</p>
+<blockquote>
+<p><strong>اردو:</strong> آپ کی پرامپٹ اب شروع میں <code>(build_env)</code> دکھائے گی۔</p>
+</blockquote>
+<h3 id="step-3-install-required-packages">Step 3 — Install required packages — مرحلہ ۳ — درکار پیکیج نصب کریں</h3>
+<p>Install Nuitka and all the runtime packages you want to bundle:</p>
+<blockquote>
+<p><strong>اردو:</strong> Nuitka اور تمام رن ٹائم پیکیج نصب کریں جو آپ بنڈل کرنا چاہتے ہیں۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>pip install nuitka
+
+# Core
+pip install -e .
+
+# Web frameworks
+pip install fastapi flask django uvicorn websockets python-socketio python-multipart
+pip install httpx aiohttp requests pydantic
+
+# Cryptography
+pip install cryptography bcrypt python-jose[cryptography]
+
+# Databases
+pip install sqlalchemy pymysql psycopg2-binary aiosqlite pymongo
+
+# Machine learning (skip if not needed — saves ~30 min build time)
+pip install numpy pandas scikit-learn scipy
+
+# Scraping and files
+pip install beautifulsoup4 lxml openpyxl
+
+# Logging
+pip install colorlog
+</code></pre></div>
+<blockquote>
+<p>You do not need to install all packages. The build script (<code>build.py</code>) automatically detects which packages are installed and includes only those. Packages that are not installed are listed as "skipped" in the build summary and will not be available in the compiled executable.</p>
+<p><strong>اردو:</strong> تمام پیکیج نصب کرنا ضروری نہیں۔ تعمیری اسکرپٹ خودکار طور پر نصب شدہ پیکیج پہچانتا اور صرف انہی کو شامل کرتا ہے۔</p>
+</blockquote>
+<h3 id="step-4-run-the-build-script">Step 4 — Run the build script — مرحلہ ۴ — تعمیری اسکرپٹ چلائیں</h3>
+<div class="highlight"><pre><span></span><code>python build.py
+</code></pre></div>
+<p>The build script will:
+1. Check which packages are installed.
+2. Print a summary of what will be included and what will be skipped.
+3. Invoke Nuitka with the correct flags.
+4. Report success and the output path when complete.</p>
+<blockquote>
+<p><strong>اردو:</strong> تعمیری اسکرپٹ نصب شدہ پیکیج جانچے گا، خلاصہ پیش کرے گا، Nuitka چلائے گا، اور مکمل ہونے پر نتیجہ رپورٹ کرے گا۔</p>
+</blockquote>
+<hr />
+<h2 id="build-modes">Build Modes — تعمیری طریقے</h2>
+<h3 id="default-full-standalone-build">Default — Full standalone build — ڈیفالٹ — مکمل خودکفیل تعمیر</h3>
+<div class="highlight"><pre><span></span><code>python build.py
+</code></pre></div>
+<p>Includes: core interpreter, web frameworks, databases, ML (excluding TensorFlow), cryptography, scraping, file I/O, threading, date/time, logging.</p>
+<p>Output: <code>dist\urdu.dist\urdu.exe</code></p>
+<h3 id="-fast-core-web-only"><code>--fast</code> — Core + Web only — تیز — صرف مرکز + ویب</h3>
+<div class="highlight"><pre><span></span><code>python build.py --fast
+</code></pre></div>
+<p>Skips database and ML packages. Faster to build, smaller output. Ideal for web application deployments.</p>
+<p>Output: <code>dist\urdu.dist\urdu.exe</code> (~250 MB)</p>
+<h3 id="-onefile-single-executable-file"><code>--onefile</code> — Single executable file — یک فائل قابل عمل</h3>
+<div class="highlight"><pre><span></span><code>python build.py --onefile
+</code></pre></div>
+<p>Packages everything into a single <code>urdu.exe</code> file (using a self-extracting archive). Startup is slower because the archive is unpacked into a temp folder on first run, but distribution is a single file.</p>
+<p>Output: <code>dist\urdu.exe</code> (single file)</p>
+<blockquote>
+<p><strong>اردو:</strong> سب کچھ ایک <code>urdu.exe</code> فائل میں بند کرتا ہے۔ پہلی بار چلانے پر سست ہوتا ہے مگر تقسیم ایک فائل سے ہوتی ہے۔</p>
+</blockquote>
+<h3 id="-with-tf-include-tensorflow-tensorflow"><code>--with-tf</code> — Include TensorFlow — TensorFlow شامل کریں</h3>
+<div class="highlight"><pre><span></span><code>python build.py --with-tf
+</code></pre></div>
+<p>Also bundles TensorFlow, Keras, and TensorBoard. Adds approximately 1.1 GB and 30 minutes to the build.</p>
+<p><strong>Requires:</strong> <code>pip install tensorflow</code> before running the build.</p>
+<h3 id="-check-dry-run-print-nuitka-command-only-nuitka"><code>--check</code> — Dry run (print Nuitka command only) — جانچ — صرف Nuitka حکم پرنٹ کریں</h3>
+<div class="highlight"><pre><span></span><code>python build.py --check
+python build.py --fast --check
+python build.py --onefile --with-tf --check
+</code></pre></div>
+<p>Prints the full Nuitka command that would be executed, without actually running it. Useful for inspecting or customising the command.</p>
+<blockquote>
+<p><strong>اردو:</strong> چلائے بغیر Nuitka حکم پرنٹ کرتا ہے — معائنے یا تبدیلی کے لیے مفید۔</p>
+</blockquote>
+<h3 id="combining-flags">Combining flags — جھنڈے ملائیں</h3>
+<div class="highlight"><pre><span></span><code>python build.py --fast --onefile
+python build.py --with-tf --onefile
+</code></pre></div>
+<hr />
+<h2 id="output-structure">Output Structure — آؤٹ پٹ کی ساخت</h2>
+<p>After a successful standalone build:</p>
+<blockquote>
+<p><strong>اردو:</strong> کامیاب خودکفیل تعمیر کے بعد آؤٹ پٹ کی ساخت۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>dist\
+  urdu.dist\
+    urdu.exe              ← main executable (run this)
+    python312.dll         ← embedded CPython runtime
+    _asyncio.pyd          ┐
+    _ctypes.pyd           │ compiled Python extension modules
+    _decimal.pyd          ┘
+    fastapi\              ┐
+    flask\                │ bundled pip packages (as compiled modules)
+    django\               ┘
+    ...                   ← ~600 MB total
+</code></pre></div>
+<p>After a <code>--onefile</code> build:</p>
+<div class="highlight"><pre><span></span><code>dist\
+  urdu.exe                ← single self-extracting executable
+</code></pre></div>
+<hr />
+<h2 id="using-the-built-executable">Using the Built Executable — تیار شدہ قابل عمل استعمال کرنا</h2>
+<p>From the <code>dist\urdu.dist\</code> folder:</p>
+<div class="highlight"><pre><span></span><code>urdu.exe run myprogram.urdu
+urdu.exe repl
+urdu.exe version
+urdu.exe مدد
+urdu.exe compile myfile.urdu
+</code></pre></div>
+<p>Or add <code>dist\urdu.dist\</code> to your system PATH so you can type <code>urdu</code> from anywhere.</p>
+<blockquote>
+<p><strong>اردو:</strong> <code>dist\urdu.dist\</code> فولڈر کو PATH میں شامل کریں تاکہ <code>urdu</code> کہیں سے بھی ٹائپ کر سکیں۔</p>
+</blockquote>
+<hr />
+<h2 id="distribution">Distribution — تقسیم</h2>
+<p>To distribute the compiled executable:</p>
+<blockquote>
+<p><strong>اردو:</strong> تیار شدہ قابل عمل تقسیم کرنے کے لیے۔</p>
+</blockquote>
+<ol>
+<li>Copy the <strong>entire <code>dist\urdu.dist\</code> folder</strong> to the target machine.</li>
+<li>No Python installation is required on the target machine.</li>
+<li>The target machine must be Windows 64-bit (same architecture as the build machine).</li>
+<li>The Visual C++ runtime (<code>vcruntime140.dll</code>) is included automatically by Nuitka.</li>
+</ol>
+<p>For GitHub releases, zip the <code>urdu.dist</code> folder and attach it as a release asset.</p>
+<hr />
+<h2 id="buildpy-options-reference-buildpy">build.py Options Reference — build.py اختیارات کا حوالہ</h2>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>(none)</em></td>
+<td>Full standalone build with all detected packages</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>--fast</code></td>
+<td>Skip database and ML packages</td>
+<td>False</td>
+</tr>
+<tr>
+<td><code>--onefile</code></td>
+<td>Single self-extracting .exe instead of folder</td>
+<td>False</td>
+</tr>
+<tr>
+<td><code>--with-tf</code></td>
+<td>Include TensorFlow (+1.1 GB, +~30 min)</td>
+<td>False</td>
+</tr>
+<tr>
+<td><code>--check</code></td>
+<td>Dry run — print the Nuitka command, do not build</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nuitka-flags-used-internally-nuitka">Nuitka flags used internally — اندرونی طور پر استعمال شدہ Nuitka جھنڈے</h3>
+<table>
+<thead>
+<tr>
+<th>Nuitka flag</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--standalone</code></td>
+<td>Self-contained folder with all DLLs</td>
+</tr>
+<tr>
+<td><code>--onefile</code></td>
+<td>Alternate: single file with embedded archive</td>
+</tr>
+<tr>
+<td><code>--output-dir=dist</code></td>
+<td>Place output in <code>dist/</code></td>
+</tr>
+<tr>
+<td><code>--output-filename=urdu.exe</code></td>
+<td>Name the executable <code>urdu.exe</code></td>
+</tr>
+<tr>
+<td><code>--windows-console-mode=attach</code></td>
+<td>Attach to existing console (no new window)</td>
+</tr>
+<tr>
+<td><code>--lto=no</code></td>
+<td>Disable link-time optimisation (faster build)</td>
+</tr>
+<tr>
+<td><code>--jobs=4</code></td>
+<td>Parallel C compilation with 4 threads</td>
+</tr>
+<tr>
+<td><code>--enable-plugins=no-qt</code></td>
+<td>Do not bundle Qt bindings</td>
+</tr>
+<tr>
+<td><code>--include-package=&lt;pkg&gt;</code></td>
+<td>Explicitly include each detected package</td>
+</tr>
+<tr>
+<td><code>--include-distribution-metadata=&lt;dist&gt;</code></td>
+<td>Bundle <code>.dist-info</code> for packages that call <code>importlib.metadata</code> at startup (e.g. opentelemetry-api, uvicorn, anyio, flask). Nuitka 2.3.9 does <strong>not</strong> support the <code>*</code> wildcard — list each package name explicitly</td>
+</tr>
+<tr>
+<td><code>--nofollow-import-to=django.core.management</code></td>
+<td>Exclude Django's management command infrastructure (not needed at runtime; importing it in the compiled exe causes a crash)</td>
+</tr>
+<tr>
+<td><code>--python-flag=-m</code></td>
+<td>Run as <code>python -m urdu</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="troubleshooting">Troubleshooting — مسائل کا حل</h2>
+<blockquote>
+<p><strong>اردو:</strong> عام مسائل اور ان کے حل۔</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nuitka: command not found</code></td>
+<td>Activate the virtual environment first</td>
+</tr>
+<tr>
+<td>Build fails after 1–2 minutes</td>
+<td>Ensure Visual Studio Build Tools are installed with the C++ workload</td>
+</tr>
+<tr>
+<td>Build takes 6+ hours</td>
+<td>You are building from Anaconda base — create a clean <code>venv</code> instead</td>
+</tr>
+<tr>
+<td><code>urdu.exe</code> crashes on another machine</td>
+<td>Ensure the target machine is 64-bit Windows; check that the full <code>urdu.dist</code> folder was copied</td>
+</tr>
+<tr>
+<td>Missing library at runtime</td>
+<td>The package was not installed when <code>build.py</code> ran — install it, then rebuild</td>
+</tr>
+<tr>
+<td>TensorFlow not found</td>
+<td>Run <code>pip install tensorflow</code> inside the build venv first</td>
+</tr>
+<tr>
+<td>Low disk space error</td>
+<td>Nuitka needs ~3 GB working space during the build</td>
+</tr>
+<tr>
+<td><code>FATAL: could not find distribution '*'</code></td>
+<td>Nuitka 2.3.9 does not support <code>--include-distribution-metadata=*</code>. Use explicit package names (already fixed in <code>build.py</code>)</td>
+</tr>
+<tr>
+<td><code>cannot locate package '' associated with metadata</code> at runtime</td>
+<td>The compiled exe is missing dist-info for a package that calls <code>importlib_metadata.entry_points()</code> (typically <code>opentelemetry-api</code>). Rebuild with the explicit <code>--include-distribution-metadata</code> flags in <code>build.py</code></td>
+</tr>
+<tr>
+<td>Django app crashes with <code>ModuleNotFoundError: django.core.management</code></td>
+<td><code>django.core.management</code> is excluded from the compiled exe by <code>--nofollow-import-to</code>. Remove <code>django.contrib.auth</code> and <code>django.contrib.contenttypes</code> from <code>INSTALLED_APPS</code> — they transitively import that module. The <code>ڈجانگو</code> wrapper no longer includes them by default</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="quick-reference">Quick Reference — فوری حوالہ</h2>
+<blockquote>
+<p><strong>اردو:</strong> تعمیر کی فوری یاد دہانی۔</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code># One-time setup
+python -m venv build_env
+build_env\Scripts\Activate.ps1
+pip install -e . nuitka fastapi flask django uvicorn cryptography ...
+
+# Build
+python build.py              # full build  → dist\urdu.dist\urdu.exe
+python build.py --fast       # quick build → dist\urdu.dist\urdu.exe
+python build.py --onefile    # single file → dist\urdu.exe
+python build.py --check      # dry run, no compilation
+
+# Run the result
+dist\urdu.dist\urdu.exe run hello.urdu
+</code></pre></div>
+<hr />
+<p><em>Previous: <a href="../quick-start/">Quick Start</a> | Next: <a href="../contributing/">Contributing →</a></em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>
