@@ -66,12 +66,12 @@ class Interpreter:
             module_code = candidate.read_text(encoding="utf-8")
             from lexer.lexer import Lexer
             from parser.parser import Parser
-            module_source = (
-                'پندھ_شروع "imported_module"\n'
-                + module_code
-                + '\nپندھ_مک_گیا\n'
-            )
-            sub_parser = Parser(Lexer(module_source))
+
+            # ماڈیول کو پندھ_شروع/پندھ_مک_گیا میں لپیٹیں (اگر پہلے سے نہ ہوں)
+            if "پندھ_شروع" not in module_code:
+                module_code = f'پندھ_شروع "imported_module"\n{module_code}\nپندھ_مک_گیا'
+
+            sub_parser = Parser(Lexer(module_code))
             sub_ast = sub_parser.parse()
 
             old_file = getattr(self, "_current_file", None)
@@ -125,7 +125,7 @@ class Interpreter:
                 raise Exception(f"کلاس نہیں ملی: {class_name}")
             
             cls = self.variables[class_name]
-            obj = {"__class__": cls}
+            obj = {"__class__": cls, "__attrs__": {}}
             
             # constructor چلائیں
             if cls["constructor"]:
@@ -149,8 +149,89 @@ class Interpreter:
             method_name = node["method"]
             args = [self.eval_expr(a) for a in node["args"]]
 
+            # ─── Built-in list methods ───
+            if isinstance(obj, list):
+                if method_name in ("شامل_کریں", "append"):
+                    obj.append(args[0]); return None
+                elif method_name in ("لمبائی", "length"):
+                    return len(obj)
+                elif method_name in ("کڈھو", "remove"):
+                    try:
+                        obj.remove(args[0])
+                    except ValueError:
+                        raise ValueError(f"'{args[0]}' فہرست میں نہیں ملا")
+                    return None
+                elif method_name in ("ہٹاؤ", "pop"):
+                    return obj.pop(args[0]) if args else obj.pop()
+                elif method_name in ("ترتیب_دو", "sort"):
+                    obj.sort(); return None
+                elif method_name in ("الٹا_کرو", "reverse"):
+                    obj.reverse(); return None
+                else:
+                    raise AttributeError(f"فہرست دا طریقہ نہیں لبھیا: {method_name}")
+
+            # ─── Built-in string methods ───
+            if isinstance(obj, str):
+                if method_name in ("لمبائی", "length"):
+                    return len(obj)
+                elif method_name in ("بڑا_کریں", "upper"):
+                    return obj.upper()
+                elif method_name in ("چھوٹا_کریں", "lower"):
+                    return obj.lower()
+                elif method_name in ("بدلو", "replace"):
+                    if len(args) != 2:
+                        raise TypeError("بدلو دو آرگومنٹس چاہندا ہے")
+                    return obj.replace(str(args[0]), str(args[1]))
+                elif method_name in ("شامل_ہے", "contains"):
+                    return str(args[0]) in obj
+                else:
+                    raise AttributeError(f"String دا طریقہ نہیں لبھیا: {method_name}")
+
+
+            # ─── Built-in list methods ───
+            if isinstance(obj, list):
+                if method_name == "شامل_کریں":
+                    obj.append(args[0])
+                    return None
+                elif method_name == "لمبائی":
+                    return len(obj)
+                elif method_name == "کڈھو":
+                    try:
+                        obj.remove(args[0])
+                    except ValueError:
+                        raise ValueError(f"'{args[0]}' فہرست میں نہیں ملا")
+                    return None
+                elif method_name == "ہٹاؤ":
+                    return obj.pop(args[0]) if args else obj.pop()
+                elif method_name == "ترتیب_دو":
+                    obj.sort()
+                    return None
+                elif method_name == "الٹا_کرو":
+                    obj.reverse()
+                    return None
+                else:
+                    raise AttributeError(f"فہرست دا طریقہ نہیں لبھیا: {method_name}")
+
+            # ─── Built-in string methods ───
+            if isinstance(obj, str):
+                if method_name == "لمبائی":
+                    return len(obj)
+                elif method_name == "بڑا_کریں":
+                    return obj.upper()
+                elif method_name == "چھوٹا_کریں":
+                    return obj.lower()
+                elif method_name == "بدلو":
+                    if len(args) != 2:
+                        raise TypeError("بدلو دو آرگومنٹس چاہندا ہے")
+                    return obj.replace(str(args[0]), str(args[1]))
+                elif method_name == "شامل_ہے":
+                    return str(args[0]) in obj
+                else:
+                    raise AttributeError(f"String دا طریقہ نہیں لبھیا: {method_name}")
+
+            # ─── User-defined class methods ───
             if not isinstance(obj, dict) or "__class__" not in obj:
-                raise TypeError("MethodCall کے لیے درست آبجیکٹ درکار ہے")
+                raise TypeError(f"MethodCall کے لیے درست آبجیکٹ درکار ہے (ملا: {type(obj).__name__})")
 
             cls = obj["__class__"]
             method = cls.get("methods", {}).get(method_name)
@@ -166,6 +247,7 @@ class Interpreter:
 
             old_vars = self.variables.copy()
             try:
+                self.variables["یہ"] = obj   # ← SUPL: method کے اندر self
                 for param, arg in zip(params, args):
                     self.variables[param] = arg
 
@@ -327,6 +409,27 @@ class Interpreter:
             method_name = node["method"]
             args = [self.eval_expr(a) for a in node["args"]]
 
+            # ─── Built-in list methods ───
+            if isinstance(obj, list):
+                if method_name in ("شامل_کریں", "append"):
+                    obj.append(args[0]); return None
+                elif method_name in ("لمبائی", "length"):
+                    return len(obj)
+                elif method_name in ("کڈھو", "remove"):
+                    try:
+                        obj.remove(args[0])
+                    except ValueError:
+                        raise ValueError(f"'{args[0]}' فہرست میں نہیں ملا")
+                    return None
+                elif method_name in ("ہٹاؤ", "pop"):
+                    return obj.pop(args[0]) if args else obj.pop()
+                elif method_name in ("ترتیب_دو", "sort"):
+                    obj.sort(); return None
+                elif method_name in ("الٹا_کرو", "reverse"):
+                    obj.reverse(); return None
+                else:
+                    raise AttributeError(f"فہرست دا طریقہ نہیں لبھیا: {method_name}")
+
             if isinstance(obj, str):
                 if method_name == "لمبائی":
                     return len(obj)
@@ -384,6 +487,11 @@ class Interpreter:
         elif ntype == "Call":
             args = [self.eval_expr(a) for a in node["args"]]
             return self.call_function(node["name"], args)
+
+        elif ntype == "IndexAccess":
+            obj = self.eval_expr(node["object"])
+            index = self.eval_expr(node["index"])
+            return obj[index]
 
         elif ntype == "List":
             return [self.eval_expr(e) for e in node["elements"]]

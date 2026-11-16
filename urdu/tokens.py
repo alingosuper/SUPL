@@ -315,6 +315,12 @@ SUPL_KEYWORDS: dict[str, TokenType] = {
     "نہیں_برابر":    TokenType.NOT_EQUALS,      # اردو !=
     "نئیں_برابر":    TokenType.NOT_EQUALS,      # پنجابی !=
     "کائنی_برابر":   TokenType.NOT_EQUALS,      # سرائیکی !=
+
+    # ═══ for loop keywords ═══
+    "تک":            TokenType.TO,
+    "تئیں":          TokenType.TO,
+    "توڑ":           TokenType.TO,
+    "میں":           TokenType.IN,      # پہلے سے موجود ہو تو نہیں ہوگا
 }
 
 # Backward compatibility — پرانا نام

@@ -35,6 +35,11 @@ KEYWORDS = {
     "جتھاں": "WHILE",
     "برائے": "FOR",
     "ہر": "FOR",
+    "میں": "IN",          # for...in / for...of
+    "وچ": "IN",           # پنجابی/سرائیکی alternative
+    "تک": "TO",
+    "تئیں": "TO",         # سرائیکی alternative
+    "توڑ": "TO",
     "کم": "FUNCTION",
     "فنکشن": "FUNCTION",
     "واپس": "RETURN",

@@ -1,0 +1,575 @@
+# SUPL Parser — النگو ڈویلپرز (Ultimate AST + Functions)
+import sys
+from pathlib import Path
+
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+from lexer.lexer import Lexer
+
+class Parser:
+    def __init__(self, lexer):
+        self.lexer = lexer
+        self.current_token = self.lexer.get_next_token()
+
+    def error(self, message):
+        raise SyntaxError(f"پارسر کی خرابی (لائن {self.current_token.line}): {message}")
+
+    def eat(self, token_type):
+        if self.current_token.type == token_type:
+            self.current_token = self.lexer.get_next_token()
+        else:
+            self.error(f"متوقع ٹوکن {token_type}, لیکن ملا {self.current_token.type}")
+
+    def parse(self):
+        if self.current_token.type != "PROGRAM_START":
+            self.error("پروگرام 'پندھ_شروع' سے شروع ہونا چاہیے")
+
+        self.eat("PROGRAM_START")
+
+        prog_name = ""
+        if self.current_token.type == "STRING":
+            prog_name = self.current_token.value
+            self.eat("STRING")
+
+        statements = []
+
+        while self.current_token.type not in ("PROGRAM_END", "EOF"):
+            statements.append(self.statement())
+
+        if self.current_token.type == "PROGRAM_END":
+            self.eat("PROGRAM_END")
+
+        return {
+            "type": "Program",
+            "name": prog_name,
+            "body": statements
+        }
+
+    def statement(self):
+        token = self.current_token
+
+        # 0. IMPORT (شامل_کرو)
+        if token.type == "IMPORT":
+            self.eat("IMPORT")
+            module_name = self.current_token.value
+            self.eat("STRING")
+            return {"type": "Import", "module": module_name}
+
+        # 1. CONSTRUCTOR (تعمیر)
+        if token.type == "CONSTRUCTOR":
+            self.eat("CONSTRUCTOR")
+            func_name = "تعمیر"
+            params = []
+
+            if self.current_token.type == "SYMBOL" and self.current_token.value == "(":
+                self.eat("SYMBOL")
+
+                while not (
+                    self.current_token.type == "SYMBOL"
+                    and self.current_token.value == ")"
+                ):
+                    if self.current_token.type == "EOF":
+                        self.error("Constructor کے پیرامیٹرز نامکمل ہیں")
+
+                    params.append(self.current_token.value)
+                    self.eat("IDENTIFIER")
+
+                    if self.current_token.type == "SYMBOL" and self.current_token.value == ",":
+                        self.eat("SYMBOL")
+
+                self.eat("SYMBOL")
+
+            body = self.parse_block()
+
+            return {
+                "type": "Constructor",
+                "name": func_name,
+                "params": params,
+                "body": body
+            }
+
+        elif token.type == "SELF":
+            self.eat("SELF")
+            self.eat("SYMBOL")  # .
+            prop = self.current_token.value
+            self.eat("IDENTIFIER")
+            self.eat("ASSIGN")
+            value = self.expression()
+
+            return {
+                "type": "PropertySet",
+                "object": {"type": "Self"},
+                "property": prop,
+                "value": value
+            }
+
+        elif token.type == "PRINT":
+            self.eat("PRINT")
+            args = []
+            if self.current_token.type == "SYMBOL" and self.current_token.value == "(":
+                self.eat("SYMBOL")
+                while not (self.current_token.type == "SYMBOL" and self.current_token.value == ")"):
+                    args.append(self.expression())
+                    if self.current_token.type == "SYMBOL" and self.current_token.value == ",":
+                        self.eat("SYMBOL")
+                self.eat("SYMBOL")
+            else:
+                args.append(self.expression())
+            return {"type": "Print", "args": args}
+
+        # 2. VAR (متغیر بنانا)
+        elif token.type == "VAR":
+            self.eat("VAR")
+            name = self.current_token.value
+            self.eat("IDENTIFIER")
+            self.eat("ASSIGN")
+            value = self.expression()
+            return {"type": "VarDecl", "name": name, "value": value}
+
+        # 2.5 CLASS (کلاس)
+        elif token.type == "CLASS":
+            self.eat("CLASS")
+            class_name = self.current_token.value
+            self.eat("IDENTIFIER")
+            
+            methods = []
+            if self.current_token.type == "LBRACE":
+                self.eat("LBRACE")
+            elif self.current_token.type == "SYMBOL" and self.current_token.value == "{":
+                self.eat("SYMBOL")
+            
+            while not (self.current_token.type in ("RBRACE", "EOF") or 
+                       (self.current_token.type == "SYMBOL" and self.current_token.value == "}")):
+                if self.current_token.type in ("FUNCTION", "CONSTRUCTOR"):
+                    methods.append(self.statement())
+                else:
+                    self.error("کلاس کے اندر صرف فنکشن یا کنسٹرکٹر کی اجازت ہے")
+            
+            if self.current_token.type == "RBRACE":
+                self.eat("RBRACE")
+            elif self.current_token.type == "SYMBOL" and self.current_token.value == "}":
+                self.eat("SYMBOL")
+            
+            return {"type": "Class", "name": class_name, "methods": methods}
+
+        elif token.type == "TRY":
+            self.eat("TRY")
+            try_body = self.parse_block()
+
+            if self.current_token.type != "CATCH":
+                self.error("کوشش دے بعد پکڑو ضروری ہے")
+
+            self.eat("CATCH")
+            catch_var = "غلطی"
+
+            if self.current_token.type == "SYMBOL" and self.current_token.value == "(":
+                self.eat("SYMBOL")
+                catch_var = self.current_token.value
+
+                if self.current_token.type not in ("IDENTIFIER", "ERROR_VAR", "ERROR_VAR"):
+                    self.error("پکڑو دے اندر غلطی دا متغیر درست نہیں")
+
+                self.eat(self.current_token.type)
+
+                if self.current_token.type == "SYMBOL" and self.current_token.value == ")":
+                    self.eat("SYMBOL")
+                else:
+                    self.error("پکڑو دے متغیر دے بعد ) ضروری ہے")
+
+            catch_body = self.parse_block()
+
+            return {
+                "type": "TryCatch",
+                "try_body": try_body,
+                "catch_var": catch_var,
+                "catch_body": catch_body
+            }
+
+        # ── IDENTIFIER: اسائنمنٹ، فنکشن کال، یا میتھڈ کال ──
+        elif token.type in ("IDENTIFIER", "ERROR_VAR"):
+            name = token.value
+            self.eat(token.type)
+            
+            # x = expr
+            if self.current_token.type == "ASSIGN":
+                self.eat("ASSIGN")
+                value = self.expression()
+                return {"type": "Assignment", "name": name, "value": value}
+            
+            # fn(...)
+            elif self.current_token.type == "SYMBOL" and self.current_token.value == "(":
+                self.eat("SYMBOL")
+                args = []
+                while not (self.current_token.type == "SYMBOL" and self.current_token.value == ")"):
+                    args.append(self.expression())
+                    if self.current_token.type == "SYMBOL" and self.current_token.value == ",":
+                        self.eat("SYMBOL")
+                self.eat("SYMBOL")
+                return {"type": "Call", "name": name, "args": args}
+            
+            # obj.method(...)
+            elif self.current_token.type == "SYMBOL" and self.current_token.value == ".":
+                self.eat("SYMBOL")  # .
+                method_name = self.current_token.value
+                self.eat("IDENTIFIER")
+                args = []
+                if self.current_token.type == "SYMBOL" and self.current_token.value == "(":
+                    self.eat("SYMBOL")
+                    while not (self.current_token.type == "SYMBOL" and self.current_token.value == ")"):
+                        args.append(self.expression())
+                        if self.current_token.type == "SYMBOL" and self.current_token.value == ",":
+                            self.eat("SYMBOL")
+                    self.eat("SYMBOL")
+                return {"type": "MethodCall", "object": {"type": "Identifier", "name": name}, "method": method_name, "args": args}
+            
+            else:
+                self.error(f"IDENTIFIER کے بعد نامعلوم ٹوکن: {self.current_token.value}")
+
+        elif token.type == "FUNCTION":
+            self.eat("FUNCTION")
+            func_name = self.current_token.value
+            self.eat("IDENTIFIER")
+            
+            params = []
+            if self.current_token.type == "SYMBOL" and self.current_token.value == "(":
+                self.eat("SYMBOL")
+                while not (self.current_token.type == "SYMBOL" and self.current_token.value == ")"):
+                    params.append(self.current_token.value)
+                    self.eat("IDENTIFIER")
+                    if self.current_token.type == "SYMBOL" and self.current_token.value == ",":
+                        self.eat("SYMBOL")
+                self.eat("SYMBOL")
+            
+            body = self.parse_block()
+            return {"type": "Function", "name": func_name, "params": params, "body": body}
+
+        # 4. RETURN (واپس)
+        elif token.type == "RETURN":
+            self.eat("RETURN")
+            value = self.expression()
+            return {"type": "Return", "value": value}
+
+        # 5. IF (اگر / جے)
+        elif token.type == "IF":
+            self.eat("IF")
+            has_paren = self.current_token.type == "SYMBOL" and self.current_token.value == "("
+            if has_paren: self.eat("SYMBOL")
+            cond = self.expression()
+            if has_paren: self.eat("SYMBOL")
+            
+            if self.current_token.type == "THEN":
+                self.eat("THEN")
+            elif self.current_token.value in ("تاں", "تو"):
+                self.eat(self.current_token.type)
+            
+            body = self.parse_block()
+            
+            else_body = []
+            if self.current_token.type == "ELSE":
+                self.eat("ELSE")
+                else_body = self.parse_block()
+            
+            return {"type": "If", "cond": cond, "body": body, "else_body": else_body}
+
+        # 6. WHILE (جتھاں)
+        elif token.type == "WHILE":
+            self.eat("WHILE")
+            has_paren = self.current_token.type == "SYMBOL" and self.current_token.value == "("
+            if has_paren: self.eat("SYMBOL")
+            cond = self.expression()
+            if has_paren: self.eat("SYMBOL")
+            
+            if self.current_token.type == "THEN":
+                self.eat("THEN")
+            elif self.current_token.value in ("تاں", "تو"):
+                self.eat(self.current_token.type)
+            
+            body = self.parse_block()
+            return {"type": "While", "cond": cond, "body": body}
+
+        # 7. FOR (برائے)
+        elif token.type == "FOR":
+            self.eat("FOR")
+            var_name = self.current_token.value
+            self.eat("IDENTIFIER")
+            
+            if self.current_token.value == "میں" or self.current_token.type == "IN":
+                self.eat(self.current_token.type)
+            else:
+                self.error("متوقع 'میں' (IN)")
+            
+            start_expr = self.expression()
+            
+            if self.current_token.value == "تک" or self.current_token.type == "TO":
+                self.eat(self.current_token.type)
+            else:
+                self.error("متوقع 'تک' (TO)")
+            
+            end_expr = self.expression()
+            
+            body = self.parse_block()
+            return {"type": "For", "var": var_name, "start": start_expr, "end": end_expr, "body": body}
+
+        # 8. IDENTIFIER (اسائنمنٹ، فنکشن کال، یا میتھڈ کال)
+        elif token.type == ("IDENTIFIER", "ERROR_VAR"):
+            name = token.value
+            self.eat("IDENTIFIER")
+            
+            if self.current_token.type == "ASSIGN":
+                self.eat("ASSIGN")
+                value = self.expression()
+                return {"type": "Assignment", "name": name, "value": value}
+            
+            # میتھڈ کال: میری_گاڑی.دکھاؤ()
+            elif self.current_token.type == "SYMBOL" and self.current_token.value == ".":
+                self.eat("SYMBOL")  # .
+                method_name = self.current_token.value
+                self.eat("IDENTIFIER")
+                args = []
+                if self.current_token.type == "SYMBOL" and self.current_token.value == "(":
+                    self.eat("SYMBOL")
+                    while not (self.current_token.type == "SYMBOL" and self.current_token.value == ")"):
+                        args.append(self.expression())
+                        if self.current_token.type == "SYMBOL" and self.current_token.value == ",":
+                            self.eat("SYMBOL")
+                    self.eat("SYMBOL")
+                return {"type": "MethodCall", "object": {"type": "Identifier", "name": name}, "method": method_name, "args": args}
+            
+            elif self.current_token.type == "SYMBOL" and self.current_token.value == "(":
+                self.eat("SYMBOL")
+                args = []
+                while not (self.current_token.type == "SYMBOL" and self.current_token.value == ")"):
+                    args.append(self.expression())
+                    if self.current_token.type == "SYMBOL" and self.current_token.value == ",":
+                        self.eat("SYMBOL")
+                self.eat("SYMBOL")
+                return {"type": "Call", "name": name, "args": args}
+            
+            else:
+                self.error(f"IDENTIFIER کے بعد نامعلوم ٹوکن: {self.current_token.value}")
+
+        else:
+            self.error(f"نامعلوم بیان: {token.value}")
+
+    def parse_block(self):
+        """بلاک { ... } پڑھتا ہے"""
+        if self.current_token.type == "LBRACE":
+            self.eat("LBRACE")
+        else:
+            self.eat("SYMBOL")
+        
+        stmts = []
+        while not (self.current_token.type in ("RBRACE", "EOF") or 
+                   (self.current_token.type == "SYMBOL" and self.current_token.value == "}")):
+            stmts.append(self.statement())
+        
+        if self.current_token.type == "RBRACE":
+            self.eat("RBRACE")
+        else:
+            self.eat("SYMBOL")
+        return stmts
+
+    def expression(self):
+        return self.additive()
+
+    def additive(self):
+        left = self.multiplicative()
+        while self.current_token.type in ("PLUS", "MINUS") or \
+              (self.current_token.type == "SYMBOL" and self.current_token.value in ("+", "-")):
+            op = self.current_token.value if self.current_token.value else self.current_token.type
+            self.eat(self.current_token.type)
+            right = self.multiplicative()
+            left = {"type": "BinaryOp", "op": op, "left": left, "right": right}
+        return left
+
+    def multiplicative(self):
+        left = self.comparison()
+        while self.current_token.type in ("STAR", "SLASH") or \
+              (self.current_token.type == "SYMBOL" and self.current_token.value in ("*", "/")):
+            op = self.current_token.value if self.current_token.value else self.current_token.type
+            self.eat(self.current_token.type)
+            right = self.comparison()
+            left = {"type": "BinaryOp", "op": op, "left": left, "right": right}
+        return left
+
+    def comparison(self):
+        left = self.primary()
+        while self.current_token.type in ("GREATER", "LESS", "GREATER_EQUAL", "LESS_EQUAL", "EQUAL_EQUAL", "NOT_EQUAL") or \
+              (self.current_token.type == "SYMBOL" and self.current_token.value in (">", "<", ">=", "<=", "==", "!=")):
+            op = self.current_token.value if self.current_token.value else self.current_token.type
+            self.eat(self.current_token.type)
+            right = self.primary()
+            left = {"type": "BinaryOp", "op": op, "left": left, "right": right}
+        return left
+
+    def primary(self):
+        token = self.current_token
+
+        if token.type == "NEW":
+            self.eat("NEW")
+            class_token = self.current_token
+            self.eat("IDENTIFIER")
+            self.eat("SYMBOL")  # (
+            args = []
+            while not (
+                self.current_token.type == "SYMBOL"
+                and self.current_token.value == ")"
+            ):
+                if self.current_token.type == "EOF":
+                    self.error("نیا آبجیکٹ بناتے وقت ) غائب ہے")
+                args.append(self.expression())
+                if (
+                    self.current_token.type == "SYMBOL"
+                    and self.current_token.value == ","
+                ):
+                    self.eat("SYMBOL")
+                elif not (
+                    self.current_token.type == "SYMBOL"
+                    and self.current_token.value == ")"
+                ):
+                    self.error("آرگومنٹس کے درمیان کاما درکار ہے")
+            self.eat("SYMBOL")
+            return {
+                "type": "New",
+                "class": class_token.value,
+                "args": args
+            }
+
+        if token.type == "SELF":
+            self.eat("SELF")
+            self.eat("SYMBOL")  # .
+            prop = self.current_token.value
+            self.eat("IDENTIFIER")
+            return {
+                "type": "PropertyGet",
+                "object": {"type": "Self"},
+                "property": prop
+            }
+
+
+        # Numbers and strings are always literal values
+        if token.type in ("NUMBER", "STRING"):
+            self.eat(token.type)
+            return {"type": "Literal", "value": token.value}
+
+        # Identifier or function call
+        if token.type in ("IDENTIFIER", "ERROR_VAR"):
+            name = token.value
+            self.eat(token.type)
+
+            if self.current_token.type == "SYMBOL" and self.current_token.value == "(":
+                self.eat("SYMBOL")
+                args = []
+
+                while not (
+                    self.current_token.type == "SYMBOL"
+                    and self.current_token.value == ")"
+                ):
+                    if self.current_token.type == "EOF":
+                        self.error("فنکشن کال میں ) غائب ہے")
+
+                    args.append(self.expression())
+
+                    if self.current_token.type == "SYMBOL" and self.current_token.value == ",":
+                        self.eat("SYMBOL")
+                    elif not (
+                        self.current_token.type == "SYMBOL"
+                        and self.current_token.value == ")"
+                    ):
+                        self.error("فنکشن آرگومنٹس کے درمیان کاما درکار ہے")
+
+                self.eat("SYMBOL")
+                return {"type": "Call", "name": name, "args": args}
+
+            obj_node = {"type": "Identifier", "name": name}
+
+            if (
+                self.current_token.type == "SYMBOL"
+                and self.current_token.value == "."
+            ):
+                self.eat("SYMBOL")
+                member = self.current_token.value
+                self.eat("IDENTIFIER")
+
+                if (
+                    self.current_token.type == "SYMBOL"
+                    and self.current_token.value == "("
+                ):
+                    self.eat("SYMBOL")
+                    args = []
+                    while not (
+                        self.current_token.type == "SYMBOL"
+                        and self.current_token.value == ")"
+                    ):
+                        if self.current_token.type == "EOF":
+                            self.error("میتھڈ کال میں ) غائب ہے")
+                        args.append(self.expression())
+                        if (
+                            self.current_token.type == "SYMBOL"
+                            and self.current_token.value == ","
+                        ):
+                            self.eat("SYMBOL")
+                        elif not (
+                            self.current_token.type == "SYMBOL"
+                            and self.current_token.value == ")"
+                        ):
+                            self.error("آرگومنٹس کے درمیان کاما درکار ہے")
+                    self.eat("SYMBOL")
+                    return {
+                        "type": "MethodCall",
+                        "object": obj_node,
+                        "method": member,
+                        "args": args
+                    }
+
+                return {
+                    "type": "PropertyGet",
+                    "object": obj_node,
+                    "property": member
+                }
+
+            return obj_node
+
+        # List
+        if token.type == "SYMBOL" and token.value == "[":
+            self.eat("SYMBOL")
+            elements = []
+
+            while not (
+                self.current_token.type == "SYMBOL"
+                and self.current_token.value == "]"
+            ):
+                if self.current_token.type == "EOF":
+                    self.error("فہرست میں ] غائب ہے")
+
+                elements.append(self.expression())
+
+                if self.current_token.type == "SYMBOL" and self.current_token.value == ",":
+                    self.eat("SYMBOL")
+
+            self.eat("SYMBOL")
+            return {"type": "List", "elements": elements}
+
+        # Dictionary
+        if token.type == "SYMBOL" and token.value == "{":
+            self.eat("SYMBOL")
+            pairs = []
+
+            while not (
+                self.current_token.type == "SYMBOL"
+                and self.current_token.value == "}"
+            ):
+                if self.current_token.type == "EOF":
+                    self.error("لغت میں } غائب ہے")
+
+                key = self.expression()
+                self.eat("SYMBOL")
+                value = self.expression()
+                pairs.append((key, value))
+
+                if self.current_token.type == "SYMBOL" and self.current_token.value == ",":
+                    self.eat("SYMBOL")
+
+            self.eat("SYMBOL")
+            return {"type": "Dict", "pairs": pairs}
+
+        self.error(f"اظہار نہیں سمجھ سکا: {token.value}")

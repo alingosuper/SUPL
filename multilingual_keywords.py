@@ -1,6 +1,12 @@
 # Multilingual Syntax Mapping for SUPL (Urdu, Punjabi, Saraiki)
 
 MULTILINGUAL_KEYWORDS = {
+    # ═══ for loop keywords (تینوں زبانیں) ═══
+    "میں": "IN",
+    "وچ": "IN",
+    "تک": "TO",
+    "تئیں": "TO",
+    "توڑ": "TO",
     # --- Saraiki (سرائیکی) ---
     "پندھ_شروع": "PROG_START",
     "پندھ_مک_گیا": "PROG_END",
