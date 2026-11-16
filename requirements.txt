@@ -1,48 +1,9 @@
 # ══════════════════════════════════════════════
-# AlinGo Saraiki — Requirements (Full Suite)
+# SUPL — بنیادی requirements
 # ══════════════════════════════════════════════
 
-# ─── Web Frameworks ───
-flask
-django
-fastapi
-uvicorn[standard]
-aiohttp
-python-socketio
-websockets
+# SUPL خود کوئی بیرونی پیکیج نہیں چاہتی
+# صرف Python 3.9+ درکار ہے
 
-# ─── Machine Learning ───
-tensorflow
-keras
-scikit-learn
-torch
-numpy
-pandas
-llama-cpp-python
-
-# ─── Security / Auth ───
-cryptography
-python-jose[cryptography]
-bcrypt
-
-# ─── Databases ───
-mysql-connector-python
-psycopg2-binary
-pymongo
-cassandra-driver
-firebase-admin
-
-# ─── File / I/O ───
-openpyxl
-watchdog
-
-# ─── Hardware / IoT ───
-pyserial
-pyfirmata2
-
-# ─── Optional / Dev ───
-matplotlib
-requests
-beautifulsoup4
-mkdocs>=1.5.0
-mkdocs-material>=9.5.0
+# ─── اختیاری: مکمل خصوصیات ───
+# pip install supl-lang[web,ml,db] سے نصب کریں

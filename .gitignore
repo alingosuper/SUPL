@@ -31,3 +31,20 @@ venv/
 # OS
 .DS_Store
 Thumbs.db
+
+# Backup files
+*.bak
+*.bak_*
+*.bak-*
+*.backup
+*.backup-*
+*.pre-*
+*.oop-backup
+*.before_*
+*.duplicate_*
+
+# Egg-info (build artifacts)
+*.egg-info/
+
+# Test output
+supl_out.html

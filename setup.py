@@ -16,6 +16,17 @@ setup(
     packages=find_packages(exclude=["tests*", "examples*", "docs*"]),
     include_package_data=True,
     install_requires=[],
+    extras_require={
+        "web": ["flask", "fastapi", "uvicorn[standard]", "requests"],
+        "ml": ["numpy", "pandas", "scikit-learn"],
+        "db": ["mysql-connector-python", "psycopg2-binary", "pymongo"],
+        "full": [
+            "flask", "fastapi", "uvicorn[standard]", "requests",
+            "numpy", "pandas", "scikit-learn",
+            "mysql-connector-python", "psycopg2-binary", "pymongo",
+        ],
+        "dev": ["pytest", "mkdocs", "mkdocs-material"],
+    },
     entry_points={
         "console_scripts": [
             # ─── پروگرام چلانے کے لیے ───
