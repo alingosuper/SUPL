@@ -330,6 +330,10 @@ class Interpreter:
                 self.variables[node["catch_var"]] = str(e)
                 for stmt in node["catch_body"]:
                     self.execute_ast(stmt)
+            finally:
+                # FINALLY — ہمیشہ چلے گا
+                for stmt in node.get("finally_body", []):
+                    self.execute_ast(stmt)
 
         elif ntype == "Return":
             value = self.eval_expr(node["value"])

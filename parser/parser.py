@@ -286,8 +286,16 @@ class Parser:
                 else:
                     self.error("پکڑو کے متغیر کے بعد ) ضروری ہے")
             catch_body = self.parse_block()
+
+            # ═══ FINALLY (آخر_میں) — اختیاری ═══
+            finally_body = []
+            if self.current_token.type == "FINALLY":
+                self.eat("FINALLY")
+                finally_body = self.parse_block()
+
             return {"type": "TryCatch", "try_body": try_body,
-                    "catch_var": catch_var, "catch_body": catch_body}
+                    "catch_var": catch_var, "catch_body": catch_body,
+                    "finally_body": finally_body}
 
         # 11. SELF (یہ.پراپرٹی = ...)
         elif token.type == "SELF":
