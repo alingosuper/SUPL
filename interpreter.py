@@ -54,6 +54,32 @@ class Interpreter:
 
         elif ntype == "Import":
             module_path = node["module"]
+
+            # ═══════════════════════════════════════════════════════
+            # 1. Standard Library (stdlib) — پہلے چیک کریں
+            # ═══════════════════════════════════════════════════════
+            STDLIB_MODULES = {
+                "فائلاں": "stdlib.فائلاں",
+                "ویب": "stdlib.ویب",
+                "ڈیٹا": "stdlib.ڈیٹا",
+                "ویلہ": "stdlib.ویلہ",
+                "ڳنتری": "stdlib.ڳنتری",
+            }
+
+            if module_path in STDLIB_MODULES:
+                import importlib
+                try:
+                    stdlib_module = importlib.import_module(STDLIB_MODULES[module_path])
+                    self.variables[module_path] = stdlib_module
+                    # module کا نام بھی رجسٹر کریں
+                    self.variables[f"__module__{module_path}"] = stdlib_module
+                    return
+                except ImportError as e:
+                    raise ImportError(f"stdlib ماڈیول نہیں ملا: {module_path} — {e}")
+
+            # ═══════════════════════════════════════════════════════
+            # 2. مقامی فائل — پرانا طریقہ
+            # ═══════════════════════════════════════════════════════
             from pathlib import Path
 
             candidate = Path(module_path)
@@ -84,6 +110,19 @@ class Interpreter:
         elif ntype == "Print":
             vals = [self.eval_expr(a) for a in node["args"]]
             _ALINGO_BUILTINS.لکھو(*vals)
+
+        elif ntype == "PropertyGet":
+            obj = self.eval_expr(node["object"])
+            prop = node["property"]
+            # ─── module attribute (stdlib) ───
+            if hasattr(obj, prop) and not isinstance(obj, dict):
+                return getattr(obj, prop)
+            if isinstance(obj, dict):
+                attrs = obj.get("__attrs__", {})
+                if prop in attrs:
+                    return attrs[prop]
+                raise AttributeError(f"پراپرٹی نہیں ملی: {prop}")
+            raise TypeError(f"پراپرٹی حاصل کرنے کے لیے آبجیکٹ درکار ہے (ملا: {type(obj).__name__})")
 
         elif ntype == "PropertySet":
             obj = self.eval_expr(node["object"])
@@ -148,6 +187,13 @@ class Interpreter:
             obj = self.eval_expr(node["object"])
             method_name = node["method"]
             args = [self.eval_expr(a) for a in node["args"]]
+
+            # ─── stdlib module method call ───
+            if hasattr(obj, method_name) and not isinstance(obj, (dict, list, str)):
+                method = getattr(obj, method_name)
+                if callable(method):
+                    return method(*args)
+                return method
 
             # ─── Built-in list methods ───
             if isinstance(obj, list):
@@ -396,18 +442,28 @@ class Interpreter:
 
         elif ntype == "PropertyGet":
             obj = self.eval_expr(node["object"])
-            if not isinstance(obj, dict):
-                raise TypeError("پراپرٹی حاصل کرنے کے لیے آبجیکٹ درکار ہے")
-            attrs = obj.get("__attrs__", {})
             prop = node["property"]
-            if prop not in attrs:
+            # ─── module attribute (stdlib) ───
+            if hasattr(obj, prop) and not isinstance(obj, dict):
+                return getattr(obj, prop)
+            if isinstance(obj, dict):
+                attrs = obj.get("__attrs__", {})
+                if prop in attrs:
+                    return attrs[prop]
                 raise AttributeError(f"پراپرٹی نہیں ملی: {prop}")
-            return attrs[prop]
+            raise TypeError(f"پراپرٹی حاصل کرنے کے لیے آبجیکٹ درکار ہے (ملا: {type(obj).__name__})")
 
         if ntype == "MethodCall":
             obj = self.eval_expr(node["object"])
             method_name = node["method"]
             args = [self.eval_expr(a) for a in node["args"]]
+
+            # ─── stdlib module method call ───
+            if hasattr(obj, method_name) and not isinstance(obj, (dict, list, str)):
+                method = getattr(obj, method_name)
+                if callable(method):
+                    return method(*args)
+                return method
 
             # ─── Built-in list methods ───
             if isinstance(obj, list):
