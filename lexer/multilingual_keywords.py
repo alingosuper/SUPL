@@ -1,6 +1,11 @@
 # Multilingual Syntax Mapping for SUPL (Urdu, Punjabi, Saraiki)
 
 MULTILINGUAL_KEYWORDS = {
+    # ═══ VAR / CONST — تینوں زبانیں ═══
+    "شے": "VAR",
+    "متغیر": "VAR",
+    "پکی": "CONST",
+    "مستقل": "CONST",
     # ═══ for loop keywords (تینوں زبانیں) ═══
     "میں": "IN",
     "وچ": "IN",

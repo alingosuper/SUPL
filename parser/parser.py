@@ -83,7 +83,7 @@ class Parser:
             self.eat("VAR")
             name = self.current_token.value
             self.eat("IDENTIFIER")
-            # self.eat_assign() -- disabled for method call
+            self.eat_assign()
             value = self.expression()
             return {"type": "VarDecl", "name": name, "value": value}
 
