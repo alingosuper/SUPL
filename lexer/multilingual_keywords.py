@@ -15,7 +15,7 @@ MULTILINGUAL_KEYWORDS = {
     # --- Saraiki (سرائیکی) ---
     "پندھ_شروع": "PROG_START",
     "پندھ_مک_گیا": "PROG_END",
-    "عدد": "NUMBER_TYPE",
+    "عدد": "VAR",
     "متن": "STRING_TYPE",
     "چھاپ": "PRINT",
     "جے": "IF",
@@ -27,7 +27,7 @@ MULTILINGUAL_KEYWORDS = {
     # --- Urdu (اردو) ---
     "شروع": "PROG_START",
     "ختم": "PROG_END",
-    "عدد": "NUMBER_TYPE",
+    "عدد": "VAR",
     "متن": "STRING_TYPE",
     "لکھو": "PRINT",
     "اگر": "IF",
@@ -82,4 +82,19 @@ MULTILINGUAL_KEYWORDS.update({
     "جدوں_تک": "WHILE",
     "مدت": "FOR",
     "مک_لوپ": "END_LOOP",
+
+    # ═══ مکمل keywords ═══
+    "تے": "AND", "اور": "AND",
+    "یا": "OR",
+    "کائنی": "NOT", "نہیں": "NOT", "نئیں": "NOT",
+    "خالی": "NULL",
+    "واپس_ڈیو": "RETURN", "واپس_کرو": "RETURN", "واپس_دیو": "RETURN",
+    "نہ_تاں": "ELSE",
+    "جبکہ": "WHILE", "جدوں_تئیں": "WHILE",
+    "ہر_ہک_کیتے": "FOR", "کے_لیے": "FOR", "ہر_اک_لئی": "FOR",
+    "ٹولی": "CLASS",
+    "کم": "FUNCTION", "کام": "FUNCTION", "فعل": "FUNCTION",
+    "سچ": "TRUE", "جھوٹ": "FALSE", "کوڑ": "FALSE",
+    "نیا": "NEW", "نواں": "NEW",
+    "یہ": "SELF", "ایہہ": "SELF",
 })
