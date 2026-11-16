@@ -1,29 +1,35 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="ur" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+        <meta name="description" content="6 زبانیں، ایک پروگرامنگ زبان (سرائیکی + اردو + پنجابی + بلوچی + پشتو + سندھی)">
       
       
         <meta name="author" content="AlinGo Developers">
       
       
+        <link rel="canonical" href="https://alingosuper.github.io/SUPL/stdlib/%D9%81%D8%A7%D8%A6%D9%84%D8%A7%DA%BA/">
       
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../%D9%88%DB%8C%D8%A8/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/branding/favicon.svg">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
-        <title>فائلاں — فائلوں کا انتظام - AlinGo Saraiki</title>
+        <title>فائلاں - SUPL — سُپل پروگرامنگ زبان</title>
       
     
     
@@ -63,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+    <body dir="rtl" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -73,7 +79,7 @@
       
         
         <a href="#_1" class="md-skip">
-          Skip to content
+          براہِ راست مواد پر جائیں
         </a>
       
     </div>
@@ -85,10 +91,11 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="سر تحریر">
+    <a href="../.." title="SUPL — سُپل پروگرامنگ زبان" class="md-header__button md-logo" aria-label="SUPL — سُپل پروگرامنگ زبان" data-md-component="logo">
       
-  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -99,13 +106,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            AlinGo Saraiki
+            SUPL — سُپل پروگرامنگ زبان
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              فائلاں — فائلوں کا انتظام
+              فائلاں
             
           </span>
         </div>
@@ -127,16 +134,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="تلاش کریں" placeholder="تلاش کریں" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="تلاش">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="صاف کریں" aria-label="صاف کریں" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -149,7 +156,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            تلاش کا آغاز ہو رہا ہے
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -159,6 +166,18 @@
 </div>
       
     
+    
+      <div class="md-header__source">
+        <a href="https://github.com/alingosuper/SUPL" title="ریپازٹری پر جائیں" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    alingosuper/SUPL
+  </div>
+</a>
+      </div>
     
   </nav>
   
@@ -170,7 +189,7 @@
         
           
             
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+<nav class="md-tabs" aria-label="ٹیبز" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -199,13 +218,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../installation/" class="md-tabs__link">
+      <a href="../../%D8%B4%D8%B1%D9%88%D8%B9%D8%A7%D8%AA/" class="md-tabs__link">
         
   
   
     
   
-  انسٹالیشن
+  شروعات
 
       </a>
     </li>
@@ -218,13 +237,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../quick-start/" class="md-tabs__link">
+      <a href="../../%D8%AA%D9%86%D8%B5%DB%8C%D8%A8/" class="md-tabs__link">
         
   
   
     
   
-  کوئیک اسٹارٹ
+  تنصیب
 
       </a>
     </li>
@@ -239,11 +258,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../tutorial/beginner/" class="md-tabs__link">
+        <a href="../../%DA%A9%D9%84%DB%8C%D8%AF%DB%8C_%D8%A7%D9%84%D9%81%D8%A7%D8%B8/" class="md-tabs__link">
           
   
   
-  ٹیوٹوریل
+    
+  
+  کلیدی الفاظ
 
         </a>
       </li>
@@ -259,11 +280,37 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../reference/keywords/" class="md-tabs__link">
+        <a href="../../%D9%86%D8%AD%D9%88/" class="md-tabs__link">
           
   
   
-  حوالہ
+    
+  
+  نحو
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  stdlib
 
         </a>
       </li>
@@ -276,36 +323,20 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../libraries/" class="md-tabs__link">
-        
-  
-  
     
-  
-  لائبریریاں
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../examples/" class="md-tabs__link">
-        
+    
+      <li class="md-tabs__item">
+        <a href="../../%D9%85%D8%AB%D8%A7%D9%84%DB%8C%DA%BA/" class="md-tabs__link">
+          
   
   
     
   
   مثالیں
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -329,15 +360,28 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="رہنمائی" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+    <a href="../.." title="SUPL — سُپل پروگرامنگ زبان" class="md-nav__button md-logo" aria-label="SUPL — سُپل پروگرامنگ زبان" data-md-component="logo">
       
-  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    AlinGo Saraiki
+    SUPL — سُپل پروگرامنگ زبان
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/alingosuper/SUPL" title="ریپازٹری پر جائیں" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    alingosuper/SUPL
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -375,14 +419,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installation/" class="md-nav__link">
+      <a href="../../%D8%B4%D8%B1%D9%88%D8%B9%D8%A7%D8%AA/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    انسٹالیشن
+    شروعات
   
 
     
@@ -402,14 +446,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../quick-start/" class="md-nav__link">
+      <a href="../../%D8%AA%D9%86%D8%B5%DB%8C%D8%A8/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    کوئیک اسٹارٹ
+    تنصیب
   
 
     
@@ -429,6 +473,12 @@
   
   
     
+    
+      
+        
+      
+        
+      
     
     
     
@@ -450,7 +500,7 @@
   <span class="md-ellipsis">
     
   
-    ٹیوٹوریل
+    کلیدی الفاظ
   
 
     
@@ -466,7 +516,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    ٹیوٹوریل
+    کلیدی الفاظ
   
 
           </label>
@@ -479,14 +529,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/beginner/" class="md-nav__link">
+      <a href="../../%DA%A9%D9%84%DB%8C%D8%AF%DB%8C_%D8%A7%D9%84%D9%81%D8%A7%D8%B8/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    ابتدائی
+    مختصر فہرست
   
 
     
@@ -507,42 +557,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/intermediate/" class="md-nav__link">
+      <a href="../../%DA%A9%D9%84%DB%8C%D8%AF%DB%8C_%D8%A7%D9%84%D9%81%D8%A7%D8%B8_%D9%85%DA%A9%D9%85%D9%84/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    درمیانی
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tutorial/advanced/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    اعلیٰ
+    مکمل 218 keywords
   
 
     
@@ -571,6 +593,28 @@
   
     
     
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
     
       
@@ -584,14 +628,15 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%D9%86%D8%AD%D9%88/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
     
   
-    حوالہ
+    نحو
   
 
     
@@ -599,19 +644,27 @@
   
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
   
-    حوالہ
+    نحو
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -620,14 +673,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/keywords/" class="md-nav__link">
+      <a href="../../%D9%86%D8%AD%D9%88/01-%D9%85%D8%AA%D8%BA%DB%8C%D8%B1%D8%A7%D8%AA/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    کی ورڈز
+    متغیرات
   
 
     
@@ -648,7 +701,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/operators/" class="md-nav__link">
+      <a href="../../%D9%86%D8%AD%D9%88/02-%D8%A7%D9%82%D8%B3%D8%A7%D9%85/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اقسام
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/03-%D8%A2%D9%BE%D8%B1%DB%8C%D9%B9%D8%B1%D8%B2/" class="md-nav__link">
         
   
   
@@ -669,6 +750,497 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/04-%D8%B4%D8%B1%D8%A7%D8%A6%D8%B7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    شرائط
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/05-%D9%84%D9%88%D9%BE%D8%B3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لوپس
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/06-%D9%81%D9%86%DA%A9%D8%B4%D9%86%D8%B2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    فنکشنز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/07-%DA%A9%D9%84%D8%A7%D8%B3%D8%B2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کلاسز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/08-%D8%A7%D8%B3%D8%AA%D8%AB%D9%86%D8%A7%D8%A1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    استثناء
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    stdlib
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    stdlib
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    فائلاں
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    فائلاں
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="فہرست">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فہرست
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        شامل کرنا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        فائل پڑھنا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        فائل لکھنا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        مواد شامل کرنا
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        فائل کی موجودگی
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        فائلوں کی فہرست
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        احتیاط
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%D9%88%DB%8C%D8%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ویب
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%DA%88%DB%8C%D9%B9%D8%A7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ڈیٹا
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%D9%88%DB%8C%D9%84%DB%81/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ویلہ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%DA%B3%D9%86%D8%AA%D8%B1%DB%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ڳنتری
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -682,36 +1254,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../libraries/" class="md-nav__link">
+    
+    
+      
         
-  
-  
-  <span class="md-ellipsis">
+          
+        
+      
+        
+      
     
-  
-    لائبریریاں
-  
-
     
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
     
       
       
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../examples/" class="md-nav__link">
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%D9%85%D8%AB%D8%A7%D9%84%DB%8C%DA%BA/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -725,7 +1293,59 @@
   
   
 
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    مثالیں
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%85%D8%AB%D8%A7%D9%84%DB%8C%DA%BA/hello-world/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہیلو ورلڈ
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -743,7 +1363,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="فہرست">
   
   
   
@@ -752,7 +1372,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      فہرست
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -849,32 +1469,35 @@
                   
 
 
+  
+  
 
-<h1 id="_1">فائلاں — فائلوں کا انتظام</h1>
+
+<h1 id="_1">فائلاں — فائلوں کا انتظام<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p>فائلاں ماڈیول کا مقصد فائلوں کو پڑھنا، لکھنا اور ان کا انتظام کرنا ہے۔</p>
-<h2 id="_2">شامل کرنا</h2>
-<div class="highlight"><pre><span></span><code>شامل_کرو "فائلاں"
+<h2 id="_2">شامل کرنا<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>شامل_کرو "فائلاں"
 </code></pre></div>
-<h2 id="_3">فائل پڑھنا</h2>
-<div class="highlight"><pre><span></span><code>شے مواد = فائلاں.پڑھو("test.txt")
-لکھو(مواد)
+<h2 id="_3">فائل پڑھنا<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>شے مواد = فائلاں.پڑھو("test.txt")
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>لکھو(مواد)
 </code></pre></div>
-<h2 id="_4">فائل لکھنا</h2>
-<div class="highlight"><pre><span></span><code>فائلاں.لکھو("test.txt", "السلام علیکم")
+<h2 id="_4">فائل لکھنا<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>فائلاں.لکھو("test.txt", "السلام علیکم")
 </code></pre></div>
-<h2 id="_5">مواد شامل کرنا</h2>
-<div class="highlight"><pre><span></span><code>فائلاں.شامل_کرو("test.txt", "نئی لائن")
+<h2 id="_5">مواد شامل کرنا<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>فائلاں.شامل_کرو("test.txt", "نئی لائن")
 </code></pre></div>
-<h2 id="_6">فائل کی موجودگی</h2>
-<div class="highlight"><pre><span></span><code>اگر فائلاں.موجود_ہے("test.txt") {
-    لکھو("فائل موجود ہے")
-}
+<h2 id="_6">فائل کی موجودگی<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>اگر فائلاں.موجود_ہے("test.txt") {
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    لکھو("فائل موجود ہے")
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>}
 </code></pre></div>
-<h2 id="_7">فائلوں کی فہرست</h2>
-<div class="highlight"><pre><span></span><code>شے فائلیں = فائلاں.فہرست(".")
-لکھو(فائلیں)
+<h2 id="_7">فائلوں کی فہرست<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>شے فائلیں = فائلاں.فہرست(".")
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>لکھو(فائلیں)
 </code></pre></div>
-<h2 id="_8">احتیاط</h2>
+<h2 id="_8">احتیاط<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <ul>
 <li>فائل لکھنے سے پہلے راستہ چیک کریں۔</li>
 <li>اہم فائلوں کا بیک اپ رکھیں۔</li>
@@ -905,7 +1528,7 @@
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
+  واپس اوپر جائیں
 </button>
         
       </main>
@@ -937,7 +1560,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u06a9\u0644\u0650\u067e \u0628\u0648\u0631\u0688 \u0645\u06cc\u06ba \u0646\u0642\u0644 \u06a9\u0631 \u062f\u06cc\u0627 \u06af\u06cc\u0627", "clipboard.copy": "\u06a9\u0644\u0650\u067e \u0628\u0648\u0631\u0688 \u0645\u06cc\u06ba \u0646\u0642\u0644 \u06a9\u0631\u06cc\u06ba", "search.result.more.one": "\u0627\u0650\u0633 \u0635\u0641\u062d\u06d2 \u067e\u0631 \u0645\u0632\u06cc\u062f \u06f1", "search.result.more.other": "\u0627\u0650\u0633 \u0635\u0641\u062d\u06d2 \u067e\u0631 \u0645\u0632\u06cc\u062f #", "search.result.none": "\u06a9\u0648\u0626\u06cc \u0645\u0644\u062a\u06cc \u062c\u0644\u062a\u06cc \u062f\u0633\u062a\u0627\u0648\u06cc\u0632\u0627\u062a \u0646\u06c1\u06cc\u06ba", "search.result.one": "\u06f1 \u0645\u0644\u062a\u06cc \u062c\u0644\u062a\u06cc \u062f\u0633\u062a\u0627\u0648\u06cc\u0632", "search.result.other": "# \u0645\u0644\u062a\u06cc \u062c\u0644\u062a\u06cc \u062f\u0633\u062a\u0627\u0648\u06cc\u0632\u0627\u062a", "search.result.placeholder": "\u062a\u0644\u0627\u0634 \u0634\u0631\u0648\u0639 \u06a9\u0631\u0646\u06d2 \u06a9\u06d2 \u0644\u0626\u06d2 \u0679\u0627\u0626\u067e \u06a9\u0631\u06cc\u06ba", "search.result.term.missing": "\u06af\u0645\u0634\u062f\u06c1", "select.version": "\u0648\u0631\u0698\u0646 \u06a9\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u06a9\u0631\u06cc\u06ba"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>

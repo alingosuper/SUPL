@@ -1,16 +1,18 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="ur" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+        <meta name="description" content="6 زبانیں، ایک پروگرامنگ زبان (سرائیکی + اردو + پنجابی + بلوچی + پشتو + سندھی)">
       
       
         <meta name="author" content="AlinGo Developers">
       
+      
+        <link rel="canonical" href="https://alingosuper.github.io/SUPL/libraries/files/">
       
       
       
@@ -18,12 +20,12 @@
         
       
       
-      <link rel="icon" href="../../assets/branding/favicon.svg">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
-        <title>File Utilities Library — اردو/فائلیں - AlinGo Saraiki</title>
+        <title>File Utilities Library — اردو/فائلیں - SUPL — سُپل پروگرامنگ زبان</title>
       
     
     
@@ -63,7 +65,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+    <body dir="rtl" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -73,7 +75,7 @@
       
         
         <a href="#file-utilities-library" class="md-skip">
-          Skip to content
+          براہِ راست مواد پر جائیں
         </a>
       
     </div>
@@ -85,10 +87,11 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="سر تحریر">
+    <a href="../.." title="SUPL — سُپل پروگرامنگ زبان" class="md-header__button md-logo" aria-label="SUPL — سُپل پروگرامنگ زبان" data-md-component="logo">
       
-  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -99,7 +102,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            AlinGo Saraiki
+            SUPL — سُپل پروگرامنگ زبان
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -127,16 +130,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="تلاش کریں" placeholder="تلاش کریں" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="تلاش">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="صاف کریں" aria-label="صاف کریں" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -149,7 +152,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            تلاش کا آغاز ہو رہا ہے
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -159,6 +162,18 @@
 </div>
       
     
+    
+      <div class="md-header__source">
+        <a href="https://github.com/alingosuper/SUPL" title="ریپازٹری پر جائیں" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    alingosuper/SUPL
+  </div>
+</a>
+      </div>
     
   </nav>
   
@@ -170,7 +185,7 @@
         
           
             
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+<nav class="md-tabs" aria-label="ٹیبز" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -199,13 +214,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../installation/" class="md-tabs__link">
+      <a href="../../%D8%B4%D8%B1%D9%88%D8%B9%D8%A7%D8%AA/" class="md-tabs__link">
         
   
   
     
   
-  انسٹالیشن
+  شروعات
 
       </a>
     </li>
@@ -218,13 +233,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../quick-start/" class="md-tabs__link">
+      <a href="../../%D8%AA%D9%86%D8%B5%DB%8C%D8%A8/" class="md-tabs__link">
         
   
   
     
   
-  کوئیک اسٹارٹ
+  تنصیب
 
       </a>
     </li>
@@ -239,11 +254,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../tutorial/beginner/" class="md-tabs__link">
+        <a href="../../%DA%A9%D9%84%DB%8C%D8%AF%DB%8C_%D8%A7%D9%84%D9%81%D8%A7%D8%B8/" class="md-tabs__link">
           
   
   
-  ٹیوٹوریل
+    
+  
+  کلیدی الفاظ
 
         </a>
       </li>
@@ -259,11 +276,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../reference/keywords/" class="md-tabs__link">
+        <a href="../../%D9%86%D8%AD%D9%88/" class="md-tabs__link">
           
   
   
-  حوالہ
+    
+  
+  نحو
 
         </a>
       </li>
@@ -276,17 +295,20 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link">
-        
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stdlib/" class="md-tabs__link">
+          
   
   
     
   
-  لائبریریاں
+  stdlib
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -295,17 +317,20 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../examples/" class="md-tabs__link">
-        
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%D9%85%D8%AB%D8%A7%D9%84%DB%8C%DA%BA/" class="md-tabs__link">
+          
   
   
     
   
   مثالیں
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -329,15 +354,28 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="رہنمائی" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+    <a href="../.." title="SUPL — سُپل پروگرامنگ زبان" class="md-nav__button md-logo" aria-label="SUPL — سُپل پروگرامنگ زبان" data-md-component="logo">
       
-  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    AlinGo Saraiki
+    SUPL — سُپل پروگرامنگ زبان
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/alingosuper/SUPL" title="ریپازٹری پر جائیں" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    alingosuper/SUPL
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -375,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installation/" class="md-nav__link">
+      <a href="../../%D8%B4%D8%B1%D9%88%D8%B9%D8%A7%D8%AA/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    انسٹالیشن
+    شروعات
   
 
     
@@ -402,14 +440,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../quick-start/" class="md-nav__link">
+      <a href="../../%D8%AA%D9%86%D8%B5%DB%8C%D8%A8/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    کوئیک اسٹارٹ
+    تنصیب
   
 
     
@@ -429,6 +467,12 @@
   
   
     
+    
+      
+        
+      
+        
+      
     
     
     
@@ -450,7 +494,7 @@
   <span class="md-ellipsis">
     
   
-    ٹیوٹوریل
+    کلیدی الفاظ
   
 
     
@@ -466,7 +510,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    ٹیوٹوریل
+    کلیدی الفاظ
   
 
           </label>
@@ -479,14 +523,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/beginner/" class="md-nav__link">
+      <a href="../../%DA%A9%D9%84%DB%8C%D8%AF%DB%8C_%D8%A7%D9%84%D9%81%D8%A7%D8%B8/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    ابتدائی
+    مختصر فہرست
   
 
     
@@ -507,42 +551,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/intermediate/" class="md-nav__link">
+      <a href="../../%DA%A9%D9%84%DB%8C%D8%AF%DB%8C_%D8%A7%D9%84%D9%81%D8%A7%D8%B8_%D9%85%DA%A9%D9%85%D9%84/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    درمیانی
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tutorial/advanced/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    اعلیٰ
+    مکمل 218 keywords
   
 
     
@@ -571,6 +587,28 @@
   
     
     
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
     
       
@@ -584,14 +622,15 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%D9%86%D8%AD%D9%88/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
     
   
-    حوالہ
+    نحو
   
 
     
@@ -599,19 +638,27 @@
   
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
   
-    حوالہ
+    نحو
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -620,14 +667,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/keywords/" class="md-nav__link">
+      <a href="../../%D9%86%D8%AD%D9%88/01-%D9%85%D8%AA%D8%BA%DB%8C%D8%B1%D8%A7%D8%AA/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    کی ورڈز
+    متغیرات
   
 
     
@@ -648,7 +695,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/operators/" class="md-nav__link">
+      <a href="../../%D9%86%D8%AD%D9%88/02-%D8%A7%D9%82%D8%B3%D8%A7%D9%85/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اقسام
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/03-%D8%A2%D9%BE%D8%B1%DB%8C%D9%B9%D8%B1%D8%B2/" class="md-nav__link">
         
   
   
@@ -669,6 +744,146 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/04-%D8%B4%D8%B1%D8%A7%D8%A6%D8%B7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    شرائط
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/05-%D9%84%D9%88%D9%BE%D8%B3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لوپس
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/06-%D9%81%D9%86%DA%A9%D8%B4%D9%86%D8%B2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    فنکشنز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/07-%DA%A9%D9%84%D8%A7%D8%B3%D8%B2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کلاسز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/08-%D8%A7%D8%B3%D8%AA%D8%AB%D9%86%D8%A7%D8%A1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    استثناء
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -682,15 +897,90 @@
   
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../stdlib/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    stdlib
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    stdlib
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../stdlib/%D9%81%D8%A7%D8%A6%D9%84%D8%A7%DA%BA/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    لائبریریاں
+    فائلاں
   
 
     
@@ -702,6 +992,126 @@
     </li>
   
 
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/%D9%88%DB%8C%D8%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ویب
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/%DA%88%DB%8C%D9%B9%D8%A7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ڈیٹا
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/%D9%88%DB%8C%D9%84%DB%81/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ویلہ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/%DA%B3%D9%86%D8%AA%D8%B1%DB%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ڳنتری
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
       
       
@@ -709,9 +1119,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../examples/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%D9%85%D8%AB%D8%A7%D9%84%DB%8C%DA%BA/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -725,7 +1158,59 @@
   
   
 
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    مثالیں
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%85%D8%AB%D8%A7%D9%84%DB%8C%DA%BA/hello-world/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہیلو ورلڈ
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -743,7 +1228,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="فہرست">
   
   
   
@@ -752,7 +1237,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      فہرست
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -977,17 +1462,20 @@
                   
 
 
+  
+  
 
-<h1 id="file-utilities-library">File Utilities Library — اردو/فائلیں</h1>
+
+<h1 id="file-utilities-library">File Utilities Library — اردو/فائلیں<a class="headerlink" href="#file-utilities-library" title="Permanent link">&para;</a></h1>
 <p>The <code>اردو/فائلیں</code> library provides Urdu-named classes and functions for working with ZIP archives and Excel workbooks.</p>
 <blockquote>
 <p><strong>اردو:</strong> <code>اردو/فائلیں</code> لائبریری زپ (ZIP) آرکائیو اور ایکسل (Excel) ورک بک کے ساتھ کام کرنے کے لیے اردو نام کے کلاس اور فنکشن فراہم کرتی ہے۔</p>
 </blockquote>
 <p><strong>Import:</strong></p>
-<div class="highlight"><pre><span></span><code>درآمد { زپ_فائل, زپ_بناؤ, زپ_نکالو, زپ_فہرست, ایکسل_کتاب, ایکسل_پڑھو, ایکسل_لکھو } سے "اردو/فائلیں"
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>درآمد { زپ_فائل, زپ_بناؤ, زپ_نکالو, زپ_فہرست, ایکسل_کتاب, ایکسل_پڑھو, ایکسل_لکھو } سے "اردو/فائلیں"
 </code></pre></div>
 <hr />
-<h2 id="table-of-contents">Table of Contents — فہرست مضامین</h2>
+<h2 id="table-of-contents">Table of Contents — فہرست مضامین<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
 <ol>
 <li><a href="#zip-files--زپ">ZIP Files — زپ</a></li>
 <li><a href="#زپ_فائل-class">زپ_فائل class</a></li>
@@ -999,16 +1487,16 @@
 <li><a href="#examples">Examples</a></li>
 </ol>
 <hr />
-<h2 id="zip-files">ZIP Files — زپ</h2>
+<h2 id="zip-files">ZIP Files — زپ<a class="headerlink" href="#zip-files" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><strong>اردو:</strong> زپ فائل (ZIP file) ایک سکڑی ہوئی آرکائیو فائل ہے جس میں متعدد فائلیں محفوظ کی جا سکتی ہیں۔</p>
 </blockquote>
-<h3 id="_-class">زپ_فائل class</h3>
+<h3 id="_-class">زپ_فائل class<a class="headerlink" href="#_-class" title="Permanent link">&para;</a></h3>
 <p>The <code>زپ_فائل</code> class wraps Python's <code>zipfile.ZipFile</code>. Open an archive for reading, writing, or appending.</p>
 <blockquote>
 <p><strong>اردو:</strong> <code>زپ_فائل</code> کلاس سے آرکائیو پڑھنے، لکھنے یا اضافہ کرنے کے لیے کھولیں۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>متغیر z = نیا زپ_فائل("آرکائیو.zip", "r")
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>متغیر z = نیا زپ_فائل("آرکائیو.zip", "r")
 </code></pre></div>
 <p><strong>Mode strings:</strong></p>
 <table>
@@ -1033,7 +1521,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="methods">Methods — طریقے</h3>
+<h3 id="methods">Methods — طریقے<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1095,7 +1583,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="standalone-zip-functions">Standalone ZIP functions — اکیلے زپ فنکشن</h3>
+<h3 id="standalone-zip-functions">Standalone ZIP functions — اکیلے زپ فنکشن<a class="headerlink" href="#standalone-zip-functions" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1123,12 +1611,12 @@
 </tbody>
 </table>
 <hr />
-<h2 id="excel">Excel — ایکسل</h2>
+<h2 id="excel">Excel — ایکسل<a class="headerlink" href="#excel" title="Permanent link">&para;</a></h2>
 <p>Backed by <code>openpyxl</code>. Supports <code>.xlsx</code> files only.</p>
 <blockquote>
 <p><strong>اردو:</strong> ایکسل (Excel) ورک بک صرف <code>.xlsx</code> فارمیٹ کو سپورٹ کرتی ہے۔ اس کا انجن <code>openpyxl</code> ہے۔</p>
 </blockquote>
-<h3 id="_-worksheet">ایکسل_ورق — Worksheet</h3>
+<h3 id="_-worksheet">ایکسل_ورق — Worksheet<a class="headerlink" href="#_-worksheet" title="Permanent link">&para;</a></h3>
 <p>Obtained from a <code>ایکسل_کتاب</code> via <code>.ورق()</code> or <code>.ورق_بنائیں()</code>.</p>
 <blockquote>
 <p><strong>اردو:</strong> ورق (worksheet) ایک ایکسل شیٹ ہے۔ اسے <code>ایکسل_کتاب</code> سے <code>.ورق()</code> یا <code>.ورق_بنائیں()</code> سے حاصل کریں۔</p>
@@ -1202,12 +1690,12 @@
 </tr>
 </tbody>
 </table>
-<h3 id="_-workbook">ایکسل_کتاب — Workbook</h3>
+<h3 id="_-workbook">ایکسل_کتاب — Workbook<a class="headerlink" href="#_-workbook" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><strong>اردو:</strong> <code>ایکسل_کتاب</code> پوری ایکسل فائل کی نمائندگی کرتی ہے۔ نئی ورک بک بنائیں یا موجودہ فائل کھولیں۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>متغیر wb = نیا ایکسل_کتاب()               // نئی ورک بک
-متغیر wb = نیا ایکسل_کتاب("موجودہ.xlsx")  // موجودہ فائل کھولیں
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>متغیر wb = نیا ایکسل_کتاب()               // نئی ورک بک
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>متغیر wb = نیا ایکسل_کتاب("موجودہ.xlsx")  // موجودہ فائل کھولیں
 </code></pre></div>
 <table>
 <thead>
@@ -1250,7 +1738,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="standalone-excel-functions">Standalone Excel functions — اکیلے ایکسل فنکشن</h3>
+<h3 id="standalone-excel-functions">Standalone Excel functions — اکیلے ایکسل فنکشن<a class="headerlink" href="#standalone-excel-functions" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1273,280 +1761,280 @@
 </tbody>
 </table>
 <hr />
-<h2 id="examples">Examples — مثالیں</h2>
-<h3 id="example-1-create-a-zip-archive">Example 1 — Create a ZIP archive</h3>
+<h2 id="examples">Examples — مثالیں<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<h3 id="example-1-create-a-zip-archive">Example 1 — Create a ZIP archive<a class="headerlink" href="#example-1-create-a-zip-archive" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><strong>اردو:</strong> مثال ۱ — زپ آرکائیو بنانا</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>درآمد { زپ_فائل, زپ_بناؤ } سے "اردو/فائلیں"
-
-// ═══════════════════════════════════════
-// طریقہ 1: زپ_فائل کلاس سے
-// ═══════════════════════════════════════
-
-متغیر z = نیا زپ_فائل("پروجیکٹ.zip", "w")
-
-// فائلیں شامل کریں
-z.شامل("main.urdu")
-z.شامل("config.json")
-z.شامل("README.md")
-
-// متن بطور فائل شامل کریں
-z.متن_شامل("نوٹ.txt", "یہ ZIP میں خودکار بنائی گئی فائل ہے۔")
-
-// بائٹس شامل کریں
-z.بائٹس_شامل("ڈیٹا.bin", [0x89, 0x50, 0x4E, 0x47])
-
-z.بند()
-لکھو("ZIP بنائی گئی: پروجیکٹ.zip")
-
-// ═══════════════════════════════════════
-// طریقہ 2: زپ_بناؤ فنکشن
-// ═══════════════════════════════════════
-
-زپ_بناؤ("بیک_اپ.zip", [
-    ["main.urdu",     "کوڈ/main.urdu"],
-    ["config.json",   "ترتیبات/config.json"],
-    ["docs/guide.md", "دستاویز/guide.md"]
-])
-لکھو("بیک اپ ZIP تیار")
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>درآمد { زپ_فائل, زپ_بناؤ } سے "اردو/فائلیں"
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>// ═══════════════════════════════════════
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>// طریقہ 1: زپ_فائل کلاس سے
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>// ═══════════════════════════════════════
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>متغیر z = نیا زپ_فائل("پروجیکٹ.zip", "w")
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>// فائلیں شامل کریں
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>z.شامل("main.urdu")
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>z.شامل("config.json")
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>z.شامل("README.md")
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>// متن بطور فائل شامل کریں
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>z.متن_شامل("نوٹ.txt", "یہ ZIP میں خودکار بنائی گئی فائل ہے۔")
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>// بائٹس شامل کریں
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>z.بائٹس_شامل("ڈیٹا.bin", [0x89, 0x50, 0x4E, 0x47])
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>z.بند()
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>لکھو("ZIP بنائی گئی: پروجیکٹ.zip")
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>// ═══════════════════════════════════════
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>// طریقہ 2: زپ_بناؤ فنکشن
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>// ═══════════════════════════════════════
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>زپ_بناؤ("بیک_اپ.zip", [
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>    ["main.urdu",     "کوڈ/main.urdu"],
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>    ["config.json",   "ترتیبات/config.json"],
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>    ["docs/guide.md", "دستاویز/guide.md"]
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>])
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>لکھو("بیک اپ ZIP تیار")
 </code></pre></div>
-<h3 id="example-2-read-and-extract-a-zip">Example 2 — Read and extract a ZIP</h3>
+<h3 id="example-2-read-and-extract-a-zip">Example 2 — Read and extract a ZIP<a class="headerlink" href="#example-2-read-and-extract-a-zip" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><strong>اردو:</strong> مثال ۲ — زپ فائل پڑھنا اور نکالنا</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>درآمد { زپ_فائل, زپ_نکالو, زپ_فہرست } سے "اردو/فائلیں"
-
-// فہرست دیکھیں (کھولے بغیر)
-متغیر نام_فہرست = زپ_فہرست("پروجیکٹ.zip")
-لکھو("ZIP میں فائلیں:")
-کے_لیے (متغیر نام کا نام_فہرست) {
-    لکھو("  -", نام);
-}
-
-// تفصیلی معلومات
-متغیر z = نیا زپ_فائل("پروجیکٹ.zip", "r")
-
-کے_لیے (متغیر نام کا z.فہرست()) {
-    متغیر معلومات = z.معلومات(نام)
-    لکھو(`  ${معلومات.نام}: ${معلومات.اصل_سائز} بائٹ → ${معلومات.سکڑا_سائز} بائٹ`)
-}
-
-// ایک فائل پڑھیں
-متغیر مواد = z.متن_پڑھو("نوٹ.txt")
-لکھو("\nنوٹ.txt مواد:", مواد)
-
-// ایک فائل نکالیں
-z.نکالو("main.urdu", "نکالی_فائلیں/")
-
-z.بند()
-
-// تمام نکالیں
-متغیر نکالی_گئیں = زپ_نکالو("پروجیکٹ.zip", "نکالا_مواد/")
-لکھو("\nنکالی گئی فائلیں:")
-کے_لیے (متغیر راستہ کا نکالی_گئیں) {
-    لکھو("  ✓", راستہ);
-}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>درآمد { زپ_فائل, زپ_نکالو, زپ_فہرست } سے "اردو/فائلیں"
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>// فہرست دیکھیں (کھولے بغیر)
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>متغیر نام_فہرست = زپ_فہرست("پروجیکٹ.zip")
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>لکھو("ZIP میں فائلیں:")
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>کے_لیے (متغیر نام کا نام_فہرست) {
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    لکھو("  -", نام);
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>}
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>// تفصیلی معلومات
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>متغیر z = نیا زپ_فائل("پروجیکٹ.zip", "r")
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>کے_لیے (متغیر نام کا z.فہرست()) {
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    متغیر معلومات = z.معلومات(نام)
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    لکھو(`  ${معلومات.نام}: ${معلومات.اصل_سائز} بائٹ → ${معلومات.سکڑا_سائز} بائٹ`)
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>}
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>// ایک فائل پڑھیں
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>متغیر مواد = z.متن_پڑھو("نوٹ.txt")
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>لکھو("\nنوٹ.txt مواد:", مواد)
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>// ایک فائل نکالیں
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>z.نکالو("main.urdu", "نکالی_فائلیں/")
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>z.بند()
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>// تمام نکالیں
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>متغیر نکالی_گئیں = زپ_نکالو("پروجیکٹ.zip", "نکالا_مواد/")
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>لکھو("\nنکالی گئی فائلیں:")
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>کے_لیے (متغیر راستہ کا نکالی_گئیں) {
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>    لکھو("  ✓", راستہ);
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>}
 </code></pre></div>
-<h3 id="example-3-append-to-existing-zip">Example 3 — Append to existing ZIP</h3>
+<h3 id="example-3-append-to-existing-zip">Example 3 — Append to existing ZIP<a class="headerlink" href="#example-3-append-to-existing-zip" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><strong>اردو:</strong> مثال ۳ — موجودہ زپ میں فائلیں شامل کرنا</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>درآمد { زپ_فائل } سے "اردو/فائلیں"
-
-// موجودہ ZIP میں فائلیں شامل کریں
-متغیر z = نیا زپ_فائل("پروجیکٹ.zip", "a")
-
-z.شامل("نئی_فائل.urdu")
-z.متن_شامل("CHANGELOG.txt", "v2.0 — نئی خصوصیات شامل کی گئیں")
-
-لکھو("ZIP اپڈیٹ سے پہلے:", z.فہرست().length, "فائلیں")
-z.بند()
-
-// تصدیق کریں
-متغیر z2 = نیا زپ_فائل("پروجیکٹ.zip", "r")
-لکھو("ZIP اپڈیٹ کے بعد:", z2.فہرست().length, "فائلیں")
-z2.بند()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>درآمد { زپ_فائل } سے "اردو/فائلیں"
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>// موجودہ ZIP میں فائلیں شامل کریں
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>متغیر z = نیا زپ_فائل("پروجیکٹ.zip", "a")
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>z.شامل("نئی_فائل.urdu")
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>z.متن_شامل("CHANGELOG.txt", "v2.0 — نئی خصوصیات شامل کی گئیں")
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>لکھو("ZIP اپڈیٹ سے پہلے:", z.فہرست().length, "فائلیں")
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>z.بند()
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>// تصدیق کریں
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>متغیر z2 = نیا زپ_فائل("پروجیکٹ.zip", "r")
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>لکھو("ZIP اپڈیٹ کے بعد:", z2.فہرست().length, "فائلیں")
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>z2.بند()
 </code></pre></div>
-<h3 id="example-4-create-excel-with-data">Example 4 — Create Excel with data</h3>
+<h3 id="example-4-create-excel-with-data">Example 4 — Create Excel with data<a class="headerlink" href="#example-4-create-excel-with-data" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><strong>اردو:</strong> مثال ۴ — ڈیٹا کے ساتھ ایکسل فائل بنانا</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>درآمد { ایکسل_کتاب, ایکسل_لکھو } سے "اردو/فائلیں"
-
-// ═══════════════════════════════════════
-// طریقہ 1: ایکسل_لکھو (آسان)
-// ═══════════════════════════════════════
-
-متغیر ڈیٹا = [
-    ["نام",    "عمر", "شہر",      "تنخواہ"],
-    ["احمد",   25,    "کراچی",    50000],
-    ["فاطمہ",  30,    "لاہور",    65000],
-    ["علی",    22,    "اسلام آباد", 45000],
-    ["زینب",   28,    "پشاور",    55000]
-]
-
-متغیر راستہ = ایکسل_لکھو(ڈیٹا, "ملازمین.xlsx", sheet_name="ملازمین")
-لکھو("محفوظ:", راستہ)
-
-// ═══════════════════════════════════════
-// طریقہ 2: ایکسل_کتاب کلاس (مکمل کنٹرول)
-// ═══════════════════════════════════════
-
-متغیر wb = نیا ایکسل_کتاب()
-متغیر ws = wb.ورق()
-
-// ہیڈر
-ws.خانہ_مقرر(1, 1, "مصنوع")
-ws.خانہ_مقرر(1, 2, "مقدار")
-ws.خانہ_مقرر(1, 3, "قیمت")
-ws.خانہ_مقرر(1, 4, "کل")
-
-// ڈیٹا قطاریں
-متغیر فروخت = [
-    ["پنسل",    100, 10],
-    ["کاپی",    50,  25],
-    ["قلم",     200, 15],
-    ["رابر",    150, 5]
-]
-
-متغیر صف_نمبر = 2
-کے_لیے (متغیر مصنوع کا فروخت) {
-    ws.خانہ_مقرر(صف_نمبر, 1, مصنوع[0])
-    ws.خانہ_مقرر(صف_نمبر, 2, مصنوع[1])
-    ws.خانہ_مقرر(صف_نمبر, 3, مصنوع[2])
-    ws.خانہ_مقرر(صف_نمبر, 4, مصنوع[1] * مصنوع[2])  // مقدار × قیمت
-    صف_نمبر += 1
-}
-
-// قطار شامل کریں
-ws.قطار_شامل(["کل", "", "", ws.کالم_پڑھو(4).slice(1).reduce((a,b)=&gt;a+b, 0)])
-
-wb.محفوظ("فروخت_رپورٹ.xlsx")
-wb.بند()
-لکھو("فروخت رپورٹ محفوظ ہو گئی")
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>درآمد { ایکسل_کتاب, ایکسل_لکھو } سے "اردو/فائلیں"
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>// ═══════════════════════════════════════
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>// طریقہ 1: ایکسل_لکھو (آسان)
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>// ═══════════════════════════════════════
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>متغیر ڈیٹا = [
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    ["نام",    "عمر", "شہر",      "تنخواہ"],
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    ["احمد",   25,    "کراچی",    50000],
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    ["فاطمہ",  30,    "لاہور",    65000],
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>    ["علی",    22,    "اسلام آباد", 45000],
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>    ["زینب",   28,    "پشاور",    55000]
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>]
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>متغیر راستہ = ایکسل_لکھو(ڈیٹا, "ملازمین.xlsx", sheet_name="ملازمین")
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>لکھو("محفوظ:", راستہ)
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>// ═══════════════════════════════════════
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>// طریقہ 2: ایکسل_کتاب کلاس (مکمل کنٹرول)
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>// ═══════════════════════════════════════
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>متغیر wb = نیا ایکسل_کتاب()
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>متغیر ws = wb.ورق()
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>// ہیڈر
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>ws.خانہ_مقرر(1, 1, "مصنوع")
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>ws.خانہ_مقرر(1, 2, "مقدار")
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a>ws.خانہ_مقرر(1, 3, "قیمت")
+<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a>ws.خانہ_مقرر(1, 4, "کل")
+<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a>
+<a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a>// ڈیٹا قطاریں
+<a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a>متغیر فروخت = [
+<a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a>    ["پنسل",    100, 10],
+<a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a>    ["کاپی",    50,  25],
+<a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a>    ["قلم",     200, 15],
+<a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a>    ["رابر",    150, 5]
+<a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a>]
+<a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a>
+<a id="__codelineno-6-39" name="__codelineno-6-39" href="#__codelineno-6-39"></a>متغیر صف_نمبر = 2
+<a id="__codelineno-6-40" name="__codelineno-6-40" href="#__codelineno-6-40"></a>کے_لیے (متغیر مصنوع کا فروخت) {
+<a id="__codelineno-6-41" name="__codelineno-6-41" href="#__codelineno-6-41"></a>    ws.خانہ_مقرر(صف_نمبر, 1, مصنوع[0])
+<a id="__codelineno-6-42" name="__codelineno-6-42" href="#__codelineno-6-42"></a>    ws.خانہ_مقرر(صف_نمبر, 2, مصنوع[1])
+<a id="__codelineno-6-43" name="__codelineno-6-43" href="#__codelineno-6-43"></a>    ws.خانہ_مقرر(صف_نمبر, 3, مصنوع[2])
+<a id="__codelineno-6-44" name="__codelineno-6-44" href="#__codelineno-6-44"></a>    ws.خانہ_مقرر(صف_نمبر, 4, مصنوع[1] * مصنوع[2])  // مقدار × قیمت
+<a id="__codelineno-6-45" name="__codelineno-6-45" href="#__codelineno-6-45"></a>    صف_نمبر += 1
+<a id="__codelineno-6-46" name="__codelineno-6-46" href="#__codelineno-6-46"></a>}
+<a id="__codelineno-6-47" name="__codelineno-6-47" href="#__codelineno-6-47"></a>
+<a id="__codelineno-6-48" name="__codelineno-6-48" href="#__codelineno-6-48"></a>// قطار شامل کریں
+<a id="__codelineno-6-49" name="__codelineno-6-49" href="#__codelineno-6-49"></a>ws.قطار_شامل(["کل", "", "", ws.کالم_پڑھو(4).slice(1).reduce((a,b)=&gt;a+b, 0)])
+<a id="__codelineno-6-50" name="__codelineno-6-50" href="#__codelineno-6-50"></a>
+<a id="__codelineno-6-51" name="__codelineno-6-51" href="#__codelineno-6-51"></a>wb.محفوظ("فروخت_رپورٹ.xlsx")
+<a id="__codelineno-6-52" name="__codelineno-6-52" href="#__codelineno-6-52"></a>wb.بند()
+<a id="__codelineno-6-53" name="__codelineno-6-53" href="#__codelineno-6-53"></a>لکھو("فروخت رپورٹ محفوظ ہو گئی")
 </code></pre></div>
-<h3 id="example-5-read-excel-data">Example 5 — Read Excel data</h3>
+<h3 id="example-5-read-excel-data">Example 5 — Read Excel data<a class="headerlink" href="#example-5-read-excel-data" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><strong>اردو:</strong> مثال ۵ — ایکسل فائل سے ڈیٹا پڑھنا</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>درآمد { ایکسل_کتاب, ایکسل_پڑھو } سے "اردو/فائلیں"
-
-// ═══════════════════════════════════════
-// طریقہ 1: ایکسل_پڑھو (آسان)
-// ═══════════════════════════════════════
-
-متغیر ڈیٹا = ایکسل_پڑھو("ملازمین.xlsx")
-لکھو("کل قطاریں:", ڈیٹا.length)
-
-متغیر ہیڈرز = ڈیٹا[0]
-لکھو("کالمز:", ہیڈرز)
-
-کے_لیے (متغیر i کا حد(1, ڈیٹا.length)) {
-    متغیر قطار = ڈیٹا[i]
-    لکھو(`  ${قطار[0]}: عمر ${قطار[1]}, ${قطار[2]}`)
-}
-
-// ═══════════════════════════════════════
-// طریقہ 2: ایکسل_کتاب (خانہ بہ خانہ)
-// ═══════════════════════════════════════
-
-متغیر wb = نیا ایکسل_کتاب("فروخت_رپورٹ.xlsx")
-متغیر ws = wb.ورق()
-
-لکھو(`\nشیٹ: ${ws.نام}`)
-لکھو(`صفیں: ${ws.صف_تعداد}, کالم: ${ws.کالم_تعداد}`)
-
-// پہلی قطار (ہیڈر)
-متغیر ہیڈر_قطار = ws.قطار_پڑھو(1)
-لکھو("ہیڈر:", ہیڈر_قطار)
-
-// چوتھا کالم (کل)
-متغیر کل_کالم = ws.کالم_پڑھو(4)
-لکھو("کل کالم:", کل_کالم)
-
-// مخصوص خانہ
-متغیر قیمت = ws.خانہ(3, 3)
-لکھو("قطار 3، کالم 3:", قیمت)
-
-wb.بند()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>درآمد { ایکسل_کتاب, ایکسل_پڑھو } سے "اردو/فائلیں"
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>// ═══════════════════════════════════════
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>// طریقہ 1: ایکسل_پڑھو (آسان)
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>// ═══════════════════════════════════════
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>متغیر ڈیٹا = ایکسل_پڑھو("ملازمین.xlsx")
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>لکھو("کل قطاریں:", ڈیٹا.length)
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>متغیر ہیڈرز = ڈیٹا[0]
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>لکھو("کالمز:", ہیڈرز)
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>کے_لیے (متغیر i کا حد(1, ڈیٹا.length)) {
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    متغیر قطار = ڈیٹا[i]
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>    لکھو(`  ${قطار[0]}: عمر ${قطار[1]}, ${قطار[2]}`)
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>}
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>// ═══════════════════════════════════════
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>// طریقہ 2: ایکسل_کتاب (خانہ بہ خانہ)
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>// ═══════════════════════════════════════
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>متغیر wb = نیا ایکسل_کتاب("فروخت_رپورٹ.xlsx")
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>متغیر ws = wb.ورق()
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>
+<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>لکھو(`\nشیٹ: ${ws.نام}`)
+<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>لکھو(`صفیں: ${ws.صف_تعداد}, کالم: ${ws.کالم_تعداد}`)
+<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>
+<a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>// پہلی قطار (ہیڈر)
+<a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a>متغیر ہیڈر_قطار = ws.قطار_پڑھو(1)
+<a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a>لکھو("ہیڈر:", ہیڈر_قطار)
+<a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a>
+<a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a>// چوتھا کالم (کل)
+<a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a>متغیر کل_کالم = ws.کالم_پڑھو(4)
+<a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a>لکھو("کل کالم:", کل_کالم)
+<a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a>
+<a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a>// مخصوص خانہ
+<a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a>متغیر قیمت = ws.خانہ(3, 3)
+<a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a>لکھو("قطار 3، کالم 3:", قیمت)
+<a id="__codelineno-7-39" name="__codelineno-7-39" href="#__codelineno-7-39"></a>
+<a id="__codelineno-7-40" name="__codelineno-7-40" href="#__codelineno-7-40"></a>wb.بند()
 </code></pre></div>
-<h3 id="example-6-multiple-excel-sheets">Example 6 — Multiple Excel sheets</h3>
+<h3 id="example-6-multiple-excel-sheets">Example 6 — Multiple Excel sheets<a class="headerlink" href="#example-6-multiple-excel-sheets" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><strong>اردو:</strong> مثال ۶ — متعدد ورق (worksheets) والی ایکسل فائل</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>درآمد { ایکسل_کتاب } سے "اردو/فائلیں"
-
-// ═══════════════════════════════════════
-// ماہانہ رپورٹ — تین شیٹس
-// ═══════════════════════════════════════
-
-متغیر wb = نیا ایکسل_کتاب()
-
-متغیر مہینے = [
-    { نام: "جنوری",  ڈیٹا: [["مصنوع", "فروخت"], ["چائے", 5000], ["قہوہ", 3000]] },
-    { نام: "فروری",  ڈیٹا: [["مصنوع", "فروخت"], ["چائے", 6200], ["قہوہ", 2800]] },
-    { نام: "مارچ",   ڈیٹا: [["مصنوع", "فروخت"], ["چائے", 7100], ["قہوہ", 3500]] }
-]
-
-کے_لیے (متغیر مہینہ کا مہینے) {
-    متغیر ws = wb.ورق_بنائیں(مہینہ.نام)
-    کے_لیے (متغیر قطار کا مہینہ.ڈیٹا) {
-        ws.قطار_شامل(قطار)
-    }
-}
-
-// پہلی (خودکار بنائی گئی) خالی شیٹ حذف کریں
-اگر (wb.ورق_فہرست().includes("Sheet")) {
-    wb.ورق_حذف("Sheet")
-}
-
-لکھو("شیٹس:", wb.ورق_فہرست())
-wb.محفوظ("سہ_ماہی_رپورٹ.xlsx")
-wb.بند()
-لکھو("سہ ماہی رپورٹ محفوظ ہو گئی")
-
-// شیٹس پڑھیں
-متغیر wb2 = نیا ایکسل_کتاب("سہ_ماہی_رپورٹ.xlsx")
-لکھو("\nتمام شیٹس:")
-کے_لیے (متغیر شیٹ_نام کا wb2.ورق_فہرست()) {
-    متغیر ws = ایکسل_پڑھو("سہ_ماہی_رپورٹ.xlsx", sheet_name=شیٹ_نام)
-    لکھو(`  ${شیٹ_نام}: ${ws.length - 1} مصنوعات`)
-}
-wb2.بند()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>درآمد { ایکسل_کتاب } سے "اردو/فائلیں"
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>// ═══════════════════════════════════════
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>// ماہانہ رپورٹ — تین شیٹس
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>// ═══════════════════════════════════════
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>متغیر wb = نیا ایکسل_کتاب()
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>متغیر مہینے = [
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    { نام: "جنوری",  ڈیٹا: [["مصنوع", "فروخت"], ["چائے", 5000], ["قہوہ", 3000]] },
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    { نام: "فروری",  ڈیٹا: [["مصنوع", "فروخت"], ["چائے", 6200], ["قہوہ", 2800]] },
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>    { نام: "مارچ",   ڈیٹا: [["مصنوع", "فروخت"], ["چائے", 7100], ["قہوہ", 3500]] }
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>]
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>کے_لیے (متغیر مہینہ کا مہینے) {
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>    متغیر ws = wb.ورق_بنائیں(مہینہ.نام)
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>    کے_لیے (متغیر قطار کا مہینہ.ڈیٹا) {
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>        ws.قطار_شامل(قطار)
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>    }
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>}
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>// پہلی (خودکار بنائی گئی) خالی شیٹ حذف کریں
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>اگر (wb.ورق_فہرست().includes("Sheet")) {
+<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>    wb.ورق_حذف("Sheet")
+<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>}
+<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>
+<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>لکھو("شیٹس:", wb.ورق_فہرست())
+<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>wb.محفوظ("سہ_ماہی_رپورٹ.xlsx")
+<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>wb.بند()
+<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>لکھو("سہ ماہی رپورٹ محفوظ ہو گئی")
+<a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a>
+<a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a>// شیٹس پڑھیں
+<a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a>متغیر wb2 = نیا ایکسل_کتاب("سہ_ماہی_رپورٹ.xlsx")
+<a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a>لکھو("\nتمام شیٹس:")
+<a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a>کے_لیے (متغیر شیٹ_نام کا wb2.ورق_فہرست()) {
+<a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a>    متغیر ws = ایکسل_پڑھو("سہ_ماہی_رپورٹ.xlsx", sheet_name=شیٹ_نام)
+<a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a>    لکھو(`  ${شیٹ_نام}: ${ws.length - 1} مصنوعات`)
+<a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a>}
+<a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a>wb2.بند()
 </code></pre></div>
-<h3 id="example-7-zip-excel-together-backup-workflow">Example 7 — ZIP + Excel together (backup workflow)</h3>
+<h3 id="example-7-zip-excel-together-backup-workflow">Example 7 — ZIP + Excel together (backup workflow)<a class="headerlink" href="#example-7-zip-excel-together-backup-workflow" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><strong>اردو:</strong> مثال ۷ — زپ اور ایکسل ملا کر بیک اپ کا نظام</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>درآمد { ایکسل_لکھو, ایکسل_پڑھو } سے "اردو/فائلیں"
-درآمد { زپ_بناؤ, زپ_نکالو } سے "اردو/فائلیں"
-
-// ─── 1: Excel فائل بنائیں ─────────────────────
-ایکسل_لکھو([
-    ["نام",    "نمبر", "گریڈ"],
-    ["احمد",   85,     "B"],
-    ["فاطمہ",  92,     "A"],
-    ["علی",    78,     "C"]
-], "نتائج.xlsx")
-
-// ─── 2: ZIP میں بند کریں ──────────────────────
-زپ_بناؤ("نتائج_بیک_اپ.zip", [
-    ["نتائج.xlsx", "نتائج/نتائج.xlsx"],
-    ["README.md",   "نتائج/README.md"]
-])
-لکھو("بیک اپ بنایا")
-
-// ─── 3: بحال کریں ─────────────────────────────
-متغیر نکالی_گئیں = زپ_نکالو("نتائج_بیک_اپ.zip", "بحالی/")
-لکھو("بحال:", نکالی_گئیں)
-
-// ─── 4: بحال شدہ ڈیٹا پڑھیں ─────────────────
-متغیر ڈیٹا = ایکسل_پڑھو("بحالی/نتائج/نتائج.xlsx")
-لکھو("\nبحال شدہ ڈیٹا:")
-کے_لیے (متغیر قطار کا ڈیٹا) {
-    لکھو(" ", قطار)
-}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>درآمد { ایکسل_لکھو, ایکسل_پڑھو } سے "اردو/فائلیں"
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>درآمد { زپ_بناؤ, زپ_نکالو } سے "اردو/فائلیں"
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>// ─── 1: Excel فائل بنائیں ─────────────────────
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>ایکسل_لکھو([
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    ["نام",    "نمبر", "گریڈ"],
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    ["احمد",   85,     "B"],
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    ["فاطمہ",  92,     "A"],
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    ["علی",    78,     "C"]
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>], "نتائج.xlsx")
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>// ─── 2: ZIP میں بند کریں ──────────────────────
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>زپ_بناؤ("نتائج_بیک_اپ.zip", [
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>    ["نتائج.xlsx", "نتائج/نتائج.xlsx"],
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>    ["README.md",   "نتائج/README.md"]
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>])
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>لکھو("بیک اپ بنایا")
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>// ─── 3: بحال کریں ─────────────────────────────
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>متغیر نکالی_گئیں = زپ_نکالو("نتائج_بیک_اپ.zip", "بحالی/")
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>لکھو("بحال:", نکالی_گئیں)
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>
+<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a>// ─── 4: بحال شدہ ڈیٹا پڑھیں ─────────────────
+<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>متغیر ڈیٹا = ایکسل_پڑھو("بحالی/نتائج/نتائج.xlsx")
+<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>لکھو("\nبحال شدہ ڈیٹا:")
+<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a>کے_لیے (متغیر قطار کا ڈیٹا) {
+<a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a>    لکھو(" ", قطار)
+<a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a>}
 </code></pre></div>
 <hr />
 <p><em>Previous: <a href="../scraper/">Web Scraper →</a> | Next: <a href="../crypto/">Cryptography →</a></em></p>
@@ -1573,7 +2061,7 @@ wb2.بند()
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
+  واپس اوپر جائیں
 </button>
         
       </main>
@@ -1605,7 +2093,7 @@ wb2.بند()
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u06a9\u0644\u0650\u067e \u0628\u0648\u0631\u0688 \u0645\u06cc\u06ba \u0646\u0642\u0644 \u06a9\u0631 \u062f\u06cc\u0627 \u06af\u06cc\u0627", "clipboard.copy": "\u06a9\u0644\u0650\u067e \u0628\u0648\u0631\u0688 \u0645\u06cc\u06ba \u0646\u0642\u0644 \u06a9\u0631\u06cc\u06ba", "search.result.more.one": "\u0627\u0650\u0633 \u0635\u0641\u062d\u06d2 \u067e\u0631 \u0645\u0632\u06cc\u062f \u06f1", "search.result.more.other": "\u0627\u0650\u0633 \u0635\u0641\u062d\u06d2 \u067e\u0631 \u0645\u0632\u06cc\u062f #", "search.result.none": "\u06a9\u0648\u0626\u06cc \u0645\u0644\u062a\u06cc \u062c\u0644\u062a\u06cc \u062f\u0633\u062a\u0627\u0648\u06cc\u0632\u0627\u062a \u0646\u06c1\u06cc\u06ba", "search.result.one": "\u06f1 \u0645\u0644\u062a\u06cc \u062c\u0644\u062a\u06cc \u062f\u0633\u062a\u0627\u0648\u06cc\u0632", "search.result.other": "# \u0645\u0644\u062a\u06cc \u062c\u0644\u062a\u06cc \u062f\u0633\u062a\u0627\u0648\u06cc\u0632\u0627\u062a", "search.result.placeholder": "\u062a\u0644\u0627\u0634 \u0634\u0631\u0648\u0639 \u06a9\u0631\u0646\u06d2 \u06a9\u06d2 \u0644\u0626\u06d2 \u0679\u0627\u0626\u067e \u06a9\u0631\u06cc\u06ba", "search.result.term.missing": "\u06af\u0645\u0634\u062f\u06c1", "select.version": "\u0648\u0631\u0698\u0646 \u06a9\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u06a9\u0631\u06cc\u06ba"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>

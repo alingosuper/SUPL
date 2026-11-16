@@ -1,16 +1,18 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="ur" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+        <meta name="description" content="6 زبانیں، ایک پروگرامنگ زبان (سرائیکی + اردو + پنجابی + بلوچی + پشتو + سندھی)">
       
       
         <meta name="author" content="AlinGo Developers">
       
+      
+        <link rel="canonical" href="https://alingosuper.github.io/SUPL/syntax/08-async/">
       
       
       
@@ -18,12 +20,12 @@
         
       
       
-      <link rel="icon" href="../../assets/branding/favicon.svg">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
-        <title>Async/Await and Promises — غیر متزامن پروگرامنگ - AlinGo Saraiki</title>
+        <title>Async/Await and Promises — غیر متزامن پروگرامنگ - SUPL — سُپل پروگرامنگ زبان</title>
       
     
     
@@ -63,7 +65,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+    <body dir="rtl" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -73,7 +75,7 @@
       
         
         <a href="#asyncawait-and-promises" class="md-skip">
-          Skip to content
+          براہِ راست مواد پر جائیں
         </a>
       
     </div>
@@ -85,10 +87,11 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="سر تحریر">
+    <a href="../.." title="SUPL — سُپل پروگرامنگ زبان" class="md-header__button md-logo" aria-label="SUPL — سُپل پروگرامنگ زبان" data-md-component="logo">
       
-  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -99,7 +102,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            AlinGo Saraiki
+            SUPL — سُپل پروگرامنگ زبان
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -127,16 +130,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="تلاش کریں" placeholder="تلاش کریں" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="تلاش">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="صاف کریں" aria-label="صاف کریں" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -149,7 +152,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            تلاش کا آغاز ہو رہا ہے
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -159,6 +162,18 @@
 </div>
       
     
+    
+      <div class="md-header__source">
+        <a href="https://github.com/alingosuper/SUPL" title="ریپازٹری پر جائیں" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    alingosuper/SUPL
+  </div>
+</a>
+      </div>
     
   </nav>
   
@@ -170,7 +185,7 @@
         
           
             
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+<nav class="md-tabs" aria-label="ٹیبز" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -199,13 +214,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../installation/" class="md-tabs__link">
+      <a href="../../%D8%B4%D8%B1%D9%88%D8%B9%D8%A7%D8%AA/" class="md-tabs__link">
         
   
   
     
   
-  انسٹالیشن
+  شروعات
 
       </a>
     </li>
@@ -218,13 +233,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../quick-start/" class="md-tabs__link">
+      <a href="../../%D8%AA%D9%86%D8%B5%DB%8C%D8%A8/" class="md-tabs__link">
         
   
   
     
   
-  کوئیک اسٹارٹ
+  تنصیب
 
       </a>
     </li>
@@ -239,11 +254,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../tutorial/beginner/" class="md-tabs__link">
+        <a href="../../%DA%A9%D9%84%DB%8C%D8%AF%DB%8C_%D8%A7%D9%84%D9%81%D8%A7%D8%B8/" class="md-tabs__link">
           
   
   
-  ٹیوٹوریل
+    
+  
+  کلیدی الفاظ
 
         </a>
       </li>
@@ -259,11 +276,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../reference/keywords/" class="md-tabs__link">
+        <a href="../../%D9%86%D8%AD%D9%88/" class="md-tabs__link">
           
   
   
-  حوالہ
+    
+  
+  نحو
 
         </a>
       </li>
@@ -276,17 +295,20 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../libraries/" class="md-tabs__link">
-        
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stdlib/" class="md-tabs__link">
+          
   
   
     
   
-  لائبریریاں
+  stdlib
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -295,17 +317,20 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../examples/" class="md-tabs__link">
-        
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%D9%85%D8%AB%D8%A7%D9%84%DB%8C%DA%BA/" class="md-tabs__link">
+          
   
   
     
   
   مثالیں
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -329,15 +354,28 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="رہنمائی" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+    <a href="../.." title="SUPL — سُپل پروگرامنگ زبان" class="md-nav__button md-logo" aria-label="SUPL — سُپل پروگرامنگ زبان" data-md-component="logo">
       
-  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    AlinGo Saraiki
+    SUPL — سُپل پروگرامنگ زبان
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/alingosuper/SUPL" title="ریپازٹری پر جائیں" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    alingosuper/SUPL
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -375,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installation/" class="md-nav__link">
+      <a href="../../%D8%B4%D8%B1%D9%88%D8%B9%D8%A7%D8%AA/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    انسٹالیشن
+    شروعات
   
 
     
@@ -402,14 +440,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../quick-start/" class="md-nav__link">
+      <a href="../../%D8%AA%D9%86%D8%B5%DB%8C%D8%A8/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    کوئیک اسٹارٹ
+    تنصیب
   
 
     
@@ -429,6 +467,12 @@
   
   
     
+    
+      
+        
+      
+        
+      
     
     
     
@@ -450,7 +494,7 @@
   <span class="md-ellipsis">
     
   
-    ٹیوٹوریل
+    کلیدی الفاظ
   
 
     
@@ -466,7 +510,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    ٹیوٹوریل
+    کلیدی الفاظ
   
 
           </label>
@@ -479,14 +523,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/beginner/" class="md-nav__link">
+      <a href="../../%DA%A9%D9%84%DB%8C%D8%AF%DB%8C_%D8%A7%D9%84%D9%81%D8%A7%D8%B8/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    ابتدائی
+    مختصر فہرست
   
 
     
@@ -507,42 +551,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/intermediate/" class="md-nav__link">
+      <a href="../../%DA%A9%D9%84%DB%8C%D8%AF%DB%8C_%D8%A7%D9%84%D9%81%D8%A7%D8%B8_%D9%85%DA%A9%D9%85%D9%84/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    درمیانی
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tutorial/advanced/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    اعلیٰ
+    مکمل 218 keywords
   
 
     
@@ -571,6 +587,28 @@
   
     
     
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
     
       
@@ -584,14 +622,15 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%D9%86%D8%AD%D9%88/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
     
   
-    حوالہ
+    نحو
   
 
     
@@ -599,19 +638,27 @@
   
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
   
-    حوالہ
+    نحو
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -620,14 +667,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/keywords/" class="md-nav__link">
+      <a href="../../%D9%86%D8%AD%D9%88/01-%D9%85%D8%AA%D8%BA%DB%8C%D8%B1%D8%A7%D8%AA/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    کی ورڈز
+    متغیرات
   
 
     
@@ -648,7 +695,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/operators/" class="md-nav__link">
+      <a href="../../%D9%86%D8%AD%D9%88/02-%D8%A7%D9%82%D8%B3%D8%A7%D9%85/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اقسام
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/03-%D8%A2%D9%BE%D8%B1%DB%8C%D9%B9%D8%B1%D8%B2/" class="md-nav__link">
         
   
   
@@ -669,6 +744,146 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/04-%D8%B4%D8%B1%D8%A7%D8%A6%D8%B7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    شرائط
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/05-%D9%84%D9%88%D9%BE%D8%B3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لوپس
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/06-%D9%81%D9%86%DA%A9%D8%B4%D9%86%D8%B2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    فنکشنز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/07-%DA%A9%D9%84%D8%A7%D8%B3%D8%B2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کلاسز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/08-%D8%A7%D8%B3%D8%AA%D8%AB%D9%86%D8%A7%D8%A1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    استثناء
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -682,15 +897,90 @@
   
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../stdlib/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    stdlib
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    stdlib
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../libraries/" class="md-nav__link">
+      <a href="../../stdlib/%D9%81%D8%A7%D8%A6%D9%84%D8%A7%DA%BA/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    لائبریریاں
+    فائلاں
   
 
     
@@ -702,6 +992,126 @@
     </li>
   
 
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/%D9%88%DB%8C%D8%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ویب
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/%DA%88%DB%8C%D9%B9%D8%A7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ڈیٹا
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/%D9%88%DB%8C%D9%84%DB%81/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ویلہ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/%DA%B3%D9%86%D8%AA%D8%B1%DB%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ڳنتری
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
       
       
@@ -709,9 +1119,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../examples/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%D9%85%D8%AB%D8%A7%D9%84%DB%8C%DA%BA/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -725,7 +1158,59 @@
   
   
 
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    مثالیں
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%85%D8%AB%D8%A7%D9%84%DB%8C%DA%BA/hello-world/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہیلو ورلڈ
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -743,7 +1228,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="فہرست">
   
   
   
@@ -752,7 +1237,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      فہرست
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -954,14 +1439,17 @@
                   
 
 
+  
+  
 
-<h1 id="asyncawait-and-promises">Async/Await and Promises — غیر متزامن پروگرامنگ</h1>
+
+<h1 id="asyncawait-and-promises">Async/Await and Promises — غیر متزامن پروگرامنگ<a class="headerlink" href="#asyncawait-and-promises" title="Permanent link">&para;</a></h1>
 <p>The Urdu Programming Language runs on Python's <code>asyncio</code> and supports full asynchronous programming. This document covers async functions, await, promises, concurrent operations, and generator-based async patterns.</p>
 <blockquote>
 <p><strong>اردو:</strong> اردو پروگرامنگ لینگویج Python کے <code>asyncio</code> پر چلتی ہے اور مکمل غیر متزامن پروگرامنگ کی حمایت کرتی ہے۔ یہ دستاویز غیر_متزامن فنکشنز، انتظار، وعدے، بیک وقت آپریشنز، اور جنریٹر پر مبنی غیر متزامن طریقوں کا احاطہ کرتی ہے۔</p>
 </blockquote>
 <hr />
-<h2 id="table-of-contents">Table of Contents</h2>
+<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
 <ol>
 <li><a href="#why-async">Why Async?</a></li>
 <li><a href="#غیر_متزامن-فنکشن--async-function">غیر_متزامن فنکشن — async function</a></li>
@@ -977,168 +1465,168 @@
 <li><a href="#concurrent-operations-example">Concurrent Operations Example</a></li>
 </ol>
 <hr />
-<h2 id="why-async">Why Async? — غیر متزامن پروگرامنگ کیوں؟</h2>
+<h2 id="why-async">Why Async? — غیر متزامن پروگرامنگ کیوں؟<a class="headerlink" href="#why-async" title="Permanent link">&para;</a></h2>
 <p>Asynchronous code lets your program continue working while waiting for slow operations (network, disk, timers) instead of blocking the entire thread.</p>
 <blockquote>
 <p><strong>اردو:</strong> غیر متزامن کوڈ آپ کے پروگرام کو سست آپریشنز (نیٹ ورک، ڈسک، ٹائمر) کا انتظار کرتے وقت کام جاری رکھنے دیتا ہے، بجائے اس کے کہ پورا دھاگہ رک جائے۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>// Synchronous — blocks everything
-فنکشن ہم_وقت() {
-    لکھو("شروع");
-    // imagine 2 seconds of blocking work here
-    لکھو("مکمل");
-}
-
-// Asynchronous — non-blocking
-غیر_متزامن فنکشن غیر_ہم_وقت() {
-    لکھو("شروع");
-    انتظار تاخیر(2000);    // suspends only this function
-    لکھو("2 سیکنڈ بعد مکمل");
-}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>// Synchronous — blocks everything
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>فنکشن ہم_وقت() {
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    لکھو("شروع");
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    // imagine 2 seconds of blocking work here
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    لکھو("مکمل");
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>}
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>// Asynchronous — non-blocking
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>غیر_متزامن فنکشن غیر_ہم_وقت() {
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    لکھو("شروع");
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    انتظار تاخیر(2000);    // suspends only this function
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    لکھو("2 سیکنڈ بعد مکمل");
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>}
 </code></pre></div>
 <hr />
-<h2 id="_-async-function">غیر_متزامن فنکشن — async function</h2>
+<h2 id="_-async-function">غیر_متزامن فنکشن — async function<a class="headerlink" href="#_-async-function" title="Permanent link">&para;</a></h2>
 <p>Prefix any function with <code>غیر_متزامن</code> to make it async. An async function always returns a Promise.</p>
 <blockquote>
 <p><strong>اردو:</strong> کسی بھی فنکشن کے آگے <code>غیر_متزامن</code> لگانے سے وہ غیر متزامن بن جاتا ہے۔ غیر متزامن فنکشن ہمیشہ ایک وعدہ واپس کرتا ہے۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>غیر_متزامن فنکشن ڈیٹا_حاصل_کرو() {
-    واپس "ڈیٹا ملا";
-}
-
-// Calling it returns a Promise
-مستقل وعدہ_شے = ڈیٹا_حاصل_کرو();
-لکھو(وعدہ_شے);    // Promise { "ڈیٹا ملا" }
-
-// Await it
-مستقل نتیجہ = انتظار ڈیٹا_حاصل_کرو();
-لکھو(نتیجہ);       // ڈیٹا ملا
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>غیر_متزامن فنکشن ڈیٹا_حاصل_کرو() {
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    واپس "ڈیٹا ملا";
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>}
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>// Calling it returns a Promise
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>مستقل وعدہ_شے = ڈیٹا_حاصل_کرو();
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>لکھو(وعدہ_شے);    // Promise { "ڈیٹا ملا" }
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>// Await it
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>مستقل نتیجہ = انتظار ڈیٹا_حاصل_کرو();
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>لکھو(نتیجہ);       // ڈیٹا ملا
 </code></pre></div>
 <p><strong>Async arrow function:</strong></p>
 <blockquote>
 <p><strong>اردو:</strong> غیر متزامن تیر فنکشن:</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>مستقل سلام = غیر_متزامن (نام) =&gt; {
-    انتظار تاخیر(100);
-    واپس `مرحبا، ${نام}!`;
-};
-
-لکھو(انتظار سلام("احمد"));    // مرحبا، احمد!
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>مستقل سلام = غیر_متزامن (نام) =&gt; {
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    انتظار تاخیر(100);
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    واپس `مرحبا، ${نام}!`;
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>};
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>لکھو(انتظار سلام("احمد"));    // مرحبا، احمد!
 </code></pre></div>
 <p><strong>Async method in class:</strong></p>
 <blockquote>
 <p><strong>اردو:</strong> کلاس میں غیر متزامن طریقہ:</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>کلاس API_کلائنٹ {
-    تعمیر(بنیادی_url) {
-        یہ.بنیادی_url = بنیادی_url;
-    }
-
-    غیر_متزامن حاصل_کرو(راستہ) {
-        مستقل جواب = انتظار کرل(`${یہ.بنیادی_url}${راستہ}`);
-        واپس JSON_پڑھو(جواب);
-    }
-
-    غیر_متزامن بھیجو(راستہ, ڈیٹا) {
-        مستقل جواب = انتظار کرل(`${یہ.بنیادی_url}${راستہ}`, {
-            طریقہ: "POST",
-            جسم: JSON_لکھو(ڈیٹا)
-        });
-        واپس JSON_پڑھو(جواب);
-    }
-}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>کلاس API_کلائنٹ {
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    تعمیر(بنیادی_url) {
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>        یہ.بنیادی_url = بنیادی_url;
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    }
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    غیر_متزامن حاصل_کرو(راستہ) {
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>        مستقل جواب = انتظار کرل(`${یہ.بنیادی_url}${راستہ}`);
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        واپس JSON_پڑھو(جواب);
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    }
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    غیر_متزامن بھیجو(راستہ, ڈیٹا) {
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        مستقل جواب = انتظار کرل(`${یہ.بنیادی_url}${راستہ}`, {
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>            طریقہ: "POST",
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>            جسم: JSON_لکھو(ڈیٹا)
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>        });
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>        واپس JSON_پڑھو(جواب);
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    }
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>}
 </code></pre></div>
 <hr />
-<h2 id="await">انتظار — await</h2>
+<h2 id="await">انتظار — await<a class="headerlink" href="#await" title="Permanent link">&para;</a></h2>
 <p><code>انتظار</code> pauses the async function until the Promise resolves, then returns the resolved value.</p>
 <blockquote>
 <p><strong>اردو:</strong> <code>انتظار</code> غیر متزامن فنکشن کو اس وقت تک روکتا ہے جب تک وعدہ پورا نہ ہو جائے، پھر حل شدہ قدر واپس کرتا ہے۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>غیر_متزامن فنکشن مثال() {
-    لکھو("مرحلہ 1");
-    انتظار تاخیر(500);
-    لکھو("مرحلہ 2 — 500ms بعد");
-    انتظار تاخیر(500);
-    لکھو("مرحلہ 3 — 1000ms بعد");
-}
-
-انتظار مثال();
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>غیر_متزامن فنکشن مثال() {
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    لکھو("مرحلہ 1");
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    انتظار تاخیر(500);
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    لکھو("مرحلہ 2 — 500ms بعد");
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    انتظار تاخیر(500);
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    لکھو("مرحلہ 3 — 1000ms بعد");
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>}
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>انتظار مثال();
 </code></pre></div>
 <p><strong>Await any Promise:</strong></p>
 <blockquote>
 <p><strong>اردو:</strong> کسی بھی وعدے کا انتظار:</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>غیر_متزامن فنکشن ڈیٹا_لوڈ() {
-    // Simulated async fetch
-    مستقل ڈیٹا = انتظار نیا وعدہ(حل =&gt; {
-        setTimeout(() =&gt; حل({ نام: "احمد", سکور: 95 }), 100);
-    });
-
-    لکھو(ڈیٹا.نام);    // احمد
-    واپس ڈیٹا;
-}
-
-مستقل نتیجہ = انتظار ڈیٹا_لوڈ();
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>غیر_متزامن فنکشن ڈیٹا_لوڈ() {
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    // Simulated async fetch
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    مستقل ڈیٹا = انتظار نیا وعدہ(حل =&gt; {
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>        setTimeout(() =&gt; حل({ نام: "احمد", سکور: 95 }), 100);
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    });
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    لکھو(ڈیٹا.نام);    // احمد
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    واپس ڈیٹا;
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>}
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>مستقل نتیجہ = انتظار ڈیٹا_لوڈ();
 </code></pre></div>
 <hr />
-<h2 id="delay">تاخیر() — Delay</h2>
+<h2 id="delay">تاخیر() — Delay<a class="headerlink" href="#delay" title="Permanent link">&para;</a></h2>
 <p><code>تاخیر(ms)</code> is a built-in that returns a Promise resolving after <code>ms</code> milliseconds.</p>
 <blockquote>
 <p><strong>اردو:</strong> <code>تاخیر(ms)</code> ایک بنا بنایا فنکشن ہے جو <code>ms</code> ملی سیکنڈ کے بعد حل ہونے والا وعدہ واپس کرتا ہے۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>غیر_متزامن فنکشن الٹی_گنتی(سے) {
-    کے_لیے (متغیر i کا حد(سے, 0, -1)) {
-        لکھو(i);
-        انتظار تاخیر(1000);
-    }
-    لکھو("🚀 لانچ!");
-}
-
-انتظار الٹی_گنتی(5);
-// 5  (انتظار 1s)
-// 4  (انتظار 1s)
-// ...
-// 🚀 لانچ!
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>غیر_متزامن فنکشن الٹی_گنتی(سے) {
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    کے_لیے (متغیر i کا حد(سے, 0, -1)) {
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>        لکھو(i);
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>        انتظار تاخیر(1000);
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    }
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    لکھو("🚀 لانچ!");
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>}
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>انتظار الٹی_گنتی(5);
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>// 5  (انتظار 1s)
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>// 4  (انتظار 1s)
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>// ...
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>// 🚀 لانچ!
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>// Retry pattern using تاخیر
-غیر_متزامن فنکشن دوبارہ_کوشش(فنکشن_شے, کوشش = 3, وقفہ = 1000) {
-    کے_لیے (متغیر i کا حد(کوشش)) {
-        کوشش {
-            واپس انتظار فنکشن_شے();
-        } پکڑو (غ) {
-            اگر (i === کوشش - 1) پھینکو غ;
-            لکھو(`کوشش ${i + 1} ناکام، ${وقفہ}ms بعد دوبارہ...`);
-            انتظار تاخیر(وقفہ);
-        }
-    }
-}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>// Retry pattern using تاخیر
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>غیر_متزامن فنکشن دوبارہ_کوشش(فنکشن_شے, کوشش = 3, وقفہ = 1000) {
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    کے_لیے (متغیر i کا حد(کوشش)) {
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>        کوشش {
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>            واپس انتظار فنکشن_شے();
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>        } پکڑو (غ) {
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>            اگر (i === کوشش - 1) پھینکو غ;
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>            لکھو(`کوشش ${i + 1} ناکام، ${وقفہ}ms بعد دوبارہ...`);
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>            انتظار تاخیر(وقفہ);
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>        }
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    }
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>}
 </code></pre></div>
 <hr />
-<h2 id="promise">وعدہ — Promise</h2>
+<h2 id="promise">وعدہ — Promise<a class="headerlink" href="#promise" title="Permanent link">&para;</a></h2>
 <p>A <code>وعدہ</code> (Promise) represents a future value. It is created with a callback that receives <code>حل</code> (resolve) and <code>رد</code> (reject) functions.</p>
 <blockquote>
 <p><strong>اردو:</strong> <code>وعدہ</code> ایک مستقبل کی قدر کو ظاہر کرتا ہے۔ اسے ایک کال بیک کے ساتھ بنایا جاتا ہے جو <code>حل</code> (resolve) اور <code>رد</code> (reject) فنکشن وصول کرتا ہے۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>مستقل سکہ_اچھالو = نیا وعدہ((حل, رد) =&gt; {
-    مستقل نتیجہ = اتفاقی() &gt; 0.5 ? "چت" : "پٹ";
-    setTimeout(() =&gt; حل(نتیجہ), 100);
-});
-
-مستقل نتیجہ = انتظار سکہ_اچھالو;
-لکھو(نتیجہ);    // چت  یا  پٹ
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>مستقل سکہ_اچھالو = نیا وعدہ((حل, رد) =&gt; {
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    مستقل نتیجہ = اتفاقی() &gt; 0.5 ? "چت" : "پٹ";
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    setTimeout(() =&gt; حل(نتیجہ), 100);
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>});
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>مستقل نتیجہ = انتظار سکہ_اچھالو;
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>لکھو(نتیجہ);    // چت  یا  پٹ
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>// Promise that can reject
-غیر_متزامن فنکشن تقسیم(الف, ب) {
-    واپس نیا وعدہ((حل, رد) =&gt; {
-        اگر (ب === 0) {
-            رد(نیا Error("صفر سے تقسیم ناممکن"));
-        } ورنہ {
-            حل(الف / ب);
-        }
-    });
-}
-
-لکھو(انتظار تقسیم(10, 2));    // 5
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>// Promise that can reject
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>غیر_متزامن فنکشن تقسیم(الف, ب) {
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    واپس نیا وعدہ((حل, رد) =&gt; {
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>        اگر (ب === 0) {
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>            رد(نیا Error("صفر سے تقسیم ناممکن"));
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>        } ورنہ {
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>            حل(الف / ب);
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>        }
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    });
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>}
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>لکھو(انتظار تقسیم(10, 2));    // 5
 </code></pre></div>
 <p><strong>Promise states:</strong></p>
 <blockquote>
@@ -1167,319 +1655,319 @@
 </tbody>
 </table>
 <hr />
-<h2 id="chaining-promises">Chaining Promises — وعدوں کا سلسلہ</h2>
+<h2 id="chaining-promises">Chaining Promises — وعدوں کا سلسلہ<a class="headerlink" href="#chaining-promises" title="Permanent link">&para;</a></h2>
 <p>Use <code>.پھر()</code> (then), <code>.پکڑو()</code> (catch), and <code>.آخر()</code> (finally) for promise chains.</p>
 <blockquote>
 <p><strong>اردو:</strong> وعدوں کی زنجیر بنانے کے لیے <code>.پھر()</code> (then)، <code>.پکڑو()</code> (catch)، اور <code>.آخر()</code> (finally) استعمال کریں۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>تقسیم(100, 5)
-    .پھر(نتیجہ =&gt; {
-        لکھو(`پہلا نتیجہ: ${نتیجہ}`);
-        واپس تقسیم(نتیجہ, 2);
-    })
-    .پھر(نتیجہ =&gt; {
-        لکھو(`دوسرا نتیجہ: ${نتیجہ}`);
-    })
-    .پکڑو(غلطی =&gt; {
-        لکھو(`غلطی: ${غلطی.message}`);
-    })
-    .آخر(() =&gt; {
-        لکھو("سلسلہ مکمل");
-    });
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>تقسیم(100, 5)
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    .پھر(نتیجہ =&gt; {
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>        لکھو(`پہلا نتیجہ: ${نتیجہ}`);
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>        واپس تقسیم(نتیجہ, 2);
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    })
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    .پھر(نتیجہ =&gt; {
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>        لکھو(`دوسرا نتیجہ: ${نتیجہ}`);
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>    })
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>    .پکڑو(غلطی =&gt; {
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>        لکھو(`غلطی: ${غلطی.message}`);
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>    })
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>    .آخر(() =&gt; {
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>        لکھو("سلسلہ مکمل");
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>    });
 </code></pre></div>
 <hr />
-<h2 id="_-promiseall">انتظار_سبھی() — Promise.all</h2>
+<h2 id="_-promiseall">انتظار_سبھی() — Promise.all<a class="headerlink" href="#_-promiseall" title="Permanent link">&para;</a></h2>
 <p><code>انتظار_سبھی(وعدے)</code> runs all promises <strong>concurrently</strong> and waits until all resolve. If any rejects, the whole call rejects.</p>
 <blockquote>
 <p><strong>اردو:</strong> <code>انتظار_سبھی(وعدے)</code> تمام وعدے <strong>بیک وقت</strong> چلاتا ہے اور سب کے پورا ہونے کا انتظار کرتا ہے۔ اگر کوئی ایک رد ہو جائے تو پوری کال رد ہو جاتی ہے۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>غیر_متزامن فنکشن آہستہ_کام(نام, ملی_سیکنڈ) {
-    انتظار تاخیر(ملی_سیکنڈ);
-    واپس `${نام} مکمل (${ملی_سیکنڈ}ms)`;
-}
-
-غیر_متزامن فنکشن تمام_کام() {
-    مستقل شروع = وقت();
-
-    مستقل نتائج = انتظار انتظار_سبھی([
-        آہستہ_کام("کام الف", 300),
-        آہستہ_کام("کام ب",   200),
-        آہستہ_کام("کام ج",   400)
-    ]);
-
-    مستقل وقت_لگا = وقت() - شروع;
-    لکھو(نتائج);
-    لکھو(`کل وقت: ~${وقت_لگا}ms`);    // ~400ms, not 900ms
-}
-
-انتظار تمام_کام();
-// ["کام الف مکمل (300ms)", "کام ب مکمل (200ms)", "کام ج مکمل (400ms)"]
-// کل وقت: ~400ms
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>غیر_متزامن فنکشن آہستہ_کام(نام, ملی_سیکنڈ) {
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    انتظار تاخیر(ملی_سیکنڈ);
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    واپس `${نام} مکمل (${ملی_سیکنڈ}ms)`;
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>}
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>غیر_متزامن فنکشن تمام_کام() {
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    مستقل شروع = وقت();
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>    مستقل نتائج = انتظار انتظار_سبھی([
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>        آہستہ_کام("کام الف", 300),
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>        آہستہ_کام("کام ب",   200),
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>        آہستہ_کام("کام ج",   400)
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>    ]);
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>    مستقل وقت_لگا = وقت() - شروع;
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>    لکھو(نتائج);
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>    لکھو(`کل وقت: ~${وقت_لگا}ms`);    // ~400ms, not 900ms
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>}
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>انتظار تمام_کام();
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>// ["کام الف مکمل (300ms)", "کام ب مکمل (200ms)", "کام ج مکمل (400ms)"]
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>// کل وقت: ~400ms
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>// Parallel data loading
-غیر_متزامن فنکشن ڈیش_بورڈ_لوڈ() {
-    مستقل [صارفین, آرڈر, مصنوعات] = انتظار انتظار_سبھی([
-        API.حاصل_کرو("/صارفین"),
-        API.حاصل_کرو("/آرڈر"),
-        API.حاصل_کرو("/مصنوعات")
-    ]);
-
-    واپس { صارفین, آرڈر, مصنوعات };
-}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>// Parallel data loading
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>غیر_متزامن فنکشن ڈیش_بورڈ_لوڈ() {
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    مستقل [صارفین, آرڈر, مصنوعات] = انتظار انتظار_سبھی([
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>        API.حاصل_کرو("/صارفین"),
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>        API.حاصل_کرو("/آرڈر"),
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>        API.حاصل_کرو("/مصنوعات")
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>    ]);
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>    واپس { صارفین, آرڈر, مصنوعات };
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>}
 </code></pre></div>
 <hr />
-<h2 id="promiseallsettled-race-any">Promise.allSettled / race / any</h2>
-<h3 id="promiseallsettled-_">Promise.allSettled — تمام_نتائج()</h3>
+<h2 id="promiseallsettled-race-any">Promise.allSettled / race / any<a class="headerlink" href="#promiseallsettled-race-any" title="Permanent link">&para;</a></h2>
+<h3 id="promiseallsettled-_">Promise.allSettled — تمام_نتائج()<a class="headerlink" href="#promiseallsettled-_" title="Permanent link">&para;</a></h3>
 <p>Waits for all promises regardless of outcome. Returns an array of <code>{ status, value/reason }</code> objects.</p>
 <blockquote>
 <p><strong>اردو:</strong> تمام وعدوں کا انتظار کرتا ہے چاہے نتیجہ کچھ بھی ہو۔ <code>{ status, value/reason }</code> اشیاء کی فہرست واپس کرتا ہے۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>غیر_متزامن فنکشن مثال_نتائج() {
-    مستقل نتائج = انتظار Promise.allSettled([
-        وعدہ.resolve("کامیاب"),
-        وعدہ.reject("ناکام"),
-        وعدہ.resolve("بھی کامیاب")
-    ]);
-
-    کے_لیے (مستقل نتیجہ کا نتائج) {
-        اگر (نتیجہ.status === "fulfilled") {
-            لکھو(`کامیاب: ${نتیجہ.value}`);
-        } ورنہ {
-            لکھو(`ناکام: ${نتیجہ.reason}`);
-        }
-    }
-}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>غیر_متزامن فنکشن مثال_نتائج() {
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    مستقل نتائج = انتظار Promise.allSettled([
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>        وعدہ.resolve("کامیاب"),
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>        وعدہ.reject("ناکام"),
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>        وعدہ.resolve("بھی کامیاب")
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>    ]);
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>    کے_لیے (مستقل نتیجہ کا نتائج) {
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>        اگر (نتیجہ.status === "fulfilled") {
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>            لکھو(`کامیاب: ${نتیجہ.value}`);
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>        } ورنہ {
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>            لکھو(`ناکام: ${نتیجہ.reason}`);
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>        }
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>    }
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>}
 </code></pre></div>
-<h3 id="promiserace">Promise.race — دوڑ()</h3>
+<h3 id="promiserace">Promise.race — دوڑ()<a class="headerlink" href="#promiserace" title="Permanent link">&para;</a></h3>
 <p>Resolves or rejects as soon as the <strong>first</strong> promise settles.</p>
 <blockquote>
 <p><strong>اردو:</strong> جیسے ہی <strong>پہلا</strong> وعدہ طے ہو جائے، حل یا رد ہو جاتا ہے۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>// Timeout pattern
-غیر_متزامن فنکشن ٹائم_آؤٹ_کے_ساتھ(وعدہ_شے, ملی_سیکنڈ) {
-    مستقل ٹائم_آؤٹ_وعدہ = نیا وعدہ((_, رد) =&gt;
-        setTimeout(() =&gt; رد(نیا Error("وقت ختم")), ملی_سیکنڈ)
-    );
-    واپس Promise.race([وعدہ_شے, ٹائم_آؤٹ_وعدہ]);
-}
-
-کوشش {
-    مستقل نتیجہ = انتظار ٹائم_آؤٹ_کے_ساتھ(
-        آہستہ_کام("ڈیٹا", 5000),
-        2000    // 2 second timeout
-    );
-    لکھو(نتیجہ);
-} پکڑو (غ) {
-    لکھو(`${غ.message}`);    // وقت ختم
-}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>// Timeout pattern
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>غیر_متزامن فنکشن ٹائم_آؤٹ_کے_ساتھ(وعدہ_شے, ملی_سیکنڈ) {
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    مستقل ٹائم_آؤٹ_وعدہ = نیا وعدہ((_, رد) =&gt;
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>        setTimeout(() =&gt; رد(نیا Error("وقت ختم")), ملی_سیکنڈ)
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>    );
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>    واپس Promise.race([وعدہ_شے, ٹائم_آؤٹ_وعدہ]);
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>}
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>کوشش {
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>    مستقل نتیجہ = انتظار ٹائم_آؤٹ_کے_ساتھ(
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>        آہستہ_کام("ڈیٹا", 5000),
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>        2000    // 2 second timeout
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>    );
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>    لکھو(نتیجہ);
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>} پکڑو (غ) {
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>    لکھو(`${غ.message}`);    // وقت ختم
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>}
 </code></pre></div>
-<h3 id="promiseany-_">Promise.any — کوئی_ایک()</h3>
+<h3 id="promiseany-_">Promise.any — کوئی_ایک()<a class="headerlink" href="#promiseany-_" title="Permanent link">&para;</a></h3>
 <p>Resolves with the <strong>first successful</strong> promise.</p>
 <blockquote>
 <p><strong>اردو:</strong> <strong>پہلے کامیاب</strong> وعدے کے ساتھ حل ہوتا ہے۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>مستقل نتیجہ = انتظار Promise.any([
-    وعدہ.reject("سرور 1 ناکام"),
-    آہستہ_کام("سرور 2", 200),
-    آہستہ_کام("سرور 3", 100)
-]);
-لکھو(نتیجہ);    // سرور 3 مکمل (100ms)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>مستقل نتیجہ = انتظار Promise.any([
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    وعدہ.reject("سرور 1 ناکام"),
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    آہستہ_کام("سرور 2", 200),
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>    آہستہ_کام("سرور 3", 100)
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>]);
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>لکھو(نتیجہ);    // سرور 3 مکمل (100ms)
 </code></pre></div>
 <hr />
-<h2 id="async-error-handling">Async Error Handling — غیر متزامن غلطی سنبھالنا</h2>
+<h2 id="async-error-handling">Async Error Handling — غیر متزامن غلطی سنبھالنا<a class="headerlink" href="#async-error-handling" title="Permanent link">&para;</a></h2>
 <p>Always wrap <code>انتظار</code> calls in <code>کوشش/پکڑو</code> to handle rejections gracefully.</p>
 <blockquote>
 <p><strong>اردو:</strong> ردّ کو سلیقے سے سنبھالنے کے لیے <code>انتظار</code> کالز کو ہمیشہ <code>کوشش/پکڑو</code> میں لپیٹیں۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>غیر_متزامن فنکشن محفوظ_طریقے_سے() {
-    کوشش {
-        مستقل ڈیٹا = انتظار کرل("https://api.example.com/users");
-        مستقل صارفین = JSON_پڑھو(ڈیٹا);
-        لکھو(`${صارفین.لمبائی} صارفین ملے`);
-    } پکڑو (غ) {
-        لکھو(`نیٹ ورک غلطی: ${غ.message}`);
-    } آخر {
-        لکھو("درخواست مکمل");
-    }
-}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>غیر_متزامن فنکشن محفوظ_طریقے_سے() {
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    کوشش {
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>        مستقل ڈیٹا = انتظار کرل("https://api.example.com/users");
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>        مستقل صارفین = JSON_پڑھو(ڈیٹا);
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>        لکھو(`${صارفین.لمبائی} صارفین ملے`);
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>    } پکڑو (غ) {
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>        لکھو(`نیٹ ورک غلطی: ${غ.message}`);
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>    } آخر {
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>        لکھو("درخواست مکمل");
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>    }
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>}
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>// Handle different error types
-غیر_متزامن فنکشن ڈیٹا_پروسیس() {
-    کوشش {
-        مستقل جواب = انتظار کرل("https://api.example.com/data");
-        اگر (!جواب.ok) پھینکو نیا Error(`HTTP ${جواب.status}`);
-        واپس انتظار جواب.json();
-    } پکڑو (غ) {
-        اگر (غ مثال TypeError) {
-            لکھو("نیٹ ورک سے رابطہ نہیں");
-        } ورنہ_اگر (غ.message.شروع_ہے("HTTP")) {
-            لکھو(`سرور غلطی: ${غ.message}`);
-        } ورنہ {
-            لکھو(`نامعلوم غلطی: ${غ.message}`);
-        }
-        واپس خالی;
-    }
-}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>// Handle different error types
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>غیر_متزامن فنکشن ڈیٹا_پروسیس() {
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>    کوشش {
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>        مستقل جواب = انتظار کرل("https://api.example.com/data");
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>        اگر (!جواب.ok) پھینکو نیا Error(`HTTP ${جواب.status}`);
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>        واپس انتظار جواب.json();
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>    } پکڑو (غ) {
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>        اگر (غ مثال TypeError) {
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>            لکھو("نیٹ ورک سے رابطہ نہیں");
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>        } ورنہ_اگر (غ.message.شروع_ہے("HTTP")) {
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>            لکھو(`سرور غلطی: ${غ.message}`);
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>        } ورنہ {
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>            لکھو(`نامعلوم غلطی: ${غ.message}`);
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>        }
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>        واپس خالی;
+<a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a>    }
+<a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a>}
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>// Parallel with individual error handling
-غیر_متزامن فنکشن محفوظ_سب(وعدے) {
-    واپس انتظار_سبھی(
-        وعدے.تبدیل(p =&gt;
-            p.پکڑو(غ =&gt; ({ غلطی: غ.message }))
-        )
-    );
-}
-
-مستقل نتائج = انتظار محفوظ_سب([
-    وعدہ.resolve(42),
-    وعدہ.reject(نیا Error("ناکام")),
-    وعدہ.resolve("مکمل")
-]);
-
-لکھو(نتائج);
-// [42, { غلطی: "ناکام" }, "مکمل"]
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>// Parallel with individual error handling
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>غیر_متزامن فنکشن محفوظ_سب(وعدے) {
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>    واپس انتظار_سبھی(
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>        وعدے.تبدیل(p =&gt;
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>            p.پکڑو(غ =&gt; ({ غلطی: غ.message }))
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>        )
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>    );
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>}
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>مستقل نتائج = انتظار محفوظ_سب([
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>    وعدہ.resolve(42),
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>    وعدہ.reject(نیا Error("ناکام")),
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>    وعدہ.resolve("مکمل")
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a>]);
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>
+<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>لکھو(نتائج);
+<a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a>// [42, { غلطی: "ناکام" }, "مکمل"]
 </code></pre></div>
 <hr />
-<h2 id="generator-functions-with">Generator Functions with پیداوار — جنریٹر فنکشنز</h2>
+<h2 id="generator-functions-with">Generator Functions with پیداوار — جنریٹر فنکشنز<a class="headerlink" href="#generator-functions-with" title="Permanent link">&para;</a></h2>
 <p>Generator functions produce values lazily with <code>پیداوار</code>. They are useful for memory-efficient iteration.</p>
 <blockquote>
 <p><strong>اردو:</strong> جنریٹر فنکشنز <code>پیداوار</code> کے ساتھ قدریں سست روی سے پیدا کرتے ہیں۔ یہ میموری کے اعتبار سے موثر تکرار کے لیے مفید ہیں۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>فنکشن* فبوناچی() {
-    متغیر [الف, ب] = [0, 1];
-    جبکہ (سچ) {
-        پیداوار الف;
-        [الف, ب] = [ب, الف + ب];
-    }
-}
-
-// Take first 10
-مستقل g = فبوناچی();
-مستقل پہلے_10 = [];
-کے_لیے (متغیر _ کا حد(10)) {
-    پہلے_10.شامل(g.اگلا().value);
-}
-لکھو(پہلے_10);
-// [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>فنکشن* فبوناچی() {
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>    متغیر [الف, ب] = [0, 1];
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>    جبکہ (سچ) {
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>        پیداوار الف;
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>        [الف, ب] = [ب, الف + ب];
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>    }
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>}
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>// Take first 10
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>مستقل g = فبوناچی();
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>مستقل پہلے_10 = [];
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>کے_لیے (متغیر _ کا حد(10)) {
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>    پہلے_10.شامل(g.اگلا().value);
+<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>}
+<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>لکھو(پہلے_10);
+<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>// [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>// Generator pipeline
-فنکشن* نقشہ(اشیاء, fn) {
-    کے_لیے (مستقل شے کا اشیاء) {
-        پیداوار fn(شے);
-    }
-}
-
-فنکشن* چھانو(اشیاء, شرط) {
-    کے_لیے (مستقل شے کا اشیاء) {
-        اگر (شرط(شے)) پیداوار شے;
-    }
-}
-
-فنکشن* حد_لگاؤ(اشیاء, n) {
-    متغیر گنتی = 0;
-    کے_لیے (مستقل شے کا اشیاء) {
-        اگر (گنتی++ &gt;= n) ٹوٹنا;
-        پیداوار شے;
-    }
-}
-
-// Compose: first 5 even squares from natural numbers
-مستقل قدرتی = فنکشن*() { متغیر i = 0; جبکہ(سچ) پیداوار i++; };
-مستقل نتیجہ = [...حد_لگاؤ(چھانو(نقشہ(قدرتی(), n =&gt; n*n), n =&gt; n%2===0), 5)];
-لکھو(نتیجہ);    // [0, 4, 16, 36, 64]
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>// Generator pipeline
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>فنکشن* نقشہ(اشیاء, fn) {
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>    کے_لیے (مستقل شے کا اشیاء) {
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>        پیداوار fn(شے);
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>    }
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>}
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>فنکشن* چھانو(اشیاء, شرط) {
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>    کے_لیے (مستقل شے کا اشیاء) {
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>        اگر (شرط(شے)) پیداوار شے;
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>    }
+<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>}
+<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>
+<a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a>فنکشن* حد_لگاؤ(اشیاء, n) {
+<a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a>    متغیر گنتی = 0;
+<a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a>    کے_لیے (مستقل شے کا اشیاء) {
+<a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a>        اگر (گنتی++ &gt;= n) ٹوٹنا;
+<a id="__codelineno-20-18" name="__codelineno-20-18" href="#__codelineno-20-18"></a>        پیداوار شے;
+<a id="__codelineno-20-19" name="__codelineno-20-19" href="#__codelineno-20-19"></a>    }
+<a id="__codelineno-20-20" name="__codelineno-20-20" href="#__codelineno-20-20"></a>}
+<a id="__codelineno-20-21" name="__codelineno-20-21" href="#__codelineno-20-21"></a>
+<a id="__codelineno-20-22" name="__codelineno-20-22" href="#__codelineno-20-22"></a>// Compose: first 5 even squares from natural numbers
+<a id="__codelineno-20-23" name="__codelineno-20-23" href="#__codelineno-20-23"></a>مستقل قدرتی = فنکشن*() { متغیر i = 0; جبکہ(سچ) پیداوار i++; };
+<a id="__codelineno-20-24" name="__codelineno-20-24" href="#__codelineno-20-24"></a>مستقل نتیجہ = [...حد_لگاؤ(چھانو(نقشہ(قدرتی(), n =&gt; n*n), n =&gt; n%2===0), 5)];
+<a id="__codelineno-20-25" name="__codelineno-20-25" href="#__codelineno-20-25"></a>لکھو(نتیجہ);    // [0, 4, 16, 36, 64]
 </code></pre></div>
 <hr />
-<h2 id="async-generators">Async Generators — غیر متزامن جنریٹرز</h2>
+<h2 id="async-generators">Async Generators — غیر متزامن جنریٹرز<a class="headerlink" href="#async-generators" title="Permanent link">&para;</a></h2>
 <p>Async generators combine <code>غیر_متزامن فنکشن*</code> with <code>پیداوار</code> for streaming async data.</p>
 <blockquote>
 <p><strong>اردو:</strong> غیر متزامن جنریٹرز <code>غیر_متزامن فنکشن*</code> اور <code>پیداوار</code> کو ملاتے ہیں تاکہ غیر متزامن ڈیٹا کو بہاؤ کی صورت میں حاصل کیا جا سکے۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>غیر_متزامن فنکشن* ڈیٹا_سٹریم(صفحات) {
-    کے_لیے (متغیر صفحہ کا حد(1, صفحات + 1)) {
-        انتظار تاخیر(200);    // simulate API call
-        پیداوار { صفحہ, ڈیٹا: `صفحہ ${صفحہ} کا ڈیٹا` };
-    }
-}
-
-غیر_متزامن فنکشن سب_صفحات() {
-    کے_لیے انتظار (مستقل ٹکڑا کا ڈیٹا_سٹریم(3)) {
-        لکھو(ٹکڑا);
-    }
-}
-
-انتظار سب_صفحات();
-// { صفحہ: 1, ڈیٹا: "صفحہ 1 کا ڈیٹا" }
-// { صفحہ: 2, ڈیٹا: "صفحہ 2 کا ڈیٹا" }
-// { صفحہ: 3, ڈیٹا: "صفحہ 3 کا ڈیٹا" }
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>غیر_متزامن فنکشن* ڈیٹا_سٹریم(صفحات) {
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>    کے_لیے (متغیر صفحہ کا حد(1, صفحات + 1)) {
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>        انتظار تاخیر(200);    // simulate API call
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>        پیداوار { صفحہ, ڈیٹا: `صفحہ ${صفحہ} کا ڈیٹا` };
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>    }
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>}
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>غیر_متزامن فنکشن سب_صفحات() {
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>    کے_لیے انتظار (مستقل ٹکڑا کا ڈیٹا_سٹریم(3)) {
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>        لکھو(ٹکڑا);
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>    }
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>}
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>
+<a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>انتظار سب_صفحات();
+<a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>// { صفحہ: 1, ڈیٹا: "صفحہ 1 کا ڈیٹا" }
+<a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>// { صفحہ: 2, ڈیٹا: "صفحہ 2 کا ڈیٹا" }
+<a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a>// { صفحہ: 3, ڈیٹا: "صفحہ 3 کا ڈیٹا" }
 </code></pre></div>
 <hr />
-<h2 id="concurrent-operations-example">Concurrent Operations Example — بیک وقت آپریشنز کی مثال</h2>
+<h2 id="concurrent-operations-example">Concurrent Operations Example — بیک وقت آپریشنز کی مثال<a class="headerlink" href="#concurrent-operations-example" title="Permanent link">&para;</a></h2>
 <p>A realistic example showing sequential vs concurrent loading and result handling.</p>
 <blockquote>
 <p><strong>اردو:</strong> ایک حقیقی مثال جو بالترتیب بمقابلہ بیک وقت لوڈنگ اور نتائج کا موازنہ دکھاتی ہے۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>// Simulate API calls
-غیر_متزامن فنکشن صارف_حاصل_کرو(id) {
-    انتظار تاخیر(300);
-    واپس { id, نام: `صارف ${id}`, ای_میل: `user${id}@example.com` };
-}
-
-غیر_متزامن فنکشن آرڈر_حاصل_کرو(صارف_id) {
-    انتظار تاخیر(200);
-    واپس [
-        { id: صارف_id * 100, شے: "کتاب", قیمت: 500 },
-        { id: صارف_id * 100 + 1, شے: "قلم", قیمت: 50 }
-    ];
-}
-
-// ❌ Sequential — slow (500ms total)
-غیر_متزامن فنکشن بالترتیب_لوڈ(ids) {
-    مستقل نتائج = [];
-    کے_لیے (مستقل id کا ids) {
-        مستقل صارف = انتظار صارف_حاصل_کرو(id);
-        مستقل آرڈر = انتظار آرڈر_حاصل_کرو(id);
-        نتائج.شامل({ صارف, آرڈر });
-    }
-    واپس نتائج;
-}
-
-// ✅ Concurrent — fast (300ms total)
-غیر_متزامن فنکشن بیک_وقت_لوڈ(ids) {
-    واپس انتظار انتظار_سبھی(
-        ids.تبدیل(غیر_متزامن id =&gt; {
-            مستقل [صارف, آرڈر] = انتظار انتظار_سبھی([
-                صارف_حاصل_کرو(id),
-                آرڈر_حاصل_کرو(id)
-            ]);
-            واپس { صارف, آرڈر };
-        })
-    );
-}
-
-مستقل نتائج = انتظار بیک_وقت_لوڈ([1, 2, 3]);
-
-کے_لیے (مستقل { صارف, آرڈر } کا نتائج) {
-    مستقل کل = آرڈر.کم_کرو((s, o) =&gt; s + o.قیمت, 0);
-    لکھو(`${صارف.نام}: ${آرڈر.لمبائی} آرڈر، کل ${کل} روپے`);
-}
-// صارف 1: 2 آرڈر، کل 550 روپے
-// صارف 2: 2 آرڈر، کل 550 روپے
-// صارف 3: 2 آرڈر، کل 550 روپے
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>// Simulate API calls
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>غیر_متزامن فنکشن صارف_حاصل_کرو(id) {
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>    انتظار تاخیر(300);
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>    واپس { id, نام: `صارف ${id}`, ای_میل: `user${id}@example.com` };
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>}
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>غیر_متزامن فنکشن آرڈر_حاصل_کرو(صارف_id) {
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>    انتظار تاخیر(200);
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>    واپس [
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>        { id: صارف_id * 100, شے: "کتاب", قیمت: 500 },
+<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>        { id: صارف_id * 100 + 1, شے: "قلم", قیمت: 50 }
+<a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a>    ];
+<a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a>}
+<a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a>
+<a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a>// ❌ Sequential — slow (500ms total)
+<a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a>غیر_متزامن فنکشن بالترتیب_لوڈ(ids) {
+<a id="__codelineno-22-17" name="__codelineno-22-17" href="#__codelineno-22-17"></a>    مستقل نتائج = [];
+<a id="__codelineno-22-18" name="__codelineno-22-18" href="#__codelineno-22-18"></a>    کے_لیے (مستقل id کا ids) {
+<a id="__codelineno-22-19" name="__codelineno-22-19" href="#__codelineno-22-19"></a>        مستقل صارف = انتظار صارف_حاصل_کرو(id);
+<a id="__codelineno-22-20" name="__codelineno-22-20" href="#__codelineno-22-20"></a>        مستقل آرڈر = انتظار آرڈر_حاصل_کرو(id);
+<a id="__codelineno-22-21" name="__codelineno-22-21" href="#__codelineno-22-21"></a>        نتائج.شامل({ صارف, آرڈر });
+<a id="__codelineno-22-22" name="__codelineno-22-22" href="#__codelineno-22-22"></a>    }
+<a id="__codelineno-22-23" name="__codelineno-22-23" href="#__codelineno-22-23"></a>    واپس نتائج;
+<a id="__codelineno-22-24" name="__codelineno-22-24" href="#__codelineno-22-24"></a>}
+<a id="__codelineno-22-25" name="__codelineno-22-25" href="#__codelineno-22-25"></a>
+<a id="__codelineno-22-26" name="__codelineno-22-26" href="#__codelineno-22-26"></a>// ✅ Concurrent — fast (300ms total)
+<a id="__codelineno-22-27" name="__codelineno-22-27" href="#__codelineno-22-27"></a>غیر_متزامن فنکشن بیک_وقت_لوڈ(ids) {
+<a id="__codelineno-22-28" name="__codelineno-22-28" href="#__codelineno-22-28"></a>    واپس انتظار انتظار_سبھی(
+<a id="__codelineno-22-29" name="__codelineno-22-29" href="#__codelineno-22-29"></a>        ids.تبدیل(غیر_متزامن id =&gt; {
+<a id="__codelineno-22-30" name="__codelineno-22-30" href="#__codelineno-22-30"></a>            مستقل [صارف, آرڈر] = انتظار انتظار_سبھی([
+<a id="__codelineno-22-31" name="__codelineno-22-31" href="#__codelineno-22-31"></a>                صارف_حاصل_کرو(id),
+<a id="__codelineno-22-32" name="__codelineno-22-32" href="#__codelineno-22-32"></a>                آرڈر_حاصل_کرو(id)
+<a id="__codelineno-22-33" name="__codelineno-22-33" href="#__codelineno-22-33"></a>            ]);
+<a id="__codelineno-22-34" name="__codelineno-22-34" href="#__codelineno-22-34"></a>            واپس { صارف, آرڈر };
+<a id="__codelineno-22-35" name="__codelineno-22-35" href="#__codelineno-22-35"></a>        })
+<a id="__codelineno-22-36" name="__codelineno-22-36" href="#__codelineno-22-36"></a>    );
+<a id="__codelineno-22-37" name="__codelineno-22-37" href="#__codelineno-22-37"></a>}
+<a id="__codelineno-22-38" name="__codelineno-22-38" href="#__codelineno-22-38"></a>
+<a id="__codelineno-22-39" name="__codelineno-22-39" href="#__codelineno-22-39"></a>مستقل نتائج = انتظار بیک_وقت_لوڈ([1, 2, 3]);
+<a id="__codelineno-22-40" name="__codelineno-22-40" href="#__codelineno-22-40"></a>
+<a id="__codelineno-22-41" name="__codelineno-22-41" href="#__codelineno-22-41"></a>کے_لیے (مستقل { صارف, آرڈر } کا نتائج) {
+<a id="__codelineno-22-42" name="__codelineno-22-42" href="#__codelineno-22-42"></a>    مستقل کل = آرڈر.کم_کرو((s, o) =&gt; s + o.قیمت, 0);
+<a id="__codelineno-22-43" name="__codelineno-22-43" href="#__codelineno-22-43"></a>    لکھو(`${صارف.نام}: ${آرڈر.لمبائی} آرڈر، کل ${کل} روپے`);
+<a id="__codelineno-22-44" name="__codelineno-22-44" href="#__codelineno-22-44"></a>}
+<a id="__codelineno-22-45" name="__codelineno-22-45" href="#__codelineno-22-45"></a>// صارف 1: 2 آرڈر، کل 550 روپے
+<a id="__codelineno-22-46" name="__codelineno-22-46" href="#__codelineno-22-46"></a>// صارف 2: 2 آرڈر، کل 550 روپے
+<a id="__codelineno-22-47" name="__codelineno-22-47" href="#__codelineno-22-47"></a>// صارف 3: 2 آرڈر، کل 550 روپے
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>// Queue — process N items at a time
-غیر_متزامن فنکشن متوازی_قطار(اشیاء, fn, ہم_وقت = 3) {
-    مستقل نتائج = [];
-    کے_لیے (متغیر i = 0; i &lt; اشیاء.لمبائی; i += ہم_وقت) {
-        مستقل ٹکڑا = اشیاء.حصہ(i, i + ہم_وقت);
-        مستقل ٹکڑا_نتائج = انتظار انتظار_سبھی(ٹکڑا.تبدیل(fn));
-        نتائج.جوڑ_دو(...ٹکڑا_نتائج);
-    }
-    واپس نتائج;
-}
-
-مستقل ids = [1, 2, 3, 4, 5, 6, 7, 8];
-مستقل صارفین = انتظار متوازی_قطار(ids, صارف_حاصل_کرو, 3);
-لکھو(`${صارفین.لمبائی} صارفین لوڈ ہوئے`);    // 8 صارفین لوڈ ہوئے
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>// Queue — process N items at a time
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>غیر_متزامن فنکشن متوازی_قطار(اشیاء, fn, ہم_وقت = 3) {
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>    مستقل نتائج = [];
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>    کے_لیے (متغیر i = 0; i &lt; اشیاء.لمبائی; i += ہم_وقت) {
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>        مستقل ٹکڑا = اشیاء.حصہ(i, i + ہم_وقت);
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>        مستقل ٹکڑا_نتائج = انتظار انتظار_سبھی(ٹکڑا.تبدیل(fn));
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>        نتائج.جوڑ_دو(...ٹکڑا_نتائج);
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>    }
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>    واپس نتائج;
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a>}
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a>
+<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a>مستقل ids = [1, 2, 3, 4, 5, 6, 7, 8];
+<a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a>مستقل صارفین = انتظار متوازی_قطار(ids, صارف_حاصل_کرو, 3);
+<a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a>لکھو(`${صارفین.لمبائی} صارفین لوڈ ہوئے`);    // 8 صارفین لوڈ ہوئے
 </code></pre></div>
 
 
@@ -1504,7 +1992,7 @@
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
+  واپس اوپر جائیں
 </button>
         
       </main>
@@ -1536,7 +2024,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u06a9\u0644\u0650\u067e \u0628\u0648\u0631\u0688 \u0645\u06cc\u06ba \u0646\u0642\u0644 \u06a9\u0631 \u062f\u06cc\u0627 \u06af\u06cc\u0627", "clipboard.copy": "\u06a9\u0644\u0650\u067e \u0628\u0648\u0631\u0688 \u0645\u06cc\u06ba \u0646\u0642\u0644 \u06a9\u0631\u06cc\u06ba", "search.result.more.one": "\u0627\u0650\u0633 \u0635\u0641\u062d\u06d2 \u067e\u0631 \u0645\u0632\u06cc\u062f \u06f1", "search.result.more.other": "\u0627\u0650\u0633 \u0635\u0641\u062d\u06d2 \u067e\u0631 \u0645\u0632\u06cc\u062f #", "search.result.none": "\u06a9\u0648\u0626\u06cc \u0645\u0644\u062a\u06cc \u062c\u0644\u062a\u06cc \u062f\u0633\u062a\u0627\u0648\u06cc\u0632\u0627\u062a \u0646\u06c1\u06cc\u06ba", "search.result.one": "\u06f1 \u0645\u0644\u062a\u06cc \u062c\u0644\u062a\u06cc \u062f\u0633\u062a\u0627\u0648\u06cc\u0632", "search.result.other": "# \u0645\u0644\u062a\u06cc \u062c\u0644\u062a\u06cc \u062f\u0633\u062a\u0627\u0648\u06cc\u0632\u0627\u062a", "search.result.placeholder": "\u062a\u0644\u0627\u0634 \u0634\u0631\u0648\u0639 \u06a9\u0631\u0646\u06d2 \u06a9\u06d2 \u0644\u0626\u06d2 \u0679\u0627\u0626\u067e \u06a9\u0631\u06cc\u06ba", "search.result.term.missing": "\u06af\u0645\u0634\u062f\u06c1", "select.version": "\u0648\u0631\u0698\u0646 \u06a9\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u06a9\u0631\u06cc\u06ba"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>

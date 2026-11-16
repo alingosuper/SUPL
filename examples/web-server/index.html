@@ -1,16 +1,18 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="ur" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+        <meta name="description" content="6 زبانیں، ایک پروگرامنگ زبان (سرائیکی + اردو + پنجابی + بلوچی + پشتو + سندھی)">
       
       
         <meta name="author" content="AlinGo Developers">
       
+      
+        <link rel="canonical" href="https://alingosuper.github.io/SUPL/examples/web-server/">
       
       
       
@@ -18,12 +20,12 @@
         
       
       
-      <link rel="icon" href="../../assets/branding/favicon.svg">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
-        <title>Web Server Examples — ویب سرور - AlinGo Saraiki</title>
+        <title>Web Server Examples — ویب سرور - SUPL — سُپل پروگرامنگ زبان</title>
       
     
     
@@ -63,7 +65,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+    <body dir="rtl" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -73,7 +75,7 @@
       
         
         <a href="#web-server-examples" class="md-skip">
-          Skip to content
+          براہِ راست مواد پر جائیں
         </a>
       
     </div>
@@ -85,10 +87,11 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="سر تحریر">
+    <a href="../.." title="SUPL — سُپل پروگرامنگ زبان" class="md-header__button md-logo" aria-label="SUPL — سُپل پروگرامنگ زبان" data-md-component="logo">
       
-  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -99,7 +102,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            AlinGo Saraiki
+            SUPL — سُپل پروگرامنگ زبان
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -127,16 +130,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="تلاش کریں" placeholder="تلاش کریں" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="تلاش">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="صاف کریں" aria-label="صاف کریں" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -149,7 +152,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            تلاش کا آغاز ہو رہا ہے
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -159,6 +162,18 @@
 </div>
       
     
+    
+      <div class="md-header__source">
+        <a href="https://github.com/alingosuper/SUPL" title="ریپازٹری پر جائیں" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    alingosuper/SUPL
+  </div>
+</a>
+      </div>
     
   </nav>
   
@@ -170,7 +185,7 @@
         
           
             
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+<nav class="md-tabs" aria-label="ٹیبز" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -199,13 +214,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../installation/" class="md-tabs__link">
+      <a href="../../%D8%B4%D8%B1%D9%88%D8%B9%D8%A7%D8%AA/" class="md-tabs__link">
         
   
   
     
   
-  انسٹالیشن
+  شروعات
 
       </a>
     </li>
@@ -218,13 +233,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../quick-start/" class="md-tabs__link">
+      <a href="../../%D8%AA%D9%86%D8%B5%DB%8C%D8%A8/" class="md-tabs__link">
         
   
   
     
   
-  کوئیک اسٹارٹ
+  تنصیب
 
       </a>
     </li>
@@ -239,11 +254,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../tutorial/beginner/" class="md-tabs__link">
+        <a href="../../%DA%A9%D9%84%DB%8C%D8%AF%DB%8C_%D8%A7%D9%84%D9%81%D8%A7%D8%B8/" class="md-tabs__link">
           
   
   
-  ٹیوٹوریل
+    
+  
+  کلیدی الفاظ
 
         </a>
       </li>
@@ -259,11 +276,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../reference/keywords/" class="md-tabs__link">
+        <a href="../../%D9%86%D8%AD%D9%88/" class="md-tabs__link">
           
   
   
-  حوالہ
+    
+  
+  نحو
 
         </a>
       </li>
@@ -276,17 +295,20 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../libraries/" class="md-tabs__link">
-        
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stdlib/" class="md-tabs__link">
+          
   
   
     
   
-  لائبریریاں
+  stdlib
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -295,17 +317,20 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link">
-        
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%D9%85%D8%AB%D8%A7%D9%84%DB%8C%DA%BA/" class="md-tabs__link">
+          
   
   
     
   
   مثالیں
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -329,15 +354,28 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="رہنمائی" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+    <a href="../.." title="SUPL — سُپل پروگرامنگ زبان" class="md-nav__button md-logo" aria-label="SUPL — سُپل پروگرامنگ زبان" data-md-component="logo">
       
-  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    AlinGo Saraiki
+    SUPL — سُپل پروگرامنگ زبان
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/alingosuper/SUPL" title="ریپازٹری پر جائیں" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    alingosuper/SUPL
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -375,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installation/" class="md-nav__link">
+      <a href="../../%D8%B4%D8%B1%D9%88%D8%B9%D8%A7%D8%AA/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    انسٹالیشن
+    شروعات
   
 
     
@@ -402,14 +440,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../quick-start/" class="md-nav__link">
+      <a href="../../%D8%AA%D9%86%D8%B5%DB%8C%D8%A8/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    کوئیک اسٹارٹ
+    تنصیب
   
 
     
@@ -429,6 +467,12 @@
   
   
     
+    
+      
+        
+      
+        
+      
     
     
     
@@ -450,7 +494,7 @@
   <span class="md-ellipsis">
     
   
-    ٹیوٹوریل
+    کلیدی الفاظ
   
 
     
@@ -466,7 +510,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    ٹیوٹوریل
+    کلیدی الفاظ
   
 
           </label>
@@ -479,14 +523,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/beginner/" class="md-nav__link">
+      <a href="../../%DA%A9%D9%84%DB%8C%D8%AF%DB%8C_%D8%A7%D9%84%D9%81%D8%A7%D8%B8/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    ابتدائی
+    مختصر فہرست
   
 
     
@@ -507,42 +551,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/intermediate/" class="md-nav__link">
+      <a href="../../%DA%A9%D9%84%DB%8C%D8%AF%DB%8C_%D8%A7%D9%84%D9%81%D8%A7%D8%B8_%D9%85%DA%A9%D9%85%D9%84/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    درمیانی
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tutorial/advanced/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    اعلیٰ
+    مکمل 218 keywords
   
 
     
@@ -571,6 +587,28 @@
   
     
     
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
     
       
@@ -584,14 +622,15 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%D9%86%D8%AD%D9%88/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
     
   
-    حوالہ
+    نحو
   
 
     
@@ -599,19 +638,27 @@
   
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
   
-    حوالہ
+    نحو
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -620,14 +667,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/keywords/" class="md-nav__link">
+      <a href="../../%D9%86%D8%AD%D9%88/01-%D9%85%D8%AA%D8%BA%DB%8C%D8%B1%D8%A7%D8%AA/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    کی ورڈز
+    متغیرات
   
 
     
@@ -648,7 +695,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/operators/" class="md-nav__link">
+      <a href="../../%D9%86%D8%AD%D9%88/02-%D8%A7%D9%82%D8%B3%D8%A7%D9%85/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اقسام
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/03-%D8%A2%D9%BE%D8%B1%DB%8C%D9%B9%D8%B1%D8%B2/" class="md-nav__link">
         
   
   
@@ -669,6 +744,146 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/04-%D8%B4%D8%B1%D8%A7%D8%A6%D8%B7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    شرائط
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/05-%D9%84%D9%88%D9%BE%D8%B3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لوپس
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/06-%D9%81%D9%86%DA%A9%D8%B4%D9%86%D8%B2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    فنکشنز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/07-%DA%A9%D9%84%D8%A7%D8%B3%D8%B2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کلاسز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/08-%D8%A7%D8%B3%D8%AA%D8%AB%D9%86%D8%A7%D8%A1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    استثناء
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -682,15 +897,90 @@
   
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../stdlib/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    stdlib
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    stdlib
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../libraries/" class="md-nav__link">
+      <a href="../../stdlib/%D9%81%D8%A7%D8%A6%D9%84%D8%A7%DA%BA/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    لائبریریاں
+    فائلاں
   
 
     
@@ -702,6 +992,126 @@
     </li>
   
 
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/%D9%88%DB%8C%D8%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ویب
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/%DA%88%DB%8C%D9%B9%D8%A7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ڈیٹا
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/%D9%88%DB%8C%D9%84%DB%81/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ویلہ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/%DA%B3%D9%86%D8%AA%D8%B1%DB%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ڳنتری
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
       
       
@@ -709,9 +1119,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%D9%85%D8%AB%D8%A7%D9%84%DB%8C%DA%BA/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -725,7 +1158,59 @@
   
   
 
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    مثالیں
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%85%D8%AB%D8%A7%D9%84%DB%8C%DA%BA/hello-world/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہیلو ورلڈ
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -743,7 +1228,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="فہرست">
   
   
   
@@ -752,7 +1237,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      فہرست
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -827,377 +1312,380 @@
                   
 
 
+  
+  
 
-<h1 id="web-server-examples">Web Server Examples — ویب سرور</h1>
+
+<h1 id="web-server-examples">Web Server Examples — ویب سرور<a class="headerlink" href="#web-server-examples" title="Permanent link">&para;</a></h1>
 <p>Three complete, runnable web server programs showing REST APIs, HTML web apps, and real-time WebSocket communication.</p>
 <blockquote>
 <p><strong>اردو:</strong> تین مکمل اور چلنے والے ویب سرور پروگرام جو REST APIs، HTML ویب ایپلیکیشنیں، اور حقیقی وقت WebSocket مواصلت ظاہر کرتے ہیں۔</p>
 </blockquote>
 <hr />
-<h2 id="table-of-contents">Table of Contents</h2>
+<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
 <ol>
 <li><a href="#fastapi--todo-rest-api">FastAPI — Todo REST API</a></li>
 <li><a href="#fastapi--html-web-app">FastAPI — HTML Web App</a></li>
 <li><a href="#websocket-chat-server">WebSocket Chat Server</a></li>
 </ol>
 <hr />
-<h2 id="fastapi-todo-rest-api">FastAPI — Todo REST API</h2>
+<h2 id="fastapi-todo-rest-api">FastAPI — Todo REST API<a class="headerlink" href="#fastapi-todo-rest-api" title="Permanent link">&para;</a></h2>
 <p>A complete CRUD REST API for a todo list. Demonstrates routes, JSON bodies, path parameters, status codes, and middleware.</p>
 <blockquote>
 <p><strong>اردو:</strong> ٹوڈو فہرست کے لیے ایک مکمل CRUD REST API۔ یہ مثال راستے، JSON جسم، راستے کے پیرامیٹر، حالت کوڈ، اور مڈل ویئر ظاہر کرتی ہے۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>درآمد { فاسٹ_اے_پی_آئی, راؤٹر, جیسن_جواب, جالی_خطا } سے "اردو/ویب"
-درآمد { لاگر } سے "اردو/لاگ"
-
-// ═══════════════════════════════════════════════════
-// Todo REST API — مکمل CRUD
-// بندرگاہ: 8000
-// ═══════════════════════════════════════════════════
-
-متغیر سرور = نیا فاسٹ_اے_پی_آئی({ عنوان: "Todo API", نسخہ: "1.0" })
-متغیر لاگ   = نیا لاگر("todo-api")
-
-سرور.کورس(اصل=["*"])
-
-// ── ان میموری ڈیٹا اسٹور ─────────────────────────
-متغیر todos     = {}
-متغیر اگلی_id = 1
-
-// ── مددگار فنکشن ──────────────────────────────────
-فنکشن todo_ڈھونڈو(id) {
-    اگر (!(id میں_ہے todos)) {
-        پھینکو نیا جالی_خطا(404, `Todo ${id} نہیں ملا`)
-    }
-    واپس todos[id]
-}
-
-// ══════════════════════════════════════════
-// GET /todos — تمام todos
-// ══════════════════════════════════════════
-@سرور.حاصل("/todos")
-فنکشن سب_todos_دیکھیں() {
-    متغیر فہرست = Object.اقدار(todos)
-    لاگ.ڈیبگ(`${فہرست.length} todos واپس کر رہے ہیں`)
-    واپس { تعداد: فہرست.length, todos: فہرست }
-}
-
-// ══════════════════════════════════════════
-// GET /todos/{id} — ایک todo
-// ══════════════════════════════════════════
-@سرور.حاصل("/todos/{id}")
-فنکشن ایک_todo(id) {
-    واپس todo_ڈھونڈو(عدد(id))
-}
-
-// ══════════════════════════════════════════
-// POST /todos — نئی todo
-// ══════════════════════════════════════════
-@سرور.بھیجیں("/todos")
-غیر_متزامن فنکشن نئی_todo(درخواست) {
-    متغیر جسم = انتظار درخواست.json()
-
-    اگر (!جسم["عنوان"] || جسم["عنوان"].trim() == "") {
-        پھینکو نیا جالی_خطا(400, "عنوان ضروری ہے")
-    }
-
-    متغیر id = اگلی_id
-    اگلی_id += 1
-
-    todos[id] = {
-        id,
-        عنوان:   جسم["عنوان"].trim(),
-        تفصیل:   جسم["تفصیل"] یا "",
-        مکمل:    جھوٹ,
-        بنائی:   نیا Date().toISOString()
-    }
-
-    لاگ.معلومات(`نئی todo بنائی ID=${id}: ${todos[id].عنوان}`)
-    واپس نیا جیسن_جواب(todos[id], 201)
-}
-
-// ══════════════════════════════════════════
-// PUT /todos/{id} — todo تازہ کریں
-// ══════════════════════════════════════════
-@سرور.تازہ_کریں("/todos/{id}")
-غیر_متزامن فنکشن todo_تازہ_کریں(id, درخواست) {
-    متغیر todo = todo_ڈھونڈو(عدد(id))
-    متغیر جسم = انتظار درخواست.json()
-
-    todos[عدد(id)] = {
-        ...todo,
-        عنوان:  جسم["عنوان"] یا todo.عنوان,
-        تفصیل: جسم["تفصیل"] یا todo.تفصیل,
-        مکمل:  جسم["مکمل"]  ?? todo.مکمل
-    }
-
-    واپس todos[عدد(id)]
-}
-
-// ══════════════════════════════════════════
-// DELETE /todos/{id} — todo مٹائیں
-// ══════════════════════════════════════════
-@سرور.حذف("/todos/{id}")
-فنکشن todo_مٹائیں(id) {
-    todo_ڈھونڈو(عدد(id))   // نہ ملنے پر 404
-    حذف todos[عدد(id)]
-    لاگ.معلومات(`Todo ${id} مٹا دیا`)
-    واپس { پیغام: `Todo ${id} مٹا دیا گیا` }
-}
-
-// ══════════════════════════════════════════
-// POST /todos/{id}/مکمل — مکمل toggle
-// ══════════════════════════════════════════
-@سرور.بھیجیں("/todos/{id}/مکمل")
-فنکشن todo_toggle(id) {
-    متغیر todo = todo_ڈھونڈو(عدد(id))
-    todo.مکمل = !todo.مکمل
-    واپس { id: عدد(id), مکمل: todo.مکمل }
-}
-
-// ══════════════════════════════════════════
-// GET /stats — اعداد و شمار
-// ══════════════════════════════════════════
-@سرور.حاصل("/stats")
-فنکشن اعداد_و_شمار() {
-    متغیر فہرست = Object.اقدار(todos)
-    واپس {
-        کل:       فہرست.length,
-        مکمل:     فہرست.filter(t =&gt; t.مکمل).length,
-        نامکمل:   فہرست.filter(t =&gt; !t.مکمل).length
-    }
-}
-
-// ─── سرور چلائیں ──────────────────────────────────
-لاگ.معلومات("Todo API شروع ہو رہی ہے...")
-سرور.چلائیں({ میزبان: "0.0.0.0", پورٹ: 8000 })
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>درآمد { فاسٹ_اے_پی_آئی, راؤٹر, جیسن_جواب, جالی_خطا } سے "اردو/ویب"
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>درآمد { لاگر } سے "اردو/لاگ"
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>// ═══════════════════════════════════════════════════
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>// Todo REST API — مکمل CRUD
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>// بندرگاہ: 8000
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>// ═══════════════════════════════════════════════════
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>متغیر سرور = نیا فاسٹ_اے_پی_آئی({ عنوان: "Todo API", نسخہ: "1.0" })
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>متغیر لاگ   = نیا لاگر("todo-api")
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>سرور.کورس(اصل=["*"])
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>// ── ان میموری ڈیٹا اسٹور ─────────────────────────
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>متغیر todos     = {}
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>متغیر اگلی_id = 1
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>// ── مددگار فنکشن ──────────────────────────────────
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>فنکشن todo_ڈھونڈو(id) {
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    اگر (!(id میں_ہے todos)) {
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>        پھینکو نیا جالی_خطا(404, `Todo ${id} نہیں ملا`)
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    }
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    واپس todos[id]
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>}
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>// ══════════════════════════════════════════
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>// GET /todos — تمام todos
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>// ══════════════════════════════════════════
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>@سرور.حاصل("/todos")
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>فنکشن سب_todos_دیکھیں() {
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>    متغیر فہرست = Object.اقدار(todos)
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>    لاگ.ڈیبگ(`${فہرست.length} todos واپس کر رہے ہیں`)
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>    واپس { تعداد: فہرست.length, todos: فہرست }
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>}
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>// ══════════════════════════════════════════
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>// GET /todos/{id} — ایک todo
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>// ══════════════════════════════════════════
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>@سرور.حاصل("/todos/{id}")
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>فنکشن ایک_todo(id) {
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>    واپس todo_ڈھونڈو(عدد(id))
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>}
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>// ══════════════════════════════════════════
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>// POST /todos — نئی todo
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>// ══════════════════════════════════════════
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>@سرور.بھیجیں("/todos")
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>غیر_متزامن فنکشن نئی_todo(درخواست) {
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>    متغیر جسم = انتظار درخواست.json()
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>    اگر (!جسم["عنوان"] || جسم["عنوان"].trim() == "") {
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>        پھینکو نیا جالی_خطا(400, "عنوان ضروری ہے")
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>    }
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>    متغیر id = اگلی_id
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>    اگلی_id += 1
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>
+<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>    todos[id] = {
+<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>        id,
+<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>        عنوان:   جسم["عنوان"].trim(),
+<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>        تفصیل:   جسم["تفصیل"] یا "",
+<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>        مکمل:    جھوٹ,
+<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>        بنائی:   نیا Date().toISOString()
+<a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>    }
+<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>
+<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>    لاگ.معلومات(`نئی todo بنائی ID=${id}: ${todos[id].عنوان}`)
+<a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>    واپس نیا جیسن_جواب(todos[id], 201)
+<a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a>}
+<a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a>
+<a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a>// ══════════════════════════════════════════
+<a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a>// PUT /todos/{id} — todo تازہ کریں
+<a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a>// ══════════════════════════════════════════
+<a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a>@سرور.تازہ_کریں("/todos/{id}")
+<a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a>غیر_متزامن فنکشن todo_تازہ_کریں(id, درخواست) {
+<a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a>    متغیر todo = todo_ڈھونڈو(عدد(id))
+<a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a>    متغیر جسم = انتظار درخواست.json()
+<a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a>
+<a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a>    todos[عدد(id)] = {
+<a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a>        ...todo,
+<a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a>        عنوان:  جسم["عنوان"] یا todo.عنوان,
+<a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a>        تفصیل: جسم["تفصیل"] یا todo.تفصیل,
+<a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a>        مکمل:  جسم["مکمل"]  ?? todo.مکمل
+<a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a>    }
+<a id="__codelineno-0-84" name="__codelineno-0-84" href="#__codelineno-0-84"></a>
+<a id="__codelineno-0-85" name="__codelineno-0-85" href="#__codelineno-0-85"></a>    واپس todos[عدد(id)]
+<a id="__codelineno-0-86" name="__codelineno-0-86" href="#__codelineno-0-86"></a>}
+<a id="__codelineno-0-87" name="__codelineno-0-87" href="#__codelineno-0-87"></a>
+<a id="__codelineno-0-88" name="__codelineno-0-88" href="#__codelineno-0-88"></a>// ══════════════════════════════════════════
+<a id="__codelineno-0-89" name="__codelineno-0-89" href="#__codelineno-0-89"></a>// DELETE /todos/{id} — todo مٹائیں
+<a id="__codelineno-0-90" name="__codelineno-0-90" href="#__codelineno-0-90"></a>// ══════════════════════════════════════════
+<a id="__codelineno-0-91" name="__codelineno-0-91" href="#__codelineno-0-91"></a>@سرور.حذف("/todos/{id}")
+<a id="__codelineno-0-92" name="__codelineno-0-92" href="#__codelineno-0-92"></a>فنکشن todo_مٹائیں(id) {
+<a id="__codelineno-0-93" name="__codelineno-0-93" href="#__codelineno-0-93"></a>    todo_ڈھونڈو(عدد(id))   // نہ ملنے پر 404
+<a id="__codelineno-0-94" name="__codelineno-0-94" href="#__codelineno-0-94"></a>    حذف todos[عدد(id)]
+<a id="__codelineno-0-95" name="__codelineno-0-95" href="#__codelineno-0-95"></a>    لاگ.معلومات(`Todo ${id} مٹا دیا`)
+<a id="__codelineno-0-96" name="__codelineno-0-96" href="#__codelineno-0-96"></a>    واپس { پیغام: `Todo ${id} مٹا دیا گیا` }
+<a id="__codelineno-0-97" name="__codelineno-0-97" href="#__codelineno-0-97"></a>}
+<a id="__codelineno-0-98" name="__codelineno-0-98" href="#__codelineno-0-98"></a>
+<a id="__codelineno-0-99" name="__codelineno-0-99" href="#__codelineno-0-99"></a>// ══════════════════════════════════════════
+<a id="__codelineno-0-100" name="__codelineno-0-100" href="#__codelineno-0-100"></a>// POST /todos/{id}/مکمل — مکمل toggle
+<a id="__codelineno-0-101" name="__codelineno-0-101" href="#__codelineno-0-101"></a>// ══════════════════════════════════════════
+<a id="__codelineno-0-102" name="__codelineno-0-102" href="#__codelineno-0-102"></a>@سرور.بھیجیں("/todos/{id}/مکمل")
+<a id="__codelineno-0-103" name="__codelineno-0-103" href="#__codelineno-0-103"></a>فنکشن todo_toggle(id) {
+<a id="__codelineno-0-104" name="__codelineno-0-104" href="#__codelineno-0-104"></a>    متغیر todo = todo_ڈھونڈو(عدد(id))
+<a id="__codelineno-0-105" name="__codelineno-0-105" href="#__codelineno-0-105"></a>    todo.مکمل = !todo.مکمل
+<a id="__codelineno-0-106" name="__codelineno-0-106" href="#__codelineno-0-106"></a>    واپس { id: عدد(id), مکمل: todo.مکمل }
+<a id="__codelineno-0-107" name="__codelineno-0-107" href="#__codelineno-0-107"></a>}
+<a id="__codelineno-0-108" name="__codelineno-0-108" href="#__codelineno-0-108"></a>
+<a id="__codelineno-0-109" name="__codelineno-0-109" href="#__codelineno-0-109"></a>// ══════════════════════════════════════════
+<a id="__codelineno-0-110" name="__codelineno-0-110" href="#__codelineno-0-110"></a>// GET /stats — اعداد و شمار
+<a id="__codelineno-0-111" name="__codelineno-0-111" href="#__codelineno-0-111"></a>// ══════════════════════════════════════════
+<a id="__codelineno-0-112" name="__codelineno-0-112" href="#__codelineno-0-112"></a>@سرور.حاصل("/stats")
+<a id="__codelineno-0-113" name="__codelineno-0-113" href="#__codelineno-0-113"></a>فنکشن اعداد_و_شمار() {
+<a id="__codelineno-0-114" name="__codelineno-0-114" href="#__codelineno-0-114"></a>    متغیر فہرست = Object.اقدار(todos)
+<a id="__codelineno-0-115" name="__codelineno-0-115" href="#__codelineno-0-115"></a>    واپس {
+<a id="__codelineno-0-116" name="__codelineno-0-116" href="#__codelineno-0-116"></a>        کل:       فہرست.length,
+<a id="__codelineno-0-117" name="__codelineno-0-117" href="#__codelineno-0-117"></a>        مکمل:     فہرست.filter(t =&gt; t.مکمل).length,
+<a id="__codelineno-0-118" name="__codelineno-0-118" href="#__codelineno-0-118"></a>        نامکمل:   فہرست.filter(t =&gt; !t.مکمل).length
+<a id="__codelineno-0-119" name="__codelineno-0-119" href="#__codelineno-0-119"></a>    }
+<a id="__codelineno-0-120" name="__codelineno-0-120" href="#__codelineno-0-120"></a>}
+<a id="__codelineno-0-121" name="__codelineno-0-121" href="#__codelineno-0-121"></a>
+<a id="__codelineno-0-122" name="__codelineno-0-122" href="#__codelineno-0-122"></a>// ─── سرور چلائیں ──────────────────────────────────
+<a id="__codelineno-0-123" name="__codelineno-0-123" href="#__codelineno-0-123"></a>لاگ.معلومات("Todo API شروع ہو رہی ہے...")
+<a id="__codelineno-0-124" name="__codelineno-0-124" href="#__codelineno-0-124"></a>سرور.چلائیں({ میزبان: "0.0.0.0", پورٹ: 8000 })
 </code></pre></div>
 <p><strong>Test the API:</strong></p>
 <blockquote>
 <p><strong>اردو:</strong> API کی جانچ کریں — درج ذیل HTTP درخواستیں سرور سے جواب حاصل کرنے کے لیے بھیجیں۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>GET http://localhost:8000/todos
-
-POST http://localhost:8000/todos
-{"عنوان": "اردو سیکھنا", "تفصیل": "روزانہ ایک گھنٹہ"}
-
-POST http://localhost:8000/todos/1/مکمل
-
-DELETE http://localhost:8000/todos/1
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>GET http://localhost:8000/todos
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>POST http://localhost:8000/todos
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>{"عنوان": "اردو سیکھنا", "تفصیل": "روزانہ ایک گھنٹہ"}
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>POST http://localhost:8000/todos/1/مکمل
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>DELETE http://localhost:8000/todos/1
 </code></pre></div>
 <hr />
-<h2 id="fastapi-html-web-app">FastAPI — HTML Web App</h2>
+<h2 id="fastapi-html-web-app">FastAPI — HTML Web App<a class="headerlink" href="#fastapi-html-web-app" title="Permanent link">&para;</a></h2>
 <p>A web app that returns an HTML page for a student grade book.</p>
 <blockquote>
 <p><strong>اردو:</strong> ایک ویب ایپ جو طلباء کے نتیجہ نامے کے لیے HTML صفحات واپس کرتی ہے۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>درآمد { فاسٹ_اے_پی_آئی, جیسن_جواب, ایچ_ٹی_ایم_ایل_جواب, جالی_خطا } سے "اردو/ویب"
-
-// ═══════════════════════════════════════════════════
-// طلباء کا نتیجہ نامہ — HTML ویب ایپ
-// ═══════════════════════════════════════════════════
-
-متغیر ایپ = نیا فاسٹ_اے_پی_آئی({ عنوان: "نتیجہ نامہ" })
-
-متغیر طلباء = [
-    { id: 1, نام: "احمد علی",   نمبر: 85, گریڈ: "B" },
-    { id: 2, نام: "فاطمہ بی بی", نمبر: 92, گریڈ: "A" },
-    { id: 3, نام: "علی احمد",   نمبر: 78, گریڈ: "C" }
-]
-متغیر اگلی_id = 4
-
-فنکشن گریڈ_حاصل_کرو(نمبر) {
-    اگر (نمبر &gt;= 90) { واپس "A" }
-    ورنہ_اگر (نمبر &gt;= 80) { واپس "B" }
-    ورنہ_اگر (نمبر &gt;= 70) { واپس "C" }
-    ورنہ_اگر (نمبر &gt;= 60) { واپس "D" }
-    ورنہ { واپس "F" }
-}
-
-// ══════════════════════════════════════════
-// GET / — مرکزی صفحہ
-// ══════════════════════════════════════════
-@ایپ.حاصل("/")
-فنکشن مرکزی() {
-    متغیر قطاریں = طلباء.map(ط =&gt;
-        `&lt;tr&gt;&lt;td&gt;${ط.id}&lt;/td&gt;&lt;td&gt;${ط.نام}&lt;/td&gt;&lt;td&gt;${ط.نمبر}&lt;/td&gt;&lt;td&gt;${ط.گریڈ}&lt;/td&gt;&lt;/tr&gt;`
-    ).join("")
-
-    متغیر html = `&lt;!DOCTYPE html&gt;
-&lt;html dir="rtl" lang="ur"&gt;
-&lt;head&gt;&lt;meta charset="UTF-8"&gt;&lt;title&gt;نتیجہ نامہ&lt;/title&gt;&lt;/head&gt;
-&lt;body&gt;
-&lt;h1&gt;طلباء نتیجہ نامہ&lt;/h1&gt;
-&lt;table border="1"&gt;
-&lt;tr&gt;&lt;th&gt;ID&lt;/th&gt;&lt;th&gt;نام&lt;/th&gt;&lt;th&gt;نمبر&lt;/th&gt;&lt;th&gt;گریڈ&lt;/th&gt;&lt;/tr&gt;
-${قطاریں}
-&lt;/table&gt;
-&lt;/body&gt;&lt;/html&gt;`
-
-    واپس نیا ایچ_ٹی_ایم_ایل_جواب(html)
-}
-
-// ══════════════════════════════════════════
-// GET /طلباء — JSON فہرست
-// ══════════════════════════════════════════
-@ایپ.حاصل("/طلباء")
-فنکشن طلباء_فہرست() {
-    واپس طلباء
-}
-
-// ══════════════════════════════════════════
-// POST /طالب_علم — نئے طالب علم کا اضافہ
-// ══════════════════════════════════════════
-@ایپ.بھیجیں("/طالب_علم")
-غیر_متزامن فنکشن طالب_شامل(درخواست) {
-    متغیر ڈیٹا = انتظار درخواست.json()
-    متغیر نام  = ڈیٹا["نام"] یا ""
-    متغیر نمبر = عدد(ڈیٹا["نمبر"] یا 0)
-
-    اگر (!نام) {
-        پھینکو نیا جالی_خطا(400, "نام ضروری ہے")
-    }
-
-    متغیر نیا_طالب = {
-        id:    اگلی_id,
-        نام,
-        نمبر,
-        گریڈ:  گریڈ_حاصل_کرو(نمبر)
-    }
-    طلباء.شامل(نیا_طالب)
-    اگلی_id += 1
-
-    واپس نیا جیسن_جواب(نیا_طالب, 201)
-}
-
-// ══════════════════════════════════════════
-// DELETE /طالب_علم/{id} — طالب علم حذف
-// ══════════════════════════════════════════
-@ایپ.حذف("/طالب_علم/{id}")
-فنکشن طالب_حذف(id) {
-    متغیر پہلے = طلباء.length
-    متغیر نئی_فہرست = طلباء.filter(ط =&gt; ط.id != عدد(id))
-    اگر (نئی_فہرست.length == پہلے) {
-        پھینکو نیا جالی_خطا(404, `طالب علم ${id} نہیں ملا`)
-    }
-    طلباء.length = 0
-    کے_لیے (متغیر ط کا نئی_فہرست) {
-        طلباء.شامل(ط)
-    }
-    واپس { پیغام: `طالب علم ${id} حذف کیا گیا` }
-}
-
-// ─── چلائیں ───────────────────────────────────────
-ایپ.چلائیں({ بندرگاہ: 5000 })
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>درآمد { فاسٹ_اے_پی_آئی, جیسن_جواب, ایچ_ٹی_ایم_ایل_جواب, جالی_خطا } سے "اردو/ویب"
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>// ═══════════════════════════════════════════════════
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>// طلباء کا نتیجہ نامہ — HTML ویب ایپ
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>// ═══════════════════════════════════════════════════
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>متغیر ایپ = نیا فاسٹ_اے_پی_آئی({ عنوان: "نتیجہ نامہ" })
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>متغیر طلباء = [
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    { id: 1, نام: "احمد علی",   نمبر: 85, گریڈ: "B" },
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    { id: 2, نام: "فاطمہ بی بی", نمبر: 92, گریڈ: "A" },
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    { id: 3, نام: "علی احمد",   نمبر: 78, گریڈ: "C" }
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>]
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>متغیر اگلی_id = 4
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>فنکشن گریڈ_حاصل_کرو(نمبر) {
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    اگر (نمبر &gt;= 90) { واپس "A" }
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>    ورنہ_اگر (نمبر &gt;= 80) { واپس "B" }
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>    ورنہ_اگر (نمبر &gt;= 70) { واپس "C" }
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    ورنہ_اگر (نمبر &gt;= 60) { واپس "D" }
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>    ورنہ { واپس "F" }
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>}
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>// ══════════════════════════════════════════
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>// GET / — مرکزی صفحہ
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>// ══════════════════════════════════════════
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>@ایپ.حاصل("/")
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>فنکشن مرکزی() {
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>    متغیر قطاریں = طلباء.map(ط =&gt;
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>        `&lt;tr&gt;&lt;td&gt;${ط.id}&lt;/td&gt;&lt;td&gt;${ط.نام}&lt;/td&gt;&lt;td&gt;${ط.نمبر}&lt;/td&gt;&lt;td&gt;${ط.گریڈ}&lt;/td&gt;&lt;/tr&gt;`
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>    ).join("")
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>    متغیر html = `&lt;!DOCTYPE html&gt;
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>&lt;html dir="rtl" lang="ur"&gt;
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>&lt;head&gt;&lt;meta charset="UTF-8"&gt;&lt;title&gt;نتیجہ نامہ&lt;/title&gt;&lt;/head&gt;
+<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>&lt;body&gt;
+<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>&lt;h1&gt;طلباء نتیجہ نامہ&lt;/h1&gt;
+<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>&lt;table border="1"&gt;
+<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>&lt;tr&gt;&lt;th&gt;ID&lt;/th&gt;&lt;th&gt;نام&lt;/th&gt;&lt;th&gt;نمبر&lt;/th&gt;&lt;th&gt;گریڈ&lt;/th&gt;&lt;/tr&gt;
+<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>${قطاریں}
+<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>&lt;/table&gt;
+<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>&lt;/body&gt;&lt;/html&gt;`
+<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>
+<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>    واپس نیا ایچ_ٹی_ایم_ایل_جواب(html)
+<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>}
+<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a>
+<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>// ══════════════════════════════════════════
+<a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a>// GET /طلباء — JSON فہرست
+<a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a>// ══════════════════════════════════════════
+<a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a>@ایپ.حاصل("/طلباء")
+<a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a>فنکشن طلباء_فہرست() {
+<a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a>    واپس طلباء
+<a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a>}
+<a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a>
+<a id="__codelineno-2-55" name="__codelineno-2-55" href="#__codelineno-2-55"></a>// ══════════════════════════════════════════
+<a id="__codelineno-2-56" name="__codelineno-2-56" href="#__codelineno-2-56"></a>// POST /طالب_علم — نئے طالب علم کا اضافہ
+<a id="__codelineno-2-57" name="__codelineno-2-57" href="#__codelineno-2-57"></a>// ══════════════════════════════════════════
+<a id="__codelineno-2-58" name="__codelineno-2-58" href="#__codelineno-2-58"></a>@ایپ.بھیجیں("/طالب_علم")
+<a id="__codelineno-2-59" name="__codelineno-2-59" href="#__codelineno-2-59"></a>غیر_متزامن فنکشن طالب_شامل(درخواست) {
+<a id="__codelineno-2-60" name="__codelineno-2-60" href="#__codelineno-2-60"></a>    متغیر ڈیٹا = انتظار درخواست.json()
+<a id="__codelineno-2-61" name="__codelineno-2-61" href="#__codelineno-2-61"></a>    متغیر نام  = ڈیٹا["نام"] یا ""
+<a id="__codelineno-2-62" name="__codelineno-2-62" href="#__codelineno-2-62"></a>    متغیر نمبر = عدد(ڈیٹا["نمبر"] یا 0)
+<a id="__codelineno-2-63" name="__codelineno-2-63" href="#__codelineno-2-63"></a>
+<a id="__codelineno-2-64" name="__codelineno-2-64" href="#__codelineno-2-64"></a>    اگر (!نام) {
+<a id="__codelineno-2-65" name="__codelineno-2-65" href="#__codelineno-2-65"></a>        پھینکو نیا جالی_خطا(400, "نام ضروری ہے")
+<a id="__codelineno-2-66" name="__codelineno-2-66" href="#__codelineno-2-66"></a>    }
+<a id="__codelineno-2-67" name="__codelineno-2-67" href="#__codelineno-2-67"></a>
+<a id="__codelineno-2-68" name="__codelineno-2-68" href="#__codelineno-2-68"></a>    متغیر نیا_طالب = {
+<a id="__codelineno-2-69" name="__codelineno-2-69" href="#__codelineno-2-69"></a>        id:    اگلی_id,
+<a id="__codelineno-2-70" name="__codelineno-2-70" href="#__codelineno-2-70"></a>        نام,
+<a id="__codelineno-2-71" name="__codelineno-2-71" href="#__codelineno-2-71"></a>        نمبر,
+<a id="__codelineno-2-72" name="__codelineno-2-72" href="#__codelineno-2-72"></a>        گریڈ:  گریڈ_حاصل_کرو(نمبر)
+<a id="__codelineno-2-73" name="__codelineno-2-73" href="#__codelineno-2-73"></a>    }
+<a id="__codelineno-2-74" name="__codelineno-2-74" href="#__codelineno-2-74"></a>    طلباء.شامل(نیا_طالب)
+<a id="__codelineno-2-75" name="__codelineno-2-75" href="#__codelineno-2-75"></a>    اگلی_id += 1
+<a id="__codelineno-2-76" name="__codelineno-2-76" href="#__codelineno-2-76"></a>
+<a id="__codelineno-2-77" name="__codelineno-2-77" href="#__codelineno-2-77"></a>    واپس نیا جیسن_جواب(نیا_طالب, 201)
+<a id="__codelineno-2-78" name="__codelineno-2-78" href="#__codelineno-2-78"></a>}
+<a id="__codelineno-2-79" name="__codelineno-2-79" href="#__codelineno-2-79"></a>
+<a id="__codelineno-2-80" name="__codelineno-2-80" href="#__codelineno-2-80"></a>// ══════════════════════════════════════════
+<a id="__codelineno-2-81" name="__codelineno-2-81" href="#__codelineno-2-81"></a>// DELETE /طالب_علم/{id} — طالب علم حذف
+<a id="__codelineno-2-82" name="__codelineno-2-82" href="#__codelineno-2-82"></a>// ══════════════════════════════════════════
+<a id="__codelineno-2-83" name="__codelineno-2-83" href="#__codelineno-2-83"></a>@ایپ.حذف("/طالب_علم/{id}")
+<a id="__codelineno-2-84" name="__codelineno-2-84" href="#__codelineno-2-84"></a>فنکشن طالب_حذف(id) {
+<a id="__codelineno-2-85" name="__codelineno-2-85" href="#__codelineno-2-85"></a>    متغیر پہلے = طلباء.length
+<a id="__codelineno-2-86" name="__codelineno-2-86" href="#__codelineno-2-86"></a>    متغیر نئی_فہرست = طلباء.filter(ط =&gt; ط.id != عدد(id))
+<a id="__codelineno-2-87" name="__codelineno-2-87" href="#__codelineno-2-87"></a>    اگر (نئی_فہرست.length == پہلے) {
+<a id="__codelineno-2-88" name="__codelineno-2-88" href="#__codelineno-2-88"></a>        پھینکو نیا جالی_خطا(404, `طالب علم ${id} نہیں ملا`)
+<a id="__codelineno-2-89" name="__codelineno-2-89" href="#__codelineno-2-89"></a>    }
+<a id="__codelineno-2-90" name="__codelineno-2-90" href="#__codelineno-2-90"></a>    طلباء.length = 0
+<a id="__codelineno-2-91" name="__codelineno-2-91" href="#__codelineno-2-91"></a>    کے_لیے (متغیر ط کا نئی_فہرست) {
+<a id="__codelineno-2-92" name="__codelineno-2-92" href="#__codelineno-2-92"></a>        طلباء.شامل(ط)
+<a id="__codelineno-2-93" name="__codelineno-2-93" href="#__codelineno-2-93"></a>    }
+<a id="__codelineno-2-94" name="__codelineno-2-94" href="#__codelineno-2-94"></a>    واپس { پیغام: `طالب علم ${id} حذف کیا گیا` }
+<a id="__codelineno-2-95" name="__codelineno-2-95" href="#__codelineno-2-95"></a>}
+<a id="__codelineno-2-96" name="__codelineno-2-96" href="#__codelineno-2-96"></a>
+<a id="__codelineno-2-97" name="__codelineno-2-97" href="#__codelineno-2-97"></a>// ─── چلائیں ───────────────────────────────────────
+<a id="__codelineno-2-98" name="__codelineno-2-98" href="#__codelineno-2-98"></a>ایپ.چلائیں({ بندرگاہ: 5000 })
 </code></pre></div>
 <p>Visit <code>http://localhost:5000</code> to see the grade book.</p>
 <blockquote>
 <p><strong>اردو:</strong> نتیجہ نامہ دیکھنے کے لیے اپنے براؤزر میں <code>http://localhost:5000</code> پر جائیں۔</p>
 </blockquote>
 <hr />
-<h2 id="websocket-chat-server">WebSocket Chat Server</h2>
+<h2 id="websocket-chat-server">WebSocket Chat Server<a class="headerlink" href="#websocket-chat-server" title="Permanent link">&para;</a></h2>
 <p>A real-time chat server where multiple browser clients can send and receive messages instantly.</p>
 <blockquote>
 <p><strong>اردو:</strong> ایک حقیقی وقت گپ شپ سرور جہاں متعدد براؤزر کلائنٹ فوری طور پر پیغامات بھیج اور وصول کر سکتے ہیں۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>درآمد { فاسٹ_اے_پی_آئی, ایچ_ٹی_ایم_ایل_جواب } سے "اردو/ویب"
-درآمد { لاگر } سے "اردو/لاگ"
-
-// ═══════════════════════════════════════════════════
-// حقیقی وقت گپ شپ — WebSocket
-// بندرگاہ: 8080
-// ═══════════════════════════════════════════════════
-
-متغیر سرور = نیا فاسٹ_اے_پی_آئی({ عنوان: "گپ شپ سرور" })
-متغیر لاگ   = نیا لاگر("گپ-شپ")
-
-// منسلک کلائنٹس کی فہرست
-متغیر کلائنٹس = []
-
-// ══════════════════════════════════════════
-// GET / — چیٹ UI
-// ══════════════════════════════════════════
-@سرور.حاصل("/")
-فنکشن چیٹ_صفحہ() {
-    متغیر html = `&lt;!DOCTYPE html&gt;
-&lt;html dir="rtl" lang="ur"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;اردو گپ شپ&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h2&gt;اردو گپ شپ&lt;/h2&gt;
-    &lt;div id="پیغامات" style="height:300px;overflow-y:auto;border:1px solid #ccc;padding:8px"&gt;&lt;/div&gt;
-    &lt;input id="نام" placeholder="آپ کا نام" value="گمنام"&gt;
-    &lt;input id="متن" placeholder="پیغام لکھیں..." style="width:300px"&gt;
-    &lt;button onclick="بھیجو()"&gt;بھیجیں&lt;/button&gt;
-    &lt;script&gt;
-        const ws = new WebSocket("ws://localhost:8080/ws/")
-        ws.onmessage = e =&gt; {
-            const d = document.getElementById("پیغامات")
-            d.innerHTML += "&lt;p&gt;" + e.data + "&lt;/p&gt;"
-            d.scrollTop = d.scrollHeight
-        }
-        function بھیجو() {
-            const نام = document.getElementById("نام").value || "گمنام"
-            const متن = document.getElementById("متن").value
-            if (متن) {
-                ws.send(نام + ": " + متن)
-                document.getElementById("متن").value = ""
-            }
-        }
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;`
-    واپس نیا ایچ_ٹی_ایم_ایل_جواب(html)
-}
-
-// ══════════════════════════════════════════
-// WebSocket /ws/ — حقیقی وقت چیٹ
-// ══════════════════════════════════════════
-@سرور.ویب_ساکٹ("/ws/")
-غیر_متزامن فنکشن گپ_رابطہ(websocket) {
-    انتظار websocket.accept()
-    کلائنٹس.شامل(websocket)
-    لاگ.معلومات(`نیا کلائنٹ جڑا — کل: ${کلائنٹس.length}`)
-
-    کوشش {
-        جبکہ (سچ) {
-            متغیر پیغام = انتظار websocket.receive_text()
-            لاگ.ڈیبگ(`پیغام: ${پیغام}`)
-
-            // تمام کلائنٹس کو بھیجو
-            کے_لیے (متغیر کلائنٹ کا کلائنٹس) {
-                کوشش {
-                    انتظار کلائنٹ.send_text(پیغام)
-                } پکڑو (غ) {
-                    // منقطع کلائنٹ کو نظرانداز کریں
-                }
-            }
-        }
-    } پکڑو (غ) {
-        لاگ.معلومات("کلائنٹ منقطع ہو گیا")
-    }
-
-    // فہرست سے ہٹائیں
-    متغیر نئی_فہرست = کلائنٹس.filter(ک =&gt; ک != websocket)
-    کلائنٹس.length = 0
-    کے_لیے (متغیر ک کا نئی_فہرست) {
-        کلائنٹس.شامل(ک)
-    }
-}
-
-// ══════════════════════════════════════════
-// GET /حالت — صارفین کی تعداد
-// ══════════════════════════════════════════
-@سرور.حاصل("/حالت")
-فنکشن حالت() {
-    واپس { متصل_کلائنٹس: کلائنٹس.length }
-}
-
-// ─── چلائیں ───────────────────────────────────────
-لاگ.معلومات("گپ شپ سرور شروع ہو رہا ہے...")
-لاگ.معلومات("URL: http://localhost:8080")
-سرور.چلائیں({ میزبان: "0.0.0.0", پورٹ: 8080 })
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>درآمد { فاسٹ_اے_پی_آئی, ایچ_ٹی_ایم_ایل_جواب } سے "اردو/ویب"
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>درآمد { لاگر } سے "اردو/لاگ"
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>// ═══════════════════════════════════════════════════
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>// حقیقی وقت گپ شپ — WebSocket
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>// بندرگاہ: 8080
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>// ═══════════════════════════════════════════════════
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>متغیر سرور = نیا فاسٹ_اے_پی_آئی({ عنوان: "گپ شپ سرور" })
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>متغیر لاگ   = نیا لاگر("گپ-شپ")
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>// منسلک کلائنٹس کی فہرست
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>متغیر کلائنٹس = []
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>// ══════════════════════════════════════════
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>// GET / — چیٹ UI
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>// ══════════════════════════════════════════
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>@سرور.حاصل("/")
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>فنکشن چیٹ_صفحہ() {
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>    متغیر html = `&lt;!DOCTYPE html&gt;
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>&lt;html dir="rtl" lang="ur"&gt;
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>&lt;head&gt;
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>    &lt;meta charset="UTF-8"&gt;
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>    &lt;title&gt;اردو گپ شپ&lt;/title&gt;
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>&lt;/head&gt;
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>&lt;body&gt;
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>    &lt;h2&gt;اردو گپ شپ&lt;/h2&gt;
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>    &lt;div id="پیغامات" style="height:300px;overflow-y:auto;border:1px solid #ccc;padding:8px"&gt;&lt;/div&gt;
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>    &lt;input id="نام" placeholder="آپ کا نام" value="گمنام"&gt;
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>    &lt;input id="متن" placeholder="پیغام لکھیں..." style="width:300px"&gt;
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>    &lt;button onclick="بھیجو()"&gt;بھیجیں&lt;/button&gt;
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>    &lt;script&gt;
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>        const ws = new WebSocket("ws://localhost:8080/ws/")
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>        ws.onmessage = e =&gt; {
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>            const d = document.getElementById("پیغامات")
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>            d.innerHTML += "&lt;p&gt;" + e.data + "&lt;/p&gt;"
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>            d.scrollTop = d.scrollHeight
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>        }
+<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>        function بھیجو() {
+<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>            const نام = document.getElementById("نام").value || "گمنام"
+<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>            const متن = document.getElementById("متن").value
+<a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>            if (متن) {
+<a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>                ws.send(نام + ": " + متن)
+<a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>                document.getElementById("متن").value = ""
+<a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>            }
+<a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>        }
+<a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>    &lt;/script&gt;
+<a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>&lt;/body&gt;
+<a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>&lt;/html&gt;`
+<a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>    واپس نیا ایچ_ٹی_ایم_ایل_جواب(html)
+<a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>}
+<a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>
+<a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>// ══════════════════════════════════════════
+<a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>// WebSocket /ws/ — حقیقی وقت چیٹ
+<a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>// ══════════════════════════════════════════
+<a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a>@سرور.ویب_ساکٹ("/ws/")
+<a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>غیر_متزامن فنکشن گپ_رابطہ(websocket) {
+<a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>    انتظار websocket.accept()
+<a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a>    کلائنٹس.شامل(websocket)
+<a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a>    لاگ.معلومات(`نیا کلائنٹ جڑا — کل: ${کلائنٹس.length}`)
+<a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a>
+<a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a>    کوشش {
+<a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a>        جبکہ (سچ) {
+<a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a>            متغیر پیغام = انتظار websocket.receive_text()
+<a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a>            لاگ.ڈیبگ(`پیغام: ${پیغام}`)
+<a id="__codelineno-3-66" name="__codelineno-3-66" href="#__codelineno-3-66"></a>
+<a id="__codelineno-3-67" name="__codelineno-3-67" href="#__codelineno-3-67"></a>            // تمام کلائنٹس کو بھیجو
+<a id="__codelineno-3-68" name="__codelineno-3-68" href="#__codelineno-3-68"></a>            کے_لیے (متغیر کلائنٹ کا کلائنٹس) {
+<a id="__codelineno-3-69" name="__codelineno-3-69" href="#__codelineno-3-69"></a>                کوشش {
+<a id="__codelineno-3-70" name="__codelineno-3-70" href="#__codelineno-3-70"></a>                    انتظار کلائنٹ.send_text(پیغام)
+<a id="__codelineno-3-71" name="__codelineno-3-71" href="#__codelineno-3-71"></a>                } پکڑو (غ) {
+<a id="__codelineno-3-72" name="__codelineno-3-72" href="#__codelineno-3-72"></a>                    // منقطع کلائنٹ کو نظرانداز کریں
+<a id="__codelineno-3-73" name="__codelineno-3-73" href="#__codelineno-3-73"></a>                }
+<a id="__codelineno-3-74" name="__codelineno-3-74" href="#__codelineno-3-74"></a>            }
+<a id="__codelineno-3-75" name="__codelineno-3-75" href="#__codelineno-3-75"></a>        }
+<a id="__codelineno-3-76" name="__codelineno-3-76" href="#__codelineno-3-76"></a>    } پکڑو (غ) {
+<a id="__codelineno-3-77" name="__codelineno-3-77" href="#__codelineno-3-77"></a>        لاگ.معلومات("کلائنٹ منقطع ہو گیا")
+<a id="__codelineno-3-78" name="__codelineno-3-78" href="#__codelineno-3-78"></a>    }
+<a id="__codelineno-3-79" name="__codelineno-3-79" href="#__codelineno-3-79"></a>
+<a id="__codelineno-3-80" name="__codelineno-3-80" href="#__codelineno-3-80"></a>    // فہرست سے ہٹائیں
+<a id="__codelineno-3-81" name="__codelineno-3-81" href="#__codelineno-3-81"></a>    متغیر نئی_فہرست = کلائنٹس.filter(ک =&gt; ک != websocket)
+<a id="__codelineno-3-82" name="__codelineno-3-82" href="#__codelineno-3-82"></a>    کلائنٹس.length = 0
+<a id="__codelineno-3-83" name="__codelineno-3-83" href="#__codelineno-3-83"></a>    کے_لیے (متغیر ک کا نئی_فہرست) {
+<a id="__codelineno-3-84" name="__codelineno-3-84" href="#__codelineno-3-84"></a>        کلائنٹس.شامل(ک)
+<a id="__codelineno-3-85" name="__codelineno-3-85" href="#__codelineno-3-85"></a>    }
+<a id="__codelineno-3-86" name="__codelineno-3-86" href="#__codelineno-3-86"></a>}
+<a id="__codelineno-3-87" name="__codelineno-3-87" href="#__codelineno-3-87"></a>
+<a id="__codelineno-3-88" name="__codelineno-3-88" href="#__codelineno-3-88"></a>// ══════════════════════════════════════════
+<a id="__codelineno-3-89" name="__codelineno-3-89" href="#__codelineno-3-89"></a>// GET /حالت — صارفین کی تعداد
+<a id="__codelineno-3-90" name="__codelineno-3-90" href="#__codelineno-3-90"></a>// ══════════════════════════════════════════
+<a id="__codelineno-3-91" name="__codelineno-3-91" href="#__codelineno-3-91"></a>@سرور.حاصل("/حالت")
+<a id="__codelineno-3-92" name="__codelineno-3-92" href="#__codelineno-3-92"></a>فنکشن حالت() {
+<a id="__codelineno-3-93" name="__codelineno-3-93" href="#__codelineno-3-93"></a>    واپس { متصل_کلائنٹس: کلائنٹس.length }
+<a id="__codelineno-3-94" name="__codelineno-3-94" href="#__codelineno-3-94"></a>}
+<a id="__codelineno-3-95" name="__codelineno-3-95" href="#__codelineno-3-95"></a>
+<a id="__codelineno-3-96" name="__codelineno-3-96" href="#__codelineno-3-96"></a>// ─── چلائیں ───────────────────────────────────────
+<a id="__codelineno-3-97" name="__codelineno-3-97" href="#__codelineno-3-97"></a>لاگ.معلومات("گپ شپ سرور شروع ہو رہا ہے...")
+<a id="__codelineno-3-98" name="__codelineno-3-98" href="#__codelineno-3-98"></a>لاگ.معلومات("URL: http://localhost:8080")
+<a id="__codelineno-3-99" name="__codelineno-3-99" href="#__codelineno-3-99"></a>سرور.چلائیں({ میزبان: "0.0.0.0", پورٹ: 8080 })
 </code></pre></div>
 <p><strong>Usage:</strong></p>
 <blockquote>
@@ -1209,11 +1697,11 @@ ${قطاریں}
 <li>Enter a name and start chatting — messages appear instantly in all tabs</li>
 </ol>
 <hr />
-<h2 id="stopping-the-server">Stopping the Server — سرور بند کرنا</h2>
+<h2 id="stopping-the-server">Stopping the Server — سرور بند کرنا<a class="headerlink" href="#stopping-the-server" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>⚠️ <strong>Ctrl+C does not stop these servers.</strong> uvicorn keeps running after the signal. Kill the process from another terminal:</p>
-<div class="highlight"><pre><span></span><code>taskkill /F /IM urdu.exe        # CMD / PowerShell
-Stop-Process -Name urdu -Force  # PowerShell
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>taskkill /F /IM urdu.exe        # CMD / PowerShell
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Stop-Process -Name urdu -Force  # PowerShell
 </code></pre></div>
 <p><strong>اردو:</strong> <code>Ctrl+C</code> uvicorn سرور نہیں روکتا — اوپر دی گئی کمانڈ استعمال کریں۔</p>
 </blockquote>
@@ -1242,7 +1730,7 @@ Stop-Process -Name urdu -Force  # PowerShell
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
+  واپس اوپر جائیں
 </button>
         
       </main>
@@ -1274,7 +1762,7 @@ Stop-Process -Name urdu -Force  # PowerShell
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u06a9\u0644\u0650\u067e \u0628\u0648\u0631\u0688 \u0645\u06cc\u06ba \u0646\u0642\u0644 \u06a9\u0631 \u062f\u06cc\u0627 \u06af\u06cc\u0627", "clipboard.copy": "\u06a9\u0644\u0650\u067e \u0628\u0648\u0631\u0688 \u0645\u06cc\u06ba \u0646\u0642\u0644 \u06a9\u0631\u06cc\u06ba", "search.result.more.one": "\u0627\u0650\u0633 \u0635\u0641\u062d\u06d2 \u067e\u0631 \u0645\u0632\u06cc\u062f \u06f1", "search.result.more.other": "\u0627\u0650\u0633 \u0635\u0641\u062d\u06d2 \u067e\u0631 \u0645\u0632\u06cc\u062f #", "search.result.none": "\u06a9\u0648\u0626\u06cc \u0645\u0644\u062a\u06cc \u062c\u0644\u062a\u06cc \u062f\u0633\u062a\u0627\u0648\u06cc\u0632\u0627\u062a \u0646\u06c1\u06cc\u06ba", "search.result.one": "\u06f1 \u0645\u0644\u062a\u06cc \u062c\u0644\u062a\u06cc \u062f\u0633\u062a\u0627\u0648\u06cc\u0632", "search.result.other": "# \u0645\u0644\u062a\u06cc \u062c\u0644\u062a\u06cc \u062f\u0633\u062a\u0627\u0648\u06cc\u0632\u0627\u062a", "search.result.placeholder": "\u062a\u0644\u0627\u0634 \u0634\u0631\u0648\u0639 \u06a9\u0631\u0646\u06d2 \u06a9\u06d2 \u0644\u0626\u06d2 \u0679\u0627\u0626\u067e \u06a9\u0631\u06cc\u06ba", "search.result.term.missing": "\u06af\u0645\u0634\u062f\u06c1", "select.version": "\u0648\u0631\u0698\u0646 \u06a9\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u06a9\u0631\u06cc\u06ba"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>

@@ -1,16 +1,18 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="ur" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+        <meta name="description" content="6 زبانیں، ایک پروگرامنگ زبان (سرائیکی + اردو + پنجابی + بلوچی + پشتو + سندھی)">
       
       
         <meta name="author" content="AlinGo Developers">
       
+      
+        <link rel="canonical" href="https://alingosuper.github.io/SUPL/libraries/database/">
       
       
       
@@ -18,12 +20,12 @@
         
       
       
-      <link rel="icon" href="../../assets/branding/favicon.svg">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
-        <title>Database Library — اردو/ڈیٹا_بیس - AlinGo Saraiki</title>
+        <title>Database Library — اردو/ڈیٹا_بیس - SUPL — سُپل پروگرامنگ زبان</title>
       
     
     
@@ -63,7 +65,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+    <body dir="rtl" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -73,7 +75,7 @@
       
         
         <a href="#database-library-_" class="md-skip">
-          Skip to content
+          براہِ راست مواد پر جائیں
         </a>
       
     </div>
@@ -85,10 +87,11 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="سر تحریر">
+    <a href="../.." title="SUPL — سُپل پروگرامنگ زبان" class="md-header__button md-logo" aria-label="SUPL — سُپل پروگرامنگ زبان" data-md-component="logo">
       
-  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -99,7 +102,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            AlinGo Saraiki
+            SUPL — سُپل پروگرامنگ زبان
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -127,16 +130,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="تلاش کریں" placeholder="تلاش کریں" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="تلاش">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="صاف کریں" aria-label="صاف کریں" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -149,7 +152,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            تلاش کا آغاز ہو رہا ہے
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -159,6 +162,18 @@
 </div>
       
     
+    
+      <div class="md-header__source">
+        <a href="https://github.com/alingosuper/SUPL" title="ریپازٹری پر جائیں" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    alingosuper/SUPL
+  </div>
+</a>
+      </div>
     
   </nav>
   
@@ -170,7 +185,7 @@
         
           
             
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+<nav class="md-tabs" aria-label="ٹیبز" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -199,13 +214,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../installation/" class="md-tabs__link">
+      <a href="../../%D8%B4%D8%B1%D9%88%D8%B9%D8%A7%D8%AA/" class="md-tabs__link">
         
   
   
     
   
-  انسٹالیشن
+  شروعات
 
       </a>
     </li>
@@ -218,13 +233,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../quick-start/" class="md-tabs__link">
+      <a href="../../%D8%AA%D9%86%D8%B5%DB%8C%D8%A8/" class="md-tabs__link">
         
   
   
     
   
-  کوئیک اسٹارٹ
+  تنصیب
 
       </a>
     </li>
@@ -239,11 +254,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../tutorial/beginner/" class="md-tabs__link">
+        <a href="../../%DA%A9%D9%84%DB%8C%D8%AF%DB%8C_%D8%A7%D9%84%D9%81%D8%A7%D8%B8/" class="md-tabs__link">
           
   
   
-  ٹیوٹوریل
+    
+  
+  کلیدی الفاظ
 
         </a>
       </li>
@@ -259,11 +276,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../reference/keywords/" class="md-tabs__link">
+        <a href="../../%D9%86%D8%AD%D9%88/" class="md-tabs__link">
           
   
   
-  حوالہ
+    
+  
+  نحو
 
         </a>
       </li>
@@ -276,17 +295,20 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link">
-        
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stdlib/" class="md-tabs__link">
+          
   
   
     
   
-  لائبریریاں
+  stdlib
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -295,17 +317,20 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../examples/" class="md-tabs__link">
-        
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%D9%85%D8%AB%D8%A7%D9%84%DB%8C%DA%BA/" class="md-tabs__link">
+          
   
   
     
   
   مثالیں
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -329,15 +354,28 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="رہنمائی" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+    <a href="../.." title="SUPL — سُپل پروگرامنگ زبان" class="md-nav__button md-logo" aria-label="SUPL — سُپل پروگرامنگ زبان" data-md-component="logo">
       
-  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    AlinGo Saraiki
+    SUPL — سُپل پروگرامنگ زبان
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/alingosuper/SUPL" title="ریپازٹری پر جائیں" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    alingosuper/SUPL
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -375,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installation/" class="md-nav__link">
+      <a href="../../%D8%B4%D8%B1%D9%88%D8%B9%D8%A7%D8%AA/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    انسٹالیشن
+    شروعات
   
 
     
@@ -402,14 +440,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../quick-start/" class="md-nav__link">
+      <a href="../../%D8%AA%D9%86%D8%B5%DB%8C%D8%A8/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    کوئیک اسٹارٹ
+    تنصیب
   
 
     
@@ -429,6 +467,12 @@
   
   
     
+    
+      
+        
+      
+        
+      
     
     
     
@@ -450,7 +494,7 @@
   <span class="md-ellipsis">
     
   
-    ٹیوٹوریل
+    کلیدی الفاظ
   
 
     
@@ -466,7 +510,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    ٹیوٹوریل
+    کلیدی الفاظ
   
 
           </label>
@@ -479,14 +523,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/beginner/" class="md-nav__link">
+      <a href="../../%DA%A9%D9%84%DB%8C%D8%AF%DB%8C_%D8%A7%D9%84%D9%81%D8%A7%D8%B8/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    ابتدائی
+    مختصر فہرست
   
 
     
@@ -507,42 +551,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/intermediate/" class="md-nav__link">
+      <a href="../../%DA%A9%D9%84%DB%8C%D8%AF%DB%8C_%D8%A7%D9%84%D9%81%D8%A7%D8%B8_%D9%85%DA%A9%D9%85%D9%84/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    درمیانی
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tutorial/advanced/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    اعلیٰ
+    مکمل 218 keywords
   
 
     
@@ -571,6 +587,28 @@
   
     
     
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
     
       
@@ -584,14 +622,15 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%D9%86%D8%AD%D9%88/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
     
   
-    حوالہ
+    نحو
   
 
     
@@ -599,19 +638,27 @@
   
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
   
-    حوالہ
+    نحو
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -620,14 +667,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/keywords/" class="md-nav__link">
+      <a href="../../%D9%86%D8%AD%D9%88/01-%D9%85%D8%AA%D8%BA%DB%8C%D8%B1%D8%A7%D8%AA/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    کی ورڈز
+    متغیرات
   
 
     
@@ -648,7 +695,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/operators/" class="md-nav__link">
+      <a href="../../%D9%86%D8%AD%D9%88/02-%D8%A7%D9%82%D8%B3%D8%A7%D9%85/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اقسام
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/03-%D8%A2%D9%BE%D8%B1%DB%8C%D9%B9%D8%B1%D8%B2/" class="md-nav__link">
         
   
   
@@ -669,6 +744,146 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/04-%D8%B4%D8%B1%D8%A7%D8%A6%D8%B7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    شرائط
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/05-%D9%84%D9%88%D9%BE%D8%B3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لوپس
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/06-%D9%81%D9%86%DA%A9%D8%B4%D9%86%D8%B2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    فنکشنز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/07-%DA%A9%D9%84%D8%A7%D8%B3%D8%B2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کلاسز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/08-%D8%A7%D8%B3%D8%AA%D8%AB%D9%86%D8%A7%D8%A1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    استثناء
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -682,15 +897,90 @@
   
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../stdlib/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    stdlib
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    stdlib
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../stdlib/%D9%81%D8%A7%D8%A6%D9%84%D8%A7%DA%BA/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    لائبریریاں
+    فائلاں
   
 
     
@@ -702,6 +992,126 @@
     </li>
   
 
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/%D9%88%DB%8C%D8%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ویب
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/%DA%88%DB%8C%D9%B9%D8%A7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ڈیٹا
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/%D9%88%DB%8C%D9%84%DB%81/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ویلہ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/%DA%B3%D9%86%D8%AA%D8%B1%DB%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ڳنتری
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
       
       
@@ -709,9 +1119,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../examples/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%D9%85%D8%AB%D8%A7%D9%84%DB%8C%DA%BA/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -725,7 +1158,59 @@
   
   
 
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    مثالیں
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%85%D8%AB%D8%A7%D9%84%DB%8C%DA%BA/hello-world/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہیلو ورلڈ
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -743,7 +1228,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="فہرست">
   
   
   
@@ -752,7 +1237,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      فہرست
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1067,24 +1552,27 @@
                   
 
 
+  
+  
 
-<h1 id="database-library-_">Database Library — اردو/ڈیٹا_بیس</h1>
+
+<h1 id="database-library-_">Database Library — اردو/ڈیٹا_بیس<a class="headerlink" href="#database-library-_" title="Permanent link">&para;</a></h1>
 <p>This library provides Urdu-keyword database clients for MySQL, PostgreSQL, MongoDB, Cassandra, Firebase/Firestore, and SQLite. All classes share a common base interface.</p>
 <blockquote>
 <p><strong>اردو:</strong> یہ لائبریری MySQL، PostgreSQL، MongoDB، Cassandra، Firebase/Firestore اور SQLite کے لیے اردو کلید الفاظ والے ڈیٹا بیس کلائنٹ فراہم کرتی ہے۔ تمام کلاسز ایک مشترکہ بنیادی انٹرفیس استعمال کرتی ہیں۔</p>
 </blockquote>
 <p><strong>Import:</strong></p>
-<div class="highlight"><pre><span></span><code>درآمد { مائی_ایس_کیو_ایل, پوسٹ_گریس, مونگو_ڈی_بی, کسینڈرا, فائر_بیس } سے "اردو/ڈیٹا_بیس";
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>درآمد { مائی_ایس_کیو_ایل, پوسٹ_گریس, مونگو_ڈی_بی, کسینڈرا, فائر_بیس } سے "اردو/ڈیٹا_بیس";
 </code></pre></div>
 <p><strong>Install dependencies (as needed):</strong></p>
-<div class="highlight"><pre><span></span><code>pip install mysql-connector-python     # مائی_ایس_کیو_ایل
-pip install psycopg2-binary            # پوسٹ_گریس
-pip install pymongo                    # مونگو_ڈی_بی
-pip install cassandra-driver           # کسینڈرا
-pip install firebase-admin             # فائر_بیس (admin mode)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip install mysql-connector-python     # مائی_ایس_کیو_ایل
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>pip install psycopg2-binary            # پوسٹ_گریس
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>pip install pymongo                    # مونگو_ڈی_بی
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>pip install cassandra-driver           # کسینڈرا
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>pip install firebase-admin             # فائر_بیس (admin mode)
 </code></pre></div>
 <hr />
-<h2 id="table-of-contents">Table of Contents</h2>
+<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
 <ol>
 <li><a href="#common-interface">Common Interface</a></li>
 <li><a href="#mysql-مائی_ایس_کیو_ایل">MySQL (مائی_ایس_کیو_ایل)</a></li>
@@ -1097,7 +1585,7 @@ pip install firebase-admin             # فائر_بیس (admin mode)
 <li><a href="#factory-function-ڈیٹا_بیس_جوڑو">Factory Function</a></li>
 </ol>
 <hr />
-<h2 id="common-interface">Common Interface — مشترکہ انٹرفیس</h2>
+<h2 id="common-interface">Common Interface — مشترکہ انٹرفیس<a class="headerlink" href="#common-interface" title="Permanent link">&para;</a></h2>
 <p>All database classes (<code>مائی_ایس_کیو_ایل</code>, <code>پوسٹ_گریس</code>, <code>ایس_کیو_لائٹ</code>, <code>مونگو_ڈی_بی</code>, <code>کسینڈرا</code>) share the following methods:</p>
 <blockquote>
 <p><strong>اردو:</strong> تمام ڈیٹا بیس کلاسز یہ مشترکہ طریقے رکھتی ہیں: <code>جوڑیں()</code> سے جڑنا، <code>منقطع()</code> سے قطع تعلق، <code>سوال()</code> سے SELECT چلانا، <code>چلائیں()</code> سے INSERT/UPDATE/DELETE اور <code>لین_دین()</code> سے محفوظ لین دین۔ سوال کے نتائج <code>row["کالم"]</code> یا <code>row.کالم</code> دونوں طریقوں سے دیکھے جا سکتے ہیں۔</p>
@@ -1176,7 +1664,7 @@ pip install firebase-admin             # فائر_بیس (admin mode)
 <p><strong>Row access:</strong> All query results return rows as <code>_UrduObj</code> instances, which support both dict-style (<code>row["کالم"]</code>) and dot-style (<code>row.کالم</code>) access.</p>
 <p><strong>Placeholders:</strong> Use <code>?</code> in queries (automatically converted to <code>%s</code> for MySQL/PostgreSQL).</p>
 <hr />
-<h2 id="mysql-___-sql">MySQL (مائی_ایس_کیو_ایل) — مائی SQL ڈیٹا بیس</h2>
+<h2 id="mysql-___-sql">MySQL (مائی_ایس_کیو_ایل) — مائی SQL ڈیٹا بیس<a class="headerlink" href="#mysql-___-sql" title="Permanent link">&para;</a></h2>
 <p>Wraps <code>mysql-connector-python</code> with UTF-8 support and InnoDB transactions.</p>
 <blockquote>
 <p><strong>اردو:</strong> یہ <code>mysql-connector-python</code> کا ریپر ہے جس میں UTF-8 سپورٹ اور InnoDB لین دین شامل ہیں۔ ترتیب میں میزبان، صارف، پاس ورڈ، پورٹ اور ڈیٹا بیس کا نام دیا جاتا ہے۔</p>
@@ -1219,118 +1707,118 @@ pip install firebase-admin             # فائر_بیس (admin mode)
 </tbody>
 </table>
 <hr />
-<h3 id="mysql-example-full-crud-with-transactions-crud">MySQL Example: Full CRUD with Transactions — مکمل CRUD مثال</h3>
+<h3 id="mysql-example-full-crud-with-transactions-crud">MySQL Example: Full CRUD with Transactions — مکمل CRUD مثال<a class="headerlink" href="#mysql-example-full-crud-with-transactions-crud" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><strong>اردو:</strong> یہ مثال MySQL میں مکمل CRUD عمل دکھاتی ہے: جدول بنانا، ڈیٹا داخل کرنا (<code>INSERT</code>)، ڈیٹا پڑھنا (<code>SELECT</code>)، ڈیٹا تازہ کرنا (<code>UPDATE</code>)، ڈیٹا حذف کرنا (<code>DELETE</code>) اور محفوظ لین دین۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>درآمد { مائی_ایس_کیو_ایل } سے "اردو/ڈیٹا_بیس";
-
-غیر_متزامن فنکشن مرکز() {
-    متغیر db = نیا مائی_ایس_کیو_ایل({
-        "میزبان":   "localhost",
-        "صارف":     "root",
-        "پاس_ورڈ": "پاس_ورڈ",
-        "پورٹ":    3306
-    });
-
-    // ─── جڑنا ─────────────────────────────────────────
-    انتظار db.جوڑیں();
-    لکھو("MySQL سے جڑ گئے");
-
-    // ─── ڈیٹا بیس اور جدول ──────────────────────────
-    انتظار db.چلائیں("CREATE DATABASE IF NOT EXISTS urdu_test CHARACTER SET utf8mb4");
-    انتظار db.چلائیں("USE urdu_test");
-    انتظار db.چلائیں("DROP TABLE IF EXISTS طلباء");
-    انتظار db.چلائیں(`
-        CREATE TABLE طلباء (
-            شناخت  INT AUTO_INCREMENT PRIMARY KEY,
-            نام    VARCHAR(100) NOT NULL,
-            عمر    INT,
-            شہر    VARCHAR(50)
-        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
-    `);
-    لکھو("جدول بنایا گیا");
-
-    // ─── INSERT ───────────────────────────────────────
-    انتظار db.چلائیں(
-        "INSERT INTO طلباء (نام, عمر, شہر) VALUES (?, ?, ?)",
-        ["احمد", 20, "کراچی"]
-    );
-    انتظار db.چلائیں(
-        "INSERT INTO طلباء (نام, عمر, شہر) VALUES (?, ?, ?)",
-        ["فاطمہ", 22, "لاہور"]
-    );
-    // داخل() مددگار
-    انتظار db.داخل("طلباء", { "نام": "علی", "عمر": 19, "شہر": "اسلام آباد" });
-    لکھو("3 طلباء داخل کیے");
-
-    // ─── SELECT ───────────────────────────────────────
-    متغیر سب = انتظار db.سوال("SELECT * FROM طلباء ORDER BY شناخت");
-    لکھو(`\nکل طلباء: ${لمبائی(سب)}`);
-    کے_لیے (متغیر ط کا سب) {
-        لکھو(`  ${ط["نام"]} — ${ط["شہر"]} (${ط["عمر"]})`);
-    }
-
-    // ─── WHERE فلٹر ───────────────────────────────────
-    متغیر کراچی = انتظار db.سوال(
-        "SELECT نام, عمر FROM طلباء WHERE شہر = ?", ["کراچی"]
-    );
-    لکھو(`\nکراچی کے طلباء: ${لمبائی(کراچی)}`);
-
-    // ─── UPDATE ───────────────────────────────────────
-    انتظار db.چلائیں(
-        "UPDATE طلباء SET عمر = ? WHERE نام = ?", [21, "احمد"]
-    );
-    متغیر تازہ = انتظار db.سوال(
-        "SELECT عمر FROM طلباء WHERE نام = ?", ["احمد"]
-    );
-    لکھو(`\nahmad کی نئی عمر: ${تازہ[0]["عمر"]}`);
-
-    // ─── DELETE ───────────────────────────────────────
-    انتظار db.چلائیں("DELETE FROM طلباء WHERE نام = ?", ["علی"]);
-    متغیر بعد = انتظار db.سوال("SELECT COUNT(*) AS تعداد FROM طلباء");
-    لکھو(`\nحذف کے بعد: ${بعد[0]["تعداد"]} طلباء`);
-
-    // ─── Aggregate ────────────────────────────────────
-    متغیر اعداد = انتظار db.سوال(
-        "SELECT AVG(عمر) AS اوسط, MAX(عمر) AS زیادہ, MIN(عمر) AS کم FROM طلباء"
-    );
-    لکھو(`\nاوسط عمر: ${اعداد[0]["اوسط"]}`);
-
-    // ─── Transaction ──────────────────────────────────
-    انتظار db.لین_دین_شروع();
-    کوشش {
-        انتظار db.چلائیں(
-            "INSERT INTO طلباء (نام, عمر, شہر) VALUES (?, ?, ?)",
-            ["زینب", 24, "ملتان"]
-        );
-        انتظار db.کمٹ();
-        لکھو("\nTransaction COMMIT کامیاب");
-    } پکڑو (غ) {
-        انتظار db.واپسی();
-        لکھو(`Transaction ROLLBACK: ${غ}`);
-    }
-
-    // ─── لین_دین() wrapper ────────────────────────────
-    انتظار db.لین_دین(غیر_متزامن فنکشن() {
-        انتظار db.چلائیں(
-            "INSERT INTO طلباء (نام, عمر, شہر) VALUES (?, ?, ?)",
-            ["عمر", 26, "پشاور"]
-        );
-    });
-    لکھو("لین_دین() COMMIT");
-
-    // ─── صفائی ────────────────────────────────────────
-    انتظار db.چلائیں("DROP TABLE IF EXISTS طلباء");
-    انتظار db.چلائیں("DROP DATABASE IF EXISTS urdu_test");
-    انتظار db.منقطع();
-    لکھو("\nMySQL منقطع");
-}
-
-انتظار مرکز();
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>درآمد { مائی_ایس_کیو_ایل } سے "اردو/ڈیٹا_بیس";
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>غیر_متزامن فنکشن مرکز() {
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    متغیر db = نیا مائی_ایس_کیو_ایل({
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        "میزبان":   "localhost",
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        "صارف":     "root",
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        "پاس_ورڈ": "پاس_ورڈ",
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        "پورٹ":    3306
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    });
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    // ─── جڑنا ─────────────────────────────────────────
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    انتظار db.جوڑیں();
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    لکھو("MySQL سے جڑ گئے");
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    // ─── ڈیٹا بیس اور جدول ──────────────────────────
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    انتظار db.چلائیں("CREATE DATABASE IF NOT EXISTS urdu_test CHARACTER SET utf8mb4");
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    انتظار db.چلائیں("USE urdu_test");
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>    انتظار db.چلائیں("DROP TABLE IF EXISTS طلباء");
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>    انتظار db.چلائیں(`
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>        CREATE TABLE طلباء (
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>            شناخت  INT AUTO_INCREMENT PRIMARY KEY,
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>            نام    VARCHAR(100) NOT NULL,
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>            عمر    INT,
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>            شہر    VARCHAR(50)
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>    `);
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>    لکھو("جدول بنایا گیا");
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>    // ─── INSERT ───────────────────────────────────────
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>    انتظار db.چلائیں(
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>        "INSERT INTO طلباء (نام, عمر, شہر) VALUES (?, ?, ?)",
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>        ["احمد", 20, "کراچی"]
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>    );
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>    انتظار db.چلائیں(
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>        "INSERT INTO طلباء (نام, عمر, شہر) VALUES (?, ?, ?)",
+<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>        ["فاطمہ", 22, "لاہور"]
+<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>    );
+<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>    // داخل() مددگار
+<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>    انتظار db.داخل("طلباء", { "نام": "علی", "عمر": 19, "شہر": "اسلام آباد" });
+<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>    لکھو("3 طلباء داخل کیے");
+<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>
+<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>    // ─── SELECT ───────────────────────────────────────
+<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>    متغیر سب = انتظار db.سوال("SELECT * FROM طلباء ORDER BY شناخت");
+<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>    لکھو(`\nکل طلباء: ${لمبائی(سب)}`);
+<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>    کے_لیے (متغیر ط کا سب) {
+<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a>        لکھو(`  ${ط["نام"]} — ${ط["شہر"]} (${ط["عمر"]})`);
+<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>    }
+<a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a>
+<a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a>    // ─── WHERE فلٹر ───────────────────────────────────
+<a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a>    متغیر کراچی = انتظار db.سوال(
+<a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a>        "SELECT نام, عمر FROM طلباء WHERE شہر = ?", ["کراچی"]
+<a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a>    );
+<a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a>    لکھو(`\nکراچی کے طلباء: ${لمبائی(کراچی)}`);
+<a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a>
+<a id="__codelineno-2-55" name="__codelineno-2-55" href="#__codelineno-2-55"></a>    // ─── UPDATE ───────────────────────────────────────
+<a id="__codelineno-2-56" name="__codelineno-2-56" href="#__codelineno-2-56"></a>    انتظار db.چلائیں(
+<a id="__codelineno-2-57" name="__codelineno-2-57" href="#__codelineno-2-57"></a>        "UPDATE طلباء SET عمر = ? WHERE نام = ?", [21, "احمد"]
+<a id="__codelineno-2-58" name="__codelineno-2-58" href="#__codelineno-2-58"></a>    );
+<a id="__codelineno-2-59" name="__codelineno-2-59" href="#__codelineno-2-59"></a>    متغیر تازہ = انتظار db.سوال(
+<a id="__codelineno-2-60" name="__codelineno-2-60" href="#__codelineno-2-60"></a>        "SELECT عمر FROM طلباء WHERE نام = ?", ["احمد"]
+<a id="__codelineno-2-61" name="__codelineno-2-61" href="#__codelineno-2-61"></a>    );
+<a id="__codelineno-2-62" name="__codelineno-2-62" href="#__codelineno-2-62"></a>    لکھو(`\nahmad کی نئی عمر: ${تازہ[0]["عمر"]}`);
+<a id="__codelineno-2-63" name="__codelineno-2-63" href="#__codelineno-2-63"></a>
+<a id="__codelineno-2-64" name="__codelineno-2-64" href="#__codelineno-2-64"></a>    // ─── DELETE ───────────────────────────────────────
+<a id="__codelineno-2-65" name="__codelineno-2-65" href="#__codelineno-2-65"></a>    انتظار db.چلائیں("DELETE FROM طلباء WHERE نام = ?", ["علی"]);
+<a id="__codelineno-2-66" name="__codelineno-2-66" href="#__codelineno-2-66"></a>    متغیر بعد = انتظار db.سوال("SELECT COUNT(*) AS تعداد FROM طلباء");
+<a id="__codelineno-2-67" name="__codelineno-2-67" href="#__codelineno-2-67"></a>    لکھو(`\nحذف کے بعد: ${بعد[0]["تعداد"]} طلباء`);
+<a id="__codelineno-2-68" name="__codelineno-2-68" href="#__codelineno-2-68"></a>
+<a id="__codelineno-2-69" name="__codelineno-2-69" href="#__codelineno-2-69"></a>    // ─── Aggregate ────────────────────────────────────
+<a id="__codelineno-2-70" name="__codelineno-2-70" href="#__codelineno-2-70"></a>    متغیر اعداد = انتظار db.سوال(
+<a id="__codelineno-2-71" name="__codelineno-2-71" href="#__codelineno-2-71"></a>        "SELECT AVG(عمر) AS اوسط, MAX(عمر) AS زیادہ, MIN(عمر) AS کم FROM طلباء"
+<a id="__codelineno-2-72" name="__codelineno-2-72" href="#__codelineno-2-72"></a>    );
+<a id="__codelineno-2-73" name="__codelineno-2-73" href="#__codelineno-2-73"></a>    لکھو(`\nاوسط عمر: ${اعداد[0]["اوسط"]}`);
+<a id="__codelineno-2-74" name="__codelineno-2-74" href="#__codelineno-2-74"></a>
+<a id="__codelineno-2-75" name="__codelineno-2-75" href="#__codelineno-2-75"></a>    // ─── Transaction ──────────────────────────────────
+<a id="__codelineno-2-76" name="__codelineno-2-76" href="#__codelineno-2-76"></a>    انتظار db.لین_دین_شروع();
+<a id="__codelineno-2-77" name="__codelineno-2-77" href="#__codelineno-2-77"></a>    کوشش {
+<a id="__codelineno-2-78" name="__codelineno-2-78" href="#__codelineno-2-78"></a>        انتظار db.چلائیں(
+<a id="__codelineno-2-79" name="__codelineno-2-79" href="#__codelineno-2-79"></a>            "INSERT INTO طلباء (نام, عمر, شہر) VALUES (?, ?, ?)",
+<a id="__codelineno-2-80" name="__codelineno-2-80" href="#__codelineno-2-80"></a>            ["زینب", 24, "ملتان"]
+<a id="__codelineno-2-81" name="__codelineno-2-81" href="#__codelineno-2-81"></a>        );
+<a id="__codelineno-2-82" name="__codelineno-2-82" href="#__codelineno-2-82"></a>        انتظار db.کمٹ();
+<a id="__codelineno-2-83" name="__codelineno-2-83" href="#__codelineno-2-83"></a>        لکھو("\nTransaction COMMIT کامیاب");
+<a id="__codelineno-2-84" name="__codelineno-2-84" href="#__codelineno-2-84"></a>    } پکڑو (غ) {
+<a id="__codelineno-2-85" name="__codelineno-2-85" href="#__codelineno-2-85"></a>        انتظار db.واپسی();
+<a id="__codelineno-2-86" name="__codelineno-2-86" href="#__codelineno-2-86"></a>        لکھو(`Transaction ROLLBACK: ${غ}`);
+<a id="__codelineno-2-87" name="__codelineno-2-87" href="#__codelineno-2-87"></a>    }
+<a id="__codelineno-2-88" name="__codelineno-2-88" href="#__codelineno-2-88"></a>
+<a id="__codelineno-2-89" name="__codelineno-2-89" href="#__codelineno-2-89"></a>    // ─── لین_دین() wrapper ────────────────────────────
+<a id="__codelineno-2-90" name="__codelineno-2-90" href="#__codelineno-2-90"></a>    انتظار db.لین_دین(غیر_متزامن فنکشن() {
+<a id="__codelineno-2-91" name="__codelineno-2-91" href="#__codelineno-2-91"></a>        انتظار db.چلائیں(
+<a id="__codelineno-2-92" name="__codelineno-2-92" href="#__codelineno-2-92"></a>            "INSERT INTO طلباء (نام, عمر, شہر) VALUES (?, ?, ?)",
+<a id="__codelineno-2-93" name="__codelineno-2-93" href="#__codelineno-2-93"></a>            ["عمر", 26, "پشاور"]
+<a id="__codelineno-2-94" name="__codelineno-2-94" href="#__codelineno-2-94"></a>        );
+<a id="__codelineno-2-95" name="__codelineno-2-95" href="#__codelineno-2-95"></a>    });
+<a id="__codelineno-2-96" name="__codelineno-2-96" href="#__codelineno-2-96"></a>    لکھو("لین_دین() COMMIT");
+<a id="__codelineno-2-97" name="__codelineno-2-97" href="#__codelineno-2-97"></a>
+<a id="__codelineno-2-98" name="__codelineno-2-98" href="#__codelineno-2-98"></a>    // ─── صفائی ────────────────────────────────────────
+<a id="__codelineno-2-99" name="__codelineno-2-99" href="#__codelineno-2-99"></a>    انتظار db.چلائیں("DROP TABLE IF EXISTS طلباء");
+<a id="__codelineno-2-100" name="__codelineno-2-100" href="#__codelineno-2-100"></a>    انتظار db.چلائیں("DROP DATABASE IF EXISTS urdu_test");
+<a id="__codelineno-2-101" name="__codelineno-2-101" href="#__codelineno-2-101"></a>    انتظار db.منقطع();
+<a id="__codelineno-2-102" name="__codelineno-2-102" href="#__codelineno-2-102"></a>    لکھو("\nMySQL منقطع");
+<a id="__codelineno-2-103" name="__codelineno-2-103" href="#__codelineno-2-103"></a>}
+<a id="__codelineno-2-104" name="__codelineno-2-104" href="#__codelineno-2-104"></a>
+<a id="__codelineno-2-105" name="__codelineno-2-105" href="#__codelineno-2-105"></a>انتظار مرکز();
 </code></pre></div>
 <hr />
-<h2 id="postgresql-_">PostgreSQL (پوسٹ_گریس) — پوسٹ گریس ڈیٹا بیس</h2>
+<h2 id="postgresql-_">PostgreSQL (پوسٹ_گریس) — پوسٹ گریس ڈیٹا بیس<a class="headerlink" href="#postgresql-_" title="Permanent link">&para;</a></h2>
 <p>Wraps <code>psycopg2</code> with <code>RealDictCursor</code> for named-column access.</p>
 <blockquote>
 <p><strong>اردو:</strong> یہ <code>psycopg2</code> کا ریپر ہے جس میں <code>RealDictCursor</code> سے نامی کالم تک رسائی ملتی ہے۔ نتائج <code>row.کالم</code> (نقطہ طرز) سے پڑھے جا سکتے ہیں۔ اس میں <code>آخری_شناخت()</code> طریقہ بھی ہے جو آخری داخل کردہ قطار کی شناخت واپس کرتا ہے۔</p>
@@ -1374,101 +1862,101 @@ pip install firebase-admin             # فائر_بیس (admin mode)
 </table>
 <p><strong>Additional method:</strong> <code>await db.آخری_شناخت(table, column)</code> returns the last inserted serial ID via <code>currval</code>.</p>
 <hr />
-<h3 id="postgresql-example-full-crud">PostgreSQL Example: Full CRUD</h3>
-<div class="highlight"><pre><span></span><code>درآمد { پوسٹ_گریس } سے "اردو/ڈیٹا_بیس";
-
-غیر_متزامن فنکشن مرکز() {
-    متغیر db = نیا پوسٹ_گریس({
-        "میزبان":    "localhost",
-        "صارف":      "postgres",
-        "پاس_ورڈ":  "پاس_ورڈ",
-        "ڈیٹا_بیس": "postgres",
-        "پورٹ":      5432
-    });
-
-    انتظار db.جوڑیں();
-    لکھو("PostgreSQL سے جڑ گئے");
-
-    // ─── جدول بنائیں ─────────────────────────────────
-    انتظار db.چلائیں("DROP TABLE IF EXISTS ملازمین");
-    انتظار db.چلائیں(`
-        CREATE TABLE ملازمین (
-            شناخت  SERIAL PRIMARY KEY,
-            نام    VARCHAR(100) NOT NULL,
-            تنخواہ NUMERIC(10,2),
-            شعبہ   VARCHAR(50)
-        )
-    `);
-
-    // ─── INSERT ───────────────────────────────────────
-    انتظار db.داخل("ملازمین", {
-        "نام": "احمد خان", "تنخواہ": 75000, "شعبہ": "انجینئرنگ"
-    });
-    انتظار db.داخل("ملازمین", {
-        "نام": "فاطمہ رضا", "تنخواہ": 85000, "شعبہ": "مارکیٹنگ"
-    });
-    انتظار db.داخل("ملازمین", {
-        "نام": "علی حسن", "تنخواہ": 65000, "شعبہ": "انجینئرنگ"
-    });
-    لکھو("3 ملازم داخل کیے");
-
-    // ─── SELECT ───────────────────────────────────────
-    متغیر سب = انتظار db.سوال("SELECT * FROM ملازمین ORDER BY شناخت");
-    لکھو(`\nکل ملازمین: ${لمبائی(سب)}`);
-    کے_لیے (متغیر م کا سب) {
-        لکھو(`  ${م.نام} | ${م.شعبہ} | Rs ${م.تنخواہ}`);
-    }
-
-    // ─── فلٹر + ترتیب ─────────────────────────────────
-    متغیر انجینئر = انتظار db.سوال(
-        "SELECT * FROM ملازمین WHERE شعبہ = ? ORDER BY تنخواہ DESC",
-        ["انجینئرنگ"]
-    );
-    لکھو(`\nانجینئرنگ شعبہ: ${لمبائی(انجینئر)} ملازم`);
-
-    // ─── Aggregate ────────────────────────────────────
-    متغیر اعداد = انتظار db.سوال(
-        "SELECT AVG(تنخواہ) AS اوسط, MAX(تنخواہ) AS زیادہ FROM ملازمین"
-    );
-    لکھو(`\nاوسط تنخواہ: ${اعداد[0]["اوسط"]}`);
-    لکھو(`زیادہ تنخواہ: ${اعداد[0]["زیادہ"]}`);
-
-    // ─── UPDATE ───────────────────────────────────────
-    انتظار db.چلائیں(
-        "UPDATE ملازمین SET تنخواہ = تنخواہ * 1.10 WHERE شعبہ = ?",
-        ["انجینئرنگ"]
-    );
-    لکھو("\nانجینئرنگ کو 10% اضافہ ملا");
-
-    // ─── DELETE ───────────────────────────────────────
-    متغیر حذف_شدہ = انتظار db.چلائیں(
-        "DELETE FROM ملازمین WHERE تنخواہ &lt; ?", [70000]
-    );
-    لکھو(`\n${حذف_شدہ} ملازم حذف کیے (کم تنخواہ)`);
-
-    // ─── Transaction ──────────────────────────────────
-    انتظار db.لین_دین(غیر_متزامن فنکشن() {
-        انتظار db.چلائیں(
-            "INSERT INTO ملازمین (نام, تنخواہ, شعبہ) VALUES (?, ?, ?)",
-            ["نیا_ملازم", 90000, "IT"]
-        );
-        انتظار db.چلائیں(
-            "UPDATE ملازمین SET تنخواہ = تنخواہ + 5000 WHERE شعبہ = ?",
-            ["IT"]
-        );
-    });
-    لکھو("Transaction COMMIT");
-
-    // ─── صفائی ────────────────────────────────────────
-    انتظار db.چلائیں("DROP TABLE IF EXISTS ملازمین");
-    انتظار db.منقطع();
-    لکھو("\nPostgreSQL منقطع");
-}
-
-انتظار مرکز();
+<h3 id="postgresql-example-full-crud">PostgreSQL Example: Full CRUD<a class="headerlink" href="#postgresql-example-full-crud" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>درآمد { پوسٹ_گریس } سے "اردو/ڈیٹا_بیس";
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>غیر_متزامن فنکشن مرکز() {
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    متغیر db = نیا پوسٹ_گریس({
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        "میزبان":    "localhost",
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        "صارف":      "postgres",
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>        "پاس_ورڈ":  "پاس_ورڈ",
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        "ڈیٹا_بیس": "postgres",
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>        "پورٹ":      5432
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    });
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    انتظار db.جوڑیں();
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    لکھو("PostgreSQL سے جڑ گئے");
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>    // ─── جدول بنائیں ─────────────────────────────────
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    انتظار db.چلائیں("DROP TABLE IF EXISTS ملازمین");
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    انتظار db.چلائیں(`
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>        CREATE TABLE ملازمین (
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>            شناخت  SERIAL PRIMARY KEY,
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>            نام    VARCHAR(100) NOT NULL,
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>            تنخواہ NUMERIC(10,2),
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>            شعبہ   VARCHAR(50)
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>        )
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>    `);
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>    // ─── INSERT ───────────────────────────────────────
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>    انتظار db.داخل("ملازمین", {
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>        "نام": "احمد خان", "تنخواہ": 75000, "شعبہ": "انجینئرنگ"
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>    });
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>    انتظار db.داخل("ملازمین", {
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>        "نام": "فاطمہ رضا", "تنخواہ": 85000, "شعبہ": "مارکیٹنگ"
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>    });
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>    انتظار db.داخل("ملازمین", {
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>        "نام": "علی حسن", "تنخواہ": 65000, "شعبہ": "انجینئرنگ"
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>    });
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>    لکھو("3 ملازم داخل کیے");
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>    // ─── SELECT ───────────────────────────────────────
+<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>    متغیر سب = انتظار db.سوال("SELECT * FROM ملازمین ORDER BY شناخت");
+<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>    لکھو(`\nکل ملازمین: ${لمبائی(سب)}`);
+<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>    کے_لیے (متغیر م کا سب) {
+<a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>        لکھو(`  ${م.نام} | ${م.شعبہ} | Rs ${م.تنخواہ}`);
+<a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>    }
+<a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>
+<a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>    // ─── فلٹر + ترتیب ─────────────────────────────────
+<a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>    متغیر انجینئر = انتظار db.سوال(
+<a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>        "SELECT * FROM ملازمین WHERE شعبہ = ? ORDER BY تنخواہ DESC",
+<a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>        ["انجینئرنگ"]
+<a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>    );
+<a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>    لکھو(`\nانجینئرنگ شعبہ: ${لمبائی(انجینئر)} ملازم`);
+<a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>
+<a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>    // ─── Aggregate ────────────────────────────────────
+<a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>    متغیر اعداد = انتظار db.سوال(
+<a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>        "SELECT AVG(تنخواہ) AS اوسط, MAX(تنخواہ) AS زیادہ FROM ملازمین"
+<a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>    );
+<a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a>    لکھو(`\nاوسط تنخواہ: ${اعداد[0]["اوسط"]}`);
+<a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>    لکھو(`زیادہ تنخواہ: ${اعداد[0]["زیادہ"]}`);
+<a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>
+<a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a>    // ─── UPDATE ───────────────────────────────────────
+<a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a>    انتظار db.چلائیں(
+<a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a>        "UPDATE ملازمین SET تنخواہ = تنخواہ * 1.10 WHERE شعبہ = ?",
+<a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a>        ["انجینئرنگ"]
+<a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a>    );
+<a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a>    لکھو("\nانجینئرنگ کو 10% اضافہ ملا");
+<a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a>
+<a id="__codelineno-3-66" name="__codelineno-3-66" href="#__codelineno-3-66"></a>    // ─── DELETE ───────────────────────────────────────
+<a id="__codelineno-3-67" name="__codelineno-3-67" href="#__codelineno-3-67"></a>    متغیر حذف_شدہ = انتظار db.چلائیں(
+<a id="__codelineno-3-68" name="__codelineno-3-68" href="#__codelineno-3-68"></a>        "DELETE FROM ملازمین WHERE تنخواہ &lt; ?", [70000]
+<a id="__codelineno-3-69" name="__codelineno-3-69" href="#__codelineno-3-69"></a>    );
+<a id="__codelineno-3-70" name="__codelineno-3-70" href="#__codelineno-3-70"></a>    لکھو(`\n${حذف_شدہ} ملازم حذف کیے (کم تنخواہ)`);
+<a id="__codelineno-3-71" name="__codelineno-3-71" href="#__codelineno-3-71"></a>
+<a id="__codelineno-3-72" name="__codelineno-3-72" href="#__codelineno-3-72"></a>    // ─── Transaction ──────────────────────────────────
+<a id="__codelineno-3-73" name="__codelineno-3-73" href="#__codelineno-3-73"></a>    انتظار db.لین_دین(غیر_متزامن فنکشن() {
+<a id="__codelineno-3-74" name="__codelineno-3-74" href="#__codelineno-3-74"></a>        انتظار db.چلائیں(
+<a id="__codelineno-3-75" name="__codelineno-3-75" href="#__codelineno-3-75"></a>            "INSERT INTO ملازمین (نام, تنخواہ, شعبہ) VALUES (?, ?, ?)",
+<a id="__codelineno-3-76" name="__codelineno-3-76" href="#__codelineno-3-76"></a>            ["نیا_ملازم", 90000, "IT"]
+<a id="__codelineno-3-77" name="__codelineno-3-77" href="#__codelineno-3-77"></a>        );
+<a id="__codelineno-3-78" name="__codelineno-3-78" href="#__codelineno-3-78"></a>        انتظار db.چلائیں(
+<a id="__codelineno-3-79" name="__codelineno-3-79" href="#__codelineno-3-79"></a>            "UPDATE ملازمین SET تنخواہ = تنخواہ + 5000 WHERE شعبہ = ?",
+<a id="__codelineno-3-80" name="__codelineno-3-80" href="#__codelineno-3-80"></a>            ["IT"]
+<a id="__codelineno-3-81" name="__codelineno-3-81" href="#__codelineno-3-81"></a>        );
+<a id="__codelineno-3-82" name="__codelineno-3-82" href="#__codelineno-3-82"></a>    });
+<a id="__codelineno-3-83" name="__codelineno-3-83" href="#__codelineno-3-83"></a>    لکھو("Transaction COMMIT");
+<a id="__codelineno-3-84" name="__codelineno-3-84" href="#__codelineno-3-84"></a>
+<a id="__codelineno-3-85" name="__codelineno-3-85" href="#__codelineno-3-85"></a>    // ─── صفائی ────────────────────────────────────────
+<a id="__codelineno-3-86" name="__codelineno-3-86" href="#__codelineno-3-86"></a>    انتظار db.چلائیں("DROP TABLE IF EXISTS ملازمین");
+<a id="__codelineno-3-87" name="__codelineno-3-87" href="#__codelineno-3-87"></a>    انتظار db.منقطع();
+<a id="__codelineno-3-88" name="__codelineno-3-88" href="#__codelineno-3-88"></a>    لکھو("\nPostgreSQL منقطع");
+<a id="__codelineno-3-89" name="__codelineno-3-89" href="#__codelineno-3-89"></a>}
+<a id="__codelineno-3-90" name="__codelineno-3-90" href="#__codelineno-3-90"></a>
+<a id="__codelineno-3-91" name="__codelineno-3-91" href="#__codelineno-3-91"></a>انتظار مرکز();
 </code></pre></div>
 <hr />
-<h2 id="mongodb-__">MongoDB (مونگو_ڈی_بی) — مونگو ڈی بی</h2>
+<h2 id="mongodb-__">MongoDB (مونگو_ڈی_بی) — مونگو ڈی بی<a class="headerlink" href="#mongodb-__" title="Permanent link">&para;</a></h2>
 <p>Wraps <code>pymongo</code> with collection-based access.</p>
 <blockquote>
 <p><strong>اردو:</strong> یہ <code>pymongo</code> کا ریپر ہے جس میں مجموعہ (collection) پر مبنی رسائی ملتی ہے۔ MongoDB ایک NoSQL ڈیٹا بیس ہے جو JSON جیسی دستاویزات (documents) محفوظ کرتا ہے۔ جدول کی بجائے مجموعہ اور قطار کی بجائے دستاویز استعمال ہوتی ہے۔</p>
@@ -1557,116 +2045,116 @@ pip install firebase-admin             # فائر_بیس (admin mode)
 </tbody>
 </table>
 <hr />
-<h3 id="mongodb-example-full-crud">MongoDB Example: Full CRUD</h3>
-<div class="highlight"><pre><span></span><code>درآمد { مونگو_ڈی_بی } سے "اردو/ڈیٹا_بیس";
-
-غیر_متزامن فنکشن مرکز() {
-    متغیر mongo = نیا مونگو_ڈی_بی({
-        "میزبان":    "localhost",
-        "پورٹ":      27017,
-        "ڈیٹا_بیس": "urdu_test"
-    });
-
-    انتظار mongo.جوڑیں();
-    لکھو("MongoDB سے جڑ گئے");
-
-    متغیر کتابیں = mongo.مجموعہ("کتابیں");
-
-    // ─── پرانا ڈیٹا صاف کریں ──────────────────────────
-    انتظار کتابیں.حذف({});
-
-    // ─── ایک دستاویز داخل ────────────────────────────
-    متغیر نئی_id = انتظار کتابیں.داخل({
-        "عنوان": "آگ کا دریا",
-        "مصنف":  "قرة العین حیدر",
-        "صنف":   "ناول",
-        "سال":   1959,
-        "قیمت":  1200
-    });
-    لکھو(`نئی کتاب ID: ${نئی_id}`);
-
-    // ─── بہت دستاویز داخل ────────────────────────────
-    متغیر ids = انتظار کتابیں.بہت_داخل([
-        { "عنوان": "گلستان سعدی", "مصنف": "سعدی شیرازی", "صنف": "شاعری", "سال": 1258, "قیمت": 850  },
-        { "عنوان": "اداس نسلیں",  "مصنف": "عبداللہ حسین", "صنف": "ناول",  "سال": 1963, "قیمت": 980  },
-        { "عنوان": "فیض کا کلام", "مصنف": "فیض احمد فیض", "صنف": "شاعری", "سال": 1941, "قیمت": 650  }
-    ]);
-    لکھو(`${لمبائی(ids)} کتابیں داخل`);
-
-    // ─── تمام تلاش ────────────────────────────────────
-    متغیر سب = انتظار کتابیں.تلاش({});
-    لکھو(`\nکل کتابیں: ${لمبائی(سب)}`);
-    کے_لیے (متغیر ک کا سب) {
-        لکھو(`  ${ک["عنوان"]} — ${ک["مصنف"]}`);
-    }
-
-    // ─── فلٹر ─────────────────────────────────────────
-    متغیر شاعری = انتظار کتابیں.تلاش({ "صنف": "شاعری" });
-    لکھو(`\nشاعری کتابیں: ${لمبائی(شاعری)}`);
-
-    // ─── ایک تلاش ─────────────────────────────────────
-    متغیر ایک = انتظار کتابیں.ایک_تلاش({ "عنوان": "آگ کا دریا" });
-    اگر (ایک) {
-        لکھو(`\nملی: ${ایک["عنوان"]} (${ایک["سال"]})`);
-    }
-
-    // ─── MongoDB Query Operators ───────────────────────
-    // قیمت 900 سے زیادہ
-    متغیر مہنگی = انتظار کتابیں.تلاش({ "قیمت": { "$gt": 900 } });
-    لکھو(`\n900 سے مہنگی: ${لمبائی(مہنگی)}`);
-
-    // حد کے ساتھ
-    متغیر پہلی_2 = انتظار کتابیں.تلاش({}, {}, حد=2);
-    لکھو(`\nپہلی 2 کتابیں:`);
-    کے_لیے (متغیر ک کا پہلی_2) {
-        لکھو(`  ${ک["عنوان"]}`);
-    }
-
-    // ─── تازہ کاری ────────────────────────────────────
-    متغیر تازہ = انتظار کتابیں.تازہ_کاری(
-        { "صنف": "شاعری" },
-        { "دستیاب": سچ }
-    );
-    لکھو(`\n${تازہ} شاعری کتابیں تازہ کی گئیں`);
-
-    // ─── گنتی ─────────────────────────────────────────
-    متغیر کل     = انتظار کتابیں.گنتی({});
-    متغیر ناول   = انتظار کتابیں.گنتی({ "صنف": "ناول" });
-    لکھو(`\nکل: ${کل} | ناول: ${ناول}`);
-
-    // ─── حذف ──────────────────────────────────────────
-    متغیر حذف = انتظار کتابیں.حذف({ "قیمت": { "$lt": 700 } });
-    لکھو(`\n${حذف} سستی کتابیں حذف`);
-
-    // ─── منقطع ────────────────────────────────────────
-    انتظار mongo.منقطع();
-    لکھو("MongoDB منقطع");
-}
-
-انتظار مرکز();
+<h3 id="mongodb-example-full-crud">MongoDB Example: Full CRUD<a class="headerlink" href="#mongodb-example-full-crud" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>درآمد { مونگو_ڈی_بی } سے "اردو/ڈیٹا_بیس";
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>غیر_متزامن فنکشن مرکز() {
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    متغیر mongo = نیا مونگو_ڈی_بی({
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>        "میزبان":    "localhost",
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        "پورٹ":      27017,
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>        "ڈیٹا_بیس": "urdu_test"
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    });
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    انتظار mongo.جوڑیں();
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    لکھو("MongoDB سے جڑ گئے");
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    متغیر کتابیں = mongo.مجموعہ("کتابیں");
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    // ─── پرانا ڈیٹا صاف کریں ──────────────────────────
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>    انتظار کتابیں.حذف({});
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>    // ─── ایک دستاویز داخل ────────────────────────────
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>    متغیر نئی_id = انتظار کتابیں.داخل({
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>        "عنوان": "آگ کا دریا",
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>        "مصنف":  "قرة العین حیدر",
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>        "صنف":   "ناول",
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>        "سال":   1959,
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>        "قیمت":  1200
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>    });
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>    لکھو(`نئی کتاب ID: ${نئی_id}`);
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>    // ─── بہت دستاویز داخل ────────────────────────────
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>    متغیر ids = انتظار کتابیں.بہت_داخل([
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>        { "عنوان": "گلستان سعدی", "مصنف": "سعدی شیرازی", "صنف": "شاعری", "سال": 1258, "قیمت": 850  },
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>        { "عنوان": "اداس نسلیں",  "مصنف": "عبداللہ حسین", "صنف": "ناول",  "سال": 1963, "قیمت": 980  },
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>        { "عنوان": "فیض کا کلام", "مصنف": "فیض احمد فیض", "صنف": "شاعری", "سال": 1941, "قیمت": 650  }
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>    ]);
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>    لکھو(`${لمبائی(ids)} کتابیں داخل`);
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>    // ─── تمام تلاش ────────────────────────────────────
+<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>    متغیر سب = انتظار کتابیں.تلاش({});
+<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>    لکھو(`\nکل کتابیں: ${لمبائی(سب)}`);
+<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>    کے_لیے (متغیر ک کا سب) {
+<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>        لکھو(`  ${ک["عنوان"]} — ${ک["مصنف"]}`);
+<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>    }
+<a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>
+<a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>    // ─── فلٹر ─────────────────────────────────────────
+<a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>    متغیر شاعری = انتظار کتابیں.تلاش({ "صنف": "شاعری" });
+<a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>    لکھو(`\nشاعری کتابیں: ${لمبائی(شاعری)}`);
+<a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>
+<a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a>    // ─── ایک تلاش ─────────────────────────────────────
+<a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a>    متغیر ایک = انتظار کتابیں.ایک_تلاش({ "عنوان": "آگ کا دریا" });
+<a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a>    اگر (ایک) {
+<a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a>        لکھو(`\nملی: ${ایک["عنوان"]} (${ایک["سال"]})`);
+<a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a>    }
+<a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a>
+<a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a>    // ─── MongoDB Query Operators ───────────────────────
+<a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a>    // قیمت 900 سے زیادہ
+<a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a>    متغیر مہنگی = انتظار کتابیں.تلاش({ "قیمت": { "$gt": 900 } });
+<a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a>    لکھو(`\n900 سے مہنگی: ${لمبائی(مہنگی)}`);
+<a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a>
+<a id="__codelineno-4-58" name="__codelineno-4-58" href="#__codelineno-4-58"></a>    // حد کے ساتھ
+<a id="__codelineno-4-59" name="__codelineno-4-59" href="#__codelineno-4-59"></a>    متغیر پہلی_2 = انتظار کتابیں.تلاش({}, {}, حد=2);
+<a id="__codelineno-4-60" name="__codelineno-4-60" href="#__codelineno-4-60"></a>    لکھو(`\nپہلی 2 کتابیں:`);
+<a id="__codelineno-4-61" name="__codelineno-4-61" href="#__codelineno-4-61"></a>    کے_لیے (متغیر ک کا پہلی_2) {
+<a id="__codelineno-4-62" name="__codelineno-4-62" href="#__codelineno-4-62"></a>        لکھو(`  ${ک["عنوان"]}`);
+<a id="__codelineno-4-63" name="__codelineno-4-63" href="#__codelineno-4-63"></a>    }
+<a id="__codelineno-4-64" name="__codelineno-4-64" href="#__codelineno-4-64"></a>
+<a id="__codelineno-4-65" name="__codelineno-4-65" href="#__codelineno-4-65"></a>    // ─── تازہ کاری ────────────────────────────────────
+<a id="__codelineno-4-66" name="__codelineno-4-66" href="#__codelineno-4-66"></a>    متغیر تازہ = انتظار کتابیں.تازہ_کاری(
+<a id="__codelineno-4-67" name="__codelineno-4-67" href="#__codelineno-4-67"></a>        { "صنف": "شاعری" },
+<a id="__codelineno-4-68" name="__codelineno-4-68" href="#__codelineno-4-68"></a>        { "دستیاب": سچ }
+<a id="__codelineno-4-69" name="__codelineno-4-69" href="#__codelineno-4-69"></a>    );
+<a id="__codelineno-4-70" name="__codelineno-4-70" href="#__codelineno-4-70"></a>    لکھو(`\n${تازہ} شاعری کتابیں تازہ کی گئیں`);
+<a id="__codelineno-4-71" name="__codelineno-4-71" href="#__codelineno-4-71"></a>
+<a id="__codelineno-4-72" name="__codelineno-4-72" href="#__codelineno-4-72"></a>    // ─── گنتی ─────────────────────────────────────────
+<a id="__codelineno-4-73" name="__codelineno-4-73" href="#__codelineno-4-73"></a>    متغیر کل     = انتظار کتابیں.گنتی({});
+<a id="__codelineno-4-74" name="__codelineno-4-74" href="#__codelineno-4-74"></a>    متغیر ناول   = انتظار کتابیں.گنتی({ "صنف": "ناول" });
+<a id="__codelineno-4-75" name="__codelineno-4-75" href="#__codelineno-4-75"></a>    لکھو(`\nکل: ${کل} | ناول: ${ناول}`);
+<a id="__codelineno-4-76" name="__codelineno-4-76" href="#__codelineno-4-76"></a>
+<a id="__codelineno-4-77" name="__codelineno-4-77" href="#__codelineno-4-77"></a>    // ─── حذف ──────────────────────────────────────────
+<a id="__codelineno-4-78" name="__codelineno-4-78" href="#__codelineno-4-78"></a>    متغیر حذف = انتظار کتابیں.حذف({ "قیمت": { "$lt": 700 } });
+<a id="__codelineno-4-79" name="__codelineno-4-79" href="#__codelineno-4-79"></a>    لکھو(`\n${حذف} سستی کتابیں حذف`);
+<a id="__codelineno-4-80" name="__codelineno-4-80" href="#__codelineno-4-80"></a>
+<a id="__codelineno-4-81" name="__codelineno-4-81" href="#__codelineno-4-81"></a>    // ─── منقطع ────────────────────────────────────────
+<a id="__codelineno-4-82" name="__codelineno-4-82" href="#__codelineno-4-82"></a>    انتظار mongo.منقطع();
+<a id="__codelineno-4-83" name="__codelineno-4-83" href="#__codelineno-4-83"></a>    لکھو("MongoDB منقطع");
+<a id="__codelineno-4-84" name="__codelineno-4-84" href="#__codelineno-4-84"></a>}
+<a id="__codelineno-4-85" name="__codelineno-4-85" href="#__codelineno-4-85"></a>
+<a id="__codelineno-4-86" name="__codelineno-4-86" href="#__codelineno-4-86"></a>انتظار مرکز();
 </code></pre></div>
 <hr />
-<h3 id="mongodb-connection-string">MongoDB: Connection String</h3>
-<div class="highlight"><pre><span></span><code>درآمد { مونگو_ڈی_بی } سے "اردو/ڈیٹا_بیس";
-
-// Atlas یا تصدیق والا کنکشن
-متغیر mongo = نیا مونگو_ڈی_بی({
-    "uri":       "mongodb+srv://صارف:پاس@cluster0.abc.mongodb.net",
-    "ڈیٹا_بیس": "میری_ایپ"
-});
-
-غیر_متزامن فنکشن مرکز() {
-    انتظار mongo.جوڑیں();
-    متغیر صارفین = mongo.مجموعہ("صارفین");
-    متغیر گنتی = انتظار صارفین.گنتی({});
-    لکھو(`صارفین: ${گنتی}`);
-    انتظار mongo.منقطع();
-}
-
-انتظار مرکز();
+<h3 id="mongodb-connection-string">MongoDB: Connection String<a class="headerlink" href="#mongodb-connection-string" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>درآمد { مونگو_ڈی_بی } سے "اردو/ڈیٹا_بیس";
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>// Atlas یا تصدیق والا کنکشن
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>متغیر mongo = نیا مونگو_ڈی_بی({
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    "uri":       "mongodb+srv://صارف:پاس@cluster0.abc.mongodb.net",
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    "ڈیٹا_بیس": "میری_ایپ"
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>});
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>غیر_متزامن فنکشن مرکز() {
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    انتظار mongo.جوڑیں();
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    متغیر صارفین = mongo.مجموعہ("صارفین");
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>    متغیر گنتی = انتظار صارفین.گنتی({});
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>    لکھو(`صارفین: ${گنتی}`);
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>    انتظار mongo.منقطع();
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>}
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>انتظار مرکز();
 </code></pre></div>
 <hr />
-<h2 id="cassandra">Cassandra (کسینڈرا) — کسینڈرا ڈیٹا بیس</h2>
+<h2 id="cassandra">Cassandra (کسینڈرا) — کسینڈرا ڈیٹا بیس<a class="headerlink" href="#cassandra" title="Permanent link">&para;</a></h2>
 <p>Wraps <code>cassandra-driver</code> for Apache Cassandra and DataStax Astra.</p>
 <blockquote>
 <p><strong>اردو:</strong> یہ Apache Cassandra اور DataStax Astra کے لیے <code>cassandra-driver</code> کا ریپر ہے۔ Cassandra ایک تقسیم شدہ NoSQL ڈیٹا بیس ہے جو بڑے پیمانے پر ڈیٹا کے لیے موزوں ہے اور کثیر نوڈ کلسٹروں میں چلتا ہے۔</p>
@@ -1768,208 +2256,208 @@ pip install firebase-admin             # فائر_بیس (admin mode)
 </tbody>
 </table>
 <hr />
-<h3 id="cassandra-example-full-crud">Cassandra Example: Full CRUD</h3>
-<div class="highlight"><pre><span></span><code>درآمد { کسینڈرا } سے "اردو/ڈیٹا_بیس";
-
-غیر_متزامن فنکشن مرکز() {
-    متغیر db = نیا کسینڈرا({
-        "میزبان": ["localhost"],
-        "پورٹ":   9042
-    });
-
-    // ─── جڑنا ────────────────────────────────────────
-    انتظار db.جوڑیں();
-    لکھو("Cassandra سے جڑ گئے");
-
-    // ─── کی_اسپیس بنائیں ─────────────────────────────
-    انتظار db.کی_اسپیس_بنائیں("urdu_ks", "SimpleStrategy", 1);
-    انتظار db.کی_اسپیس_چنو("urdu_ks");
-    لکھو("کی_اسپیس تیار");
-
-    // ─── جدول بنائیں (ASCII نام ضروری) ──────────────
-    انتظار db.چلائیں("DROP TABLE IF EXISTS students");
-    انتظار db.جدول_بنائیں("students", {
-        "id":     "UUID PRIMARY KEY",
-        "naam":   "TEXT",
-        "umar":   "INT",
-        "shehar": "TEXT",
-        "number": "FLOAT"
-    });
-    لکھو("جدول students بنا");
-
-    // ─── INSERT ───────────────────────────────────────
-    انتظار db.چلائیں(
-        "INSERT INTO students (id, naam, umar, shehar, number) VALUES (uuid(), 'Ahmad', 20, 'Karachi', 88.5)"
-    );
-    انتظار db.چلائیں(
-        "INSERT INTO students (id, naam, umar, shehar, number) VALUES (uuid(), 'Fatima', 22, 'Lahore', 91.0)"
-    );
-    لکھو("طلباء داخل کیے");
-
-    // ─── SELECT ───────────────────────────────────────
-    متغیر سب = انتظار db.سوال("SELECT naam, umar, shehar, number FROM students");
-    لکھو(`\nکل طلباء: ${لمبائی(سب)}`);
-    کے_لیے (متغیر ط کا سب) {
-        لکھو(`  ${ط["naam"]} — ${ط["shehar"]} — ${ط["number"]}`);
-    }
-
-    // ─── COUNT ────────────────────────────────────────
-    متغیر گنتی = انتظار db.سوال("SELECT COUNT(*) FROM students");
-    لکھو(`\nتعداد: ${گنتی[0]["count"]}`);
-
-    // ─── تیار بیان ────────────────────────────────────
-    متغیر داخل_تیار = db.تیار(
-        "INSERT INTO students (id, naam, umar, shehar, number) VALUES (uuid(), ?, ?, ?, ?)"
-    );
-    انتظار db.تیار_چلائیں(داخل_تیار, ["Zainab", 21, "Multan", 83.0]);
-    انتظار db.تیار_چلائیں(داخل_تیار, ["Umar", 23, "Peshawar", 79.5]);
-    لکھو("\nتیار بیان سے 2 مزید داخل");
-
-    // ─── SELECT تیار بیان ─────────────────────────────
-    متغیر منتخب_تیار = db.تیار("SELECT naam, number FROM students WHERE naam = ? ALLOW FILTERING");
-    متغیر نتیجہ = انتظار db.تیار_سوال(منتخب_تیار, ["Ahmad"]);
-    اگر (لمبائی(نتیجہ) &gt; 0) {
-        لکھو(`\nاحمد کا نمبر: ${نتیجہ[0]["number"]}`);
-    }
-
-    // ─── BATCH ────────────────────────────────────────
-    انتظار db.چلائیں("DROP TABLE IF EXISTS masnoaat");
-    انتظار db.جدول_بنائیں("masnoaat", {
-        "id":     "UUID PRIMARY KEY",
-        "naam":   "TEXT",
-        "qeemat": "DECIMAL"
-    });
-    متغیر م_تیار = db.تیار(
-        "INSERT INTO masnoaat (id, naam, qeemat) VALUES (uuid(), ?, ?)"
-    );
-    انتظار db.بیچ([
-        [م_تیار, ["Kitab", 250]],
-        [م_تیار, ["Qalam", 50]],
-        [م_تیار, ["Bag",   800]]
-    ]);
-    متغیر مصنوعات = انتظار db.سوال("SELECT COUNT(*) FROM masnoaat");
-    لکھو(`\nBATCH: ${مصنوعات[0]["count"]} مصنوعات`);
-
-    // ─── TTL ──────────────────────────────────────────
-    انتظار db.چلائیں("DROP TABLE IF EXISTS aarzi");
-    انتظار db.جدول_بنائیں("aarzi", {
-        "id":      "UUID PRIMARY KEY",
-        "paigham": "TEXT"
-    });
-    // 1 گھنٹے بعد خودبخود ختم
-    انتظار db.چلائیں(
-        "INSERT INTO aarzi (id, paigham) VALUES (uuid(), 'عارضی پیغام') USING TTL 3600"
-    );
-    لکھو("\nTTL اندراج کامیاب");
-
-    // ─── UPDATE ───────────────────────────────────────
-    // Cassandra میں UPDATE کے لیے PRIMARY KEY ضروری ہے
-    متغیر قطاریں = انتظار db.سوال("SELECT id, naam FROM students");
-    کے_لیے (متغیر ق کا قطاریں) {
-        اگر (ق["naam"] == "Ahmad") {
-            انتظار db.چلائیں(`UPDATE students SET number = 95.0 WHERE id = ${ق["id"]}`);
-            لکھو(`\nahmad کا نمبر 95.0 کیا گیا`);
-        }
-    }
-
-    // ─── صفائی ────────────────────────────────────────
-    انتظار db.جدول_مٹائیں("students");
-    انتظار db.جدول_مٹائیں("masnoaat");
-    انتظار db.جدول_مٹائیں("aarzi");
-    انتظار db.کی_اسپیس_مٹائیں("urdu_ks");
-
-    انتظار db.منقطع();
-    لکھو("\nCassandra منقطع");
-}
-
-انتظار مرکز();
+<h3 id="cassandra-example-full-crud">Cassandra Example: Full CRUD<a class="headerlink" href="#cassandra-example-full-crud" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>درآمد { کسینڈرا } سے "اردو/ڈیٹا_بیس";
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>غیر_متزامن فنکشن مرکز() {
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    متغیر db = نیا کسینڈرا({
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>        "میزبان": ["localhost"],
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>        "پورٹ":   9042
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    });
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    // ─── جڑنا ────────────────────────────────────────
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    انتظار db.جوڑیں();
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>    لکھو("Cassandra سے جڑ گئے");
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>    // ─── کی_اسپیس بنائیں ─────────────────────────────
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>    انتظار db.کی_اسپیس_بنائیں("urdu_ks", "SimpleStrategy", 1);
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>    انتظار db.کی_اسپیس_چنو("urdu_ks");
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>    لکھو("کی_اسپیس تیار");
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>    // ─── جدول بنائیں (ASCII نام ضروری) ──────────────
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>    انتظار db.چلائیں("DROP TABLE IF EXISTS students");
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>    انتظار db.جدول_بنائیں("students", {
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>        "id":     "UUID PRIMARY KEY",
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>        "naam":   "TEXT",
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>        "umar":   "INT",
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>        "shehar": "TEXT",
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>        "number": "FLOAT"
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>    });
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>    لکھو("جدول students بنا");
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a>
+<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a>    // ─── INSERT ───────────────────────────────────────
+<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a>    انتظار db.چلائیں(
+<a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a>        "INSERT INTO students (id, naam, umar, shehar, number) VALUES (uuid(), 'Ahmad', 20, 'Karachi', 88.5)"
+<a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a>    );
+<a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a>    انتظار db.چلائیں(
+<a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a>        "INSERT INTO students (id, naam, umar, shehar, number) VALUES (uuid(), 'Fatima', 22, 'Lahore', 91.0)"
+<a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a>    );
+<a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a>    لکھو("طلباء داخل کیے");
+<a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a>
+<a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a>    // ─── SELECT ───────────────────────────────────────
+<a id="__codelineno-6-39" name="__codelineno-6-39" href="#__codelineno-6-39"></a>    متغیر سب = انتظار db.سوال("SELECT naam, umar, shehar, number FROM students");
+<a id="__codelineno-6-40" name="__codelineno-6-40" href="#__codelineno-6-40"></a>    لکھو(`\nکل طلباء: ${لمبائی(سب)}`);
+<a id="__codelineno-6-41" name="__codelineno-6-41" href="#__codelineno-6-41"></a>    کے_لیے (متغیر ط کا سب) {
+<a id="__codelineno-6-42" name="__codelineno-6-42" href="#__codelineno-6-42"></a>        لکھو(`  ${ط["naam"]} — ${ط["shehar"]} — ${ط["number"]}`);
+<a id="__codelineno-6-43" name="__codelineno-6-43" href="#__codelineno-6-43"></a>    }
+<a id="__codelineno-6-44" name="__codelineno-6-44" href="#__codelineno-6-44"></a>
+<a id="__codelineno-6-45" name="__codelineno-6-45" href="#__codelineno-6-45"></a>    // ─── COUNT ────────────────────────────────────────
+<a id="__codelineno-6-46" name="__codelineno-6-46" href="#__codelineno-6-46"></a>    متغیر گنتی = انتظار db.سوال("SELECT COUNT(*) FROM students");
+<a id="__codelineno-6-47" name="__codelineno-6-47" href="#__codelineno-6-47"></a>    لکھو(`\nتعداد: ${گنتی[0]["count"]}`);
+<a id="__codelineno-6-48" name="__codelineno-6-48" href="#__codelineno-6-48"></a>
+<a id="__codelineno-6-49" name="__codelineno-6-49" href="#__codelineno-6-49"></a>    // ─── تیار بیان ────────────────────────────────────
+<a id="__codelineno-6-50" name="__codelineno-6-50" href="#__codelineno-6-50"></a>    متغیر داخل_تیار = db.تیار(
+<a id="__codelineno-6-51" name="__codelineno-6-51" href="#__codelineno-6-51"></a>        "INSERT INTO students (id, naam, umar, shehar, number) VALUES (uuid(), ?, ?, ?, ?)"
+<a id="__codelineno-6-52" name="__codelineno-6-52" href="#__codelineno-6-52"></a>    );
+<a id="__codelineno-6-53" name="__codelineno-6-53" href="#__codelineno-6-53"></a>    انتظار db.تیار_چلائیں(داخل_تیار, ["Zainab", 21, "Multan", 83.0]);
+<a id="__codelineno-6-54" name="__codelineno-6-54" href="#__codelineno-6-54"></a>    انتظار db.تیار_چلائیں(داخل_تیار, ["Umar", 23, "Peshawar", 79.5]);
+<a id="__codelineno-6-55" name="__codelineno-6-55" href="#__codelineno-6-55"></a>    لکھو("\nتیار بیان سے 2 مزید داخل");
+<a id="__codelineno-6-56" name="__codelineno-6-56" href="#__codelineno-6-56"></a>
+<a id="__codelineno-6-57" name="__codelineno-6-57" href="#__codelineno-6-57"></a>    // ─── SELECT تیار بیان ─────────────────────────────
+<a id="__codelineno-6-58" name="__codelineno-6-58" href="#__codelineno-6-58"></a>    متغیر منتخب_تیار = db.تیار("SELECT naam, number FROM students WHERE naam = ? ALLOW FILTERING");
+<a id="__codelineno-6-59" name="__codelineno-6-59" href="#__codelineno-6-59"></a>    متغیر نتیجہ = انتظار db.تیار_سوال(منتخب_تیار, ["Ahmad"]);
+<a id="__codelineno-6-60" name="__codelineno-6-60" href="#__codelineno-6-60"></a>    اگر (لمبائی(نتیجہ) &gt; 0) {
+<a id="__codelineno-6-61" name="__codelineno-6-61" href="#__codelineno-6-61"></a>        لکھو(`\nاحمد کا نمبر: ${نتیجہ[0]["number"]}`);
+<a id="__codelineno-6-62" name="__codelineno-6-62" href="#__codelineno-6-62"></a>    }
+<a id="__codelineno-6-63" name="__codelineno-6-63" href="#__codelineno-6-63"></a>
+<a id="__codelineno-6-64" name="__codelineno-6-64" href="#__codelineno-6-64"></a>    // ─── BATCH ────────────────────────────────────────
+<a id="__codelineno-6-65" name="__codelineno-6-65" href="#__codelineno-6-65"></a>    انتظار db.چلائیں("DROP TABLE IF EXISTS masnoaat");
+<a id="__codelineno-6-66" name="__codelineno-6-66" href="#__codelineno-6-66"></a>    انتظار db.جدول_بنائیں("masnoaat", {
+<a id="__codelineno-6-67" name="__codelineno-6-67" href="#__codelineno-6-67"></a>        "id":     "UUID PRIMARY KEY",
+<a id="__codelineno-6-68" name="__codelineno-6-68" href="#__codelineno-6-68"></a>        "naam":   "TEXT",
+<a id="__codelineno-6-69" name="__codelineno-6-69" href="#__codelineno-6-69"></a>        "qeemat": "DECIMAL"
+<a id="__codelineno-6-70" name="__codelineno-6-70" href="#__codelineno-6-70"></a>    });
+<a id="__codelineno-6-71" name="__codelineno-6-71" href="#__codelineno-6-71"></a>    متغیر م_تیار = db.تیار(
+<a id="__codelineno-6-72" name="__codelineno-6-72" href="#__codelineno-6-72"></a>        "INSERT INTO masnoaat (id, naam, qeemat) VALUES (uuid(), ?, ?)"
+<a id="__codelineno-6-73" name="__codelineno-6-73" href="#__codelineno-6-73"></a>    );
+<a id="__codelineno-6-74" name="__codelineno-6-74" href="#__codelineno-6-74"></a>    انتظار db.بیچ([
+<a id="__codelineno-6-75" name="__codelineno-6-75" href="#__codelineno-6-75"></a>        [م_تیار, ["Kitab", 250]],
+<a id="__codelineno-6-76" name="__codelineno-6-76" href="#__codelineno-6-76"></a>        [م_تیار, ["Qalam", 50]],
+<a id="__codelineno-6-77" name="__codelineno-6-77" href="#__codelineno-6-77"></a>        [م_تیار, ["Bag",   800]]
+<a id="__codelineno-6-78" name="__codelineno-6-78" href="#__codelineno-6-78"></a>    ]);
+<a id="__codelineno-6-79" name="__codelineno-6-79" href="#__codelineno-6-79"></a>    متغیر مصنوعات = انتظار db.سوال("SELECT COUNT(*) FROM masnoaat");
+<a id="__codelineno-6-80" name="__codelineno-6-80" href="#__codelineno-6-80"></a>    لکھو(`\nBATCH: ${مصنوعات[0]["count"]} مصنوعات`);
+<a id="__codelineno-6-81" name="__codelineno-6-81" href="#__codelineno-6-81"></a>
+<a id="__codelineno-6-82" name="__codelineno-6-82" href="#__codelineno-6-82"></a>    // ─── TTL ──────────────────────────────────────────
+<a id="__codelineno-6-83" name="__codelineno-6-83" href="#__codelineno-6-83"></a>    انتظار db.چلائیں("DROP TABLE IF EXISTS aarzi");
+<a id="__codelineno-6-84" name="__codelineno-6-84" href="#__codelineno-6-84"></a>    انتظار db.جدول_بنائیں("aarzi", {
+<a id="__codelineno-6-85" name="__codelineno-6-85" href="#__codelineno-6-85"></a>        "id":      "UUID PRIMARY KEY",
+<a id="__codelineno-6-86" name="__codelineno-6-86" href="#__codelineno-6-86"></a>        "paigham": "TEXT"
+<a id="__codelineno-6-87" name="__codelineno-6-87" href="#__codelineno-6-87"></a>    });
+<a id="__codelineno-6-88" name="__codelineno-6-88" href="#__codelineno-6-88"></a>    // 1 گھنٹے بعد خودبخود ختم
+<a id="__codelineno-6-89" name="__codelineno-6-89" href="#__codelineno-6-89"></a>    انتظار db.چلائیں(
+<a id="__codelineno-6-90" name="__codelineno-6-90" href="#__codelineno-6-90"></a>        "INSERT INTO aarzi (id, paigham) VALUES (uuid(), 'عارضی پیغام') USING TTL 3600"
+<a id="__codelineno-6-91" name="__codelineno-6-91" href="#__codelineno-6-91"></a>    );
+<a id="__codelineno-6-92" name="__codelineno-6-92" href="#__codelineno-6-92"></a>    لکھو("\nTTL اندراج کامیاب");
+<a id="__codelineno-6-93" name="__codelineno-6-93" href="#__codelineno-6-93"></a>
+<a id="__codelineno-6-94" name="__codelineno-6-94" href="#__codelineno-6-94"></a>    // ─── UPDATE ───────────────────────────────────────
+<a id="__codelineno-6-95" name="__codelineno-6-95" href="#__codelineno-6-95"></a>    // Cassandra میں UPDATE کے لیے PRIMARY KEY ضروری ہے
+<a id="__codelineno-6-96" name="__codelineno-6-96" href="#__codelineno-6-96"></a>    متغیر قطاریں = انتظار db.سوال("SELECT id, naam FROM students");
+<a id="__codelineno-6-97" name="__codelineno-6-97" href="#__codelineno-6-97"></a>    کے_لیے (متغیر ق کا قطاریں) {
+<a id="__codelineno-6-98" name="__codelineno-6-98" href="#__codelineno-6-98"></a>        اگر (ق["naam"] == "Ahmad") {
+<a id="__codelineno-6-99" name="__codelineno-6-99" href="#__codelineno-6-99"></a>            انتظار db.چلائیں(`UPDATE students SET number = 95.0 WHERE id = ${ق["id"]}`);
+<a id="__codelineno-6-100" name="__codelineno-6-100" href="#__codelineno-6-100"></a>            لکھو(`\nahmad کا نمبر 95.0 کیا گیا`);
+<a id="__codelineno-6-101" name="__codelineno-6-101" href="#__codelineno-6-101"></a>        }
+<a id="__codelineno-6-102" name="__codelineno-6-102" href="#__codelineno-6-102"></a>    }
+<a id="__codelineno-6-103" name="__codelineno-6-103" href="#__codelineno-6-103"></a>
+<a id="__codelineno-6-104" name="__codelineno-6-104" href="#__codelineno-6-104"></a>    // ─── صفائی ────────────────────────────────────────
+<a id="__codelineno-6-105" name="__codelineno-6-105" href="#__codelineno-6-105"></a>    انتظار db.جدول_مٹائیں("students");
+<a id="__codelineno-6-106" name="__codelineno-6-106" href="#__codelineno-6-106"></a>    انتظار db.جدول_مٹائیں("masnoaat");
+<a id="__codelineno-6-107" name="__codelineno-6-107" href="#__codelineno-6-107"></a>    انتظار db.جدول_مٹائیں("aarzi");
+<a id="__codelineno-6-108" name="__codelineno-6-108" href="#__codelineno-6-108"></a>    انتظار db.کی_اسپیس_مٹائیں("urdu_ks");
+<a id="__codelineno-6-109" name="__codelineno-6-109" href="#__codelineno-6-109"></a>
+<a id="__codelineno-6-110" name="__codelineno-6-110" href="#__codelineno-6-110"></a>    انتظار db.منقطع();
+<a id="__codelineno-6-111" name="__codelineno-6-111" href="#__codelineno-6-111"></a>    لکھو("\nCassandra منقطع");
+<a id="__codelineno-6-112" name="__codelineno-6-112" href="#__codelineno-6-112"></a>}
+<a id="__codelineno-6-113" name="__codelineno-6-113" href="#__codelineno-6-113"></a>
+<a id="__codelineno-6-114" name="__codelineno-6-114" href="#__codelineno-6-114"></a>انتظار مرکز();
 </code></pre></div>
 <hr />
-<h3 id="cassandra-authentication-and-multiple-nodes">Cassandra: Authentication and Multiple Nodes</h3>
-<div class="highlight"><pre><span></span><code>درآمد { کسینڈرا } سے "اردو/ڈیٹا_بیس";
-
-// کثیر نوڈ کلسٹر + تصدیق
-متغیر db = نیا کسینڈرا({
-    "میزبان":    ["node1.example.com", "node2.example.com", "node3.example.com"],
-    "پورٹ":      9042,
-    "صارف":      "cassandra",
-    "پاس_ورڈ":  "cassandra",
-    "کی_اسپیس": "production_ks"
-});
-
-غیر_متزامن فنکشن مرکز() {
-    انتظار db.جوڑیں();
-    لکھو("کلسٹر سے جڑ گئے");
-    متغیر نتیجہ = انتظار db.سوال("SELECT cluster_name FROM system.local");
-    لکھو(`کلسٹر: ${نتیجہ[0]["cluster_name"]}`);
-    انتظار db.منقطع();
-}
-
-انتظار مرکز();
+<h3 id="cassandra-authentication-and-multiple-nodes">Cassandra: Authentication and Multiple Nodes<a class="headerlink" href="#cassandra-authentication-and-multiple-nodes" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>درآمد { کسینڈرا } سے "اردو/ڈیٹا_بیس";
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>// کثیر نوڈ کلسٹر + تصدیق
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>متغیر db = نیا کسینڈرا({
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    "میزبان":    ["node1.example.com", "node2.example.com", "node3.example.com"],
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    "پورٹ":      9042,
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    "صارف":      "cassandra",
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    "پاس_ورڈ":  "cassandra",
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    "کی_اسپیس": "production_ks"
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>});
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>غیر_متزامن فنکشن مرکز() {
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>    انتظار db.جوڑیں();
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    لکھو("کلسٹر سے جڑ گئے");
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>    متغیر نتیجہ = انتظار db.سوال("SELECT cluster_name FROM system.local");
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>    لکھو(`کلسٹر: ${نتیجہ[0]["cluster_name"]}`);
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>    انتظار db.منقطع();
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>}
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>انتظار مرکز();
 </code></pre></div>
 <hr />
-<h2 id="firebase-firestore-_">Firebase / Firestore (فائر_بیس) — فائر بیس</h2>
+<h2 id="firebase-firestore-_">Firebase / Firestore (فائر_بیس) — فائر بیس<a class="headerlink" href="#firebase-firestore-_" title="Permanent link">&para;</a></h2>
 <p>Supports two modes: <strong>admin</strong> (server-side with service account) and <strong>web</strong> (client-side with API key).</p>
 <blockquote>
 <p><strong>اردو:</strong> Firebase دو طریقوں میں کام کرتا ہے: <strong>admin</strong> (سرور کی طرف، سروس اکاؤنٹ JSON فائل سے) اور <strong>web</strong> (کلائنٹ کی طرف، API کلید سے)۔ یہ Firestore دستاویز ڈیٹا بیس اور Realtime Database دونوں کی سہولت دیتا ہے۔</p>
 </blockquote>
-<h3 id="admin-mode">Admin Mode</h3>
-<div class="highlight"><pre><span></span><code>درآمد { فائر_بیس } سے "اردو/ڈیٹا_بیس";
-
-// service account JSON فائل سے
-متغیر fb = نیا فائر_بیس({
-    "اسناد":    "serviceAccountKey.json",
-    "منصوبہ":   "میرا-پروجیکٹ",
-    "databaseURL": "https://میرا-پروجیکٹ-default-rtdb.firebaseio.com"
-});
-
-غیر_متزامن فنکشن مرکز() {
-    انتظار fb.جوڑیں();
-
-    // Firestore
-    متغیر صارفین = fb.مجموعہ("صارفین");
-    متغیر id = انتظار صارفین.اضافہ({ "نام": "احمد", "ای_میل": "ahmed@test.com" });
-    لکھو(`دستاویز ID: ${id}`);
-
-    متغیر دستاویز = انتظار صارفین.حاصل(id);
-    لکھو(`نام: ${دستاویز["نام"]}`);
-
-    // Realtime Database
-    انتظار fb.ریئل_لکھو("/حالت", { "آن_لائن": سچ });
-    متغیر حالت = انتظار fb.ریئل_پڑھو("/حالت");
-    لکھو(`آن_لائن: ${حالت["آن_لائن"]}`);
-
-    انتظار fb.منقطع();
-}
-
-انتظار مرکز();
+<h3 id="admin-mode">Admin Mode<a class="headerlink" href="#admin-mode" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>درآمد { فائر_بیس } سے "اردو/ڈیٹا_بیس";
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>// service account JSON فائل سے
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>متغیر fb = نیا فائر_بیس({
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    "اسناد":    "serviceAccountKey.json",
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    "منصوبہ":   "میرا-پروجیکٹ",
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    "databaseURL": "https://میرا-پروجیکٹ-default-rtdb.firebaseio.com"
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>});
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>غیر_متزامن فنکشن مرکز() {
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    انتظار fb.جوڑیں();
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>    // Firestore
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>    متغیر صارفین = fb.مجموعہ("صارفین");
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>    متغیر id = انتظار صارفین.اضافہ({ "نام": "احمد", "ای_میل": "ahmed@test.com" });
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>    لکھو(`دستاویز ID: ${id}`);
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>    متغیر دستاویز = انتظار صارفین.حاصل(id);
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>    لکھو(`نام: ${دستاویز["نام"]}`);
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>    // Realtime Database
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>    انتظار fb.ریئل_لکھو("/حالت", { "آن_لائن": سچ });
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>    متغیر حالت = انتظار fb.ریئل_پڑھو("/حالت");
+<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>    لکھو(`آن_لائن: ${حالت["آن_لائن"]}`);
+<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>
+<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>    انتظار fb.منقطع();
+<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>}
+<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>
+<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>انتظار مرکز();
 </code></pre></div>
-<h3 id="web-mode-api-key">Web Mode (API Key)</h3>
-<div class="highlight"><pre><span></span><code>درآمد { فائر_بیس } سے "اردو/ڈیٹا_بیس";
-
-متغیر fb = نیا فائر_بیس({
-    "apiKey":    "AIzaSy...",
-    "projectId": "میرا-پروجیکٹ"
-});
-
-غیر_متزامن فنکشن مرکز() {
-    // ای میل سے سائن ان
-    انتظار fb.ای_میل_داخل("صارف@مثال.com", "پاس_ورڈ");
-
-    // Firestore
-    متغیر نوٹس = fb.مجموعہ("نوٹس");
-    متغیر id = انتظار نوٹس.اضافہ({ "عنوان": "پہلا نوٹ", "مواد": "..." });
-
-    متغیر تمام = انتظار نوٹس.سبھی();
-    کے_لیے (متغیر ن کا تمام) {
-        لکھو(`${ن["id"]}: ${ن["عنوان"]}`);
-    }
-
-    انتظار نوٹس.حذف(id);
-    انتظار fb.منقطع();
-}
-
-انتظار مرکز();
+<h3 id="web-mode-api-key">Web Mode (API Key)<a class="headerlink" href="#web-mode-api-key" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>درآمد { فائر_بیس } سے "اردو/ڈیٹا_بیس";
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>متغیر fb = نیا فائر_بیس({
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    "apiKey":    "AIzaSy...",
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    "projectId": "میرا-پروجیکٹ"
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>});
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>غیر_متزامن فنکشن مرکز() {
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    // ای میل سے سائن ان
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>    انتظار fb.ای_میل_داخل("صارف@مثال.com", "پاس_ورڈ");
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>    // Firestore
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>    متغیر نوٹس = fb.مجموعہ("نوٹس");
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>    متغیر id = انتظار نوٹس.اضافہ({ "عنوان": "پہلا نوٹ", "مواد": "..." });
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>    متغیر تمام = انتظار نوٹس.سبھی();
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>    کے_لیے (متغیر ن کا تمام) {
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>        لکھو(`${ن["id"]}: ${ن["عنوان"]}`);
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>    }
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>    انتظار نوٹس.حذف(id);
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>    انتظار fb.منقطع();
+<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a>}
+<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>
+<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>انتظار مرکز();
 </code></pre></div>
 <p><strong>Firestore Collection Methods:</strong></p>
 <table>
@@ -2003,133 +2491,133 @@ pip install firebase-admin             # فائر_بیس (admin mode)
 </tbody>
 </table>
 <hr />
-<h2 id="transactions-and-savepoints">Transactions and Savepoints — لین دین اور محفوظ نقطے</h2>
-<h3 id="basic-transaction-pattern">Basic Transaction Pattern — بنیادی لین دین نمونہ</h3>
+<h2 id="transactions-and-savepoints">Transactions and Savepoints — لین دین اور محفوظ نقطے<a class="headerlink" href="#transactions-and-savepoints" title="Permanent link">&para;</a></h2>
+<h3 id="basic-transaction-pattern">Basic Transaction Pattern — بنیادی لین دین نمونہ<a class="headerlink" href="#basic-transaction-pattern" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><strong>اردو:</strong> لین دین (transaction) ایک یا زیادہ ڈیٹا بیس عمل کو اکٹھے محفوظ (COMMIT) یا رد (ROLLBACK) کرنے کا طریقہ ہے۔ اگر کوئی ایک عمل ناکام ہو تو پورا لین دین واپس ہو جاتا ہے — اس سے ڈیٹا ہمیشہ درست رہتا ہے۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>درآمد { مائی_ایس_کیو_ایل } سے "اردو/ڈیٹا_بیس";
-
-غیر_متزامن فنکشن منتقلی_کرو(db, از_کھاتہ, بہ_کھاتہ, رقم) {
-    // طریقہ 1: دستی BEGIN/COMMIT/ROLLBACK
-    انتظار db.لین_دین_شروع();
-    کوشش {
-        انتظار db.چلائیں(
-            "UPDATE کھاتے SET بقیہ = بقیہ - ? WHERE نام = ?",
-            [رقم, از_کھاتہ]
-        );
-        انتظار db.چلائیں(
-            "UPDATE کھاتے SET بقیہ = بقیہ + ? WHERE نام = ?",
-            [رقم, بہ_کھاتہ]
-        );
-        انتظار db.کمٹ();
-        لکھو("منتقلی کامیاب");
-    } پکڑو (غ) {
-        انتظار db.واپسی();
-        لکھو(`منتقلی ناکام: ${غ}`);
-        پھینکو غ;
-    }
-}
-
-غیر_متزامن فنکشن مرکز() {
-    متغیر db = نیا مائی_ایس_کیو_ایل({
-        "میزبان": "localhost", "صارف": "root", "پاس_ورڈ": ""
-    });
-    انتظار db.جوڑیں();
-    انتظار db.چلائیں("CREATE DATABASE IF NOT EXISTS بینک");
-    انتظار db.چلائیں("USE بینک");
-    انتظار db.چلائیں(`CREATE TABLE IF NOT EXISTS کھاتے (
-        نام VARCHAR(50) PRIMARY KEY, بقیہ DECIMAL(10,2)
-    )`);
-    انتظار db.چلائیں("INSERT IGNORE INTO کھاتے VALUES ('احمد', 10000), ('فاطمہ', 5000)");
-
-    // طریقہ 1: دستی
-    انتظار منتقلی_کرو(db, "احمد", "فاطمہ", 2000);
-
-    // طریقہ 2: لین_دین() wrapper (خودکار)
-    انتظار db.لین_دین(غیر_متزامن فنکشن() {
-        انتظار db.چلائیں(
-            "UPDATE کھاتے SET بقیہ = بقیہ + ? WHERE نام = ?", [500, "احمد"]
-        );
-        انتظار db.چلائیں(
-            "UPDATE کھاتے SET بقیہ = بقیہ - ? WHERE نام = ?", [500, "فاطمہ"]
-        );
-    });
-    لکھو("لین_دین() COMMIT کامیاب");
-
-    // طریقہ 3: غلطی پر خودکار ROLLBACK
-    کوشش {
-        انتظار db.لین_دین(غیر_متزامن فنکشن() {
-            انتظار db.چلائیں(
-                "UPDATE کھاتے SET بقیہ = بقیہ - ? WHERE نام = ?", [999999, "احمد"]
-            );
-            پھینکو نیا غلطی("بقیہ ناکافی!");
-        });
-    } پکڑو (غ) {
-        لکھو(`خودکار ROLLBACK: ${غ}`);
-    }
-
-    انتظار db.چلائیں("DROP TABLE کھاتے");
-    انتظار db.چلائیں("DROP DATABASE بینک");
-    انتظار db.منقطع();
-}
-
-انتظار مرکز();
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>درآمد { مائی_ایس_کیو_ایل } سے "اردو/ڈیٹا_بیس";
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>غیر_متزامن فنکشن منتقلی_کرو(db, از_کھاتہ, بہ_کھاتہ, رقم) {
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    // طریقہ 1: دستی BEGIN/COMMIT/ROLLBACK
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    انتظار db.لین_دین_شروع();
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    کوشش {
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>        انتظار db.چلائیں(
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>            "UPDATE کھاتے SET بقیہ = بقیہ - ? WHERE نام = ?",
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>            [رقم, از_کھاتہ]
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>        );
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>        انتظار db.چلائیں(
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>            "UPDATE کھاتے SET بقیہ = بقیہ + ? WHERE نام = ?",
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>            [رقم, بہ_کھاتہ]
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>        );
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>        انتظار db.کمٹ();
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>        لکھو("منتقلی کامیاب");
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>    } پکڑو (غ) {
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>        انتظار db.واپسی();
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>        لکھو(`منتقلی ناکام: ${غ}`);
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>        پھینکو غ;
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>    }
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a>}
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a>
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a>غیر_متزامن فنکشن مرکز() {
+<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a>    متغیر db = نیا مائی_ایس_کیو_ایل({
+<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a>        "میزبان": "localhost", "صارف": "root", "پاس_ورڈ": ""
+<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a>    });
+<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a>    انتظار db.جوڑیں();
+<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a>    انتظار db.چلائیں("CREATE DATABASE IF NOT EXISTS بینک");
+<a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a>    انتظار db.چلائیں("USE بینک");
+<a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a>    انتظار db.چلائیں(`CREATE TABLE IF NOT EXISTS کھاتے (
+<a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a>        نام VARCHAR(50) PRIMARY KEY, بقیہ DECIMAL(10,2)
+<a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a>    )`);
+<a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a>    انتظار db.چلائیں("INSERT IGNORE INTO کھاتے VALUES ('احمد', 10000), ('فاطمہ', 5000)");
+<a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a>
+<a id="__codelineno-10-36" name="__codelineno-10-36" href="#__codelineno-10-36"></a>    // طریقہ 1: دستی
+<a id="__codelineno-10-37" name="__codelineno-10-37" href="#__codelineno-10-37"></a>    انتظار منتقلی_کرو(db, "احمد", "فاطمہ", 2000);
+<a id="__codelineno-10-38" name="__codelineno-10-38" href="#__codelineno-10-38"></a>
+<a id="__codelineno-10-39" name="__codelineno-10-39" href="#__codelineno-10-39"></a>    // طریقہ 2: لین_دین() wrapper (خودکار)
+<a id="__codelineno-10-40" name="__codelineno-10-40" href="#__codelineno-10-40"></a>    انتظار db.لین_دین(غیر_متزامن فنکشن() {
+<a id="__codelineno-10-41" name="__codelineno-10-41" href="#__codelineno-10-41"></a>        انتظار db.چلائیں(
+<a id="__codelineno-10-42" name="__codelineno-10-42" href="#__codelineno-10-42"></a>            "UPDATE کھاتے SET بقیہ = بقیہ + ? WHERE نام = ?", [500, "احمد"]
+<a id="__codelineno-10-43" name="__codelineno-10-43" href="#__codelineno-10-43"></a>        );
+<a id="__codelineno-10-44" name="__codelineno-10-44" href="#__codelineno-10-44"></a>        انتظار db.چلائیں(
+<a id="__codelineno-10-45" name="__codelineno-10-45" href="#__codelineno-10-45"></a>            "UPDATE کھاتے SET بقیہ = بقیہ - ? WHERE نام = ?", [500, "فاطمہ"]
+<a id="__codelineno-10-46" name="__codelineno-10-46" href="#__codelineno-10-46"></a>        );
+<a id="__codelineno-10-47" name="__codelineno-10-47" href="#__codelineno-10-47"></a>    });
+<a id="__codelineno-10-48" name="__codelineno-10-48" href="#__codelineno-10-48"></a>    لکھو("لین_دین() COMMIT کامیاب");
+<a id="__codelineno-10-49" name="__codelineno-10-49" href="#__codelineno-10-49"></a>
+<a id="__codelineno-10-50" name="__codelineno-10-50" href="#__codelineno-10-50"></a>    // طریقہ 3: غلطی پر خودکار ROLLBACK
+<a id="__codelineno-10-51" name="__codelineno-10-51" href="#__codelineno-10-51"></a>    کوشش {
+<a id="__codelineno-10-52" name="__codelineno-10-52" href="#__codelineno-10-52"></a>        انتظار db.لین_دین(غیر_متزامن فنکشن() {
+<a id="__codelineno-10-53" name="__codelineno-10-53" href="#__codelineno-10-53"></a>            انتظار db.چلائیں(
+<a id="__codelineno-10-54" name="__codelineno-10-54" href="#__codelineno-10-54"></a>                "UPDATE کھاتے SET بقیہ = بقیہ - ? WHERE نام = ?", [999999, "احمد"]
+<a id="__codelineno-10-55" name="__codelineno-10-55" href="#__codelineno-10-55"></a>            );
+<a id="__codelineno-10-56" name="__codelineno-10-56" href="#__codelineno-10-56"></a>            پھینکو نیا غلطی("بقیہ ناکافی!");
+<a id="__codelineno-10-57" name="__codelineno-10-57" href="#__codelineno-10-57"></a>        });
+<a id="__codelineno-10-58" name="__codelineno-10-58" href="#__codelineno-10-58"></a>    } پکڑو (غ) {
+<a id="__codelineno-10-59" name="__codelineno-10-59" href="#__codelineno-10-59"></a>        لکھو(`خودکار ROLLBACK: ${غ}`);
+<a id="__codelineno-10-60" name="__codelineno-10-60" href="#__codelineno-10-60"></a>    }
+<a id="__codelineno-10-61" name="__codelineno-10-61" href="#__codelineno-10-61"></a>
+<a id="__codelineno-10-62" name="__codelineno-10-62" href="#__codelineno-10-62"></a>    انتظار db.چلائیں("DROP TABLE کھاتے");
+<a id="__codelineno-10-63" name="__codelineno-10-63" href="#__codelineno-10-63"></a>    انتظار db.چلائیں("DROP DATABASE بینک");
+<a id="__codelineno-10-64" name="__codelineno-10-64" href="#__codelineno-10-64"></a>    انتظار db.منقطع();
+<a id="__codelineno-10-65" name="__codelineno-10-65" href="#__codelineno-10-65"></a>}
+<a id="__codelineno-10-66" name="__codelineno-10-66" href="#__codelineno-10-66"></a>
+<a id="__codelineno-10-67" name="__codelineno-10-67" href="#__codelineno-10-67"></a>انتظار مرکز();
 </code></pre></div>
 <hr />
-<h3 id="savepoints-example">Savepoints Example — محفوظ نقطے مثال</h3>
+<h3 id="savepoints-example">Savepoints Example — محفوظ نقطے مثال<a class="headerlink" href="#savepoints-example" title="Permanent link">&para;</a></h3>
 <p>Savepoints allow partial rollback within a transaction.</p>
 <blockquote>
 <p><strong>اردو:</strong> محفوظ نقطے (savepoints) لین دین کے اندر جزوی واپسی کی اجازت دیتے ہیں۔ آپ ایک خاص مقام محفوظ کریں، پھر اگر آگے کا کام ناکام ہو تو اسی مقام تک واپس جائیں — پچھلا کام محفوظ رہتا ہے۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>درآمد { پوسٹ_گریس } سے "اردو/ڈیٹا_بیس";
-
-غیر_متزامن فنکشن مرکز() {
-    متغیر db = نیا پوسٹ_گریس({
-        "میزبان": "localhost", "صارف": "postgres",
-        "پاس_ورڈ": "پاس_ورڈ", "ڈیٹا_بیس": "postgres"
-    });
-    انتظار db.جوڑیں();
-
-    انتظار db.چلائیں("DROP TABLE IF EXISTS سپ_جانچ");
-    انتظار db.چلائیں(`CREATE TABLE سپ_جانچ (
-        شناخت SERIAL PRIMARY KEY, قدر INT
-    )`);
-
-    // ─── SAVEPOINT استعمال ────────────────────────────
-    انتظار db.لین_دین_شروع();
-
-    انتظار db.چلائیں("INSERT INTO سپ_جانچ (قدر) VALUES (?)", [100]);
-    انتظار db.نقطہ_محفوظ("نقطہ_الف");       // ← یہاں محفوظ
-
-    انتظار db.چلائیں("INSERT INTO سپ_جانچ (قدر) VALUES (?)", [200]);
-    انتظار db.نقطہ_محفوظ("نقطہ_ب");         // ← دوسرا نقطہ
-
-    انتظار db.چلائیں("INSERT INTO سپ_جانچ (قدر) VALUES (?)", [999]);  // غلطی
-    متغیر بعد_غلطی = انتظار db.سوال("SELECT COUNT(*) AS n FROM سپ_جانچ");
-    لکھو(`غلطی سے پہلے: ${بعد_غلطی[0]["n"]} قطاریں`);
-
-    // نقطہ_ب پر واپس — 999 والی قطار ختم
-    انتظار db.نقطہ_واپسی("نقطہ_ب");
-    متغیر بعد_واپسی = انتظار db.سوال("SELECT COUNT(*) AS n FROM سپ_جانچ");
-    لکھو(`نقطہ_ب واپسی: ${بعد_واپسی[0]["n"]} قطاریں`);
-
-    انتظار db.نقطہ_چھوڑیں("نقطہ_ب");  // نقطہ_ب ریلیز
-    انتظار db.کمٹ();                    // نقطہ_الف تک محفوظ
-
-    متغیر آخری = انتظار db.سوال("SELECT * FROM سپ_جانچ ORDER BY شناخت");
-    لکھو(`\nآخری نتیجہ (${لمبائی(آخری)} قطاریں):`);
-    کے_لیے (متغیر ق کا آخری) {
-        لکھو(`  قدر: ${ق["قدر"]}`);
-    }
-    // صرف 100 اور 200 ہونے چاہئیں
-
-    انتظار db.چلائیں("DROP TABLE سپ_جانچ");
-    انتظار db.منقطع();
-    لکھو("\nSavepoint مثال مکمل");
-}
-
-انتظار مرکز();
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>درآمد { پوسٹ_گریس } سے "اردو/ڈیٹا_بیس";
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>غیر_متزامن فنکشن مرکز() {
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    متغیر db = نیا پوسٹ_گریس({
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>        "میزبان": "localhost", "صارف": "postgres",
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>        "پاس_ورڈ": "پاس_ورڈ", "ڈیٹا_بیس": "postgres"
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    });
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>    انتظار db.جوڑیں();
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>    انتظار db.چلائیں("DROP TABLE IF EXISTS سپ_جانچ");
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>    انتظار db.چلائیں(`CREATE TABLE سپ_جانچ (
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>        شناخت SERIAL PRIMARY KEY, قدر INT
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>    )`);
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>    // ─── SAVEPOINT استعمال ────────────────────────────
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>    انتظار db.لین_دین_شروع();
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>    انتظار db.چلائیں("INSERT INTO سپ_جانچ (قدر) VALUES (?)", [100]);
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>    انتظار db.نقطہ_محفوظ("نقطہ_الف");       // ← یہاں محفوظ
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>    انتظار db.چلائیں("INSERT INTO سپ_جانچ (قدر) VALUES (?)", [200]);
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>    انتظار db.نقطہ_محفوظ("نقطہ_ب");         // ← دوسرا نقطہ
+<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>
+<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>    انتظار db.چلائیں("INSERT INTO سپ_جانچ (قدر) VALUES (?)", [999]);  // غلطی
+<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>    متغیر بعد_غلطی = انتظار db.سوال("SELECT COUNT(*) AS n FROM سپ_جانچ");
+<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a>    لکھو(`غلطی سے پہلے: ${بعد_غلطی[0]["n"]} قطاریں`);
+<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a>
+<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a>    // نقطہ_ب پر واپس — 999 والی قطار ختم
+<a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a>    انتظار db.نقطہ_واپسی("نقطہ_ب");
+<a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a>    متغیر بعد_واپسی = انتظار db.سوال("SELECT COUNT(*) AS n FROM سپ_جانچ");
+<a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a>    لکھو(`نقطہ_ب واپسی: ${بعد_واپسی[0]["n"]} قطاریں`);
+<a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a>
+<a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a>    انتظار db.نقطہ_چھوڑیں("نقطہ_ب");  // نقطہ_ب ریلیز
+<a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a>    انتظار db.کمٹ();                    // نقطہ_الف تک محفوظ
+<a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a>
+<a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a>    متغیر آخری = انتظار db.سوال("SELECT * FROM سپ_جانچ ORDER BY شناخت");
+<a id="__codelineno-11-37" name="__codelineno-11-37" href="#__codelineno-11-37"></a>    لکھو(`\nآخری نتیجہ (${لمبائی(آخری)} قطاریں):`);
+<a id="__codelineno-11-38" name="__codelineno-11-38" href="#__codelineno-11-38"></a>    کے_لیے (متغیر ق کا آخری) {
+<a id="__codelineno-11-39" name="__codelineno-11-39" href="#__codelineno-11-39"></a>        لکھو(`  قدر: ${ق["قدر"]}`);
+<a id="__codelineno-11-40" name="__codelineno-11-40" href="#__codelineno-11-40"></a>    }
+<a id="__codelineno-11-41" name="__codelineno-11-41" href="#__codelineno-11-41"></a>    // صرف 100 اور 200 ہونے چاہئیں
+<a id="__codelineno-11-42" name="__codelineno-11-42" href="#__codelineno-11-42"></a>
+<a id="__codelineno-11-43" name="__codelineno-11-43" href="#__codelineno-11-43"></a>    انتظار db.چلائیں("DROP TABLE سپ_جانچ");
+<a id="__codelineno-11-44" name="__codelineno-11-44" href="#__codelineno-11-44"></a>    انتظار db.منقطع();
+<a id="__codelineno-11-45" name="__codelineno-11-45" href="#__codelineno-11-45"></a>    لکھو("\nSavepoint مثال مکمل");
+<a id="__codelineno-11-46" name="__codelineno-11-46" href="#__codelineno-11-46"></a>}
+<a id="__codelineno-11-47" name="__codelineno-11-47" href="#__codelineno-11-47"></a>
+<a id="__codelineno-11-48" name="__codelineno-11-48" href="#__codelineno-11-48"></a>انتظار مرکز();
 </code></pre></div>
 <p><strong>Savepoint workflow — محفوظ نقطہ کا طریقہ کار:</strong></p>
 <blockquote>
@@ -2145,179 +2633,179 @@ pip install firebase-admin             # فائر_بیس (admin mode)
 <li><code>await db.کمٹ()</code> — commit everything up to the savepoints that were kept</li>
 </ol>
 <hr />
-<h2 id="sqlite-__">SQLite (ایس_کیو_لائٹ) — ایس کیو لائٹ ڈیٹا بیس</h2>
+<h2 id="sqlite-__">SQLite (ایس_کیو_لائٹ) — ایس کیو لائٹ ڈیٹا بیس<a class="headerlink" href="#sqlite-__" title="Permanent link">&para;</a></h2>
 <p>SQLite is built into Python and requires no additional installation.</p>
 <blockquote>
 <p><strong>اردو:</strong> SQLite Python میں بنا ہوا ہے اور اضافی نصب کاری کی ضرورت نہیں۔ یہ ایک فائل پر مبنی ڈیٹا بیس ہے جو چھوٹی ایپلیکیشنز، جانچ اور سیکھنے کے لیے بہترین ہے۔ <code>:memory:</code> سے میموری میں عارضی ڈیٹا بیس بھی بنایا جا سکتا ہے۔</p>
 </blockquote>
 <p><strong>Import:</strong></p>
-<div class="highlight"><pre><span></span><code>درآمد { ایس_کیو_لائٹ } سے "اردو/ڈیٹا_بیس";
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>درآمد { ایس_کیو_لائٹ } سے "اردو/ڈیٹا_بیس";
 </code></pre></div>
 <p><strong>Constructor:</strong></p>
-<div class="highlight"><pre><span></span><code>// فائل میں
-متغیر db = نیا ایس_کیو_لائٹ("میرا_ڈیٹا.db");
-
-// یا ترتیب dict سے
-متغیر db = نیا ایس_کیو_لائٹ({ "فائل": "میرا_ڈیٹا.db" });
-
-// میموری میں (جانچ کے لیے)
-متغیر db = نیا ایس_کیو_لائٹ(":memory:");
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>// فائل میں
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>متغیر db = نیا ایس_کیو_لائٹ("میرا_ڈیٹا.db");
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>// یا ترتیب dict سے
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>متغیر db = نیا ایس_کیو_لائٹ({ "فائل": "میرا_ڈیٹا.db" });
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>// میموری میں (جانچ کے لیے)
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>متغیر db = نیا ایس_کیو_لائٹ(":memory:");
 </code></pre></div>
 <p>SQLite supports all common interface methods plus <code>await db.جدول_بنائیں(نام, {col: type})</code>.</p>
 <hr />
-<h3 id="sqlite-example-quick-start">SQLite Example: Quick Start</h3>
-<div class="highlight"><pre><span></span><code>درآمد { ایس_کیو_لائٹ } سے "اردو/ڈیٹا_بیس";
-
-غیر_متزامن فنکشن مرکز() {
-    متغیر db = نیا ایس_کیو_لائٹ(":memory:");
-    انتظار db.جوڑیں();
-
-    // جدول بنائیں
-    انتظار db.جدول_بنائیں("اشیاء", {
-        "شناخت": "INTEGER PRIMARY KEY AUTOINCREMENT",
-        "نام":   "TEXT NOT NULL",
-        "قیمت":  "REAL DEFAULT 0"
-    });
-
-    // داخل
-    انتظار db.داخل("اشیاء", { "نام": "کتاب", "قیمت": 500.0 });
-    انتظار db.داخل("اشیاء", { "نام": "قلم",  "قیمت": 50.0  });
-    انتظار db.داخل("اشیاء", { "نام": "کاغذ", "قیمت": 20.0  });
-
-    // تلاش
-    متغیر سب = انتظار db.سوال("SELECT * FROM اشیاء ORDER BY قیمت DESC");
-    کے_لیے (متغیر ش کا سب) {
-        لکھو(`${ش["نام"]}: Rs ${ش["قیمت"]}`);
-    }
-
-    // Transaction
-    انتظار db.لین_دین(غیر_متزامن فنکشن() {
-        انتظار db.چلائیں("UPDATE اشیاء SET قیمت = قیمت * 1.1");
-    });
-    لکھو("\n10% قیمت اضافہ کامیاب");
-
-    انتظار db.منقطع();
-}
-
-انتظار مرکز();
+<h3 id="sqlite-example-quick-start">SQLite Example: Quick Start<a class="headerlink" href="#sqlite-example-quick-start" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>درآمد { ایس_کیو_لائٹ } سے "اردو/ڈیٹا_بیس";
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>غیر_متزامن فنکشن مرکز() {
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    متغیر db = نیا ایس_کیو_لائٹ(":memory:");
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>    انتظار db.جوڑیں();
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>    // جدول بنائیں
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>    انتظار db.جدول_بنائیں("اشیاء", {
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>        "شناخت": "INTEGER PRIMARY KEY AUTOINCREMENT",
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>        "نام":   "TEXT NOT NULL",
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>        "قیمت":  "REAL DEFAULT 0"
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>    });
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>    // داخل
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>    انتظار db.داخل("اشیاء", { "نام": "کتاب", "قیمت": 500.0 });
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>    انتظار db.داخل("اشیاء", { "نام": "قلم",  "قیمت": 50.0  });
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>    انتظار db.داخل("اشیاء", { "نام": "کاغذ", "قیمت": 20.0  });
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>    // تلاش
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>    متغیر سب = انتظار db.سوال("SELECT * FROM اشیاء ORDER BY قیمت DESC");
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>    کے_لیے (متغیر ش کا سب) {
+<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a>        لکھو(`${ش["نام"]}: Rs ${ش["قیمت"]}`);
+<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a>    }
+<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a>
+<a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a>    // Transaction
+<a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a>    انتظار db.لین_دین(غیر_متزامن فنکشن() {
+<a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a>        انتظار db.چلائیں("UPDATE اشیاء SET قیمت = قیمت * 1.1");
+<a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a>    });
+<a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a>    لکھو("\n10% قیمت اضافہ کامیاب");
+<a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a>
+<a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a>    انتظار db.منقطع();
+<a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a>}
+<a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a>
+<a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a>انتظار مرکز();
 </code></pre></div>
 <hr />
-<h3 id="sqlite-example-savepoints">SQLite Example: Savepoints</h3>
-<div class="highlight"><pre><span></span><code>درآمد { ایس_کیو_لائٹ } سے "اردو/ڈیٹا_بیس";
-
-غیر_متزامن فنکشن مرکز() {
-    متغیر db = نیا ایس_کیو_لائٹ(":memory:");
-    انتظار db.جوڑیں();
-
-    انتظار db.چلائیں(`CREATE TABLE کھاتے (
-        شناخت INTEGER PRIMARY KEY AUTOINCREMENT,
-        نام    TEXT NOT NULL,
-        بقیہ   REAL DEFAULT 0
-    )`);
-    انتظار db.چلائیں("INSERT INTO کھاتے (نام, بقیہ) VALUES (?, ?)", ["احمد", 10000]);
-    انتظار db.چلائیں("INSERT INTO کھاتے (نام, بقیہ) VALUES (?, ?)", ["فاطمہ", 5000]);
-
-    // SAVEPOINT مثال
-    انتظار db.لین_دین_شروع();
-
-    // پہلا آپریشن
-    انتظار db.چلائیں(
-        "UPDATE کھاتے SET بقیہ = بقیہ - ? WHERE نام = ?", [2000, "احمد"]
-    );
-    انتظار db.چلائیں(
-        "UPDATE کھاتے SET بقیہ = بقیہ + ? WHERE نام = ?", [2000, "فاطمہ"]
-    );
-    انتظار db.نقطہ_محفوظ("منتقلی_1");  // یہاں تک محفوظ
-
-    // دوسرا آپریشن (جو ناکام ہو گا)
-    انتظار db.چلائیں(
-        "UPDATE کھاتے SET بقیہ = بقیہ - ? WHERE نام = ?", [9999, "احمد"]
-    );
-
-    // نقطہ پر واپس
-    انتظار db.نقطہ_واپسی("منتقلی_1");
-    انتظار db.نقطہ_چھوڑیں("منتقلی_1");
-    انتظار db.کمٹ();
-
-    // نتیجہ جانچیں
-    متغیر نتیجہ = انتظار db.سوال(
-        "SELECT نام, بقیہ FROM کھاتے ORDER BY شناخت"
-    );
-    کے_لیے (متغیر ک کا نتیجہ) {
-        لکھو(`${ک["نام"]}: ${ک["بقیہ"]}`);
-    }
-    // احمد: 8000, فاطمہ: 7000 (صرف پہلی منتقلی)
-
-    انتظار db.منقطع();
-}
-
-انتظار مرکز();
+<h3 id="sqlite-example-savepoints">SQLite Example: Savepoints<a class="headerlink" href="#sqlite-example-savepoints" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>درآمد { ایس_کیو_لائٹ } سے "اردو/ڈیٹا_بیس";
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>غیر_متزامن فنکشن مرکز() {
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>    متغیر db = نیا ایس_کیو_لائٹ(":memory:");
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>    انتظار db.جوڑیں();
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>    انتظار db.چلائیں(`CREATE TABLE کھاتے (
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>        شناخت INTEGER PRIMARY KEY AUTOINCREMENT,
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>        نام    TEXT NOT NULL,
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>        بقیہ   REAL DEFAULT 0
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>    )`);
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>    انتظار db.چلائیں("INSERT INTO کھاتے (نام, بقیہ) VALUES (?, ?)", ["احمد", 10000]);
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>    انتظار db.چلائیں("INSERT INTO کھاتے (نام, بقیہ) VALUES (?, ?)", ["فاطمہ", 5000]);
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>    // SAVEPOINT مثال
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>    انتظار db.لین_دین_شروع();
+<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>
+<a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a>    // پہلا آپریشن
+<a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a>    انتظار db.چلائیں(
+<a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a>        "UPDATE کھاتے SET بقیہ = بقیہ - ? WHERE نام = ?", [2000, "احمد"]
+<a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a>    );
+<a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a>    انتظار db.چلائیں(
+<a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a>        "UPDATE کھاتے SET بقیہ = بقیہ + ? WHERE نام = ?", [2000, "فاطمہ"]
+<a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a>    );
+<a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a>    انتظار db.نقطہ_محفوظ("منتقلی_1");  // یہاں تک محفوظ
+<a id="__codelineno-15-26" name="__codelineno-15-26" href="#__codelineno-15-26"></a>
+<a id="__codelineno-15-27" name="__codelineno-15-27" href="#__codelineno-15-27"></a>    // دوسرا آپریشن (جو ناکام ہو گا)
+<a id="__codelineno-15-28" name="__codelineno-15-28" href="#__codelineno-15-28"></a>    انتظار db.چلائیں(
+<a id="__codelineno-15-29" name="__codelineno-15-29" href="#__codelineno-15-29"></a>        "UPDATE کھاتے SET بقیہ = بقیہ - ? WHERE نام = ?", [9999, "احمد"]
+<a id="__codelineno-15-30" name="__codelineno-15-30" href="#__codelineno-15-30"></a>    );
+<a id="__codelineno-15-31" name="__codelineno-15-31" href="#__codelineno-15-31"></a>
+<a id="__codelineno-15-32" name="__codelineno-15-32" href="#__codelineno-15-32"></a>    // نقطہ پر واپس
+<a id="__codelineno-15-33" name="__codelineno-15-33" href="#__codelineno-15-33"></a>    انتظار db.نقطہ_واپسی("منتقلی_1");
+<a id="__codelineno-15-34" name="__codelineno-15-34" href="#__codelineno-15-34"></a>    انتظار db.نقطہ_چھوڑیں("منتقلی_1");
+<a id="__codelineno-15-35" name="__codelineno-15-35" href="#__codelineno-15-35"></a>    انتظار db.کمٹ();
+<a id="__codelineno-15-36" name="__codelineno-15-36" href="#__codelineno-15-36"></a>
+<a id="__codelineno-15-37" name="__codelineno-15-37" href="#__codelineno-15-37"></a>    // نتیجہ جانچیں
+<a id="__codelineno-15-38" name="__codelineno-15-38" href="#__codelineno-15-38"></a>    متغیر نتیجہ = انتظار db.سوال(
+<a id="__codelineno-15-39" name="__codelineno-15-39" href="#__codelineno-15-39"></a>        "SELECT نام, بقیہ FROM کھاتے ORDER BY شناخت"
+<a id="__codelineno-15-40" name="__codelineno-15-40" href="#__codelineno-15-40"></a>    );
+<a id="__codelineno-15-41" name="__codelineno-15-41" href="#__codelineno-15-41"></a>    کے_لیے (متغیر ک کا نتیجہ) {
+<a id="__codelineno-15-42" name="__codelineno-15-42" href="#__codelineno-15-42"></a>        لکھو(`${ک["نام"]}: ${ک["بقیہ"]}`);
+<a id="__codelineno-15-43" name="__codelineno-15-43" href="#__codelineno-15-43"></a>    }
+<a id="__codelineno-15-44" name="__codelineno-15-44" href="#__codelineno-15-44"></a>    // احمد: 8000, فاطمہ: 7000 (صرف پہلی منتقلی)
+<a id="__codelineno-15-45" name="__codelineno-15-45" href="#__codelineno-15-45"></a>
+<a id="__codelineno-15-46" name="__codelineno-15-46" href="#__codelineno-15-46"></a>    انتظار db.منقطع();
+<a id="__codelineno-15-47" name="__codelineno-15-47" href="#__codelineno-15-47"></a>}
+<a id="__codelineno-15-48" name="__codelineno-15-48" href="#__codelineno-15-48"></a>
+<a id="__codelineno-15-49" name="__codelineno-15-49" href="#__codelineno-15-49"></a>انتظار مرکز();
 </code></pre></div>
 <hr />
-<h2 id="factory-function-__">Factory Function (ڈیٹا_بیس_جوڑو) — فیکٹری فنکشن</h2>
+<h2 id="factory-function-__">Factory Function (ڈیٹا_بیس_جوڑو) — فیکٹری فنکشن<a class="headerlink" href="#factory-function-__" title="Permanent link">&para;</a></h2>
 <p>Create any database connection by name using the factory function:</p>
 <blockquote>
 <p><strong>اردو:</strong> فیکٹری فنکشن <code>ڈیٹا_بیس_جوڑو</code> سے نام کے ذریعے کوئی بھی ڈیٹا بیس کنکشن بنائیں۔ پہلے دلیل میں ڈیٹا بیس کی قسم بتائیں (<code>"mysql"</code>، <code>"postgresql"</code>، <code>"sqlite"</code> وغیرہ) اور دوسرے میں ترتیب دیں۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>درآمد { ڈیٹا_بیس_جوڑو } سے "اردو/ڈیٹا_بیس";
-
-// ترتیب سے قسم کا تعین
-متغیر db = ڈیٹا_بیس_جوڑو("mysql", {
-    "میزبان": "localhost",
-    "صارف":   "root",
-    "پاس_ورڈ": "",
-    "ڈیٹا_بیس": "میری_ایپ"
-});
-
-انتظار db.جوڑیں();
-// ...سب معمول کے طریقے کام کریں گے
-انتظار db.منقطع();
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>درآمد { ڈیٹا_بیس_جوڑو } سے "اردو/ڈیٹا_بیس";
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>// ترتیب سے قسم کا تعین
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>متغیر db = ڈیٹا_بیس_جوڑو("mysql", {
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    "میزبان": "localhost",
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>    "صارف":   "root",
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>    "پاس_ورڈ": "",
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>    "ڈیٹا_بیس": "میری_ایپ"
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>});
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>انتظار db.جوڑیں();
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>// ...سب معمول کے طریقے کام کریں گے
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>انتظار db.منقطع();
 </code></pre></div>
 <p>Supported type strings: <code>"mysql"</code>, <code>"postgresql"</code> / <code>"postgres"</code> / <code>"pg"</code>, <code>"sqlite"</code>, <code>"mongodb"</code>, <code>"firebase"</code> / <code>"firestore"</code>, <code>"cassandra"</code>.</p>
 <hr />
-<h2 id="complete-multi-database-example">Complete Multi-Database Example</h2>
-<div class="highlight"><pre><span></span><code>درآمد { مائی_ایس_کیو_ایل, مونگو_ڈی_بی, ایس_کیو_لائٹ } سے "اردو/ڈیٹا_بیس";
-
-// ─── SQLite — میموری میں جانچ ───────────────────────────
-غیر_متزامن فنکشن sqlite_جانچ() {
-    لکھو("=== SQLite ===");
-    متغیر db = نیا ایس_کیو_لائٹ(":memory:");
-    انتظار db.جوڑیں();
-    انتظار db.جدول_بنائیں("جانچ", {
-        "id":  "INTEGER PRIMARY KEY AUTOINCREMENT",
-        "val": "TEXT"
-    });
-    انتظار db.داخل("جانچ", { "val": "اردو" });
-    متغیر r = انتظار db.سوال("SELECT * FROM جانچ");
-    لکھو(`SQLite: ${r[0]["val"]}`);
-    انتظار db.منقطع();
-}
-
-// ─── MongoDB — مجموعہ CRUD ───────────────────────────────
-غیر_متزامن فنکشن mongo_جانچ() {
-    لکھو("\n=== MongoDB ===");
-    کوشش {
-        متغیر mongo = نیا مونگو_ڈی_بی({ "ڈیٹا_بیس": "urdu_test" });
-        انتظار mongo.جوڑیں();
-        متغیر کول = mongo.مجموعہ("جانچ_کول");
-        انتظار کول.حذف({});
-        انتظار کول.داخل({ "زبان": "اردو", "نسخہ": 1 });
-        متغیر ایک = انتظار کول.ایک_تلاش({ "زبان": "اردو" });
-        لکھو(`MongoDB: ${ایک["زبان"]} v${ایک["نسخہ"]}`);
-        انتظار کول.حذف({});
-        انتظار mongo.منقطع();
-    } پکڑو (غ) {
-        لکھو(`MongoDB چھوڑا: ${غ}`);
-    }
-}
-
-غیر_متزامن فنکشن مرکز() {
-    انتظار sqlite_جانچ();
-    انتظار mongo_جانچ();
-    لکھو("\nتمام جانچ مکمل");
-}
-
-انتظار مرکز();
+<h2 id="complete-multi-database-example">Complete Multi-Database Example<a class="headerlink" href="#complete-multi-database-example" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>درآمد { مائی_ایس_کیو_ایل, مونگو_ڈی_بی, ایس_کیو_لائٹ } سے "اردو/ڈیٹا_بیس";
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>// ─── SQLite — میموری میں جانچ ───────────────────────────
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>غیر_متزامن فنکشن sqlite_جانچ() {
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>    لکھو("=== SQLite ===");
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>    متغیر db = نیا ایس_کیو_لائٹ(":memory:");
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>    انتظار db.جوڑیں();
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>    انتظار db.جدول_بنائیں("جانچ", {
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>        "id":  "INTEGER PRIMARY KEY AUTOINCREMENT",
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>        "val": "TEXT"
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>    });
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>    انتظار db.داخل("جانچ", { "val": "اردو" });
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>    متغیر r = انتظار db.سوال("SELECT * FROM جانچ");
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>    لکھو(`SQLite: ${r[0]["val"]}`);
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>    انتظار db.منقطع();
+<a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a>}
+<a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a>
+<a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a>// ─── MongoDB — مجموعہ CRUD ───────────────────────────────
+<a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a>غیر_متزامن فنکشن mongo_جانچ() {
+<a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a>    لکھو("\n=== MongoDB ===");
+<a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a>    کوشش {
+<a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a>        متغیر mongo = نیا مونگو_ڈی_بی({ "ڈیٹا_بیس": "urdu_test" });
+<a id="__codelineno-17-23" name="__codelineno-17-23" href="#__codelineno-17-23"></a>        انتظار mongo.جوڑیں();
+<a id="__codelineno-17-24" name="__codelineno-17-24" href="#__codelineno-17-24"></a>        متغیر کول = mongo.مجموعہ("جانچ_کول");
+<a id="__codelineno-17-25" name="__codelineno-17-25" href="#__codelineno-17-25"></a>        انتظار کول.حذف({});
+<a id="__codelineno-17-26" name="__codelineno-17-26" href="#__codelineno-17-26"></a>        انتظار کول.داخل({ "زبان": "اردو", "نسخہ": 1 });
+<a id="__codelineno-17-27" name="__codelineno-17-27" href="#__codelineno-17-27"></a>        متغیر ایک = انتظار کول.ایک_تلاش({ "زبان": "اردو" });
+<a id="__codelineno-17-28" name="__codelineno-17-28" href="#__codelineno-17-28"></a>        لکھو(`MongoDB: ${ایک["زبان"]} v${ایک["نسخہ"]}`);
+<a id="__codelineno-17-29" name="__codelineno-17-29" href="#__codelineno-17-29"></a>        انتظار کول.حذف({});
+<a id="__codelineno-17-30" name="__codelineno-17-30" href="#__codelineno-17-30"></a>        انتظار mongo.منقطع();
+<a id="__codelineno-17-31" name="__codelineno-17-31" href="#__codelineno-17-31"></a>    } پکڑو (غ) {
+<a id="__codelineno-17-32" name="__codelineno-17-32" href="#__codelineno-17-32"></a>        لکھو(`MongoDB چھوڑا: ${غ}`);
+<a id="__codelineno-17-33" name="__codelineno-17-33" href="#__codelineno-17-33"></a>    }
+<a id="__codelineno-17-34" name="__codelineno-17-34" href="#__codelineno-17-34"></a>}
+<a id="__codelineno-17-35" name="__codelineno-17-35" href="#__codelineno-17-35"></a>
+<a id="__codelineno-17-36" name="__codelineno-17-36" href="#__codelineno-17-36"></a>غیر_متزامن فنکشن مرکز() {
+<a id="__codelineno-17-37" name="__codelineno-17-37" href="#__codelineno-17-37"></a>    انتظار sqlite_جانچ();
+<a id="__codelineno-17-38" name="__codelineno-17-38" href="#__codelineno-17-38"></a>    انتظار mongo_جانچ();
+<a id="__codelineno-17-39" name="__codelineno-17-39" href="#__codelineno-17-39"></a>    لکھو("\nتمام جانچ مکمل");
+<a id="__codelineno-17-40" name="__codelineno-17-40" href="#__codelineno-17-40"></a>}
+<a id="__codelineno-17-41" name="__codelineno-17-41" href="#__codelineno-17-41"></a>
+<a id="__codelineno-17-42" name="__codelineno-17-42" href="#__codelineno-17-42"></a>انتظار مرکز();
 </code></pre></div>
 
 
@@ -2342,7 +2830,7 @@ pip install firebase-admin             # فائر_بیس (admin mode)
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
+  واپس اوپر جائیں
 </button>
         
       </main>
@@ -2374,7 +2862,7 @@ pip install firebase-admin             # فائر_بیس (admin mode)
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u06a9\u0644\u0650\u067e \u0628\u0648\u0631\u0688 \u0645\u06cc\u06ba \u0646\u0642\u0644 \u06a9\u0631 \u062f\u06cc\u0627 \u06af\u06cc\u0627", "clipboard.copy": "\u06a9\u0644\u0650\u067e \u0628\u0648\u0631\u0688 \u0645\u06cc\u06ba \u0646\u0642\u0644 \u06a9\u0631\u06cc\u06ba", "search.result.more.one": "\u0627\u0650\u0633 \u0635\u0641\u062d\u06d2 \u067e\u0631 \u0645\u0632\u06cc\u062f \u06f1", "search.result.more.other": "\u0627\u0650\u0633 \u0635\u0641\u062d\u06d2 \u067e\u0631 \u0645\u0632\u06cc\u062f #", "search.result.none": "\u06a9\u0648\u0626\u06cc \u0645\u0644\u062a\u06cc \u062c\u0644\u062a\u06cc \u062f\u0633\u062a\u0627\u0648\u06cc\u0632\u0627\u062a \u0646\u06c1\u06cc\u06ba", "search.result.one": "\u06f1 \u0645\u0644\u062a\u06cc \u062c\u0644\u062a\u06cc \u062f\u0633\u062a\u0627\u0648\u06cc\u0632", "search.result.other": "# \u0645\u0644\u062a\u06cc \u062c\u0644\u062a\u06cc \u062f\u0633\u062a\u0627\u0648\u06cc\u0632\u0627\u062a", "search.result.placeholder": "\u062a\u0644\u0627\u0634 \u0634\u0631\u0648\u0639 \u06a9\u0631\u0646\u06d2 \u06a9\u06d2 \u0644\u0626\u06d2 \u0679\u0627\u0626\u067e \u06a9\u0631\u06cc\u06ba", "search.result.term.missing": "\u06af\u0645\u0634\u062f\u06c1", "select.version": "\u0648\u0631\u0698\u0646 \u06a9\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u06a9\u0631\u06cc\u06ba"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>

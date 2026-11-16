@@ -1,16 +1,18 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="ur" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="دیسی پروگرامنگ لینگویج — سرائیکی، اردو، پنجابی">
+        <meta name="description" content="6 زبانیں، ایک پروگرامنگ زبان (سرائیکی + اردو + پنجابی + بلوچی + پشتو + سندھی)">
       
       
         <meta name="author" content="AlinGo Developers">
       
+      
+        <link rel="canonical" href="https://alingosuper.github.io/SUPL/builtins/math/">
       
       
       
@@ -18,12 +20,12 @@
         
       
       
-      <link rel="icon" href="../../assets/branding/favicon.svg">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
-        <title>Math Object — ریاضی - AlinGo Saraiki</title>
+        <title>Math Object — ریاضی - SUPL — سُپل پروگرامنگ زبان</title>
       
     
     
@@ -63,7 +65,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
+    <body dir="rtl" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="amber">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -73,7 +75,7 @@
       
         
         <a href="#math-object" class="md-skip">
-          Skip to content
+          براہِ راست مواد پر جائیں
         </a>
       
     </div>
@@ -85,10 +87,11 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="AlinGo Saraiki" class="md-header__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="سر تحریر">
+    <a href="../.." title="SUPL — سُپل پروگرامنگ زبان" class="md-header__button md-logo" aria-label="SUPL — سُپل پروگرامنگ زبان" data-md-component="logo">
       
-  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -99,7 +102,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            AlinGo Saraiki
+            SUPL — سُپل پروگرامنگ زبان
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -127,16 +130,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="تلاش کریں" placeholder="تلاش کریں" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="تلاش">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="صاف کریں" aria-label="صاف کریں" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -149,7 +152,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            تلاش کا آغاز ہو رہا ہے
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -159,6 +162,18 @@
 </div>
       
     
+    
+      <div class="md-header__source">
+        <a href="https://github.com/alingosuper/SUPL" title="ریپازٹری پر جائیں" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    alingosuper/SUPL
+  </div>
+</a>
+      </div>
     
   </nav>
   
@@ -170,7 +185,7 @@
         
           
             
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+<nav class="md-tabs" aria-label="ٹیبز" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -199,13 +214,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../installation/" class="md-tabs__link">
+      <a href="../../%D8%B4%D8%B1%D9%88%D8%B9%D8%A7%D8%AA/" class="md-tabs__link">
         
   
   
     
   
-  انسٹالیشن
+  شروعات
 
       </a>
     </li>
@@ -218,13 +233,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../quick-start/" class="md-tabs__link">
+      <a href="../../%D8%AA%D9%86%D8%B5%DB%8C%D8%A8/" class="md-tabs__link">
         
   
   
     
   
-  کوئیک اسٹارٹ
+  تنصیب
 
       </a>
     </li>
@@ -239,11 +254,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../tutorial/beginner/" class="md-tabs__link">
+        <a href="../../%DA%A9%D9%84%DB%8C%D8%AF%DB%8C_%D8%A7%D9%84%D9%81%D8%A7%D8%B8/" class="md-tabs__link">
           
   
   
-  ٹیوٹوریل
+    
+  
+  کلیدی الفاظ
 
         </a>
       </li>
@@ -259,11 +276,13 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../reference/keywords/" class="md-tabs__link">
+        <a href="../../%D9%86%D8%AD%D9%88/" class="md-tabs__link">
           
   
   
-  حوالہ
+    
+  
+  نحو
 
         </a>
       </li>
@@ -276,17 +295,20 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../libraries/" class="md-tabs__link">
-        
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stdlib/" class="md-tabs__link">
+          
   
   
     
   
-  لائبریریاں
+  stdlib
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -295,17 +317,20 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../examples/" class="md-tabs__link">
-        
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%D9%85%D8%AB%D8%A7%D9%84%DB%8C%DA%BA/" class="md-tabs__link">
+          
   
   
     
   
   مثالیں
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -329,15 +354,28 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="رہنمائی" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="AlinGo Saraiki" class="md-nav__button md-logo" aria-label="AlinGo Saraiki" data-md-component="logo">
+    <a href="../.." title="SUPL — سُپل پروگرامنگ زبان" class="md-nav__button md-logo" aria-label="SUPL — سُپل پروگرامنگ زبان" data-md-component="logo">
       
-  <img src="../../assets/branding/alingo-logo.svg" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    AlinGo Saraiki
+    SUPL — سُپل پروگرامنگ زبان
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/alingosuper/SUPL" title="ریپازٹری پر جائیں" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    alingosuper/SUPL
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -375,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installation/" class="md-nav__link">
+      <a href="../../%D8%B4%D8%B1%D9%88%D8%B9%D8%A7%D8%AA/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    انسٹالیشن
+    شروعات
   
 
     
@@ -402,14 +440,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../quick-start/" class="md-nav__link">
+      <a href="../../%D8%AA%D9%86%D8%B5%DB%8C%D8%A8/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    کوئیک اسٹارٹ
+    تنصیب
   
 
     
@@ -429,6 +467,12 @@
   
   
     
+    
+      
+        
+      
+        
+      
     
     
     
@@ -450,7 +494,7 @@
   <span class="md-ellipsis">
     
   
-    ٹیوٹوریل
+    کلیدی الفاظ
   
 
     
@@ -466,7 +510,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    ٹیوٹوریل
+    کلیدی الفاظ
   
 
           </label>
@@ -479,14 +523,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/beginner/" class="md-nav__link">
+      <a href="../../%DA%A9%D9%84%DB%8C%D8%AF%DB%8C_%D8%A7%D9%84%D9%81%D8%A7%D8%B8/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    ابتدائی
+    مختصر فہرست
   
 
     
@@ -507,42 +551,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/intermediate/" class="md-nav__link">
+      <a href="../../%DA%A9%D9%84%DB%8C%D8%AF%DB%8C_%D8%A7%D9%84%D9%81%D8%A7%D8%B8_%D9%85%DA%A9%D9%85%D9%84/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    درمیانی
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tutorial/advanced/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    اعلیٰ
+    مکمل 218 keywords
   
 
     
@@ -571,6 +587,28 @@
   
     
     
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
     
       
@@ -584,14 +622,15 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%D9%86%D8%AD%D9%88/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
     
   
-    حوالہ
+    نحو
   
 
     
@@ -599,19 +638,27 @@
   
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
   
-    حوالہ
+    نحو
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -620,14 +667,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/keywords/" class="md-nav__link">
+      <a href="../../%D9%86%D8%AD%D9%88/01-%D9%85%D8%AA%D8%BA%DB%8C%D8%B1%D8%A7%D8%AA/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    کی ورڈز
+    متغیرات
   
 
     
@@ -648,7 +695,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/operators/" class="md-nav__link">
+      <a href="../../%D9%86%D8%AD%D9%88/02-%D8%A7%D9%82%D8%B3%D8%A7%D9%85/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    اقسام
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/03-%D8%A2%D9%BE%D8%B1%DB%8C%D9%B9%D8%B1%D8%B2/" class="md-nav__link">
         
   
   
@@ -669,6 +744,146 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/04-%D8%B4%D8%B1%D8%A7%D8%A6%D8%B7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    شرائط
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/05-%D9%84%D9%88%D9%BE%D8%B3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    لوپس
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/06-%D9%81%D9%86%DA%A9%D8%B4%D9%86%D8%B2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    فنکشنز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/07-%DA%A9%D9%84%D8%A7%D8%B3%D8%B2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    کلاسز
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%86%D8%AD%D9%88/08-%D8%A7%D8%B3%D8%AA%D8%AB%D9%86%D8%A7%D8%A1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    استثناء
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -682,15 +897,90 @@
   
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../stdlib/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    stdlib
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    stdlib
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../libraries/" class="md-nav__link">
+      <a href="../../stdlib/%D9%81%D8%A7%D8%A6%D9%84%D8%A7%DA%BA/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    لائبریریاں
+    فائلاں
   
 
     
@@ -702,6 +992,126 @@
     </li>
   
 
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/%D9%88%DB%8C%D8%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ویب
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/%DA%88%DB%8C%D9%B9%D8%A7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ڈیٹا
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/%D9%88%DB%8C%D9%84%DB%81/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ویلہ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stdlib/%DA%B3%D9%86%D8%AA%D8%B1%DB%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ڳنتری
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
       
       
@@ -709,9 +1119,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../examples/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../%D9%85%D8%AB%D8%A7%D9%84%DB%8C%DA%BA/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -725,7 +1158,59 @@
   
   
 
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    مثالیں
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D9%85%D8%AB%D8%A7%D9%84%DB%8C%DA%BA/hello-world/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ہیلو ورلڈ
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -743,7 +1228,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="فہرست">
   
   
   
@@ -752,7 +1237,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      فہرست
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1316,26 +1801,29 @@
                   
 
 
+  
+  
 
-<h1 id="math-object">Math Object — ریاضی</h1>
+
+<h1 id="math-object">Math Object — ریاضی<a class="headerlink" href="#math-object" title="Permanent link">&para;</a></h1>
 <p>The <code>ریاضی</code> object (also accessible as <code>Math</code>) provides a comprehensive set of mathematical constants and functions. It is available globally in every Urdu program — no import required.</p>
 <p>Every method and constant has both an Urdu alias and an English alias. Use whichever you prefer: <code>ریاضی.جذر(9)</code> and <code>ریاضی.sqrt(9)</code> are identical.</p>
 <blockquote>
 <p><strong>اردو:</strong> <code>ریاضی</code> شے (جسے <code>Math</code> کے نام سے بھی استعمال کیا جا سکتا ہے) ریاضیاتی مستقلات اور فنکشنز کا ایک جامع مجموعہ فراہم کرتی ہے۔ یہ ہر اردو پروگرام میں عالمی طور پر دستیاب ہے — کسی درآمد کی ضرورت نہیں۔ ہر طریقے اور مستقل کا اردو اور انگریزی دونوں نام ہیں، آپ جو چاہیں استعمال کریں۔</p>
 </blockquote>
 <hr />
-<h2 id="accessing-the-math-object">Accessing the Math Object — ریاضی شے تک رسائی</h2>
+<h2 id="accessing-the-math-object">Accessing the Math Object — ریاضی شے تک رسائی<a class="headerlink" href="#accessing-the-math-object" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><strong>اردو:</strong> دونوں شکلیں درست ہیں:</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>// Urdu name
-ریاضی.sqrt(16)       // 4.0
-
-// English alias
-Math.sqrt(16)        // 4.0
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>// Urdu name
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>ریاضی.sqrt(16)       // 4.0
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>// English alias
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Math.sqrt(16)        // 4.0
 </code></pre></div>
 <hr />
-<h2 id="table-of-contents">Table of Contents</h2>
+<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="#constants">Constants</a></li>
 <li><a href="#rounding-functions">Rounding Functions</a></li>
@@ -1350,7 +1838,7 @@ Math.sqrt(16)        // 4.0
 <li><a href="#practical-examples">Practical Examples</a></li>
 </ul>
 <hr />
-<h2 id="constants">Constants — مستقلات</h2>
+<h2 id="constants">Constants — مستقلات<a class="headerlink" href="#constants" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1403,226 +1891,226 @@ Math.sqrt(16)        // 4.0
 <p><strong>اردو:</strong> یہ ریاضیاتی مستقلات ہیں جو اکثر حسابات میں کام آتے ہیں۔ پائی (π) دائرے کا سب سے اہم مستقل ہے، اور قدرتی عدد (e) لوگارتھمی حسابات میں استعمال ہوتا ہے۔</p>
 </blockquote>
 <p><strong>Example</strong></p>
-<div class="highlight"><pre><span></span><code>لکھو("پائی =", ریاضی.پائی);          // 3.141592653589793
-لکھو("قدرتی عدد =", ریاضی.قدرتی);   // 2.718281828459045
-لکھو("√2 =", ریاضی.جذر_دو);         // 1.4142135623730951
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>لکھو("پائی =", ریاضی.پائی);          // 3.141592653589793
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>لکھو("قدرتی عدد =", ریاضی.قدرتی);   // 2.718281828459045
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>لکھو("√2 =", ریاضی.جذر_دو);         // 1.4142135623730951
 </code></pre></div>
 <hr />
-<h2 id="rounding-functions">Rounding Functions — گول کرنے کے فنکشنز</h2>
-<h3 id="x-ceilx"><code>ریاضی.چھت(x)</code> / <code>ریاضی.ceil(x)</code></h3>
+<h2 id="rounding-functions">Rounding Functions — گول کرنے کے فنکشنز<a class="headerlink" href="#rounding-functions" title="Permanent link">&para;</a></h2>
+<h3 id="x-ceilx"><code>ریاضی.چھت(x)</code> / <code>ریاضی.ceil(x)</code><a class="headerlink" href="#x-ceilx" title="Permanent link">&para;</a></h3>
 <p>Round <code>x</code> up to the nearest integer (ceiling).</p>
 <blockquote>
 <p><strong>اردو:</strong> <code>x</code> کو قریب ترین اوپر والے صحیح عدد تک گول کریں (چھت کی طرف)۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>لکھو(ریاضی.چھت(4.1));   // 5
-لکھو(ریاضی.چھت(4.9));   // 5
-لکھو(ریاضی.چھت(-4.1));  // -4
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>لکھو(ریاضی.چھت(4.1));   // 5
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>لکھو(ریاضی.چھت(4.9));   // 5
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>لکھو(ریاضی.چھت(-4.1));  // -4
 </code></pre></div>
 <hr />
-<h3 id="x-floorx"><code>ریاضی.فرش(x)</code> / <code>ریاضی.floor(x)</code></h3>
+<h3 id="x-floorx"><code>ریاضی.فرش(x)</code> / <code>ریاضی.floor(x)</code><a class="headerlink" href="#x-floorx" title="Permanent link">&para;</a></h3>
 <p>Round <code>x</code> down to the nearest integer (floor).</p>
 <blockquote>
 <p><strong>اردو:</strong> <code>x</code> کو قریب ترین نیچے والے صحیح عدد تک گول کریں (فرش کی طرف)۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>لکھو(ریاضی.فرش(4.9));   // 4
-لکھو(ریاضی.فرش(4.1));   // 4
-لکھو(ریاضی.فرش(-4.1));  // -5
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>لکھو(ریاضی.فرش(4.9));   // 4
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>لکھو(ریاضی.فرش(4.1));   // 4
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>لکھو(ریاضی.فرش(-4.1));  // -5
 </code></pre></div>
 <hr />
-<h3 id="x-roundx"><code>ریاضی.گول(x)</code> / <code>ریاضی.round(x)</code></h3>
+<h3 id="x-roundx"><code>ریاضی.گول(x)</code> / <code>ریاضی.round(x)</code><a class="headerlink" href="#x-roundx" title="Permanent link">&para;</a></h3>
 <p>Round <code>x</code> to the nearest integer (half rounds to even — Python banker's rounding).</p>
 <blockquote>
 <p><strong>اردو:</strong> <code>x</code> کو قریب ترین صحیح عدد تک گول کریں (آدھے پر جفت طرف — Python کا بینکر گول کرنا)۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>لکھو(ریاضی.گول(4.4));   // 4
-لکھو(ریاضی.گول(4.6));   // 5
-لکھو(ریاضی.گول(4.5));   // 4  (banker's rounding)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>لکھو(ریاضی.گول(4.4));   // 4
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>لکھو(ریاضی.گول(4.6));   // 5
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>لکھو(ریاضی.گول(4.5));   // 4  (banker's rounding)
 </code></pre></div>
 <hr />
-<h3 id="x-truncx"><code>ریاضی.تراش(x)</code> / <code>ریاضی.trunc(x)</code></h3>
+<h3 id="x-truncx"><code>ریاضی.تراش(x)</code> / <code>ریاضی.trunc(x)</code><a class="headerlink" href="#x-truncx" title="Permanent link">&para;</a></h3>
 <p>Truncate <code>x</code> toward zero (remove the fractional part without rounding).</p>
 <blockquote>
 <p><strong>اردو:</strong> <code>x</code> کو صفر کی طرف کاٹیں (اعشاری حصہ ہٹائیں، گول کیے بغیر)۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>لکھو(ریاضی.تراش(4.9));   // 4
-لکھو(ریاضی.تراش(-4.9));  // -4
-لکھو(ریاضی.تراش(3.0));   // 3
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>لکھو(ریاضی.تراش(4.9));   // 4
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>لکھو(ریاضی.تراش(-4.9));  // -4
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>لکھو(ریاضی.تراش(3.0));   // 3
 </code></pre></div>
 <hr />
-<h2 id="power-and-root-functions">Power and Root Functions — قوت اور جڑ فنکشنز</h2>
-<h3 id="x-_x-sqrtx"><code>ریاضی.جذر(x)</code> / <code>ریاضی.جذر_مربع(x)</code> / <code>ریاضی.sqrt(x)</code></h3>
+<h2 id="power-and-root-functions">Power and Root Functions — قوت اور جڑ فنکشنز<a class="headerlink" href="#power-and-root-functions" title="Permanent link">&para;</a></h2>
+<h3 id="x-_x-sqrtx"><code>ریاضی.جذر(x)</code> / <code>ریاضی.جذر_مربع(x)</code> / <code>ریاضی.sqrt(x)</code><a class="headerlink" href="#x-_x-sqrtx" title="Permanent link">&para;</a></h3>
 <p>Return the square root of <code>x</code>. <code>x</code> must be ≥ 0.</p>
 <blockquote>
 <p><strong>اردو:</strong> <code>x</code> کا مربع جذر واپس کریں۔ <code>x</code> صفر سے کم نہیں ہونا چاہیے۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>لکھو(ریاضی.جذر(9));     // 3.0
-لکھو(ریاضی.جذر(2));     // 1.4142135623730951
-لکھو(ریاضی.جذر(0));     // 0.0
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>لکھو(ریاضی.جذر(9));     // 3.0
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>لکھو(ریاضی.جذر(2));     // 1.4142135623730951
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>لکھو(ریاضی.جذر(0));     // 0.0
 </code></pre></div>
 <hr />
-<h3 id="_x-cbrtx"><code>ریاضی.جذر_مکعب(x)</code> / <code>ریاضی.cbrt(x)</code></h3>
+<h3 id="_x-cbrtx"><code>ریاضی.جذر_مکعب(x)</code> / <code>ریاضی.cbrt(x)</code><a class="headerlink" href="#_x-cbrtx" title="Permanent link">&para;</a></h3>
 <p>Return the cube root of <code>x</code>. Works for negative numbers.</p>
 <blockquote>
 <p><strong>اردو:</strong> <code>x</code> کا مکعب جذر واپس کریں۔ منفی اعداد کے لیے بھی کام کرتا ہے۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>لکھو(ریاضی.جذر_مکعب(27));    // 3.0
-لکھو(ریاضی.جذر_مکعب(-8));    // -2.0
-لکھو(ریاضی.جذر_مکعب(125));   // 5.0
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>لکھو(ریاضی.جذر_مکعب(27));    // 3.0
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>لکھو(ریاضی.جذر_مکعب(-8));    // -2.0
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>لکھو(ریاضی.جذر_مکعب(125));   // 5.0
 </code></pre></div>
 <hr />
-<h3 id="x-y-powx-y"><code>ریاضی.طاقت(x, y)</code> / <code>ریاضی.pow(x, y)</code></h3>
+<h3 id="x-y-powx-y"><code>ریاضی.طاقت(x, y)</code> / <code>ریاضی.pow(x, y)</code><a class="headerlink" href="#x-y-powx-y" title="Permanent link">&para;</a></h3>
 <p>Return <code>x</code> raised to the power <code>y</code>.</p>
 <blockquote>
 <p><strong>اردو:</strong> <code>x</code> کو <code>y</code> کی قوت تک بڑھائیں۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>لکھو(ریاضی.طاقت(2, 8));    // 256
-لکھو(ریاضی.طاقت(10, 3));   // 1000
-لکھو(ریاضی.طاقت(4, 0.5));  // 2.0
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>لکھو(ریاضی.طاقت(2, 8));    // 256
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>لکھو(ریاضی.طاقت(10, 3));   // 1000
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>لکھو(ریاضی.طاقت(4, 0.5));  // 2.0
 </code></pre></div>
 <hr />
-<h3 id="x-expx"><code>ریاضی.مرتفع(x)</code> / <code>ریاضی.exp(x)</code></h3>
+<h3 id="x-expx"><code>ریاضی.مرتفع(x)</code> / <code>ریاضی.exp(x)</code><a class="headerlink" href="#x-expx" title="Permanent link">&para;</a></h3>
 <p>Return e raised to the power <code>x</code> (eˣ).</p>
 <blockquote>
 <p><strong>اردو:</strong> e کو <code>x</code> کی قوت تک بڑھائیں (eˣ)۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>لکھو(ریاضی.مرتفع(0));    // 1.0
-لکھو(ریاضی.مرتفع(1));    // 2.718281828459045
-لکھو(ریاضی.مرتفع(2));    // 7.38905609893065
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>لکھو(ریاضی.مرتفع(0));    // 1.0
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>لکھو(ریاضی.مرتفع(1));    // 2.718281828459045
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>لکھو(ریاضی.مرتفع(2));    // 7.38905609893065
 </code></pre></div>
 <hr />
-<h2 id="absolute-value-and-sign">Absolute Value and Sign — مطلق قدر اور علامت</h2>
-<h3 id="x-absx"><code>ریاضی.مطلق(x)</code> / <code>ریاضی.abs(x)</code></h3>
+<h2 id="absolute-value-and-sign">Absolute Value and Sign — مطلق قدر اور علامت<a class="headerlink" href="#absolute-value-and-sign" title="Permanent link">&para;</a></h2>
+<h3 id="x-absx"><code>ریاضی.مطلق(x)</code> / <code>ریاضی.abs(x)</code><a class="headerlink" href="#x-absx" title="Permanent link">&para;</a></h3>
 <p>Return the absolute (non-negative) value of <code>x</code>.</p>
 <blockquote>
 <p><strong>اردو:</strong> <code>x</code> کی مطلق (غیر منفی) قدر واپس کریں۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>لکھو(ریاضی.مطلق(-7));     // 7
-لکھو(ریاضی.مطلق(3.14));   // 3.14
-لکھو(ریاضی.مطلق(0));      // 0
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>لکھو(ریاضی.مطلق(-7));     // 7
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>لکھو(ریاضی.مطلق(3.14));   // 3.14
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>لکھو(ریاضی.مطلق(0));      // 0
 </code></pre></div>
 <hr />
-<h3 id="x-signx"><code>ریاضی.علامت(x)</code> / <code>ریاضی.sign(x)</code></h3>
+<h3 id="x-signx"><code>ریاضی.علامت(x)</code> / <code>ریاضی.sign(x)</code><a class="headerlink" href="#x-signx" title="Permanent link">&para;</a></h3>
 <p>Return the sign of <code>x</code>: <code>1</code> if positive, <code>-1</code> if negative, <code>0</code> if zero.</p>
 <blockquote>
 <p><strong>اردو:</strong> <code>x</code> کی علامت واپس کریں: مثبت پر <code>1</code>، منفی پر <code>-1</code>، صفر پر <code>0</code>۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>لکھو(ریاضی.علامت(100));    // 1
-لکھو(ریاضی.علامت(-50));    // -1
-لکھو(ریاضی.علامت(0));      // 0
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>لکھو(ریاضی.علامت(100));    // 1
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>لکھو(ریاضی.علامت(-50));    // -1
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>لکھو(ریاضی.علامت(0));      // 0
 </code></pre></div>
 <hr />
-<h2 id="minimum-and-maximum">Minimum and Maximum — کم اور زیادہ</h2>
-<h3 id="args-minargs"><code>ریاضی.کم(*args)</code> / <code>ریاضی.min(*args)</code></h3>
+<h2 id="minimum-and-maximum">Minimum and Maximum — کم اور زیادہ<a class="headerlink" href="#minimum-and-maximum" title="Permanent link">&para;</a></h2>
+<h3 id="args-minargs"><code>ریاضی.کم(*args)</code> / <code>ریاضی.min(*args)</code><a class="headerlink" href="#args-minargs" title="Permanent link">&para;</a></h3>
 <p>Return the smallest of all arguments.</p>
 <blockquote>
 <p><strong>اردو:</strong> تمام دلائل میں سے سب سے چھوٹا واپس کریں۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>لکھو(ریاضی.کم(3, 1, 4, 1, 5, 9));   // 1
-لکھو(ریاضی.کم(-5, 0, 5));            // -5
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>لکھو(ریاضی.کم(3, 1, 4, 1, 5, 9));   // 1
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>لکھو(ریاضی.کم(-5, 0, 5));            // -5
 </code></pre></div>
 <hr />
-<h3 id="args-maxargs"><code>ریاضی.زیادہ(*args)</code> / <code>ریاضی.max(*args)</code></h3>
+<h3 id="args-maxargs"><code>ریاضی.زیادہ(*args)</code> / <code>ریاضی.max(*args)</code><a class="headerlink" href="#args-maxargs" title="Permanent link">&para;</a></h3>
 <p>Return the largest of all arguments.</p>
 <blockquote>
 <p><strong>اردو:</strong> تمام دلائل میں سے سب سے بڑا واپس کریں۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>لکھو(ریاضی.زیادہ(3, 1, 4, 1, 5, 9));   // 9
-لکھو(ریاضی.زیادہ(-5, 0, 5));            // 5
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>لکھو(ریاضی.زیادہ(3, 1, 4, 1, 5, 9));   // 9
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>لکھو(ریاضی.زیادہ(-5, 0, 5));            // 5
 </code></pre></div>
 <hr />
-<h2 id="logarithmic-functions">Logarithmic Functions — لوگارتھمی فنکشنز</h2>
-<h3 id="x-logx"><code>ریاضی.لاگ(x)</code> / <code>ریاضی.log(x)</code></h3>
+<h2 id="logarithmic-functions">Logarithmic Functions — لوگارتھمی فنکشنز<a class="headerlink" href="#logarithmic-functions" title="Permanent link">&para;</a></h2>
+<h3 id="x-logx"><code>ریاضی.لاگ(x)</code> / <code>ریاضی.log(x)</code><a class="headerlink" href="#x-logx" title="Permanent link">&para;</a></h3>
 <p>Return the natural logarithm (base e) of <code>x</code>. <code>x</code> must be &gt; 0.</p>
 <blockquote>
 <p><strong>اردو:</strong> <code>x</code> کا قدرتی لوگارتھم (e بنیاد) واپس کریں۔ <code>x</code> صفر سے بڑا ہونا چاہیے۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>لکھو(ریاضی.لاگ(1));             // 0.0
-لکھو(ریاضی.لاگ(ریاضی.قدرتی));  // 1.0
-لکھو(ریاضی.لاگ(10));            // 2.302585092994046
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>لکھو(ریاضی.لاگ(1));             // 0.0
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>لکھو(ریاضی.لاگ(ریاضی.قدرتی));  // 1.0
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>لکھو(ریاضی.لاگ(10));            // 2.302585092994046
 </code></pre></div>
 <hr />
-<h3 id="2x-log2x"><code>ریاضی.لاگ2(x)</code> / <code>ریاضی.log2(x)</code></h3>
+<h3 id="2x-log2x"><code>ریاضی.لاگ2(x)</code> / <code>ریاضی.log2(x)</code><a class="headerlink" href="#2x-log2x" title="Permanent link">&para;</a></h3>
 <p>Return the base-2 logarithm of <code>x</code>.</p>
 <blockquote>
 <p><strong>اردو:</strong> <code>x</code> کا بنیاد 2 لوگارتھم واپس کریں۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>لکھو(ریاضی.لاگ2(1));     // 0.0
-لکھو(ریاضی.لاگ2(8));     // 3.0
-لکھو(ریاضی.لاگ2(1024));  // 10.0
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>لکھو(ریاضی.لاگ2(1));     // 0.0
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>لکھو(ریاضی.لاگ2(8));     // 3.0
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>لکھو(ریاضی.لاگ2(1024));  // 10.0
 </code></pre></div>
 <hr />
-<h3 id="10x-log10x"><code>ریاضی.لاگ10(x)</code> / <code>ریاضی.log10(x)</code></h3>
+<h3 id="10x-log10x"><code>ریاضی.لاگ10(x)</code> / <code>ریاضی.log10(x)</code><a class="headerlink" href="#10x-log10x" title="Permanent link">&para;</a></h3>
 <p>Return the base-10 logarithm of <code>x</code>.</p>
 <blockquote>
 <p><strong>اردو:</strong> <code>x</code> کا بنیاد 10 لوگارتھم واپس کریں۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>لکھو(ریاضی.لاگ10(1));      // 0.0
-لکھو(ریاضی.لاگ10(100));    // 2.0
-لکھو(ریاضی.لاگ10(1000));   // 3.0
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>لکھو(ریاضی.لاگ10(1));      // 0.0
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>لکھو(ریاضی.لاگ10(100));    // 2.0
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>لکھو(ریاضی.لاگ10(1000));   // 3.0
 </code></pre></div>
 <hr />
-<h2 id="trigonometric-functions">Trigonometric Functions — مثلثاتی فنکشنز</h2>
+<h2 id="trigonometric-functions">Trigonometric Functions — مثلثاتی فنکشنز<a class="headerlink" href="#trigonometric-functions" title="Permanent link">&para;</a></h2>
 <p>All trigonometric functions accept angles in <strong>radians</strong>. Use <code>ریاضی.ریڈین()</code> to convert degrees to radians.</p>
 <blockquote>
 <p><strong>اردو:</strong> تمام مثلثاتی فنکشنز <strong>ریڈین</strong> میں زاویے قبول کرتے ہیں۔ درجوں کو ریڈین میں تبدیل کرنے کے لیے <code>ریاضی.ریڈین()</code> استعمال کریں۔</p>
 </blockquote>
-<h3 id="x-sinx"><code>ریاضی.سائن(x)</code> / <code>ریاضی.sin(x)</code></h3>
+<h3 id="x-sinx"><code>ریاضی.سائن(x)</code> / <code>ریاضی.sin(x)</code><a class="headerlink" href="#x-sinx" title="Permanent link">&para;</a></h3>
 <p>Return the sine of angle <code>x</code> (in radians).</p>
 <blockquote>
 <p><strong>اردو:</strong> زاویہ <code>x</code> (ریڈین میں) کا سائن واپس کریں۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>لکھو(ریاضی.سائن(0));                    // 0.0
-لکھو(ریاضی.سائن(ریاضی.پائی / 2));      // 1.0
-لکھو(ریاضی.سائن(ریاضی.ریڈین(30)));     // 0.5
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>لکھو(ریاضی.سائن(0));                    // 0.0
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>لکھو(ریاضی.سائن(ریاضی.پائی / 2));      // 1.0
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>لکھو(ریاضی.سائن(ریاضی.ریڈین(30)));     // 0.5
 </code></pre></div>
 <hr />
-<h3 id="x-cosx"><code>ریاضی.کوسائن(x)</code> / <code>ریاضی.cos(x)</code></h3>
+<h3 id="x-cosx"><code>ریاضی.کوسائن(x)</code> / <code>ریاضی.cos(x)</code><a class="headerlink" href="#x-cosx" title="Permanent link">&para;</a></h3>
 <p>Return the cosine of angle <code>x</code> (in radians).</p>
 <blockquote>
 <p><strong>اردو:</strong> زاویہ <code>x</code> (ریڈین میں) کا کوسائن واپس کریں۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>لکھو(ریاضی.کوسائن(0));                  // 1.0
-لکھو(ریاضی.کوسائن(ریاضی.پائی));        // -1.0
-لکھو(ریاضی.کوسائن(ریاضی.ریڈین(60)));  // 0.5
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>لکھو(ریاضی.کوسائن(0));                  // 1.0
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>لکھو(ریاضی.کوسائن(ریاضی.پائی));        // -1.0
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>لکھو(ریاضی.کوسائن(ریاضی.ریڈین(60)));  // 0.5
 </code></pre></div>
 <hr />
-<h3 id="x-tanx"><code>ریاضی.ٹینجنٹ(x)</code> / <code>ریاضی.tan(x)</code></h3>
+<h3 id="x-tanx"><code>ریاضی.ٹینجنٹ(x)</code> / <code>ریاضی.tan(x)</code><a class="headerlink" href="#x-tanx" title="Permanent link">&para;</a></h3>
 <p>Return the tangent of angle <code>x</code> (in radians).</p>
 <blockquote>
 <p><strong>اردو:</strong> زاویہ <code>x</code> (ریڈین میں) کا ٹینجنٹ واپس کریں۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>لکھو(ریاضی.ٹینجنٹ(0));                  // 0.0
-لکھو(ریاضی.ٹینجنٹ(ریاضی.ریڈین(45)));  // 1.0
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>لکھو(ریاضی.ٹینجنٹ(0));                  // 0.0
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>لکھو(ریاضی.ٹینجنٹ(ریاضی.ریڈین(45)));  // 1.0
 </code></pre></div>
 <hr />
-<h3 id="_x-asinx"><code>ریاضی.معکوس_سائن(x)</code> / <code>ریاضی.asin(x)</code></h3>
+<h3 id="_x-asinx"><code>ریاضی.معکوس_سائن(x)</code> / <code>ریاضی.asin(x)</code><a class="headerlink" href="#_x-asinx" title="Permanent link">&para;</a></h3>
 <p>Return the arcsine of <code>x</code> in radians. <code>x</code> must be in <code>[-1, 1]</code>.</p>
 <blockquote>
 <p><strong>اردو:</strong> <code>x</code> کا معکوس سائن (آرک سائن) ریڈین میں واپس کریں۔ <code>x</code> کی قدر <code>[-1, 1]</code> میں ہونی چاہیے۔</p>
 </blockquote>
 <hr />
-<h3 id="_x-acosx"><code>ریاضی.معکوس_کوسائن(x)</code> / <code>ریاضی.acos(x)</code></h3>
+<h3 id="_x-acosx"><code>ریاضی.معکوس_کوسائن(x)</code> / <code>ریاضی.acos(x)</code><a class="headerlink" href="#_x-acosx" title="Permanent link">&para;</a></h3>
 <p>Return the arccosine of <code>x</code> in radians. <code>x</code> must be in <code>[-1, 1]</code>.</p>
 <blockquote>
 <p><strong>اردو:</strong> <code>x</code> کا معکوس کوسائن (آرک کوسائن) ریڈین میں واپس کریں۔ <code>x</code> کی قدر <code>[-1, 1]</code> میں ہونی چاہیے۔</p>
 </blockquote>
 <hr />
-<h3 id="_x-atanx"><code>ریاضی.معکوس_ٹینجنٹ(x)</code> / <code>ریاضی.atan(x)</code></h3>
+<h3 id="_x-atanx"><code>ریاضی.معکوس_ٹینجنٹ(x)</code> / <code>ریاضی.atan(x)</code><a class="headerlink" href="#_x-atanx" title="Permanent link">&para;</a></h3>
 <p>Return the arctangent of <code>x</code> in radians.</p>
 <blockquote>
 <p><strong>اردو:</strong> <code>x</code> کا معکوس ٹینجنٹ (آرک ٹینجنٹ) ریڈین میں واپس کریں۔</p>
 </blockquote>
 <hr />
-<h3 id="2y-x-atan2y-x"><code>ریاضی.ٹینجنٹ2(y, x)</code> / <code>ریاضی.atan2(y, x)</code></h3>
+<h3 id="2y-x-atan2y-x"><code>ریاضی.ٹینجنٹ2(y, x)</code> / <code>ریاضی.atan2(y, x)</code><a class="headerlink" href="#2y-x-atan2y-x" title="Permanent link">&para;</a></h3>
 <p>Return the arctangent of <code>y/x</code> in radians, taking the signs of both arguments to determine the correct quadrant. Result is in <code>(-π, π]</code>.</p>
 <blockquote>
 <p><strong>اردو:</strong> <code>y/x</code> کا آرک ٹینجنٹ ریڈین میں واپس کریں، صحیح ربع تعین کرنے کے لیے دونوں دلائل کی علامات کو مدنظر رکھتا ہے۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>لکھو(ریاضی.ٹینجنٹ2(1, 1));    // 0.7853... (π/4)
-لکھو(ریاضی.ٹینجنٹ2(1, -1));   // 2.3561... (3π/4)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>لکھو(ریاضی.ٹینجنٹ2(1, 1));    // 0.7853... (π/4)
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>لکھو(ریاضی.ٹینجنٹ2(1, -1));   // 2.3561... (3π/4)
 </code></pre></div>
 <hr />
-<h3 id="args-hypotargs"><code>ریاضی.وتر(*args)</code> / <code>ریاضی.hypot(*args)</code></h3>
+<h3 id="args-hypotargs"><code>ریاضی.وتر(*args)</code> / <code>ریاضی.hypot(*args)</code><a class="headerlink" href="#args-hypotargs" title="Permanent link">&para;</a></h3>
 <p>Return the Euclidean distance (hypotenuse). Accepts two or more arguments.</p>
 <ul>
 <li>Two arguments: √(a² + b²)</li>
@@ -1631,141 +2119,141 @@ Math.sqrt(16)        // 4.0
 <blockquote>
 <p><strong>اردو:</strong> یوکلیڈی فاصلہ (وتر) واپس کریں۔ دو یا زیادہ دلائل قبول کرتا ہے۔ فیثاغورس کے نظریے کا اطلاق ہے۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>لکھو(ریاضی.وتر(3, 4));       // 5.0
-لکھو(ریاضی.وتر(5, 12));      // 13.0
-لکھو(ریاضی.وتر(1, 1, 1));    // 1.7320508075688772
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>لکھو(ریاضی.وتر(3, 4));       // 5.0
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>لکھو(ریاضی.وتر(5, 12));      // 13.0
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>لکھو(ریاضی.وتر(1, 1, 1));    // 1.7320508075688772
 </code></pre></div>
 <hr />
-<h2 id="angle-conversion">Angle Conversion — زاویہ تبدیلی</h2>
-<h3 id="x-degreesx"><code>ریاضی.درجے(x)</code> / <code>ریاضی.degrees(x)</code></h3>
+<h2 id="angle-conversion">Angle Conversion — زاویہ تبدیلی<a class="headerlink" href="#angle-conversion" title="Permanent link">&para;</a></h2>
+<h3 id="x-degreesx"><code>ریاضی.درجے(x)</code> / <code>ریاضی.degrees(x)</code><a class="headerlink" href="#x-degreesx" title="Permanent link">&para;</a></h3>
 <p>Convert radians to degrees.</p>
 <blockquote>
 <p><strong>اردو:</strong> ریڈین کو درجوں میں تبدیل کریں۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>لکھو(ریاضی.درجے(ریاضی.پائی));       // 180.0
-لکھو(ریاضی.درجے(ریاضی.پائی / 2));   // 90.0
-لکھو(ریاضی.درجے(ریاضی.دائرہ));      // 360.0
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>لکھو(ریاضی.درجے(ریاضی.پائی));       // 180.0
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>لکھو(ریاضی.درجے(ریاضی.پائی / 2));   // 90.0
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>لکھو(ریاضی.درجے(ریاضی.دائرہ));      // 360.0
 </code></pre></div>
 <hr />
-<h3 id="x-radiansx"><code>ریاضی.ریڈین(x)</code> / <code>ریاضی.radians(x)</code></h3>
+<h3 id="x-radiansx"><code>ریاضی.ریڈین(x)</code> / <code>ریاضی.radians(x)</code><a class="headerlink" href="#x-radiansx" title="Permanent link">&para;</a></h3>
 <p>Convert degrees to radians.</p>
 <blockquote>
 <p><strong>اردو:</strong> درجوں کو ریڈین میں تبدیل کریں۔ مثلثاتی فنکشنز استعمال کرنے سے پہلے ضروری ہے۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>لکھو(ریاضی.ریڈین(180));   // 3.141592653589793
-لکھو(ریاضی.ریڈین(90));    // 1.5707963267948966
-لکھو(ریاضی.ریڈین(360));   // 6.283185307179586
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>لکھو(ریاضی.ریڈین(180));   // 3.141592653589793
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>لکھو(ریاضی.ریڈین(90));    // 1.5707963267948966
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>لکھو(ریاضی.ریڈین(360));   // 6.283185307179586
 </code></pre></div>
 <hr />
-<h2 id="random-number">Random Number — اتفاقی عدد</h2>
-<h3 id="random"><code>ریاضی.اتفاقی()</code> / <code>ریاضی.random()</code></h3>
+<h2 id="random-number">Random Number — اتفاقی عدد<a class="headerlink" href="#random-number" title="Permanent link">&para;</a></h2>
+<h3 id="random"><code>ریاضی.اتفاقی()</code> / <code>ریاضی.random()</code><a class="headerlink" href="#random" title="Permanent link">&para;</a></h3>
 <p>Return a random float in the range <code>[0.0, 1.0)</code>.</p>
 <blockquote>
 <p><strong>اردو:</strong> <code>[0.0، 1.0)</code> کے درمیان اتفاقی اعشاری عدد واپس کریں۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>لکھو(ریاضی.اتفاقی());   // e.g. 0.4723...
-
-// 1 سے 100 تک کا اتفاقی عدد
-متغیر عدد = ریاضی.فرش(ریاضی.اتفاقی() * 100) + 1;
-لکھو(عدد);
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>لکھو(ریاضی.اتفاقی());   // e.g. 0.4723...
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>// 1 سے 100 تک کا اتفاقی عدد
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>متغیر عدد = ریاضی.فرش(ریاضی.اتفاقی() * 100) + 1;
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>لکھو(عدد);
 </code></pre></div>
 <hr />
-<h2 id="number-theory">Number Theory — عدد نظریہ</h2>
-<h3 id="n-factorialn"><code>ریاضی.ضربی(n)</code> / <code>ریاضی.factorial(n)</code></h3>
+<h2 id="number-theory">Number Theory — عدد نظریہ<a class="headerlink" href="#number-theory" title="Permanent link">&para;</a></h2>
+<h3 id="n-factorialn"><code>ریاضی.ضربی(n)</code> / <code>ریاضی.factorial(n)</code><a class="headerlink" href="#n-factorialn" title="Permanent link">&para;</a></h3>
 <p>Return <code>n!</code> (n factorial). <code>n</code> must be a non-negative integer.</p>
 <blockquote>
 <p><strong>اردو:</strong> <code>n!</code> (n ضربی) واپس کریں۔ <code>n</code> غیر منفی صحیح عدد ہونا چاہیے۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>لکھو(ریاضی.ضربی(0));    // 1
-لکھو(ریاضی.ضربی(5));    // 120
-لکھو(ریاضی.ضربی(10));   // 3628800
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>لکھو(ریاضی.ضربی(0));    // 1
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>لکھو(ریاضی.ضربی(5));    // 120
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>لکھو(ریاضی.ضربی(10));   // 3628800
 </code></pre></div>
 <hr />
-<h3 id="_a-b-gcda-b"><code>ریاضی.مشترک_قسم(a, b)</code> / <code>ریاضی.gcd(a, b)</code></h3>
+<h3 id="_a-b-gcda-b"><code>ریاضی.مشترک_قسم(a, b)</code> / <code>ریاضی.gcd(a, b)</code><a class="headerlink" href="#_a-b-gcda-b" title="Permanent link">&para;</a></h3>
 <p>Return the greatest common divisor of two integers.</p>
 <blockquote>
 <p><strong>اردو:</strong> دو اعداد صحیح کا سب سے بڑا مشترک قسمہ واپس کریں۔</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>لکھو(ریاضی.مشترک_قسم(48, 18));   // 6
-لکھو(ریاضی.مشترک_قسم(100, 75));  // 25
-لکھو(ریاضی.مشترک_قسم(7, 13));    // 1
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>لکھو(ریاضی.مشترک_قسم(48, 18));   // 6
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>لکھو(ریاضی.مشترک_قسم(100, 75));  // 25
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>لکھو(ریاضی.مشترک_قسم(7, 13));    // 1
 </code></pre></div>
 <hr />
-<h2 id="practical-examples">Practical Examples — عملی مثالیں</h2>
-<h3 id="geometry-circle-and-pythagorean-theorem">Geometry — Circle and Pythagorean Theorem — ہندسہ: دائرہ اور فیثاغورس</h3>
+<h2 id="practical-examples">Practical Examples — عملی مثالیں<a class="headerlink" href="#practical-examples" title="Permanent link">&para;</a></h2>
+<h3 id="geometry-circle-and-pythagorean-theorem">Geometry — Circle and Pythagorean Theorem — ہندسہ: دائرہ اور فیثاغورس<a class="headerlink" href="#geometry-circle-and-pythagorean-theorem" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><strong>اردو:</strong> دائرے کا رقبہ، محیط، اور فیثاغورس کا نظریہ:</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>// دائرے کا رقبہ اور محیط
-فنکشن دائرہ(رداس) {
-    متغیر رقبہ   = ریاضی.پائی * رداس * رداس;
-    متغیر محیط   = ریاضی.دائرہ * رداس;     // 2π × r
-    واپس { رقبہ: گول(رقبہ, 4), محیط: گول(محیط, 4) };
-}
-
-متغیر نتیجہ = دائرہ(5);
-لکھو("رقبہ:", نتیجہ.رقبہ);    // 78.5398
-لکھو("محیط:", نتیجہ.محیط);    // 31.4159
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>// دائرے کا رقبہ اور محیط
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>فنکشن دائرہ(رداس) {
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>    متغیر رقبہ   = ریاضی.پائی * رداس * رداس;
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>    متغیر محیط   = ریاضی.دائرہ * رداس;     // 2π × r
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>    واپس { رقبہ: گول(رقبہ, 4), محیط: گول(محیط, 4) };
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>}
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>متغیر نتیجہ = دائرہ(5);
+<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>لکھو("رقبہ:", نتیجہ.رقبہ);    // 78.5398
+<a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a>لکھو("محیط:", نتیجہ.محیط);    // 31.4159
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>// فیثاغورس کا نظریہ — وتر معلوم کریں
-فنکشن وتر_معلوم(الف, ب) {
-    واپس ریاضی.وتر(الف, ب);
-}
-
-لکھو(وتر_معلوم(3, 4));     // 5.0
-لکھو(وتر_معلوم(5, 12));    // 13.0
-لکھو(وتر_معلوم(8, 15));    // 17.0
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>// فیثاغورس کا نظریہ — وتر معلوم کریں
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>فنکشن وتر_معلوم(الف, ب) {
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>    واپس ریاضی.وتر(الف, ب);
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>}
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>لکھو(وتر_معلوم(3, 4));     // 5.0
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>لکھو(وتر_معلوم(5, 12));    // 13.0
+<a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>لکھو(وتر_معلوم(8, 15));    // 17.0
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>// مثلث کا رقبہ — ہیرون کا فارمولا
-فنکشن مثلث_رقبہ(ا, ب, ج) {
-    متغیر s = (ا + ب + ج) / 2;
-    واپس ریاضی.جذر(s * (s - ا) * (s - ب) * (s - ج));
-}
-
-لکھو(گول(مثلث_رقبہ(3, 4, 5), 4));    // 6.0
-لکھو(گول(مثلث_رقبہ(5, 6, 7), 4));    // 14.6969
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>// مثلث کا رقبہ — ہیرون کا فارمولا
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>فنکشن مثلث_رقبہ(ا, ب, ج) {
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>    متغیر s = (ا + ب + ج) / 2;
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>    واپس ریاضی.جذر(s * (s - ا) * (s - ب) * (s - ج));
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>}
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>لکھو(گول(مثلث_رقبہ(3, 4, 5), 4));    // 6.0
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>لکھو(گول(مثلث_رقبہ(5, 6, 7), 4));    // 14.6969
 </code></pre></div>
 <hr />
-<h3 id="statistics-mean-variance-standard-deviation">Statistics — Mean, Variance, Standard Deviation — شماریات: اوسط، تغیر، معیاری انحراف</h3>
+<h3 id="statistics-mean-variance-standard-deviation">Statistics — Mean, Variance, Standard Deviation — شماریات: اوسط، تغیر، معیاری انحراف<a class="headerlink" href="#statistics-mean-variance-standard-deviation" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><strong>اردو:</strong> شماریاتی حسابات:</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>فنکشن اوسط(اعداد) {
-    واپس مجموع(اعداد) / لمبائی(اعداد);
-}
-
-فنکشن تغیر(اعداد) {
-    متغیر م = اوسط(اعداد);
-    متغیر فرق = نقشہ(x =&gt; ریاضی.طاقت(x - م, 2), اعداد);
-    واپس مجموع(فرق) / لمبائی(اعداد);
-}
-
-فنکشن معیاری_انحراف(اعداد) {
-    واپس ریاضی.جذر(تغیر(اعداد));
-}
-
-متغیر ڈیٹا = [4, 7, 13, 16, 21];
-لکھو("اوسط:", اوسط(ڈیٹا));                           // 12.2
-لکھو("تغیر:", گول(تغیر(ڈیٹا), 4));                   // 31.36
-لکھو("معیاری انحراف:", گول(معیاری_انحراف(ڈیٹا), 4)); // 5.6
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>فنکشن اوسط(اعداد) {
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>    واپس مجموع(اعداد) / لمبائی(اعداد);
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>}
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>فنکشن تغیر(اعداد) {
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>    متغیر م = اوسط(اعداد);
+<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>    متغیر فرق = نقشہ(x =&gt; ریاضی.طاقت(x - م, 2), اعداد);
+<a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a>    واپس مجموع(فرق) / لمبائی(اعداد);
+<a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a>}
+<a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a>
+<a id="__codelineno-30-11" name="__codelineno-30-11" href="#__codelineno-30-11"></a>فنکشن معیاری_انحراف(اعداد) {
+<a id="__codelineno-30-12" name="__codelineno-30-12" href="#__codelineno-30-12"></a>    واپس ریاضی.جذر(تغیر(اعداد));
+<a id="__codelineno-30-13" name="__codelineno-30-13" href="#__codelineno-30-13"></a>}
+<a id="__codelineno-30-14" name="__codelineno-30-14" href="#__codelineno-30-14"></a>
+<a id="__codelineno-30-15" name="__codelineno-30-15" href="#__codelineno-30-15"></a>متغیر ڈیٹا = [4, 7, 13, 16, 21];
+<a id="__codelineno-30-16" name="__codelineno-30-16" href="#__codelineno-30-16"></a>لکھو("اوسط:", اوسط(ڈیٹا));                           // 12.2
+<a id="__codelineno-30-17" name="__codelineno-30-17" href="#__codelineno-30-17"></a>لکھو("تغیر:", گول(تغیر(ڈیٹا), 4));                   // 31.36
+<a id="__codelineno-30-18" name="__codelineno-30-18" href="#__codelineno-30-18"></a>لکھو("معیاری انحراف:", گول(معیاری_انحراف(ڈیٹا), 4)); // 5.6
 </code></pre></div>
 <hr />
-<h3 id="trigonometry-sine-wave-points">Trigonometry — Sine Wave Points — مثلثیات: سائن لہر کے نقطے</h3>
+<h3 id="trigonometry-sine-wave-points">Trigonometry — Sine Wave Points — مثلثیات: سائن لہر کے نقطے<a class="headerlink" href="#trigonometry-sine-wave-points" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><strong>اردو:</strong> سائن لہر کے نقطے 0 سے 360 درجے تک:</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code>// سائن لہر کے نقطے (0 سے 360 درجے)
-لکھو("زاویہ | سائن");
-کے_لیے (متغیر ز کا حد(0, 361, 30)) {
-    متغیر س = گول(ریاضی.سائن(ریاضی.ریڈین(ز)), 4);
-    لکھو(ز, "°  |", س);
-}
-// 0°   | 0.0
-// 30°  | 0.5
-// 90°  | 1.0
-// 180° | 0.0
-// 270° | -1.0
-// 360° | 0.0
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>// سائن لہر کے نقطے (0 سے 360 درجے)
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>لکھو("زاویہ | سائن");
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>کے_لیے (متغیر ز کا حد(0, 361, 30)) {
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>    متغیر س = گول(ریاضی.سائن(ریاضی.ریڈین(ز)), 4);
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>    لکھو(ز, "°  |", س);
+<a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>}
+<a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>// 0°   | 0.0
+<a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>// 30°  | 0.5
+<a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a>// 90°  | 1.0
+<a id="__codelineno-31-10" name="__codelineno-31-10" href="#__codelineno-31-10"></a>// 180° | 0.0
+<a id="__codelineno-31-11" name="__codelineno-31-11" href="#__codelineno-31-11"></a>// 270° | -1.0
+<a id="__codelineno-31-12" name="__codelineno-31-12" href="#__codelineno-31-12"></a>// 360° | 0.0
 </code></pre></div>
 <hr />
 <p><em>اردو پروگرامنگ لینگویج — ریاضی Object Reference — AlinGo Developers</em></p>
@@ -1792,7 +2280,7 @@ Math.sqrt(16)        // 4.0
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
+  واپس اوپر جائیں
 </button>
         
       </main>
@@ -1824,7 +2312,7 @@ Math.sqrt(16)        // 4.0
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u06a9\u0644\u0650\u067e \u0628\u0648\u0631\u0688 \u0645\u06cc\u06ba \u0646\u0642\u0644 \u06a9\u0631 \u062f\u06cc\u0627 \u06af\u06cc\u0627", "clipboard.copy": "\u06a9\u0644\u0650\u067e \u0628\u0648\u0631\u0688 \u0645\u06cc\u06ba \u0646\u0642\u0644 \u06a9\u0631\u06cc\u06ba", "search.result.more.one": "\u0627\u0650\u0633 \u0635\u0641\u062d\u06d2 \u067e\u0631 \u0645\u0632\u06cc\u062f \u06f1", "search.result.more.other": "\u0627\u0650\u0633 \u0635\u0641\u062d\u06d2 \u067e\u0631 \u0645\u0632\u06cc\u062f #", "search.result.none": "\u06a9\u0648\u0626\u06cc \u0645\u0644\u062a\u06cc \u062c\u0644\u062a\u06cc \u062f\u0633\u062a\u0627\u0648\u06cc\u0632\u0627\u062a \u0646\u06c1\u06cc\u06ba", "search.result.one": "\u06f1 \u0645\u0644\u062a\u06cc \u062c\u0644\u062a\u06cc \u062f\u0633\u062a\u0627\u0648\u06cc\u0632", "search.result.other": "# \u0645\u0644\u062a\u06cc \u062c\u0644\u062a\u06cc \u062f\u0633\u062a\u0627\u0648\u06cc\u0632\u0627\u062a", "search.result.placeholder": "\u062a\u0644\u0627\u0634 \u0634\u0631\u0648\u0639 \u06a9\u0631\u0646\u06d2 \u06a9\u06d2 \u0644\u0626\u06d2 \u0679\u0627\u0626\u067e \u06a9\u0631\u06cc\u06ba", "search.result.term.missing": "\u06af\u0645\u0634\u062f\u06c1", "select.version": "\u0648\u0631\u0698\u0646 \u06a9\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u06a9\u0631\u06cc\u06ba"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
