@@ -2,8 +2,6 @@
 
 <img src="assets/logo/alingo_readme_banner.svg" alt="AlinGo Developers" width="700" />
 
-<img src="assets/logo/alingo_readme_banner.svg" alt="AlinGo Developers" width="700" />
-
 <h1>SUPL — سُپل پروگرامنگ زبان</h1>
 
 <p><strong>6 زبانیں، ایک پروگرامنگ زبان</strong></p>
