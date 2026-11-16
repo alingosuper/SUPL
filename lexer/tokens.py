@@ -124,6 +124,29 @@ KEYWORDS = {
     "ہیچ": "NULL",
     "خالي": "NULL",
 
+    # ═══ ARITHMETIC (arithmetic operators) ═══
+    "جمع": "PLUS",
+    "جوڑ": "PLUS",
+    "زیات": "PLUS",
+    "منفی": "MINUS",
+    "گھٹاؤ": "MINUS",
+    "ضرب": "STAR",
+    "تقسیم": "SLASH",
+    "ونڈ": "SLASH",
+    "باقی": "MODULO",
+    "طاقت": "POWER",
+
+    # ═══ COMPARISON (موازنہ) ═══
+    "وڈا": "GREATER",
+    "بڑا": "GREATER",
+    "لوی": "GREATER",
+    "نکا": "LESS",
+    "چھوٹا": "LESS",
+    "کوچنی": "LESS",
+    "برابر": "EQUAL_EQUAL",
+    "نہیں_برابر": "NOT_EQUAL",
+    "نئیں_برابر": "NOT_EQUAL",
+
     # ═══ LOGICAL ═══
     "تے": "AND",
     "اور": "AND",

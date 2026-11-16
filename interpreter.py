@@ -2,6 +2,20 @@
 import sys
 from pathlib import Path
 
+
+# ═══════════════════════════════════════════════════════
+# SUPL Control Flow Exceptions (BREAK/CONTINUE)
+# ═══════════════════════════════════════════════════════
+
+class _BreakException(Exception):
+    """BREAK — لوپ سے باہر نکلو"""
+    pass
+
+class _ContinueException(Exception):
+    """CONTINUE — اگلی iteration پر جاؤ"""
+    pass
+
+
 sys.path.append(str(Path(__file__).resolve().parent))
 from lexer.lexer import Lexer
 from parser.parser import Parser
@@ -319,6 +333,12 @@ class Interpreter:
 
         elif ntype == "Return":
             value = self.eval_expr(node["value"])
+
+        elif ntype == "Break":
+            raise _BreakException()
+
+        elif ntype == "Continue":
+            raise _ContinueException()
             raise _ReturnException(value)
 
         elif ntype == "Call":
@@ -357,16 +377,26 @@ class Interpreter:
 
         elif ntype == "While":
             while self.eval_expr(node["cond"]):
-                for stmt in node["body"]:
-                    self.execute_ast(stmt)
+                try:
+                    for stmt in node["body"]:
+                        self.execute_ast(stmt)
+                except _BreakException:
+                    break
+                except _ContinueException:
+                    continue
 
         elif ntype == "For":
             start = self.eval_expr(node["start"])
             end = self.eval_expr(node["end"])
             for i in range(int(start), int(end)):
                 self.variables[node["var"]] = i
-                for stmt in node["body"]:
-                    self.execute_ast(stmt)
+                try:
+                    for stmt in node["body"]:
+                        self.execute_ast(stmt)
+                except _BreakException:
+                    break
+                except _ContinueException:
+                    continue
 
     def call_function(self, name, args):
         # User-defined function
@@ -566,7 +596,7 @@ class Interpreter:
             # ═══ جمع / تفریق / ضرب / تقسیم ═══
             if op in ("+", "PLUS", "جمع", "جوڑ", "زیات"):
                 return left + right
-            elif op in ("-", "MINUS", "منفی", "گھٹاؤ", "کم"):
+            elif op in ("-", "MINUS", "منفی", "گھٹاؤ"):
                 return left - right
             elif op in ("*", "STAR", "ضرب"):
                 return left * right

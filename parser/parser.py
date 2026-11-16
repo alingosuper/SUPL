@@ -152,6 +152,16 @@ class Parser:
             value = self.expression()
             return {"type": "Return", "value": value}
 
+        # 6b. BREAK (توڑ_دو / روک_ڈیو)
+        elif token.type == "BREAK":
+            self.eat("BREAK")
+            return {"type": "Break"}
+
+        # 6c. CONTINUE (جاری_رکھو / اگوں_ٹرو)
+        elif token.type == "CONTINUE":
+            self.eat("CONTINUE")
+            return {"type": "Continue"}
+
         # 7. IF (اگر / جے)
         elif token.type == "IF":
             self.eat("IF")
