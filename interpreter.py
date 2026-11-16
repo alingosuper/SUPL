@@ -333,13 +333,27 @@ class Interpreter:
 
         elif ntype == "Return":
             value = self.eval_expr(node["value"])
+            raise _ReturnException(value)
 
         elif ntype == "Break":
             raise _BreakException()
 
         elif ntype == "Continue":
             raise _ContinueException()
-            raise _ReturnException(value)
+
+        elif ntype == "Switch":
+            expr_val = self.eval_expr(node["expr"])
+            matched = False
+            for case in node["cases"]:
+                case_val = self.eval_expr(case["value"])
+                if expr_val == case_val:
+                    for stmt in case["body"]:
+                        self.execute_ast(stmt)
+                    matched = True
+                    break
+            if not matched and node.get("default"):
+                for stmt in node["default"]:
+                    self.execute_ast(stmt)
 
         elif ntype == "Call":
             name = node["name"]

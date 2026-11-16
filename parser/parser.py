@@ -162,6 +162,63 @@ class Parser:
             self.eat("CONTINUE")
             return {"type": "Continue"}
 
+        # 6d. SWITCH (منتخب / چنو)
+        elif token.type == "SWITCH":
+            self.eat("SWITCH")
+            expr = self.expression()
+
+            # `{` کی توقع
+            if self.current_token.type == "LBRACE":
+                self.eat("LBRACE")
+            elif self.current_token.type == "SYMBOL" and self.current_token.value == "{":
+                self.eat("SYMBOL")
+            else:
+                self.error(f"منتخب کے بعد {{ ضروری ہے، ملا: {self.current_token.type}")
+
+            cases = []
+            default_body = []
+
+            # `صورت` اور `ڈیفالٹ` کو پڑھیں
+            while not (
+                self.current_token.type == "RBRACE"
+                or (self.current_token.type == "SYMBOL" and self.current_token.value == "}")
+                or self.current_token.type == "EOF"
+            ):
+                if self.current_token.type == "CASE":
+                    self.eat("CASE")
+                    case_val = self.expression()
+                    # optional `:` — چھوڑ دیں
+                    if self.current_token.type == "COLON" or (
+                        self.current_token.type == "SYMBOL" and self.current_token.value == ":"
+                    ):
+                        self.eat(self.current_token.type)
+                    body = self.parse_block()
+                    cases.append({"value": case_val, "body": body})
+                elif self.current_token.type == "DEFAULT":
+                    self.eat("DEFAULT")
+                    if self.current_token.type == "COLON" or (
+                        self.current_token.type == "SYMBOL" and self.current_token.value == ":"
+                    ):
+                        self.eat(self.current_token.type)
+                    default_body = self.parse_block()
+                else:
+                    self.error(
+                        f"منتخب کے اندر صرف صورت یا ڈیفالٹ ہو سکتا ہے، ملا: {self.current_token.type} ({self.current_token.value!r})"
+                    )
+
+            # `}` بند کریں
+            if self.current_token.type == "RBRACE":
+                self.eat("RBRACE")
+            elif self.current_token.type == "SYMBOL" and self.current_token.value == "}":
+                self.eat("SYMBOL")
+
+            return {
+                "type": "Switch",
+                "expr": expr,
+                "cases": cases,
+                "default": default_body,
+            }
+
         # 7. IF (اگر / جے)
         elif token.type == "IF":
             self.eat("IF")
